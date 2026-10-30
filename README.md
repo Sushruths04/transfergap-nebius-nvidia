@@ -75,7 +75,7 @@ One human demonstration, two robot embodiments (a Unitree G1 humanoid and a whee
 single-arm manipulator): measure where execution transfer fails, diagnose the cause,
 and test whether a targeted correction improves it.
 
-**Project status (Oct 6, 2026):** everything runs and is tested on the GPU cluster only (Nebius is out of scope). One Docker
+**Earlier status note (Oct 6, 2026):** everything described here runs and is tested. One Docker
 image (`ghcr.io/sushruths04/transfergap:full-2026-10-06b`, private) passes a six-stage end-to-end check there: environment, 198
 unit tests, the 500-seed arm study reproduced exactly, depth-perception and style-transfer smoke runs, and G1 closed-loop
 rollouts (4 of 4 grasped). Results are in `transfergap/results/`; `HANDOFF.md` has the open items and resume commands. The KAIROS mobile robot (Summit XLS base + UR10e + 2F-140) is also modelled in MuJoCo (`sim/kairos_mobile.py`), with a drive-then-pick demo. Open:
@@ -111,10 +111,9 @@ python3 -m unittest discover -s tests -v
 python3 -m transfergap evaluate examples/fixture_episodes.jsonl --allow-fixtures
 ```
 
-GPU-dependent work (Sonic/MuJoCo, GEM-X, GR00T fine-tuning, Cosmos) runs on a rented
-Nebius AI Cloud L40S instance, not this machine — see `transfergap/scripts/gpu_bootstrap.md`
-and the dated milestone entries in [Implementation Status](Implementation%20Status.md)
-for exact reproduction commands.
+GPU-dependent work (SONIC/MuJoCo, GEM-X, GR00T fine-tuning, Cosmos) needs an NVIDIA GPU (an L40S works well); see `transfergap/scripts/gpu_bootstrap.md`
+and the dated milestone entries in [Implementation Status](Implementation%20Status.md) for exact reproduction commands. We also reproduced the install, the simulation tests and the
+four-robot policy evaluation on a Nebius AI Cloud L40S VM (evidence in `transfergap/results/nebius_ai_cloud_repro_2026-10-30/`).
 
 ## What's real vs. planned
 
