@@ -19,14 +19,3 @@ AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
 LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 SOFTWARE.
-
----
-
-This repository integrates with, but does not redistribute, third-party
-models and code, each under its own license:
-- NVIDIA GR00T N1.7 / Isaac-GR00T (github.com/NVIDIA/Isaac-GR00T)
-- NVIDIA GR00T-WholeBodyControl / SONIC (github.com/NVlabs/GR00T-WholeBodyControl)
-- NVIDIA GEM-X (github.com/NVlabs/GEM-X) — Apache-2.0
-- Nemotron and Cosmos-Reason2, accessed via Nebius Token Factory / Serverless Endpoints
-See each project's own repository for its license terms before redistributing
-any of their weights or code alongside this one.
