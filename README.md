@@ -43,7 +43,7 @@ when executed inside a git checkout.
 
 **Where Token Factory sped up the workflow:** the diagnosis loop calls the OpenAI-compatible endpoint
 `https://api.tokenfactory.nebius.com/v1` (default in `hosted.py`), so Nemotron 3 Super is queried without
-hosting a 120B model ourselves. The simulation then runs on the cluster and only the key stays on the user's machine.
+hosting a 120B model ourselves. The simulation runs on your own machine or GPU, and only the key stays on your machine.
 **Nebius AI Cloud:** on 2026-10-30 a Nebius GPU VM (L40S, `gpu-l40s-a`, eu-north1) was started to reproduce the install, the simulator tests and the four-robot policy evaluation (30 seeds per robot: UR10e, UR5e and KAIROS mobile all 30/30). The evaluation itself ran on the VM's CPUs; see `transfergap/results/nebius_ai_cloud_repro_2026-10-30/` (nvidia-smi, logs, JSON).
 Set `NEBIUS_API_KEY` and `NEMOTRON_MODEL` as environment variables to reproduce the hosted call.
 
@@ -57,7 +57,7 @@ behaviour-cloning policy; the GR00T-N1.5 fine-tune and evaluation (2026-10-30); 
 ## What needs a GPU or the cluster
 
 - Isaac Sim / KAIROS stack, GR00T N1.5 fine-tuning and evaluation (`transfergap/scripts/eval_groot.py`, `gen_groot_data.py`), Cosmos-Reason2 critic,
-  GEM-X / human-video pose stage, and G1 closed-loop SONIC rollouts: NVIDIA GPU (we used an L40S on the GPU cluster).
+  GEM-X / human-video pose stage, and G1 closed-loop SONIC rollouts: an NVIDIA GPU (an L40S works well).
   Cluster commands are in [COMMANDS.md](COMMANDS.md); GPU setup notes in `transfergap/scripts/gpu_bootstrap.md`.
 - Hosted Nemotron calls (`python3 -m transfergap diagnose`) need an API key, set as an environment variable (see `transfergap/.env.example`). Never commit a real `.env`.
 

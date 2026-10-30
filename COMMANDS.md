@@ -1,6 +1,6 @@
 # TransferGap: every command you need (copy, paste, in this order)
 
-All paths are relative to `lane-b-human-demo/transfergap` unless a line says otherwise. Cluster = GPU cluster WZL, namespace `isaac-sim`, VPN must be on.
+All paths are relative to `lane-b-human-demo/transfergap` unless a line says otherwise. Cluster = the GPU cluster you train on, namespace `isaac-sim` (adapt to your own setup).
 Never print `Physical AI/transfergap/.env` (it holds the Token Factory key) and never put the kubeconfig in git.
 
 ## 0. Once per terminal

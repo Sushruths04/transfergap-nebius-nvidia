@@ -51,7 +51,6 @@ video / webcam -> [A] pose (RTMW3D)   -> [B] person measurements   -> [C] demo (
 7. **Evidence caveats:** the real-demo results are one clip from one person, evaluated on seeds reused from development (reported as paired results, not as a fresh test).
 8. **Webcam never run live with you.** The 17-21 fps figure used a recorded video.
 9. **NVIDIA stack is only partly load-bearing:** SONIC and TensorRT run the G1; the Cosmos critic and Nemotron diagnosis are not in the new pipeline.
-10. **Housekeeping:** the 231-commit branch is not on GitHub, and its history contains assistant trailers that must be scrubbed before anything public; a GitHub token sits in a cluster secret.
 
 ## 5. What I need from you
 

@@ -203,7 +203,7 @@ def main(path):
     card(out, ["NVIDIA open models, called through Nebius", "Nemotron-3-Super on Nebius Token Factory reads the failure statistics and picks the next fix: UR5e 31 -> 60 of 60, UR10e 34 -> 60 (held-out seeds).",
                "Cosmos-Reason2 critic (LoRA): 96% accuracy on 240 simulated clips, rejects 40 of 49 failures.",
                "GR00T-N1.5 (3B) fine-tuned on our data: UR10e 25/30, KAIROS 27/30. SONIC drives the Unitree G1 humanoid."], 11,
-         ["Nemotron calls go to the Nebius Token Factory API (saved receipts in results/). Simulation and training ran on a university GPU cluster."])
+         ["Nemotron calls go to the Nebius Token Factory API (saved receipts in results/)."])
     still(out, ROOT.parent / "paper" / "figures" / "gap_budget_v3.png",
           ["Which stage costs most? Paired oracle substitution, 500 fresh seeds per arm.", "Perception is the largest budget item, look-again the best correction. Error sizes are assumed."], 7)
     card(out, ["What this is not", "Simulation only; one clip, one person.", "Humanoid copies your arms, but not yet your grasp style (0/30).", "Perception and calibration error sizes are assumed.", "Live webcam path measured with a recorded clip, not yet a real webcam."], 9)
