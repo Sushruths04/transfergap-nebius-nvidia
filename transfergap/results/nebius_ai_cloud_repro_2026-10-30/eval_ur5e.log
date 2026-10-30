@@ -1,0 +1,1 @@
+{"block_half": null, "n_distractors": 0, "exec": "ensemble", "ckpt": "models_multi4/policy_vision.pt", "robot": "ur5e", "seeds": [7000, 7029], "n": 30, "policy_success": 30, "policy_ci95": [0.886, 1.0], "scripted_success": 30, "failure_reasons": {}}

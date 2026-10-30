@@ -1,0 +1,171 @@
+{
+ "block_half": null,
+ "n_distractors": 0,
+ "exec": "ensemble",
+ "ckpt": "models_multi4/policy_vision.pt",
+ "robot": "ur5e",
+ "seeds": [
+  7000,
+  7029
+ ],
+ "n": 30,
+ "policy_success": 30,
+ "policy_ci95": [
+  0.886,
+  1.0
+ ],
+ "scripted_success": 30,
+ "failure_reasons": {},
+ "per_seed": [
+  {
+   "seed": 7000,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 7001,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 7002,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 7003,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 7004,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 7005,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 7006,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 7007,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 7008,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 7009,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 7010,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 7011,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 7012,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 7013,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 7014,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 7015,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 7016,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 7017,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 7018,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 7019,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 7020,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 7021,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 7022,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 7023,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 7024,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 7025,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 7026,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 7027,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 7028,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 7029,
+   "success": true,
+   "reasons": []
+  }
+ ]
+}

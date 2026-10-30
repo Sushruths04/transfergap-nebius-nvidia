@@ -44,8 +44,8 @@ when executed inside a git checkout.
 **Where Token Factory sped up the workflow:** the diagnosis loop calls the OpenAI-compatible endpoint
 `https://api.tokenfactory.nebius.com/v1` (default in `hosted.py`), so Nemotron 3 Super is queried without
 hosting a 120B model ourselves. The simulation then runs on the cluster and only the key stays on the user's machine.
-**Other Nebius services:** none beyond Token Factory are used in the results. Simulation, training and image builds ran on a
-an NVIDIA L40S GPU cluster, not on Nebius AI Cloud. Set `NEBIUS_API_KEY` and `NEMOTRON_MODEL` as environment variables to reproduce the hosted call.
+**Nebius AI Cloud:** on 2026-10-30 a Nebius GPU VM (L40S, `gpu-l40s-a`, eu-north1) was started to reproduce the install, the simulator tests and the four-robot policy evaluation (30 seeds per robot: UR10e, UR5e and KAIROS mobile all 30/30). The evaluation itself ran on the VM's CPUs; see `transfergap/results/nebius_ai_cloud_repro_2026-10-30/` (nvidia-smi, logs, JSON). The main experiments, training and the GR00T fine-tune ran on an NVIDIA L40S GPU cluster, not on Nebius.
+Set `NEBIUS_API_KEY` and `NEMOTRON_MODEL` as environment variables to reproduce the hosted call.
 
 ## What was significantly updated during the Hackathon Submission Period (Aug 26 - Oct 30, 2026)
 

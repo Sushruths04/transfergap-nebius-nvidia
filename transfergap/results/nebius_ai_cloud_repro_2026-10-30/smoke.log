@@ -1,0 +1,42 @@
+{
+  "packages": {
+    "torch": true,
+    "mujoco": true,
+    "cv2": false
+  },
+  "configured": {
+    "NEBIUS_API_KEY": false,
+    "NEMOTRON_MODEL": false,
+    "COSMOS_BASE_URL": false,
+    "COSMOS_MODEL": false,
+    "COSMOS_API_KEY": false
+  },
+  "gpu": "NVIDIA L40S, 46068 MiB"
+}
+--- evaluate
+{
+  "contains_fixtures": true,
+  "groups": [
+    {
+      "source": "fixture",
+      "protocol_id": "pnp-v1",
+      "robot": "fixture_robot_a",
+      "method": "fixture_replay",
+      "sensor": "rgb",
+      "oracle": null,
+      "episodes": 2,
+      "successes": 1,
+      "success_rate": 0.5,
+      "success_wilson_95": [
+        0.09453120573423074,
+        0.9054687942657693
+      ]
+    }
+  ]
+}
+--- unittest sim
+.....
+----------------------------------------------------------------------
+Ran 5 tests in 33.245s
+
+OK

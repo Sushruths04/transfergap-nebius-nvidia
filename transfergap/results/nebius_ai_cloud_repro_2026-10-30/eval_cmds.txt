@@ -1,0 +1,3 @@
+python scripts/eval_bc.py --ckpt models_multi4/policy_vision.pt --robot ur10e --seeds 7000-7029 --demo demo_in/demo.npz --out out/eval_multi4s1_ur10e_std_7000-7029.json --workers 14 --exec ensemble
+python scripts/eval_bc.py --ckpt models_multi4/policy_vision.pt --robot kairos_mobile --seeds 7000-7029 --demo demo_in/demo.npz --out out/eval_multi4s1_kairos_mobile_std_7000-7029.json --workers 14 --exec ensemble
+python scripts/eval_bc.py --ckpt models_multi4/policy_vision.pt --robot ur5e --seeds 7000-7029 --demo demo_in/demo.npz --out out/eval_multi4s1_ur5e_std_7000-7029.json --workers 14 --exec ensemble
