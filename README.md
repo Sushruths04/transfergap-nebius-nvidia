@@ -1,6 +1,6 @@
 # TransferGap
 
-> **Demo video (2:35):** https://youtu.be/5eu5UJMBBcY  (file: `deliverables/TransferGap_final_cut_v6_2026-10-30.mp4`)
+> **Demo video (2:47):** https://youtu.be/KfDWaPIMKVA  (file: `deliverables/TransferGap_final_cut_v7_2026-10-30.mp4`)
 
 ## Quick start (5 commands, laptop CPU, no GPU, no API key)
 
