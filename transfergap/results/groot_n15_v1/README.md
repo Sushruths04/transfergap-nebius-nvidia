@@ -54,6 +54,14 @@ Against run B: standard unchanged (0/0/3-4 of 30), UR5e and UR10e hard higher (3
 | three-arm, UR5e | 7/30 (12-41%) | 5/30 (7-34%) | 6/30 (10-37%) |
 The small BC policy scores 60/60 in all of these cells (60 seeds). So GR00T reaches 83-90% on its best robot in the standard condition, not 100%, and the single three-arm model is much weaker on UR5e and UR10e (it saw only 0.63 epochs of its data in 5000 steps). Files: `look4_<model>_<robot>_<condition>.json`.
 
+## Run E: three-robot model trained for another 5000 steps (lr 5e-5), look-ahead 4, fresh seeds 6100-6129, 30 per cell
+| robot | standard | mixed | hard |
+|---|---|---|---|
+| ur10e | 0/30 | 0/30 | 9/30 |
+| ur5e | 7/30 | 5/30 | 3/30 |
+| kairos | 28/30 | 23/30 | 19/30 |
+KAIROS improves to 28/30 on standard and 23/30 on mixed; the UR arms stay at their earlier level. Files: `runE_<robot>_<condition>.json`.
+
 ## What I checked and what I could not isolate
 - Frame dumps (run A, checkpoint 3000): the arm approaches the cube, descends, closes the gripper and starts to lift, but the gripper closes **beside** the cube (the cube stays on the table), then the policy holds that pose and never retries.
 - Open-loop action error against recorded demonstrations (checkpoint 2000): MSE 0.0046 (radians^2 on joints), i.e. the model fits the recorded motion roughly but not to the centimetre needed for a grasp.
