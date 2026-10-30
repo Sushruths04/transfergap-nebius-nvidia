@@ -1,0 +1,253 @@
+{
+ "kind": "demo_budget",
+ "robot": "ur5e",
+ "demo": {
+  "kind": "file",
+  "path": "runs/demos/Cause_motion-lift_0041.npz",
+  "sha256": "fbc7ecf315a96c40424e1b4a89d6b7c949af83fe68543ec5ca6203a5ea56a305",
+  "tag": "demofbc7ecf3"
+ },
+ "base_corrections": [],
+ "dev": {
+  "robot": "ur5e",
+  "demo": {
+   "kind": "file",
+   "path": "runs/demos/Cause_motion-lift_0041.npz",
+   "sha256": "fbc7ecf315a96c40424e1b4a89d6b7c949af83fe68543ec5ca6203a5ea56a305",
+   "tag": "demofbc7ecf3"
+  },
+  "base_corrections": [],
+  "seeds": [
+   0,
+   59
+  ],
+  "conditions": {
+   "full": {
+    "oracle": "none",
+    "n": 60,
+    "successes": 1,
+    "success_rate": 0.016666666666666666,
+    "wilson_95": [
+     0.0029481597947862495,
+     0.08855129727590061
+    ],
+    "failure_reasons": {
+     "no_lift": 54,
+     "not_released_and_settled_at_goal": 58,
+     "forbidden_collision": 27
+    }
+   },
+   "oracle_perception": {
+    "oracle": "perception",
+    "n": 60,
+    "successes": 14,
+    "success_rate": 0.23333333333333334,
+    "wilson_95": [
+     0.1443956173664283,
+     0.35436270377601964
+    ],
+    "failure_reasons": {
+     "no_lift": 41,
+     "not_released_and_settled_at_goal": 46,
+     "forbidden_collision": 30
+    }
+   },
+   "oracle_calibration": {
+    "oracle": "calibration",
+    "n": 60,
+    "successes": 8,
+    "success_rate": 0.13333333333333333,
+    "wilson_95": [
+     0.06914109480586972,
+     0.24165159676499615
+    ],
+    "failure_reasons": {
+     "no_lift": 49,
+     "not_released_and_settled_at_goal": 52,
+     "forbidden_collision": 23
+    }
+   },
+   "oracle_timing": {
+    "oracle": "timing",
+    "n": 60,
+    "successes": 5,
+    "success_rate": 0.08333333333333333,
+    "wilson_95": [
+     0.03612045660173077,
+     0.1806894201833441
+    ],
+    "failure_reasons": {
+     "no_lift": 30,
+     "not_released_and_settled_at_goal": 41,
+     "forbidden_collision": 21
+    }
+   },
+   "oracle_all": {
+    "oracle": "all",
+    "n": 60,
+    "successes": 1,
+    "success_rate": 0.016666666666666666,
+    "wilson_95": [
+     0.0029481597947862495,
+     0.08855129727590061
+    ],
+    "failure_reasons": {
+     "forbidden_collision": 59
+    }
+   }
+  },
+  "style": {
+   "full": {
+    "n_scored": 60,
+    "path_rmse_mean_m": 0.13488281476917593,
+    "approach_angle_deg": 24.33321576483202,
+    "lift_height_err_m": 0.09872530002836638,
+    "speed_profile_corr": -0.040628886386058084,
+    "path_rmse_median_m": 0.12694342599666267,
+    "n_diverged": 0
+   },
+   "oracle_perception": {
+    "n_scored": 60,
+    "path_rmse_mean_m": 0.1362552187184089,
+    "approach_angle_deg": 26.114767774651153,
+    "lift_height_err_m": 0.10651687140655021,
+    "speed_profile_corr": -0.03743676778389126,
+    "path_rmse_median_m": 0.12829032506947582,
+    "n_diverged": 0
+   },
+   "oracle_calibration": {
+    "n_scored": 60,
+    "path_rmse_mean_m": 0.13382061785853522,
+    "approach_angle_deg": 22.07286427355601,
+    "lift_height_err_m": 0.09257255659558632,
+    "speed_profile_corr": -0.03898297047109868,
+    "path_rmse_median_m": 0.12491995700029583,
+    "n_diverged": 0
+   },
+   "oracle_timing": {
+    "n_scored": 60,
+    "path_rmse_mean_m": 0.06702976191078543,
+    "approach_angle_deg": 4.999700217195892,
+    "lift_height_err_m": 0.005397149370683857,
+    "speed_profile_corr": 0.7336839706608765,
+    "path_rmse_median_m": 0.06692438926274083,
+    "n_diverged": 0
+   },
+   "oracle_all": {
+    "n_scored": 60,
+    "path_rmse_mean_m": 0.06331309238685308,
+    "approach_angle_deg": 5.056387352824341,
+    "lift_height_err_m": 0.0054208760045576804,
+    "speed_profile_corr": 0.7271125454894255,
+    "path_rmse_median_m": 0.06297119186867989,
+    "n_diverged": 0
+   }
+  },
+  "success_budget": {
+   "perception": {
+    "delta_pp": 21.666666666666668,
+    "ci95_pp": [
+     10.0,
+     33.33333333333333
+    ],
+    "n": 60
+   },
+   "calibration": {
+    "delta_pp": 11.666666666666666,
+    "ci95_pp": [
+     3.3333333333333335,
+     21.666666666666668
+    ],
+    "n": 60
+   },
+   "timing": {
+    "delta_pp": 6.666666666666667,
+    "ci95_pp": [
+     0,
+     15.0
+    ],
+    "n": 60
+   }
+  },
+  "style_budget": {
+   "perception": {
+    "path_rmse_m": {
+     "mean": -0.0013724039492329604,
+     "ci95": [
+      -0.006303476935265873,
+      0.0035825394601580038
+     ],
+     "n": 60,
+     "metric": "path_rmse_mean_m",
+     "sign": "a minus b"
+    },
+    "speed_profile_corr": {
+     "mean": 0.0031921186021668336,
+     "ci95": [
+      -0.0022513682195773274,
+      0.00878726154848623
+     ],
+     "n": 60,
+     "metric": "speed_profile_corr",
+     "sign": "a minus b"
+    }
+   },
+   "calibration": {
+    "path_rmse_m": {
+     "mean": 0.0010621969106407135,
+     "ci95": [
+      -0.0031928506949752246,
+      0.00550250049020106
+     ],
+     "n": 60,
+     "metric": "path_rmse_mean_m",
+     "sign": "a minus b"
+    },
+    "speed_profile_corr": {
+     "mean": 0.0016459159149594211,
+     "ci95": [
+      -0.0025519483731862563,
+      0.006111607432989194
+     ],
+     "n": 60,
+     "metric": "speed_profile_corr",
+     "sign": "a minus b"
+    }
+   },
+   "timing": {
+    "path_rmse_m": {
+     "mean": 0.0678530528583905,
+     "ci95": [
+      0.06455666908934272,
+      0.07127520739033627
+     ],
+     "n": 60,
+     "metric": "path_rmse_mean_m",
+     "sign": "a minus b"
+    },
+    "speed_profile_corr": {
+     "mean": 0.7743128570469348,
+     "ci95": [
+      0.7639093918304297,
+      0.7855931690536355
+     ],
+     "n": 60,
+     "metric": "speed_profile_corr",
+     "sign": "a minus b"
+    }
+   }
+  },
+  "oracle_all": {
+   "delta_pp": 0,
+   "ci95_pp": [
+    -5.0,
+    5.0
+   ],
+   "n": 60
+  },
+  "chosen_component": "perception",
+  "chosen_correction": "look_again",
+  "choice_rule": "argmax success budget over components with an unused fix ['perception', 'calibration', 'timing'] on dev; ties -> pipeline order; timing fixes climb ['speed_cap_3', 'speed_cap_2', 'speed_cap_1.5']"
+ },
+ "heldout": null
+}

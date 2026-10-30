@@ -1,0 +1,100 @@
+  "ur5e": {
+   "conditions": {
+    "raw": {
+     "oracle": "none",
+     "n": 60,
+     "successes": 0,
+     "success_rate": 0.0,
+     "wilson_95": [
+      0.0,
+      0.06017185214208986
+     ],
+     "failure_reasons": {
+      "no_lift": 59,
+      "not_released_and_settled_at_goal": 60
+     }
+    },
+    "all_fixes": {
+     "oracle": "none",
+     "n": 60,
+     "successes": 50,
+     "success_rate": 0.8333333333333334,
+     "wilson_95": [
+      0.7196838683638547,
+      0.9068682302080855
+     ],
+     "failure_reasons": {
+      "no_lift": 10,
+      "not_released_and_settled_at_goal": 10
+     }
+    }
+   },
+   "gap_all_fixes_minus_raw": {
+    "delta_pp": 83.33333333333334,
+    "ci95_pp": [
+     73.33333333333333,
+     91.66666666666666
+    ],
+    "n": 60
+   },
+   "committed_cumulative_gap": {
+    "delta_pp": 83.33333333333334,
+    "ci95_pp": [
+     73.33333333333333,
+     91.66666666666666
+    ],
+    "n": 60
+   },
+   "reproduced_exactly": true
+  },
+  "ur10e": {
+   "conditions": {
+    "raw": {
+     "oracle": "none",
+     "n": 60,
+     "successes": 0,
+     "success_rate": 0.0,
+     "wilson_95": [
+      0.0,
+      0.06017185214208986
+     ],
+     "failure_reasons": {
+      "not_released_and_settled_at_goal": 60,
+      "no_lift": 48,
+      "forbidden_collision": 3
+     }
+    },
+    "all_fixes": {
+     "oracle": "none",
+     "n": 60,
+     "successes": 51,
+     "success_rate": 0.85,
+     "wilson_95": [
+      0.7388541093022145,
+      0.9190255941983225
+     ],
+     "failure_reasons": {
+      "not_released_and_settled_at_goal": 9
+     }
+    }
+   },
+   "gap_all_fixes_minus_raw": {
+    "delta_pp": 85.0,
+    "ci95_pp": [
+     76.66666666666667,
+     93.33333333333333
+    ],
+    "n": 60
+   },
+   "committed_cumulative_gap": {
+    "delta_pp": 85.0,
+    "ci95_pp": [
+     76.66666666666667,
+     93.33333333333333
+    ],
+    "n": 60
+   },
+   "reproduced_exactly": true
+  }
+ }
+}TRANSFERGAP_RECEIPT {"schema": "transfergap.job_receipt/v1", "mode": "demo_repro", "exit_code": 0, "started_at": "2026-10-02T04:54:14Z", "ended_at": "2026-10-02T04:54:38Z", "git_commit": "11eb8b59dc07a24dcb47b156bf71d188ebb11f35", "image_git_commit": "11eb8b59dc07a24dcb47b156bf71d188ebb11f35", "menagerie_commit": "4d038b3feae26ec82b46a4d586379114012a8ac7", "host": {"hostname": "4e500b287d78", "platform": "Linux-6.11.0-1016-nvidia-x86_64-with-glibc2.41", "machine": "x86_64", "cpu_model": "AMD EPYC-Genoa Processor", "nproc": 16, "mem_total": "65843256 kB", "procs_used": 16}, "python": "3.12.15", "mujoco": "3.14.0", "outputs": {"episodes_ur10e.jsonl": {"bytes": 7073119, "sha256": "0e44ae4f00f9e219f36db89ba359ea55d66d5b33df3e27f763b0c1865e08dfe7"}, "episodes_ur5e.jsonl": {"bytes": 7076745, "sha256": "be101de11376a7baa0e9e716b4d26ba7937c0a9a6ab6e83a3881665cd6f4f5c7"}, "repro_summary.json": {"bytes": 2198, "sha256": "f187fbf4ebe5dff7a3a6687c1259514f7c099cfd74fb3bfdfd0b04fe4d7cbbef"}}}

@@ -1,0 +1,49 @@
+{
+ "source": "transfergap/runs/diagnose/20261001T175347Z-49747/ (gitignored) report.json + receipt",
+ "date": "2026-10-01",
+ "created_at": "2026-10-01T17:53:49.980577+00:00",
+ "trace_sha256": "5479d565a24d32c9edc004d8b47b3abfccff0870201dfbe9276c445e85038771",
+ "trace_note": "trace built from gap_budget_v1 UR5e dev episodes (three stages, tied budgets)",
+ "requested_model": "nvidia/nemotron-3-super-120b-a12b",
+ "returned_model": "nvidia/nemotron-3-super-120b-a12b",
+ "model_name": "Nemotron 3 Super",
+ "endpoint_host": "api.tokenfactory.nebius.com",
+ "latency_s": 5.37347310899986,
+ "validated": true,
+ "n_live_calls": 1,
+ "n_dev_seeds": 60,
+ "by_diagnoser": {
+  "rule_based": {
+   "tag": "look_again[looks=1]",
+   "tag_tex": "look\\_again[looks=1]",
+   "full_successes": 34,
+   "corrected_successes": 40,
+   "n": 60,
+   "paired_gap": {
+    "delta_pp": 10.0,
+    "ci95_pp": [
+     0,
+     20.0
+    ],
+    "n": 60
+   },
+   "ci_excludes_zero": false
+  },
+  "nemotron_super": {
+   "tag": "timing_scale[speed_cap=3]",
+   "tag_tex": "timing\\_scale[speed\\_cap=3]",
+   "full_successes": 34,
+   "corrected_successes": 38,
+   "n": 60,
+   "paired_gap": {
+    "delta_pp": 6.666666666666667,
+    "ci95_pp": [
+     0,
+     15.0
+    ],
+    "n": 60
+   },
+   "ci_excludes_zero": false
+  }
+ }
+}

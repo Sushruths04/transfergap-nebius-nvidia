@@ -1,0 +1,246 @@
+{
+ "robot": "ur10e",
+ "demo": {
+  "kind": "file",
+  "path": "/ws/transfergap/demos/pexels_fsam_demo.npz",
+  "sha256": "44864be947d4905ba24a193ee349d3d11a557e55d5b16d358d386017ac76d812",
+  "tag": "demo44864be9"
+ },
+ "base_corrections": [
+  "speed_cap_3",
+  "speed_cap_2",
+  "safe_path"
+ ],
+ "seeds": [
+  0,
+  59
+ ],
+ "conditions": {
+  "full": {
+   "oracle": "none",
+   "n": 60,
+   "successes": 1,
+   "success_rate": 0.016666666666666666,
+   "wilson_95": [
+    0.0029481597947862495,
+    0.08855129727590061
+   ],
+   "failure_reasons": {
+    "not_released_and_settled_at_goal": 59,
+    "forbidden_collision": 33,
+    "no_lift": 26
+   }
+  },
+  "oracle_perception": {
+   "oracle": "perception",
+   "n": 60,
+   "successes": 2,
+   "success_rate": 0.03333333333333333,
+   "wilson_95": [
+    0.009189319256197877,
+    0.113637742743086
+   ],
+   "failure_reasons": {
+    "not_released_and_settled_at_goal": 57,
+    "forbidden_collision": 47,
+    "no_lift": 6
+   }
+  },
+  "oracle_calibration": {
+   "oracle": "calibration",
+   "n": 60,
+   "successes": 0,
+   "success_rate": 0.0,
+   "wilson_95": [
+    0.0,
+    0.06017185214208986
+   ],
+   "failure_reasons": {
+    "not_released_and_settled_at_goal": 57,
+    "forbidden_collision": 48,
+    "no_lift": 18
+   }
+  },
+  "oracle_timing": {
+   "oracle": "timing",
+   "n": 60,
+   "successes": 2,
+   "success_rate": 0.03333333333333333,
+   "wilson_95": [
+    0.009189319256197877,
+    0.113637742743086
+   ],
+   "failure_reasons": {
+    "no_lift": 25,
+    "not_released_and_settled_at_goal": 55,
+    "forbidden_collision": 34
+   }
+  },
+  "oracle_all": {
+   "oracle": "all",
+   "n": 60,
+   "successes": 0,
+   "success_rate": 0.0,
+   "wilson_95": [
+    0.0,
+    0.06017185214208986
+   ],
+   "failure_reasons": {
+    "not_released_and_settled_at_goal": 57,
+    "forbidden_collision": 60
+   }
+  }
+ },
+ "style": {
+  "full": {
+   "n_scored": 60,
+   "path_rmse_mean_m": 0.058454051270076045,
+   "approach_angle_deg": 5.909330030159438,
+   "lift_height_err_m": 0.004230593969545323,
+   "speed_profile_corr": -0.026089408551388978,
+   "path_rmse_median_m": 0.05722720835741217,
+   "n_diverged": 0
+  },
+  "oracle_perception": {
+   "n_scored": 60,
+   "path_rmse_mean_m": 0.05574456606432433,
+   "approach_angle_deg": 6.117628953893858,
+   "lift_height_err_m": 0.0032775864039876644,
+   "speed_profile_corr": -0.023728788813946317,
+   "path_rmse_median_m": 0.05430629706801724,
+   "n_diverged": 0
+  },
+  "oracle_calibration": {
+   "n_scored": 60,
+   "path_rmse_mean_m": 0.05505615278224569,
+   "approach_angle_deg": 6.081296828671173,
+   "lift_height_err_m": 0.0035530734798221945,
+   "speed_profile_corr": -0.04353503398112791,
+   "path_rmse_median_m": 0.05463492709237912,
+   "n_diverged": 0
+  },
+  "oracle_timing": {
+   "n_scored": 60,
+   "path_rmse_mean_m": 0.049136817478421434,
+   "approach_angle_deg": 2.6685510718197762,
+   "lift_height_err_m": 0.0047557167703302225,
+   "speed_profile_corr": 0.10974783395369761,
+   "path_rmse_median_m": 0.047708691038716784,
+   "n_diverged": 0
+  },
+  "oracle_all": {
+   "n_scored": 60,
+   "path_rmse_mean_m": 0.040868534994887004,
+   "approach_angle_deg": 2.6979454906264335,
+   "lift_height_err_m": 0.003088188019717528,
+   "speed_profile_corr": -0.0010875859481892318,
+   "path_rmse_median_m": 0.04073234213570015,
+   "n_diverged": 0
+  }
+ },
+ "success_budget": {
+  "perception": {
+   "delta_pp": 1.6666666666666667,
+   "ci95_pp": [
+    -3.3333333333333335,
+    8.333333333333332
+   ],
+   "n": 60
+  },
+  "calibration": {
+   "delta_pp": -1.6666666666666667,
+   "ci95_pp": [
+    -5.0,
+    0
+   ],
+   "n": 60
+  },
+  "timing": {
+   "delta_pp": 1.6666666666666667,
+   "ci95_pp": [
+    0,
+    5.0
+   ],
+   "n": 60
+  }
+ },
+ "style_budget": {
+  "perception": {
+   "path_rmse_m": {
+    "mean": 0.002709485205751709,
+    "ci95": [
+     0.0019388797400159456,
+     0.0036117895323070697
+    ],
+    "n": 60,
+    "metric": "path_rmse_mean_m",
+    "sign": "a minus b"
+   },
+   "speed_profile_corr": {
+    "mean": 0.0023606197374426647,
+    "ci95": [
+     -0.010072184234670946,
+     0.0161576204251096
+    ],
+    "n": 60,
+    "metric": "speed_profile_corr",
+    "sign": "a minus b"
+   }
+  },
+  "calibration": {
+   "path_rmse_m": {
+    "mean": 0.00339789848783037,
+    "ci95": [
+     0.0021759303829211223,
+     0.004841272838130187
+    ],
+    "n": 60,
+    "metric": "path_rmse_mean_m",
+    "sign": "a minus b"
+   },
+   "speed_profile_corr": {
+    "mean": -0.017445625429738935,
+    "ci95": [
+     -0.02892903216381787,
+     -0.007812080066494128
+    ],
+    "n": 60,
+    "metric": "speed_profile_corr",
+    "sign": "a minus b"
+   }
+  },
+  "timing": {
+   "path_rmse_m": {
+    "mean": 0.009317233791654616,
+    "ci95": [
+     0.008818821031054538,
+     0.009791913692536621
+    ],
+    "n": 60,
+    "metric": "path_rmse_mean_m",
+    "sign": "a minus b"
+   },
+   "speed_profile_corr": {
+    "mean": 0.13583724250508658,
+    "ci95": [
+     0.11203863344174685,
+     0.15608911799775424
+    ],
+    "n": 60,
+    "metric": "speed_profile_corr",
+    "sign": "a minus b"
+   }
+  }
+ },
+ "oracle_all": {
+  "delta_pp": -1.6666666666666667,
+  "ci95_pp": [
+   -5.0,
+   0
+  ],
+  "n": 60
+ },
+ "chosen_component": "perception",
+ "chosen_correction": "look_again",
+ "choice_rule": "argmax success budget over components with an unused fix ['perception', 'timing'] on dev; ties -> pipeline order; timing fixes climb ['speed_cap_3', 'speed_cap_2', 'speed_cap_1.5']"
+}

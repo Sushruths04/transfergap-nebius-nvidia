@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TransferGap Replay</title>
+<style>
+:root{--bg:#090c11;--p:#0f141c;--p2:#141b26;--line:#1d2635;--tx:#e7ecf3;--mu:#8592a6;--nv:#76b900;--cy:#38bdf8;--am:#fbbf24;--rd:#f87171}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--tx);font:14px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+header{display:flex;align-items:center;gap:12px;padding:12px 18px;border-bottom:1px solid var(--line);background:var(--p);position:sticky;top:0;z-index:5}
+h1{font-size:16px}h1 b{color:var(--nv)}.sp{flex:1}a{color:var(--cy);text-decoration:none;font-size:13px}
+button{background:var(--p2);color:var(--tx);border:1px solid var(--line);border-radius:9px;padding:7px 14px;font:inherit;cursor:pointer}button:hover{border-color:var(--nv)}button.on{background:#1d2b08;color:var(--nv);border-color:var(--nv)}
+main{max-width:1500px;margin:0 auto;padding:14px 18px;display:flex;flex-direction:column;gap:12px}
+.vids{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}@media(max-width:900px){.vids{grid-template-columns:1fr}}
+.v{background:var(--p);border:1px solid var(--line);border-radius:12px;overflow:hidden}.v h2{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--mu);padding:8px 12px}
+.v video{width:100%;display:block;background:#06080c;aspect-ratio:4/3;object-fit:contain}
+.card{background:var(--p);border:1px solid var(--line);border-radius:12px;padding:10px 14px}
+.bar{display:flex;gap:12px;align-items:center}.bar input{flex:1;accent-color:var(--nv)}.bar b{font-variant-numeric:tabular-nums;min-width:90px;text-align:right}
+.tr{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}@media(max-width:900px){.tr{grid-template-columns:1fr 1fr}}
+.tr div{background:var(--p);border:1px solid var(--line);border-radius:12px;padding:8px 10px}.tr span{font-size:11px;color:var(--mu);letter-spacing:.1em;text-transform:uppercase}
+canvas{width:100%;height:84px;display:block}
+.note{font-size:12px;color:var(--am)}
+</style>
+<link rel="stylesheet" href="light.css">
+</head>
+<body>
+<header><h1>Transfer<b>Gap</b> · Replay</h1>
+  <button id="bPlay" class="on">▶ Play</button><button id="bCond">Showing: with fixes</button>
+  <div class="sp"></div><a href="review.html">Before / After</a> · <a href="console.html?design=1">Live console</a> · <a href="index.html">Results</a></header>
+<main>
+  <div class="vids">
+    <div class="v"><h2>You · pose overlay</h2><video id="v0" muted playsinline preload="auto" src="media/human_overlay.mp4"></video></div>
+    <div class="v"><h2>UR10e</h2><video id="v1" muted playsinline preload="auto" src="media/hq/ur10e_stack_seed1001.mp4"></video></div>
+    <div class="v"><h2>KAIROS mobile</h2><video id="v2" muted playsinline preload="auto" src="media/hq/kairos_mobile_stack_seed1001.mp4"></video></div>
+  </div>
+  <div class="card bar"><label style="color:var(--mu)">Task progress</label><input id="sc" type="range" min="0" max="1000" value="0"><b id="tl">0 %</b></div>
+  <div class="tr"><div><span>Hand speed (m/s)</span><canvas id="c0"></canvas></div><div><span>Elbow angle (°)</span><canvas id="c1"></canvas></div>
+    <div><span>Wrist angle (°)</span><canvas id="c2"></canvas></div><div><span>Pinch aperture (cm)</span><canvas id="c3"></canvas></div></div>
+  <p class="note">All panels share one progress value (0-100 % of each clip), so the person's grasp and release line up with the robots' by task phase, not by seconds: the human clip is 6.9 s, the robot clips 8.6 s. Markers: grasp (green) and release (red) from the hand-annotated events. One seed per robot (illustration); person measurements are monocular estimates; simulation only.</p>
+</main>
+<script src="data.js"></script>
+<script>
+const H=window.TG.human,N=H.frames,S=[H.series.speed,H.series.elbow,H.series.wrist,H.series.aperture_cm],COL=["#38bdf8","#76b900","#a78bfa","#fbbf24"];
+const ev=H.events||{},G=ev.grasp_frame??ev.grasp,R=ev.release_frame??ev.release;
+let t=0,playing=true,cond="stack",last=performance.now();
+const V=[0,1,2].map(i=>document.getElementById("v"+i));
+function draw(){S.forEach((s,k)=>{const c=document.getElementById("c"+k),w=c.width=c.clientWidth*devicePixelRatio,h=c.height=84*devicePixelRatio,x=c.getContext("2d");
+  const lo=Math.min(...s),hi=Math.max(...s),Y=v=>h-4-(v-lo)/((hi-lo)||1)*(h-10);
+  x.strokeStyle=COL[k];x.lineWidth=2*devicePixelRatio;x.beginPath();s.forEach((v,i)=>{const px=i/(N-1)*w;i?x.lineTo(px,Y(v)):x.moveTo(px,Y(v))});x.stroke();
+  for(const [f,col] of [[G,"#76b900"],[R,"#f87171"]]){if(f==null)continue;x.strokeStyle=col;x.lineWidth=devicePixelRatio;x.setLineDash([4,4]);x.beginPath();x.moveTo(f/(N-1)*w,0);x.lineTo(f/(N-1)*w,h);x.stroke();x.setLineDash([])}
+  x.strokeStyle="#e7ecf3";x.lineWidth=2*devicePixelRatio;x.beginPath();x.moveTo(t*w,0);x.lineTo(t*w,h);x.stroke()});
+  document.getElementById("tl").textContent=(t*100).toFixed(0)+" %";document.getElementById("sc").value=t*1000}
+function seek(){V.forEach(v=>{if(v.duration)v.currentTime=Math.min(t*v.duration,v.duration-0.01)});draw()}
+function tick(now){const dt=(now-last)/1000;last=now;if(playing){t+=dt/8.0;if(t>=1)t=0;seek()}requestAnimationFrame(tick)}
+document.getElementById("sc").oninput=e=>{t=e.target.value/1000;playing=false;document.getElementById("bPlay").classList.remove("on");seek()};
+document.getElementById("bPlay").onclick=e=>{playing=!playing;e.target.classList.toggle("on",playing)};
+document.getElementById("bCond").onclick=e=>{cond=cond==="stack"?"raw":"stack";e.target.textContent="Showing: "+(cond==="stack"?"with fixes":"raw copy");
+  V[1].src=`media/hq/ur10e_${cond}_seed1001.mp4`;V[2].src=`media/hq/kairos_mobile_${cond}_seed1001.mp4`;setTimeout(seek,300)};
+V.forEach(v=>v.addEventListener("loadedmetadata",seek));window.addEventListener("resize",draw);draw();requestAnimationFrame(tick);
+</script>
+</body>
+</html>

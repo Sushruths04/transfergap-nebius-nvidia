@@ -1,0 +1,69 @@
+{
+ "input": "/ws/transfergap/demos/user_clip_rtmw3d_joints.npz",
+ "robots": [
+  "kairos",
+  "kairos_mobile"
+ ],
+ "fixes": "speed_cap_3,look_again,touch_probe_calibration,speed_cap_2,safe_path_v2",
+ "stages": {
+  "perceive": {
+   "status": "ok",
+   "seconds": 0.0
+  },
+  "demo": {
+   "detail": {
+    "frames": 147,
+    "events": "given",
+    "pinch_extent_m": [
+     0.722,
+     0.083,
+     0.574
+    ],
+    "plausibility": "ok"
+   },
+   "status": "ok",
+   "seconds": 0.0
+  },
+  "feasibility": {
+   "detail": {
+    "kairos": {
+     "verdict": "style infeasible for this robot",
+     "reasons": [
+      "collides: carry 0.7 cm, retreat 2.8 cm (g_left_pad, g_right_pad)"
+     ],
+     "worst": {
+      "max_ik_err_m": 0.0001997537951054221,
+      "max_penetration_m": 0.027516268858181057
+     }
+    },
+    "kairos_mobile": {
+     "verdict": "style infeasible for this robot",
+     "reasons": [
+      "collides: carry 0.7 cm, retreat 2.8 cm (g_left_pad, g_right_pad)"
+     ],
+     "worst": {
+      "max_ik_err_m": 0.0001997537951053154,
+      "max_penetration_m": 0.02751626885818125
+     }
+    }
+   },
+   "status": "ok",
+   "seconds": 0.8
+  },
+  "rollouts": {
+   "detail": {
+    "kairos": {
+     "raw": "41/60",
+     "all_fixes": "60/60"
+    },
+    "kairos_mobile": {
+     "raw": "41/60",
+     "all_fixes": "60/60"
+    }
+   },
+   "status": "ok",
+   "seconds": 18.5
+  }
+ },
+ "ok": true
+}

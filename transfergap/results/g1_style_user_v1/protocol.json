@@ -1,0 +1,92 @@
+{
+ "protocol": "g1_style_user_v1",
+ "frozen_before_trials": true,
+ "question": "Can the G1 (SONIC, MuJoCo) pick and place the block while following the author's recorded hand path (user_demo_v1 demo), at robot pace and at the author's pace?",
+ "demo_plan": "runs/demos/live/user_take1_right.plan.json (style_plan_from_demo of runs/demos/live/user_take1_right.npz; gitignored)",
+ "precheck_before_run": "sim/feasibility.py on the raw plan: G1 feasible (all legs IK error <= 2 cm at nominal and 4 jitter corners)",
+ "motion": "g1/plan_reach.py --demo-plan, frozen g1_contact_v1 grasp calibration (as g1_style_v1)",
+ "conditions": {
+  "nominal": "robot pace (timing_scale 1.0)",
+  "human": "the author's pace (plan timing_scale)"
+ },
+ "seeds": [
+  100,
+  109
+ ],
+ "rollouts_per_seed": 3,
+ "scoring": "g1/score.py tiers (touch/grasp/place) + g1/style_score.py",
+ "comparison": "g1_style_v1 (person 1, same pipeline): robot pace place 20/30, human pace 0/30",
+ "runner": "DP=$HOME/transfergap_g1/user_take1.plan.json TAG=_user CONDS='nominal human' bash ~/transfergap_g1/g1/run_style.sh",
+ "result_v1": "0/30 grasps at robot pace and at the author's pace (touch 13/30, 15/30); block never displaced > 0.2 cm",
+ "diagnosis_after_v1": "the copied reach starts 3.3 cm BELOW the grasp point and approaches upward (final direction z +0.9; person 1: from 35 cm above, z -0.81): the Dex3 hand reaches the block from underneath at table level. IK error 0 cm, so the kinematic pre-check cannot see it.",
+ "followup_v2": {
+  "frozen_before_trials": true,
+  "condition": "safe_path_v2 projection of the same plan (demo.style.safe_project_v2), robot pace",
+  "plan": "runs/demos/live/user_take1_right_safe.plan.json",
+  "seeds": [
+   100,
+   109
+  ],
+  "rollouts_per_seed": 3,
+  "runner": "DP=$HOME/transfergap_g1/user_take1_safe.plan.json TAG=_usersafe CONDS=nominal bash ~/transfergap_g1/g1/run_style.sh",
+  "prediction": "grasp > 0/30 if the from-below approach is the cause"
+ },
+ "followup_v2_result": "0/30 grasps (touch 11/30): prediction falsified",
+ "followup_v3": {
+  "frozen_before_trials": true,
+  "condition": "approach_from_above (demo.style.approach_from_above: safe_path_v2 + the last 40% of the reach replaced by a move to 8 cm above the grasp point and a vertical descent; carry and retreat unchanged), robot pace",
+  "plan": "runs/demos/live/user_take1_right_above.plan.json",
+  "seeds": [
+   100,
+   109
+  ],
+  "rollouts_per_seed": 3,
+  "runner": "DP=$HOME/transfergap_g1/user_take1_above.plan.json TAG=_userabove CONDS=nominal bash ~/transfergap_g1/g1/run_style.sh",
+  "prediction": "grasp > 0/30 if the sideways table-level approach is the cause; place comparable to person 1 (20/30) would mean the carry style itself transfers"
+ },
+ "followup_v3_result": "0/30 grasps (touch 13/30): prediction falsified",
+ "diagnosis_after_v3": "raw episodes: closest wrist-to-block distance median 18.1 cm (user) vs 12.3 cm (person 1); the wrist stops 17 cm behind the block in x (person 1: 11.6 cm). The G1 pelvis stands at x = 0.00 in every user run but at -0.08 in person 1's runs, matching the frozen stance offset (-0.075, 0.005) used by the planner -> ~7.5 cm planning error for this demo.",
+ "followup_v4": {
+  "frozen_before_trials": true,
+  "change": "planner stance offset set to the pelvis xy measured in the earlier user runs (median of v1-v3 episodes: 0.00, 0.02); everything else frozen",
+  "conditions": {
+   "raw_robot_pace": "runs/demos/live/user_take1_right.plan.json",
+   "above_robot_pace": "runs/demos/live/user_take1_right_above.plan.json"
+  },
+  "seeds": [
+   110,
+   119
+  ],
+  "seed_note": "new seeds, not used by v1-v3 (the stance value was measured on seeds 100-109)",
+  "rollouts_per_seed": 3,
+  "runner": "STANCE='0.0 0.02' SEED0=110 SEED1=119 SEEDS=110-119 DP=... TAG=_userst / _useraboveSt CONDS=nominal bash ~/transfergap_g1/g1/run_style.sh",
+  "prediction": "grasp and place clearly above 0/30 if the stance mismatch is the cause"
+ },
+ "followup_v4_note": "v4 raw condition: 0/30 grasps; wrist still stops 17 cm behind the block. Planned wrist at the end of the user's reach is 10.3 cm behind the block (person 1: 4.3 cm, and person 1's carry then sweeps the hand 6.8 cm close, scooping the block); the G1 tracks every plan ~7 cm short. The frozen grasp calibration is coupled to the demonstrator's motion.",
+ "followup_v5": {
+  "frozen_before_trials": true,
+  "change": "per-demo grasp calibration: forward grasp offset grasp_dxy = (dx, 0) chosen on DEV seeds, everything else as v1 (stance -0.075, 0.005; raw copied path; robot pace)",
+  "dev": {
+   "seeds": [
+    120,
+    129
+   ],
+   "rollouts_per_seed": 1,
+   "grid_dx_m": [
+    0.04,
+    0.06,
+    0.08
+   ],
+   "select": "max grasps, then max places, ties -> smaller dx; the choice is committed before the test"
+  },
+  "test": {
+   "seeds": [
+    130,
+    139
+   ],
+   "rollouts_per_seed": 3
+  },
+  "runner": "GDXY='dx 0' SEED0=.. SEED1=.. SEEDS=.. ROLLOUTS=.. DP=$HOME/transfergap_g1/user_take1.plan.json TAG=_userdx<dx> CONDS=nominal bash ~/transfergap_g1/g1/run_style.sh",
+  "dev_result": "0/10 grasps for every dx (touch 2/10 each): no candidate; test stage NOT run (predicted 0/30, would only spend GPU time)"
+ }
+}

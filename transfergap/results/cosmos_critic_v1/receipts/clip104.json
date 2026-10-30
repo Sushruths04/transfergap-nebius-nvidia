@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "kind": "cosmos_critic",
+  "requested_model": "nvidia/Cosmos-Reason2-8B",
+  "endpoint_host": "127.0.0.1",
+  "created_at": "2026-10-01T18:27:16.250336+00:00",
+  "prompt_sha256": "309d056cd99e17d4cf39386b52595756f2aa8852a202542d9f321a4363545cd8",
+  "video_sha256": "e21192d16adab67f1c3a43032b46e7e214e49a81dca45bd0d3e6643a29227bb7",
+  "request_sha256": "aefe05146bb5ec31969b386b2a0e6d72cd94d2c43e9d6a63b391d197cd4d2e59",
+  "fps": 4,
+  "sampling": {
+    "max_tokens": 4096,
+    "temperature": 0.6,
+    "top_p": 0.95,
+    "top_k": 20,
+    "repetition_penalty": 1.0,
+    "presence_penalty": 0.0,
+    "seed": 1234
+  },
+  "guided_json": true,
+  "status": "succeeded",
+  "clip_id": "clip104",
+  "git_commit": "9715a642cd667a2c241d582d2ba8c3c8f3904ec3",
+  "response_id": "chatcmpl-87c3d2826b39997c",
+  "returned_model": "nvidia/Cosmos-Reason2-8B",
+  "usage": {
+    "prompt_tokens": 7063,
+    "total_tokens": 7251,
+    "completion_tokens": 188,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 128
+    }
+  },
+  "finish_reason": "stop",
+  "content": "{\"success\": \"yes\", \"failing_stage\": \"none\", \"rationale\": \"The robot arm successfully grasped the red block, lifted it, moved it over the green tray, released it into the tray, and then moved away, completing the task as intended.\"}",
+  "reasoning_content": "\nOkay, let's see. The user wants me to determine if the robot successfully completed the task of moving the red block into the green tray. The video shows the robot arm picked up the block, moved it over the tray, released it, and then moved away. The key points here are whether the block was released and resting inside the tray. According to the video, the robot did all those steps: grasped, lifted, moved, released, and moved away. The video does not show any failure during the process, like dropping the block or missing the tray. So the answer should be yes, the task was successful.\n",
+  "parsed": true,
+  "answer": {
+    "success": true,
+    "failing_stage": "none",
+    "rationale": "The robot arm successfully grasped the red block, lifted it, moved it over the green tray, released it into the tray, and then moved away, completing the task as intended."
+  },
+  "parse_error": null,
+  "latency_s": 8.598649191000732
+}

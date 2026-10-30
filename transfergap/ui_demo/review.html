@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TransferGap Before After</title>
+<style>
+:root{--bg:#090c11;--p:#0f141c;--p2:#141b26;--line:#1d2635;--tx:#e7ecf3;--mu:#8592a6;--nv:#76b900;--cy:#38bdf8;--am:#fbbf24;--rd:#f87171}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--tx);font:14px/1.5 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+header{display:flex;align-items:center;gap:12px;padding:12px 18px;border-bottom:1px solid var(--line);background:var(--p);position:sticky;top:0;z-index:5}
+h1{font-size:16px}h1 b{color:var(--nv)}.sp{flex:1}a{color:var(--cy);text-decoration:none;font-size:13px}
+.seg{display:flex;border:1px solid var(--line);border-radius:9px;overflow:hidden}
+.seg button{background:var(--p2);color:var(--mu);border:0;padding:7px 14px;font:inherit;cursor:pointer}.seg button.on{background:#1d2b08;color:var(--nv);font-weight:650}
+main{max-width:1500px;margin:0 auto;padding:14px 18px;display:flex;flex-direction:column;gap:14px}
+.row{background:var(--p);border:1px solid var(--line);border-radius:14px;padding:12px 14px;display:grid;grid-template-columns:1fr 250px;gap:14px}
+@media(max-width:900px){.row{grid-template-columns:1fr}}
+.vids{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.v{position:relative;background:#06080c;border-radius:10px;overflow:hidden;aspect-ratio:16/10}
+.v video{width:100%;height:100%;object-fit:contain}
+.v span{position:absolute;left:8px;top:8px;font-size:11px;padding:2px 9px;border-radius:999px;background:rgba(9,12,17,.8);border:1px solid var(--line)}
+.v .nov{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:var(--mu);font-size:12px;text-align:center;padding:10px}
+.side h2{font-size:18px;margin-bottom:4px}.side small{color:var(--mu)}
+.bar{height:10px;border-radius:6px;background:var(--p2);overflow:hidden;position:relative;margin:4px 0 10px}
+.bar i{position:absolute;inset:0 auto 0 0;display:block}
+.k{display:flex;justify-content:space-between;font-size:13px}.k b{font-variant-numeric:tabular-nums}
+.chips{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}.chip{font-size:11.5px;padding:3px 9px;border-radius:999px;border:1px solid var(--line);color:var(--mu)}
+.gain{font-size:26px;font-weight:750;color:var(--nv)}
+.note{font-size:12px;color:var(--am);padding:0 4px}
+</style>
+<link rel="stylesheet" href="light.css">
+</head>
+<body>
+<header>
+  <h1>Transfer<b>Gap</b> · Before / After</h1>
+  <div class="seg" id="seg"><button class="on" data-m="both">Side by side</button><button data-m="raw">Raw copy</button><button data-m="stack">With fixes</button></div>
+  <div class="sp"></div><a href="console.html?design=1">Live console</a> · <a href="index.html">Results</a>
+</header>
+<main id="rows"></main>
+<script src="data.js"></script>
+<script src="scale_data.js"></script>
+<script>
+const R=[{k:"ur5e",name:"UR5e",raw:"media/hq/ur5e_raw_seed1001.mp4",stack:"media/hq/ur5e_stack_seed1001.mp4"},
+         {k:"ur10e",name:"UR10e",raw:"media/hq/ur10e_raw_seed1001.mp4",stack:"media/hq/ur10e_stack_seed1001.mp4"},
+         {k:"kairos",name:"KAIROS (arm stats; mobile video)",raw:"media/hq/kairos_mobile_raw_seed1001.mp4",stack:"media/hq/kairos_mobile_stack_seed1001.mp4"}];
+const WHY={no_lift:"never lifted",not_released_and_settled_at_goal:"not released at goal",forbidden_collision:"collision"};
+const pct=(k,n)=>(100*k/n).toFixed(0);
+const html=R.map(r=>{const d=(window.TG||{robots:{}}).robots[r.k];if(!d)return"";
+  const why=Object.entries(d.raw.why||{}).map(([a,b])=>`<span class="chip">${WHY[a]||a} · ${b}</span>`).join("");
+  return `<section class="row" data-k="${r.k}"><div class="vids">
+    <div class="v raw"><span>Raw copy</span><video muted loop playsinline preload="none" controls src="${r.raw}"></video></div>
+    <div class="v stack"><span>With fixes</span><video muted loop playsinline preload="none" controls src="${r.stack}"></video></div></div>
+    <div class="side"><h2>${r.name}</h2><small>60 held-out seeds, same clip</small>
+      <div class="gain">+${d.gain_pp.toFixed(0)} pp</div>
+      <div class="k"><span>Raw</span><b>${d.raw.k} / ${d.raw.n}</b></div><div class="bar"><i style="width:${pct(d.raw.k,d.raw.n)}%;background:var(--rd)"></i></div>
+      <div class="k"><span>With fixes</span><b>${d.fix.k} / ${d.fix.n}</b></div><div class="bar"><i style="width:${pct(d.fix.k,d.fix.n)}%;background:var(--nv)"></i></div>
+      <small>Why the raw copy failed</small><div class="chips">${why}</div></div></section>`}).join("");
+document.getElementById("rows").innerHTML=html+`<p class="note">Counts come from results/showcase_r6_shoulder044 via build.py (shoulder width 0.44 m is derived, not measured). Simulation only. Videos load on demand; if one is missing, copy it with fetch_media.sh.</p>`;
+
+/* ---- object-size slider (clips: GPU renders, one seed; counts: 60-seed laptop sweep, results/object_scale_v1) ---- */
+(function(){
+  const sec=document.createElement("section");sec.className="row";sec.style.gridTemplateColumns="1fr";
+  sec.innerHTML=`<div class="side"><h2>Object size</h2><small>Does the copied style survive a bigger or smaller cube? Same clip, same fix stack, never tuned for these sizes.</small></div>
+  <div class="seg" id="rseg" style="width:max-content"><button class="on" data-r="ur10e">UR10e</button><button data-r="ur5e">UR5e</button></div>
+  <div style="display:flex;align-items:center;gap:14px"><label style="color:var(--mu)">Cube edge</label><input id="sz" type="range" min="3" max="7" step="2" value="5" style="flex:1;accent-color:var(--nv)"><b id="szl">5 cm</b></div>
+  <div class="vids"><div class="v"><span>Raw copy</span><video id="vr" muted loop playsinline controls preload="none"></video></div><div class="v"><span>With fixes</span><video id="vs" muted loop playsinline controls preload="none"></video></div></div>
+  <div id="sct" style="display:grid;grid-template-columns:repeat(5,1fr);gap:8px"></div>
+  <p class="note">Videos: one seed per cell (illustration). Counts: 60 held-out seeds, exploratory, one clip. Clips exist for 3, 5 and 7 cm; the counts cover 3 to 7 cm.</p>`;
+  document.getElementById("rows").insertBefore(sec,document.getElementById("rows").lastElementChild);
+  let rb="ur10e";
+  const upd=()=>{const cm=+document.getElementById("sz").value;document.getElementById("szl").textContent=cm+" cm";
+    for(const [id,c] of [["vr","raw"],["vs","stack"]]){const v=document.getElementById(id);v.src=`media/scale/${rb}_${cm}cm_${c}_seed1000.mp4`;v.load()}
+    const d=(window.TGSCALE||{})[rb]||{};
+    document.getElementById("sct").innerHTML=Object.entries(d).map(([k,x])=>`<div class="card" style="background:var(--p2);border-radius:10px;padding:8px 10px;${parseFloat(k)===cm?"outline:1px solid var(--nv)":""}"><small style="color:var(--mu)">${k.replace(".0","")}</small>
+      <div class="k"><span>raw</span><b>${x.raw}/${x.n}</b></div><div class="k"><span>fixes</span><b>${x.fix}/${x.n}</b></div></div>`).join("")};
+  document.getElementById("sz").oninput=upd;
+  document.querySelectorAll("#rseg button").forEach(b=>b.onclick=()=>{rb=b.dataset.r;document.querySelectorAll("#rseg button").forEach(x=>x.classList.toggle("on",x===b));upd()});
+  upd();
+})();
+
+document.querySelectorAll("video").forEach(v=>v.addEventListener("error",()=>{const d=document.createElement("div");d.className="nov";d.textContent="video not in media/ yet";v.replaceWith(d)}));
+document.querySelectorAll("#seg button").forEach(b=>b.onclick=()=>{document.querySelectorAll("#seg button").forEach(x=>x.classList.toggle("on",x===b));
+  const m=b.dataset.m;document.querySelectorAll(".v.raw").forEach(e=>e.style.display=m==="stack"?"none":"");document.querySelectorAll(".v.stack").forEach(e=>e.style.display=m==="raw"?"none":"");
+  document.querySelectorAll(".vids").forEach(e=>e.style.gridTemplateColumns=m==="both"?"1fr 1fr":"1fr")});
+</script>
+</body>
+</html>

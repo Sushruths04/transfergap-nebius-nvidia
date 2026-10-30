@@ -1,0 +1,14 @@
+{
+ "protocol": "demo_generalization_v2",
+ "frozen_before_trials": true,
+ "question": "With the style-safety projection (safe_path) added to the notebook's fix stack, does one fixed stack transfer to all four annotated demos of the Pexels clip?",
+ "fix_stack": ["speed_cap_3", "look_again", "touch_probe_calibration", "speed_cap_2", "safe_path"],
+ "why_safe_path": "demo_generalization_v1 failed 0/60 everywhere; diagnosis (oracle_all runs on seeds 1000-1005, exploratory) showed copied post-release dips and a below-grasp sweep collide; safe_path was added after that diagnosis and before these trials",
+ "demos": ["pexels_8135753_notebook", "pexels_8135753_markers", "pexels_8135753_orange_marker", "pexels_8135753_notepad"],
+ "robots": ["ur5e", "ur10e"],
+ "seeds": [1000, 1059],
+ "caveat": "seeds 1000-1005 were used in the exploratory oracle_all diagnosis (perfect-stage condition only, not this condition); reported as is",
+ "conditions": ["raw (no fix)", "all_fixes (incl. safe_path)"],
+ "style_reference": "UNprojected retargeted human path (so safe_path's style cost is measured)",
+ "report_all_demos": true
+}

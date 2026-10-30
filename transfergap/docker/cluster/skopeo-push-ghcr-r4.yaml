@@ -1,0 +1,32 @@
+# Pushes the kaniko-built full image tar to the user's private GitHub Container Registry package.
+# Needs the Secret tg-ghcr (docker-registry type, user Sushruths04, a token with write:packages only), created by the user.
+# ghcr.io names must be lowercase. The package is created on first push, private by default.
+apiVersion: batch/v1
+kind: Job
+metadata: {name: tg-push-ghcr-r4, namespace: isaac-sim, labels: {project: transfergap}}
+spec:
+  backoffLimit: 0
+  ttlSecondsAfterFinished: 86400
+  template:
+    spec:
+      restartPolicy: Never
+      nodeSelector: {kubernetes.io/hostname: srv-hpc-gpu04}
+      containers:
+      - name: skopeo
+        image: quay.io/skopeo/stable:latest
+        command: [bash, -c]
+        args:
+        - |
+          export TMPDIR=/ws/transfergap/cache/skopeo-tmp; mkdir -p $TMPDIR
+          D=docker://ghcr.io/sushruths04/transfergap:full-2026-10-06c
+          skopeo copy --retry-times 3 --dest-authfile /auth/config.json docker-archive:/ws/transfergap/images/transfergap-full-2026-10-06c.tar $D 2>&1 | tail -3
+          echo "push exit=${PIPESTATUS[0]}"
+          skopeo inspect --authfile /auth/config.json $D 2>&1 | grep -E '"Digest"|"Created"|"Architecture"|fatal' | head -4
+          rm -rf $TMPDIR
+        resources:
+          requests: {cpu: "2", memory: 4Gi, ephemeral-storage: 5Gi}
+          limits: {cpu: "8", memory: 16Gi, ephemeral-storage: 20Gi}
+        volumeMounts: [{name: auth, mountPath: /auth, readOnly: true}, {name: data, mountPath: /ws/transfergap}]
+      volumes:
+      - {name: auth, secret: {secretName: tg-ghcr, items: [{key: .dockerconfigjson, path: config.json}]}}
+      - {name: data, persistentVolumeClaim: {claimName: tg-dev-data}}

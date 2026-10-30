@@ -1,0 +1,58 @@
+{
+ "ur5e_3cm_raw_seed1000.mp4": {
+  "success": true,
+  "failure_reasons": []
+ },
+ "ur5e_3cm_stack_seed1000.mp4": {
+  "success": true,
+  "failure_reasons": []
+ },
+ "ur5e_5cm_raw_seed1000.mp4": {
+  "success": true,
+  "failure_reasons": []
+ },
+ "ur5e_5cm_stack_seed1000.mp4": {
+  "success": true,
+  "failure_reasons": []
+ },
+ "ur5e_7cm_raw_seed1000.mp4": {
+  "success": false,
+  "failure_reasons": [
+   "no_lift",
+   "not_released_and_settled_at_goal"
+  ]
+ },
+ "ur5e_7cm_stack_seed1000.mp4": {
+  "success": false,
+  "failure_reasons": [
+   "no_lift",
+   "not_released_and_settled_at_goal"
+  ]
+ },
+ "ur10e_3cm_raw_seed1000.mp4": {
+  "success": true,
+  "failure_reasons": []
+ },
+ "ur10e_3cm_stack_seed1000.mp4": {
+  "success": true,
+  "failure_reasons": []
+ },
+ "ur10e_5cm_raw_seed1000.mp4": {
+  "success": true,
+  "failure_reasons": []
+ },
+ "ur10e_5cm_stack_seed1000.mp4": {
+  "success": true,
+  "failure_reasons": []
+ },
+ "ur10e_7cm_raw_seed1000.mp4": {
+  "success": false,
+  "failure_reasons": [
+   "not_released_and_settled_at_goal"
+  ]
+ },
+ "ur10e_7cm_stack_seed1000.mp4": {
+  "success": true,
+  "failure_reasons": []
+ }
+}

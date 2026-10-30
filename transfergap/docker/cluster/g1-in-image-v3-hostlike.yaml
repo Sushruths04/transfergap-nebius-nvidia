@@ -1,0 +1,28 @@
+# One G1 run inside the `full` image pulled from the private GitHub registry. Needs Secret tg-ghcr (pull) and a free GPU
+# (scale deploy/tg-dev to 0 first if the pod stays Pending). The script is read from the project volume.
+apiVersion: batch/v1
+kind: Job
+metadata: {name: tg-g1-in-image-v3, namespace: isaac-sim, labels: {project: transfergap}}
+spec:
+  backoffLimit: 0
+  activeDeadlineSeconds: 14400
+  ttlSecondsAfterFinished: 86400
+  template:
+    spec:
+      restartPolicy: Never
+      runtimeClassName: nvidia
+      nodeSelector: {nvidia.com/gpu.product: NVIDIA-L40S, kubernetes.io/hostname: srv-hpc-gpu04}
+      imagePullSecrets: [{name: tg-ghcr}]
+      containers:
+      - name: g1
+        image: ghcr.io/sushruths04/transfergap:full-2026-10-05
+        imagePullPolicy: IfNotPresent
+        command: [bash, /ws/transfergap/runs/in_image_run.sh, "1200-1209"]
+        env: [{name: NVIDIA_DRIVER_CAPABILITIES, value: all}, {name: OUTNAME, value: in_image_v3_cpu32}]
+        resources:
+          requests: {cpu: "16", memory: 48Gi, ephemeral-storage: 20Gi, nvidia.com/gpu: 1}
+          limits: {cpu: "32", memory: 64Gi, ephemeral-storage: 100Gi, nvidia.com/gpu: 1}
+        volumeMounts: [{name: data, mountPath: /ws/transfergap}, {name: shm, mountPath: /dev/shm}]
+      volumes:
+      - {name: data, persistentVolumeClaim: {claimName: tg-dev-data}}
+      - {name: shm, emptyDir: {medium: Memory, sizeLimit: 16Gi}}

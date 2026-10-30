@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "kind": "cosmos_critic",
+  "requested_model": "nvidia/Cosmos-Reason2-8B",
+  "endpoint_host": "127.0.0.1",
+  "created_at": "2026-10-01T19:02:47.615669+00:00",
+  "prompt_sha256": "9b1e2d29448b883dfebd005b50ee9757d4ae95473bd894a1ad88ee24469c63cb",
+  "video_sha256": "a5865c2f93e6d848a50a4d47fcdb923356acb572e1ac5a534dd6d5d0ee639750",
+  "request_sha256": "b0a359c416f318ff399951051c121ca5a948ae131b1bb1e2ddea2cc3acabdbe5",
+  "fps": 4,
+  "sampling": {
+    "max_tokens": 4096,
+    "temperature": 0.6,
+    "top_p": 0.95,
+    "top_k": 20,
+    "repetition_penalty": 1.0,
+    "presence_penalty": 0.0,
+    "seed": 1234
+  },
+  "guided_json": true,
+  "status": "succeeded",
+  "clip_id": "clip085",
+  "git_commit": "5973b39608c7ac334378fcb490eaba0a0d6606f1",
+  "prompt": "obs",
+  "camera": "close",
+  "response_id": "chatcmpl-a6e48a0cf0905cb5",
+  "returned_model": "nvidia/Cosmos-Reason2-8B",
+  "usage": {
+    "prompt_tokens": 6408,
+    "total_tokens": 6667,
+    "completion_tokens": 259,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 215
+    }
+  },
+  "finish_reason": "stop",
+  "content": "{\"cube_last_frame\": \"tray\", \"cube_left_table\": \"yes\", \"observations\": \"The robot arm picks up the red cube from the table and places it into the green tray.\"}",
+  "reasoning_content": "\nOkay, let's break this down. The user is asking about the red cube's position in the last frame and whether it was lifted off the table.\n\nFirst, looking at the video. The robot arm picks up the red cube from the table, moves it over the green tray, and places it inside. The last action shown is the robot arm releasing the cube into the tray. So in the final frame, the cube should be inside the green tray. The options for cube_last_frame are table, tray, or gripper. Since the cube is placed in the tray, the answer should be \"tray\"\n\nNext, the question is whether the cube was lifted off the table. The video shows the robot arm lifts the cube from the table and places it into the tray. So yes, it was lifted. The answer for cube_left_table is \"yes\"\n\nThe observations part needs a short sentence. The robot arm moves the red cube from the table into the green tray. So the observation is that the cube is moved into the tray by the robot arm.\n",
+  "parsed": true,
+  "answer": {
+    "success": true,
+    "failing_stage": "none",
+    "rationale": "The robot arm picks up the red cube from the table and places it into the green tray.",
+    "observed": {
+      "cube_last_frame": "tray",
+      "cube_left_table": "yes"
+    }
+  },
+  "parse_error": null,
+  "latency_s": 9.894119624999803
+}

@@ -1,0 +1,33 @@
+{
+ "model": "nvidia/nemotron-3-super-120b-a12b",
+ "menu": [
+  "touch_probe_calibration",
+  "speed_cap_3"
+ ],
+ "rule_choice": "touch_probe_calibration",
+ "valid": true,
+ "agent_choice": "touch_probe_calibration",
+ "rationale": "Calibration yields the largest success boost (+35 pp) with minimal style impact (only 0.26\u202fcm path RMSE reduction, no speed\u2011profile change), preserving the human\u2019s demonstrated motion while fixing the dominant failure mode.",
+ "response_id": "chatcmpl-ba00411fdf880153",
+ "latency_s": 2.514717945996381,
+ "usage": {
+  "completion_tokens": 276,
+  "prompt_tokens": 732,
+  "total_tokens": 1008,
+  "completion_tokens_details": {
+   "accepted_prediction_tokens": null,
+   "audio_tokens": null,
+   "reasoning_tokens": 203,
+   "rejected_prediction_tokens": null
+  },
+  "prompt_tokens_details": {
+   "audio_tokens": null,
+   "cached_tokens": 0,
+   "created_cache_tokens": 0,
+   "multimodal_tokens": null
+  },
+  "prompt_cache_hit_tokens": 0,
+  "prompt_cache_miss_tokens": 732
+ },
+ "agrees_with_rule": true
+}

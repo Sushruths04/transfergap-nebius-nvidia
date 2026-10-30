@@ -1,0 +1,10 @@
+{
+ "vr3": {
+  "touch_rollout_rate": "29/40",
+  "grasp_rollout_rate": "6/40",
+  "place_rollout_rate": "3/40",
+  "touch_trial_any_rollout": "29/40",
+  "grasp_trial_any_rollout": "6/40",
+  "place_trial_any_rollout": "3/40"
+ }
+}

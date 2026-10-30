@@ -1,0 +1,31 @@
+20:39:17 packing_box lowest_hand
+{"perceive": "ok", "demo": "ok", "feasibility": "ok", "rollouts": "ok"}
+| demo | ok | {"metric_scale": 1.0, "shoulder_width_ref_m": null, "frames": 55, "events": "given", "pinch_extent_m": [0.254, 0.469, 0.384], "plausibility": "ok"} |
+| feasibility | ok | {"ur5e": {"verdict": "feasible", "reasons": [], "worst": {"max_ik_err_m": 0.00019974152617837474, "max_penetration_m": 0.0}}, "ur10e": {"verdict": "feasible", "reasons": [], "worst": {"max_ik_err_m": 0.00019993292639288558, "max_penetration_m": 0.0}}, "kairos": {"verdict": "feasible", "reasons": [], |
+| rollouts | ok | {"ur5e": {"raw": "0/60", "all_fixes": "51/60"}, "ur10e": {"raw": "0/60", "all_fixes": "52/60"}, "kairos": {"raw": "0/60", "all_fixes": "60/60"}} |
+20:39:42 packing_box hand_at_grasp
+{"perceive": "ok", "demo": "ok", "feasibility": "ok", "rollouts": "ok"}
+| demo | ok | {"metric_scale": 1.0, "shoulder_width_ref_m": null, "frames": 55, "events": "given", "pinch_extent_m": [0.254, 0.469, 0.384], "plausibility": "ok"} |
+| feasibility | ok | {"ur5e": {"verdict": "style infeasible for this robot", "reasons": ["collides: carry 4.3 cm, retreat 4.8 cm (carried_block, g_base, g_left_coupler, g_left_follower, g_left_pad, g_left_spring_link, g_right_coupler, g_right_follower, g_right_pad)"], "worst": {"max_ik_err_m": 0.0001963339836377855, "ma |
+| rollouts | ok | {"ur5e": {"raw": "0/60", "all_fixes": "0/60"}, "ur10e": {"raw": "0/60", "all_fixes": "0/60"}, "kairos": {"raw": "0/60", "all_fixes": "0/60"}} |
+20:40:05 woman_box lowest_hand
+{"perceive": "ok", "demo": "ok", "feasibility": "ok", "rollouts": "ok"}
+| demo | ok | {"metric_scale": 1.0, "shoulder_width_ref_m": null, "frames": 101, "events": "given", "pinch_extent_m": [0.678, 0.85, 0.386], "plausibility": "ok"} |
+| feasibility | ok | {"ur5e": {"verdict": "style infeasible for this robot", "reasons": ["collides: reach 4.8 cm, retreat 4.2 cm (g_left_coupler, g_left_follower, g_left_pad, g_left_spring_link, g_right_follower, g_right_pad, g_right_spring_link)"], "worst": {"max_ik_err_m": 0.00019908476460935525, "max_penetration_m":  |
+| rollouts | ok | {"ur5e": {"raw": "0/60", "all_fixes": "0/60"}, "ur10e": {"raw": "0/60", "all_fixes": "0/60"}, "kairos": {"raw": "0/60", "all_fixes": "34/60"}} |
+20:40:32 woman_box hand_at_grasp
+{"perceive": "ok", "demo": "ok", "feasibility": "ok", "rollouts": "ok"}
+| demo | ok | {"metric_scale": 1.0, "shoulder_width_ref_m": null, "frames": 101, "events": "given", "pinch_extent_m": [0.678, 0.85, 0.386], "plausibility": "ok"} |
+| feasibility | ok | {"ur5e": {"verdict": "style infeasible for this robot", "reasons": ["collides: reach 6.7 cm, retreat 4.8 cm (g_base, g_left_coupler, g_left_follower, g_left_pad, g_left_spring_link, g_right_coupler, g_right_follower, g_right_pad, g_right_spring_link)"], "worst": {"max_ik_err_m": 0.000199427935292167 |
+| rollouts | ok | {"ur5e": {"raw": "0/60", "all_fixes": "0/60"}, "ur10e": {"raw": "0/60", "all_fixes": "0/60"}, "kairos": {"raw": "0/60", "all_fixes": "33/60"}} |
+20:40:59 clothes_bin lowest_hand
+{"perceive": "ok", "demo": "FAILED", "feasibility": "skipped (earlier stage failed)", "rollouts": "skipped (earlier stage failed)"}
+| demo | FAILED | {"metric_scale": 1.0, "shoulder_width_ref_m": null, "frames": 111, "events": "given", "pinch_extent_m": [1.206, 3.179, 0.586], "plausibility": ["hand path extent [1.21, 3.18, 0.59] m exceeds 1.5 m (pose estimate is not metric or failed)"]} |
+| feasibility | skipped (earlier stage failed) | "" |
+| rollouts | skipped (earlier stage failed) | "" |
+20:41:00 clothes_bin hand_at_grasp
+{"perceive": "ok", "demo": "FAILED", "feasibility": "skipped (earlier stage failed)", "rollouts": "skipped (earlier stage failed)"}
+| demo | FAILED | {"metric_scale": 1.0, "shoulder_width_ref_m": null, "frames": 111, "events": "given", "pinch_extent_m": [1.206, 3.179, 0.586], "plausibility": ["hand path extent [1.21, 3.18, 0.59] m exceeds 1.5 m (pose estimate is not metric or failed)"]} |
+| feasibility | skipped (earlier stage failed) | "" |
+| rollouts | skipped (earlier stage failed) | "" |
+20:41:00 PIPE DONE

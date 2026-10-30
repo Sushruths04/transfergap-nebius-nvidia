@@ -1,0 +1,58 @@
+# One image, two stages. Same image on a laptop, a GPU cluster and Nebius; only the launcher differs (launch.sh).
+#   --target arm   UR5e / UR10e / KAIROS arm slice + depth perception + style transfer (MuJoCo, EGL). Lean, CPU or GPU.
+#   --target full  arm + the G1 stack (GEAR-SONIC deploy with TensorRT, MuJoCo sim venv). Needs a GPU host, driver >= 570.
+# Build context = `git archive` of the tracked code (see build_context.sh), so only committed files enter the image.
+# Not in the image on purpose: model weights (fetched with your own HF token), recorded human demos, personal data, and
+# the KAIROS gripper description files (mounted at run time, see entrypoint.sh).
+FROM nvidia/cuda:12.8.0-base-ubuntu22.04 AS arm
+ARG DEBIAN_FRONTEND=noninteractive
+ENV TZ=Etc/UTC NVIDIA_DRIVER_CAPABILITIES=all MUJOCO_GL=egl PYOPENGL_PLATFORM=egl MPLCONFIGDIR=/tmp/mpl PYTHONUNBUFFERED=1
+RUN apt-get update && apt-get install -y --no-install-recommends \
+        python3 python3-venv python3-pip git ca-certificates ffmpeg libegl1 libgl1 libglvnd0 libgles2 libosmesa6 tzdata \
+    && rm -rf /var/lib/apt/lists/*
+# versions identical to the laptop venv the results were produced with
+RUN python3 -m venv /opt/tg && /opt/tg/bin/pip install --no-cache-dir -q --retries 10 --timeout 120 \
+        numpy==2.2.6 mujoco==3.14.0 matplotlib==3.10.9 imageio==2.38.0 imageio-ffmpeg==0.6.0 pillow==12.3.0 PyYAML==6.0.3 pyzmq
+COPY . /opt/transfergap_src/transfergap
+WORKDIR /opt/transfergap_src/transfergap
+# UR5e / UR10e / Robotiq 2F-85 from mujoco_menagerie at the pinned commit (Apache-2.0, fetched, not redistributed here)
+RUN rm -f transfergap/sim/assets/menagerie && mkdir -p transfergap/sim/assets \
+    && git clone -q --filter=blob:none --no-checkout https://github.com/google-deepmind/mujoco_menagerie transfergap/sim/assets/menagerie \
+    && cd transfergap/sim/assets/menagerie && git sparse-checkout set universal_robots_ur5e universal_robots_ur10e robotiq_2f85 \
+    && git checkout -q "$(tr -d '[:space:]' < ../MENAGERIE_COMMIT)" && rm -rf .git
+COPY docker/entrypoint.sh /usr/local/bin/tg-entrypoint
+ENV PATH=/opt/tg/bin:$PATH PYTHONPATH=/opt/transfergap_src/transfergap TG_OUT=/data/out
+ENTRYPOINT ["/usr/local/bin/tg-entrypoint"]
+CMD ["test"]
+
+FROM arm AS full
+# G1 stack, same steps as the cluster-validated recipe (CUDA 12.8 base, pinned upstream commit and TensorRT).
+RUN apt-get update && apt-get install -y --no-install-recommends python3-dev git-lfs curl build-essential cmake pkg-config \
+        libgtest-dev libglfw3 tmux sudo lsb-release && git lfs install && rm -rf /var/lib/apt/lists/*
+ARG WBC_COMMIT=b042411fae38ee4d1af9aac82a37a1f8d14d6dd0
+ARG TRT_VERSION=10.13.3.9-1+cuda12.9
+ENV TensorRT_ROOT=/opt/TensorRT-10.13.3.9 onnxruntime_ROOT=/opt/onnxruntime
+RUN mkdir -p /tmp/trt $TensorRT_ROOT/lib $TensorRT_ROOT/include $TensorRT_ROOT/bin && cd /tmp/trt \
+    && for p in libnvinfer10 libnvinfer-dev libnvinfer-headers-dev libnvinfer-plugin10 libnvinfer-plugin-dev \
+                libnvinfer-headers-plugin-dev libnvonnxparsers10 libnvonnxparsers-dev libnvinfer-bin; do \
+         apt-get update -qq && apt-get download -qq $p=${TRT_VERSION}; done \
+    && for f in *.deb; do dpkg -x $f x; done \
+    && cp -a x/usr/lib/x86_64-linux-gnu/libnvinfer* x/usr/lib/x86_64-linux-gnu/libnvonnx* $TensorRT_ROOT/lib/ \
+    && cp -a x/usr/include/x86_64-linux-gnu/Nv*.h $TensorRT_ROOT/include/ \
+    && cp -a x/usr/src/tensorrt/bin/* $TensorRT_ROOT/bin/ && cd / && rm -rf /tmp/trt /var/lib/apt/lists/*
+WORKDIR /opt
+RUN git clone https://github.com/NVlabs/GR00T-WholeBodyControl.git && cd GR00T-WholeBodyControl \
+    && git checkout ${WBC_COMMIT} \
+    && cd gear_sonic_deploy && ONNX_INSTALL_PATH=$onnxruntime_ROOT bash scripts/install_deps.sh \
+    && cd .. && bash install_scripts/install_mujoco_sim.sh
+# Pin the sim venv to the exact versions the G1 results were produced with (an unpinned rebuild pulled mujoco 3.15.0 and the closed-loop
+# controller then grasped 0 of 4 seeds that grasp 8-10 of 10 on 3.14.0; see results/g1_in_image_v1/README.md).
+COPY docker/sim_venv_pins.txt /tmp/sim_venv_pins.txt
+RUN /root/.local/bin/uv pip install --python /opt/GR00T-WholeBodyControl/.venv_sim/bin/python -r /tmp/sim_venv_pins.txt \
+    && /opt/GR00T-WholeBodyControl/.venv_sim/bin/python -c "import mujoco,numpy;assert mujoco.__version__=='3.14.0' and numpy.__version__=='1.26.4',(mujoco.__version__,numpy.__version__)"
+RUN python3 -m venv /opt/hfenv && /opt/hfenv/bin/pip install -q huggingface_hub
+ENV LD_LIBRARY_PATH=$TensorRT_ROOT/lib:$onnxruntime_ROOT/lib SONIC_ROOT=/opt/GR00T-WholeBodyControl
+RUN cd /opt/GR00T-WholeBodyControl/gear_sonic_deploy && mkdir -p build && cd build \
+    && cmake -S .. -B . -DCMAKE_BUILD_TYPE=Release -DFETCHCONTENT_SOURCE_DIR_GOOGLETEST=/usr/src/googletest \
+    && cmake --build . -j"$(nproc)"
+WORKDIR /opt/transfergap_src/transfergap

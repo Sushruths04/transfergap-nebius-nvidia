@@ -1,0 +1,34 @@
+{
+ "schema_version": 1,
+ "kind": "hosted_inference",
+ "role": "nemotron",
+ "requested_model": "nvidia/nemotron-3-super-120b-a12b",
+ "endpoint_host": "api.tokenfactory.nebius.com",
+ "created_at": "2026-10-09T15:36:15.709242+00:00",
+ "request_sha256": "fad40fb86fde30409e0902fa54cef4641c52edb2aa8a59808341ae7a60117017",
+ "status": "succeeded",
+ "response_id": "chatcmpl-8a9f44c458ec4842",
+ "returned_model": "nvidia/nemotron-3-super-120b-a12b",
+ "usage": {
+  "completion_tokens": 615,
+  "prompt_tokens": 811,
+  "total_tokens": 1426,
+  "completion_tokens_details": {
+   "accepted_prediction_tokens": null,
+   "audio_tokens": null,
+   "reasoning_tokens": 546,
+   "rejected_prediction_tokens": null
+  },
+  "prompt_tokens_details": {
+   "audio_tokens": null,
+   "cached_tokens": 0,
+   "created_cache_tokens": 0,
+   "multimodal_tokens": null
+  },
+  "prompt_cache_hit_tokens": 0,
+  "prompt_cache_miss_tokens": 811
+ },
+ "finish_reason": "stop",
+ "content": "\n\n{\n  \"correction\": \"speed_cap_1.5\",\n  \"rationale\": \"Adding the slowest speed cap reduces forbidden collisions and improves lift/release control, while the timing fix\u2019s style budget shows the largest path\u2011RMSE reduction and a positive speed\u2011profile correlation gain, preserving human-like motion.\"\n}",
+ "latency_s": 5.576262599002803
+}

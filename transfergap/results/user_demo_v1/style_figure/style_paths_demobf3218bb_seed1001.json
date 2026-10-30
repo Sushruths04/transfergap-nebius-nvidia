@@ -1,0 +1,22 @@
+{
+ "demo": {
+  "kind": "file",
+  "path": "runs/demos/live/user_take1_right.npz",
+  "sha256": "bf3218bbaf7345cb7fcaa09bfacc1de3049b527b40a7092d514e1532ffead2f8",
+  "tag": "demobf3218bb"
+ },
+ "fixes": [
+  "speed_cap_3",
+  "look_again",
+  "touch_probe_calibration",
+  "speed_cap_2",
+  "safe_path_v2"
+ ],
+ "seed": 1001,
+ "success": {
+  "ur5e|none": false,
+  "ur5e|speed_cap_3+look_again+touch_probe_calibration+speed_cap_2+safe_path_v2": true,
+  "ur10e|none": false,
+  "ur10e|speed_cap_3+look_again+touch_probe_calibration+speed_cap_2+safe_path_v2": true
+ }
+}

@@ -1,0 +1,35 @@
+{
+ "model": "nvidia/nemotron-3-super-120b-a12b",
+ "menu": [
+  "look_again",
+  "touch_probe_calibration",
+  "speed_cap_1.5",
+  "safe_path"
+ ],
+ "rule_choice": "look_again",
+ "valid": true,
+ "agent_choice": "look_again",
+ "rationale": "Perception fix yields the largest success boost (+11.7 pp) with minimal style impact (tiny path RMSE and speed\u2011profile changes), improving lift and release while keeping the human\u2011like motion.",
+ "response_id": "chatcmpl-ad0b513ac2b4e25e",
+ "latency_s": 3.49121881499741,
+ "usage": {
+  "completion_tokens": 391,
+  "prompt_tokens": 859,
+  "total_tokens": 1250,
+  "completion_tokens_details": {
+   "accepted_prediction_tokens": null,
+   "audio_tokens": null,
+   "reasoning_tokens": 328,
+   "rejected_prediction_tokens": null
+  },
+  "prompt_tokens_details": {
+   "audio_tokens": null,
+   "cached_tokens": 0,
+   "created_cache_tokens": 0,
+   "multimodal_tokens": null
+  },
+  "prompt_cache_hit_tokens": 0,
+  "prompt_cache_miss_tokens": 859
+ },
+ "agrees_with_rule": true
+}

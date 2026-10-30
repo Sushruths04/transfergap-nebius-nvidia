@@ -1,0 +1,4 @@
+/opt/transfergap_src/transfergap/transfergap/sim/perception.py:126: RuntimeWarning: All-NaN slice encountered
+  out = np.nanmedian(win, axis=-1)
+/opt/transfergap_src/transfergap/transfergap/sim/perception.py:126: RuntimeWarning: All-NaN slice encountered
+  out = np.nanmedian(win, axis=-1)

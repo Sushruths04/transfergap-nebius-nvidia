@@ -1,0 +1,240 @@
+{
+ "robot": "ur5e",
+ "demo": {
+  "kind": "file",
+  "path": "runs/demos/live/user_take1_right.npz",
+  "sha256": "bf3218bbaf7345cb7fcaa09bfacc1de3049b527b40a7092d514e1532ffead2f8",
+  "tag": "demobf3218bb"
+ },
+ "base_corrections": [
+  "look_again"
+ ],
+ "seeds": [
+  0,
+  59
+ ],
+ "conditions": {
+  "full": {
+   "oracle": "none",
+   "n": 60,
+   "successes": 47,
+   "success_rate": 0.7833333333333333,
+   "wilson_95": [
+    0.6637997242680521,
+    0.868769559518097
+   ],
+   "failure_reasons": {
+    "no_lift": 9,
+    "not_released_and_settled_at_goal": 9,
+    "forbidden_collision": 5
+   }
+  },
+  "oracle_perception": {
+   "oracle": "perception",
+   "n": 60,
+   "successes": 48,
+   "success_rate": 0.8,
+   "wilson_95": [
+    0.6821819419437211,
+    0.8817149467710251
+   ],
+   "failure_reasons": {
+    "no_lift": 9,
+    "not_released_and_settled_at_goal": 9,
+    "forbidden_collision": 4
+   }
+  },
+  "oracle_calibration": {
+   "oracle": "calibration",
+   "n": 60,
+   "successes": 58,
+   "success_rate": 0.9666666666666667,
+   "wilson_95": [
+    0.886362257256914,
+    0.9908106807438021
+   ],
+   "failure_reasons": {
+    "no_lift": 2,
+    "not_released_and_settled_at_goal": 2
+   }
+  },
+  "oracle_timing": {
+   "oracle": "timing",
+   "n": 60,
+   "successes": 44,
+   "success_rate": 0.7333333333333333,
+   "wilson_95": [
+    0.6099128690331636,
+    0.8286735999671945
+   ],
+   "failure_reasons": {
+    "no_lift": 9,
+    "not_released_and_settled_at_goal": 11,
+    "forbidden_collision": 8
+   }
+  },
+  "oracle_all": {
+   "oracle": "all",
+   "n": 60,
+   "successes": 60,
+   "success_rate": 1.0,
+   "wilson_95": [
+    0.93982814785791,
+    0.9999999999999998
+   ],
+   "failure_reasons": {}
+  }
+ },
+ "style": {
+  "full": {
+   "n_scored": 60,
+   "path_rmse_mean_m": 0.03458062363829232,
+   "approach_angle_deg": 112.20576555053731,
+   "lift_height_err_m": 0.002327859796611573,
+   "speed_profile_corr": -0.11850183469910416,
+   "path_rmse_median_m": 0.033906571901357103,
+   "n_diverged": 0
+  },
+  "oracle_perception": {
+   "n_scored": 60,
+   "path_rmse_mean_m": 0.034253025429776915,
+   "approach_angle_deg": 111.93564527928677,
+   "lift_height_err_m": 0.002381088250892779,
+   "speed_profile_corr": -0.1184977450442289,
+   "path_rmse_median_m": 0.033936826462980754,
+   "n_diverged": 0
+  },
+  "oracle_calibration": {
+   "n_scored": 60,
+   "path_rmse_mean_m": 0.029383916481705553,
+   "approach_angle_deg": 112.31372261923698,
+   "lift_height_err_m": 0.001494180691404945,
+   "speed_profile_corr": -0.11777659485552633,
+   "path_rmse_median_m": 0.029402996123637323,
+   "n_diverged": 0
+  },
+  "oracle_timing": {
+   "n_scored": 60,
+   "path_rmse_mean_m": 0.02630022418679772,
+   "approach_angle_deg": 91.23698003603135,
+   "lift_height_err_m": 0.0030001922080523796,
+   "speed_profile_corr": -0.11383446673724552,
+   "path_rmse_median_m": 0.022794088007449767,
+   "n_diverged": 0
+  },
+  "oracle_all": {
+   "n_scored": 60,
+   "path_rmse_mean_m": 0.012559772095794425,
+   "approach_angle_deg": 95.21755111643637,
+   "lift_height_err_m": 0.0009793501483852712,
+   "speed_profile_corr": -0.11280282846308858,
+   "path_rmse_median_m": 0.012531639290495241,
+   "n_diverged": 0
+  }
+ },
+ "success_budget": {
+  "perception": {
+   "delta_pp": 1.6666666666666667,
+   "ci95_pp": [
+    -5.0,
+    8.333333333333332
+   ],
+   "n": 60
+  },
+  "calibration": {
+   "delta_pp": 18.333333333333332,
+   "ci95_pp": [
+    10.0,
+    28.333333333333332
+   ],
+   "n": 60
+  },
+  "timing": {
+   "delta_pp": -5.0,
+   "ci95_pp": [
+    -15.0,
+    5.0
+   ],
+   "n": 60
+  }
+ },
+ "style_budget": {
+  "perception": {
+   "path_rmse_m": {
+    "mean": 0.00032759820851541833,
+    "ci95": [
+     5.2995654546056634e-05,
+     0.0005911832261362788
+    ],
+    "n": 60,
+    "metric": "path_rmse_mean_m",
+    "sign": "a minus b"
+   },
+   "speed_profile_corr": {
+    "mean": 4.089654875249575e-06,
+    "ci95": [
+     -0.0001276894094251352,
+     0.00012960429317639341
+    ],
+    "n": 60,
+    "metric": "speed_profile_corr",
+    "sign": "a minus b"
+   }
+  },
+  "calibration": {
+   "path_rmse_m": {
+    "mean": 0.005196707156586769,
+    "ci95": [
+     0.004155636368330184,
+     0.00638492279882681
+    ],
+    "n": 60,
+    "metric": "path_rmse_mean_m",
+    "sign": "a minus b"
+   },
+   "speed_profile_corr": {
+    "mean": 0.0007252398435778145,
+    "ci95": [
+     0.0004227201079354619,
+     0.0010443421245677198
+    ],
+    "n": 60,
+    "metric": "speed_profile_corr",
+    "sign": "a minus b"
+   }
+  },
+  "timing": {
+   "path_rmse_m": {
+    "mean": 0.008280399451494603,
+    "ci95": [
+     0.005467135971472821,
+     0.010769135770505782
+    ],
+    "n": 60,
+    "metric": "path_rmse_mean_m",
+    "sign": "a minus b"
+   },
+   "speed_profile_corr": {
+    "mean": 0.0046673679618586175,
+    "ci95": [
+     0.0040234056536685185,
+     0.005235048624191564
+    ],
+    "n": 60,
+    "metric": "speed_profile_corr",
+    "sign": "a minus b"
+   }
+  }
+ },
+ "oracle_all": {
+  "delta_pp": 21.666666666666668,
+  "ci95_pp": [
+   11.666666666666666,
+   31.666666666666664
+  ],
+  "n": 60
+ },
+ "chosen_component": "calibration",
+ "chosen_correction": "touch_probe_calibration",
+ "choice_rule": "argmax success budget over components with an unused fix ['calibration'] on dev; ties -> pipeline order; timing fixes climb ['speed_cap_3', 'speed_cap_2', 'speed_cap_1.5']"
+}

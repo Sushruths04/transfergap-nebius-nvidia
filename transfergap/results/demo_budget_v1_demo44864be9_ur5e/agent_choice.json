@@ -1,0 +1,13 @@
+{
+ "model": "nvidia/nemotron-3-super-120b-a12b",
+ "menu": [
+  "look_again",
+  "touch_probe_calibration",
+  "speed_cap_3",
+  "safe_path"
+ ],
+ "rule_choice": "safe_path_v2",
+ "valid": false,
+ "error": "FileExistsError: [Errno 17] File exists: '<repo>'",
+ "agrees_with_rule": false
+}

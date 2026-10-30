@@ -1,0 +1,35 @@
+{
+ "model": "nvidia/nemotron-3-super-120b-a12b",
+ "menu": [
+  "look_again",
+  "touch_probe_calibration",
+  "speed_cap_2",
+  "safe_path"
+ ],
+ "rule_choice": "safe_path_v2",
+ "valid": true,
+ "agent_choice": "speed_cap_2",
+ "rationale": "Reducing execution speed improves timing control, which addresses the dominant failures (not released/settled and forbidden collisions) while the timing budget shows it actually enhances path accuracy and speed-profile correlation, preserving style better than geometric fixes.",
+ "response_id": "chatcmpl-ba9700f961229e61",
+ "latency_s": 3.4171475679977448,
+ "usage": {
+  "completion_tokens": 353,
+  "prompt_tokens": 812,
+  "total_tokens": 1165,
+  "completion_tokens_details": {
+   "accepted_prediction_tokens": null,
+   "audio_tokens": null,
+   "reasoning_tokens": 286,
+   "rejected_prediction_tokens": null
+  },
+  "prompt_tokens_details": {
+   "audio_tokens": null,
+   "cached_tokens": 0,
+   "created_cache_tokens": 0,
+   "multimodal_tokens": null
+  },
+  "prompt_cache_hit_tokens": 0,
+  "prompt_cache_miss_tokens": 812
+ },
+ "agrees_with_rule": false
+}

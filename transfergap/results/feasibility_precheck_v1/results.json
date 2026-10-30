@@ -1,0 +1,7206 @@
+{
+ "protocol": "feasibility_precheck_v1",
+ "n_scored": 26,
+ "n_correct": 24,
+ "confusion": {
+  "feasible->feasible": 13,
+  "feasible->infeasible": 2,
+  "infeasible->feasible": 0,
+  "infeasible->infeasible": 11
+ },
+ "cases": [
+  {
+   "name": "synthetic 0",
+   "demo": "synthetic:0",
+   "variant": "raw",
+   "robot": "ur5e",
+   "known": "oracle_all 60/60 (dev)",
+   "label": "feasible",
+   "source": "results/demo_budget_v1_syn0_ur5e",
+   "predicted": "feasible",
+   "match": true,
+   "reasons": [],
+   "worst": {
+    "max_ik_err_m": 0.00019719819432324344,
+    "max_penetration_m": 0.0
+   },
+   "leg_max_ik_err_m": {
+    "align": 0.1103632842886102,
+    "reach": 0.00019719819432324344,
+    "carry": 0.00019094609571205446,
+    "retreat": 0.00017375485889098533
+   },
+   "leg_max_penetration_m": {
+    "align": 0.0,
+    "reach": 0.0,
+    "carry": 0.0,
+    "retreat": 0.0
+   },
+   "layouts": [
+    {
+     "block_xyz": [
+      0.45,
+      -0.12,
+      0.02
+     ],
+     "legs": {
+      "align": {
+       "max_ik_err_m": 0.06137191336965388,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 1.6975173633080505,
+       "colliding_bodies": [],
+       "n": 20,
+       "path_min_z_m": 0.2490808663325481
+      },
+      "reach": {
+       "max_ik_err_m": 0.0001869361238258627,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.00613647876777909,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.02263964237893851
+      },
+      "carry": {
+       "max_ik_err_m": 0.00019094609571205446,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.005169671340877388,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.02263964237893851
+      },
+      "retreat": {
+       "max_ik_err_m": 0.0001737548588907913,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.00495139458622988,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.03900000000000001
+      }
+     }
+    },
+    {
+     "block_xyz": [
+      0.48,
+      -0.09,
+      0.02
+     ],
+     "legs": {
+      "align": {
+       "max_ik_err_m": 0.028697742625804417,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 1.1473821174758707,
+       "colliding_bodies": [],
+       "n": 20,
+       "path_min_z_m": 0.2490808663325481
+      },
+      "reach": {
+       "max_ik_err_m": 0.00019565544154263973,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.006027895834837518,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.02263964237893851
+      },
+      "carry": {
+       "max_ik_err_m": 0.00018071211942668198,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.005154538454717585,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.02263964237893851
+      },
+      "retreat": {
+       "max_ik_err_m": 0.00017375485889098533,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.004951394218187376,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.03900000000000001
+      }
+     }
+    },
+    {
+     "block_xyz": [
+      0.48,
+      -0.15,
+      0.02
+     ],
+     "legs": {
+      "align": {
+       "max_ik_err_m": 0.04781097425857118,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 1.4590376462975099,
+       "colliding_bodies": [],
+       "n": 20,
+       "path_min_z_m": 0.2490808663325481
+      },
+      "reach": {
+       "max_ik_err_m": 0.00016728871849888832,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.00612056833967487,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.02263964237893851
+      },
+      "carry": {
+       "max_ik_err_m": 0.0001805316885749221,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.005154517949490984,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.02263964237893851
+      },
+      "retreat": {
+       "max_ik_err_m": 0.00017375485889087452,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.004951394218187376,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.03900000000000001
+      }
+     }
+    },
+    {
+     "block_xyz": [
+      0.42000000000000004,
+      -0.09,
+      0.02
+     ],
+     "legs": {
+      "align": {
+       "max_ik_err_m": 0.0723900601828308,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 1.9271392919215122,
+       "colliding_bodies": [],
+       "n": 20,
+       "path_min_z_m": 0.2490808663325481
+      },
+      "reach": {
+       "max_ik_err_m": 0.0001726069077321003,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.00534372103360729,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.02263964237893851
+      },
+      "carry": {
+       "max_ik_err_m": 0.00018167974417836037,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.005154512929233421,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.02263964237893851
+      },
+      "retreat": {
+       "max_ik_err_m": 0.00017375485889087452,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.004951394218187376,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.03900000000000001
+      }
+     }
+    },
+    {
+     "block_xyz": [
+      0.42000000000000004,
+      -0.15,
+      0.02
+     ],
+     "legs": {
+      "align": {
+       "max_ik_err_m": 0.1103632842886102,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 3.3107871850518578,
+       "colliding_bodies": [],
+       "n": 20,
+       "path_min_z_m": 0.2490808663325481
+      },
+      "reach": {
+       "max_ik_err_m": 0.00019719819432324344,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.006289038724317373,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.02263964237893851
+      },
+      "carry": {
+       "max_ik_err_m": 0.00018137013207389396,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.005154492211780766,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.02263964237893851
+      },
+      "retreat": {
+       "max_ik_err_m": 0.00017375485889079071,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.00495139458622988,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.03900000000000001
+      }
+     }
+    }
+   ]
+  },
+  {
+   "name": "person 1 notebook",
+   "demo": "runs/demos/pexels_8135753_notebook.npz",
+   "variant": "raw",
+   "robot": "ur5e",
+   "known": "oracle_all 60/60 (dev)",
+   "label": "feasible",
+   "source": "results/demo_budget_v1_demo1bc4be60_ur5e",
+   "predicted": "feasible",
+   "match": true,
+   "reasons": [],
+   "worst": {
+    "max_ik_err_m": 0.00019856434197654257,
+    "max_penetration_m": 0.0
+   },
+   "leg_max_ik_err_m": {
+    "align": 0.00019589379899928965,
+    "reach": 0.00019825027740943515,
+    "carry": 0.00019727055523086754,
+    "retreat": 0.00019856434197654257
+   },
+   "leg_max_penetration_m": {
+    "align": 0.0,
+    "reach": 0.0,
+    "carry": 0.0,
+    "retreat": 0.0
+   },
+   "layouts": [
+    {
+     "block_xyz": [
+      0.45,
+      -0.12,
+      0.02
+     ],
+     "legs": {
+      "align": {
+       "max_ik_err_m": 0.00019589379899928965,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.013501887578031288,
+       "colliding_bodies": [],
+       "n": 20,
+       "path_min_z_m": 0.3322003673210946
+      },
+      "reach": {
+       "max_ik_err_m": 0.00015684373226815425,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.013771518158277912,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.04408069372177126
+      },
+      "carry": {
+       "max_ik_err_m": 0.00019727055523086754,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.007400453580996691,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.020956431486667745
+      },
+      "retreat": {
+       "max_ik_err_m": 0.00019856434197624656,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.010199781388996717,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.24237860345840456
+      }
+     }
+    },
+    {
+     "block_xyz": [
+      0.48,
+      -0.09,
+      0.02
+     ],
+     "legs": {
+      "align": {
+       "max_ik_err_m": 0.00015202613883798173,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.006664118700882292,
+       "colliding_bodies": [],
+       "n": 20,
+       "path_min_z_m": 0.3322003673210946
+      },
+      "reach": {
+       "max_ik_err_m": 0.00015006335892009585,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.013750920416129254,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.04408069372177126
+      },
+      "carry": {
+       "max_ik_err_m": 0.00019029471813904278,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.007181912961011657,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.020956431486667745
+      },
+      "retreat": {
+       "max_ik_err_m": 0.00019856434197624656,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.010199781353264114,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.24237860345840456
+      }
+     }
+    },
+    {
+     "block_xyz": [
+      0.48,
+      -0.15,
+      0.02
+     ],
+     "legs": {
+      "align": {
+       "max_ik_err_m": 0.00019406125341838202,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.008233234149007557,
+       "colliding_bodies": [],
+       "n": 20,
+       "path_min_z_m": 0.3322003673210946
+      },
+      "reach": {
+       "max_ik_err_m": 0.00019825027740943515,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.016616325495859292,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.04408069372177126
+      },
+      "carry": {
+       "max_ik_err_m": 6.258889766480442e-05,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.0035267273952087346,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.020956431486667745
+      },
+      "retreat": {
+       "max_ik_err_m": 0.00019856434197654257,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.010199781388996717,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.24237860345840456
+      }
+     }
+    },
+    {
+     "block_xyz": [
+      0.42000000000000004,
+      -0.09,
+      0.02
+     ],
+     "legs": {
+      "align": {
+       "max_ik_err_m": 0.0001729458520013208,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.007499636502462372,
+       "colliding_bodies": [],
+       "n": 20,
+       "path_min_z_m": 0.3322003673210946
+      },
+      "reach": {
+       "max_ik_err_m": 0.00017618932701040884,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.012093626661731841,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.04408069372177126
+      },
+      "carry": {
+       "max_ik_err_m": 0.0001805522398512951,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.006173550869263886,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.020956431486667745
+      },
+      "retreat": {
+       "max_ik_err_m": 0.00019856434197624656,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.01019978128179891,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.24237860345840456
+      }
+     }
+    },
+    {
+     "block_xyz": [
+      0.42000000000000004,
+      -0.15,
+      0.02
+     ],
+     "legs": {
+      "align": {
+       "max_ik_err_m": 0.00019090075689349062,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.007746035493277614,
+       "colliding_bodies": [],
+       "n": 20,
+       "path_min_z_m": 0.3322003673210946
+      },
+      "reach": {
+       "max_ik_err_m": 0.00016667875228451508,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.013895495225756517,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.04408069372177126
+      },
+      "carry": {
+       "max_ik_err_m": 7.524785960238315e-05,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.0036277394802869583,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.020956431486667745
+      },
+      "retreat": {
+       "max_ik_err_m": 0.00019856434197624656,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.01019978128179891,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.24237860345840456
+      }
+     }
+    }
+   ]
+  },
+  {
+   "name": "synthetic 0",
+   "demo": "synthetic:0",
+   "variant": "raw",
+   "robot": "ur10e",
+   "known": "oracle_all 60/60 (dev)",
+   "label": "feasible",
+   "source": "results/demo_budget_v1_syn0_ur10e",
+   "predicted": "feasible",
+   "match": true,
+   "reasons": [],
+   "worst": {
+    "max_ik_err_m": 0.0001990415402347265,
+    "max_penetration_m": 0.0
+   },
+   "leg_max_ik_err_m": {
+    "align": 0.273845151703898,
+    "reach": 0.0001990415402347265,
+    "carry": 0.00019897467208764913,
+    "retreat": 0.00019323617071010296
+   },
+   "leg_max_penetration_m": {
+    "align": 0.016354774719192944,
+    "reach": 0.0,
+    "carry": 0.0,
+    "retreat": 0.0
+   },
+   "layouts": [
+    {
+     "block_xyz": [
+      0.45,
+      -0.12,
+      0.02
+     ],
+     "legs": {
+      "align": {
+       "max_ik_err_m": 0.09306467390005455,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 2.315980793326996,
+       "colliding_bodies": [],
+       "n": 20,
+       "path_min_z_m": 0.2490808663325481
+      },
+      "reach": {
+       "max_ik_err_m": 0.0001990415402347265,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.005767956629547397,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.02263964237893851
+      },
+      "carry": {
+       "max_ik_err_m": 0.00019897467208734304,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.004716443374941355,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.02263964237893851
+      },
+      "retreat": {
+       "max_ik_err_m": 0.00019323617070996415,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.004321636146136923,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.03900000000000001
+      }
+     }
+    },
+    {
+     "block_xyz": [
+      0.48,
+      -0.09,
+      0.02
+     ],
+     "legs": {
+      "align": {
+       "max_ik_err_m": 0.06376753870607466,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 1.4668632344155716,
+       "colliding_bodies": [],
+       "n": 20,
+       "path_min_z_m": 0.2490808663325481
+      },
+      "reach": {
+       "max_ik_err_m": 0.000174533431401159,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.005176320907095935,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.02263964237893851
+      },
+      "carry": {
+       "max_ik_err_m": 0.00019897467208759395,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.00427800135344919,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.02263964237893851
+      },
+      "retreat": {
+       "max_ik_err_m": 0.0001932361707098254,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.004321636146136923,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.03900000000000001
+      }
+     }
+    },
+    {
+     "block_xyz": [
+      0.48,
+      -0.15,
+      0.02
+     ],
+     "legs": {
+      "align": {
+       "max_ik_err_m": 0.07538276094363638,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 1.5890219691688294,
+       "colliding_bodies": [],
+       "n": 20,
+       "path_min_z_m": 0.2490808663325481
+      },
+      "reach": {
+       "max_ik_err_m": 0.00018461394674822894,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.004853550444866424,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.02263964237893851
+      },
+      "carry": {
+       "max_ik_err_m": 0.0001989746720873431,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.005037184201260657,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.02263964237893851
+      },
+      "retreat": {
+       "max_ik_err_m": 0.00019323617071010296,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.00432163648347648,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.03900000000000001
+      }
+     }
+    },
+    {
+     "block_xyz": [
+      0.42000000000000004,
+      -0.09,
+      0.02
+     ],
+     "legs": {
+      "align": {
+       "max_ik_err_m": 0.16861463945279315,
+       "max_penetration_m": 0.016354774719192944,
+       "max_tilt_deg": 5.515964099668609,
+       "colliding_bodies": [
+        "upper_arm_link"
+       ],
+       "n": 20,
+       "path_min_z_m": 0.2490808663325481
+      },
+      "reach": {
+       "max_ik_err_m": 0.00018670814383737149,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.00580413259214353,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.02263964237893851
+      },
+      "carry": {
+       "max_ik_err_m": 0.00019897467208764913,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.004392732451258174,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.02263964237893851
+      },
+      "retreat": {
+       "max_ik_err_m": 0.00019323617070982557,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.00432163648347648,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.03900000000000001
+      }
+     }
+    },
+    {
+     "block_xyz": [
+      0.42000000000000004,
+      -0.15,
+      0.02
+     ],
+     "legs": {
+      "align": {
+       "max_ik_err_m": 0.273845151703898,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 17.63264904280566,
+       "colliding_bodies": [],
+       "n": 20,
+       "path_min_z_m": 0.2490808663325481
+      },
+      "reach": {
+       "max_ik_err_m": 0.0001869464040870756,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.005249754459142786,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.02263964237893851
+      },
+      "carry": {
+       "max_ik_err_m": 0.00019897467208759444,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.005251871428384531,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.02263964237893851
+      },
+      "retreat": {
+       "max_ik_err_m": 0.00019323617070963185,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.004321636146136923,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.03900000000000001
+      }
+     }
+    }
+   ]
+  },
+  {
+   "name": "person 1 notebook",
+   "demo": "runs/demos/pexels_8135753_notebook.npz",
+   "variant": "raw",
+   "robot": "ur10e",
+   "known": "oracle_all 60/60 (dev)",
+   "label": "feasible",
+   "source": "results/demo_budget_v1_demo1bc4be60_ur10e",
+   "predicted": "feasible",
+   "match": true,
+   "reasons": [],
+   "worst": {
+    "max_ik_err_m": 0.0001932462368247019,
+    "max_penetration_m": 0.0
+   },
+   "leg_max_ik_err_m": {
+    "align": 0.00019869458328953036,
+    "reach": 0.00018582816976039983,
+    "carry": 0.0001932462368247019,
+    "retreat": 0.0001800612357052636
+   },
+   "leg_max_penetration_m": {
+    "align": 0.0,
+    "reach": 0.0,
+    "carry": 0.0,
+    "retreat": 0.0
+   },
+   "layouts": [
+    {
+     "block_xyz": [
+      0.45,
+      -0.12,
+      0.02
+     ],
+     "legs": {
+      "align": {
+       "max_ik_err_m": 0.00019855255592004403,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.01035175007898604,
+       "colliding_bodies": [],
+       "n": 20,
+       "path_min_z_m": 0.3932239902019501
+      },
+      "reach": {
+       "max_ik_err_m": 0.00018582816976039983,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.005302739113494514,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.04408069372177126
+      },
+      "carry": {
+       "max_ik_err_m": 0.00011687088850713944,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.0033871383877791426,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.020956431486667745
+      },
+      "retreat": {
+       "max_ik_err_m": 0.0001800612357052636,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.006038745468958074,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.24237860345840456
+      }
+     }
+    },
+    {
+     "block_xyz": [
+      0.48,
+      -0.09,
+      0.02
+     ],
+     "legs": {
+      "align": {
+       "max_ik_err_m": 0.00017489022239002073,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.011645163902889097,
+       "colliding_bodies": [],
+       "n": 20,
+       "path_min_z_m": 0.3932239902019501
+      },
+      "reach": {
+       "max_ik_err_m": 0.0001706896025424805,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.005133216477281874,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.04408069372177126
+      },
+      "carry": {
+       "max_ik_err_m": 0.00019147686410020043,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.006885222624529113,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.020956431486667745
+      },
+      "retreat": {
+       "max_ik_err_m": 0.00018006123570501014,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.006038745468958074,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.24237860345840456
+      }
+     }
+    },
+    {
+     "block_xyz": [
+      0.48,
+      -0.15,
+      0.02
+     ],
+     "legs": {
+      "align": {
+       "max_ik_err_m": 0.0001973266243932624,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.014047877611077451,
+       "colliding_bodies": [],
+       "n": 20,
+       "path_min_z_m": 0.3932239902019501
+      },
+      "reach": {
+       "max_ik_err_m": 0.00016179240719505107,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.005312143883334695,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.04408069372177126
+      },
+      "carry": {
+       "max_ik_err_m": 0.0001389605059305816,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.003839692803563896,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.020956431486667745
+      },
+      "retreat": {
+       "max_ik_err_m": 0.00018006123570501014,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.006038745468958074,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.24237860345840456
+      }
+     }
+    },
+    {
+     "block_xyz": [
+      0.42000000000000004,
+      -0.09,
+      0.02
+     ],
+     "legs": {
+      "align": {
+       "max_ik_err_m": 0.00019839780657653425,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.01347586779239723,
+       "colliding_bodies": [],
+       "n": 20,
+       "path_min_z_m": 0.3932239902019501
+      },
+      "reach": {
+       "max_ik_err_m": 0.0001813347490595724,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.0047918121779638705,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.04408069372177126
+      },
+      "carry": {
+       "max_ik_err_m": 0.0001932462368247019,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.0069063520823550726,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.020956431486667745
+      },
+      "retreat": {
+       "max_ik_err_m": 0.00018006123570501014,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.006038745468958074,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.24237860345840456
+      }
+     }
+    },
+    {
+     "block_xyz": [
+      0.42000000000000004,
+      -0.15,
+      0.02
+     ],
+     "legs": {
+      "align": {
+       "max_ik_err_m": 0.00019869458328953036,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.007973022102470383,
+       "colliding_bodies": [],
+       "n": 20,
+       "path_min_z_m": 0.3932239902019501
+      },
+      "reach": {
+       "max_ik_err_m": 0.00016078922211241447,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.005042835635046353,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.04408069372177126
+      },
+      "carry": {
+       "max_ik_err_m": 0.0001382976447856382,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.0037403850732253808,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.020956431486667745
+      },
+      "retreat": {
+       "max_ik_err_m": 0.00018006123570501014,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.0060387451068318,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.24237860345840456
+      }
+     }
+    }
+   ]
+  },
+  {
+   "name": "person 2 box",
+   "demo": "runs/demos/pexels_7205253_woman_box_v2.npz",
+   "variant": "raw",
+   "robot": "ur5e",
+   "known": "oracle_all 60/60 (dev)",
+   "label": "feasible",
+   "source": "results/demo_budget_v1_demo5f8bdc01_ur5e",
+   "predicted": "infeasible",
+   "match": false,
+   "reasons": [
+    "collides: reach 4.5 cm, retreat 4.5 cm (g_base, g_left_follower, g_left_pad, g_left_spring_link, g_right_coupler, g_right_follower, g_right_pad, g_right_spring_link)"
+   ],
+   "worst": {
+    "max_ik_err_m": 0.00019505545289571734,
+    "max_penetration_m": 0.044924188971774956
+   },
+   "leg_max_ik_err_m": {
+    "align": 0.00019817036969303054,
+    "reach": 0.00019429859520473934,
+    "carry": 0.00019252647310521247,
+    "retreat": 0.00019505545289571734
+   },
+   "leg_max_penetration_m": {
+    "align": 0.042892548532302684,
+    "reach": 0.044924188971774956,
+    "carry": 0.0,
+    "retreat": 0.04476315133320851
+   },
+   "layouts": [
+    {
+     "block_xyz": [
+      0.45,
+      -0.12,
+      0.02
+     ],
+     "legs": {
+      "align": {
+       "max_ik_err_m": 0.00016402987778259674,
+       "max_penetration_m": 0.042885908370491235,
+       "max_tilt_deg": 0.006000199098210439,
+       "colliding_bodies": [
+        "g_right_follower",
+        "g_right_pad",
+        "g_right_spring_link"
+       ],
+       "n": 20,
+       "path_min_z_m": -0.06590191602706907
+      },
+      "reach": {
+       "max_ik_err_m": 0.00018141095603661206,
+       "max_penetration_m": 0.04492389052402342,
+       "max_tilt_deg": 0.006147214011703465,
+       "colliding_bodies": [
+        "g_left_follower",
+        "g_left_pad",
+        "g_left_spring_link",
+        "g_right_follower",
+        "g_right_pad",
+        "g_right_spring_link"
+       ],
+       "n": 40,
+       "path_min_z_m": -0.06658147851626078
+      },
+      "carry": {
+       "max_ik_err_m": 0.00017640992591135313,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.0070620447540809,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.02
+      },
+      "retreat": {
+       "max_ik_err_m": 0.0001950554528955768,
+       "max_penetration_m": 0.04476315133320842,
+       "max_tilt_deg": 0.007226298032823684,
+       "colliding_bodies": [
+        "g_base",
+        "g_left_follower",
+        "g_right_follower",
+        "g_right_pad"
+       ],
+       "n": 40,
+       "path_min_z_m": -0.06207466518878937
+      }
+     }
+    },
+    {
+     "block_xyz": [
+      0.48,
+      -0.09,
+      0.02
+     ],
+     "legs": {
+      "align": {
+       "max_ik_err_m": 0.00012755556159505305,
+       "max_penetration_m": 0.042892548532302684,
+       "max_tilt_deg": 0.0046888297254492044,
+       "colliding_bodies": [
+        "g_right_follower",
+        "g_right_pad",
+        "g_right_spring_link"
+       ],
+       "n": 20,
+       "path_min_z_m": -0.06590191602706907
+      },
+      "reach": {
+       "max_ik_err_m": 0.00019429859520473934,
+       "max_penetration_m": 0.04492373186670333,
+       "max_tilt_deg": 0.007424254812347101,
+       "colliding_bodies": [
+        "g_left_follower",
+        "g_left_pad",
+        "g_left_spring_link",
+        "g_right_follower",
+        "g_right_pad",
+        "g_right_spring_link"
+       ],
+       "n": 40,
+       "path_min_z_m": -0.06658147851626078
+      },
+      "carry": {
+       "max_ik_err_m": 0.00016844434494947262,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.00726910764776543,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.02
+      },
+      "retreat": {
+       "max_ik_err_m": 0.00019505545289540157,
+       "max_penetration_m": 0.04476315133320842,
+       "max_tilt_deg": 0.007226298032823684,
+       "colliding_bodies": [
+        "g_base",
+        "g_left_follower",
+        "g_right_follower",
+        "g_right_pad"
+       ],
+       "n": 40,
+       "path_min_z_m": -0.06207466518878937
+      }
+     }
+    },
+    {
+     "block_xyz": [
+      0.48,
+      -0.15,
+      0.02
+     ],
+     "legs": {
+      "align": {
+       "max_ik_err_m": 0.00019091227619753596,
+       "max_penetration_m": 0.04288550774740199,
+       "max_tilt_deg": 0.006291034635055738,
+       "colliding_bodies": [
+        "g_right_follower",
+        "g_right_pad",
+        "g_right_spring_link"
+       ],
+       "n": 20,
+       "path_min_z_m": -0.06590191602706907
+      },
+      "reach": {
+       "max_ik_err_m": 0.00018467851356943613,
+       "max_penetration_m": 0.044923909910288794,
+       "max_tilt_deg": 0.004376057281333517,
+       "colliding_bodies": [
+        "g_left_follower",
+        "g_left_pad",
+        "g_left_spring_link",
+        "g_right_follower",
+        "g_right_pad",
+        "g_right_spring_link"
+       ],
+       "n": 40,
+       "path_min_z_m": -0.06658147851626078
+      },
+      "carry": {
+       "max_ik_err_m": 0.00017239295870130812,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.00732534176854605,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.02
+      },
+      "retreat": {
+       "max_ik_err_m": 0.0001950554528953453,
+       "max_penetration_m": 0.04476315133320851,
+       "max_tilt_deg": 0.007226297730208381,
+       "colliding_bodies": [
+        "g_base",
+        "g_left_follower",
+        "g_right_follower",
+        "g_right_pad"
+       ],
+       "n": 40,
+       "path_min_z_m": -0.06207466518878937
+      }
+     }
+    },
+    {
+     "block_xyz": [
+      0.42000000000000004,
+      -0.09,
+      0.02
+     ],
+     "legs": {
+      "align": {
+       "max_ik_err_m": 0.00019817036969303054,
+       "max_penetration_m": 0.028567235472917243,
+       "max_tilt_deg": 0.009248481664065054,
+       "colliding_bodies": [
+        "g_right_coupler",
+        "g_right_follower",
+        "g_right_pad"
+       ],
+       "n": 20,
+       "path_min_z_m": -0.06590191602706907
+      },
+      "reach": {
+       "max_ik_err_m": 0.00018431638204470323,
+       "max_penetration_m": 0.04492402694163159,
+       "max_tilt_deg": 0.007912157204090334,
+       "colliding_bodies": [
+        "g_left_follower",
+        "g_left_pad",
+        "g_left_spring_link",
+        "g_right_coupler",
+        "g_right_follower",
+        "g_right_pad"
+       ],
+       "n": 40,
+       "path_min_z_m": -0.06658147851626078
+      },
+      "carry": {
+       "max_ik_err_m": 0.00019013435393604175,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.006827744435940251,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.02
+      },
+      "retreat": {
+       "max_ik_err_m": 0.00019505545289571734,
+       "max_penetration_m": 0.04476315133320843,
+       "max_tilt_deg": 0.007226298032823684,
+       "colliding_bodies": [
+        "g_base",
+        "g_left_follower",
+        "g_right_follower",
+        "g_right_pad"
+       ],
+       "n": 40,
+       "path_min_z_m": -0.06207466518878937
+      }
+     }
+    },
+    {
+     "block_xyz": [
+      0.42000000000000004,
+      -0.15,
+      0.02
+     ],
+     "legs": {
+      "align": {
+       "max_ik_err_m": 0.0001655922591886333,
+       "max_penetration_m": 0.028564724900206766,
+       "max_tilt_deg": 0.007360967184934414,
+       "colliding_bodies": [
+        "g_right_coupler",
+        "g_right_follower",
+        "g_right_pad"
+       ],
+       "n": 20,
+       "path_min_z_m": -0.06590191602706907
+      },
+      "reach": {
+       "max_ik_err_m": 0.0001828672026592135,
+       "max_penetration_m": 0.044924188971774956,
+       "max_tilt_deg": 0.004847339483801341,
+       "colliding_bodies": [
+        "g_left_follower",
+        "g_left_pad",
+        "g_left_spring_link",
+        "g_right_coupler",
+        "g_right_follower",
+        "g_right_pad"
+       ],
+       "n": 40,
+       "path_min_z_m": -0.06658147851626078
+      },
+      "carry": {
+       "max_ik_err_m": 0.00019252647310521247,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.006905053073302469,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.02
+      },
+      "retreat": {
+       "max_ik_err_m": 0.0001950554528955768,
+       "max_penetration_m": 0.04476315133320842,
+       "max_tilt_deg": 0.007226298032823684,
+       "colliding_bodies": [
+        "g_base",
+        "g_left_follower",
+        "g_right_follower",
+        "g_right_pad"
+       ],
+       "n": 40,
+       "path_min_z_m": -0.06207466518878937
+      }
+     }
+    }
+   ]
+  },
+  {
+   "name": "person 2 box",
+   "demo": "runs/demos/pexels_7205253_woman_box_v2.npz",
+   "variant": "raw",
+   "robot": "ur10e",
+   "known": "oracle_all 0/60 (dev), forbidden collisions",
+   "label": "infeasible",
+   "source": "results/demo_budget_v1_demo5f8bdc01_ur10e",
+   "predicted": "infeasible",
+   "match": true,
+   "reasons": [
+    "collides: reach 4.5 cm, retreat 4.5 cm (g_base, g_left_follower, g_left_pad, g_left_spring_link, g_right_coupler, g_right_follower, g_right_pad, g_right_spring_link)"
+   ],
+   "worst": {
+    "max_ik_err_m": 0.00019687376431195427,
+    "max_penetration_m": 0.044924583912801276
+   },
+   "leg_max_ik_err_m": {
+    "align": 0.00018414209010743685,
+    "reach": 0.00018790375826202688,
+    "carry": 0.00019687376431195427,
+    "retreat": 0.0001653755306747527
+   },
+   "leg_max_penetration_m": {
+    "align": 0.03206343524452266,
+    "reach": 0.044924583912801276,
+    "carry": 0.0,
+    "retreat": 0.04478563221999115
+   },
+   "layouts": [
+    {
+     "block_xyz": [
+      0.45,
+      -0.12,
+      0.02
+     ],
+     "legs": {
+      "align": {
+       "max_ik_err_m": 0.0001794283505993903,
+       "max_penetration_m": 0.03205157914031749,
+       "max_tilt_deg": 0.005840045527396507,
+       "colliding_bodies": [
+        "g_right_follower",
+        "g_right_pad",
+        "g_right_spring_link"
+       ],
+       "n": 20,
+       "path_min_z_m": -0.06590191602706907
+      },
+      "reach": {
+       "max_ik_err_m": 0.00018440198649348306,
+       "max_penetration_m": 0.044924137730716365,
+       "max_tilt_deg": 0.007844508832878579,
+       "colliding_bodies": [
+        "g_left_follower",
+        "g_left_pad",
+        "g_left_spring_link",
+        "g_right_follower",
+        "g_right_pad",
+        "g_right_spring_link"
+       ],
+       "n": 40,
+       "path_min_z_m": -0.06658147851626078
+      },
+      "carry": {
+       "max_ik_err_m": 0.00019687376431195427,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.004400920507060498,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.02
+      },
+      "retreat": {
+       "max_ik_err_m": 0.0001653755306747527,
+       "max_penetration_m": 0.04478563221999115,
+       "max_tilt_deg": 0.005611179029887129,
+       "colliding_bodies": [
+        "g_base",
+        "g_left_follower",
+        "g_right_follower",
+        "g_right_pad"
+       ],
+       "n": 40,
+       "path_min_z_m": -0.06207466518878937
+      }
+     }
+    },
+    {
+     "block_xyz": [
+      0.48,
+      -0.09,
+      0.02
+     ],
+     "legs": {
+      "align": {
+       "max_ik_err_m": 0.00012321615649861265,
+       "max_penetration_m": 0.03206343524452266,
+       "max_tilt_deg": 0.0069503495002364675,
+       "colliding_bodies": [
+        "g_right_follower",
+        "g_right_pad",
+        "g_right_spring_link"
+       ],
+       "n": 20,
+       "path_min_z_m": -0.06590191602706907
+      },
+      "reach": {
+       "max_ik_err_m": 0.0001772434406706215,
+       "max_penetration_m": 0.04492390110750395,
+       "max_tilt_deg": 0.00854071357233533,
+       "colliding_bodies": [
+        "g_left_follower",
+        "g_left_pad",
+        "g_left_spring_link",
+        "g_right_follower",
+        "g_right_pad",
+        "g_right_spring_link"
+       ],
+       "n": 40,
+       "path_min_z_m": -0.06658147851626078
+      },
+      "carry": {
+       "max_ik_err_m": 0.00018615615426711618,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.006835882538627534,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.02
+      },
+      "retreat": {
+       "max_ik_err_m": 0.0001653755306745348,
+       "max_penetration_m": 0.044785632219990865,
+       "max_tilt_deg": 0.005611178899980483,
+       "colliding_bodies": [
+        "g_base",
+        "g_left_follower",
+        "g_right_follower",
+        "g_right_pad"
+       ],
+       "n": 40,
+       "path_min_z_m": -0.06207466518878937
+      }
+     }
+    },
+    {
+     "block_xyz": [
+      0.48,
+      -0.15,
+      0.02
+     ],
+     "legs": {
+      "align": {
+       "max_ik_err_m": 0.0001427525014310662,
+       "max_penetration_m": 0.032052767583960314,
+       "max_tilt_deg": 0.00667197333146592,
+       "colliding_bodies": [
+        "g_right_follower",
+        "g_right_pad",
+        "g_right_spring_link"
+       ],
+       "n": 20,
+       "path_min_z_m": -0.06590191602706907
+      },
+      "reach": {
+       "max_ik_err_m": 0.00016622088341681278,
+       "max_penetration_m": 0.044924086048490186,
+       "max_tilt_deg": 0.004379436226245737,
+       "colliding_bodies": [
+        "g_left_follower",
+        "g_left_pad",
+        "g_left_spring_link",
+        "g_right_follower",
+        "g_right_pad",
+        "g_right_spring_link"
+       ],
+       "n": 40,
+       "path_min_z_m": -0.06658147851626078
+      },
+      "carry": {
+       "max_ik_err_m": 0.0001903203351230866,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.004506869397671028,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.02
+      },
+      "retreat": {
+       "max_ik_err_m": 0.0001653755306744091,
+       "max_penetration_m": 0.04478563221999103,
+       "max_tilt_deg": 0.005611178899980483,
+       "colliding_bodies": [
+        "g_base",
+        "g_left_follower",
+        "g_right_follower",
+        "g_right_pad"
+       ],
+       "n": 40,
+       "path_min_z_m": -0.06207466518878937
+      }
+     }
+    },
+    {
+     "block_xyz": [
+      0.42000000000000004,
+      -0.09,
+      0.02
+     ],
+     "legs": {
+      "align": {
+       "max_ik_err_m": 0.00018414209010743685,
+       "max_penetration_m": 0.022137583645514325,
+       "max_tilt_deg": 0.008556465693064076,
+       "colliding_bodies": [
+        "g_right_coupler",
+        "g_right_follower",
+        "g_right_pad"
+       ],
+       "n": 20,
+       "path_min_z_m": -0.06590191602706907
+      },
+      "reach": {
+       "max_ik_err_m": 0.00018790375826202688,
+       "max_penetration_m": 0.04492453507344539,
+       "max_tilt_deg": 0.006519297718525949,
+       "colliding_bodies": [
+        "g_left_follower",
+        "g_left_pad",
+        "g_left_spring_link",
+        "g_right_coupler",
+        "g_right_follower",
+        "g_right_pad"
+       ],
+       "n": 40,
+       "path_min_z_m": -0.06658147851626078
+      },
+      "carry": {
+       "max_ik_err_m": 0.00018061172353293504,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.00811384511956172,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.02
+      },
+      "retreat": {
+       "max_ik_err_m": 0.00016537553067467117,
+       "max_penetration_m": 0.044785632219990865,
+       "max_tilt_deg": 0.005611178899980483,
+       "colliding_bodies": [
+        "g_base",
+        "g_left_follower",
+        "g_right_follower",
+        "g_right_pad"
+       ],
+       "n": 40,
+       "path_min_z_m": -0.06207466518878937
+      }
+     }
+    },
+    {
+     "block_xyz": [
+      0.42000000000000004,
+      -0.15,
+      0.02
+     ],
+     "legs": {
+      "align": {
+       "max_ik_err_m": 0.00015009472822881292,
+       "max_penetration_m": 0.022128290478196984,
+       "max_tilt_deg": 0.00646355664552222,
+       "colliding_bodies": [
+        "g_right_coupler",
+        "g_right_follower",
+        "g_right_pad"
+       ],
+       "n": 20,
+       "path_min_z_m": -0.06590191602706907
+      },
+      "reach": {
+       "max_ik_err_m": 0.00018258041070160383,
+       "max_penetration_m": 0.044924583912801276,
+       "max_tilt_deg": 0.005967947044195155,
+       "colliding_bodies": [
+        "g_left_follower",
+        "g_left_pad",
+        "g_left_spring_link",
+        "g_right_coupler",
+        "g_right_follower",
+        "g_right_pad"
+       ],
+       "n": 40,
+       "path_min_z_m": -0.06658147851626078
+      },
+      "carry": {
+       "max_ik_err_m": 0.00018813576431524312,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.005123666234026341,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.02
+      },
+      "retreat": {
+       "max_ik_err_m": 0.0001653755306747527,
+       "max_penetration_m": 0.04478563221999115,
+       "max_tilt_deg": 0.005611179029887129,
+       "colliding_bodies": [
+        "g_base",
+        "g_left_follower",
+        "g_right_follower",
+        "g_right_pad"
+       ],
+       "n": 40,
+       "path_min_z_m": -0.06207466518878937
+      }
+     }
+    }
+   ]
+  },
+  {
+   "name": "HiPHI box lift",
+   "demo": "runs/demos/Cause_motion-lift_0041.npz",
+   "variant": "raw",
+   "robot": "ur5e",
+   "known": "oracle_all 1/60 (dev)",
+   "label": "infeasible",
+   "source": "results/demo_budget_v1_demofbc7ecf3_ur5e",
+   "predicted": "infeasible",
+   "match": true,
+   "reasons": [
+    "unreachable: reach 77.0 cm",
+    "collides: reach 6.8 cm, carry 7.4 cm, retreat 7.2 cm (carried_block, forearm_link, g_left_pad, g_right_follower, upper_arm_link)"
+   ],
+   "worst": {
+    "max_ik_err_m": 0.7700619726933282,
+    "max_penetration_m": 0.07446382639019487
+   },
+   "leg_max_ik_err_m": {
+    "align": 0.6324080367235898,
+    "reach": 0.7700619726933282,
+    "carry": 0.0001990504108709833,
+    "retreat": 0.00019419060569638992
+   },
+   "leg_max_penetration_m": {
+    "align": 0.0,
+    "reach": 0.0679419242297183,
+    "carry": 0.07446382639019487,
+    "retreat": 0.07199841170475588
+   },
+   "layouts": [
+    {
+     "block_xyz": [
+      0.45,
+      -0.12,
+      0.02
+     ],
+     "legs": {
+      "align": {
+       "max_ik_err_m": 0.5739030732782833,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 5.001670625103762,
+       "colliding_bodies": [],
+       "n": 20,
+       "path_min_z_m": 0.3322003673210946
+      },
+      "reach": {
+       "max_ik_err_m": 0.7700619726933282,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 3.548245372901125,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.03569682313864254
+      },
+      "carry": {
+       "max_ik_err_m": 0.00018979607924636636,
+       "max_penetration_m": 0.04759590726871364,
+       "max_tilt_deg": 0.007907061219475379,
+       "colliding_bodies": [
+        "carried_block",
+        "g_left_pad",
+        "g_right_follower"
+       ],
+       "n": 40,
+       "path_min_z_m": -0.023595907268713634
+      },
+      "retreat": {
+       "max_ik_err_m": 0.00019419060569638992,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.009601664839591741,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.048352037900353785
+      }
+     }
+    },
+    {
+     "block_xyz": [
+      0.48,
+      -0.09,
+      0.02
+     ],
+     "legs": {
+      "align": {
+       "max_ik_err_m": 0.6324080367235898,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 3.7357122328904038,
+       "colliding_bodies": [],
+       "n": 20,
+       "path_min_z_m": 0.3322003673210946
+      },
+      "reach": {
+       "max_ik_err_m": 0.4755978917194085,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 1.1251211975555955,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.03569682313864254
+      },
+      "carry": {
+       "max_ik_err_m": 0.00018555105119363147,
+       "max_penetration_m": 0.04759590726871364,
+       "max_tilt_deg": 0.007807394676305004,
+       "colliding_bodies": [
+        "carried_block",
+        "g_left_pad",
+        "g_right_follower"
+       ],
+       "n": 40,
+       "path_min_z_m": -0.023595907268713634
+      },
+      "retreat": {
+       "max_ik_err_m": 0.00019419060569638992,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.009601664839591741,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.048352037900353785
+      }
+     }
+    },
+    {
+     "block_xyz": [
+      0.48,
+      -0.15,
+      0.02
+     ],
+     "legs": {
+      "align": {
+       "max_ik_err_m": 0.2597655431310703,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 4.815249538343627,
+       "colliding_bodies": [],
+       "n": 20,
+       "path_min_z_m": 0.3322003673210946
+      },
+      "reach": {
+       "max_ik_err_m": 0.6110063528660035,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 2.4660396029726326,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.03569682313864254
+      },
+      "carry": {
+       "max_ik_err_m": 0.0001968538199743351,
+       "max_penetration_m": 0.04759590726871364,
+       "max_tilt_deg": 0.008556918681464458,
+       "colliding_bodies": [
+        "carried_block",
+        "g_left_pad",
+        "g_right_follower"
+       ],
+       "n": 40,
+       "path_min_z_m": -0.023595907268713634
+      },
+      "retreat": {
+       "max_ik_err_m": 0.00019419060569638992,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.009601664839591741,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.048352037900353785
+      }
+     }
+    },
+    {
+     "block_xyz": [
+      0.42000000000000004,
+      -0.09,
+      0.02
+     ],
+     "legs": {
+      "align": {
+       "max_ik_err_m": 0.6321913021795996,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 5.5251066192954745,
+       "colliding_bodies": [],
+       "n": 20,
+       "path_min_z_m": 0.3322003673210946
+      },
+      "reach": {
+       "max_ik_err_m": 0.3916702192704946,
+       "max_penetration_m": 0.0679419242297183,
+       "max_tilt_deg": 2.6714202336836355,
+       "colliding_bodies": [
+        "forearm_link",
+        "upper_arm_link"
+       ],
+       "n": 40,
+       "path_min_z_m": 0.03569682313864254
+      },
+      "carry": {
+       "max_ik_err_m": 0.00017606280308572807,
+       "max_penetration_m": 0.07446382639019487,
+       "max_tilt_deg": 0.005853851985891443,
+       "colliding_bodies": [
+        "carried_block",
+        "forearm_link",
+        "g_left_pad",
+        "g_right_follower",
+        "upper_arm_link"
+       ],
+       "n": 40,
+       "path_min_z_m": -0.023595907268713634
+      },
+      "retreat": {
+       "max_ik_err_m": 0.00019231931082305895,
+       "max_penetration_m": 0.07199841170475588,
+       "max_tilt_deg": 0.008388333642043085,
+       "colliding_bodies": [
+        "forearm_link",
+        "upper_arm_link"
+       ],
+       "n": 40,
+       "path_min_z_m": 0.048352037900353785
+      }
+     }
+    },
+    {
+     "block_xyz": [
+      0.42000000000000004,
+      -0.15,
+      0.02
+     ],
+     "legs": {
+      "align": {
+       "max_ik_err_m": 0.4004718936629739,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 3.9347018659640867,
+       "colliding_bodies": [],
+       "n": 20,
+       "path_min_z_m": 0.3322003673210946
+      },
+      "reach": {
+       "max_ik_err_m": 0.679019606275105,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 4.449733667485848,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.03569682313864254
+      },
+      "carry": {
+       "max_ik_err_m": 0.0001990504108709833,
+       "max_penetration_m": 0.04759590726871364,
+       "max_tilt_deg": 0.008021349175775799,
+       "colliding_bodies": [
+        "carried_block",
+        "g_left_pad",
+        "g_right_follower"
+       ],
+       "n": 40,
+       "path_min_z_m": -0.023595907268713634
+      },
+      "retreat": {
+       "max_ik_err_m": 0.00019419060569638992,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.009601664839591741,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.048352037900353785
+      }
+     }
+    }
+   ]
+  },
+  {
+   "name": "HiPHI box lift",
+   "demo": "runs/demos/Cause_motion-lift_0041.npz",
+   "variant": "raw",
+   "robot": "ur10e",
+   "known": "oracle_all 0/60 (dev)",
+   "label": "infeasible",
+   "source": "results/demo_budget_v1_demofbc7ecf3_ur10e",
+   "predicted": "infeasible",
+   "match": true,
+   "reasons": [
+    "collides: carry 4.8 cm (carried_block, g_left_pad, g_right_follower)"
+   ],
+   "worst": {
+    "max_ik_err_m": 0.00019768036335241122,
+    "max_penetration_m": 0.04759590726871364
+   },
+   "leg_max_ik_err_m": {
+    "align": 1.606589871008408e-05,
+    "reach": 0.00018590012842538913,
+    "carry": 0.00019768036335241122,
+    "retreat": 0.00019098951212721173
+   },
+   "leg_max_penetration_m": {
+    "align": 0.0,
+    "reach": 0.0,
+    "carry": 0.04759590726871364,
+    "retreat": 0.0
+   },
+   "layouts": [
+    {
+     "block_xyz": [
+      0.45,
+      -0.12,
+      0.02
+     ],
+     "legs": {
+      "align": {
+       "max_ik_err_m": 1.3191675990367911e-05,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.0005414399293971371,
+       "colliding_bodies": [],
+       "n": 20,
+       "path_min_z_m": 0.5382004407839284
+      },
+      "reach": {
+       "max_ik_err_m": 9.710219260150517e-05,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.0032201962966176187,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.03569682313864254
+      },
+      "carry": {
+       "max_ik_err_m": 0.00019768036335241122,
+       "max_penetration_m": 0.04759590726871364,
+       "max_tilt_deg": 0.007184690143731092,
+       "colliding_bodies": [
+        "carried_block",
+        "g_left_pad",
+        "g_right_follower"
+       ],
+       "n": 40,
+       "path_min_z_m": -0.023595907268713634
+      },
+      "retreat": {
+       "max_ik_err_m": 0.00019098951212714562,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.007148877646313951,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.048352037900353785
+      }
+     }
+    },
+    {
+     "block_xyz": [
+      0.48,
+      -0.09,
+      0.02
+     ],
+     "legs": {
+      "align": {
+       "max_ik_err_m": 1.606589871008408e-05,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.0006725780386461269,
+       "colliding_bodies": [],
+       "n": 20,
+       "path_min_z_m": 0.5382004407839284
+      },
+      "reach": {
+       "max_ik_err_m": 8.921287052243692e-05,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.003098536532234239,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.03569682313864254
+      },
+      "carry": {
+       "max_ik_err_m": 0.00015393259241328807,
+       "max_penetration_m": 0.04759590726871364,
+       "max_tilt_deg": 0.006107810025170106,
+       "colliding_bodies": [
+        "carried_block",
+        "g_left_pad",
+        "g_right_follower"
+       ],
+       "n": 40,
+       "path_min_z_m": -0.023595907268713634
+      },
+      "retreat": {
+       "max_ik_err_m": 0.00019098951212721173,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.007148877646313951,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.048352037900353785
+      }
+     }
+    },
+    {
+     "block_xyz": [
+      0.48,
+      -0.15,
+      0.02
+     ],
+     "legs": {
+      "align": {
+       "max_ik_err_m": 1.3795451883906742e-05,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.0005454684924777214,
+       "colliding_bodies": [],
+       "n": 20,
+       "path_min_z_m": 0.5382004407839284
+      },
+      "reach": {
+       "max_ik_err_m": 0.00018590012842538913,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.005140721005490994,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.03569682313864254
+      },
+      "carry": {
+       "max_ik_err_m": 0.00018914800400667006,
+       "max_penetration_m": 0.04759590726871364,
+       "max_tilt_deg": 0.008250951392433092,
+       "colliding_bodies": [
+        "carried_block",
+        "g_left_pad",
+        "g_right_follower"
+       ],
+       "n": 40,
+       "path_min_z_m": -0.023595907268713634
+      },
+      "retreat": {
+       "max_ik_err_m": 0.00019098951212712638,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.00714887769729604,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.048352037900353785
+      }
+     }
+    },
+    {
+     "block_xyz": [
+      0.42000000000000004,
+      -0.09,
+      0.02
+     ],
+     "legs": {
+      "align": {
+       "max_ik_err_m": 1.2889415911824701e-05,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.0005462230007533906,
+       "colliding_bodies": [],
+       "n": 20,
+       "path_min_z_m": 0.5382004407839284
+      },
+      "reach": {
+       "max_ik_err_m": 0.0001244709208965074,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.003704138561171565,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.03569682313864254
+      },
+      "carry": {
+       "max_ik_err_m": 0.00019459072335805137,
+       "max_penetration_m": 0.04759590726871364,
+       "max_tilt_deg": 0.007174853090462122,
+       "colliding_bodies": [
+        "carried_block",
+        "g_left_pad",
+        "g_right_follower"
+       ],
+       "n": 40,
+       "path_min_z_m": -0.023595907268713634
+      },
+      "retreat": {
+       "max_ik_err_m": 0.00019098951212712638,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.00714887769729604,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.048352037900353785
+      }
+     }
+    },
+    {
+     "block_xyz": [
+      0.42000000000000004,
+      -0.15,
+      0.02
+     ],
+     "legs": {
+      "align": {
+       "max_ik_err_m": 1.1668988410499385e-05,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.0004855000185937754,
+       "colliding_bodies": [],
+       "n": 20,
+       "path_min_z_m": 0.5382004407839284
+      },
+      "reach": {
+       "max_ik_err_m": 0.00010535472759469927,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.0033211273576915436,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.03569682313864254
+      },
+      "carry": {
+       "max_ik_err_m": 0.00018278248570725302,
+       "max_penetration_m": 0.04759590726871364,
+       "max_tilt_deg": 0.008883862290763597,
+       "colliding_bodies": [
+        "carried_block",
+        "g_left_pad",
+        "g_right_follower"
+       ],
+       "n": 40,
+       "path_min_z_m": -0.023595907268713634
+      },
+      "retreat": {
+       "max_ik_err_m": 0.00019098951212714562,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.007148877646313951,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.048352037900353785
+      }
+     }
+    }
+   ]
+  },
+  {
+   "name": "person 1 markers",
+   "demo": "runs/demos/pexels_8135753_markers.npz",
+   "variant": "raw",
+   "robot": "ur5e",
+   "known": "0/60 held-out with the 4-fix stack (perception, calibration and timing corrected)",
+   "label": "infeasible",
+   "source": "results/demo_generalization_v1",
+   "predicted": "infeasible",
+   "match": true,
+   "reasons": [
+    "collides: reach 1.1 cm, retreat 1.4 cm (g_right_follower, g_right_pad)"
+   ],
+   "worst": {
+    "max_ik_err_m": 0.00019956771517795467,
+    "max_penetration_m": 0.014454289576042648
+   },
+   "leg_max_ik_err_m": {
+    "align": 7.416033225482783e-05,
+    "reach": 0.0001488376277244422,
+    "carry": 0.00019956771517795467,
+    "retreat": 0.00019511837359901087
+   },
+   "leg_max_penetration_m": {
+    "align": 0.0,
+    "reach": 0.011053968398471033,
+    "carry": 0.0,
+    "retreat": 0.014454289576042648
+   },
+   "layouts": [
+    {
+     "block_xyz": [
+      0.45,
+      -0.12,
+      0.02
+     ],
+     "legs": {
+      "align": {
+       "max_ik_err_m": 5.906637199290278e-05,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.0022153371376454757,
+       "colliding_bodies": [],
+       "n": 20,
+       "path_min_z_m": 0.010161061286926287
+      },
+      "reach": {
+       "max_ik_err_m": 0.00012292335413586597,
+       "max_penetration_m": 0.011053224462568565,
+       "max_tilt_deg": 0.0037725000820980374,
+       "colliding_bodies": [
+        "g_right_pad"
+       ],
+       "n": 40,
+       "path_min_z_m": -0.0066369214424720005
+      },
+      "carry": {
+       "max_ik_err_m": 0.00019824988180216452,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.006644839993632621,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.020000000000000018
+      },
+      "retreat": {
+       "max_ik_err_m": 0.00019511837359901087,
+       "max_penetration_m": 0.014454289576042638,
+       "max_tilt_deg": 0.00472841019712281,
+       "colliding_bodies": [
+        "g_right_follower",
+        "g_right_pad"
+       ],
+       "n": 40,
+       "path_min_z_m": -0.00042574501037595525
+      }
+     }
+    },
+    {
+     "block_xyz": [
+      0.48,
+      -0.09,
+      0.02
+     ],
+     "legs": {
+      "align": {
+       "max_ik_err_m": 4.8376006935105545e-05,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.0021654076370203343,
+       "colliding_bodies": [],
+       "n": 20,
+       "path_min_z_m": 0.010161061286926287
+      },
+      "reach": {
+       "max_ik_err_m": 0.00011363913173941353,
+       "max_penetration_m": 0.011053380690481344,
+       "max_tilt_deg": 0.0037974108886958758,
+       "colliding_bodies": [
+        "g_right_pad"
+       ],
+       "n": 40,
+       "path_min_z_m": -0.0066369214424720005
+      },
+      "carry": {
+       "max_ik_err_m": 0.00019956771517795467,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.006767540845802771,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.020000000000000018
+      },
+      "retreat": {
+       "max_ik_err_m": 0.00019511837359864286,
+       "max_penetration_m": 0.014454289576042638,
+       "max_tilt_deg": 0.004728409734644232,
+       "colliding_bodies": [
+        "g_right_follower",
+        "g_right_pad"
+       ],
+       "n": 40,
+       "path_min_z_m": -0.00042574501037595525
+      }
+     }
+    },
+    {
+     "block_xyz": [
+      0.48,
+      -0.15,
+      0.02
+     ],
+     "legs": {
+      "align": {
+       "max_ik_err_m": 6.337913631886683e-05,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.0023837126272383013,
+       "colliding_bodies": [],
+       "n": 20,
+       "path_min_z_m": 0.010161061286926287
+      },
+      "reach": {
+       "max_ik_err_m": 0.00010335582008334717,
+       "max_penetration_m": 0.011053968398471033,
+       "max_tilt_deg": 0.0034057831224261503,
+       "colliding_bodies": [
+        "g_right_pad"
+       ],
+       "n": 40,
+       "path_min_z_m": -0.0066369214424720005
+      },
+      "carry": {
+       "max_ik_err_m": 0.00017943922620670732,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.004029712575795863,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.020000000000000018
+      },
+      "retreat": {
+       "max_ik_err_m": 0.00019511837359867414,
+       "max_penetration_m": 0.014454289576042648,
+       "max_tilt_deg": 0.004728409734644232,
+       "colliding_bodies": [
+        "g_right_follower",
+        "g_right_pad"
+       ],
+       "n": 40,
+       "path_min_z_m": -0.00042574501037595525
+      }
+     }
+    },
+    {
+     "block_xyz": [
+      0.42000000000000004,
+      -0.09,
+      0.02
+     ],
+     "legs": {
+      "align": {
+       "max_ik_err_m": 5.3384548374886864e-05,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.002045230407014037,
+       "colliding_bodies": [],
+       "n": 20,
+       "path_min_z_m": 0.010161061286926287
+      },
+      "reach": {
+       "max_ik_err_m": 0.0001488376277244422,
+       "max_penetration_m": 0.011052571403389284,
+       "max_tilt_deg": 0.00421929606432378,
+       "colliding_bodies": [
+        "g_right_pad"
+       ],
+       "n": 40,
+       "path_min_z_m": -0.0066369214424720005
+      },
+      "carry": {
+       "max_ik_err_m": 0.00018998569760300321,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.007015884669726023,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.020000000000000018
+      },
+      "retreat": {
+       "max_ik_err_m": 0.00019511837359864286,
+       "max_penetration_m": 0.014454289576042638,
+       "max_tilt_deg": 0.004728409734644232,
+       "colliding_bodies": [
+        "g_right_follower",
+        "g_right_pad"
+       ],
+       "n": 40,
+       "path_min_z_m": -0.00042574501037595525
+      }
+     }
+    },
+    {
+     "block_xyz": [
+      0.42000000000000004,
+      -0.15,
+      0.02
+     ],
+     "legs": {
+      "align": {
+       "max_ik_err_m": 7.416033225482783e-05,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.0025793536198004197,
+       "colliding_bodies": [],
+       "n": 20,
+       "path_min_z_m": 0.010161061286926287
+      },
+      "reach": {
+       "max_ik_err_m": 0.000131310434957978,
+       "max_penetration_m": 0.011052939963737605,
+       "max_tilt_deg": 0.004208524406139234,
+       "colliding_bodies": [
+        "g_right_pad"
+       ],
+       "n": 40,
+       "path_min_z_m": -0.0066369214424720005
+      },
+      "carry": {
+       "max_ik_err_m": 0.00018274445787875153,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.004264018690028309,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.020000000000000018
+      },
+      "retreat": {
+       "max_ik_err_m": 0.00019511837359901087,
+       "max_penetration_m": 0.014454289576042638,
+       "max_tilt_deg": 0.00472841019712281,
+       "colliding_bodies": [
+        "g_right_follower",
+        "g_right_pad"
+       ],
+       "n": 40,
+       "path_min_z_m": -0.00042574501037595525
+      }
+     }
+    }
+   ]
+  },
+  {
+   "name": "person 1 markers",
+   "demo": "runs/demos/pexels_8135753_markers.npz",
+   "variant": "raw",
+   "robot": "ur10e",
+   "known": "0/60 held-out with the 4-fix stack (perception, calibration and timing corrected)",
+   "label": "infeasible",
+   "source": "results/demo_generalization_v1",
+   "predicted": "infeasible",
+   "match": true,
+   "reasons": [
+    "collides: reach 1.1 cm, retreat 1.4 cm (g_left_pad, g_right_follower, g_right_pad)"
+   ],
+   "worst": {
+    "max_ik_err_m": 0.00019946997701334162,
+    "max_penetration_m": 0.01446256228933184
+   },
+   "leg_max_ik_err_m": {
+    "align": 9.748546453344572e-05,
+    "reach": 0.00018600555869330526,
+    "carry": 0.00019946997701334162,
+    "retreat": 0.0001852697577008566
+   },
+   "leg_max_penetration_m": {
+    "align": 0.0,
+    "reach": 0.011053443415387509,
+    "carry": 0.0,
+    "retreat": 0.01446256228933184
+   },
+   "layouts": [
+    {
+     "block_xyz": [
+      0.45,
+      -0.12,
+      0.02
+     ],
+     "legs": {
+      "align": {
+       "max_ik_err_m": 6.884249017533751e-05,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.0024908847228747233,
+       "colliding_bodies": [],
+       "n": 20,
+       "path_min_z_m": 0.010161061286926287
+      },
+      "reach": {
+       "max_ik_err_m": 0.00014819528313314256,
+       "max_penetration_m": 0.011052602102916163,
+       "max_tilt_deg": 0.004703338281760205,
+       "colliding_bodies": [
+        "g_right_pad"
+       ],
+       "n": 40,
+       "path_min_z_m": -0.0066369214424720005
+      },
+      "carry": {
+       "max_ik_err_m": 0.00017893487578816086,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.005284770183792549,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.020000000000000018
+      },
+      "retreat": {
+       "max_ik_err_m": 0.00016328277703853936,
+       "max_penetration_m": 0.01446256228933184,
+       "max_tilt_deg": 0.0040284154855591055,
+       "colliding_bodies": [
+        "g_right_follower",
+        "g_right_pad"
+       ],
+       "n": 40,
+       "path_min_z_m": -0.00042574501037595525
+      }
+     }
+    },
+    {
+     "block_xyz": [
+      0.48,
+      -0.09,
+      0.02
+     ],
+     "legs": {
+      "align": {
+       "max_ik_err_m": 5.0053131488386006e-05,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.0021997489180742816,
+       "colliding_bodies": [],
+       "n": 20,
+       "path_min_z_m": 0.010161061286926287
+      },
+      "reach": {
+       "max_ik_err_m": 0.00013550468032070672,
+       "max_penetration_m": 0.011053143785690675,
+       "max_tilt_deg": 0.004127136949861894,
+       "colliding_bodies": [
+        "g_right_pad"
+       ],
+       "n": 40,
+       "path_min_z_m": -0.0066369214424720005
+      },
+      "carry": {
+       "max_ik_err_m": 0.00018753629507488472,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.004985984661446283,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.020000000000000018
+      },
+      "retreat": {
+       "max_ik_err_m": 0.00016328277703853936,
+       "max_penetration_m": 0.01446256228933184,
+       "max_tilt_deg": 0.0038041493212325286,
+       "colliding_bodies": [
+        "g_right_follower",
+        "g_right_pad"
+       ],
+       "n": 40,
+       "path_min_z_m": -0.00042574501037595525
+      }
+     }
+    },
+    {
+     "block_xyz": [
+      0.48,
+      -0.15,
+      0.02
+     ],
+     "legs": {
+      "align": {
+       "max_ik_err_m": 6.82539713976002e-05,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.0026092688745523816,
+       "colliding_bodies": [],
+       "n": 20,
+       "path_min_z_m": 0.010161061286926287
+      },
+      "reach": {
+       "max_ik_err_m": 0.00012098283643229749,
+       "max_penetration_m": 0.011053443415387509,
+       "max_tilt_deg": 0.004038056743542124,
+       "colliding_bodies": [
+        "g_right_pad"
+       ],
+       "n": 40,
+       "path_min_z_m": -0.0066369214424720005
+      },
+      "carry": {
+       "max_ik_err_m": 0.00019390392021199448,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.0056795874160345235,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.020000000000000018
+      },
+      "retreat": {
+       "max_ik_err_m": 0.00016328277703853936,
+       "max_penetration_m": 0.01446256228933184,
+       "max_tilt_deg": 0.004274097296044699,
+       "colliding_bodies": [
+        "g_right_follower",
+        "g_right_pad"
+       ],
+       "n": 40,
+       "path_min_z_m": -0.00042574501037595525
+      }
+     }
+    },
+    {
+     "block_xyz": [
+      0.42000000000000004,
+      -0.09,
+      0.02
+     ],
+     "legs": {
+      "align": {
+       "max_ik_err_m": 6.786822071005023e-05,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.0023119348533665735,
+       "colliding_bodies": [],
+       "n": 20,
+       "path_min_z_m": 0.010161061286926287
+      },
+      "reach": {
+       "max_ik_err_m": 0.00018600555869330526,
+       "max_penetration_m": 0.011051704701938683,
+       "max_tilt_deg": 0.005572777516899555,
+       "colliding_bodies": [
+        "g_left_pad",
+        "g_right_pad"
+       ],
+       "n": 40,
+       "path_min_z_m": -0.0066369214424720005
+      },
+      "carry": {
+       "max_ik_err_m": 0.00019946997701334162,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.004955485455177716,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.020000000000000018
+      },
+      "retreat": {
+       "max_ik_err_m": 0.00016328277703853936,
+       "max_penetration_m": 0.01446256228933184,
+       "max_tilt_deg": 0.0037842417741815056,
+       "colliding_bodies": [
+        "g_right_follower",
+        "g_right_pad"
+       ],
+       "n": 40,
+       "path_min_z_m": -0.00042574501037595525
+      }
+     }
+    },
+    {
+     "block_xyz": [
+      0.42000000000000004,
+      -0.15,
+      0.02
+     ],
+     "legs": {
+      "align": {
+       "max_ik_err_m": 9.748546453344572e-05,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.0035406700297550622,
+       "colliding_bodies": [],
+       "n": 20,
+       "path_min_z_m": 0.010161061286926287
+      },
+      "reach": {
+       "max_ik_err_m": 0.00016053187116610854,
+       "max_penetration_m": 0.011051845908055991,
+       "max_tilt_deg": 0.005305562054483123,
+       "colliding_bodies": [
+        "g_right_pad"
+       ],
+       "n": 40,
+       "path_min_z_m": -0.0066369214424720005
+      },
+      "carry": {
+       "max_ik_err_m": 0.00019453705641600205,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.005613910431736396,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.020000000000000018
+      },
+      "retreat": {
+       "max_ik_err_m": 0.0001852697577008566,
+       "max_penetration_m": 0.01446256228933184,
+       "max_tilt_deg": 0.004173849277576409,
+       "colliding_bodies": [
+        "g_right_follower",
+        "g_right_pad"
+       ],
+       "n": 40,
+       "path_min_z_m": -0.00042574501037595525
+      }
+     }
+    }
+   ]
+  },
+  {
+   "name": "person 1 orange marker",
+   "demo": "runs/demos/pexels_8135753_orange_marker.npz",
+   "variant": "raw",
+   "robot": "ur5e",
+   "known": "0/60 held-out with the 4-fix stack (perception, calibration and timing corrected)",
+   "label": "infeasible",
+   "source": "results/demo_generalization_v1",
+   "predicted": "infeasible",
+   "match": true,
+   "reasons": [
+    "collides: retreat 3.0 cm (g_left_pad, g_right_follower, g_right_pad)"
+   ],
+   "worst": {
+    "max_ik_err_m": 0.00019661324437410816,
+    "max_penetration_m": 0.03013479771305734
+   },
+   "leg_max_ik_err_m": {
+    "align": 0.0001826765251022764,
+    "reach": 0.00014549003310938952,
+    "carry": 0.00019661324437410816,
+    "retreat": 0.00017253473679565816
+   },
+   "leg_max_penetration_m": {
+    "align": 0.0,
+    "reach": 0.0,
+    "carry": 0.0,
+    "retreat": 0.03013479771305734
+   },
+   "layouts": [
+    {
+     "block_xyz": [
+      0.45,
+      -0.12,
+      0.02
+     ],
+     "legs": {
+      "align": {
+       "max_ik_err_m": 0.00013165803217585748,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.006897258055821297,
+       "colliding_bodies": [],
+       "n": 20,
+       "path_min_z_m": 0.0820023012161255
+      },
+      "reach": {
+       "max_ik_err_m": 0.00012287366186709925,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.005196258529429531,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.020000000000000018
+      },
+      "carry": {
+       "max_ik_err_m": 0.0001902402590234419,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.007841185740287715,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.020000000000000018
+      },
+      "retreat": {
+       "max_ik_err_m": 0.0001477714158940269,
+       "max_penetration_m": 0.03013479771305734,
+       "max_tilt_deg": 0.005189081213277588,
+       "colliding_bodies": [
+        "g_left_pad",
+        "g_right_follower",
+        "g_right_pad"
+       ],
+       "n": 40,
+       "path_min_z_m": -0.03223337626457212
+      }
+     }
+    },
+    {
+     "block_xyz": [
+      0.48,
+      -0.09,
+      0.02
+     ],
+     "legs": {
+      "align": {
+       "max_ik_err_m": 0.00010134357112608677,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.004810478416503387,
+       "colliding_bodies": [],
+       "n": 20,
+       "path_min_z_m": 0.0820023012161255
+      },
+      "reach": {
+       "max_ik_err_m": 0.0001263380682206088,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.005167330968063117,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.020000000000000018
+      },
+      "carry": {
+       "max_ik_err_m": 0.0001912859905565751,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.007455727162884704,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.020000000000000018
+      },
+      "retreat": {
+       "max_ik_err_m": 0.00012710886609786432,
+       "max_penetration_m": 0.030134797713056955,
+       "max_tilt_deg": 0.005189081072803885,
+       "colliding_bodies": [
+        "g_left_pad",
+        "g_right_follower",
+        "g_right_pad"
+       ],
+       "n": 40,
+       "path_min_z_m": -0.03223337626457212
+      }
+     }
+    },
+    {
+     "block_xyz": [
+      0.48,
+      -0.15,
+      0.02
+     ],
+     "legs": {
+      "align": {
+       "max_ik_err_m": 0.00014014017347784878,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.0072176344610358125,
+       "colliding_bodies": [],
+       "n": 20,
+       "path_min_z_m": 0.0820023012161255
+      },
+      "reach": {
+       "max_ik_err_m": 0.00010702621797561218,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.005790486232360663,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.020000000000000018
+      },
+      "carry": {
+       "max_ik_err_m": 0.00019661324437410816,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.008569210919834992,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.020000000000000018
+      },
+      "retreat": {
+       "max_ik_err_m": 0.00016577274013966636,
+       "max_penetration_m": 0.030134797713056955,
+       "max_tilt_deg": 0.005189081072803885,
+       "colliding_bodies": [
+        "g_left_pad",
+        "g_right_follower",
+        "g_right_pad"
+       ],
+       "n": 40,
+       "path_min_z_m": -0.03223337626457212
+      }
+     }
+    },
+    {
+     "block_xyz": [
+      0.42000000000000004,
+      -0.09,
+      0.02
+     ],
+     "legs": {
+      "align": {
+       "max_ik_err_m": 0.00012813258649392915,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.00646714032724442,
+       "colliding_bodies": [],
+       "n": 20,
+       "path_min_z_m": 0.0820023012161255
+      },
+      "reach": {
+       "max_ik_err_m": 0.00014549003310938952,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.004636388603506817,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.020000000000000018
+      },
+      "carry": {
+       "max_ik_err_m": 0.00019618419189439525,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.009605302282295109,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.020000000000000018
+      },
+      "retreat": {
+       "max_ik_err_m": 0.00013360565382727028,
+       "max_penetration_m": 0.030134797713056955,
+       "max_tilt_deg": 0.00518908079185647,
+       "colliding_bodies": [
+        "g_left_pad",
+        "g_right_follower",
+        "g_right_pad"
+       ],
+       "n": 40,
+       "path_min_z_m": -0.03223337626457212
+      }
+     }
+    },
+    {
+     "block_xyz": [
+      0.42000000000000004,
+      -0.15,
+      0.02
+     ],
+     "legs": {
+      "align": {
+       "max_ik_err_m": 0.0001826765251022764,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.010183222252128,
+       "colliding_bodies": [],
+       "n": 20,
+       "path_min_z_m": 0.0820023012161255
+      },
+      "reach": {
+       "max_ik_err_m": 0.00012112115741794915,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.005238789532689291,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.020000000000000018
+      },
+      "carry": {
+       "max_ik_err_m": 0.000191480517791326,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.008245302983374168,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.020000000000000018
+      },
+      "retreat": {
+       "max_ik_err_m": 0.00017253473679565816,
+       "max_penetration_m": 0.030134797713056955,
+       "max_tilt_deg": 0.005189081072803885,
+       "colliding_bodies": [
+        "g_left_pad",
+        "g_right_follower",
+        "g_right_pad"
+       ],
+       "n": 40,
+       "path_min_z_m": -0.03223337626457212
+      }
+     }
+    }
+   ]
+  },
+  {
+   "name": "person 1 orange marker",
+   "demo": "runs/demos/pexels_8135753_orange_marker.npz",
+   "variant": "raw",
+   "robot": "ur10e",
+   "known": "0/60 held-out with the 4-fix stack (perception, calibration and timing corrected)",
+   "label": "infeasible",
+   "source": "results/demo_generalization_v1",
+   "predicted": "infeasible",
+   "match": true,
+   "reasons": [
+    "collides: retreat 3.0 cm (g_left_pad, g_right_follower, g_right_pad)"
+   ],
+   "worst": {
+    "max_ik_err_m": 0.00019502134932653068,
+    "max_penetration_m": 0.030130902609641075
+   },
+   "leg_max_ik_err_m": {
+    "align": 0.0001909273334798065,
+    "reach": 0.0001522299905051445,
+    "carry": 0.00019502134932653068,
+    "retreat": 0.00015962603477963306
+   },
+   "leg_max_penetration_m": {
+    "align": 0.0,
+    "reach": 0.0,
+    "carry": 0.0,
+    "retreat": 0.030130902609641075
+   },
+   "layouts": [
+    {
+     "block_xyz": [
+      0.45,
+      -0.12,
+      0.02
+     ],
+     "legs": {
+      "align": {
+       "max_ik_err_m": 0.00018338578607465637,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.0080994567977961,
+       "colliding_bodies": [],
+       "n": 20,
+       "path_min_z_m": 0.0820023012161255
+      },
+      "reach": {
+       "max_ik_err_m": 0.00011880964963217539,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.003547853485493917,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.020000000000000018
+      },
+      "carry": {
+       "max_ik_err_m": 0.00016804794704184214,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.006908139779629862,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.020000000000000018
+      },
+      "retreat": {
+       "max_ik_err_m": 0.00015033198283192473,
+       "max_penetration_m": 0.030130902609640707,
+       "max_tilt_deg": 0.0044959762376779264,
+       "colliding_bodies": [
+        "g_left_pad",
+        "g_right_follower",
+        "g_right_pad"
+       ],
+       "n": 40,
+       "path_min_z_m": -0.03223337626457212
+      }
+     }
+    },
+    {
+     "block_xyz": [
+      0.48,
+      -0.09,
+      0.02
+     ],
+     "legs": {
+      "align": {
+       "max_ik_err_m": 0.0001273323632981807,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.0055501741181507415,
+       "colliding_bodies": [],
+       "n": 20,
+       "path_min_z_m": 0.0820023012161255
+      },
+      "reach": {
+       "max_ik_err_m": 0.00011490965088120907,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.0033304332191497854,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.020000000000000018
+      },
+      "carry": {
+       "max_ik_err_m": 0.00018424406232676153,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.006760497924729388,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.020000000000000018
+      },
+      "retreat": {
+       "max_ik_err_m": 0.00015033198283192473,
+       "max_penetration_m": 0.030130902609640707,
+       "max_tilt_deg": 0.0044959762376779264,
+       "colliding_bodies": [
+        "g_left_pad",
+        "g_right_follower",
+        "g_right_pad"
+       ],
+       "n": 40,
+       "path_min_z_m": -0.03223337626457212
+      }
+     }
+    },
+    {
+     "block_xyz": [
+      0.48,
+      -0.15,
+      0.02
+     ],
+     "legs": {
+      "align": {
+       "max_ik_err_m": 0.0001686202414045547,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.007909410444393106,
+       "colliding_bodies": [],
+       "n": 20,
+       "path_min_z_m": 0.0820023012161255
+      },
+      "reach": {
+       "max_ik_err_m": 9.47900958376319e-05,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.0031567315085125817,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.020000000000000018
+      },
+      "carry": {
+       "max_ik_err_m": 0.00019496686100358945,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.007650362521223684,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.020000000000000018
+      },
+      "retreat": {
+       "max_ik_err_m": 0.00015962603477963306,
+       "max_penetration_m": 0.030130902609641075,
+       "max_tilt_deg": 0.0044959762376779264,
+       "colliding_bodies": [
+        "g_left_pad",
+        "g_right_follower",
+        "g_right_pad"
+       ],
+       "n": 40,
+       "path_min_z_m": -0.03223337626457212
+      }
+     }
+    },
+    {
+     "block_xyz": [
+      0.42000000000000004,
+      -0.09,
+      0.02
+     ],
+     "legs": {
+      "align": {
+       "max_ik_err_m": 0.00019015241295324201,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.008359717939740564,
+       "colliding_bodies": [],
+       "n": 20,
+       "path_min_z_m": 0.0820023012161255
+      },
+      "reach": {
+       "max_ik_err_m": 0.0001522299905051445,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.004038082376577635,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.020000000000000018
+      },
+      "carry": {
+       "max_ik_err_m": 0.00018804496235092739,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.006309821226038703,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.020000000000000018
+      },
+      "retreat": {
+       "max_ik_err_m": 0.00015033198283192473,
+       "max_penetration_m": 0.030130902609640707,
+       "max_tilt_deg": 0.0044959762376779264,
+       "colliding_bodies": [
+        "g_left_pad",
+        "g_right_follower",
+        "g_right_pad"
+       ],
+       "n": 40,
+       "path_min_z_m": -0.03223337626457212
+      }
+     }
+    },
+    {
+     "block_xyz": [
+      0.42000000000000004,
+      -0.15,
+      0.02
+     ],
+     "legs": {
+      "align": {
+       "max_ik_err_m": 0.0001909273334798065,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.0100194075206207,
+       "colliding_bodies": [],
+       "n": 20,
+       "path_min_z_m": 0.0820023012161255
+      },
+      "reach": {
+       "max_ik_err_m": 0.00013371936062823149,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.0037598753864367886,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.020000000000000018
+      },
+      "carry": {
+       "max_ik_err_m": 0.00019502134932653068,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.007081568527105038,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.020000000000000018
+      },
+      "retreat": {
+       "max_ik_err_m": 0.0001535960055125458,
+       "max_penetration_m": 0.030130902609640707,
+       "max_tilt_deg": 0.0044959762376779264,
+       "colliding_bodies": [
+        "g_left_pad",
+        "g_right_follower",
+        "g_right_pad"
+       ],
+       "n": 40,
+       "path_min_z_m": -0.03223337626457212
+      }
+     }
+    }
+   ]
+  },
+  {
+   "name": "person 1 notepad",
+   "demo": "runs/demos/pexels_8135753_notepad.npz",
+   "variant": "raw",
+   "robot": "ur5e",
+   "known": "0/60 held-out with the 4-fix stack (perception, calibration and timing corrected)",
+   "label": "infeasible",
+   "source": "results/demo_generalization_v1",
+   "predicted": "infeasible",
+   "match": true,
+   "reasons": [
+    "collides: reach 2.9 cm, retreat 1.4 cm (g_left_pad, g_right_pad)"
+   ],
+   "worst": {
+    "max_ik_err_m": 0.00019915688889063642,
+    "max_penetration_m": 0.029307172016723313
+   },
+   "leg_max_ik_err_m": {
+    "align": 0.00019528692048358684,
+    "reach": 0.00019915688889063642,
+    "carry": 0.00019117926481128275,
+    "retreat": 0.00014957885571746272
+   },
+   "leg_max_penetration_m": {
+    "align": 0.0,
+    "reach": 0.029307172016723313,
+    "carry": 0.0,
+    "retreat": 0.01427528825049766
+   },
+   "layouts": [
+    {
+     "block_xyz": [
+      0.45,
+      -0.12,
+      0.02
+     ],
+     "legs": {
+      "align": {
+       "max_ik_err_m": 0.0001878573675410134,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.010464144104664726,
+       "colliding_bodies": [],
+       "n": 20,
+       "path_min_z_m": 0.14437963485717775
+      },
+      "reach": {
+       "max_ik_err_m": 0.00019915688889063642,
+       "max_penetration_m": 0.029302366429754784,
+       "max_tilt_deg": 0.007788033355378329,
+       "colliding_bodies": [
+        "g_left_pad",
+        "g_right_pad"
+       ],
+       "n": 40,
+       "path_min_z_m": -0.027328483599882845
+      },
+      "carry": {
+       "max_ik_err_m": 0.00014846094959606768,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.007788033355378329,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.020000000000000018
+      },
+      "retreat": {
+       "max_ik_err_m": 0.00014957885571743177,
+       "max_penetration_m": 0.014275288250497451,
+       "max_tilt_deg": 0.0034506831218671166,
+       "colliding_bodies": [
+        "g_right_pad"
+       ],
+       "n": 40,
+       "path_min_z_m": -0.009875375986099222
+      }
+     }
+    },
+    {
+     "block_xyz": [
+      0.48,
+      -0.09,
+      0.02
+     ],
+     "legs": {
+      "align": {
+       "max_ik_err_m": 0.0001264573862474872,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.0069492171595764,
+       "colliding_bodies": [],
+       "n": 20,
+       "path_min_z_m": 0.14437963485717775
+      },
+      "reach": {
+       "max_ik_err_m": 0.00018163264877838343,
+       "max_penetration_m": 0.029299777285561872,
+       "max_tilt_deg": 0.007503534139032134,
+       "colliding_bodies": [
+        "g_left_pad",
+        "g_right_pad"
+       ],
+       "n": 40,
+       "path_min_z_m": -0.027328483599882845
+      },
+      "carry": {
+       "max_ik_err_m": 0.00019117926481128275,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.007503534139032134,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.020000000000000018
+      },
+      "retreat": {
+       "max_ik_err_m": 0.0001495788557173085,
+       "max_penetration_m": 0.014275288250497318,
+       "max_tilt_deg": 0.0034506832274881494,
+       "colliding_bodies": [
+        "g_right_pad"
+       ],
+       "n": 40,
+       "path_min_z_m": -0.009875375986099222
+      }
+     }
+    },
+    {
+     "block_xyz": [
+      0.48,
+      -0.15,
+      0.02
+     ],
+     "legs": {
+      "align": {
+       "max_ik_err_m": 0.00019528692048358684,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.009791032262503089,
+       "colliding_bodies": [],
+       "n": 20,
+       "path_min_z_m": 0.14437963485717775
+      },
+      "reach": {
+       "max_ik_err_m": 0.0001985274099216002,
+       "max_penetration_m": 0.02929870847659116,
+       "max_tilt_deg": 0.007510621295044534,
+       "colliding_bodies": [
+        "g_left_pad",
+        "g_right_pad"
+       ],
+       "n": 40,
+       "path_min_z_m": -0.027328483599882845
+      },
+      "carry": {
+       "max_ik_err_m": 0.00018105908025121262,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.007510621295044534,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.020000000000000018
+      },
+      "retreat": {
+       "max_ik_err_m": 0.00014957885571746272,
+       "max_penetration_m": 0.01427528825049766,
+       "max_tilt_deg": 0.003450683438730204,
+       "colliding_bodies": [
+        "g_right_pad"
+       ],
+       "n": 40,
+       "path_min_z_m": -0.009875375986099222
+      }
+     }
+    },
+    {
+     "block_xyz": [
+      0.42000000000000004,
+      -0.09,
+      0.02
+     ],
+     "legs": {
+      "align": {
+       "max_ik_err_m": 0.0001940697309299014,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.009442485690641128,
+       "colliding_bodies": [],
+       "n": 20,
+       "path_min_z_m": 0.14437963485717775
+      },
+      "reach": {
+       "max_ik_err_m": 0.0001925569028375276,
+       "max_penetration_m": 0.029307172016723313,
+       "max_tilt_deg": 0.00818360915176486,
+       "colliding_bodies": [
+        "g_left_pad",
+        "g_right_pad"
+       ],
+       "n": 40,
+       "path_min_z_m": -0.027328483599882845
+      },
+      "carry": {
+       "max_ik_err_m": 0.0001501575382285423,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.008128436873957201,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.020000000000000018
+      },
+      "retreat": {
+       "max_ik_err_m": 0.00014957885571746272,
+       "max_penetration_m": 0.01427528825049766,
+       "max_tilt_deg": 0.003450683438730204,
+       "colliding_bodies": [
+        "g_right_pad"
+       ],
+       "n": 40,
+       "path_min_z_m": -0.009875375986099222
+      }
+     }
+    },
+    {
+     "block_xyz": [
+      0.42000000000000004,
+      -0.15,
+      0.02
+     ],
+     "legs": {
+      "align": {
+       "max_ik_err_m": 0.00017911540354436658,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.007668544660233345,
+       "colliding_bodies": [],
+       "n": 20,
+       "path_min_z_m": 0.14437963485717775
+      },
+      "reach": {
+       "max_ik_err_m": 0.00019533145864992964,
+       "max_penetration_m": 0.029305187469918583,
+       "max_tilt_deg": 0.008087387714197977,
+       "colliding_bodies": [
+        "g_left_pad",
+        "g_right_pad"
+       ],
+       "n": 40,
+       "path_min_z_m": -0.027328483599882845
+      },
+      "carry": {
+       "max_ik_err_m": 0.0001653636173879227,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.00805886637203124,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.020000000000000018
+      },
+      "retreat": {
+       "max_ik_err_m": 0.00014957885571746272,
+       "max_penetration_m": 0.01427528825049766,
+       "max_tilt_deg": 0.003450683438730204,
+       "colliding_bodies": [
+        "g_right_pad"
+       ],
+       "n": 40,
+       "path_min_z_m": -0.009875375986099222
+      }
+     }
+    }
+   ]
+  },
+  {
+   "name": "person 1 notepad",
+   "demo": "runs/demos/pexels_8135753_notepad.npz",
+   "variant": "raw",
+   "robot": "ur10e",
+   "known": "0/60 held-out with the 4-fix stack (perception, calibration and timing corrected)",
+   "label": "infeasible",
+   "source": "results/demo_generalization_v1",
+   "predicted": "infeasible",
+   "match": true,
+   "reasons": [
+    "collides: reach 2.9 cm, retreat 1.4 cm (g_left_pad, g_right_pad)"
+   ],
+   "worst": {
+    "max_ik_err_m": 0.00019891456423544175,
+    "max_penetration_m": 0.029314623799086746
+   },
+   "leg_max_ik_err_m": {
+    "align": 0.00019959258848385126,
+    "reach": 0.00019891456423544175,
+    "carry": 0.00019862853344692523,
+    "retreat": 0.0001504804331421703
+   },
+   "leg_max_penetration_m": {
+    "align": 0.0,
+    "reach": 0.029314623799086746,
+    "carry": 0.0,
+    "retreat": 0.014267485969967622
+   },
+   "layouts": [
+    {
+     "block_xyz": [
+      0.45,
+      -0.12,
+      0.02
+     ],
+     "legs": {
+      "align": {
+       "max_ik_err_m": 0.00019035890862090007,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.010101322847874851,
+       "colliding_bodies": [],
+       "n": 20,
+       "path_min_z_m": 0.14437963485717775
+      },
+      "reach": {
+       "max_ik_err_m": 0.0001928462206384786,
+       "max_penetration_m": 0.029307430869138607,
+       "max_tilt_deg": 0.00769323556469853,
+       "colliding_bodies": [
+        "g_left_pad",
+        "g_right_pad"
+       ],
+       "n": 40,
+       "path_min_z_m": -0.027328483599882845
+      },
+      "carry": {
+       "max_ik_err_m": 0.00013916803307338423,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.007471785229529963,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.020000000000000018
+      },
+      "retreat": {
+       "max_ik_err_m": 0.0001504804331421703,
+       "max_penetration_m": 0.014267485969967622,
+       "max_tilt_deg": 0.004791624154220305,
+       "colliding_bodies": [
+        "g_right_pad"
+       ],
+       "n": 40,
+       "path_min_z_m": -0.009875375986099222
+      }
+     }
+    },
+    {
+     "block_xyz": [
+      0.48,
+      -0.09,
+      0.02
+     ],
+     "legs": {
+      "align": {
+       "max_ik_err_m": 0.00015311618827923643,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.007031533276707658,
+       "colliding_bodies": [],
+       "n": 20,
+       "path_min_z_m": 0.14437963485717775
+      },
+      "reach": {
+       "max_ik_err_m": 0.00019891456423544175,
+       "max_penetration_m": 0.0293037466868505,
+       "max_tilt_deg": 0.007131933704932178,
+       "colliding_bodies": [
+        "g_left_pad",
+        "g_right_pad"
+       ],
+       "n": 40,
+       "path_min_z_m": -0.027328483599882845
+      },
+      "carry": {
+       "max_ik_err_m": 0.00019862853344692523,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.006970797062204947,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.020000000000000018
+      },
+      "retreat": {
+       "max_ik_err_m": 0.0001504804331421703,
+       "max_penetration_m": 0.014267485969967622,
+       "max_tilt_deg": 0.004791624154220305,
+       "colliding_bodies": [
+        "g_right_pad"
+       ],
+       "n": 40,
+       "path_min_z_m": -0.009875375986099222
+      }
+     }
+    },
+    {
+     "block_xyz": [
+      0.48,
+      -0.15,
+      0.02
+     ],
+     "legs": {
+      "align": {
+       "max_ik_err_m": 0.00019959258848385126,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.009943452342320296,
+       "colliding_bodies": [],
+       "n": 20,
+       "path_min_z_m": 0.14437963485717775
+      },
+      "reach": {
+       "max_ik_err_m": 0.00018284775156313693,
+       "max_penetration_m": 0.02930234944837894,
+       "max_tilt_deg": 0.006896494394200785,
+       "colliding_bodies": [
+        "g_left_pad",
+        "g_right_pad"
+       ],
+       "n": 40,
+       "path_min_z_m": -0.027328483599882845
+      },
+      "carry": {
+       "max_ik_err_m": 0.00013816261424163132,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.006752758408461303,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.020000000000000018
+      },
+      "retreat": {
+       "max_ik_err_m": 0.0001504804331421703,
+       "max_penetration_m": 0.014267485969967622,
+       "max_tilt_deg": 0.004791624154220305,
+       "colliding_bodies": [
+        "g_right_pad"
+       ],
+       "n": 40,
+       "path_min_z_m": -0.009875375986099222
+      }
+     }
+    },
+    {
+     "block_xyz": [
+      0.42000000000000004,
+      -0.09,
+      0.02
+     ],
+     "legs": {
+      "align": {
+       "max_ik_err_m": 0.00019543468085133248,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.009597766204393397,
+       "colliding_bodies": [],
+       "n": 20,
+       "path_min_z_m": 0.14437963485717775
+      },
+      "reach": {
+       "max_ik_err_m": 0.0001590579261361109,
+       "max_penetration_m": 0.029314623799086746,
+       "max_tilt_deg": 0.00869773693069731,
+       "colliding_bodies": [
+        "g_left_pad",
+        "g_right_pad"
+       ],
+       "n": 40,
+       "path_min_z_m": -0.027328483599882845
+      },
+      "carry": {
+       "max_ik_err_m": 0.00014057915511624935,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.008359777145247469,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.020000000000000018
+      },
+      "retreat": {
+       "max_ik_err_m": 0.00015048043314209802,
+       "max_penetration_m": 0.014267485969967504,
+       "max_tilt_deg": 0.004791624154220305,
+       "colliding_bodies": [
+        "g_right_pad"
+       ],
+       "n": 40,
+       "path_min_z_m": -0.009875375986099222
+      }
+     }
+    },
+    {
+     "block_xyz": [
+      0.42000000000000004,
+      -0.15,
+      0.02
+     ],
+     "legs": {
+      "align": {
+       "max_ik_err_m": 0.0001783853459977547,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.007941645006983638,
+       "colliding_bodies": [],
+       "n": 20,
+       "path_min_z_m": 0.14437963485717775
+      },
+      "reach": {
+       "max_ik_err_m": 0.00018095266917780668,
+       "max_penetration_m": 0.02931150054181531,
+       "max_tilt_deg": 0.008255043882413458,
+       "colliding_bodies": [
+        "g_left_pad",
+        "g_right_pad"
+       ],
+       "n": 40,
+       "path_min_z_m": -0.027328483599882845
+      },
+      "carry": {
+       "max_ik_err_m": 0.00016495746962202817,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.007964220746326469,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.020000000000000018
+      },
+      "retreat": {
+       "max_ik_err_m": 0.0001504804331421703,
+       "max_penetration_m": 0.014267485969967622,
+       "max_tilt_deg": 0.004791624154220305,
+       "colliding_bodies": [
+        "g_right_pad"
+       ],
+       "n": 40,
+       "path_min_z_m": -0.009875375986099222
+      }
+     }
+    }
+   ]
+  },
+  {
+   "name": "person 1 notebook",
+   "demo": "runs/demos/pexels_8135753_notebook.npz",
+   "variant": "safe_path_v2",
+   "robot": "ur5e",
+   "known": "57/60 held-out with its stack",
+   "label": "feasible",
+   "source": "results/demo_generalization_v5",
+   "predicted": "feasible",
+   "match": true,
+   "reasons": [],
+   "worst": {
+    "max_ik_err_m": 0.0001999853305752729,
+    "max_penetration_m": 0.0
+   },
+   "leg_max_ik_err_m": {
+    "align": 0.00019589379899928965,
+    "reach": 0.00019825027740943515,
+    "carry": 0.0001999853305752729,
+    "retreat": 0.00019856434197658727
+   },
+   "leg_max_penetration_m": {
+    "align": 0.0,
+    "reach": 0.0,
+    "carry": 0.0,
+    "retreat": 0.0
+   },
+   "layouts": [
+    {
+     "block_xyz": [
+      0.45,
+      -0.12,
+      0.02
+     ],
+     "legs": {
+      "align": {
+       "max_ik_err_m": 0.00019589379899928965,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.013501887578031288,
+       "colliding_bodies": [],
+       "n": 20,
+       "path_min_z_m": 0.3322003673210946
+      },
+      "reach": {
+       "max_ik_err_m": 0.00015684373226815425,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.013771518158277912,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.04408069372177126
+      },
+      "carry": {
+       "max_ik_err_m": 0.0001999853305752729,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.0077204975438534395,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.04408069372177126
+      },
+      "retreat": {
+       "max_ik_err_m": 0.00019856434197658727,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.008206867595254243,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.24237860345840456
+      }
+     }
+    },
+    {
+     "block_xyz": [
+      0.48,
+      -0.09,
+      0.02
+     ],
+     "legs": {
+      "align": {
+       "max_ik_err_m": 0.00015202613883798173,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.006664118700882292,
+       "colliding_bodies": [],
+       "n": 20,
+       "path_min_z_m": 0.3322003673210946
+      },
+      "reach": {
+       "max_ik_err_m": 0.00015006335892009585,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.013750920416129254,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.04408069372177126
+      },
+      "carry": {
+       "max_ik_err_m": 0.00019260768947034762,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.0075221206659025356,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.04408069372177126
+      },
+      "retreat": {
+       "max_ik_err_m": 0.00019856434197654257,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.008206867861712581,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.24237860345840456
+      }
+     }
+    },
+    {
+     "block_xyz": [
+      0.48,
+      -0.15,
+      0.02
+     ],
+     "legs": {
+      "align": {
+       "max_ik_err_m": 0.00019406125341838202,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.008233234149007557,
+       "colliding_bodies": [],
+       "n": 20,
+       "path_min_z_m": 0.3322003673210946
+      },
+      "reach": {
+       "max_ik_err_m": 0.00019825027740943515,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.016616325495859292,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.04408069372177126
+      },
+      "carry": {
+       "max_ik_err_m": 6.258889766480442e-05,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.0035267273952087346,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.04408069372177126
+      },
+      "retreat": {
+       "max_ik_err_m": 0.00019856434197658727,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.008206867417615348,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.24237860345840456
+      }
+     }
+    },
+    {
+     "block_xyz": [
+      0.42000000000000004,
+      -0.09,
+      0.02
+     ],
+     "legs": {
+      "align": {
+       "max_ik_err_m": 0.0001729458520013208,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.007499636502462372,
+       "colliding_bodies": [],
+       "n": 20,
+       "path_min_z_m": 0.3322003673210946
+      },
+      "reach": {
+       "max_ik_err_m": 0.00017618932701040884,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.012093626661731841,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.04408069372177126
+      },
+      "carry": {
+       "max_ik_err_m": 0.0001825485442191346,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.006551542213232259,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.04408069372177126
+      },
+      "retreat": {
+       "max_ik_err_m": 0.0001985643419765855,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.008206867595254243,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.24237860345840456
+      }
+     }
+    },
+    {
+     "block_xyz": [
+      0.42000000000000004,
+      -0.15,
+      0.02
+     ],
+     "legs": {
+      "align": {
+       "max_ik_err_m": 0.00019090075689349062,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.007746035493277614,
+       "colliding_bodies": [],
+       "n": 20,
+       "path_min_z_m": 0.3322003673210946
+      },
+      "reach": {
+       "max_ik_err_m": 0.00016667875228451508,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.013895495225756517,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.04408069372177126
+      },
+      "carry": {
+       "max_ik_err_m": 7.524785960238315e-05,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.0036277394802869583,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.04408069372177126
+      },
+      "retreat": {
+       "max_ik_err_m": 0.00019856434197648736,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.008206867861712581,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.24237860345840456
+      }
+     }
+    }
+   ]
+  },
+  {
+   "name": "person 1 notebook",
+   "demo": "runs/demos/pexels_8135753_notebook.npz",
+   "variant": "safe_path_v2",
+   "robot": "ur10e",
+   "known": "60/60 held-out with its stack",
+   "label": "feasible",
+   "source": "results/demo_generalization_v5",
+   "predicted": "feasible",
+   "match": true,
+   "reasons": [],
+   "worst": {
+    "max_ik_err_m": 0.00019326217000577775,
+    "max_penetration_m": 0.0
+   },
+   "leg_max_ik_err_m": {
+    "align": 0.00019869458328953036,
+    "reach": 0.00018582816976039983,
+    "carry": 0.00019326217000577775,
+    "retreat": 0.00018006123570528217
+   },
+   "leg_max_penetration_m": {
+    "align": 0.0,
+    "reach": 0.0,
+    "carry": 0.0,
+    "retreat": 0.0
+   },
+   "layouts": [
+    {
+     "block_xyz": [
+      0.45,
+      -0.12,
+      0.02
+     ],
+     "legs": {
+      "align": {
+       "max_ik_err_m": 0.00019855255592004403,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.01035175007898604,
+       "colliding_bodies": [],
+       "n": 20,
+       "path_min_z_m": 0.3932239902019501
+      },
+      "reach": {
+       "max_ik_err_m": 0.00018582816976039983,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.005302739113494514,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.04408069372177126
+      },
+      "carry": {
+       "max_ik_err_m": 0.00011510469292440194,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.003612099568887427,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.04408069372177126
+      },
+      "retreat": {
+       "max_ik_err_m": 0.00018006123570528217,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.004927665454091952,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.24237860345840456
+      }
+     }
+    },
+    {
+     "block_xyz": [
+      0.48,
+      -0.09,
+      0.02
+     ],
+     "legs": {
+      "align": {
+       "max_ik_err_m": 0.00017489022239002073,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.011645163902889097,
+       "colliding_bodies": [],
+       "n": 20,
+       "path_min_z_m": 0.3932239902019501
+      },
+      "reach": {
+       "max_ik_err_m": 0.0001706896025424805,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.005133216477281874,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.04408069372177126
+      },
+      "carry": {
+       "max_ik_err_m": 0.00019148627453035425,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.00688558378606361,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.04408069372177126
+      },
+      "retreat": {
+       "max_ik_err_m": 0.00018006123570528217,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.004927665454091952,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.24237860345840456
+      }
+     }
+    },
+    {
+     "block_xyz": [
+      0.48,
+      -0.15,
+      0.02
+     ],
+     "legs": {
+      "align": {
+       "max_ik_err_m": 0.0001973266243932624,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.014047877611077451,
+       "colliding_bodies": [],
+       "n": 20,
+       "path_min_z_m": 0.3932239902019501
+      },
+      "reach": {
+       "max_ik_err_m": 0.00016179240719505107,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.005312143883334695,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.04408069372177126
+      },
+      "carry": {
+       "max_ik_err_m": 0.00013747248595897594,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.003918658091249528,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.04408069372177126
+      },
+      "retreat": {
+       "max_ik_err_m": 0.00018006123570528217,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.004927665454091952,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.24237860345840456
+      }
+     }
+    },
+    {
+     "block_xyz": [
+      0.42000000000000004,
+      -0.09,
+      0.02
+     ],
+     "legs": {
+      "align": {
+       "max_ik_err_m": 0.00019839780657653425,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.01347586779239723,
+       "colliding_bodies": [],
+       "n": 20,
+       "path_min_z_m": 0.3932239902019501
+      },
+      "reach": {
+       "max_ik_err_m": 0.0001813347490595724,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.0047918121779638705,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.04408069372177126
+      },
+      "carry": {
+       "max_ik_err_m": 0.00019326217000577775,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.00690696521756284,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.04408069372177126
+      },
+      "retreat": {
+       "max_ik_err_m": 0.00018006123570528217,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.004927665454091952,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.24237860345840456
+      }
+     }
+    },
+    {
+     "block_xyz": [
+      0.42000000000000004,
+      -0.15,
+      0.02
+     ],
+     "legs": {
+      "align": {
+       "max_ik_err_m": 0.00019869458328953036,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.007973022102470383,
+       "colliding_bodies": [],
+       "n": 20,
+       "path_min_z_m": 0.3932239902019501
+      },
+      "reach": {
+       "max_ik_err_m": 0.00016078922211241447,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.005042835635046353,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.04408069372177126
+      },
+      "carry": {
+       "max_ik_err_m": 0.00013632408017891974,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.003949235648941348,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.04408069372177126
+      },
+      "retreat": {
+       "max_ik_err_m": 0.00018006123570501014,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.004927665528054911,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.24237860345840456
+      }
+     }
+    }
+   ]
+  },
+  {
+   "name": "person 1 markers",
+   "demo": "runs/demos/pexels_8135753_markers.npz",
+   "variant": "safe_path_v2",
+   "robot": "ur5e",
+   "known": "51/60 held-out with its stack",
+   "label": "feasible",
+   "source": "results/demo_generalization_v5",
+   "predicted": "feasible",
+   "match": true,
+   "reasons": [],
+   "worst": {
+    "max_ik_err_m": 0.00019956771517795467,
+    "max_penetration_m": 0.0
+   },
+   "leg_max_ik_err_m": {
+    "align": 7.169968444160511e-05,
+    "reach": 0.00010248380667552266,
+    "carry": 0.00019956771517795467,
+    "retreat": 0.00017353439914816676
+   },
+   "leg_max_penetration_m": {
+    "align": 0.0,
+    "reach": 0.0,
+    "carry": 0.0,
+    "retreat": 0.0
+   },
+   "layouts": [
+    {
+     "block_xyz": [
+      0.45,
+      -0.12,
+      0.02
+     ],
+     "legs": {
+      "align": {
+       "max_ik_err_m": 5.761556372085106e-05,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.0021673279020686053,
+       "colliding_bodies": [],
+       "n": 20,
+       "path_min_z_m": 0.020000000000000018
+      },
+      "reach": {
+       "max_ik_err_m": 8.589589299917143e-05,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.0029745369689941448,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.020000000000000018
+      },
+      "carry": {
+       "max_ik_err_m": 0.00019824988180216452,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.006644839993632621,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.020000000000000018
+      },
+      "retreat": {
+       "max_ik_err_m": 0.00014999988252421858,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.005675914557196599,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.10815937423706057
+      }
+     }
+    },
+    {
+     "block_xyz": [
+      0.48,
+      -0.09,
+      0.02
+     ],
+     "legs": {
+      "align": {
+       "max_ik_err_m": 4.753503652257772e-05,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.0021274005803231942,
+       "colliding_bodies": [],
+       "n": 20,
+       "path_min_z_m": 0.020000000000000018
+      },
+      "reach": {
+       "max_ik_err_m": 8.283676617705013e-05,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.0029368512889804293,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.020000000000000018
+      },
+      "carry": {
+       "max_ik_err_m": 0.00019956771517795467,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.006767540845802771,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.020000000000000018
+      },
+      "retreat": {
+       "max_ik_err_m": 0.00014999988252414225,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.005675916997271453,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.10815937423706057
+      }
+     }
+    },
+    {
+     "block_xyz": [
+      0.48,
+      -0.15,
+      0.02
+     ],
+     "legs": {
+      "align": {
+       "max_ik_err_m": 6.21997083336745e-05,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.002339554315053998,
+       "colliding_bodies": [],
+       "n": 20,
+       "path_min_z_m": 0.020000000000000018
+      },
+      "reach": {
+       "max_ik_err_m": 7.262096425770062e-05,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.002629362527719695,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.020000000000000018
+      },
+      "carry": {
+       "max_ik_err_m": 0.00017943922620670732,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.004029712575795863,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.020000000000000018
+      },
+      "retreat": {
+       "max_ik_err_m": 0.00015192910826868094,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.005675915199321663,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.10815937423706057
+      }
+     }
+    },
+    {
+     "block_xyz": [
+      0.42000000000000004,
+      -0.09,
+      0.02
+     ],
+     "legs": {
+      "align": {
+       "max_ik_err_m": 5.213499335696853e-05,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.001989303405417263,
+       "colliding_bodies": [],
+       "n": 20,
+       "path_min_z_m": 0.020000000000000018
+      },
+      "reach": {
+       "max_ik_err_m": 0.00010248380667552266,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.0034007974604419837,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.020000000000000018
+      },
+      "carry": {
+       "max_ik_err_m": 0.00018998569760300321,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.007015884669726023,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.020000000000000018
+      },
+      "retreat": {
+       "max_ik_err_m": 0.00014999988252411637,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.00567591423613404,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.10815937423706057
+      }
+     }
+    },
+    {
+     "block_xyz": [
+      0.42000000000000004,
+      -0.15,
+      0.02
+     ],
+     "legs": {
+      "align": {
+       "max_ik_err_m": 7.169968444160511e-05,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.0025838506950550304,
+       "colliding_bodies": [],
+       "n": 20,
+       "path_min_z_m": 0.020000000000000018
+      },
+      "reach": {
+       "max_ik_err_m": 8.796199547311812e-05,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.0030679746264618427,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.020000000000000018
+      },
+      "carry": {
+       "max_ik_err_m": 0.00018274445787875153,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.004264018690028309,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.020000000000000018
+      },
+      "retreat": {
+       "max_ik_err_m": 0.00017353439914816676,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.005675912566608441,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.10815937423706057
+      }
+     }
+    }
+   ]
+  },
+  {
+   "name": "person 1 markers",
+   "demo": "runs/demos/pexels_8135753_markers.npz",
+   "variant": "safe_path_v2",
+   "robot": "ur10e",
+   "known": "25/60 held-out with its stack",
+   "label": "ambiguous",
+   "source": "results/demo_generalization_v5",
+   "predicted": "feasible",
+   "match": null,
+   "reasons": [],
+   "worst": {
+    "max_ik_err_m": 0.00019946997701334162,
+    "max_penetration_m": 0.0
+   },
+   "leg_max_ik_err_m": {
+    "align": 9.400519909797832e-05,
+    "reach": 0.0001066195262927901,
+    "carry": 0.00019946997701334162,
+    "retreat": 0.0001852697577008566
+   },
+   "leg_max_penetration_m": {
+    "align": 0.0,
+    "reach": 0.0,
+    "carry": 0.0,
+    "retreat": 0.0
+   },
+   "layouts": [
+    {
+     "block_xyz": [
+      0.45,
+      -0.12,
+      0.02
+     ],
+     "legs": {
+      "align": {
+       "max_ik_err_m": 6.708897314742627e-05,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.0023869329287009382,
+       "colliding_bodies": [],
+       "n": 20,
+       "path_min_z_m": 0.020000000000000018
+      },
+      "reach": {
+       "max_ik_err_m": 8.839404965628681e-05,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.002724571898969625,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.020000000000000018
+      },
+      "carry": {
+       "max_ik_err_m": 0.00017893487578816086,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.005284770183792549,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.020000000000000018
+      },
+      "retreat": {
+       "max_ik_err_m": 0.00016071092416831463,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.0041270894391661535,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.10815937423706057
+      }
+     }
+    },
+    {
+     "block_xyz": [
+      0.48,
+      -0.09,
+      0.02
+     ],
+     "legs": {
+      "align": {
+       "max_ik_err_m": 4.921325889035142e-05,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.0021107914423779354,
+       "colliding_bodies": [],
+       "n": 20,
+       "path_min_z_m": 0.020000000000000018
+      },
+      "reach": {
+       "max_ik_err_m": 8.442127482476906e-05,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.0024810029021719257,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.020000000000000018
+      },
+      "carry": {
+       "max_ik_err_m": 0.00018753629507486854,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.004985984661446283,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.020000000000000018
+      },
+      "retreat": {
+       "max_ik_err_m": 0.00016071092416822673,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.0041235143239925056,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.10815937423706057
+      }
+     }
+    },
+    {
+     "block_xyz": [
+      0.48,
+      -0.15,
+      0.02
+     ],
+     "legs": {
+      "align": {
+       "max_ik_err_m": 6.636455204229373e-05,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.0025734061950052393,
+       "colliding_bodies": [],
+       "n": 20,
+       "path_min_z_m": 0.020000000000000018
+      },
+      "reach": {
+       "max_ik_err_m": 7.428975883033168e-05,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.0024669628106856944,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.020000000000000018
+      },
+      "carry": {
+       "max_ik_err_m": 0.00019390392021228616,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.005679587672718459,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.020000000000000018
+      },
+      "retreat": {
+       "max_ik_err_m": 0.00016071092416822673,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.004274097296044699,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.10815937423706057
+      }
+     }
+    },
+    {
+     "block_xyz": [
+      0.42000000000000004,
+      -0.09,
+      0.02
+     ],
+     "legs": {
+      "align": {
+       "max_ik_err_m": 6.554573973556258e-05,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.0022375446208031014,
+       "colliding_bodies": [],
+       "n": 20,
+       "path_min_z_m": 0.020000000000000018
+      },
+      "reach": {
+       "max_ik_err_m": 0.0001066195262927901,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.0032318431666139,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.020000000000000018
+      },
+      "carry": {
+       "max_ik_err_m": 0.00019946997701334162,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.004955485455177716,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.020000000000000018
+      },
+      "retreat": {
+       "max_ik_err_m": 0.00016071092416822673,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.004129398197395532,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.10815937423706057
+      }
+     }
+    },
+    {
+     "block_xyz": [
+      0.42000000000000004,
+      -0.15,
+      0.02
+     ],
+     "legs": {
+      "align": {
+       "max_ik_err_m": 9.400519909797832e-05,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.003478852190633791,
+       "colliding_bodies": [],
+       "n": 20,
+       "path_min_z_m": 0.020000000000000018
+      },
+      "reach": {
+       "max_ik_err_m": 9.080909339481646e-05,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.0029838999303854782,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.020000000000000018
+      },
+      "carry": {
+       "max_ik_err_m": 0.0001945370564155647,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.005613910107127788,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.020000000000000018
+      },
+      "retreat": {
+       "max_ik_err_m": 0.0001852697577008566,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.004173849277576409,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.10815937423706057
+      }
+     }
+    }
+   ]
+  },
+  {
+   "name": "person 1 orange marker",
+   "demo": "runs/demos/pexels_8135753_orange_marker.npz",
+   "variant": "safe_path_v2",
+   "robot": "ur5e",
+   "known": "46/60 held-out with its stack",
+   "label": "feasible",
+   "source": "results/demo_generalization_v5",
+   "predicted": "feasible",
+   "match": true,
+   "reasons": [],
+   "worst": {
+    "max_ik_err_m": 0.00019661324437410816,
+    "max_penetration_m": 0.0
+   },
+   "leg_max_ik_err_m": {
+    "align": 0.0001826765251022764,
+    "reach": 0.00014549003310938952,
+    "carry": 0.00019661324437410816,
+    "retreat": 0.00017253473679565816
+   },
+   "leg_max_penetration_m": {
+    "align": 0.0,
+    "reach": 0.0,
+    "carry": 0.0,
+    "retreat": 0.0
+   },
+   "layouts": [
+    {
+     "block_xyz": [
+      0.45,
+      -0.12,
+      0.02
+     ],
+     "legs": {
+      "align": {
+       "max_ik_err_m": 0.00013165803217585748,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.006897258055821297,
+       "colliding_bodies": [],
+       "n": 20,
+       "path_min_z_m": 0.0820023012161255
+      },
+      "reach": {
+       "max_ik_err_m": 0.00012287366186709925,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.005196258529429531,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.020000000000000018
+      },
+      "carry": {
+       "max_ik_err_m": 0.0001902402590234419,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.007841185740287715,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.020000000000000018
+      },
+      "retreat": {
+       "max_ik_err_m": 0.0001477714158940269,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.005519889017590411,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.14650953912734987
+      }
+     }
+    },
+    {
+     "block_xyz": [
+      0.48,
+      -0.09,
+      0.02
+     ],
+     "legs": {
+      "align": {
+       "max_ik_err_m": 0.00010134357112608677,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.004810478416503387,
+       "colliding_bodies": [],
+       "n": 20,
+       "path_min_z_m": 0.0820023012161255
+      },
+      "reach": {
+       "max_ik_err_m": 0.0001263380682206088,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.005167330968063117,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.020000000000000018
+      },
+      "carry": {
+       "max_ik_err_m": 0.0001912859905565751,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.007455727162884704,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.020000000000000018
+      },
+      "retreat": {
+       "max_ik_err_m": 0.00012699700537606136,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.0055198884233424745,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.14650953912734987
+      }
+     }
+    },
+    {
+     "block_xyz": [
+      0.48,
+      -0.15,
+      0.02
+     ],
+     "legs": {
+      "align": {
+       "max_ik_err_m": 0.00014014017347784878,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.0072176344610358125,
+       "colliding_bodies": [],
+       "n": 20,
+       "path_min_z_m": 0.0820023012161255
+      },
+      "reach": {
+       "max_ik_err_m": 0.00010702621797561218,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.005790486232360663,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.020000000000000018
+      },
+      "carry": {
+       "max_ik_err_m": 0.00019661324437410816,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.008569210919834992,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.020000000000000018
+      },
+      "retreat": {
+       "max_ik_err_m": 0.00016577274013966636,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.005519888621425127,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.14650953912734987
+      }
+     }
+    },
+    {
+     "block_xyz": [
+      0.42000000000000004,
+      -0.09,
+      0.02
+     ],
+     "legs": {
+      "align": {
+       "max_ik_err_m": 0.00012813258649392915,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.00646714032724442,
+       "colliding_bodies": [],
+       "n": 20,
+       "path_min_z_m": 0.0820023012161255
+      },
+      "reach": {
+       "max_ik_err_m": 0.00014549003310938952,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.004636388603506817,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.020000000000000018
+      },
+      "carry": {
+       "max_ik_err_m": 0.00019618419189439525,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.009605302282295109,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.020000000000000018
+      },
+      "retreat": {
+       "max_ik_err_m": 0.00013360565382727028,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.0055198889515628655,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.14650953912734987
+      }
+     }
+    },
+    {
+     "block_xyz": [
+      0.42000000000000004,
+      -0.15,
+      0.02
+     ],
+     "legs": {
+      "align": {
+       "max_ik_err_m": 0.0001826765251022764,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.010183222252128,
+       "colliding_bodies": [],
+       "n": 20,
+       "path_min_z_m": 0.0820023012161255
+      },
+      "reach": {
+       "max_ik_err_m": 0.00012112115741794915,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.005238789532689291,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.020000000000000018
+      },
+      "carry": {
+       "max_ik_err_m": 0.000191480517791326,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.008245302983374168,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.020000000000000018
+      },
+      "retreat": {
+       "max_ik_err_m": 0.00017253473679565816,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.005519888621425127,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.14650953912734987
+      }
+     }
+    }
+   ]
+  },
+  {
+   "name": "person 1 orange marker",
+   "demo": "runs/demos/pexels_8135753_orange_marker.npz",
+   "variant": "safe_path_v2",
+   "robot": "ur10e",
+   "known": "58/60 held-out with its stack",
+   "label": "feasible",
+   "source": "results/demo_generalization_v5",
+   "predicted": "feasible",
+   "match": true,
+   "reasons": [],
+   "worst": {
+    "max_ik_err_m": 0.00019502134932653068,
+    "max_penetration_m": 0.0
+   },
+   "leg_max_ik_err_m": {
+    "align": 0.0001909273334798065,
+    "reach": 0.0001522299905051445,
+    "carry": 0.00019502134932653068,
+    "retreat": 0.00015962603477963306
+   },
+   "leg_max_penetration_m": {
+    "align": 0.0,
+    "reach": 0.0,
+    "carry": 0.0,
+    "retreat": 0.0
+   },
+   "layouts": [
+    {
+     "block_xyz": [
+      0.45,
+      -0.12,
+      0.02
+     ],
+     "legs": {
+      "align": {
+       "max_ik_err_m": 0.00018338578607465637,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.0080994567977961,
+       "colliding_bodies": [],
+       "n": 20,
+       "path_min_z_m": 0.0820023012161255
+      },
+      "reach": {
+       "max_ik_err_m": 0.00011880964963217539,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.003547853485493917,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.020000000000000018
+      },
+      "carry": {
+       "max_ik_err_m": 0.00016804794704184214,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.006908139779629862,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.020000000000000018
+      },
+      "retreat": {
+       "max_ik_err_m": 0.0001363873039603803,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.003854544732388451,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.14650953912734987
+      }
+     }
+    },
+    {
+     "block_xyz": [
+      0.48,
+      -0.09,
+      0.02
+     ],
+     "legs": {
+      "align": {
+       "max_ik_err_m": 0.0001273323632981807,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.0055501741181507415,
+       "colliding_bodies": [],
+       "n": 20,
+       "path_min_z_m": 0.0820023012161255
+      },
+      "reach": {
+       "max_ik_err_m": 0.00011490965088120907,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.0033304332191497854,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.020000000000000018
+      },
+      "carry": {
+       "max_ik_err_m": 0.00018424406232676153,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.006760497924729388,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.020000000000000018
+      },
+      "retreat": {
+       "max_ik_err_m": 0.0001221332081928687,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.0035958311799194538,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.14650953912734987
+      }
+     }
+    },
+    {
+     "block_xyz": [
+      0.48,
+      -0.15,
+      0.02
+     ],
+     "legs": {
+      "align": {
+       "max_ik_err_m": 0.0001686202414045547,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.007909410444393106,
+       "colliding_bodies": [],
+       "n": 20,
+       "path_min_z_m": 0.0820023012161255
+      },
+      "reach": {
+       "max_ik_err_m": 9.47900958376319e-05,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.0031567315085125817,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.020000000000000018
+      },
+      "carry": {
+       "max_ik_err_m": 0.00019496686100358945,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.007650362521223684,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.020000000000000018
+      },
+      "retreat": {
+       "max_ik_err_m": 0.00015962603477963306,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.0040414202308724535,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.14650953912734987
+      }
+     }
+    },
+    {
+     "block_xyz": [
+      0.42000000000000004,
+      -0.09,
+      0.02
+     ],
+     "legs": {
+      "align": {
+       "max_ik_err_m": 0.00019015241295324201,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.008359717939740564,
+       "colliding_bodies": [],
+       "n": 20,
+       "path_min_z_m": 0.0820023012161255
+      },
+      "reach": {
+       "max_ik_err_m": 0.0001522299905051445,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.004038082376577635,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.020000000000000018
+      },
+      "carry": {
+       "max_ik_err_m": 0.00018804496235092739,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.006309821226038703,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.020000000000000018
+      },
+      "retreat": {
+       "max_ik_err_m": 0.00011633461423027336,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.0036709230809319664,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.14650953912734987
+      }
+     }
+    },
+    {
+     "block_xyz": [
+      0.42000000000000004,
+      -0.15,
+      0.02
+     ],
+     "legs": {
+      "align": {
+       "max_ik_err_m": 0.0001909273334798065,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.0100194075206207,
+       "colliding_bodies": [],
+       "n": 20,
+       "path_min_z_m": 0.0820023012161255
+      },
+      "reach": {
+       "max_ik_err_m": 0.00013371936062823149,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.0037598753864367886,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.020000000000000018
+      },
+      "carry": {
+       "max_ik_err_m": 0.00019502134932653068,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.007081568527105038,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.020000000000000018
+      },
+      "retreat": {
+       "max_ik_err_m": 0.0001535960055125458,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.00434110779601215,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.14650953912734987
+      }
+     }
+    }
+   ]
+  },
+  {
+   "name": "person 1 notepad",
+   "demo": "runs/demos/pexels_8135753_notepad.npz",
+   "variant": "safe_path_v2",
+   "robot": "ur5e",
+   "known": "58/60 held-out with its stack",
+   "label": "feasible",
+   "source": "results/demo_generalization_v5",
+   "predicted": "feasible",
+   "match": true,
+   "reasons": [],
+   "worst": {
+    "max_ik_err_m": 0.0001985274099216002,
+    "max_penetration_m": 0.0
+   },
+   "leg_max_ik_err_m": {
+    "align": 0.00019528692048358684,
+    "reach": 0.0001985274099216002,
+    "carry": 0.00019117926481117186,
+    "retreat": 0.0001067667110316519
+   },
+   "leg_max_penetration_m": {
+    "align": 0.0,
+    "reach": 0.0,
+    "carry": 0.0,
+    "retreat": 0.0
+   },
+   "layouts": [
+    {
+     "block_xyz": [
+      0.45,
+      -0.12,
+      0.02
+     ],
+     "legs": {
+      "align": {
+       "max_ik_err_m": 0.0001878573675410134,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.010464144104664726,
+       "colliding_bodies": [],
+       "n": 20,
+       "path_min_z_m": 0.14437963485717775
+      },
+      "reach": {
+       "max_ik_err_m": 0.00017968627186428908,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.005399048663069586,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.020000000000000018
+      },
+      "carry": {
+       "max_ik_err_m": 0.00014846094959612124,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.005141476363796654,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.020000000000000018
+      },
+      "retreat": {
+       "max_ik_err_m": 9.512239010154106e-05,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.0046368860970647735,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.15948612594604494
+      }
+     }
+    },
+    {
+     "block_xyz": [
+      0.48,
+      -0.09,
+      0.02
+     ],
+     "legs": {
+      "align": {
+       "max_ik_err_m": 0.0001264573862474872,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.0069492171595764,
+       "colliding_bodies": [],
+       "n": 20,
+       "path_min_z_m": 0.14437963485717775
+      },
+      "reach": {
+       "max_ik_err_m": 0.00016284384781754138,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.005128774137692167,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.020000000000000018
+      },
+      "carry": {
+       "max_ik_err_m": 0.00019117926481117186,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.005142451607905008,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.020000000000000018
+      },
+      "retreat": {
+       "max_ik_err_m": 9.512239010153296e-05,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.004636885782660041,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.15948612594604494
+      }
+     }
+    },
+    {
+     "block_xyz": [
+      0.48,
+      -0.15,
+      0.02
+     ],
+     "legs": {
+      "align": {
+       "max_ik_err_m": 0.00019528692048358684,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.009791032262503089,
+       "colliding_bodies": [],
+       "n": 20,
+       "path_min_z_m": 0.14437963485717775
+      },
+      "reach": {
+       "max_ik_err_m": 0.0001985274099216002,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.005638324523433156,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.020000000000000018
+      },
+      "carry": {
+       "max_ik_err_m": 0.00018105908025136877,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.00624232583358943,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.020000000000000018
+      },
+      "retreat": {
+       "max_ik_err_m": 0.00010442721188013922,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.004636885704058856,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.15948612594604494
+      }
+     }
+    },
+    {
+     "block_xyz": [
+      0.42000000000000004,
+      -0.09,
+      0.02
+     ],
+     "legs": {
+      "align": {
+       "max_ik_err_m": 0.0001940697309299014,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.009442485690641128,
+       "colliding_bodies": [],
+       "n": 20,
+       "path_min_z_m": 0.14437963485717775
+      },
+      "reach": {
+       "max_ik_err_m": 0.0001925569028375276,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.005805127038373746,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.020000000000000018
+      },
+      "carry": {
+       "max_ik_err_m": 0.00013121181808865425,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.004447054096012225,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.020000000000000018
+      },
+      "retreat": {
+       "max_ik_err_m": 9.512239010174029e-05,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.004636886175665952,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.15948612594604494
+      }
+     }
+    },
+    {
+     "block_xyz": [
+      0.42000000000000004,
+      -0.15,
+      0.02
+     ],
+     "legs": {
+      "align": {
+       "max_ik_err_m": 0.00017911540354436658,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.007668544660233345,
+       "colliding_bodies": [],
+       "n": 20,
+       "path_min_z_m": 0.14437963485717775
+      },
+      "reach": {
+       "max_ik_err_m": 0.00019533145864992964,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.005646406499197308,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.020000000000000018
+      },
+      "carry": {
+       "max_ik_err_m": 0.00016536361738787528,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.005225727196518104,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.020000000000000018
+      },
+      "retreat": {
+       "max_ik_err_m": 0.0001067667110316519,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.004636886175665952,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.15948612594604494
+      }
+     }
+    }
+   ]
+  },
+  {
+   "name": "person 1 notepad",
+   "demo": "runs/demos/pexels_8135753_notepad.npz",
+   "variant": "safe_path_v2",
+   "robot": "ur10e",
+   "known": "58/60 held-out with its stack",
+   "label": "feasible",
+   "source": "results/demo_generalization_v5",
+   "predicted": "feasible",
+   "match": true,
+   "reasons": [],
+   "worst": {
+    "max_ik_err_m": 0.00019891456423544175,
+    "max_penetration_m": 0.0
+   },
+   "leg_max_ik_err_m": {
+    "align": 0.00019959258848385126,
+    "reach": 0.00019891456423544175,
+    "carry": 0.00019862853344706775,
+    "retreat": 0.00011181324070836075
+   },
+   "leg_max_penetration_m": {
+    "align": 0.0,
+    "reach": 0.0,
+    "carry": 0.0,
+    "retreat": 0.0
+   },
+   "layouts": [
+    {
+     "block_xyz": [
+      0.45,
+      -0.12,
+      0.02
+     ],
+     "legs": {
+      "align": {
+       "max_ik_err_m": 0.00019035890862090007,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.010101322847874851,
+       "colliding_bodies": [],
+       "n": 20,
+       "path_min_z_m": 0.14437963485717775
+      },
+      "reach": {
+       "max_ik_err_m": 0.0001928462206384786,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.005874686862603514,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.020000000000000018
+      },
+      "carry": {
+       "max_ik_err_m": 0.00013919753141426646,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.0038161056597983195,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.020000000000000018
+      },
+      "retreat": {
+       "max_ik_err_m": 9.804509386965437e-05,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.0032810815595013133,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.15948612594604494
+      }
+     }
+    },
+    {
+     "block_xyz": [
+      0.48,
+      -0.09,
+      0.02
+     ],
+     "legs": {
+      "align": {
+       "max_ik_err_m": 0.00015311618827923643,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.007031533276707658,
+       "colliding_bodies": [],
+       "n": 20,
+       "path_min_z_m": 0.14437963485717775
+      },
+      "reach": {
+       "max_ik_err_m": 0.00019891456423544175,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.005481239045774271,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.020000000000000018
+      },
+      "carry": {
+       "max_ik_err_m": 0.00019862853344706775,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.005257245289843296,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.020000000000000018
+      },
+      "retreat": {
+       "max_ik_err_m": 8.698642725787345e-05,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.003278319487005879,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.15948612594604494
+      }
+     }
+    },
+    {
+     "block_xyz": [
+      0.48,
+      -0.15,
+      0.02
+     ],
+     "legs": {
+      "align": {
+       "max_ik_err_m": 0.00019959258848385126,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.009943452342320296,
+       "colliding_bodies": [],
+       "n": 20,
+       "path_min_z_m": 0.14437963485717775
+      },
+      "reach": {
+       "max_ik_err_m": 0.00018284775156313693,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.005223210425114089,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.020000000000000018
+      },
+      "carry": {
+       "max_ik_err_m": 0.0001381630806355092,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.0031099752491107815,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.020000000000000018
+      },
+      "retreat": {
+       "max_ik_err_m": 0.00011181324070836075,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.003282226379267773,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.15948612594604494
+      }
+     }
+    },
+    {
+     "block_xyz": [
+      0.42000000000000004,
+      -0.09,
+      0.02
+     ],
+     "legs": {
+      "align": {
+       "max_ik_err_m": 0.00019543468085133248,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.009597766204393397,
+       "colliding_bodies": [],
+       "n": 20,
+       "path_min_z_m": 0.14437963485717775
+      },
+      "reach": {
+       "max_ik_err_m": 0.00015761939023994928,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.004543709390725368,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.020000000000000018
+      },
+      "carry": {
+       "max_ik_err_m": 0.00014055793547369352,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.004565231713746902,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.020000000000000018
+      },
+      "retreat": {
+       "max_ik_err_m": 8.589078864041754e-05,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.0032805147769975956,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.15948612594604494
+      }
+     }
+    },
+    {
+     "block_xyz": [
+      0.42000000000000004,
+      -0.15,
+      0.02
+     ],
+     "legs": {
+      "align": {
+       "max_ik_err_m": 0.0001783853459977547,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.007941645006983638,
+       "colliding_bodies": [],
+       "n": 20,
+       "path_min_z_m": 0.14437963485717775
+      },
+      "reach": {
+       "max_ik_err_m": 0.00015677698467008185,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.004068424214052953,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.020000000000000018
+      },
+      "carry": {
+       "max_ik_err_m": 0.00016499391700599858,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.004309451806375085,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.020000000000000018
+      },
+      "retreat": {
+       "max_ik_err_m": 0.00010979481517384605,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.0032845180396883686,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.15948612594604494
+      }
+     }
+    }
+   ]
+  },
+  {
+   "name": "person 2 box",
+   "demo": "runs/demos/pexels_7205253_woman_box_v2.npz",
+   "variant": "safe_path_v2",
+   "robot": "ur5e",
+   "known": "60/60 held-out with its stack",
+   "label": "feasible",
+   "source": "results/demo_generalization_v5",
+   "predicted": "feasible",
+   "match": true,
+   "reasons": [],
+   "worst": {
+    "max_ik_err_m": 0.0001969073409642274,
+    "max_penetration_m": 0.004132222912287047
+   },
+   "leg_max_ik_err_m": {
+    "align": 0.00019371184460194104,
+    "reach": 0.00019568344491416266,
+    "carry": 0.0001969073409642274,
+    "retreat": 0.00013977933212973488
+   },
+   "leg_max_penetration_m": {
+    "align": 0.0,
+    "reach": 0.0,
+    "carry": 0.004132222912287047,
+    "retreat": 0.0
+   },
+   "layouts": [
+    {
+     "block_xyz": [
+      0.45,
+      -0.12,
+      0.02
+     ],
+     "legs": {
+      "align": {
+       "max_ik_err_m": 0.00014150005468631382,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.006010629716772781,
+       "colliding_bodies": [],
+       "n": 20,
+       "path_min_z_m": 0.020000000000000018
+      },
+      "reach": {
+       "max_ik_err_m": 0.00018876241119738897,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.006381577197488923,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.02
+      },
+      "carry": {
+       "max_ik_err_m": 0.0001963494666509488,
+       "max_penetration_m": 0.00305169399330172,
+       "max_tilt_deg": 0.006681519263740244,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.02
+      },
+      "retreat": {
+       "max_ik_err_m": 0.00013137070812359805,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.003132986465487354,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.024
+      }
+     }
+    },
+    {
+     "block_xyz": [
+      0.48,
+      -0.09,
+      0.02
+     ],
+     "legs": {
+      "align": {
+       "max_ik_err_m": 0.00011528672046992788,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.004688850168506,
+       "colliding_bodies": [],
+       "n": 20,
+       "path_min_z_m": 0.020000000000000018
+      },
+      "reach": {
+       "max_ik_err_m": 0.00018857283979902657,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.007424254959620354,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.02
+      },
+      "carry": {
+       "max_ik_err_m": 0.00018381864483900514,
+       "max_penetration_m": 0.003322229159091073,
+       "max_tilt_deg": 0.006857364462455429,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.02
+      },
+      "retreat": {
+       "max_ik_err_m": 0.000131384752206798,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.003071576679634599,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.024
+      }
+     }
+    },
+    {
+     "block_xyz": [
+      0.48,
+      -0.15,
+      0.02
+     ],
+     "legs": {
+      "align": {
+       "max_ik_err_m": 0.00015675105637479164,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.006381676628729049,
+       "colliding_bodies": [],
+       "n": 20,
+       "path_min_z_m": 0.020000000000000018
+      },
+      "reach": {
+       "max_ik_err_m": 0.0001845754288834474,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.006092947419402769,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.02
+      },
+      "carry": {
+       "max_ik_err_m": 0.00019612649712361113,
+       "max_penetration_m": 0.004132222912287047,
+       "max_tilt_deg": 0.007048428798765205,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.02
+      },
+      "retreat": {
+       "max_ik_err_m": 0.00013656132315836015,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.003213468019755303,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.024
+      }
+     }
+    },
+    {
+     "block_xyz": [
+      0.42000000000000004,
+      -0.09,
+      0.02
+     ],
+     "legs": {
+      "align": {
+       "max_ik_err_m": 0.00019371184460194104,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.00906533256243619,
+       "colliding_bodies": [],
+       "n": 20,
+       "path_min_z_m": 0.020000000000000018
+      },
+      "reach": {
+       "max_ik_err_m": 0.00019568344491416266,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.007912157204090334,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.02
+      },
+      "carry": {
+       "max_ik_err_m": 0.0001969073409642274,
+       "max_penetration_m": 0.0004102564102564099,
+       "max_tilt_deg": 0.006362133146139936,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.02
+      },
+      "retreat": {
+       "max_ik_err_m": 0.0001313752199234297,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.003122905252778319,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.024
+      }
+     }
+    },
+    {
+     "block_xyz": [
+      0.42000000000000004,
+      -0.15,
+      0.02
+     ],
+     "legs": {
+      "align": {
+       "max_ik_err_m": 0.00016499031007951705,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.007320889426716665,
+       "colliding_bodies": [],
+       "n": 20,
+       "path_min_z_m": 0.020000000000000018
+      },
+      "reach": {
+       "max_ik_err_m": 0.00019007615838768994,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.006470274167041585,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.02
+      },
+      "carry": {
+       "max_ik_err_m": 0.00019502724974215533,
+       "max_penetration_m": 0.0005032613972003122,
+       "max_tilt_deg": 0.006742051177843313,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.02
+      },
+      "retreat": {
+       "max_ik_err_m": 0.00013977933212973488,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.0036708869412994797,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.024
+      }
+     }
+    }
+   ]
+  },
+  {
+   "name": "person 2 box",
+   "demo": "runs/demos/pexels_7205253_woman_box_v2.npz",
+   "variant": "safe_path_v2",
+   "robot": "ur10e",
+   "known": "55/60 held-out with its stack",
+   "label": "feasible",
+   "source": "results/demo_generalization_v5",
+   "predicted": "feasible",
+   "match": true,
+   "reasons": [],
+   "worst": {
+    "max_ik_err_m": 0.00019827787184243626,
+    "max_penetration_m": 0.0041357328533122096
+   },
+   "leg_max_ik_err_m": {
+    "align": 0.0001863169863722225,
+    "reach": 0.00019827787184243626,
+    "carry": 0.00019808266854854555,
+    "retreat": 0.00016383633680183392
+   },
+   "leg_max_penetration_m": {
+    "align": 0.0,
+    "reach": 0.0,
+    "carry": 0.0041357328533122096,
+    "retreat": 0.0
+   },
+   "layouts": [
+    {
+     "block_xyz": [
+      0.45,
+      -0.12,
+      0.02
+     ],
+     "legs": {
+      "align": {
+       "max_ik_err_m": 0.00015717662487296132,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.005110811849739776,
+       "colliding_bodies": [],
+       "n": 20,
+       "path_min_z_m": 0.020000000000000018
+      },
+      "reach": {
+       "max_ik_err_m": 0.00018283622988329696,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.007844508554111812,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.02
+      },
+      "carry": {
+       "max_ik_err_m": 0.0001636606196134253,
+       "max_penetration_m": 0.0030539130717430786,
+       "max_tilt_deg": 0.004437062872793236,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.02
+      },
+      "retreat": {
+       "max_ik_err_m": 0.00016382266013537536,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.0041263752998761125,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.024
+      }
+     }
+    },
+    {
+     "block_xyz": [
+      0.48,
+      -0.09,
+      0.02
+     ],
+     "legs": {
+      "align": {
+       "max_ik_err_m": 0.0001247310856181103,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.004343681898296029,
+       "colliding_bodies": [],
+       "n": 20,
+       "path_min_z_m": 0.020000000000000018
+      },
+      "reach": {
+       "max_ik_err_m": 0.00019827787184243626,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.00854071472452791,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.02
+      },
+      "carry": {
+       "max_ik_err_m": 0.00019397456614589882,
+       "max_penetration_m": 0.0033201665522601294,
+       "max_tilt_deg": 0.006822812802132367,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.02
+      },
+      "retreat": {
+       "max_ik_err_m": 0.00016383633680183392,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.004126376359783599,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.024
+      }
+     }
+    },
+    {
+     "block_xyz": [
+      0.48,
+      -0.15,
+      0.02
+     ],
+     "legs": {
+      "align": {
+       "max_ik_err_m": 0.0001863169863722225,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.0054310086509033245,
+       "colliding_bodies": [],
+       "n": 20,
+       "path_min_z_m": 0.020000000000000018
+      },
+      "reach": {
+       "max_ik_err_m": 0.0001640875994415354,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.005080310262584339,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.02
+      },
+      "carry": {
+       "max_ik_err_m": 0.00017214312064389023,
+       "max_penetration_m": 0.0041357328533122096,
+       "max_tilt_deg": 0.004604110606477862,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.02
+      },
+      "retreat": {
+       "max_ik_err_m": 0.00016381163308784233,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.004126375034899198,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.024
+      }
+     }
+    },
+    {
+     "block_xyz": [
+      0.42000000000000004,
+      -0.09,
+      0.02
+     ],
+     "legs": {
+      "align": {
+       "max_ik_err_m": 0.0001791851507616155,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.008346847399444569,
+       "colliding_bodies": [],
+       "n": 20,
+       "path_min_z_m": 0.020000000000000018
+      },
+      "reach": {
+       "max_ik_err_m": 0.00018781659027525957,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.007070661752721608,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.02
+      },
+      "carry": {
+       "max_ik_err_m": 0.00019808266854854555,
+       "max_penetration_m": 0.0004102564102564099,
+       "max_tilt_deg": 0.008173036348540812,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.02
+      },
+      "retreat": {
+       "max_ik_err_m": 0.00016383268405656488,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.004126375741504265,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.024
+      }
+     }
+    },
+    {
+     "block_xyz": [
+      0.42000000000000004,
+      -0.15,
+      0.02
+     ],
+     "legs": {
+      "align": {
+       "max_ik_err_m": 0.00018285215384531748,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.0064190800582471,
+       "colliding_bodies": [],
+       "n": 20,
+       "path_min_z_m": 0.020000000000000018
+      },
+      "reach": {
+       "max_ik_err_m": 0.0001836227180381029,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.0064908433334364005,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.02
+      },
+      "carry": {
+       "max_ik_err_m": 0.00019771040768342223,
+       "max_penetration_m": 0.0005061502741866529,
+       "max_tilt_deg": 0.003956578315243056,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.02
+      },
+      "retreat": {
+       "max_ik_err_m": 0.00016380890531688568,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.004126375476527379,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.024
+      }
+     }
+    }
+   ]
+  },
+  {
+   "name": "HiPHI box lift",
+   "demo": "runs/demos/Cause_motion-lift_0041.npz",
+   "variant": "safe_path_v2",
+   "robot": "ur5e",
+   "known": "not run",
+   "label": "prediction",
+   "source": "-",
+   "predicted": "infeasible",
+   "match": null,
+   "reasons": [
+    "unreachable: reach 77.0 cm",
+    "collides: reach 6.8 cm, carry 7.4 cm, retreat 7.2 cm (carried_block, forearm_link, g_left_pad, g_right_follower, upper_arm_link)"
+   ],
+   "worst": {
+    "max_ik_err_m": 0.7700619726933282,
+    "max_penetration_m": 0.0744638263901895
+   },
+   "leg_max_ik_err_m": {
+    "align": 0.6324080367235898,
+    "reach": 0.7700619726933282,
+    "carry": 0.0001990504108710522,
+    "retreat": 0.00019419060569638992
+   },
+   "leg_max_penetration_m": {
+    "align": 0.0,
+    "reach": 0.0679419242297183,
+    "carry": 0.0744638263901895,
+    "retreat": 0.07199841170475557
+   },
+   "layouts": [
+    {
+     "block_xyz": [
+      0.45,
+      -0.12,
+      0.02
+     ],
+     "legs": {
+      "align": {
+       "max_ik_err_m": 0.5739030732782833,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 5.001670625103762,
+       "colliding_bodies": [],
+       "n": 20,
+       "path_min_z_m": 0.3322003673210946
+      },
+      "reach": {
+       "max_ik_err_m": 0.7700619726933282,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 3.548245372901125,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.03654839891467824
+      },
+      "carry": {
+       "max_ik_err_m": 0.00018979607924636636,
+       "max_penetration_m": 0.04759590726871364,
+       "max_tilt_deg": 0.007907061219475379,
+       "colliding_bodies": [
+        "carried_block",
+        "g_left_pad",
+        "g_right_follower"
+       ],
+       "n": 40,
+       "path_min_z_m": -0.023595907268713634
+      },
+      "retreat": {
+       "max_ik_err_m": 0.00019419060569638992,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.009601664839591741,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.048352037900353785
+      }
+     }
+    },
+    {
+     "block_xyz": [
+      0.48,
+      -0.09,
+      0.02
+     ],
+     "legs": {
+      "align": {
+       "max_ik_err_m": 0.6324080367235898,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 3.7357122328904038,
+       "colliding_bodies": [],
+       "n": 20,
+       "path_min_z_m": 0.3322003673210946
+      },
+      "reach": {
+       "max_ik_err_m": 0.4755978917194085,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 1.1251211975555955,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.03654839891467824
+      },
+      "carry": {
+       "max_ik_err_m": 0.0001855510511935605,
+       "max_penetration_m": 0.04759590726871364,
+       "max_tilt_deg": 0.007807394676305004,
+       "colliding_bodies": [
+        "carried_block",
+        "g_left_pad",
+        "g_right_follower"
+       ],
+       "n": 40,
+       "path_min_z_m": -0.023595907268713634
+      },
+      "retreat": {
+       "max_ik_err_m": 0.00019419060569638992,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.009601664839591741,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.048352037900353785
+      }
+     }
+    },
+    {
+     "block_xyz": [
+      0.48,
+      -0.15,
+      0.02
+     ],
+     "legs": {
+      "align": {
+       "max_ik_err_m": 0.2597655431310703,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 4.815249538343627,
+       "colliding_bodies": [],
+       "n": 20,
+       "path_min_z_m": 0.3322003673210946
+      },
+      "reach": {
+       "max_ik_err_m": 0.6110063528660035,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 2.4660396029726326,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.03654839891467824
+      },
+      "carry": {
+       "max_ik_err_m": 0.00019685381997409964,
+       "max_penetration_m": 0.04759590726871364,
+       "max_tilt_deg": 0.008556918681464458,
+       "colliding_bodies": [
+        "carried_block",
+        "g_left_pad",
+        "g_right_follower"
+       ],
+       "n": 40,
+       "path_min_z_m": -0.023595907268713634
+      },
+      "retreat": {
+       "max_ik_err_m": 0.00019419060569638992,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.009601664839591741,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.048352037900353785
+      }
+     }
+    },
+    {
+     "block_xyz": [
+      0.42000000000000004,
+      -0.09,
+      0.02
+     ],
+     "legs": {
+      "align": {
+       "max_ik_err_m": 0.6321913021795996,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 5.5251066192954745,
+       "colliding_bodies": [],
+       "n": 20,
+       "path_min_z_m": 0.3322003673210946
+      },
+      "reach": {
+       "max_ik_err_m": 0.3916702192704946,
+       "max_penetration_m": 0.0679419242297183,
+       "max_tilt_deg": 2.6714202336836355,
+       "colliding_bodies": [
+        "forearm_link",
+        "upper_arm_link"
+       ],
+       "n": 40,
+       "path_min_z_m": 0.03654839891467824
+      },
+      "carry": {
+       "max_ik_err_m": 0.0001760628030858819,
+       "max_penetration_m": 0.0744638263901895,
+       "max_tilt_deg": 0.005853851799109444,
+       "colliding_bodies": [
+        "carried_block",
+        "forearm_link",
+        "g_left_pad",
+        "g_right_follower",
+        "upper_arm_link"
+       ],
+       "n": 40,
+       "path_min_z_m": -0.023595907268713634
+      },
+      "retreat": {
+       "max_ik_err_m": 0.0001923193108228893,
+       "max_penetration_m": 0.07199841170475557,
+       "max_tilt_deg": 0.008388333642043085,
+       "colliding_bodies": [
+        "forearm_link",
+        "upper_arm_link"
+       ],
+       "n": 40,
+       "path_min_z_m": 0.048352037900353785
+      }
+     }
+    },
+    {
+     "block_xyz": [
+      0.42000000000000004,
+      -0.15,
+      0.02
+     ],
+     "legs": {
+      "align": {
+       "max_ik_err_m": 0.4004718936629739,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 3.9347018659640867,
+       "colliding_bodies": [],
+       "n": 20,
+       "path_min_z_m": 0.3322003673210946
+      },
+      "reach": {
+       "max_ik_err_m": 0.679019606275105,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 4.449733667485848,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.03654839891467824
+      },
+      "carry": {
+       "max_ik_err_m": 0.0001990504108710522,
+       "max_penetration_m": 0.04759590726871364,
+       "max_tilt_deg": 0.008021349175775799,
+       "colliding_bodies": [
+        "carried_block",
+        "g_left_pad",
+        "g_right_follower"
+       ],
+       "n": 40,
+       "path_min_z_m": -0.023595907268713634
+      },
+      "retreat": {
+       "max_ik_err_m": 0.00019419060569638992,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.009601664839591741,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.048352037900353785
+      }
+     }
+    }
+   ]
+  },
+  {
+   "name": "HiPHI box lift",
+   "demo": "runs/demos/Cause_motion-lift_0041.npz",
+   "variant": "safe_path_v2",
+   "robot": "ur10e",
+   "known": "not run",
+   "label": "prediction",
+   "source": "-",
+   "predicted": "infeasible",
+   "match": null,
+   "reasons": [
+    "collides: carry 4.8 cm (carried_block, g_left_pad, g_right_follower)"
+   ],
+   "worst": {
+    "max_ik_err_m": 0.00019768036335241122,
+    "max_penetration_m": 0.04759590726871364
+   },
+   "leg_max_ik_err_m": {
+    "align": 1.606589871008408e-05,
+    "reach": 0.00018590012842538913,
+    "carry": 0.00019768036335241122,
+    "retreat": 0.00019098951212721173
+   },
+   "leg_max_penetration_m": {
+    "align": 0.0,
+    "reach": 0.0,
+    "carry": 0.04759590726871364,
+    "retreat": 0.0
+   },
+   "layouts": [
+    {
+     "block_xyz": [
+      0.45,
+      -0.12,
+      0.02
+     ],
+     "legs": {
+      "align": {
+       "max_ik_err_m": 1.3191675990367911e-05,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.0005414399293971371,
+       "colliding_bodies": [],
+       "n": 20,
+       "path_min_z_m": 0.5382004407839284
+      },
+      "reach": {
+       "max_ik_err_m": 9.710219260150517e-05,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.0032201962966176187,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.03654839891467824
+      },
+      "carry": {
+       "max_ik_err_m": 0.00019768036335241122,
+       "max_penetration_m": 0.04759590726871364,
+       "max_tilt_deg": 0.007184690143731092,
+       "colliding_bodies": [
+        "carried_block",
+        "g_left_pad",
+        "g_right_follower"
+       ],
+       "n": 40,
+       "path_min_z_m": -0.023595907268713634
+      },
+      "retreat": {
+       "max_ik_err_m": 0.00019098951212721173,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.007148877646313951,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.048352037900353785
+      }
+     }
+    },
+    {
+     "block_xyz": [
+      0.48,
+      -0.09,
+      0.02
+     ],
+     "legs": {
+      "align": {
+       "max_ik_err_m": 1.606589871008408e-05,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.0006725780386461269,
+       "colliding_bodies": [],
+       "n": 20,
+       "path_min_z_m": 0.5382004407839284
+      },
+      "reach": {
+       "max_ik_err_m": 8.921287052243692e-05,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.003098536532234239,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.03654839891467824
+      },
+      "carry": {
+       "max_ik_err_m": 0.00015393259241334924,
+       "max_penetration_m": 0.04759590726871364,
+       "max_tilt_deg": 0.006107809846154359,
+       "colliding_bodies": [
+        "carried_block",
+        "g_left_pad",
+        "g_right_follower"
+       ],
+       "n": 40,
+       "path_min_z_m": -0.023595907268713634
+      },
+      "retreat": {
+       "max_ik_err_m": 0.00019098951212714562,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.007148877646313951,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.048352037900353785
+      }
+     }
+    },
+    {
+     "block_xyz": [
+      0.48,
+      -0.15,
+      0.02
+     ],
+     "legs": {
+      "align": {
+       "max_ik_err_m": 1.3795451883906742e-05,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.0005454684924777214,
+       "colliding_bodies": [],
+       "n": 20,
+       "path_min_z_m": 0.5382004407839284
+      },
+      "reach": {
+       "max_ik_err_m": 0.00018590012842538913,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.005140721005490994,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.03654839891467824
+      },
+      "carry": {
+       "max_ik_err_m": 0.00018914800400667977,
+       "max_penetration_m": 0.04759590726871364,
+       "max_tilt_deg": 0.008250951392433092,
+       "colliding_bodies": [
+        "carried_block",
+        "g_left_pad",
+        "g_right_follower"
+       ],
+       "n": 40,
+       "path_min_z_m": -0.023595907268713634
+      },
+      "retreat": {
+       "max_ik_err_m": 0.00019098951212712638,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.00714887769729604,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.048352037900353785
+      }
+     }
+    },
+    {
+     "block_xyz": [
+      0.42000000000000004,
+      -0.09,
+      0.02
+     ],
+     "legs": {
+      "align": {
+       "max_ik_err_m": 1.2889415911824701e-05,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.0005462230007533906,
+       "colliding_bodies": [],
+       "n": 20,
+       "path_min_z_m": 0.5382004407839284
+      },
+      "reach": {
+       "max_ik_err_m": 0.0001244709208965074,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.003704138561171565,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.03654839891467824
+      },
+      "carry": {
+       "max_ik_err_m": 0.00019459072335805674,
+       "max_penetration_m": 0.04759590726871364,
+       "max_tilt_deg": 0.007174853192057155,
+       "colliding_bodies": [
+        "carried_block",
+        "g_left_pad",
+        "g_right_follower"
+       ],
+       "n": 40,
+       "path_min_z_m": -0.023595907268713634
+      },
+      "retreat": {
+       "max_ik_err_m": 0.00019098951212712638,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.00714887769729604,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.048352037900353785
+      }
+     }
+    },
+    {
+     "block_xyz": [
+      0.42000000000000004,
+      -0.15,
+      0.02
+     ],
+     "legs": {
+      "align": {
+       "max_ik_err_m": 1.1668988410499385e-05,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.0004855000185937754,
+       "colliding_bodies": [],
+       "n": 20,
+       "path_min_z_m": 0.5382004407839284
+      },
+      "reach": {
+       "max_ik_err_m": 0.00010535472759469927,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.0033211273576915436,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.03654839891467824
+      },
+      "carry": {
+       "max_ik_err_m": 0.00018278248570782553,
+       "max_penetration_m": 0.04759590726871364,
+       "max_tilt_deg": 0.008883862249738115,
+       "colliding_bodies": [
+        "carried_block",
+        "g_left_pad",
+        "g_right_follower"
+       ],
+       "n": 40,
+       "path_min_z_m": -0.023595907268713634
+      },
+      "retreat": {
+       "max_ik_err_m": 0.00019098951212714562,
+       "max_penetration_m": 0.0,
+       "max_tilt_deg": 0.007148877646313951,
+       "colliding_bodies": [],
+       "n": 40,
+       "path_min_z_m": 0.048352037900353785
+      }
+     }
+    }
+   ]
+  },
+  {
+   "name": "person 1 notebook",
+   "demo": "runs/demos/pexels_8135753_notebook.npz",
+   "variant": "raw",
+   "robot": "g1",
+   "known": "place 20/30 at robot pace (grasp 24/30)",
+   "label": "feasible",
+   "source": "results/g1_style_v1",
+   "predicted": "infeasible",
+   "match": false,
+   "reasons": [
+    "unreachable: reach 6.3 cm, carry 51.2 cm, retreat 52.0 cm"
+   ],
+   "worst": {
+    "max_ik_err_m": 0.5203751208506382,
+    "max_penetration_m": 0.0
+   },
+   "leg_max_ik_err_m": {
+    "align": 0.00229548417329133,
+    "reach": 0.06337509696755894,
+    "carry": 0.5120419720936648,
+    "retreat": 0.5203751208506382
+   },
+   "leg_max_penetration_m": {
+    "align": 0.0,
+    "reach": 0.0,
+    "carry": 0.0,
+    "retreat": 0.0
+   },
+   "layouts": [
+    {
+     "block_xy": [
+      0.33,
+      -0.2
+     ],
+     "legs": {
+      "align": {
+       "max_ik_err_m": 0.0004990032304017684
+      },
+      "reach": {
+       "max_ik_err_m": 0.0004908093909744548
+      },
+      "carry": {
+       "max_ik_err_m": 0.0004999988915706772
+      },
+      "retreat": {
+       "max_ik_err_m": 0.0004993674812336688
+      }
+     }
+    },
+    {
+     "block_xy": [
+      0.35000000000000003,
+      -0.18000000000000002
+     ],
+     "legs": {
+      "align": {
+       "max_ik_err_m": 0.0004992002405847687
+      },
+      "reach": {
+       "max_ik_err_m": 0.0004914246422843191
+      },
+      "carry": {
+       "max_ik_err_m": 0.0004989226603579394
+      },
+      "retreat": {
+       "max_ik_err_m": 0.0004996636399888075
+      }
+     }
+    },
+    {
+     "block_xy": [
+      0.35000000000000003,
+      -0.22
+     ],
+     "legs": {
+      "align": {
+       "max_ik_err_m": 0.00229548417329133
+      },
+      "reach": {
+       "max_ik_err_m": 0.06337509696755894
+      },
+      "carry": {
+       "max_ik_err_m": 0.5120419720936648
+      },
+      "retreat": {
+       "max_ik_err_m": 0.5203751208506382
+      }
+     }
+    },
+    {
+     "block_xy": [
+      0.31,
+      -0.18000000000000002
+     ],
+     "legs": {
+      "align": {
+       "max_ik_err_m": 0.0004989203426895356
+      },
+      "reach": {
+       "max_ik_err_m": 0.0004986869498561868
+      },
+      "carry": {
+       "max_ik_err_m": 0.0004975557251856826
+      },
+      "retreat": {
+       "max_ik_err_m": 0.0004994286413027263
+      }
+     }
+    },
+    {
+     "block_xy": [
+      0.31,
+      -0.22
+     ],
+     "legs": {
+      "align": {
+       "max_ik_err_m": 0.0004991093824274471
+      },
+      "reach": {
+       "max_ik_err_m": 0.0004976311632998067
+      },
+      "carry": {
+       "max_ik_err_m": 0.0004998998375485654
+      },
+      "retreat": {
+       "max_ik_err_m": 0.0004992626524516827
+      }
+     }
+    }
+   ]
+  },
+  {
+   "name": "person 2 box",
+   "demo": "runs/demos/pexels_7205253_woman_box_v2.npz",
+   "variant": "raw",
+   "robot": "g1",
+   "known": "grasp 0/30 in every condition",
+   "label": "infeasible",
+   "source": "results/g1_style_person2_v1",
+   "predicted": "infeasible",
+   "match": true,
+   "reasons": [
+    "unreachable: reach 28.7 cm, carry 3.8 cm, retreat 12.1 cm"
+   ],
+   "worst": {
+    "max_ik_err_m": 0.287421753992415,
+    "max_penetration_m": 0.0
+   },
+   "leg_max_ik_err_m": {
+    "align": 0.3118968927157129,
+    "reach": 0.287421753992415,
+    "carry": 0.0378598488939031,
+    "retreat": 0.12148366894277458
+   },
+   "leg_max_penetration_m": {
+    "align": 0.0,
+    "reach": 0.0,
+    "carry": 0.0,
+    "retreat": 0.0
+   },
+   "layouts": [
+    {
+     "block_xy": [
+      0.33,
+      -0.2
+     ],
+     "legs": {
+      "align": {
+       "max_ik_err_m": 0.3118968927157129
+      },
+      "reach": {
+       "max_ik_err_m": 0.28208931387388686
+      },
+      "carry": {
+       "max_ik_err_m": 0.03785984888308059
+      },
+      "retreat": {
+       "max_ik_err_m": 0.12148366894277457
+      }
+     }
+    },
+    {
+     "block_xy": [
+      0.35000000000000003,
+      -0.18000000000000002
+     ],
+     "legs": {
+      "align": {
+       "max_ik_err_m": 0.30523710615867616
+      },
+      "reach": {
+       "max_ik_err_m": 0.2773177183595221
+      },
+      "carry": {
+       "max_ik_err_m": 0.03785984887225993
+      },
+      "retreat": {
+       "max_ik_err_m": 0.12148366894277457
+      }
+     }
+    },
+    {
+     "block_xy": [
+      0.35000000000000003,
+      -0.22
+     ],
+     "legs": {
+      "align": {
+       "max_ik_err_m": 0.31070672993663906
+      },
+      "reach": {
+       "max_ik_err_m": 0.287421753992415
+      },
+      "carry": {
+       "max_ik_err_m": 0.03785984888002501
+      },
+      "retreat": {
+       "max_ik_err_m": 0.12148366894277457
+      }
+     }
+    },
+    {
+     "block_xy": [
+      0.31,
+      -0.18000000000000002
+     ],
+     "legs": {
+      "align": {
+       "max_ik_err_m": 0.3007679123796682
+      },
+      "reach": {
+       "max_ik_err_m": 0.2769694531420821
+      },
+      "carry": {
+       "max_ik_err_m": 0.03785984888613887
+      },
+      "retreat": {
+       "max_ik_err_m": 0.12148366894277457
+      }
+     }
+    },
+    {
+     "block_xy": [
+      0.31,
+      -0.22
+     ],
+     "legs": {
+      "align": {
+       "max_ik_err_m": 0.3103254659854021
+      },
+      "reach": {
+       "max_ik_err_m": 0.28018882310333854
+      },
+      "carry": {
+       "max_ik_err_m": 0.0378598488939031
+      },
+      "retreat": {
+       "max_ik_err_m": 0.12148366894277458
+      }
+     }
+    }
+   ]
+  },
+  {
+   "name": "person 2 box",
+   "demo": "runs/demos/pexels_7205253_woman_box_v2.npz",
+   "variant": "safe_path_v2",
+   "robot": "g1",
+   "known": "grasp 0/30 at robot pace",
+   "label": "infeasible",
+   "source": "results/g1_style_person2_v1",
+   "predicted": "infeasible",
+   "match": true,
+   "reasons": [
+    "unreachable: reach 26.8 cm, carry 3.8 cm, retreat 7.5 cm"
+   ],
+   "worst": {
+    "max_ik_err_m": 0.26845892442302643,
+    "max_penetration_m": 0.0
+   },
+   "leg_max_ik_err_m": {
+    "align": 0.2803451677551625,
+    "reach": 0.26845892442302643,
+    "carry": 0.0378598489012983,
+    "retreat": 0.07454933830363078
+   },
+   "leg_max_penetration_m": {
+    "align": 0.0,
+    "reach": 0.0,
+    "carry": 0.0,
+    "retreat": 0.0
+   },
+   "layouts": [
+    {
+     "block_xy": [
+      0.33,
+      -0.2
+     ],
+     "legs": {
+      "align": {
+       "max_ik_err_m": 0.2802866505908469
+      },
+      "reach": {
+       "max_ik_err_m": 0.268015490413795
+      },
+      "carry": {
+       "max_ik_err_m": 0.03785984889044392
+      },
+      "retreat": {
+       "max_ik_err_m": 0.07454933830363078
+      }
+     }
+    },
+    {
+     "block_xy": [
+      0.35000000000000003,
+      -0.18000000000000002
+     ],
+     "legs": {
+      "align": {
+       "max_ik_err_m": 0.2667964748448238
+      },
+      "reach": {
+       "max_ik_err_m": 0.2589526443824245
+      },
+      "carry": {
+       "max_ik_err_m": 0.03785984887959194
+      },
+      "retreat": {
+       "max_ik_err_m": 0.07454933830363078
+      }
+     }
+    },
+    {
+     "block_xy": [
+      0.35000000000000003,
+      -0.22
+     ],
+     "legs": {
+      "align": {
+       "max_ik_err_m": 0.2803451677551625
+      },
+      "reach": {
+       "max_ik_err_m": 0.26035336238323586
+      },
+      "carry": {
+       "max_ik_err_m": 0.03785984888736693
+      },
+      "retreat": {
+       "max_ik_err_m": 0.07454933830363078
+      }
+     }
+    },
+    {
+     "block_xy": [
+      0.31,
+      -0.18000000000000002
+     ],
+     "legs": {
+      "align": {
+       "max_ik_err_m": 0.27281397768435256
+      },
+      "reach": {
+       "max_ik_err_m": 0.2582456782144
+      },
+      "carry": {
+       "max_ik_err_m": 0.021169913097357107
+      },
+      "retreat": {
+       "max_ik_err_m": 0.030877316708365642
+      }
+     }
+    },
+    {
+     "block_xy": [
+      0.31,
+      -0.22
+     ],
+     "legs": {
+      "align": {
+       "max_ik_err_m": 0.26183010044454474
+      },
+      "reach": {
+       "max_ik_err_m": 0.26845892442302643
+      },
+      "carry": {
+       "max_ik_err_m": 0.0378598489012983
+      },
+      "retreat": {
+       "max_ik_err_m": 0.07454933830363078
+      }
+     }
+    }
+   ]
+  },
+  {
+   "name": "person 1 notepad",
+   "demo": "runs/demos/pexels_8135753_notepad.npz",
+   "variant": "raw",
+   "robot": "g1",
+   "known": "not run",
+   "label": "prediction",
+   "source": "-",
+   "predicted": "feasible",
+   "match": null,
+   "reasons": [],
+   "worst": {
+    "max_ik_err_m": 0.0004999336434910983,
+    "max_penetration_m": 0.0
+   },
+   "leg_max_ik_err_m": {
+    "align": 0.0004998489721872742,
+    "reach": 0.0004999336434910983,
+    "carry": 0.0004998924987810253,
+    "retreat": 0.0004999096690364307
+   },
+   "leg_max_penetration_m": {
+    "align": 0.0,
+    "reach": 0.0,
+    "carry": 0.0,
+    "retreat": 0.0
+   },
+   "layouts": [
+    {
+     "block_xy": [
+      0.33,
+      -0.2
+     ],
+     "legs": {
+      "align": {
+       "max_ik_err_m": 0.000498830975063293
+      },
+      "reach": {
+       "max_ik_err_m": 0.0004999336434910983
+      },
+      "carry": {
+       "max_ik_err_m": 0.0004996904105809373
+      },
+      "retreat": {
+       "max_ik_err_m": 0.00049841344092093
+      }
+     }
+    },
+    {
+     "block_xy": [
+      0.35000000000000003,
+      -0.18000000000000002
+     ],
+     "legs": {
+      "align": {
+       "max_ik_err_m": 0.0004983909223345771
+      },
+      "reach": {
+       "max_ik_err_m": 0.0004997652945479238
+      },
+      "carry": {
+       "max_ik_err_m": 0.000499676964551807
+      },
+      "retreat": {
+       "max_ik_err_m": 0.0004993323048480324
+      }
+     }
+    },
+    {
+     "block_xy": [
+      0.35000000000000003,
+      -0.22
+     ],
+     "legs": {
+      "align": {
+       "max_ik_err_m": 0.0004993951898013323
+      },
+      "reach": {
+       "max_ik_err_m": 0.0004995955598280387
+      },
+      "carry": {
+       "max_ik_err_m": 0.000498988794525407
+      },
+      "retreat": {
+       "max_ik_err_m": 0.0004999096690364307
+      }
+     }
+    },
+    {
+     "block_xy": [
+      0.31,
+      -0.18000000000000002
+     ],
+     "legs": {
+      "align": {
+       "max_ik_err_m": 0.0004997792268921487
+      },
+      "reach": {
+       "max_ik_err_m": 0.0004995886295585426
+      },
+      "carry": {
+       "max_ik_err_m": 0.0004946140225144944
+      },
+      "retreat": {
+       "max_ik_err_m": 0.0004997303675502297
+      }
+     }
+    },
+    {
+     "block_xy": [
+      0.31,
+      -0.22
+     ],
+     "legs": {
+      "align": {
+       "max_ik_err_m": 0.0004998489721872742
+      },
+      "reach": {
+       "max_ik_err_m": 0.000498949626093372
+      },
+      "carry": {
+       "max_ik_err_m": 0.0004998924987810253
+      },
+      "retreat": {
+       "max_ik_err_m": 0.0004982069457999807
+      }
+     }
+    }
+   ]
+  },
+  {
+   "name": "HiPHI box lift",
+   "demo": "runs/demos/Cause_motion-lift_0041.npz",
+   "variant": "raw",
+   "robot": "g1",
+   "known": "not run",
+   "label": "prediction",
+   "source": "-",
+   "predicted": "infeasible",
+   "match": null,
+   "reasons": [
+    "unreachable: reach 76.1 cm, carry 62.1 cm, retreat 54.5 cm"
+   ],
+   "worst": {
+    "max_ik_err_m": 0.7607194783297387,
+    "max_penetration_m": 0.0
+   },
+   "leg_max_ik_err_m": {
+    "align": 0.7808160099422246,
+    "reach": 0.7607194783297387,
+    "carry": 0.6209445066486957,
+    "retreat": 0.544757976139891
+   },
+   "leg_max_penetration_m": {
+    "align": 0.0,
+    "reach": 0.0,
+    "carry": 0.0,
+    "retreat": 0.0
+   },
+   "layouts": [
+    {
+     "block_xy": [
+      0.33,
+      -0.2
+     ],
+     "legs": {
+      "align": {
+       "max_ik_err_m": 0.692684540751093
+      },
+      "reach": {
+       "max_ik_err_m": 0.3678295613816308
+      },
+      "carry": {
+       "max_ik_err_m": 0.007181365582629874
+      },
+      "retreat": {
+       "max_ik_err_m": 0.0401075787323621
+      }
+     }
+    },
+    {
+     "block_xy": [
+      0.35000000000000003,
+      -0.18000000000000002
+     ],
+     "legs": {
+      "align": {
+       "max_ik_err_m": 0.6808839244584447
+      },
+      "reach": {
+       "max_ik_err_m": 0.5323459472413169
+      },
+      "carry": {
+       "max_ik_err_m": 0.1500860664184534
+      },
+      "retreat": {
+       "max_ik_err_m": 0.401810294404385
+      }
+     }
+    },
+    {
+     "block_xy": [
+      0.35000000000000003,
+      -0.22
+     ],
+     "legs": {
+      "align": {
+       "max_ik_err_m": 0.7319199144687273
+      },
+      "reach": {
+       "max_ik_err_m": 0.45649835293640545
+      },
+      "carry": {
+       "max_ik_err_m": 0.2609277660498382
+      },
+      "retreat": {
+       "max_ik_err_m": 0.09808829182662021
+      }
+     }
+    },
+    {
+     "block_xy": [
+      0.31,
+      -0.18000000000000002
+     ],
+     "legs": {
+      "align": {
+       "max_ik_err_m": 0.7808160099422246
+      },
+      "reach": {
+       "max_ik_err_m": 0.4825525092645199
+      },
+      "carry": {
+       "max_ik_err_m": 0.007663145644089441
+      },
+      "retreat": {
+       "max_ik_err_m": 0.040176606369537356
+      }
+     }
+    },
+    {
+     "block_xy": [
+      0.31,
+      -0.22
+     ],
+     "legs": {
+      "align": {
+       "max_ik_err_m": 0.7607194784171442
+      },
+      "reach": {
+       "max_ik_err_m": 0.7607194783297387
+      },
+      "carry": {
+       "max_ik_err_m": 0.6209445066486957
+      },
+      "retreat": {
+       "max_ik_err_m": 0.544757976139891
+      }
+     }
+    }
+   ]
+  }
+ ]
+}

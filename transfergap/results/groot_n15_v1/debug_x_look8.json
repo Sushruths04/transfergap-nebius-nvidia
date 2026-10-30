@@ -1,0 +1,94 @@
+{
+ "ckpt": "/ws/transfergap/groot_ft_ur10e",
+ "robot": "ur10e",
+ "exec": "ensemble",
+ "block_half": null,
+ "n_distractors": 0,
+ "mixed": false,
+ "n": 12,
+ "success": 10,
+ "ci95": [
+  0.552,
+  0.953
+ ],
+ "per_seed": [
+  {
+   "seed": 6000,
+   "success": true,
+   "reasons": [],
+   "seconds": 22.9
+  },
+  {
+   "seed": 6001,
+   "success": true,
+   "reasons": [],
+   "seconds": 22.7
+  },
+  {
+   "seed": 6002,
+   "success": true,
+   "reasons": [],
+   "seconds": 22.7
+  },
+  {
+   "seed": 6003,
+   "success": true,
+   "reasons": [],
+   "seconds": 22.7
+  },
+  {
+   "seed": 6004,
+   "success": true,
+   "reasons": [],
+   "seconds": 22.8
+  },
+  {
+   "seed": 6005,
+   "success": true,
+   "reasons": [],
+   "seconds": 22.7
+  },
+  {
+   "seed": 6006,
+   "success": true,
+   "reasons": [],
+   "seconds": 22.6
+  },
+  {
+   "seed": 6007,
+   "success": true,
+   "reasons": [],
+   "seconds": 22.7
+  },
+  {
+   "seed": 6008,
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ],
+   "seconds": 22.6
+  },
+  {
+   "seed": 6009,
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ],
+   "seconds": 22.7
+  },
+  {
+   "seed": 6010,
+   "success": true,
+   "reasons": [],
+   "seconds": 22.7
+  },
+  {
+   "seed": 6011,
+   "success": true,
+   "reasons": [],
+   "seconds": 22.6
+  }
+ ]
+}

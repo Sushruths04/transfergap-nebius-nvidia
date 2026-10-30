@@ -1,0 +1,34 @@
+{
+ "schema_version": 1,
+ "kind": "hosted_inference",
+ "role": "nemotron",
+ "requested_model": "nvidia/nemotron-3-super-120b-a12b",
+ "endpoint_host": "api.tokenfactory.nebius.com",
+ "created_at": "2026-10-02T08:08:32.517000+00:00",
+ "request_sha256": "ea949a702e7bbaca59cdb507eb8d264f039170ff23f8355c94090b86615c9ce8",
+ "status": "succeeded",
+ "response_id": "chatcmpl-8fdf0e52a2f9469d",
+ "returned_model": "nvidia/nemotron-3-super-120b-a12b",
+ "usage": {
+  "completion_tokens": 327,
+  "prompt_tokens": 782,
+  "total_tokens": 1109,
+  "completion_tokens_details": {
+   "accepted_prediction_tokens": null,
+   "audio_tokens": null,
+   "reasoning_tokens": 252,
+   "rejected_prediction_tokens": null
+  },
+  "prompt_tokens_details": {
+   "audio_tokens": null,
+   "cached_tokens": 0,
+   "created_cache_tokens": 0,
+   "multimodal_tokens": null
+  },
+  "prompt_cache_hit_tokens": 0,
+  "prompt_cache_miss_tokens": 782
+ },
+ "finish_reason": "stop",
+ "content": "\n{\n  \"correction\": \"look_again\",\n  \"rationale\": \"Perception fix yields the largest success gain (+30\u202fpp) while minimally affecting style (only 0.13\u202fcm path RMSE reduction, no speed\u2011profile change), thus improving task success on unseen trials while best preserving the human's demonstrated style.\"\n}",
+ "latency_s": 2.6678266859962605
+}

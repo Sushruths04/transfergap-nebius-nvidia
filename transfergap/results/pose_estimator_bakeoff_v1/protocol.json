@@ -1,0 +1,94 @@
+{
+ "protocol": "pose_estimator_bakeoff_v1",
+ "frozen_before_run": true,
+ "question": "Same clips, annotations, demo builder, fix stacks and held-out seeds as demo_generalization_v5; only the human pose estimator differs: GEM-X (NVIDIA, used so far) vs Fast SAM 3D Body (ECCV 2026; SAM 3D Body weights, Meta). Does the newer estimator change how well the human style transfers to the robots?",
+ "estimators": {
+  "gemx": {
+   "joints": {
+    "8135753": "runs/demos/pexels_8135753_joints.npz",
+    "7205253": "runs/demos/pexels_7205253_joints.npz"
+   },
+   "fps_reported": "9.5-9.8 (live mode, window 30, measured 2026-10-02; offline export timing not recorded)",
+   "note": "GEM-X commit 32992550, SOMA joints, temporal (sliding-window) model, gravity-view world frame"
+  },
+  "fast_sam_3d_body": {
+   "joints": {
+    "8135753": "runs/demos/fsam/pexels_8135753_fsam_joints.npz",
+    "7205253": "runs/demos/fsam/pexels_7205253_fsam_joints.npz"
+   },
+   "note": "github.com/yangtiming/Fast-SAM-3D-Body d72aa36 (MIT), facebook/sam-3d-body-dinov3, per-frame (no temporal model), MoGe FOV, torch.compile settings of run_demo.sh, no TensorRT engines; world up = mean hip->neck direction (assumption)"
+  }
+ },
+ "demos": {
+  "pexels_8135753_notebook": {
+   "video_key": "8135753",
+   "stack": [
+    "speed_cap_3",
+    "look_again",
+    "touch_probe_calibration",
+    "speed_cap_2",
+    "safe_path_v2"
+   ]
+  },
+  "pexels_8135753_markers": {
+   "video_key": "8135753",
+   "stack": [
+    "speed_cap_3",
+    "look_again",
+    "touch_probe_calibration",
+    "speed_cap_2",
+    "safe_path_v2"
+   ]
+  },
+  "pexels_8135753_orange_marker": {
+   "video_key": "8135753",
+   "stack": [
+    "speed_cap_3",
+    "look_again",
+    "touch_probe_calibration",
+    "speed_cap_2",
+    "safe_path_v2"
+   ]
+  },
+  "pexels_8135753_notepad": {
+   "video_key": "8135753",
+   "stack": [
+    "speed_cap_3",
+    "look_again",
+    "touch_probe_calibration",
+    "speed_cap_2",
+    "safe_path_v2"
+   ]
+  },
+  "pexels_7205253_woman_box": {
+   "video_key": "7205253",
+   "stack": [
+    "look_again",
+    "touch_probe_calibration",
+    "safe_path_v2"
+   ]
+  }
+ },
+ "robots": [
+  "ur5e",
+  "ur10e"
+ ],
+ "seeds": [
+  1000,
+  1059
+ ],
+ "conditions": [
+  "raw",
+  "stack"
+ ],
+ "primary_metric": "held-out success with the stack, per demo x arm, paired by seed across estimators (same seeds); report all cells",
+ "secondary_metrics": [
+  "exporter fps on the L40S",
+  "pinch jitter (RMS second difference, mm)",
+  "aperture-only grasp/release event error vs the annotation (frames)",
+  "feasibility pre-check verdict of the raw plan"
+ ],
+ "sanity_check": "the gemx rows must reproduce demo_generalization_v5 exactly (same demos, stacks, seeds)",
+ "no_tuning": "no parameter of the builder, stacks or estimators is changed after seeing any bake-off number",
+ "runner": "PYTHONPATH=. .venv/bin/python -m transfergap.sim.estimator_bakeoff --protocol results/pose_estimator_bakeoff_v1/protocol.json"
+}

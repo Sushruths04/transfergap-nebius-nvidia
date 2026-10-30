@@ -1,0 +1,73 @@
+{
+ "protocol": "style_perception_v1",
+ "frozen_before_heldout": true,
+ "demo": {
+  "kind": "file",
+  "path": "runs/demos/pexels_8135753_notebook.npz",
+  "sha256": "1bc4be603ba4f79f9df6a01a019fe76c759a8e1a6032a219cd8552e693e948bc",
+  "tag": "demo1bc4be60"
+ },
+ "robots": [
+  "ur5e",
+  "ur10e",
+  "kairos"
+ ],
+ "conditions": {
+  "truth": {
+   "belief": "truth"
+  },
+  "depth": {},
+  "depth_hard": {
+   "n_distr": 3,
+   "calib_rot": 0.5,
+   "calib_trans": 5.0,
+   "sigma": 0.005,
+   "dropout": 0.1,
+   "flying": 0.005,
+   "jitter": 0.1,
+   "wrist": true,
+   "tray_look": true
+  }
+ },
+ "base": {
+  "yaw": true,
+  "n_distr": 0,
+  "jitter": 0.03,
+  "sigma": 0.002,
+  "calib_rot": 0.0,
+  "calib_trans": 0.0,
+  "dropout": 0.0,
+  "flying": 0.0,
+  "arm": null,
+  "belief": "depth",
+  "use_yaw": true,
+  "wrist": false,
+  "retry": false,
+  "tray_look": false
+ },
+ "sizes_half_m": [
+  0.025,
+  0.03,
+  0.035
+ ],
+ "dev_seeds": "0-9",
+ "heldout_seeds": "200-239",
+ "plan": "demo_budget_v1 oracle_all (clean retargeted human path, robot-nominal pace)",
+ "scoring": "metrics.score_episode; demo_budget.episode_style",
+ "code_files": [
+  "transfergap/sim/style_perception.py",
+  "transfergap/sim/perception_hard_eval.py",
+  "transfergap/sim/perception.py",
+  "transfergap/sim/controller.py",
+  "transfergap/sim/scene.py",
+  "transfergap/sim/rollout.py"
+ ],
+ "acceptance": {
+  "claim": "depth beliefs are not meaningfully worse than ground-truth beliefs (non-inferiority), per robot, pooled over cube sizes",
+  "success_margin_pp": 10.0,
+  "path_rmse_margin_cm": 0.5,
+  "rule": "pass if (truth success - depth success) <= success_margin_pp AND (depth path RMSE - truth path RMSE) <= path_rmse_margin_cm",
+  "report_only": "depth_hard (stress conditions) and the absolute success level (limited by the demo plan on 7 cm cubes with the 2F-85)"
+ },
+ "code_commit_at_freeze": "ef2770be7106ea3f1fbbe60771f2c348ade92ff3"
+}

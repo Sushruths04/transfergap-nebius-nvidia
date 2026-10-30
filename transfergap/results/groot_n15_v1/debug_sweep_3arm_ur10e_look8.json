@@ -1,0 +1,120 @@
+{
+ "ckpt": "/ws/transfergap/groot_ft_3arm",
+ "robot": "ur10e",
+ "exec": "ensemble",
+ "block_half": null,
+ "n_distractors": 0,
+ "mixed": false,
+ "n": 12,
+ "success": 1,
+ "ci95": [
+  0.015,
+  0.354
+ ],
+ "per_seed": [
+  {
+   "seed": 6200,
+   "success": true,
+   "reasons": [],
+   "seconds": 45.5
+  },
+  {
+   "seed": 6201,
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ],
+   "seconds": 44.7
+  },
+  {
+   "seed": 6202,
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ],
+   "seconds": 44.8
+  },
+  {
+   "seed": 6203,
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ],
+   "seconds": 44.7
+  },
+  {
+   "seed": 6204,
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ],
+   "seconds": 44.7
+  },
+  {
+   "seed": 6205,
+   "success": false,
+   "reasons": [
+    "not_released_and_settled_at_goal"
+   ],
+   "seconds": 44.7
+  },
+  {
+   "seed": 6206,
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ],
+   "seconds": 44.6
+  },
+  {
+   "seed": 6207,
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ],
+   "seconds": 44.8
+  },
+  {
+   "seed": 6208,
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ],
+   "seconds": 44.6
+  },
+  {
+   "seed": 6209,
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ],
+   "seconds": 44.7
+  },
+  {
+   "seed": 6210,
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ],
+   "seconds": 44.7
+  },
+  {
+   "seed": 6211,
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ],
+   "seconds": 44.8
+  }
+ ]
+}

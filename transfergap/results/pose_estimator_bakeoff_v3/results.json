@@ -1,0 +1,1830 @@
+{
+ "protocol": "pose_estimator_bakeoff_v3",
+ "rows": [
+  {
+   "estimator": "gemx",
+   "demo": "pexels_8135753_notebook",
+   "jitter_mm": 31.082448945088494,
+   "event_err": {
+    "grasp": null,
+    "release": null,
+    "error": "ValueError"
+   },
+   "fps": "9.5-9.8 (live mode, window 30, measured 2026-10-02; offline export timing not recorded)",
+   "robots": {
+    "ur5e": {
+     "precheck": "feasible",
+     "precheck_reasons": [],
+     "conditions": {
+      "raw": {
+       "oracle": "none",
+       "n": 60,
+       "successes": 0,
+       "success_rate": 0.0,
+       "wilson_95": [
+        0.0,
+        0.06017185214208986
+       ],
+       "failure_reasons": {
+        "no_lift": 59,
+        "not_released_and_settled_at_goal": 60
+       }
+      },
+      "stack": {
+       "oracle": "none",
+       "n": 60,
+       "successes": 57,
+       "success_rate": 0.95,
+       "wilson_95": [
+        0.8629948352365147,
+        0.9828504978356043
+       ],
+       "failure_reasons": {
+        "no_lift": 3,
+        "not_released_and_settled_at_goal": 3
+       }
+      }
+     },
+     "gap_stack_minus_raw": {
+      "delta_pp": 95.0,
+      "ci95_pp": [
+       88.33333333333333,
+       100
+      ],
+      "n": 60
+     }
+    },
+    "ur10e": {
+     "precheck": "feasible",
+     "precheck_reasons": [],
+     "conditions": {
+      "raw": {
+       "oracle": "none",
+       "n": 60,
+       "successes": 0,
+       "success_rate": 0.0,
+       "wilson_95": [
+        0.0,
+        0.06017185214208986
+       ],
+       "failure_reasons": {
+        "not_released_and_settled_at_goal": 60,
+        "no_lift": 48,
+        "forbidden_collision": 3
+       }
+      },
+      "stack": {
+       "oracle": "none",
+       "n": 60,
+       "successes": 60,
+       "success_rate": 1.0,
+       "wilson_95": [
+        0.93982814785791,
+        0.9999999999999998
+       ],
+       "failure_reasons": {}
+      }
+     },
+     "gap_stack_minus_raw": {
+      "delta_pp": 100,
+      "ci95_pp": [
+       100,
+       100
+      ],
+      "n": 60
+     }
+    }
+   }
+  },
+  {
+   "estimator": "gemx",
+   "demo": "pexels_8135753_markers",
+   "jitter_mm": 13.936248718344297,
+   "event_err": {
+    "grasp": null,
+    "release": null,
+    "error": "ValueError"
+   },
+   "fps": "9.5-9.8 (live mode, window 30, measured 2026-10-02; offline export timing not recorded)",
+   "robots": {
+    "ur5e": {
+     "precheck": "infeasible",
+     "precheck_reasons": [
+      "collides: reach 1.1 cm, retreat 1.4 cm (g_right_follower, g_right_pad)"
+     ],
+     "conditions": {
+      "raw": {
+       "oracle": "none",
+       "n": 60,
+       "successes": 0,
+       "success_rate": 0.0,
+       "wilson_95": [
+        0.0,
+        0.06017185214208986
+       ],
+       "failure_reasons": {
+        "no_lift": 60,
+        "not_released_and_settled_at_goal": 60
+       }
+      },
+      "stack": {
+       "oracle": "none",
+       "n": 60,
+       "successes": 51,
+       "success_rate": 0.85,
+       "wilson_95": [
+        0.7388541093022145,
+        0.9190255941983225
+       ],
+       "failure_reasons": {
+        "not_released_and_settled_at_goal": 9
+       }
+      }
+     },
+     "gap_stack_minus_raw": {
+      "delta_pp": 85.0,
+      "ci95_pp": [
+       75.0,
+       93.33333333333333
+      ],
+      "n": 60
+     }
+    },
+    "ur10e": {
+     "precheck": "infeasible",
+     "precheck_reasons": [
+      "collides: reach 1.1 cm, retreat 1.4 cm (g_left_pad, g_right_follower, g_right_pad)"
+     ],
+     "conditions": {
+      "raw": {
+       "oracle": "none",
+       "n": 60,
+       "successes": 0,
+       "success_rate": 0.0,
+       "wilson_95": [
+        0.0,
+        0.06017185214208986
+       ],
+       "failure_reasons": {
+        "no_lift": 60,
+        "not_released_and_settled_at_goal": 60
+       }
+      },
+      "stack": {
+       "oracle": "none",
+       "n": 60,
+       "successes": 25,
+       "success_rate": 0.4166666666666667,
+       "wilson_95": [
+        0.30064278558341617,
+        0.5427191897735989
+       ],
+       "failure_reasons": {
+        "no_lift": 9,
+        "not_released_and_settled_at_goal": 35
+       }
+      }
+     },
+     "gap_stack_minus_raw": {
+      "delta_pp": 41.66666666666667,
+      "ci95_pp": [
+       28.333333333333332,
+       55.00000000000001
+      ],
+      "n": 60
+     }
+    }
+   }
+  },
+  {
+   "estimator": "gemx",
+   "demo": "pexels_8135753_orange_marker",
+   "jitter_mm": 19.064426542076166,
+   "event_err": {
+    "grasp": null,
+    "release": null,
+    "error": "ValueError"
+   },
+   "fps": "9.5-9.8 (live mode, window 30, measured 2026-10-02; offline export timing not recorded)",
+   "robots": {
+    "ur5e": {
+     "precheck": "infeasible",
+     "precheck_reasons": [
+      "collides: retreat 3.0 cm (g_left_pad, g_right_follower, g_right_pad)"
+     ],
+     "conditions": {
+      "raw": {
+       "oracle": "none",
+       "n": 60,
+       "successes": 0,
+       "success_rate": 0.0,
+       "wilson_95": [
+        0.0,
+        0.06017185214208986
+       ],
+       "failure_reasons": {
+        "no_lift": 60,
+        "not_released_and_settled_at_goal": 60
+       }
+      },
+      "stack": {
+       "oracle": "none",
+       "n": 60,
+       "successes": 46,
+       "success_rate": 0.7666666666666667,
+       "wilson_95": [
+        0.6456372962239805,
+        0.8556043826335717
+       ],
+       "failure_reasons": {
+        "no_lift": 12,
+        "not_released_and_settled_at_goal": 14
+       }
+      }
+     },
+     "gap_stack_minus_raw": {
+      "delta_pp": 76.66666666666667,
+      "ci95_pp": [
+       65.0,
+       86.66666666666667
+      ],
+      "n": 60
+     }
+    },
+    "ur10e": {
+     "precheck": "infeasible",
+     "precheck_reasons": [
+      "collides: retreat 3.0 cm (g_left_pad, g_right_follower, g_right_pad)"
+     ],
+     "conditions": {
+      "raw": {
+       "oracle": "none",
+       "n": 60,
+       "successes": 0,
+       "success_rate": 0.0,
+       "wilson_95": [
+        0.0,
+        0.06017185214208986
+       ],
+       "failure_reasons": {
+        "no_lift": 60,
+        "not_released_and_settled_at_goal": 60
+       }
+      },
+      "stack": {
+       "oracle": "none",
+       "n": 60,
+       "successes": 58,
+       "success_rate": 0.9666666666666667,
+       "wilson_95": [
+        0.886362257256914,
+        0.9908106807438021
+       ],
+       "failure_reasons": {
+        "not_released_and_settled_at_goal": 2,
+        "no_lift": 1
+       }
+      }
+     },
+     "gap_stack_minus_raw": {
+      "delta_pp": 96.66666666666667,
+      "ci95_pp": [
+       91.66666666666666,
+       100
+      ],
+      "n": 60
+     }
+    }
+   }
+  },
+  {
+   "estimator": "gemx",
+   "demo": "pexels_8135753_notepad",
+   "jitter_mm": 14.686770932921394,
+   "event_err": {
+    "grasp": null,
+    "release": null,
+    "error": "ValueError"
+   },
+   "fps": "9.5-9.8 (live mode, window 30, measured 2026-10-02; offline export timing not recorded)",
+   "robots": {
+    "ur5e": {
+     "precheck": "infeasible",
+     "precheck_reasons": [
+      "collides: reach 2.9 cm, retreat 1.4 cm (g_left_pad, g_right_pad)"
+     ],
+     "conditions": {
+      "raw": {
+       "oracle": "none",
+       "n": 60,
+       "successes": 0,
+       "success_rate": 0.0,
+       "wilson_95": [
+        0.0,
+        0.06017185214208986
+       ],
+       "failure_reasons": {
+        "no_lift": 50,
+        "not_released_and_settled_at_goal": 60,
+        "forbidden_collision": 2
+       }
+      },
+      "stack": {
+       "oracle": "none",
+       "n": 60,
+       "successes": 58,
+       "success_rate": 0.9666666666666667,
+       "wilson_95": [
+        0.886362257256914,
+        0.9908106807438021
+       ],
+       "failure_reasons": {
+        "no_lift": 1,
+        "not_released_and_settled_at_goal": 2
+       }
+      }
+     },
+     "gap_stack_minus_raw": {
+      "delta_pp": 96.66666666666667,
+      "ci95_pp": [
+       91.66666666666666,
+       100
+      ],
+      "n": 60
+     }
+    },
+    "ur10e": {
+     "precheck": "infeasible",
+     "precheck_reasons": [
+      "collides: reach 2.9 cm, retreat 1.4 cm (g_left_pad, g_right_pad)"
+     ],
+     "conditions": {
+      "raw": {
+       "oracle": "none",
+       "n": 60,
+       "successes": 0,
+       "success_rate": 0.0,
+       "wilson_95": [
+        0.0,
+        0.06017185214208986
+       ],
+       "failure_reasons": {
+        "no_lift": 59,
+        "not_released_and_settled_at_goal": 60,
+        "forbidden_collision": 34
+       }
+      },
+      "stack": {
+       "oracle": "none",
+       "n": 60,
+       "successes": 58,
+       "success_rate": 0.9666666666666667,
+       "wilson_95": [
+        0.886362257256914,
+        0.9908106807438021
+       ],
+       "failure_reasons": {
+        "no_lift": 2,
+        "not_released_and_settled_at_goal": 2
+       }
+      }
+     },
+     "gap_stack_minus_raw": {
+      "delta_pp": 96.66666666666667,
+      "ci95_pp": [
+       91.66666666666666,
+       100
+      ],
+      "n": 60
+     }
+    }
+   }
+  },
+  {
+   "estimator": "gemx",
+   "demo": "pexels_7205253_woman_box",
+   "jitter_mm": 8.96891210577395,
+   "event_err": {
+    "grasp": 10,
+    "release": 22
+   },
+   "fps": "9.5-9.8 (live mode, window 30, measured 2026-10-02; offline export timing not recorded)",
+   "robots": {
+    "ur5e": {
+     "precheck": "infeasible",
+     "precheck_reasons": [
+      "collides: reach 4.5 cm, retreat 4.5 cm (g_base, g_left_follower, g_left_pad, g_left_spring_link, g_right_coupler, g_right_follower, g_right_pad, g_right_spring_link)"
+     ],
+     "conditions": {
+      "raw": {
+       "oracle": "none",
+       "n": 60,
+       "successes": 11,
+       "success_rate": 0.18333333333333332,
+       "wilson_95": [
+        0.10557796889197638,
+        0.2991975374646805
+       ],
+       "failure_reasons": {
+        "no_lift": 48,
+        "not_released_and_settled_at_goal": 49,
+        "forbidden_collision": 2
+       }
+      },
+      "stack": {
+       "oracle": "none",
+       "n": 60,
+       "successes": 60,
+       "success_rate": 1.0,
+       "wilson_95": [
+        0.93982814785791,
+        0.9999999999999998
+       ],
+       "failure_reasons": {}
+      }
+     },
+     "gap_stack_minus_raw": {
+      "delta_pp": 81.66666666666667,
+      "ci95_pp": [
+       71.66666666666667,
+       91.66666666666666
+      ],
+      "n": 60
+     }
+    },
+    "ur10e": {
+     "precheck": "infeasible",
+     "precheck_reasons": [
+      "collides: reach 4.5 cm, retreat 4.5 cm (g_base, g_left_follower, g_left_pad, g_left_spring_link, g_right_coupler, g_right_follower, g_right_pad, g_right_spring_link)"
+     ],
+     "conditions": {
+      "raw": {
+       "oracle": "none",
+       "n": 60,
+       "successes": 4,
+       "success_rate": 0.06666666666666667,
+       "wilson_95": [
+        0.026228698724506214,
+        0.1592535731319717
+       ],
+       "failure_reasons": {
+        "no_lift": 55,
+        "not_released_and_settled_at_goal": 55,
+        "forbidden_collision": 9
+       }
+      },
+      "stack": {
+       "oracle": "none",
+       "n": 60,
+       "successes": 55,
+       "success_rate": 0.9166666666666666,
+       "wilson_95": [
+        0.8193105798166558,
+        0.9638795433982692
+       ],
+       "failure_reasons": {
+        "forbidden_collision": 5
+       }
+      }
+     },
+     "gap_stack_minus_raw": {
+      "delta_pp": 85.0,
+      "ci95_pp": [
+       75.0,
+       93.33333333333333
+      ],
+      "n": 60
+     }
+    }
+   }
+  },
+  {
+   "estimator": "gemx",
+   "demo": "user_take1_right",
+   "jitter_mm": 2.4373505895875938,
+   "event_err": {
+    "grasp": null,
+    "release": null,
+    "error": "ValueError"
+   },
+   "fps": "9.5-9.8 (live mode, window 30, measured 2026-10-02; offline export timing not recorded)",
+   "robots": {
+    "ur5e": {
+     "precheck": "infeasible",
+     "precheck_reasons": [
+      "collides: reach 1.7 cm (g_left_pad, g_right_pad)"
+     ],
+     "conditions": {
+      "raw": {
+       "oracle": "none",
+       "n": 60,
+       "successes": 35,
+       "success_rate": 0.5833333333333334,
+       "wilson_95": [
+        0.45728081022640116,
+        0.6993572144165838
+       ],
+       "failure_reasons": {
+        "no_lift": 21,
+        "not_released_and_settled_at_goal": 23,
+        "forbidden_collision": 3
+       }
+      },
+      "stack": {
+       "oracle": "none",
+       "n": 60,
+       "successes": 59,
+       "success_rate": 0.9833333333333333,
+       "wilson_95": [
+        0.9114487027240993,
+        0.9970518402052136
+       ],
+       "failure_reasons": {
+        "no_lift": 1,
+        "not_released_and_settled_at_goal": 1
+       }
+      }
+     },
+     "gap_stack_minus_raw": {
+      "delta_pp": 40.0,
+      "ci95_pp": [
+       28.333333333333332,
+       51.66666666666667
+      ],
+      "n": 60
+     }
+    },
+    "ur10e": {
+     "precheck": "infeasible",
+     "precheck_reasons": [
+      "collides: reach 1.7 cm (g_left_pad, g_right_pad)"
+     ],
+     "conditions": {
+      "raw": {
+       "oracle": "none",
+       "n": 60,
+       "successes": 30,
+       "success_rate": 0.5,
+       "wilson_95": [
+        0.3773502424155577,
+        0.6226497575844423
+       ],
+       "failure_reasons": {
+        "no_lift": 21,
+        "not_released_and_settled_at_goal": 27,
+        "forbidden_collision": 6,
+        "fallen": 1
+       }
+      },
+      "stack": {
+       "oracle": "none",
+       "n": 60,
+       "successes": 56,
+       "success_rate": 0.9333333333333333,
+       "wilson_95": [
+        0.8407464268680283,
+        0.9737713012754938
+       ],
+       "failure_reasons": {
+        "no_lift": 4,
+        "not_released_and_settled_at_goal": 4
+       }
+      }
+     },
+     "gap_stack_minus_raw": {
+      "delta_pp": 43.333333333333336,
+      "ci95_pp": [
+       31.666666666666664,
+       55.00000000000001
+      ],
+      "n": 60
+     }
+    }
+   }
+  },
+  {
+   "estimator": "fast_sam_3d_body",
+   "demo": "pexels_8135753_notebook",
+   "jitter_mm": 47.9893221627019,
+   "event_err": {
+    "grasp": null,
+    "release": null,
+    "error": "ValueError"
+   },
+   "fps": 6.163932927486623,
+   "robots": {
+    "ur5e": {
+     "precheck": "feasible",
+     "precheck_reasons": [],
+     "conditions": {
+      "raw": {
+       "oracle": "none",
+       "n": 60,
+       "successes": 0,
+       "success_rate": 0.0,
+       "wilson_95": [
+        0.0,
+        0.06017185214208986
+       ],
+       "failure_reasons": {
+        "not_released_and_settled_at_goal": 60,
+        "no_lift": 44
+       }
+      },
+      "stack": {
+       "oracle": "none",
+       "n": 60,
+       "successes": 58,
+       "success_rate": 0.9666666666666667,
+       "wilson_95": [
+        0.886362257256914,
+        0.9908106807438021
+       ],
+       "failure_reasons": {
+        "no_lift": 2,
+        "not_released_and_settled_at_goal": 2
+       }
+      }
+     },
+     "gap_stack_minus_raw": {
+      "delta_pp": 96.66666666666667,
+      "ci95_pp": [
+       91.66666666666666,
+       100
+      ],
+      "n": 60
+     }
+    },
+    "ur10e": {
+     "precheck": "feasible",
+     "precheck_reasons": [],
+     "conditions": {
+      "raw": {
+       "oracle": "none",
+       "n": 60,
+       "successes": 0,
+       "success_rate": 0.0,
+       "wilson_95": [
+        0.0,
+        0.06017185214208986
+       ],
+       "failure_reasons": {
+        "no_lift": 56,
+        "not_released_and_settled_at_goal": 60
+       }
+      },
+      "stack": {
+       "oracle": "none",
+       "n": 60,
+       "successes": 58,
+       "success_rate": 0.9666666666666667,
+       "wilson_95": [
+        0.886362257256914,
+        0.9908106807438021
+       ],
+       "failure_reasons": {
+        "no_lift": 2,
+        "not_released_and_settled_at_goal": 2
+       }
+      }
+     },
+     "gap_stack_minus_raw": {
+      "delta_pp": 96.66666666666667,
+      "ci95_pp": [
+       91.66666666666666,
+       100
+      ],
+      "n": 60
+     }
+    }
+   }
+  },
+  {
+   "estimator": "fast_sam_3d_body",
+   "demo": "pexels_8135753_markers",
+   "jitter_mm": 28.794683431912194,
+   "event_err": {
+    "grasp": 2,
+    "release": 5
+   },
+   "fps": 6.163932927486623,
+   "robots": {
+    "ur5e": {
+     "precheck": "feasible",
+     "precheck_reasons": [],
+     "conditions": {
+      "raw": {
+       "oracle": "none",
+       "n": 60,
+       "successes": 0,
+       "success_rate": 0.0,
+       "wilson_95": [
+        0.0,
+        0.06017185214208986
+       ],
+       "failure_reasons": {
+        "not_released_and_settled_at_goal": 60,
+        "no_lift": 35
+       }
+      },
+      "stack": {
+       "oracle": "none",
+       "n": 60,
+       "successes": 60,
+       "success_rate": 1.0,
+       "wilson_95": [
+        0.93982814785791,
+        0.9999999999999998
+       ],
+       "failure_reasons": {}
+      }
+     },
+     "gap_stack_minus_raw": {
+      "delta_pp": 100,
+      "ci95_pp": [
+       100,
+       100
+      ],
+      "n": 60
+     }
+    },
+    "ur10e": {
+     "precheck": "feasible",
+     "precheck_reasons": [],
+     "conditions": {
+      "raw": {
+       "oracle": "none",
+       "n": 60,
+       "successes": 0,
+       "success_rate": 0.0,
+       "wilson_95": [
+        0.0,
+        0.06017185214208986
+       ],
+       "failure_reasons": {
+        "no_lift": 44,
+        "not_released_and_settled_at_goal": 60
+       }
+      },
+      "stack": {
+       "oracle": "none",
+       "n": 60,
+       "successes": 50,
+       "success_rate": 0.8333333333333334,
+       "wilson_95": [
+        0.7196838683638547,
+        0.9068682302080855
+       ],
+       "failure_reasons": {
+        "not_released_and_settled_at_goal": 10
+       }
+      }
+     },
+     "gap_stack_minus_raw": {
+      "delta_pp": 83.33333333333334,
+      "ci95_pp": [
+       73.33333333333333,
+       91.66666666666666
+      ],
+      "n": 60
+     }
+    }
+   }
+  },
+  {
+   "estimator": "fast_sam_3d_body",
+   "demo": "pexels_8135753_orange_marker",
+   "jitter_mm": 33.38300773053051,
+   "event_err": {
+    "grasp": null,
+    "release": null,
+    "error": "ValueError"
+   },
+   "fps": 6.163932927486623,
+   "robots": {
+    "ur5e": {
+     "precheck": "infeasible",
+     "precheck_reasons": [
+      "unreachable: carry 7.3 cm"
+     ],
+     "conditions": {
+      "raw": {
+       "oracle": "none",
+       "n": 60,
+       "successes": 0,
+       "success_rate": 0.0,
+       "wilson_95": [
+        0.0,
+        0.06017185214208986
+       ],
+       "failure_reasons": {
+        "no_lift": 60,
+        "not_released_and_settled_at_goal": 60,
+        "forbidden_collision": 2,
+        "fallen": 2
+       }
+      },
+      "stack": {
+       "oracle": "none",
+       "n": 60,
+       "successes": 28,
+       "success_rate": 0.4666666666666667,
+       "wilson_95": [
+        0.34627906041438494,
+        0.5910657297284211
+       ],
+       "failure_reasons": {
+        "no_lift": 31,
+        "not_released_and_settled_at_goal": 32
+       }
+      }
+     },
+     "gap_stack_minus_raw": {
+      "delta_pp": 46.666666666666664,
+      "ci95_pp": [
+       33.33333333333333,
+       58.333333333333336
+      ],
+      "n": 60
+     }
+    },
+    "ur10e": {
+     "precheck": "feasible",
+     "precheck_reasons": [],
+     "conditions": {
+      "raw": {
+       "oracle": "none",
+       "n": 60,
+       "successes": 0,
+       "success_rate": 0.0,
+       "wilson_95": [
+        0.0,
+        0.06017185214208986
+       ],
+       "failure_reasons": {
+        "no_lift": 50,
+        "not_released_and_settled_at_goal": 60,
+        "forbidden_collision": 7,
+        "fallen": 6
+       }
+      },
+      "stack": {
+       "oracle": "none",
+       "n": 60,
+       "successes": 16,
+       "success_rate": 0.26666666666666666,
+       "wilson_95": [
+        0.17132640003280553,
+        0.39008713096683645
+       ],
+       "failure_reasons": {
+        "no_lift": 40,
+        "not_released_and_settled_at_goal": 44
+       }
+      }
+     },
+     "gap_stack_minus_raw": {
+      "delta_pp": 26.666666666666668,
+      "ci95_pp": [
+       15.0,
+       38.333333333333336
+      ],
+      "n": 60
+     }
+    }
+   }
+  },
+  {
+   "estimator": "fast_sam_3d_body",
+   "demo": "pexels_8135753_notepad",
+   "jitter_mm": 49.89966155411215,
+   "event_err": {
+    "grasp": null,
+    "release": null,
+    "error": "ValueError"
+   },
+   "fps": 6.163932927486623,
+   "robots": {
+    "ur5e": {
+     "precheck": "infeasible",
+     "precheck_reasons": [
+      "collides: reach 3.5 cm (g_left_follower, g_left_pad, g_right_follower, g_right_pad)"
+     ],
+     "conditions": {
+      "raw": {
+       "oracle": "none",
+       "n": 60,
+       "successes": 0,
+       "success_rate": 0.0,
+       "wilson_95": [
+        0.0,
+        0.06017185214208986
+       ],
+       "failure_reasons": {
+        "no_lift": 60,
+        "not_released_and_settled_at_goal": 60
+       }
+      },
+      "stack": {
+       "oracle": "none",
+       "n": 60,
+       "successes": 60,
+       "success_rate": 1.0,
+       "wilson_95": [
+        0.93982814785791,
+        0.9999999999999998
+       ],
+       "failure_reasons": {}
+      }
+     },
+     "gap_stack_minus_raw": {
+      "delta_pp": 100,
+      "ci95_pp": [
+       100,
+       100
+      ],
+      "n": 60
+     }
+    },
+    "ur10e": {
+     "precheck": "infeasible",
+     "precheck_reasons": [
+      "collides: reach 3.5 cm (g_left_follower, g_left_pad, g_right_follower, g_right_pad)"
+     ],
+     "conditions": {
+      "raw": {
+       "oracle": "none",
+       "n": 60,
+       "successes": 0,
+       "success_rate": 0.0,
+       "wilson_95": [
+        0.0,
+        0.06017185214208986
+       ],
+       "failure_reasons": {
+        "no_lift": 56,
+        "not_released_and_settled_at_goal": 60,
+        "forbidden_collision": 36,
+        "fallen": 3
+       }
+      },
+      "stack": {
+       "oracle": "none",
+       "n": 60,
+       "successes": 57,
+       "success_rate": 0.95,
+       "wilson_95": [
+        0.8629948352365147,
+        0.9828504978356043
+       ],
+       "failure_reasons": {
+        "no_lift": 3,
+        "not_released_and_settled_at_goal": 3
+       }
+      }
+     },
+     "gap_stack_minus_raw": {
+      "delta_pp": 95.0,
+      "ci95_pp": [
+       88.33333333333333,
+       100
+      ],
+      "n": 60
+     }
+    }
+   }
+  },
+  {
+   "estimator": "fast_sam_3d_body",
+   "demo": "pexels_7205253_woman_box",
+   "jitter_mm": 121.20948451243918,
+   "event_err": {
+    "grasp": 1,
+    "release": 69
+   },
+   "fps": 5.174491244283316,
+   "robots": {
+    "ur5e": {
+     "precheck": "infeasible",
+     "precheck_reasons": [
+      "unreachable: reach 51.0 cm",
+      "collides: reach 7.2 cm, carry 6.6 cm, retreat 6.6 cm (forearm_link, g_base, g_left_coupler, g_left_follower, g_left_pad, g_left_spring_link, g_right_coupler, g_right_follower, g_right_pad, g_right_spring_link, upper_arm_link)"
+     ],
+     "conditions": {
+      "raw": {
+       "oracle": "none",
+       "n": 60,
+       "successes": 9,
+       "success_rate": 0.15,
+       "wilson_95": [
+        0.08097440580167739,
+        0.2611458906977855
+       ],
+       "failure_reasons": {
+        "not_released_and_settled_at_goal": 51,
+        "no_lift": 49,
+        "forbidden_collision": 10
+       }
+      },
+      "stack": {
+       "oracle": "none",
+       "n": 60,
+       "successes": 12,
+       "success_rate": 0.2,
+       "wilson_95": [
+        0.11828505322897494,
+        0.317818058056279
+       ],
+       "failure_reasons": {
+        "no_lift": 36,
+        "not_released_and_settled_at_goal": 48,
+        "forbidden_collision": 17
+       }
+      }
+     },
+     "gap_stack_minus_raw": {
+      "delta_pp": 5.0,
+      "ci95_pp": [
+       -8.333333333333332,
+       18.333333333333332
+      ],
+      "n": 60
+     }
+    },
+    "ur10e": {
+     "precheck": "infeasible",
+     "precheck_reasons": [
+      "collides: reach 5.2 cm, retreat 6.6 cm (g_base, g_left_coupler, g_left_follower, g_left_pad, g_left_spring_link, g_right_coupler, g_right_follower, g_right_pad, g_right_spring_link)"
+     ],
+     "conditions": {
+      "raw": {
+       "oracle": "none",
+       "n": 60,
+       "successes": 21,
+       "success_rate": 0.35,
+       "wilson_95": [
+        0.24167774406017556,
+        0.47637381158245135
+       ],
+       "failure_reasons": {
+        "no_lift": 35,
+        "not_released_and_settled_at_goal": 38,
+        "forbidden_collision": 1
+       }
+      },
+      "stack": {
+       "oracle": "none",
+       "n": 60,
+       "successes": 60,
+       "success_rate": 1.0,
+       "wilson_95": [
+        0.93982814785791,
+        0.9999999999999998
+       ],
+       "failure_reasons": {}
+      }
+     },
+     "gap_stack_minus_raw": {
+      "delta_pp": 65.0,
+      "ci95_pp": [
+       53.333333333333336,
+       76.66666666666667
+      ],
+      "n": 60
+     }
+    }
+   }
+  },
+  {
+   "estimator": "fast_sam_3d_body",
+   "demo": "user_take1_right",
+   "jitter_mm": 27.671163076396287,
+   "event_err": {
+    "grasp": null,
+    "release": null,
+    "error": "ValueError"
+   },
+   "fps": 4.609936886297684,
+   "robots": {
+    "ur5e": {
+     "precheck": "feasible",
+     "precheck_reasons": [],
+     "conditions": {
+      "raw": {
+       "oracle": "none",
+       "n": 60,
+       "successes": 36,
+       "success_rate": 0.6,
+       "wilson_95": [
+        0.4736605349204075,
+        0.7143050946511744
+       ],
+       "failure_reasons": {
+        "no_lift": 22,
+        "not_released_and_settled_at_goal": 24
+       }
+      },
+      "stack": {
+       "oracle": "none",
+       "n": 60,
+       "successes": 60,
+       "success_rate": 1.0,
+       "wilson_95": [
+        0.93982814785791,
+        0.9999999999999998
+       ],
+       "failure_reasons": {}
+      }
+     },
+     "gap_stack_minus_raw": {
+      "delta_pp": 40.0,
+      "ci95_pp": [
+       28.333333333333332,
+       53.333333333333336
+      ],
+      "n": 60
+     }
+    },
+    "ur10e": {
+     "precheck": "feasible",
+     "precheck_reasons": [],
+     "conditions": {
+      "raw": {
+       "oracle": "none",
+       "n": 60,
+       "successes": 37,
+       "success_rate": 0.6166666666666667,
+       "wilson_95": [
+        0.49017595824099924,
+        0.7291172762591798
+       ],
+       "failure_reasons": {
+        "no_lift": 20,
+        "not_released_and_settled_at_goal": 23
+       }
+      },
+      "stack": {
+       "oracle": "none",
+       "n": 60,
+       "successes": 60,
+       "success_rate": 1.0,
+       "wilson_95": [
+        0.93982814785791,
+        0.9999999999999998
+       ],
+       "failure_reasons": {}
+      }
+     },
+     "gap_stack_minus_raw": {
+      "delta_pp": 38.333333333333336,
+      "ci95_pp": [
+       26.666666666666668,
+       50.0
+      ],
+      "n": 60
+     }
+    }
+   }
+  },
+  {
+   "estimator": "rtmw3d",
+   "demo": "pexels_8135753_notebook",
+   "jitter_mm": 144.81622478224472,
+   "event_err": {
+    "grasp": 11,
+    "release": 8
+   },
+   "fps": 27.483883450857597,
+   "robots": {
+    "ur5e": {
+     "precheck": "infeasible",
+     "precheck_reasons": [
+      "unreachable: reach 99.6 cm, carry 182.3 cm, retreat 167.1 cm",
+      "collides: reach 7.5 cm, carry 6.8 cm (forearm_link, g_left_pad, g_right_pad, upper_arm_link)"
+     ],
+     "conditions": {
+      "raw": {
+       "oracle": "none",
+       "n": 60,
+       "successes": 0,
+       "success_rate": 0.0,
+       "wilson_95": [
+        0.0,
+        0.06017185214208986
+       ],
+       "failure_reasons": {
+        "no_lift": 58,
+        "not_released_and_settled_at_goal": 59,
+        "forbidden_collision": 60,
+        "fallen": 2
+       }
+      },
+      "stack": {
+       "oracle": "none",
+       "n": 60,
+       "successes": 0,
+       "success_rate": 0.0,
+       "wilson_95": [
+        0.0,
+        0.06017185214208986
+       ],
+       "failure_reasons": {
+        "not_released_and_settled_at_goal": 60,
+        "forbidden_collision": 60,
+        "fallen": 7,
+        "no_lift": 55
+       }
+      }
+     },
+     "gap_stack_minus_raw": {
+      "delta_pp": 0,
+      "ci95_pp": [
+       0,
+       0
+      ],
+      "n": 60
+     }
+    },
+    "ur10e": {
+     "precheck": "infeasible",
+     "precheck_reasons": [
+      "unreachable: reach 18.6 cm, carry 180.7 cm, retreat 166.8 cm",
+      "collides: reach 6.8 cm, carry 7.8 cm (forearm_link, g_left_pad, g_right_pad, upper_arm_link)"
+     ],
+     "conditions": {
+      "raw": {
+       "oracle": "none",
+       "n": 60,
+       "successes": 0,
+       "success_rate": 0.0,
+       "wilson_95": [
+        0.0,
+        0.06017185214208986
+       ],
+       "failure_reasons": {
+        "no_lift": 58,
+        "not_released_and_settled_at_goal": 60,
+        "forbidden_collision": 60
+       }
+      },
+      "stack": {
+       "oracle": "none",
+       "n": 60,
+       "successes": 0,
+       "success_rate": 0.0,
+       "wilson_95": [
+        0.0,
+        0.06017185214208986
+       ],
+       "failure_reasons": {
+        "no_lift": 60,
+        "not_released_and_settled_at_goal": 60,
+        "forbidden_collision": 60
+       }
+      }
+     },
+     "gap_stack_minus_raw": {
+      "delta_pp": 0,
+      "ci95_pp": [
+       0,
+       0
+      ],
+      "n": 60
+     }
+    }
+   }
+  },
+  {
+   "estimator": "rtmw3d",
+   "demo": "pexels_8135753_markers",
+   "jitter_mm": 167.5104647236505,
+   "event_err": {
+    "grasp": 4,
+    "release": 15
+   },
+   "fps": 27.483883450857597,
+   "robots": {
+    "ur5e": {
+     "precheck": "infeasible",
+     "precheck_reasons": [
+      "unreachable: reach 31.7 cm, carry 182.3 cm, retreat 232.0 cm",
+      "collides: reach 7.4 cm, carry 7.3 cm (forearm_link, g_right_follower, upper_arm_link)"
+     ],
+     "conditions": {
+      "raw": {
+       "oracle": "none",
+       "n": 60,
+       "successes": 0,
+       "success_rate": 0.0,
+       "wilson_95": [
+        0.0,
+        0.06017185214208986
+       ],
+       "failure_reasons": {
+        "no_lift": 50,
+        "not_released_and_settled_at_goal": 60,
+        "forbidden_collision": 59,
+        "fallen": 8
+       }
+      },
+      "stack": {
+       "oracle": "none",
+       "n": 60,
+       "successes": 0,
+       "success_rate": 0.0,
+       "wilson_95": [
+        0.0,
+        0.06017185214208986
+       ],
+       "failure_reasons": {
+        "not_released_and_settled_at_goal": 60,
+        "forbidden_collision": 60,
+        "fallen": 29,
+        "no_lift": 28
+       }
+      }
+     },
+     "gap_stack_minus_raw": {
+      "delta_pp": 0,
+      "ci95_pp": [
+       0,
+       0
+      ],
+      "n": 60
+     }
+    },
+    "ur10e": {
+     "precheck": "infeasible",
+     "precheck_reasons": [
+      "unreachable: reach 45.1 cm, carry 180.5 cm, retreat 230.2 cm",
+      "collides: reach 7.3 cm, carry 7.7 cm, retreat 2.3 cm (forearm_link, g_left_follower, g_left_pad, upper_arm_link)"
+     ],
+     "conditions": {
+      "raw": {
+       "oracle": "none",
+       "n": 60,
+       "successes": 0,
+       "success_rate": 0.0,
+       "wilson_95": [
+        0.0,
+        0.06017185214208986
+       ],
+       "failure_reasons": {
+        "no_lift": 45,
+        "not_released_and_settled_at_goal": 60,
+        "forbidden_collision": 53,
+        "fallen": 11
+       }
+      },
+      "stack": {
+       "oracle": "none",
+       "n": 60,
+       "successes": 0,
+       "success_rate": 0.0,
+       "wilson_95": [
+        0.0,
+        0.06017185214208986
+       ],
+       "failure_reasons": {
+        "no_lift": 31,
+        "not_released_and_settled_at_goal": 60,
+        "forbidden_collision": 60,
+        "fallen": 30
+       }
+      }
+     },
+     "gap_stack_minus_raw": {
+      "delta_pp": 0,
+      "ci95_pp": [
+       0,
+       0
+      ],
+      "n": 60
+     }
+    }
+   }
+  },
+  {
+   "estimator": "rtmw3d",
+   "demo": "pexels_8135753_orange_marker",
+   "jitter_mm": 192.44522481518146,
+   "event_err": {
+    "grasp": 5,
+    "release": 4
+   },
+   "fps": 27.483883450857597,
+   "robots": {
+    "ur5e": {
+     "precheck": "infeasible",
+     "precheck_reasons": [
+      "unreachable: reach 160.6 cm, carry 145.8 cm, retreat 188.6 cm",
+      "collides: reach 6.8 cm, carry 7.1 cm, retreat 0.9 cm (forearm_link, g_left_follower, g_left_pad, g_left_spring_link, g_right_follower, g_right_pad, upper_arm_link, wrist_2_link)"
+     ],
+     "conditions": {
+      "raw": {
+       "oracle": "none",
+       "n": 60,
+       "successes": 0,
+       "success_rate": 0.0,
+       "wilson_95": [
+        0.0,
+        0.06017185214208986
+       ],
+       "failure_reasons": {
+        "no_lift": 58,
+        "not_released_and_settled_at_goal": 60,
+        "forbidden_collision": 60,
+        "fallen": 3
+       }
+      },
+      "stack": {
+       "oracle": "none",
+       "n": 60,
+       "successes": 0,
+       "success_rate": 0.0,
+       "wilson_95": [
+        0.0,
+        0.06017185214208986
+       ],
+       "failure_reasons": {
+        "no_lift": 56,
+        "not_released_and_settled_at_goal": 60,
+        "forbidden_collision": 60,
+        "fallen": 5
+       }
+      }
+     },
+     "gap_stack_minus_raw": {
+      "delta_pp": 0,
+      "ci95_pp": [
+       0,
+       0
+      ],
+      "n": 60
+     }
+    },
+    "ur10e": {
+     "precheck": "infeasible",
+     "precheck_reasons": [
+      "unreachable: reach 158.4 cm, carry 143.8 cm, retreat 191.3 cm",
+      "collides: reach 5.1 cm, carry 7.9 cm, retreat 6.6 cm (forearm_link, g_base, g_left_coupler, g_left_follower, g_left_pad, g_left_spring_link, g_right_follower, g_right_pad, upper_arm_link, wrist_2_link)"
+     ],
+     "conditions": {
+      "raw": {
+       "oracle": "none",
+       "n": 60,
+       "successes": 0,
+       "success_rate": 0.0,
+       "wilson_95": [
+        0.0,
+        0.06017185214208986
+       ],
+       "failure_reasons": {
+        "no_lift": 60,
+        "not_released_and_settled_at_goal": 60,
+        "forbidden_collision": 59
+       }
+      },
+      "stack": {
+       "oracle": "none",
+       "n": 60,
+       "successes": 0,
+       "success_rate": 0.0,
+       "wilson_95": [
+        0.0,
+        0.06017185214208986
+       ],
+       "failure_reasons": {
+        "no_lift": 58,
+        "not_released_and_settled_at_goal": 60,
+        "forbidden_collision": 60,
+        "fallen": 3
+       }
+      }
+     },
+     "gap_stack_minus_raw": {
+      "delta_pp": 0,
+      "ci95_pp": [
+       0,
+       0
+      ],
+      "n": 60
+     }
+    }
+   }
+  },
+  {
+   "estimator": "rtmw3d",
+   "demo": "pexels_8135753_notepad",
+   "jitter_mm": 114.0300529149692,
+   "event_err": {
+    "grasp": 2,
+    "release": 2
+   },
+   "fps": 27.483883450857597,
+   "robots": {
+    "ur5e": {
+     "precheck": "infeasible",
+     "precheck_reasons": [
+      "unreachable: reach 15.4 cm, carry 137.0 cm, retreat 133.9 cm",
+      "collides: reach 7.0 cm, carry 7.4 cm, retreat 1.6 cm (forearm_link, g_base, g_base_mount, g_left_follower, g_left_pad, g_left_spring_link, g_right_coupler, g_right_follower, g_right_spring_link, upper_arm_link, wrist_3_link)"
+     ],
+     "conditions": {
+      "raw": {
+       "oracle": "none",
+       "n": 60,
+       "successes": 0,
+       "success_rate": 0.0,
+       "wilson_95": [
+        0.0,
+        0.06017185214208986
+       ],
+       "failure_reasons": {
+        "no_lift": 59,
+        "not_released_and_settled_at_goal": 60,
+        "forbidden_collision": 59,
+        "fallen": 1
+       }
+      },
+      "stack": {
+       "oracle": "none",
+       "n": 60,
+       "successes": 0,
+       "success_rate": 0.0,
+       "wilson_95": [
+        0.0,
+        0.06017185214208986
+       ],
+       "failure_reasons": {
+        "no_lift": 50,
+        "not_released_and_settled_at_goal": 60,
+        "forbidden_collision": 60,
+        "fallen": 12
+       }
+      }
+     },
+     "gap_stack_minus_raw": {
+      "delta_pp": 0,
+      "ci95_pp": [
+       0,
+       0
+      ],
+      "n": 60
+     }
+    },
+    "ur10e": {
+     "precheck": "infeasible",
+     "precheck_reasons": [
+      "unreachable: reach 45.3 cm, carry 119.7 cm, retreat 111.6 cm",
+      "collides: reach 6.6 cm, carry 6.7 cm (forearm_link, g_base, g_left_coupler, g_left_follower, g_left_pad, g_left_spring_link, g_right_coupler, g_right_follower, g_right_spring_link, upper_arm_link, wrist_2_link, wrist_3_link)"
+     ],
+     "conditions": {
+      "raw": {
+       "oracle": "none",
+       "n": 60,
+       "successes": 0,
+       "success_rate": 0.0,
+       "wilson_95": [
+        0.0,
+        0.06017185214208986
+       ],
+       "failure_reasons": {
+        "no_lift": 59,
+        "not_released_and_settled_at_goal": 60,
+        "forbidden_collision": 38,
+        "fallen": 1
+       }
+      },
+      "stack": {
+       "oracle": "none",
+       "n": 60,
+       "successes": 0,
+       "success_rate": 0.0,
+       "wilson_95": [
+        0.0,
+        0.06017185214208986
+       ],
+       "failure_reasons": {
+        "no_lift": 46,
+        "not_released_and_settled_at_goal": 60,
+        "forbidden_collision": 60,
+        "fallen": 12
+       }
+      }
+     },
+     "gap_stack_minus_raw": {
+      "delta_pp": 0,
+      "ci95_pp": [
+       0,
+       0
+      ],
+      "n": 60
+     }
+    }
+   }
+  },
+  {
+   "estimator": "rtmw3d",
+   "demo": "pexels_7205253_woman_box",
+   "jitter_mm": 422.0243677991668,
+   "event_err": {
+    "grasp": 10,
+    "release": 52
+   },
+   "fps": 26.978673223465012,
+   "robots": {
+    "ur5e": {
+     "precheck": "infeasible",
+     "precheck_reasons": [
+      "unreachable: reach 438.4 cm, carry 243.1 cm, retreat 248.9 cm",
+      "collides: reach 7.2 cm, carry 5.4 cm, retreat 5.9 cm (forearm_link, g_base, g_base_mount, g_left_coupler, g_left_follower, g_left_pad, g_left_spring_link, g_right_coupler, g_right_follower, g_right_pad, g_right_spring_link, upper_arm_link, wrist_1_link, wrist_2_link)"
+     ],
+     "conditions": {
+      "raw": {
+       "oracle": "none",
+       "n": 60,
+       "successes": 0,
+       "success_rate": 0.0,
+       "wilson_95": [
+        0.0,
+        0.06017185214208986
+       ],
+       "failure_reasons": {
+        "no_lift": 59,
+        "not_released_and_settled_at_goal": 60,
+        "forbidden_collision": 60,
+        "fallen": 6
+       }
+      },
+      "stack": {
+       "oracle": "none",
+       "n": 60,
+       "successes": 0,
+       "success_rate": 0.0,
+       "wilson_95": [
+        0.0,
+        0.06017185214208986
+       ],
+       "failure_reasons": {
+        "no_lift": 58,
+        "not_released_and_settled_at_goal": 60,
+        "forbidden_collision": 60,
+        "fallen": 9
+       }
+      }
+     },
+     "gap_stack_minus_raw": {
+      "delta_pp": 0,
+      "ci95_pp": [
+       0,
+       0
+      ],
+      "n": 60
+     }
+    },
+    "ur10e": {
+     "precheck": "infeasible",
+     "precheck_reasons": [
+      "unreachable: reach 438.3 cm, carry 240.2 cm, retreat 250.9 cm",
+      "collides: reach 6.7 cm, carry 7.7 cm, retreat 7.5 cm (forearm_link, g_base, g_left_coupler, g_left_follower, g_left_pad, g_left_spring_link, g_right_coupler, g_right_follower, g_right_pad, g_right_spring_link, upper_arm_link, wrist_1_link, wrist_2_link, wrist_3_link)"
+     ],
+     "conditions": {
+      "raw": {
+       "oracle": "none",
+       "n": 60,
+       "successes": 0,
+       "success_rate": 0.0,
+       "wilson_95": [
+        0.0,
+        0.06017185214208986
+       ],
+       "failure_reasons": {
+        "no_lift": 58,
+        "not_released_and_settled_at_goal": 60,
+        "forbidden_collision": 60,
+        "fallen": 3
+       }
+      },
+      "stack": {
+       "oracle": "none",
+       "n": 60,
+       "successes": 0,
+       "success_rate": 0.0,
+       "wilson_95": [
+        0.0,
+        0.06017185214208986
+       ],
+       "failure_reasons": {
+        "no_lift": 58,
+        "not_released_and_settled_at_goal": 60,
+        "forbidden_collision": 60,
+        "fallen": 3
+       }
+      }
+     },
+     "gap_stack_minus_raw": {
+      "delta_pp": 0,
+      "ci95_pp": [
+       0,
+       0
+      ],
+      "n": 60
+     }
+    }
+   }
+  },
+  {
+   "estimator": "rtmw3d",
+   "demo": "user_take1_right",
+   "jitter_mm": 17.969381803770567,
+   "event_err": {
+    "grasp": null,
+    "release": null,
+    "error": "ValueError"
+   },
+   "fps": 26.57921255190453,
+   "robots": {
+    "ur5e": {
+     "precheck": "feasible",
+     "precheck_reasons": [],
+     "conditions": {
+      "raw": {
+       "oracle": "none",
+       "n": 60,
+       "successes": 27,
+       "success_rate": 0.45,
+       "wilson_95": [
+        0.3309365440675524,
+        0.5750806411466566
+       ],
+       "failure_reasons": {
+        "no_lift": 26,
+        "not_released_and_settled_at_goal": 33
+       }
+      },
+      "stack": {
+       "oracle": "none",
+       "n": 60,
+       "successes": 58,
+       "success_rate": 0.9666666666666667,
+       "wilson_95": [
+        0.886362257256914,
+        0.9908106807438021
+       ],
+       "failure_reasons": {
+        "not_released_and_settled_at_goal": 2
+       }
+      }
+     },
+     "gap_stack_minus_raw": {
+      "delta_pp": 51.66666666666667,
+      "ci95_pp": [
+       40.0,
+       63.33333333333333
+      ],
+      "n": 60
+     }
+    },
+    "ur10e": {
+     "precheck": "feasible",
+     "precheck_reasons": [],
+     "conditions": {
+      "raw": {
+       "oracle": "none",
+       "n": 60,
+       "successes": 32,
+       "success_rate": 0.5333333333333333,
+       "wilson_95": [
+        0.4089342702715789,
+        0.6537209395856151
+       ],
+       "failure_reasons": {
+        "no_lift": 23,
+        "not_released_and_settled_at_goal": 28
+       }
+      },
+      "stack": {
+       "oracle": "none",
+       "n": 60,
+       "successes": 60,
+       "success_rate": 1.0,
+       "wilson_95": [
+        0.93982814785791,
+        0.9999999999999998
+       ],
+       "failure_reasons": {}
+      }
+     },
+     "gap_stack_minus_raw": {
+      "delta_pp": 46.666666666666664,
+      "ci95_pp": [
+       35.0,
+       60.0
+      ],
+      "n": 60
+     }
+    }
+   }
+  }
+ ]
+}

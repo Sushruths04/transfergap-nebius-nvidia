@@ -1,0 +1,40 @@
+{
+ "labels": "transfergap/runs/cosmos_critic_v2/scored/labels.jsonl",
+ "split": "v2",
+ "seeds": [
+  2020,
+  2079
+ ],
+ "cameras": [
+  "close"
+ ],
+ "n": 122,
+ "per_stage": {
+  "none": 40,
+  "place": 36,
+  "grasp": 46
+ },
+ "static_controls": 6,
+ "per_robot_stage": {
+  "ur5e:none": 16,
+  "ur10e:place": 20,
+  "ur10e:none": 24,
+  "ur5e:grasp": 22,
+  "ur10e:grasp": 24,
+  "ur5e:place": 16
+ },
+ "distinct_robot_seed_pairs_per_stage": {
+  "none": 40,
+  "grasp": 45,
+  "place": 19
+ },
+ "candidate_pool_per_stage": {
+  "ur5e:grasp": 107,
+  "ur5e:none": 237,
+  "ur5e:place": 16,
+  "ur10e:grasp": 96,
+  "ur10e:none": 244,
+  "ur10e:place": 20
+ },
+ "candidate_pool_n": 720
+}

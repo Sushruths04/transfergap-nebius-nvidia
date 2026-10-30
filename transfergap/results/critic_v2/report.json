@@ -1,0 +1,78 @@
+{
+ "zero_shot_test": {
+  "n": 240,
+  "positives": 191,
+  "accuracy": 0.7958,
+  "balanced_accuracy": 0.5,
+  "true_positive_rate": 1.0,
+  "true_negative_rate": 0.0,
+  "predicted_success_rate": 1.0
+ },
+ "zero_shot_seconds": 220,
+ "val_ep0": {
+  "n": 120,
+  "positives": 100,
+  "accuracy": 0.95,
+  "balanced_accuracy": 0.85,
+  "true_positive_rate": 1.0,
+  "true_negative_rate": 0.7,
+  "predicted_success_rate": 0.8833,
+  "train_loss": 0.231
+ },
+ "val_ep1": {
+  "n": 120,
+  "positives": 100,
+  "accuracy": 0.95,
+  "balanced_accuracy": 0.85,
+  "true_positive_rate": 1.0,
+  "true_negative_rate": 0.7,
+  "predicted_success_rate": 0.8833,
+  "train_loss": 0.119
+ },
+ "kept_epoch": 0,
+ "fine_tuned_test": {
+  "n": 240,
+  "positives": 191,
+  "accuracy": 0.9625,
+  "balanced_accuracy": 0.9082,
+  "true_positive_rate": 1.0,
+  "true_negative_rate": 0.8163,
+  "predicted_success_rate": 0.8333
+ },
+ "zero_shot_test_unseen_user_demo": {
+  "n": 0,
+  "positives": 0,
+  "accuracy": 0.0,
+  "balanced_accuracy": 0.0,
+  "true_positive_rate": 0.0,
+  "true_negative_rate": 0.0,
+  "predicted_success_rate": 0.0
+ },
+ "zero_shot_test_seen_demos": {
+  "n": 240,
+  "positives": 191,
+  "accuracy": 0.7958,
+  "balanced_accuracy": 0.5,
+  "true_positive_rate": 1.0,
+  "true_negative_rate": 0.0,
+  "predicted_success_rate": 1.0
+ },
+ "fine_tuned_test_unseen_user_demo": {
+  "n": 0,
+  "positives": 0,
+  "accuracy": 0.0,
+  "balanced_accuracy": 0.0,
+  "true_positive_rate": 0.0,
+  "true_negative_rate": 0.0,
+  "predicted_success_rate": 0.0
+ },
+ "fine_tuned_test_seen_demos": {
+  "n": 240,
+  "positives": 191,
+  "accuracy": 0.9625,
+  "balanced_accuracy": 0.9082,
+  "true_positive_rate": 1.0,
+  "true_negative_rate": 0.8163,
+  "predicted_success_rate": 0.8333
+ }
+}

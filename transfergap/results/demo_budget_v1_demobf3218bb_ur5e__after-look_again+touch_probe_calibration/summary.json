@@ -1,0 +1,250 @@
+{
+ "kind": "demo_budget",
+ "robot": "ur5e",
+ "demo": {
+  "kind": "file",
+  "path": "runs/demos/live/user_take1_right.npz",
+  "sha256": "bf3218bbaf7345cb7fcaa09bfacc1de3049b527b40a7092d514e1532ffead2f8",
+  "tag": "demobf3218bb"
+ },
+ "base_corrections": [
+  "look_again",
+  "touch_probe_calibration"
+ ],
+ "dev": {
+  "robot": "ur5e",
+  "demo": {
+   "kind": "file",
+   "path": "runs/demos/live/user_take1_right.npz",
+   "sha256": "bf3218bbaf7345cb7fcaa09bfacc1de3049b527b40a7092d514e1532ffead2f8",
+   "tag": "demobf3218bb"
+  },
+  "base_corrections": [
+   "look_again",
+   "touch_probe_calibration"
+  ],
+  "seeds": [
+   0,
+   59
+  ],
+  "conditions": {
+   "full": {
+    "oracle": "none",
+    "n": 60,
+    "successes": 59,
+    "success_rate": 0.9833333333333333,
+    "wilson_95": [
+     0.9114487027240993,
+     0.9970518402052136
+    ],
+    "failure_reasons": {
+     "no_lift": 1,
+     "not_released_and_settled_at_goal": 1
+    }
+   },
+   "oracle_perception": {
+    "oracle": "perception",
+    "n": 60,
+    "successes": 60,
+    "success_rate": 1.0,
+    "wilson_95": [
+     0.93982814785791,
+     0.9999999999999998
+    ],
+    "failure_reasons": {}
+   },
+   "oracle_calibration": {
+    "oracle": "calibration",
+    "n": 60,
+    "successes": 58,
+    "success_rate": 0.9666666666666667,
+    "wilson_95": [
+     0.886362257256914,
+     0.9908106807438021
+    ],
+    "failure_reasons": {
+     "no_lift": 2,
+     "not_released_and_settled_at_goal": 2
+    }
+   },
+   "oracle_timing": {
+    "oracle": "timing",
+    "n": 60,
+    "successes": 53,
+    "success_rate": 0.8833333333333333,
+    "wilson_95": [
+     0.7782121197582914,
+     0.9423227935994396
+    ],
+    "failure_reasons": {
+     "no_lift": 7,
+     "not_released_and_settled_at_goal": 7
+    }
+   },
+   "oracle_all": {
+    "oracle": "all",
+    "n": 60,
+    "successes": 60,
+    "success_rate": 1.0,
+    "wilson_95": [
+     0.93982814785791,
+     0.9999999999999998
+    ],
+    "failure_reasons": {}
+   }
+  },
+  "style": {
+   "full": {
+    "n_scored": 60,
+    "path_rmse_mean_m": 0.02964986322964058,
+    "approach_angle_deg": 112.27610299147234,
+    "lift_height_err_m": 0.001576499410025794,
+    "speed_profile_corr": -0.11786804619821135,
+    "path_rmse_median_m": 0.029575926223409196,
+    "n_diverged": 0
+   },
+   "oracle_perception": {
+    "n_scored": 60,
+    "path_rmse_mean_m": 0.02939889985196647,
+    "approach_angle_deg": 112.27894532494608,
+    "lift_height_err_m": 0.0016225476766374763,
+    "speed_profile_corr": -0.11785681450841208,
+    "path_rmse_median_m": 0.029315656675461405,
+    "n_diverged": 0
+   },
+   "oracle_calibration": {
+    "n_scored": 60,
+    "path_rmse_mean_m": 0.029383916481705553,
+    "approach_angle_deg": 112.31372261923698,
+    "lift_height_err_m": 0.001494180691404945,
+    "speed_profile_corr": -0.11777659485552633,
+    "path_rmse_median_m": 0.029402996123637323,
+    "n_diverged": 0
+   },
+   "oracle_timing": {
+    "n_scored": 60,
+    "path_rmse_mean_m": 0.018037759995597993,
+    "approach_angle_deg": 91.21791237349849,
+    "lift_height_err_m": 0.0022498988881722273,
+    "speed_profile_corr": -0.11276167626437002,
+    "path_rmse_median_m": 0.01448262409872228,
+    "n_diverged": 0
+   },
+   "oracle_all": {
+    "n_scored": 60,
+    "path_rmse_mean_m": 0.012559772095794425,
+    "approach_angle_deg": 95.21755111643637,
+    "lift_height_err_m": 0.0009793501483852712,
+    "speed_profile_corr": -0.11280282846308858,
+    "path_rmse_median_m": 0.012531639290495241,
+    "n_diverged": 0
+   }
+  },
+  "success_budget": {
+   "perception": {
+    "delta_pp": 1.6666666666666667,
+    "ci95_pp": [
+     0,
+     5.0
+    ],
+    "n": 60
+   },
+   "calibration": {
+    "delta_pp": -1.6666666666666667,
+    "ci95_pp": [
+     -6.666666666666667,
+     3.3333333333333335
+    ],
+    "n": 60
+   },
+   "timing": {
+    "delta_pp": -10.0,
+    "ci95_pp": [
+     -18.333333333333332,
+     -3.3333333333333335
+    ],
+    "n": 60
+   }
+  },
+  "style_budget": {
+   "perception": {
+    "path_rmse_m": {
+     "mean": 0.0002509633776741182,
+     "ci95": [
+      -5.028420134969646e-06,
+      0.0004944120887177262
+     ],
+     "n": 60,
+     "metric": "path_rmse_mean_m",
+     "sign": "a minus b"
+    },
+    "speed_profile_corr": {
+     "mean": 1.123168979927346e-05,
+     "ci95": [
+      -0.00010937053581510059,
+      0.0001264962386187306
+     ],
+     "n": 60,
+     "metric": "speed_profile_corr",
+     "sign": "a minus b"
+    }
+   },
+   "calibration": {
+    "path_rmse_m": {
+     "mean": 0.00026594674793502823,
+     "ci95": [
+      0.00016126835224321577,
+      0.0003776490060153008
+     ],
+     "n": 60,
+     "metric": "path_rmse_mean_m",
+     "sign": "a minus b"
+    },
+    "speed_profile_corr": {
+     "mean": 9.145134268500147e-05,
+     "ci95": [
+      1.731521881679418e-05,
+      0.0002010129450925839
+     ],
+     "n": 60,
+     "metric": "speed_profile_corr",
+     "sign": "a minus b"
+    }
+   },
+   "timing": {
+    "path_rmse_m": {
+     "mean": 0.011612103234042583,
+     "ci95": [
+      0.009013980448981235,
+      0.013836130630362941
+     ],
+     "n": 60,
+     "metric": "path_rmse_mean_m",
+     "sign": "a minus b"
+    },
+    "speed_profile_corr": {
+     "mean": 0.005106369933841327,
+     "ci95": [
+      0.004998335992859091,
+      0.005224489585182006
+     ],
+     "n": 60,
+     "metric": "speed_profile_corr",
+     "sign": "a minus b"
+    }
+   }
+  },
+  "oracle_all": {
+   "delta_pp": 1.6666666666666667,
+   "ci95_pp": [
+    0,
+    5.0
+   ],
+   "n": 60
+  },
+  "chosen_component": "none",
+  "chosen_correction": null,
+  "choice_rule": "argmax success budget over components with an unused fix [] on dev; ties -> pipeline order; timing fixes climb ['speed_cap_3', 'speed_cap_2', 'speed_cap_1.5']"
+ },
+ "heldout": null
+}

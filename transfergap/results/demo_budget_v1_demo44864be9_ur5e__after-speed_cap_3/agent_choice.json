@@ -1,0 +1,35 @@
+{
+ "model": "nvidia/nemotron-3-super-120b-a12b",
+ "menu": [
+  "look_again",
+  "touch_probe_calibration",
+  "speed_cap_2",
+  "safe_path"
+ ],
+ "rule_choice": "safe_path_v2",
+ "valid": true,
+ "agent_choice": "speed_cap_2",
+ "rationale": "Capping speed further reduces forbidden collisions and improves settling/release, while the timing fix already shows the best style preservation (largest path RMSE reduction and positive speed-profile correlation).",
+ "response_id": "chatcmpl-8d33d2da535b926c",
+ "latency_s": 3.5319782990009116,
+ "usage": {
+  "completion_tokens": 329,
+  "prompt_tokens": 839,
+  "total_tokens": 1168,
+  "completion_tokens_details": {
+   "accepted_prediction_tokens": null,
+   "audio_tokens": null,
+   "reasoning_tokens": 270,
+   "rejected_prediction_tokens": null
+  },
+  "prompt_tokens_details": {
+   "audio_tokens": null,
+   "cached_tokens": 0,
+   "created_cache_tokens": 0,
+   "multimodal_tokens": null
+  },
+  "prompt_cache_hit_tokens": 0,
+  "prompt_cache_miss_tokens": 839
+ },
+ "agrees_with_rule": false
+}

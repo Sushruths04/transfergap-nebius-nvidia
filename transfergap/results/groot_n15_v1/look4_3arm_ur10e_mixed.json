@@ -1,0 +1,280 @@
+{
+ "ckpt": "/ws/transfergap/groot_ft_3arm",
+ "robot": "ur10e",
+ "exec": "ensemble",
+ "block_half": null,
+ "n_distractors": 0,
+ "mixed": true,
+ "n": 30,
+ "success": 2,
+ "ci95": [
+  0.018,
+  0.213
+ ],
+ "per_seed": [
+  {
+   "seed": 6100,
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ],
+   "seconds": 30.1
+  },
+  {
+   "seed": 6101,
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ],
+   "seconds": 29.7
+  },
+  {
+   "seed": 6102,
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ],
+   "seconds": 29.7
+  },
+  {
+   "seed": 6103,
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ],
+   "seconds": 29.6
+  },
+  {
+   "seed": 6104,
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ],
+   "seconds": 29.7
+  },
+  {
+   "seed": 6105,
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ],
+   "seconds": 29.8
+  },
+  {
+   "seed": 6106,
+   "success": false,
+   "reasons": [
+    "not_released_and_settled_at_goal"
+   ],
+   "seconds": 29.7
+  },
+  {
+   "seed": 6107,
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ],
+   "seconds": 29.8
+  },
+  {
+   "seed": 6108,
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ],
+   "seconds": 28.8
+  },
+  {
+   "seed": 6109,
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ],
+   "seconds": 27.4
+  },
+  {
+   "seed": 6110,
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ],
+   "seconds": 33.1
+  },
+  {
+   "seed": 6111,
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ],
+   "seconds": 44.6
+  },
+  {
+   "seed": 6112,
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ],
+   "seconds": 44.6
+  },
+  {
+   "seed": 6113,
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ],
+   "seconds": 44.7
+  },
+  {
+   "seed": 6114,
+   "success": true,
+   "reasons": [],
+   "seconds": 44.8
+  },
+  {
+   "seed": 6115,
+   "success": true,
+   "reasons": [],
+   "seconds": 44.6
+  },
+  {
+   "seed": 6116,
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ],
+   "seconds": 44.5
+  },
+  {
+   "seed": 6117,
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal",
+    "forbidden_collision"
+   ],
+   "seconds": 44.7
+  },
+  {
+   "seed": 6118,
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ],
+   "seconds": 44.8
+  },
+  {
+   "seed": 6119,
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ],
+   "seconds": 44.7
+  },
+  {
+   "seed": 6120,
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ],
+   "seconds": 44.7
+  },
+  {
+   "seed": 6121,
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ],
+   "seconds": 44.6
+  },
+  {
+   "seed": 6122,
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ],
+   "seconds": 41.8
+  },
+  {
+   "seed": 6123,
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ],
+   "seconds": 29.7
+  },
+  {
+   "seed": 6124,
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ],
+   "seconds": 29.7
+  },
+  {
+   "seed": 6125,
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ],
+   "seconds": 29.8
+  },
+  {
+   "seed": 6126,
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ],
+   "seconds": 29.7
+  },
+  {
+   "seed": 6127,
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ],
+   "seconds": 29.7
+  },
+  {
+   "seed": 6128,
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ],
+   "seconds": 29.8
+  },
+  {
+   "seed": 6129,
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ],
+   "seconds": 29.2
+  }
+ ]
+}

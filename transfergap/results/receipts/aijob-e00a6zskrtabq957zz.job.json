@@ -1,0 +1,44 @@
+{
+  "metadata": {
+    "id": "aijob-e00a6zskrtabq957zz",
+    "parent_id": "project-e00rt2zapr004vtt8961b5",
+    "name": "tg-demo-repro-1002-0451",
+    "resource_version": "1",
+    "created_at": "2026-10-02T04:51:49.219138Z",
+    "updated_at": "2026-10-02T04:51:49.219138Z"
+  },
+  "spec": {
+    "image": "cr.eu-north1.nebius.cloud/e00x55kgpmznfqapgg/transfergap-sweep:11eb8b5",
+    "environment_variables": [
+      {
+        "name": "TG_MODE",
+        "value": "demo_repro"
+      },
+      {
+        "name": "TG_PROCS",
+        "value": "16"
+      }
+    ],
+    "platform": "cpu-d3",
+    "preset": "16vcpu-64gb",
+    "disk": {
+      "type": "NETWORK_SSD",
+      "size_bytes": "53687091200"
+    },
+    "subnet_id": "vpcsubnet-e00qys30ryvavtj936",
+    "timeout": "3600s"
+  },
+  "status": {
+    "instances": [
+      {
+        "state": "COMPLETED",
+        "compute_instance_id": "computeinstance-e00k90v61dn4fmg654",
+        "compute_instance_state": "RUNNING",
+        "private_ip": "10.0.0.0"
+      }
+    ],
+    "state": "COMPLETED",
+    "started_at": "2026-10-02T04:54:14.309688030Z",
+    "finished_at": "2026-10-02T04:54:38.457500919Z"
+  }
+}

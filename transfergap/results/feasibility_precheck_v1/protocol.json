@@ -1,0 +1,296 @@
+{
+ "protocol": "feasibility_precheck_v1",
+ "frozen_before_run": true,
+ "question": "Does a CPU-only kinematic pre-check of the copied human path (IK error + table/tray penetration, no rollout) flag the demo/robot pairs whose style was infeasible in simulation, and pass the feasible ones?",
+ "thresholds": {
+  "IK_ERR_MAX_M": 0.02,
+  "PENETRATION_MAX_M": 0.005
+ },
+ "threshold_rationale": "2 cm = half the 4 cm block (a grasp commanded further away cannot close on it); 5 mm = well beyond MuJoCo's resting-contact overlap (~1 mm). Fixed before any validation case was run (code was smoke-tested on synthetic demos 7 and 8 only, which are not cases).",
+ "method": "transfergap/sim/feasibility.py: retargeted path (demo.style.robot_path) for the nominal block and the 4 corners of the seed jitter square; converged DLS IK per point (controller objective, tool down, rot weight 0.6), warm-started; mj_collision of robot geoms vs table/tray at each IK pose; carried block bottom vs surface on the carry leg. Verdict uses reach/carry/retreat (the align move from home is robot-side, reported only). G1: g1/plan_reach.plan_style IK error with the frozen g1_contact_v1 calibration args (IK only, no collision check).",
+ "labels": "feasible / infeasible from the earlier simulated outcomes (source folder per case). safe_path_v2 cases: feasible if >= 45/60 held-out with their stack, else ambiguous (not scored). 'prediction' cases have no simulated ground truth and are not scored.",
+ "label_caveat": "the person-1 raw markers/orange/notepad labels come from the 4-fix stack (perception, calibration, timing corrected, i.e. near-oracle), not from a strict oracle_all run.",
+ "metric": "agreement = predicted verdict == label over scored cases; confusion matrix reported; every case reported",
+ "runner": "PYTHONPATH=. .venv/bin/python -m transfergap.sim.feasibility --protocol results/feasibility_precheck_v1/protocol.json --sonic-root <GR00T-WholeBodyControl checkout with the g1 model files>",
+ "cases": [
+  {
+   "name": "synthetic 0",
+   "demo": "synthetic:0",
+   "variant": "raw",
+   "robot": "ur5e",
+   "known": "oracle_all 60/60 (dev)",
+   "label": "feasible",
+   "source": "results/demo_budget_v1_syn0_ur5e"
+  },
+  {
+   "name": "person 1 notebook",
+   "demo": "runs/demos/pexels_8135753_notebook.npz",
+   "variant": "raw",
+   "robot": "ur5e",
+   "known": "oracle_all 60/60 (dev)",
+   "label": "feasible",
+   "source": "results/demo_budget_v1_demo1bc4be60_ur5e"
+  },
+  {
+   "name": "synthetic 0",
+   "demo": "synthetic:0",
+   "variant": "raw",
+   "robot": "ur10e",
+   "known": "oracle_all 60/60 (dev)",
+   "label": "feasible",
+   "source": "results/demo_budget_v1_syn0_ur10e"
+  },
+  {
+   "name": "person 1 notebook",
+   "demo": "runs/demos/pexels_8135753_notebook.npz",
+   "variant": "raw",
+   "robot": "ur10e",
+   "known": "oracle_all 60/60 (dev)",
+   "label": "feasible",
+   "source": "results/demo_budget_v1_demo1bc4be60_ur10e"
+  },
+  {
+   "name": "person 2 box",
+   "demo": "runs/demos/pexels_7205253_woman_box_v2.npz",
+   "variant": "raw",
+   "robot": "ur5e",
+   "known": "oracle_all 60/60 (dev)",
+   "label": "feasible",
+   "source": "results/demo_budget_v1_demo5f8bdc01_ur5e"
+  },
+  {
+   "name": "person 2 box",
+   "demo": "runs/demos/pexels_7205253_woman_box_v2.npz",
+   "variant": "raw",
+   "robot": "ur10e",
+   "known": "oracle_all 0/60 (dev), forbidden collisions",
+   "label": "infeasible",
+   "source": "results/demo_budget_v1_demo5f8bdc01_ur10e"
+  },
+  {
+   "name": "HiPHI box lift",
+   "demo": "runs/demos/Cause_motion-lift_0041.npz",
+   "variant": "raw",
+   "robot": "ur5e",
+   "known": "oracle_all 1/60 (dev)",
+   "label": "infeasible",
+   "source": "results/demo_budget_v1_demofbc7ecf3_ur5e"
+  },
+  {
+   "name": "HiPHI box lift",
+   "demo": "runs/demos/Cause_motion-lift_0041.npz",
+   "variant": "raw",
+   "robot": "ur10e",
+   "known": "oracle_all 0/60 (dev)",
+   "label": "infeasible",
+   "source": "results/demo_budget_v1_demofbc7ecf3_ur10e"
+  },
+  {
+   "name": "person 1 markers",
+   "demo": "runs/demos/pexels_8135753_markers.npz",
+   "variant": "raw",
+   "robot": "ur5e",
+   "known": "0/60 held-out with the 4-fix stack (perception, calibration and timing corrected)",
+   "label": "infeasible",
+   "source": "results/demo_generalization_v1"
+  },
+  {
+   "name": "person 1 markers",
+   "demo": "runs/demos/pexels_8135753_markers.npz",
+   "variant": "raw",
+   "robot": "ur10e",
+   "known": "0/60 held-out with the 4-fix stack (perception, calibration and timing corrected)",
+   "label": "infeasible",
+   "source": "results/demo_generalization_v1"
+  },
+  {
+   "name": "person 1 orange marker",
+   "demo": "runs/demos/pexels_8135753_orange_marker.npz",
+   "variant": "raw",
+   "robot": "ur5e",
+   "known": "0/60 held-out with the 4-fix stack (perception, calibration and timing corrected)",
+   "label": "infeasible",
+   "source": "results/demo_generalization_v1"
+  },
+  {
+   "name": "person 1 orange marker",
+   "demo": "runs/demos/pexels_8135753_orange_marker.npz",
+   "variant": "raw",
+   "robot": "ur10e",
+   "known": "0/60 held-out with the 4-fix stack (perception, calibration and timing corrected)",
+   "label": "infeasible",
+   "source": "results/demo_generalization_v1"
+  },
+  {
+   "name": "person 1 notepad",
+   "demo": "runs/demos/pexels_8135753_notepad.npz",
+   "variant": "raw",
+   "robot": "ur5e",
+   "known": "0/60 held-out with the 4-fix stack (perception, calibration and timing corrected)",
+   "label": "infeasible",
+   "source": "results/demo_generalization_v1"
+  },
+  {
+   "name": "person 1 notepad",
+   "demo": "runs/demos/pexels_8135753_notepad.npz",
+   "variant": "raw",
+   "robot": "ur10e",
+   "known": "0/60 held-out with the 4-fix stack (perception, calibration and timing corrected)",
+   "label": "infeasible",
+   "source": "results/demo_generalization_v1"
+  },
+  {
+   "name": "person 1 notebook",
+   "demo": "runs/demos/pexels_8135753_notebook.npz",
+   "variant": "safe_path_v2",
+   "robot": "ur5e",
+   "known": "57/60 held-out with its stack",
+   "label": "feasible",
+   "source": "results/demo_generalization_v5"
+  },
+  {
+   "name": "person 1 notebook",
+   "demo": "runs/demos/pexels_8135753_notebook.npz",
+   "variant": "safe_path_v2",
+   "robot": "ur10e",
+   "known": "60/60 held-out with its stack",
+   "label": "feasible",
+   "source": "results/demo_generalization_v5"
+  },
+  {
+   "name": "person 1 markers",
+   "demo": "runs/demos/pexels_8135753_markers.npz",
+   "variant": "safe_path_v2",
+   "robot": "ur5e",
+   "known": "51/60 held-out with its stack",
+   "label": "feasible",
+   "source": "results/demo_generalization_v5"
+  },
+  {
+   "name": "person 1 markers",
+   "demo": "runs/demos/pexels_8135753_markers.npz",
+   "variant": "safe_path_v2",
+   "robot": "ur10e",
+   "known": "25/60 held-out with its stack",
+   "label": "ambiguous",
+   "source": "results/demo_generalization_v5"
+  },
+  {
+   "name": "person 1 orange marker",
+   "demo": "runs/demos/pexels_8135753_orange_marker.npz",
+   "variant": "safe_path_v2",
+   "robot": "ur5e",
+   "known": "46/60 held-out with its stack",
+   "label": "feasible",
+   "source": "results/demo_generalization_v5"
+  },
+  {
+   "name": "person 1 orange marker",
+   "demo": "runs/demos/pexels_8135753_orange_marker.npz",
+   "variant": "safe_path_v2",
+   "robot": "ur10e",
+   "known": "58/60 held-out with its stack",
+   "label": "feasible",
+   "source": "results/demo_generalization_v5"
+  },
+  {
+   "name": "person 1 notepad",
+   "demo": "runs/demos/pexels_8135753_notepad.npz",
+   "variant": "safe_path_v2",
+   "robot": "ur5e",
+   "known": "58/60 held-out with its stack",
+   "label": "feasible",
+   "source": "results/demo_generalization_v5"
+  },
+  {
+   "name": "person 1 notepad",
+   "demo": "runs/demos/pexels_8135753_notepad.npz",
+   "variant": "safe_path_v2",
+   "robot": "ur10e",
+   "known": "58/60 held-out with its stack",
+   "label": "feasible",
+   "source": "results/demo_generalization_v5"
+  },
+  {
+   "name": "person 2 box",
+   "demo": "runs/demos/pexels_7205253_woman_box_v2.npz",
+   "variant": "safe_path_v2",
+   "robot": "ur5e",
+   "known": "60/60 held-out with its stack",
+   "label": "feasible",
+   "source": "results/demo_generalization_v5"
+  },
+  {
+   "name": "person 2 box",
+   "demo": "runs/demos/pexels_7205253_woman_box_v2.npz",
+   "variant": "safe_path_v2",
+   "robot": "ur10e",
+   "known": "55/60 held-out with its stack",
+   "label": "feasible",
+   "source": "results/demo_generalization_v5"
+  },
+  {
+   "name": "HiPHI box lift",
+   "demo": "runs/demos/Cause_motion-lift_0041.npz",
+   "variant": "safe_path_v2",
+   "robot": "ur5e",
+   "known": "not run",
+   "label": "prediction",
+   "source": "-"
+  },
+  {
+   "name": "HiPHI box lift",
+   "demo": "runs/demos/Cause_motion-lift_0041.npz",
+   "variant": "safe_path_v2",
+   "robot": "ur10e",
+   "known": "not run",
+   "label": "prediction",
+   "source": "-"
+  },
+  {
+   "name": "person 1 notebook",
+   "demo": "runs/demos/pexels_8135753_notebook.npz",
+   "variant": "raw",
+   "robot": "g1",
+   "known": "place 20/30 at robot pace (grasp 24/30)",
+   "label": "feasible",
+   "source": "results/g1_style_v1"
+  },
+  {
+   "name": "person 2 box",
+   "demo": "runs/demos/pexels_7205253_woman_box_v2.npz",
+   "variant": "raw",
+   "robot": "g1",
+   "known": "grasp 0/30 in every condition",
+   "label": "infeasible",
+   "source": "results/g1_style_person2_v1"
+  },
+  {
+   "name": "person 2 box",
+   "demo": "runs/demos/pexels_7205253_woman_box_v2.npz",
+   "variant": "safe_path_v2",
+   "robot": "g1",
+   "known": "grasp 0/30 at robot pace",
+   "label": "infeasible",
+   "source": "results/g1_style_person2_v1"
+  },
+  {
+   "name": "person 1 notepad",
+   "demo": "runs/demos/pexels_8135753_notepad.npz",
+   "variant": "raw",
+   "robot": "g1",
+   "known": "not run",
+   "label": "prediction",
+   "source": "-"
+  },
+  {
+   "name": "HiPHI box lift",
+   "demo": "runs/demos/Cause_motion-lift_0041.npz",
+   "variant": "raw",
+   "robot": "g1",
+   "known": "not run",
+   "label": "prediction",
+   "source": "-"
+  }
+ ]
+}

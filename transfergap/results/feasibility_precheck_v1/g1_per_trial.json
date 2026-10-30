@@ -1,0 +1,125 @@
+[
+ {
+  "run": "person 1, human pace",
+  "flagged_seeds": [
+   106
+  ],
+  "flagged": {
+   "rollouts": 3,
+   "grasped": 0,
+   "placed": 0
+  },
+  "not_flagged": {
+   "rollouts": 27,
+   "grasped": 0,
+   "placed": 0
+  }
+ },
+ {
+  "run": "person 1, speed cap 3",
+  "flagged_seeds": [
+   106
+  ],
+  "flagged": {
+   "rollouts": 3,
+   "grasped": 0,
+   "placed": 0
+  },
+  "not_flagged": {
+   "rollouts": 27,
+   "grasped": 18,
+   "placed": 8
+  }
+ },
+ {
+  "run": "person 1, robot pace",
+  "flagged_seeds": [
+   106
+  ],
+  "flagged": {
+   "rollouts": 3,
+   "grasped": 0,
+   "placed": 0
+  },
+  "not_flagged": {
+   "rollouts": 27,
+   "grasped": 24,
+   "placed": 20
+  }
+ },
+ {
+  "run": "person 2, her pace",
+  "flagged_seeds": [
+   100,
+   101,
+   102,
+   103,
+   104,
+   105,
+   106,
+   107,
+   108,
+   109
+  ],
+  "flagged": {
+   "rollouts": 30,
+   "grasped": 0,
+   "placed": 0
+  },
+  "not_flagged": {
+   "rollouts": 0,
+   "grasped": 0,
+   "placed": 0
+  }
+ },
+ {
+  "run": "person 2, robot pace",
+  "flagged_seeds": [
+   100,
+   101,
+   102,
+   103,
+   104,
+   105,
+   106,
+   107,
+   108,
+   109
+  ],
+  "flagged": {
+   "rollouts": 30,
+   "grasped": 0,
+   "placed": 0
+  },
+  "not_flagged": {
+   "rollouts": 0,
+   "grasped": 0,
+   "placed": 0
+  }
+ },
+ {
+  "run": "person 2 + safe_path_v2, robot pace",
+  "flagged_seeds": [
+   100,
+   101,
+   102,
+   103,
+   104,
+   105,
+   106,
+   107,
+   108,
+   109
+  ],
+  "flagged": {
+   "rollouts": 30,
+   "grasped": 0,
+   "placed": 0
+  },
+  "not_flagged": {
+   "rollouts": 0,
+   "grasped": 0,
+   "placed": 0
+  }
+ }
+]

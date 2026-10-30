@@ -1,0 +1,156 @@
+{
+ "kind": "demo_generalization",
+ "protocol": "demo_generalization_v1",
+ "demos": {
+  "pexels_8135753_markers": {
+   "human_carry_xy_m": 0.10370731243000615,
+   "approx_stretch": 3.278457343395837,
+   "robots": {
+    "ur5e": {
+     "raw": [
+      0,
+      60
+     ],
+     "all_fixes": [
+      0,
+      60
+     ],
+     "gap": {
+      "delta_pp": 0,
+      "ci95_pp": [
+       0,
+       0
+      ],
+      "n": 60
+     },
+     "path_rmse_m": {
+      "raw": 0.13215584797337399,
+      "all_fixes": 0.04351185454149345
+     }
+    },
+    "ur10e": {
+     "raw": [
+      0,
+      60
+     ],
+     "all_fixes": [
+      0,
+      60
+     ],
+     "gap": {
+      "delta_pp": 0,
+      "ci95_pp": [
+       0,
+       0
+      ],
+      "n": 60
+     },
+     "path_rmse_m": {
+      "raw": 0.07775486067794858,
+      "all_fixes": 0.024277174143768347
+     }
+    }
+   }
+  },
+  "pexels_8135753_orange_marker": {
+   "human_carry_xy_m": 0.04834767618664798,
+   "approx_stretch": 7.032395904353655,
+   "robots": {
+    "ur5e": {
+     "raw": [
+      0,
+      60
+     ],
+     "all_fixes": [
+      0,
+      60
+     ],
+     "gap": {
+      "delta_pp": 0,
+      "ci95_pp": [
+       0,
+       0
+      ],
+      "n": 60
+     },
+     "path_rmse_m": {
+      "raw": 0.15579770451048983,
+      "all_fixes": 0.036335719611644356
+     }
+    },
+    "ur10e": {
+     "raw": [
+      0,
+      60
+     ],
+     "all_fixes": [
+      0,
+      60
+     ],
+     "gap": {
+      "delta_pp": 0,
+      "ci95_pp": [
+       0,
+       0
+      ],
+      "n": 60
+     },
+     "path_rmse_m": {
+      "raw": 0.1041348851176899,
+      "all_fixes": 0.02169713383168447
+     }
+    }
+   }
+  },
+  "pexels_8135753_notepad": {
+   "human_carry_xy_m": 0.04383621193901502,
+   "approx_stretch": 7.756144633870472,
+   "robots": {
+    "ur5e": {
+     "raw": [
+      0,
+      60
+     ],
+     "all_fixes": [
+      0,
+      60
+     ],
+     "gap": {
+      "delta_pp": 0,
+      "ci95_pp": [
+       0,
+       0
+      ],
+      "n": 60
+     },
+     "path_rmse_m": {
+      "raw": 0.14531074893383084,
+      "all_fixes": 0.0406795160433632
+     }
+    },
+    "ur10e": {
+     "raw": [
+      0,
+      60
+     ],
+     "all_fixes": [
+      0,
+      60
+     ],
+     "gap": {
+      "delta_pp": 0,
+      "ci95_pp": [
+       0,
+       0
+      ],
+      "n": 60
+     },
+     "path_rmse_m": {
+      "raw": 0.09510348771060416,
+      "all_fixes": 0.023331031576912357
+     }
+    }
+   }
+  }
+ }
+}

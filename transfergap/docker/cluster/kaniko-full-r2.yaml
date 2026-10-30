@@ -1,0 +1,31 @@
+# Builds the `full` (G1) stage of Dockerfile.unified.flat on the GPU cluster. Free, no push, writes a tar to the volume.
+# kaniko cannot hand the arm stage to the full stage (mkdir menagerie: file exists), so the two stages are flattened into Dockerfile.unified.flat.
+# Before applying: copy the build context to the volume (kubectl cp <ctx>/transfergap isaac-sim/<tg-dev pod>:/ws/transfergap/ctx_unified).
+# Same node and volume as the earlier tg-image-build job (19 min for the 19 GB sim image); same resources.
+apiVersion: batch/v1
+kind: Job
+metadata: {name: tg-image-full-r2, namespace: isaac-sim, labels: {project: transfergap}}
+spec:
+  backoffLimit: 0
+  ttlSecondsAfterFinished: 86400
+  template:
+    metadata: {labels: {app: tg-image-full-r2, project: transfergap}}
+    spec:
+      restartPolicy: Never
+      nodeSelector: {kubernetes.io/hostname: srv-hpc-gpu04}
+      containers:
+      - name: kaniko
+        image: gcr.io/kaniko-project/executor:v1.23.2
+        args:
+        - --dockerfile=/ws/transfergap/ctx_unified/docker/Dockerfile.unified.flat
+        - --context=dir:///ws/transfergap/ctx_unified
+        - --no-push
+        - --tar-path=/ws/transfergap/images/transfergap-full-2026-10-06.tar
+        - --destination=transfergap:full
+        - --cache=false
+        - --snapshot-mode=redo
+        resources:
+          requests: {cpu: "8", memory: 24Gi, ephemeral-storage: 60Gi}
+          limits: {cpu: "32", memory: 64Gi, ephemeral-storage: 120Gi}
+        volumeMounts: [{name: data, mountPath: /ws/transfergap}]
+      volumes: [{name: data, persistentVolumeClaim: {claimName: tg-dev-data}}]

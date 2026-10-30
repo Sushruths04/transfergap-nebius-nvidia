@@ -1,0 +1,94 @@
+{
+ "ur5e": [
+  {
+   "round": 0,
+   "base": [],
+   "rule": "look_again",
+   "agent": "look_again",
+   "agree": true,
+   "valid": true,
+   "heldout_gap": {
+    "delta_pp": 40.0,
+    "ci95_pp": [
+     26.666666666666668,
+     55.00000000000001
+    ],
+    "n": 60
+   },
+   "adopted": "look_again"
+  },
+  {
+   "round": 1,
+   "base": [
+    "look_again"
+   ],
+   "rule": "touch_probe_calibration",
+   "agent": "touch_probe_calibration",
+   "agree": true,
+   "valid": true,
+   "heldout_gap": {
+    "delta_pp": 8.333333333333332,
+    "ci95_pp": [
+     1.6666666666666667,
+     15.0
+    ],
+    "n": 60
+   },
+   "adopted": "touch_probe_calibration"
+  },
+  {
+   "round": 2,
+   "base": [
+    "look_again",
+    "touch_probe_calibration"
+   ],
+   "stop": true
+  }
+ ],
+ "ur10e": [
+  {
+   "round": 0,
+   "base": [],
+   "rule": "look_again",
+   "agent": "look_again",
+   "agree": true,
+   "valid": true,
+   "heldout_gap": {
+    "delta_pp": 38.333333333333336,
+    "ci95_pp": [
+     25.0,
+     51.66666666666667
+    ],
+    "n": 60
+   },
+   "adopted": "look_again"
+  },
+  {
+   "round": 1,
+   "base": [
+    "look_again"
+   ],
+   "rule": "touch_probe_calibration",
+   "agent": "touch_probe_calibration",
+   "agree": true,
+   "valid": true,
+   "heldout_gap": {
+    "delta_pp": 5.0,
+    "ci95_pp": [
+     0,
+     11.666666666666666
+    ],
+    "n": 60
+   },
+   "adopted": "touch_probe_calibration"
+  },
+  {
+   "round": 2,
+   "base": [
+    "look_again",
+    "touch_probe_calibration"
+   ],
+   "stop": true
+  }
+ ]
+}

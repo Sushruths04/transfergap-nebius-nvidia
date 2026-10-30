@@ -1,0 +1,286 @@
+{
+ "robot": "ur5e",
+ "demo": {
+  "kind": "synthetic",
+  "seed": 0,
+  "tag": "syn0"
+ },
+ "seeds": [
+  0,
+  59
+ ],
+ "conditions": {
+  "full": {
+   "oracle": "none",
+   "n": 60,
+   "successes": 30,
+   "success_rate": 0.5,
+   "wilson_95": [
+    0.3773502424155577,
+    0.6226497575844423
+   ],
+   "failure_reasons": {
+    "no_lift": 29,
+    "not_released_and_settled_at_goal": 30
+   }
+  },
+  "oracle_perception": {
+   "oracle": "perception",
+   "n": 60,
+   "successes": 45,
+   "success_rate": 0.75,
+   "wilson_95": [
+    0.6276792992295218,
+    0.8422347746994333
+   ],
+   "failure_reasons": {
+    "no_lift": 15,
+    "not_released_and_settled_at_goal": 15
+   }
+  },
+  "oracle_retargeting": {
+   "oracle": "retargeting",
+   "n": 60,
+   "successes": 34,
+   "success_rate": 0.5666666666666667,
+   "wilson_95": [
+    0.44103438776125564,
+    0.6842760319531324
+   ],
+   "failure_reasons": {
+    "no_lift": 26,
+    "not_released_and_settled_at_goal": 26
+   }
+  },
+  "oracle_calibration": {
+   "oracle": "calibration",
+   "n": 60,
+   "successes": 40,
+   "success_rate": 0.6666666666666666,
+   "wilson_95": [
+    0.5405686645211968,
+    0.7727073847647731
+   ],
+   "failure_reasons": {
+    "no_lift": 19,
+    "not_released_and_settled_at_goal": 20
+   }
+  },
+  "oracle_timing": {
+   "oracle": "timing",
+   "n": 60,
+   "successes": 35,
+   "success_rate": 0.5833333333333334,
+   "wilson_95": [
+    0.45728081022640116,
+    0.6993572144165838
+   ],
+   "failure_reasons": {
+    "no_lift": 23,
+    "not_released_and_settled_at_goal": 25
+   }
+  },
+  "oracle_all": {
+   "oracle": "all",
+   "n": 60,
+   "successes": 60,
+   "success_rate": 1.0,
+   "wilson_95": [
+    0.93982814785791,
+    0.9999999999999998
+   ],
+   "failure_reasons": {}
+  }
+ },
+ "style": {
+  "full": {
+   "n_scored": 60,
+   "path_rmse_mean_m": 0.07317192671910815,
+   "approach_angle_deg": 7.515312865061795,
+   "lift_height_err_m": 0.005583841986425573,
+   "speed_profile_corr": -0.10030518240873694,
+   "path_rmse_median_m": 0.07181842190493354,
+   "n_diverged": 0
+  },
+  "oracle_perception": {
+   "n_scored": 60,
+   "path_rmse_mean_m": 0.0719489694346704,
+   "approach_angle_deg": 7.58480592939972,
+   "lift_height_err_m": 0.005107416104399109,
+   "speed_profile_corr": -0.1002782113529394,
+   "path_rmse_median_m": 0.07122655727071442,
+   "n_diverged": 0
+  },
+  "oracle_retargeting": {
+   "n_scored": 60,
+   "path_rmse_mean_m": 0.07181887107899816,
+   "approach_angle_deg": 6.491514650873346,
+   "lift_height_err_m": 0.005731256360152628,
+   "speed_profile_corr": -0.08992162608927806,
+   "path_rmse_median_m": 0.07109460030527548,
+   "n_diverged": 0
+  },
+  "oracle_calibration": {
+   "n_scored": 60,
+   "path_rmse_mean_m": 0.07059602796954381,
+   "approach_angle_deg": 7.482281494280925,
+   "lift_height_err_m": 0.004914929771556153,
+   "speed_profile_corr": -0.100499879584959,
+   "path_rmse_median_m": 0.06984408364608516,
+   "n_diverged": 0
+  },
+  "oracle_timing": {
+   "n_scored": 60,
+   "path_rmse_mean_m": 0.040506721512921416,
+   "approach_angle_deg": 7.668744157028736,
+   "lift_height_err_m": 0.005511887282342404,
+   "speed_profile_corr": 0.021781362072240348,
+   "path_rmse_median_m": 0.03856176010916289,
+   "n_diverged": 0
+  },
+  "oracle_all": {
+   "n_scored": 60,
+   "path_rmse_mean_m": 0.026939775637648378,
+   "approach_angle_deg": 2.730079970126122,
+   "lift_height_err_m": 0.0007316139672456747,
+   "speed_profile_corr": 0.8518133289823001,
+   "path_rmse_median_m": 0.02694946489701188,
+   "n_diverged": 0
+  }
+ },
+ "success_budget": {
+  "perception": {
+   "delta_pp": 25.0,
+   "ci95_pp": [
+    10.0,
+    40.0
+   ],
+   "n": 60
+  },
+  "retargeting": {
+   "delta_pp": 6.666666666666667,
+   "ci95_pp": [
+    1.6666666666666667,
+    13.333333333333334
+   ],
+   "n": 60
+  },
+  "calibration": {
+   "delta_pp": 16.666666666666664,
+   "ci95_pp": [
+    5.0,
+    28.333333333333332
+   ],
+   "n": 60
+  },
+  "timing": {
+   "delta_pp": 8.333333333333332,
+   "ci95_pp": [
+    1.6666666666666667,
+    15.0
+   ],
+   "n": 60
+  }
+ },
+ "style_budget": {
+  "perception": {
+   "path_rmse_m": {
+    "mean": 0.001222957284437754,
+    "ci95": [
+     0.0002864342149488279,
+     0.0021768151955248735
+    ],
+    "n": 60,
+    "metric": "path_rmse_mean_m",
+    "sign": "a minus b"
+   },
+   "speed_profile_corr": {
+    "mean": 2.6971055797560724e-05,
+    "ci95": [
+     -0.0001774875593879785,
+     0.0002339122003180307
+    ],
+    "n": 60,
+    "metric": "speed_profile_corr",
+    "sign": "a minus b"
+   }
+  },
+  "retargeting": {
+   "path_rmse_m": {
+    "mean": 0.001353055640109985,
+    "ci95": [
+     0.0010102581358295247,
+     0.0017068858443170932
+    ],
+    "n": 60,
+    "metric": "path_rmse_mean_m",
+    "sign": "a minus b"
+   },
+   "speed_profile_corr": {
+    "mean": 0.010383556319458902,
+    "ci95": [
+     0.008713179099168068,
+     0.0121350786884955
+    ],
+    "n": 60,
+    "metric": "speed_profile_corr",
+    "sign": "a minus b"
+   }
+  },
+  "calibration": {
+   "path_rmse_m": {
+    "mean": 0.0025758987495643417,
+    "ci95": [
+     0.0017071643599002905,
+     0.0035180126887884985
+    ],
+    "n": 60,
+    "metric": "path_rmse_mean_m",
+    "sign": "a minus b"
+   },
+   "speed_profile_corr": {
+    "mean": -0.00019469717622202948,
+    "ci95": [
+     -0.0006523005570761786,
+     9.752755179418168e-05
+    ],
+    "n": 60,
+    "metric": "speed_profile_corr",
+    "sign": "a minus b"
+   }
+  },
+  "timing": {
+   "path_rmse_m": {
+    "mean": 0.03266520520618672,
+    "ci95": [
+     0.03197511485146241,
+     0.03329193028510084
+    ],
+    "n": 60,
+    "metric": "path_rmse_mean_m",
+    "sign": "a minus b"
+   },
+   "speed_profile_corr": {
+    "mean": 0.1220865444809773,
+    "ci95": [
+     0.1103593112025705,
+     0.13443040549891835
+    ],
+    "n": 60,
+    "metric": "speed_profile_corr",
+    "sign": "a minus b"
+   }
+  }
+ },
+ "oracle_all": {
+  "delta_pp": 50.0,
+  "ci95_pp": [
+   36.666666666666664,
+   61.66666666666667
+  ],
+  "n": 60
+ },
+ "chosen_component": "perception",
+ "chosen_correction": "look_again",
+ "choice_rule": "argmax success budget over ['perception', 'retargeting', 'calibration', 'timing'] on dev; ties -> that order"
+}

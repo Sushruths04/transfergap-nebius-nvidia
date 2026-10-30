@@ -1,0 +1,21 @@
+{
+  "pdf_sha256": "daac637636bf302f31925667a2d3d39dd69d220088358b12de748560a1168c24",
+  "pages": 6,
+  "body_pages": 4,
+  "reference_pages": 1,
+  "appendix_pages": 1,
+  "author_metadata": "Anonymous Submission",
+  "draft_identical": true,
+  "undefined_or_overfull_messages": [],
+  "macro_files_sha256": {
+    "paper/figures/numbers.tex": "af053bcaf678c2b32f59863003511419f4e164eeff8c3a0399f06ab30c0a5688",
+    "paper/figures/fresh_numbers.tex": "e72adf2a9e9dd003531575daae5d20d9e646ac3937429225b71a3044ebaf3257",
+    "paper/figures/v2_numbers.tex": "d58266c7f2dda4d1ca4fd3905341ad5c1f01c76a70e6a96445740f4efcc04410",
+    "paper/figures/v3_numbers.tex": "496efe4c7615a9ad519dc775df54444687524edc54a3b54d82e312568978d762",
+    "paper/figures/real_numbers.tex": "e0f2c7336482db3740e16a80c6e829bf040671c3a19d71c34343074c9b941fe1"
+  },
+  "visual_inspection_pages": 6,
+  "embedded_files_present": false,
+  "xmp_metadata_present": false,
+  "statistics_audit": "paper/pre_submission_statistics_2026-10-07.json"
+}

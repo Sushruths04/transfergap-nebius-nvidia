@@ -1,0 +1,77 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TransferGap Live</title>
+<style>
+  :root { --bg: #111418; --fg: #e8eaed; --muted: #9aa0a6; --card: #1b1f24; --ok: #6fcf97; --warn: #f2c94c; }
+  body { margin: 0; background: var(--bg); color: var(--fg); font: 14px/1.4 system-ui, sans-serif; }
+  header { padding: 10px 16px; display: flex; gap: 16px; align-items: baseline; flex-wrap: wrap; }
+  h1 { font-size: 16px; margin: 0; }
+  #status { color: var(--muted); }
+  main { display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 8px; padding: 0 16px 16px; }
+  figure { margin: 0; background: var(--card); border-radius: 6px; overflow: hidden; }
+  figcaption { padding: 6px 10px; color: var(--muted); }
+  img { width: 100%; display: block; min-height: 120px; background: #000; }
+  button { background: var(--card); color: var(--fg); border: 1px solid #333; border-radius: 4px; padding: 4px 10px; }
+  .ok { color: var(--ok); } .warn { color: var(--warn); }
+</style>
+</head>
+<body>
+<header>
+  <h1>TransferGap — live human → robot</h1>
+  <span id="status">connecting…</span>
+  <button onclick="fetch('/cmd/g1calib')" title="3 s countdown, then stand straight with arms hanging">1) calibrate: arms down</button>
+  <button onclick="fetch('/cmd/tablecalib')" title="3 s countdown, then touch the object with your right fingertips">2) touch the object</button>
+  <button onclick="fetch('/cmd/reset')">reset arm scene</button>
+</header>
+<div id="msg" style="padding:4px 16px 10px;font-size:22px;font-weight:600">connecting…</div>
+<main>
+  <figure><img id="cam" alt="your camera"><figcaption>your camera (local, no lag)</figcaption></figure>
+  <figure><img id="skel" alt="GEM-X skeleton"><figcaption>what the robots see: GEM-X skeleton + hands</figcaption></figure>
+  <figure><img id="arm" alt="UR arm following the hand"><figcaption>two UR arms: your LEFT hand / your RIGHT hand</figcaption></figure>
+  <figure><img id="g1" alt="G1 under SONIC"><figcaption>G1 whole body via SONIC (port 8093)</figcaption></figure>
+</main>
+<script>
+  const h = location.hostname || "127.0.0.1";
+  // camera panel straight from the laptop's own camera server (no round trip through the VM, no lag)
+  document.getElementById("cam").src = `http://${h}:8090/stream.mjpg`;
+  document.getElementById("skel").src = `http://${h}:8092/cam.mjpg`;
+  document.getElementById("arm").src = `http://${h}:8091/robot.mjpg`;
+  document.getElementById("g1").src = `http://${h}:8093/g1.mjpg`;
+  // Robot and skeleton panels: fetch the newest single frame in a loop (no long-lived MJPEG connections, which can
+  // exhaust the browser's per-host connection pool and freeze). The local camera stays MJPEG (same machine).
+  document.getElementById("skel").removeAttribute("src");
+  document.getElementById("arm").removeAttribute("src");
+  document.getElementById("g1").removeAttribute("src");
+  function loop(id, url, fps) {
+    const el = document.getElementById(id);
+    const next = () => setTimeout(() => { el.src = url + "?t=" + Date.now(); }, 1000 / fps);
+    el.onload = next;
+    el.onerror = () => setTimeout(next, 500);
+    el.src = url + "?t=" + Date.now();
+  }
+  loop("skel", `http://${h}:8092/cam.jpg`, 12);
+  loop("arm", `http://${h}:8091/robot.jpg`, 12);
+  loop("g1", `http://${h}:8093/g1.jpg`, 12);
+  const cam = document.getElementById("cam");
+  cam.onerror = () => setTimeout(() => { cam.src = `http://${h}:8090/stream.mjpg?t=` + Date.now(); }, 1000);
+  async function poll() {
+    try {
+      const s = await (await fetch("/status.json", {cache: "no-store"})).json();
+      const el = document.getElementById("status");
+      const m = document.getElementById("msg");
+      m.textContent = s.message || "";
+      m.className = s.anchored ? "ok" : "warn";
+      el.className = s.calibrated ? "ok" : "warn";
+      el.textContent = s.calibrated
+        ? `live · latency ${s.latency_ms_median30} ms · path lag ${s.tracking_err_cm_median30} cm · hands ${s.hands_fps ?? "?"} fps · grip ${s.grip_closed ? "closed" : "open"} · ${s.task}`
+        : `not calibrated yet · ${s.error ?? ""}`;
+    } catch (e) { document.getElementById("status").textContent = "arm listener not reachable"; }
+    setTimeout(poll, 300);
+  }
+  poll();
+</script>
+</body>
+</html>

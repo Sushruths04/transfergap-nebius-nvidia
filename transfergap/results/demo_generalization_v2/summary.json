@@ -1,0 +1,234 @@
+{
+ "kind": "demo_generalization",
+ "protocol": "demo_generalization_v2",
+ "demos": {
+  "pexels_8135753_notebook": {
+   "human_carry_xy_m": 0.09077440425956812,
+   "approx_stretch": 3.745549230240882,
+   "robots": {
+    "ur5e": {
+     "raw": [
+      0,
+      60
+     ],
+     "all_fixes": [
+      57,
+      60
+     ],
+     "gap": {
+      "delta_pp": 95.0,
+      "ci95_pp": [
+       88.33333333333333,
+       100
+      ],
+      "n": 60
+     },
+     "path_rmse_m": {
+      "raw": 0.1393644922831175,
+      "all_fixes": 0.049614866851485244
+     },
+     "failure_reasons_all_fixes": {
+      "no_lift": 3,
+      "not_released_and_settled_at_goal": 3
+     }
+    },
+    "ur10e": {
+     "raw": [
+      0,
+      60
+     ],
+     "all_fixes": [
+      60,
+      60
+     ],
+     "gap": {
+      "delta_pp": 100,
+      "ci95_pp": [
+       100,
+       100
+      ],
+      "n": 60
+     },
+     "path_rmse_m": {
+      "raw": 0.0914734901695464,
+      "all_fixes": 0.028765347181660936
+     },
+     "failure_reasons_all_fixes": {}
+    }
+   }
+  },
+  "pexels_8135753_markers": {
+   "human_carry_xy_m": 0.10370731243000615,
+   "approx_stretch": 3.278457343395837,
+   "robots": {
+    "ur5e": {
+     "raw": [
+      0,
+      60
+     ],
+     "all_fixes": [
+      51,
+      60
+     ],
+     "gap": {
+      "delta_pp": 85.0,
+      "ci95_pp": [
+       75.0,
+       93.33333333333333
+      ],
+      "n": 60
+     },
+     "path_rmse_m": {
+      "raw": 0.13215584797337399,
+      "all_fixes": 0.05880297873275618
+     },
+     "failure_reasons_all_fixes": {
+      "not_released_and_settled_at_goal": 9
+     }
+    },
+    "ur10e": {
+     "raw": [
+      0,
+      60
+     ],
+     "all_fixes": [
+      25,
+      60
+     ],
+     "gap": {
+      "delta_pp": 41.66666666666667,
+      "ci95_pp": [
+       28.333333333333332,
+       55.00000000000001
+      ],
+      "n": 60
+     },
+     "path_rmse_m": {
+      "raw": 0.07775486067794858,
+      "all_fixes": 0.04257328189113714
+     },
+     "failure_reasons_all_fixes": {
+      "no_lift": 9,
+      "not_released_and_settled_at_goal": 35
+     }
+    }
+   }
+  },
+  "pexels_8135753_orange_marker": {
+   "human_carry_xy_m": 0.04834767618664798,
+   "approx_stretch": 7.032395904353655,
+   "robots": {
+    "ur5e": {
+     "raw": [
+      0,
+      60
+     ],
+     "all_fixes": [
+      46,
+      60
+     ],
+     "gap": {
+      "delta_pp": 76.66666666666667,
+      "ci95_pp": [
+       65.0,
+       86.66666666666667
+      ],
+      "n": 60
+     },
+     "path_rmse_m": {
+      "raw": 0.15579770451048983,
+      "all_fixes": 0.061388001382603176
+     },
+     "failure_reasons_all_fixes": {
+      "no_lift": 12,
+      "not_released_and_settled_at_goal": 14
+     }
+    },
+    "ur10e": {
+     "raw": [
+      0,
+      60
+     ],
+     "all_fixes": [
+      58,
+      60
+     ],
+     "gap": {
+      "delta_pp": 96.66666666666667,
+      "ci95_pp": [
+       91.66666666666666,
+       100
+      ],
+      "n": 60
+     },
+     "path_rmse_m": {
+      "raw": 0.1041348851176899,
+      "all_fixes": 0.04872492244557532
+     },
+     "failure_reasons_all_fixes": {
+      "not_released_and_settled_at_goal": 2,
+      "no_lift": 1
+     }
+    }
+   }
+  },
+  "pexels_8135753_notepad": {
+   "human_carry_xy_m": 0.04383621193901502,
+   "approx_stretch": 7.756144633870472,
+   "robots": {
+    "ur5e": {
+     "raw": [
+      0,
+      60
+     ],
+     "all_fixes": [
+      58,
+      60
+     ],
+     "gap": {
+      "delta_pp": 96.66666666666667,
+      "ci95_pp": [
+       91.66666666666666,
+       100
+      ],
+      "n": 60
+     },
+     "path_rmse_m": {
+      "raw": 0.14531074893383084,
+      "all_fixes": 0.06228871269453578
+     },
+     "failure_reasons_all_fixes": {
+      "no_lift": 1,
+      "not_released_and_settled_at_goal": 2
+     }
+    },
+    "ur10e": {
+     "raw": [
+      0,
+      60
+     ],
+     "all_fixes": [
+      58,
+      60
+     ],
+     "gap": {
+      "delta_pp": 96.66666666666667,
+      "ci95_pp": [
+       91.66666666666666,
+       100
+      ],
+      "n": 60
+     },
+     "path_rmse_m": {
+      "raw": 0.09510348771060416,
+      "all_fixes": 0.05026548323241818
+     },
+     "failure_reasons_all_fixes": {
+      "no_lift": 2,
+      "not_released_and_settled_at_goal": 2
+     }
+    }
+   }
+  }
+ }
+}

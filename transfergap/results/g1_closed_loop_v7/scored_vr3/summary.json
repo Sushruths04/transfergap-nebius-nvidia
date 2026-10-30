@@ -1,0 +1,704 @@
+{
+ "kind": "g1_contact",
+ "protocol_id": "g1_block_to_tray_v1",
+ "task": {
+  "position_tolerance_m": 0.05,
+  "min_lift_m": 0.05,
+  "settle_duration_s": 0.5,
+  "max_settle_speed_m_s": 0.02
+ },
+ "robot": "g1_sonic",
+ "code_commit_at_scoring": "",
+ "conditions": {
+  "vr3": {
+   "oracle": "fixed",
+   "plan": {
+    "fps": 50,
+    "frames": 935,
+    "stance_offset": [
+     0.0,
+     0.0
+    ],
+    "target_xy_world": [
+     0.3177421314499014,
+     -0.21107401846033996
+    ],
+    "target_xy_robot": [
+     0.3177421314499014,
+     -0.21107401846033996
+    ],
+    "grasp_dz": 0.03,
+    "lift": 0.12,
+    "pitch_down": -0.2,
+    "roll": -0.4,
+    "grasp_dxy": [
+     0.0,
+     0.0
+    ],
+    "carry_offset": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "settle_s": 0.0,
+    "final_ik_error_m": {
+     "approach": 0.0004549464310064486,
+     "descend": 0.00038677596653398063,
+     "lift": 0.00038574085338034054,
+     "transport": 0.0002659441493695607,
+     "lower": 0.0004177599232801723,
+     "retreat": 0.00038297870634623656
+    },
+    "waypoints": {
+     "pre": [
+      0.3177421314499014,
+      -0.21107401846033996,
+      0.87
+     ],
+     "grasp": [
+      0.3177421314499014,
+      -0.21107401846033996,
+      0.77
+     ],
+     "lifted": [
+      0.3177421314499014,
+      -0.21107401846033996,
+      0.89
+     ],
+     "over": [
+      0.34,
+      0.0,
+      0.89
+     ],
+     "place": [
+      0.34,
+      0.0,
+      0.794
+     ]
+    },
+    "argv": {
+     "sonic_root": "/root/GR00T-WholeBodyControl",
+     "out": "<cluster-volume>/runs/g1_cl/plans/cl_seed1100.npz",
+     "target_xy": [
+      0.3177421314499014,
+      -0.21107401846033996
+     ],
+     "grasp_dz": 0.03,
+     "pitch_down": -0.2,
+     "roll": -0.4,
+     "grasp_dxy": [
+      0.0,
+      0.0
+     ],
+     "carry_offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "settle": 0.0,
+     "stance_offset": [
+      0.0,
+      0.0
+     ],
+     "demo_plan": null,
+     "timing_scale": 1.0
+    }
+   },
+   "rollouts": 40,
+   "trials": 40,
+   "touch_rollout_rate": {
+    "k": 29,
+    "n": 40,
+    "rate": 0.725,
+    "wilson_95": [
+     0.572,
+     0.839
+    ]
+   },
+   "grasp_rollout_rate": {
+    "k": 6,
+    "n": 40,
+    "rate": 0.15,
+    "wilson_95": [
+     0.071,
+     0.291
+    ]
+   },
+   "place_rollout_rate": {
+    "k": 3,
+    "n": 40,
+    "rate": 0.075,
+    "wilson_95": [
+     0.026,
+     0.199
+    ]
+   },
+   "touch_trial_any_rollout": {
+    "k": 29,
+    "n": 40,
+    "rate": 0.725,
+    "wilson_95": [
+     0.572,
+     0.839
+    ]
+   },
+   "touch_trials_with_mixed_outcomes": 0,
+   "grasp_trial_any_rollout": {
+    "k": 6,
+    "n": 40,
+    "rate": 0.15,
+    "wilson_95": [
+     0.071,
+     0.291
+    ]
+   },
+   "grasp_trials_with_mixed_outcomes": 0,
+   "place_trial_any_rollout": {
+    "k": 3,
+    "n": 40,
+    "rate": 0.075,
+    "wilson_95": [
+     0.026,
+     0.199
+    ]
+   },
+   "place_trials_with_mixed_outcomes": 0,
+   "place_failure_reasons": {
+    "not_released_and_settled_at_goal": 37,
+    "no_lift": 34
+   },
+   "robot_fell": 0,
+   "max_lift_m_median": 0.0001,
+   "per_rollout": [
+    {
+     "seed": 1100,
+     "rollout": 0,
+     "touch": true,
+     "grasp": true,
+     "place": false,
+     "max_lift_m": 0.175,
+     "block_displacement_xy_m": 0.0179,
+     "failure_reasons": [
+      "not_released_and_settled_at_goal"
+     ]
+    },
+    {
+     "seed": 1101,
+     "rollout": 0,
+     "touch": true,
+     "grasp": false,
+     "place": false,
+     "max_lift_m": 0.0,
+     "block_displacement_xy_m": 0.007,
+     "failure_reasons": [
+      "no_lift",
+      "not_released_and_settled_at_goal"
+     ]
+    },
+    {
+     "seed": 1102,
+     "rollout": 0,
+     "touch": true,
+     "grasp": true,
+     "place": false,
+     "max_lift_m": 0.1488,
+     "block_displacement_xy_m": 0.0205,
+     "failure_reasons": [
+      "not_released_and_settled_at_goal"
+     ]
+    },
+    {
+     "seed": 1103,
+     "rollout": 0,
+     "touch": true,
+     "grasp": true,
+     "place": true,
+     "max_lift_m": 0.1768,
+     "block_displacement_xy_m": 0.2,
+     "failure_reasons": []
+    },
+    {
+     "seed": 1104,
+     "rollout": 0,
+     "touch": false,
+     "grasp": false,
+     "place": false,
+     "max_lift_m": 0.0,
+     "block_displacement_xy_m": 0.0,
+     "failure_reasons": [
+      "no_lift",
+      "not_released_and_settled_at_goal"
+     ]
+    },
+    {
+     "seed": 1105,
+     "rollout": 0,
+     "touch": true,
+     "grasp": false,
+     "place": false,
+     "max_lift_m": 0.0,
+     "block_displacement_xy_m": 0.0299,
+     "failure_reasons": [
+      "no_lift",
+      "not_released_and_settled_at_goal"
+     ]
+    },
+    {
+     "seed": 1106,
+     "rollout": 0,
+     "touch": true,
+     "grasp": false,
+     "place": false,
+     "max_lift_m": 0.0002,
+     "block_displacement_xy_m": 0.0558,
+     "failure_reasons": [
+      "no_lift",
+      "not_released_and_settled_at_goal"
+     ]
+    },
+    {
+     "seed": 1107,
+     "rollout": 0,
+     "touch": false,
+     "grasp": false,
+     "place": false,
+     "max_lift_m": 0.0,
+     "block_displacement_xy_m": 0.0,
+     "failure_reasons": [
+      "no_lift",
+      "not_released_and_settled_at_goal"
+     ]
+    },
+    {
+     "seed": 1108,
+     "rollout": 0,
+     "touch": true,
+     "grasp": false,
+     "place": false,
+     "max_lift_m": 0.0022,
+     "block_displacement_xy_m": 0.0214,
+     "failure_reasons": [
+      "no_lift",
+      "not_released_and_settled_at_goal"
+     ]
+    },
+    {
+     "seed": 1109,
+     "rollout": 0,
+     "touch": true,
+     "grasp": false,
+     "place": false,
+     "max_lift_m": 0.0,
+     "block_displacement_xy_m": 0.0142,
+     "failure_reasons": [
+      "no_lift",
+      "not_released_and_settled_at_goal"
+     ]
+    },
+    {
+     "seed": 1110,
+     "rollout": 0,
+     "touch": false,
+     "grasp": false,
+     "place": false,
+     "max_lift_m": 0.0,
+     "block_displacement_xy_m": 0.0,
+     "failure_reasons": [
+      "no_lift",
+      "not_released_and_settled_at_goal"
+     ]
+    },
+    {
+     "seed": 1111,
+     "rollout": 0,
+     "touch": false,
+     "grasp": false,
+     "place": false,
+     "max_lift_m": 0.0,
+     "block_displacement_xy_m": 0.0,
+     "failure_reasons": [
+      "no_lift",
+      "not_released_and_settled_at_goal"
+     ]
+    },
+    {
+     "seed": 1112,
+     "rollout": 0,
+     "touch": true,
+     "grasp": false,
+     "place": false,
+     "max_lift_m": 0.0,
+     "block_displacement_xy_m": 0.0183,
+     "failure_reasons": [
+      "no_lift",
+      "not_released_and_settled_at_goal"
+     ]
+    },
+    {
+     "seed": 1113,
+     "rollout": 0,
+     "touch": false,
+     "grasp": false,
+     "place": false,
+     "max_lift_m": 0.0,
+     "block_displacement_xy_m": 0.0,
+     "failure_reasons": [
+      "no_lift",
+      "not_released_and_settled_at_goal"
+     ]
+    },
+    {
+     "seed": 1114,
+     "rollout": 0,
+     "touch": false,
+     "grasp": false,
+     "place": false,
+     "max_lift_m": 0.0,
+     "block_displacement_xy_m": 0.0,
+     "failure_reasons": [
+      "no_lift",
+      "not_released_and_settled_at_goal"
+     ]
+    },
+    {
+     "seed": 1115,
+     "rollout": 0,
+     "touch": false,
+     "grasp": false,
+     "place": false,
+     "max_lift_m": 0.0,
+     "block_displacement_xy_m": 0.0,
+     "failure_reasons": [
+      "no_lift",
+      "not_released_and_settled_at_goal"
+     ]
+    },
+    {
+     "seed": 1116,
+     "rollout": 0,
+     "touch": false,
+     "grasp": false,
+     "place": false,
+     "max_lift_m": 0.0,
+     "block_displacement_xy_m": 0.0,
+     "failure_reasons": [
+      "no_lift",
+      "not_released_and_settled_at_goal"
+     ]
+    },
+    {
+     "seed": 1117,
+     "rollout": 0,
+     "touch": true,
+     "grasp": true,
+     "place": true,
+     "max_lift_m": 0.178,
+     "block_displacement_xy_m": 0.1947,
+     "failure_reasons": []
+    },
+    {
+     "seed": 1118,
+     "rollout": 0,
+     "touch": true,
+     "grasp": false,
+     "place": false,
+     "max_lift_m": 0.0026,
+     "block_displacement_xy_m": 0.0317,
+     "failure_reasons": [
+      "no_lift",
+      "not_released_and_settled_at_goal"
+     ]
+    },
+    {
+     "seed": 1119,
+     "rollout": 0,
+     "touch": true,
+     "grasp": false,
+     "place": false,
+     "max_lift_m": 0.0082,
+     "block_displacement_xy_m": 0.0177,
+     "failure_reasons": [
+      "no_lift",
+      "not_released_and_settled_at_goal"
+     ]
+    },
+    {
+     "seed": 1120,
+     "rollout": 0,
+     "touch": false,
+     "grasp": false,
+     "place": false,
+     "max_lift_m": 0.0,
+     "block_displacement_xy_m": 0.0,
+     "failure_reasons": [
+      "no_lift",
+      "not_released_and_settled_at_goal"
+     ]
+    },
+    {
+     "seed": 1121,
+     "rollout": 0,
+     "touch": false,
+     "grasp": false,
+     "place": false,
+     "max_lift_m": 0.0,
+     "block_displacement_xy_m": 0.0,
+     "failure_reasons": [
+      "no_lift",
+      "not_released_and_settled_at_goal"
+     ]
+    },
+    {
+     "seed": 1122,
+     "rollout": 0,
+     "touch": true,
+     "grasp": false,
+     "place": false,
+     "max_lift_m": 0.0006,
+     "block_displacement_xy_m": 0.0176,
+     "failure_reasons": [
+      "no_lift",
+      "not_released_and_settled_at_goal"
+     ]
+    },
+    {
+     "seed": 1123,
+     "rollout": 0,
+     "touch": true,
+     "grasp": false,
+     "place": false,
+     "max_lift_m": 0.0004,
+     "block_displacement_xy_m": 0.0306,
+     "failure_reasons": [
+      "no_lift",
+      "not_released_and_settled_at_goal"
+     ]
+    },
+    {
+     "seed": 1124,
+     "rollout": 0,
+     "touch": true,
+     "grasp": false,
+     "place": false,
+     "max_lift_m": 0.0,
+     "block_displacement_xy_m": 0.0251,
+     "failure_reasons": [
+      "no_lift",
+      "not_released_and_settled_at_goal"
+     ]
+    },
+    {
+     "seed": 1125,
+     "rollout": 0,
+     "touch": true,
+     "grasp": false,
+     "place": false,
+     "max_lift_m": 0.0002,
+     "block_displacement_xy_m": 0.0231,
+     "failure_reasons": [
+      "no_lift",
+      "not_released_and_settled_at_goal"
+     ]
+    },
+    {
+     "seed": 1126,
+     "rollout": 0,
+     "touch": true,
+     "grasp": false,
+     "place": false,
+     "max_lift_m": 0.0047,
+     "block_displacement_xy_m": 0.0068,
+     "failure_reasons": [
+      "no_lift",
+      "not_released_and_settled_at_goal"
+     ]
+    },
+    {
+     "seed": 1127,
+     "rollout": 0,
+     "touch": true,
+     "grasp": false,
+     "place": false,
+     "max_lift_m": 0.0004,
+     "block_displacement_xy_m": 0.0165,
+     "failure_reasons": [
+      "no_lift",
+      "not_released_and_settled_at_goal"
+     ]
+    },
+    {
+     "seed": 1128,
+     "rollout": 0,
+     "touch": false,
+     "grasp": false,
+     "place": false,
+     "max_lift_m": 0.0,
+     "block_displacement_xy_m": 0.0,
+     "failure_reasons": [
+      "no_lift",
+      "not_released_and_settled_at_goal"
+     ]
+    },
+    {
+     "seed": 1129,
+     "rollout": 0,
+     "touch": true,
+     "grasp": false,
+     "place": false,
+     "max_lift_m": 0.0002,
+     "block_displacement_xy_m": 0.0194,
+     "failure_reasons": [
+      "no_lift",
+      "not_released_and_settled_at_goal"
+     ]
+    },
+    {
+     "seed": 1130,
+     "rollout": 0,
+     "touch": true,
+     "grasp": true,
+     "place": true,
+     "max_lift_m": 0.1602,
+     "block_displacement_xy_m": 0.2081,
+     "failure_reasons": []
+    },
+    {
+     "seed": 1131,
+     "rollout": 0,
+     "touch": true,
+     "grasp": false,
+     "place": false,
+     "max_lift_m": 0.0,
+     "block_displacement_xy_m": 0.0074,
+     "failure_reasons": [
+      "no_lift",
+      "not_released_and_settled_at_goal"
+     ]
+    },
+    {
+     "seed": 1132,
+     "rollout": 0,
+     "touch": true,
+     "grasp": false,
+     "place": false,
+     "max_lift_m": 0.0014,
+     "block_displacement_xy_m": 0.0325,
+     "failure_reasons": [
+      "no_lift",
+      "not_released_and_settled_at_goal"
+     ]
+    },
+    {
+     "seed": 1133,
+     "rollout": 0,
+     "touch": true,
+     "grasp": false,
+     "place": false,
+     "max_lift_m": 0.0001,
+     "block_displacement_xy_m": 0.0421,
+     "failure_reasons": [
+      "no_lift",
+      "not_released_and_settled_at_goal"
+     ]
+    },
+    {
+     "seed": 1134,
+     "rollout": 0,
+     "touch": true,
+     "grasp": false,
+     "place": false,
+     "max_lift_m": 0.0,
+     "block_displacement_xy_m": 0.0086,
+     "failure_reasons": [
+      "no_lift",
+      "not_released_and_settled_at_goal"
+     ]
+    },
+    {
+     "seed": 1135,
+     "rollout": 0,
+     "touch": true,
+     "grasp": false,
+     "place": false,
+     "max_lift_m": 0.0,
+     "block_displacement_xy_m": 0.0281,
+     "failure_reasons": [
+      "no_lift",
+      "not_released_and_settled_at_goal"
+     ]
+    },
+    {
+     "seed": 1136,
+     "rollout": 0,
+     "touch": true,
+     "grasp": false,
+     "place": false,
+     "max_lift_m": 0.0,
+     "block_displacement_xy_m": 0.012,
+     "failure_reasons": [
+      "no_lift",
+      "not_released_and_settled_at_goal"
+     ]
+    },
+    {
+     "seed": 1137,
+     "rollout": 0,
+     "touch": true,
+     "grasp": false,
+     "place": false,
+     "max_lift_m": 0.0002,
+     "block_displacement_xy_m": 0.0279,
+     "failure_reasons": [
+      "no_lift",
+      "not_released_and_settled_at_goal"
+     ]
+    },
+    {
+     "seed": 1138,
+     "rollout": 0,
+     "touch": true,
+     "grasp": false,
+     "place": false,
+     "max_lift_m": 0.0001,
+     "block_displacement_xy_m": 0.0147,
+     "failure_reasons": [
+      "no_lift",
+      "not_released_and_settled_at_goal"
+     ]
+    },
+    {
+     "seed": 1139,
+     "rollout": 0,
+     "touch": true,
+     "grasp": true,
+     "place": false,
+     "max_lift_m": 0.1267,
+     "block_displacement_xy_m": 0.0319,
+     "failure_reasons": [
+      "not_released_and_settled_at_goal"
+     ]
+    }
+   ]
+  }
+ },
+ "metrics_summarize": {
+  "contains_fixtures": false,
+  "groups": [
+   {
+    "source": "simulation",
+    "protocol_id": "g1_block_to_tray_v1",
+    "robot": "g1_sonic",
+    "method": "sonic_zmq_v1_stream[vr3]",
+    "sensor": "oracle",
+    "oracle": "fixed",
+    "episodes": 40,
+    "successes": 3,
+    "success_rate": 0.075,
+    "success_wilson_95": [
+     0.025836025774588198,
+     0.19864233524310543
+    ]
+   }
+  ]
+ }
+}

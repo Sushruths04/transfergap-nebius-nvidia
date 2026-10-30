@@ -1,0 +1,38 @@
+{
+ "input": "/tmp/clip_full_joints.npz",
+ "robots": [
+  "ur5e",
+  "kairos"
+ ],
+ "fixes": "speed_cap_3,look_again,touch_probe_calibration,speed_cap_2,safe_path_v2",
+ "stages": {
+  "perceive": {
+   "status": "ok",
+   "seconds": 0.0
+  },
+  "demo": {
+   "detail": {
+    "frames": 479,
+    "events": "auto (aperture segmenter)",
+    "pinch_extent_m": [
+     5.866,
+     0.627,
+     4.43
+    ],
+    "plausibility": [
+     "hand path extent [5.87, 0.63, 4.43] m exceeds 1.5 m (pose estimate is not metric or failed)"
+    ]
+   },
+   "status": "FAILED",
+   "error": "demo is not plausible: hand path extent [5.87, 0.63, 4.43] m exceeds 1.5 m (pose estimate is not metric or failed)",
+   "seconds": 0.0
+  },
+  "feasibility": {
+   "status": "skipped (earlier stage failed)"
+  },
+  "rollouts": {
+   "status": "skipped (earlier stage failed)"
+  }
+ },
+ "ok": false
+}

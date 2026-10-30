@@ -1,0 +1,186 @@
+{
+ "kind": "cosmos_critic",
+ "what": "Cosmos-Reason2-8B as a video critic of UR5e/UR10e block-to-tray rollouts, scored against simulator labels",
+ "run": {
+  "model": "nvidia/Cosmos-Reason2-8B",
+  "base_url_host": "127.0.0.1",
+  "git_commit": "9715a642cd667a2c241d582d2ba8c3c8f3904ec3",
+  "prompt_sha256": "309d056cd99e17d4cf39386b52595756f2aa8852a202542d9f321a4363545cd8",
+  "labels": "transfergap/runs/cosmos_critic_v1/labels.jsonl",
+  "labels_sha256": "aedf30fa38b565bc9fd9c2c542cfb79586931f5856230f33744ed3024567527a",
+  "n": 120,
+  "workers": 3,
+  "guided_json": true,
+  "finished_at": "2026-10-01T18:28:07.478403+00:00"
+ },
+ "protocol": "gap_budget_v2",
+ "robots": [
+  "ur5e",
+  "ur10e"
+ ],
+ "seeds": "dev 0-59 only",
+ "stages": {
+  "none": "success",
+  "grasp": "no_lift",
+  "place": "lifted but not released and settled at goal"
+ },
+ "fps": 4,
+ "sampling": {
+  "max_tokens": 4096,
+  "temperature": 0.6,
+  "top_p": 0.95,
+  "top_k": 20,
+  "repetition_penalty": 1.0,
+  "presence_penalty": 0.0,
+  "seed": 1234
+ },
+ "results": {
+  "success": {
+   "accuracy": {
+    "correct": 40,
+    "n": 120,
+    "accuracy": 0.3333333333333333,
+    "wilson_95": [
+     0.25531740501258443,
+     0.4216889837936501
+    ]
+   },
+   "confusion": {
+    "yes": {
+     "yes": 40,
+     "no": 0,
+     "unparsed": 0
+    },
+    "no": {
+     "yes": 80,
+     "no": 0,
+     "unparsed": 0
+    },
+    "unparsed": {
+     "yes": 0,
+     "no": 0,
+     "unparsed": 0
+    }
+   },
+   "per_class": {
+    "yes": {
+     "support": 40,
+     "predicted": 120,
+     "precision": 0.3333333333333333,
+     "recall": 1.0
+    },
+    "no": {
+     "support": 80,
+     "predicted": 0,
+     "precision": null,
+     "recall": 0.0
+    }
+   },
+   "majority_baseline": {
+    "class": "no",
+    "correct": 80,
+    "n": 120,
+    "accuracy": 0.6666666666666666,
+    "wilson_95": [
+     0.5783110162063498,
+     0.7446825949874156
+    ]
+   },
+   "uniform_chance": 0.5
+  },
+  "stage": {
+   "accuracy": {
+    "correct": 40,
+    "n": 120,
+    "accuracy": 0.3333333333333333,
+    "wilson_95": [
+     0.25531740501258443,
+     0.4216889837936501
+    ]
+   },
+   "confusion": {
+    "none": {
+     "none": 40,
+     "grasp": 0,
+     "place": 0,
+     "unparsed": 0
+    },
+    "grasp": {
+     "none": 40,
+     "grasp": 0,
+     "place": 0,
+     "unparsed": 0
+    },
+    "place": {
+     "none": 40,
+     "grasp": 0,
+     "place": 0,
+     "unparsed": 0
+    },
+    "unparsed": {
+     "none": 0,
+     "grasp": 0,
+     "place": 0,
+     "unparsed": 0
+    }
+   },
+   "per_class": {
+    "none": {
+     "support": 40,
+     "predicted": 120,
+     "precision": 0.3333333333333333,
+     "recall": 1.0
+    },
+    "grasp": {
+     "support": 40,
+     "predicted": 0,
+     "precision": null,
+     "recall": 0.0
+    },
+    "place": {
+     "support": 40,
+     "predicted": 0,
+     "precision": null,
+     "recall": 0.0
+    }
+   },
+   "majority_baseline": {
+    "class": "place",
+    "correct": 40,
+    "n": 120,
+    "accuracy": 0.3333333333333333,
+    "wilson_95": [
+     0.25531740501258443,
+     0.4216889837936501
+    ]
+   },
+   "uniform_chance": 0.3333333333333333
+  },
+  "n": 120,
+  "parsed": 120,
+  "truncated": 0,
+  "internal_consistency": {
+   "success_yes_iff_stage_none": 120,
+   "of_parsed": 120
+  },
+  "latency_s": {
+   "median": 9.009913507001329,
+   "max": 17.63424104600017
+  },
+  "tokens_mean": {
+   "prompt_tokens": 4502.708333333333,
+   "completion_tokens": 229.23333333333332
+  },
+  "truth_per_stage": {
+   "place": 40,
+   "grasp": 40,
+   "none": 40
+  }
+ },
+ "caveats": [
+  "simulator renders, not real video; one fixed third-person camera, 640x480",
+  "classes balanced by construction (sampled per stage), so accuracy is not the deployment-mix accuracy",
+  "one sample per clip at temperature 0.6 (model-card reasoning defaults), seed 1234",
+  "the failing-stage definitions are ours; the model was not fine-tuned on them"
+ ]
+}

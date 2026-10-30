@@ -1,0 +1,652 @@
+{
+ "seeds": [
+  5000,
+  5059
+ ],
+ "rows": {
+  "P1_notebook/ur5e": {
+   "conditions": {
+    "raw": {
+     "oracle": "none",
+     "n": 60,
+     "successes": 0,
+     "success_rate": 0.0,
+     "wilson_95": [
+      0.0,
+      0.06017185214208986
+     ],
+     "failure_reasons": {
+      "no_lift": 56,
+      "not_released_and_settled_at_goal": 60
+     }
+    },
+    "stack": {
+     "oracle": "none",
+     "n": 60,
+     "successes": 60,
+     "success_rate": 1.0,
+     "wilson_95": [
+      0.93982814785791,
+      0.9999999999999998
+     ],
+     "failure_reasons": {}
+    }
+   },
+   "gap": {
+    "delta_pp": 100,
+    "ci95_pp": [
+     100,
+     100
+    ],
+    "n": 60
+   },
+   "stack": [
+    "speed_cap_3",
+    "look_again",
+    "touch_probe_calibration",
+    "speed_cap_2",
+    "safe_path_v2"
+   ]
+  },
+  "P1_notebook/ur10e": {
+   "conditions": {
+    "raw": {
+     "oracle": "none",
+     "n": 60,
+     "successes": 0,
+     "success_rate": 0.0,
+     "wilson_95": [
+      0.0,
+      0.06017185214208986
+     ],
+     "failure_reasons": {
+      "no_lift": 44,
+      "not_released_and_settled_at_goal": 60,
+      "forbidden_collision": 5
+     }
+    },
+    "stack": {
+     "oracle": "none",
+     "n": 60,
+     "successes": 60,
+     "success_rate": 1.0,
+     "wilson_95": [
+      0.93982814785791,
+      0.9999999999999998
+     ],
+     "failure_reasons": {}
+    }
+   },
+   "gap": {
+    "delta_pp": 100,
+    "ci95_pp": [
+     100,
+     100
+    ],
+    "n": 60
+   },
+   "stack": [
+    "speed_cap_3",
+    "look_again",
+    "touch_probe_calibration",
+    "speed_cap_2",
+    "safe_path_v2"
+   ]
+  },
+  "P1_markers/ur5e": {
+   "conditions": {
+    "raw": {
+     "oracle": "none",
+     "n": 60,
+     "successes": 0,
+     "success_rate": 0.0,
+     "wilson_95": [
+      0.0,
+      0.06017185214208986
+     ],
+     "failure_reasons": {
+      "no_lift": 60,
+      "not_released_and_settled_at_goal": 60
+     }
+    },
+    "stack": {
+     "oracle": "none",
+     "n": 60,
+     "successes": 49,
+     "success_rate": 0.8166666666666667,
+     "wilson_95": [
+      0.7008024625353194,
+      0.8944220311080237
+     ],
+     "failure_reasons": {
+      "not_released_and_settled_at_goal": 11
+     }
+    }
+   },
+   "gap": {
+    "delta_pp": 81.66666666666667,
+    "ci95_pp": [
+     71.66666666666667,
+     91.66666666666666
+    ],
+    "n": 60
+   },
+   "stack": [
+    "speed_cap_3",
+    "look_again",
+    "touch_probe_calibration",
+    "speed_cap_2",
+    "safe_path_v2"
+   ]
+  },
+  "P1_markers/ur10e": {
+   "conditions": {
+    "raw": {
+     "oracle": "none",
+     "n": 60,
+     "successes": 0,
+     "success_rate": 0.0,
+     "wilson_95": [
+      0.0,
+      0.06017185214208986
+     ],
+     "failure_reasons": {
+      "no_lift": 60,
+      "not_released_and_settled_at_goal": 60
+     }
+    },
+    "stack": {
+     "oracle": "none",
+     "n": 60,
+     "successes": 28,
+     "success_rate": 0.4666666666666667,
+     "wilson_95": [
+      0.34627906041438494,
+      0.5910657297284211
+     ],
+     "failure_reasons": {
+      "not_released_and_settled_at_goal": 31,
+      "no_lift": 7
+     }
+    }
+   },
+   "gap": {
+    "delta_pp": 46.666666666666664,
+    "ci95_pp": [
+     35.0,
+     58.333333333333336
+    ],
+    "n": 60
+   },
+   "stack": [
+    "speed_cap_3",
+    "look_again",
+    "touch_probe_calibration",
+    "speed_cap_2",
+    "safe_path_v2"
+   ]
+  },
+  "P1_orange_marker/ur5e": {
+   "conditions": {
+    "raw": {
+     "oracle": "none",
+     "n": 60,
+     "successes": 0,
+     "success_rate": 0.0,
+     "wilson_95": [
+      0.0,
+      0.06017185214208986
+     ],
+     "failure_reasons": {
+      "no_lift": 60,
+      "not_released_and_settled_at_goal": 60
+     }
+    },
+    "stack": {
+     "oracle": "none",
+     "n": 60,
+     "successes": 51,
+     "success_rate": 0.85,
+     "wilson_95": [
+      0.7388541093022145,
+      0.9190255941983225
+     ],
+     "failure_reasons": {
+      "no_lift": 9,
+      "not_released_and_settled_at_goal": 9
+     }
+    }
+   },
+   "gap": {
+    "delta_pp": 85.0,
+    "ci95_pp": [
+     75.0,
+     93.33333333333333
+    ],
+    "n": 60
+   },
+   "stack": [
+    "speed_cap_3",
+    "look_again",
+    "touch_probe_calibration",
+    "speed_cap_2",
+    "safe_path_v2"
+   ]
+  },
+  "P1_orange_marker/ur10e": {
+   "conditions": {
+    "raw": {
+     "oracle": "none",
+     "n": 60,
+     "successes": 0,
+     "success_rate": 0.0,
+     "wilson_95": [
+      0.0,
+      0.06017185214208986
+     ],
+     "failure_reasons": {
+      "no_lift": 60,
+      "not_released_and_settled_at_goal": 60
+     }
+    },
+    "stack": {
+     "oracle": "none",
+     "n": 60,
+     "successes": 59,
+     "success_rate": 0.9833333333333333,
+     "wilson_95": [
+      0.9114487027240993,
+      0.9970518402052136
+     ],
+     "failure_reasons": {
+      "no_lift": 1,
+      "not_released_and_settled_at_goal": 1
+     }
+    }
+   },
+   "gap": {
+    "delta_pp": 98.33333333333333,
+    "ci95_pp": [
+     95.0,
+     100
+    ],
+    "n": 60
+   },
+   "stack": [
+    "speed_cap_3",
+    "look_again",
+    "touch_probe_calibration",
+    "speed_cap_2",
+    "safe_path_v2"
+   ]
+  },
+  "P1_notepad/ur5e": {
+   "conditions": {
+    "raw": {
+     "oracle": "none",
+     "n": 60,
+     "successes": 0,
+     "success_rate": 0.0,
+     "wilson_95": [
+      0.0,
+      0.06017185214208986
+     ],
+     "failure_reasons": {
+      "no_lift": 48,
+      "not_released_and_settled_at_goal": 60,
+      "forbidden_collision": 2
+     }
+    },
+    "stack": {
+     "oracle": "none",
+     "n": 60,
+     "successes": 60,
+     "success_rate": 1.0,
+     "wilson_95": [
+      0.93982814785791,
+      0.9999999999999998
+     ],
+     "failure_reasons": {}
+    }
+   },
+   "gap": {
+    "delta_pp": 100,
+    "ci95_pp": [
+     100,
+     100
+    ],
+    "n": 60
+   },
+   "stack": [
+    "speed_cap_3",
+    "look_again",
+    "touch_probe_calibration",
+    "speed_cap_2",
+    "safe_path_v2"
+   ]
+  },
+  "P1_notepad/ur10e": {
+   "conditions": {
+    "raw": {
+     "oracle": "none",
+     "n": 60,
+     "successes": 0,
+     "success_rate": 0.0,
+     "wilson_95": [
+      0.0,
+      0.06017185214208986
+     ],
+     "failure_reasons": {
+      "no_lift": 60,
+      "not_released_and_settled_at_goal": 60,
+      "forbidden_collision": 34
+     }
+    },
+    "stack": {
+     "oracle": "none",
+     "n": 60,
+     "successes": 60,
+     "success_rate": 1.0,
+     "wilson_95": [
+      0.93982814785791,
+      0.9999999999999998
+     ],
+     "failure_reasons": {}
+    }
+   },
+   "gap": {
+    "delta_pp": 100,
+    "ci95_pp": [
+     100,
+     100
+    ],
+    "n": 60
+   },
+   "stack": [
+    "speed_cap_3",
+    "look_again",
+    "touch_probe_calibration",
+    "speed_cap_2",
+    "safe_path_v2"
+   ]
+  },
+  "P2_box_own_stack/ur5e": {
+   "conditions": {
+    "raw": {
+     "oracle": "none",
+     "n": 60,
+     "successes": 23,
+     "success_rate": 0.38333333333333336,
+     "wilson_95": [
+      0.27088272374082023,
+      0.5098240417590008
+     ],
+     "failure_reasons": {
+      "no_lift": 36,
+      "not_released_and_settled_at_goal": 36,
+      "forbidden_collision": 2
+     }
+    },
+    "stack": {
+     "oracle": "none",
+     "n": 60,
+     "successes": 60,
+     "success_rate": 1.0,
+     "wilson_95": [
+      0.93982814785791,
+      0.9999999999999998
+     ],
+     "failure_reasons": {}
+    }
+   },
+   "gap": {
+    "delta_pp": 61.66666666666667,
+    "ci95_pp": [
+     48.333333333333336,
+     73.33333333333333
+    ],
+    "n": 60
+   },
+   "stack": [
+    "look_again",
+    "touch_probe_calibration",
+    "safe_path_v2"
+   ]
+  },
+  "P2_box_own_stack/ur10e": {
+   "conditions": {
+    "raw": {
+     "oracle": "none",
+     "n": 60,
+     "successes": 9,
+     "success_rate": 0.15,
+     "wilson_95": [
+      0.08097440580167739,
+      0.2611458906977855
+     ],
+     "failure_reasons": {
+      "no_lift": 50,
+      "not_released_and_settled_at_goal": 50,
+      "forbidden_collision": 10
+     }
+    },
+    "stack": {
+     "oracle": "none",
+     "n": 60,
+     "successes": 49,
+     "success_rate": 0.8166666666666667,
+     "wilson_95": [
+      0.7008024625353194,
+      0.8944220311080237
+     ],
+     "failure_reasons": {
+      "forbidden_collision": 11,
+      "not_released_and_settled_at_goal": 1
+     }
+    }
+   },
+   "gap": {
+    "delta_pp": 66.66666666666666,
+    "ci95_pp": [
+     50.0,
+     80.0
+    ],
+    "n": 60
+   },
+   "stack": [
+    "look_again",
+    "touch_probe_calibration",
+    "safe_path_v2"
+   ]
+  },
+  "P2_box_P1_stack/ur5e": {
+   "conditions": {
+    "raw": {
+     "oracle": "none",
+     "n": 60,
+     "successes": 23,
+     "success_rate": 0.38333333333333336,
+     "wilson_95": [
+      0.27088272374082023,
+      0.5098240417590008
+     ],
+     "failure_reasons": {
+      "no_lift": 36,
+      "not_released_and_settled_at_goal": 36,
+      "forbidden_collision": 2
+     }
+    },
+    "stack": {
+     "oracle": "none",
+     "n": 60,
+     "successes": 60,
+     "success_rate": 1.0,
+     "wilson_95": [
+      0.93982814785791,
+      0.9999999999999998
+     ],
+     "failure_reasons": {}
+    }
+   },
+   "gap": {
+    "delta_pp": 61.66666666666667,
+    "ci95_pp": [
+     48.333333333333336,
+     73.33333333333333
+    ],
+    "n": 60
+   },
+   "stack": [
+    "speed_cap_3",
+    "look_again",
+    "touch_probe_calibration",
+    "speed_cap_2",
+    "safe_path_v2"
+   ]
+  },
+  "P2_box_P1_stack/ur10e": {
+   "conditions": {
+    "raw": {
+     "oracle": "none",
+     "n": 60,
+     "successes": 9,
+     "success_rate": 0.15,
+     "wilson_95": [
+      0.08097440580167739,
+      0.2611458906977855
+     ],
+     "failure_reasons": {
+      "no_lift": 50,
+      "not_released_and_settled_at_goal": 50,
+      "forbidden_collision": 10
+     }
+    },
+    "stack": {
+     "oracle": "none",
+     "n": 60,
+     "successes": 52,
+     "success_rate": 0.8666666666666667,
+     "wilson_95": [
+      0.7583484032350039,
+      0.9308589051941303
+     ],
+     "failure_reasons": {
+      "forbidden_collision": 8,
+      "not_released_and_settled_at_goal": 1
+     }
+    }
+   },
+   "gap": {
+    "delta_pp": 71.66666666666667,
+    "ci95_pp": [
+     58.333333333333336,
+     83.33333333333334
+    ],
+    "n": 60
+   },
+   "stack": [
+    "speed_cap_3",
+    "look_again",
+    "touch_probe_calibration",
+    "speed_cap_2",
+    "safe_path_v2"
+   ]
+  },
+  "P3_recording_P1_stack/ur5e": {
+   "conditions": {
+    "raw": {
+     "oracle": "none",
+     "n": 60,
+     "successes": 31,
+     "success_rate": 0.5166666666666667,
+     "wilson_95": [
+      0.39307810032592494,
+      0.6382495046026722
+     ],
+     "failure_reasons": {
+      "no_lift": 27,
+      "not_released_and_settled_at_goal": 27,
+      "forbidden_collision": 5
+     }
+    },
+    "stack": {
+     "oracle": "none",
+     "n": 60,
+     "successes": 57,
+     "success_rate": 0.95,
+     "wilson_95": [
+      0.8629948352365147,
+      0.9828504978356043
+     ],
+     "failure_reasons": {
+      "no_lift": 3,
+      "not_released_and_settled_at_goal": 3
+     }
+    }
+   },
+   "gap": {
+    "delta_pp": 43.333333333333336,
+    "ci95_pp": [
+     31.666666666666664,
+     55.00000000000001
+    ],
+    "n": 60
+   },
+   "stack": [
+    "speed_cap_3",
+    "look_again",
+    "touch_probe_calibration",
+    "speed_cap_2",
+    "safe_path_v2"
+   ]
+  },
+  "P3_recording_P1_stack/ur10e": {
+   "conditions": {
+    "raw": {
+     "oracle": "none",
+     "n": 60,
+     "successes": 21,
+     "success_rate": 0.35,
+     "wilson_95": [
+      0.24167774406017556,
+      0.47637381158245135
+     ],
+     "failure_reasons": {
+      "no_lift": 30,
+      "not_released_and_settled_at_goal": 30,
+      "forbidden_collision": 15
+     }
+    },
+    "stack": {
+     "oracle": "none",
+     "n": 60,
+     "successes": 53,
+     "success_rate": 0.8833333333333333,
+     "wilson_95": [
+      0.7782121197582914,
+      0.9423227935994396
+     ],
+     "failure_reasons": {
+      "no_lift": 6,
+      "not_released_and_settled_at_goal": 7
+     }
+    }
+   },
+   "gap": {
+    "delta_pp": 53.333333333333336,
+    "ci95_pp": [
+     40.0,
+     66.66666666666666
+    ],
+    "n": 60
+   },
+   "stack": [
+    "speed_cap_3",
+    "look_again",
+    "touch_probe_calibration",
+    "speed_cap_2",
+    "safe_path_v2"
+   ]
+  }
+ }
+}

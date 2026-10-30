@@ -1,0 +1,41 @@
+{
+ "kind": "demo_generalization",
+ "protocol": "demo_generalization_v4",
+ "result": "fixed stack from person 1 HURTS person 2",
+ "robots": {
+  "ur5e": {
+   "raw": 11,
+   "all_fixes": 0,
+   "n": 60,
+   "gap": {
+    "delta_pp": -18.333333333333332,
+    "ci95_pp": [
+     -28.333333333333332,
+     -8.333333333333332
+    ],
+    "n": 60
+   },
+   "failure_reasons_all_fixes": {
+    "not_released_and_settled_at_goal": 60
+   }
+  },
+  "ur10e": {
+   "raw": 4,
+   "all_fixes": 0,
+   "n": 60,
+   "gap": {
+    "delta_pp": -6.666666666666667,
+    "ci95_pp": [
+     -13.333333333333334,
+     -1.6666666666666667
+    ],
+    "n": 60
+   },
+   "failure_reasons_all_fixes": {
+    "not_released_and_settled_at_goal": 60,
+    "forbidden_collision": 10
+   }
+  }
+ },
+ "reading": "no universal fix recipe: the stack diagnosed on one person's demo (incl. safe_path) does not transfer to a different person's style; the per-demo diagnosis loop is required (demo_budget on this demo)."
+}

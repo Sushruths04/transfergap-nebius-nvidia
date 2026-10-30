@@ -1,0 +1,914 @@
+{
+ "base/ur5e": {
+  "full": 100,
+  "n": 200,
+  "budget_pp": {
+   "perception": [
+    22.5,
+    15.987500000000002,
+    29.5
+   ],
+   "retargeting": [
+    -1.0,
+    -6.0,
+    4.0
+   ],
+   "calibration": [
+    14.000000000000002,
+    8.0,
+    20.012499999999932
+   ],
+   "timing": [
+    8.0,
+    3.0,
+    12.5
+   ]
+  },
+  "oracle_all_pp": 50.0,
+  "largest_budget": "perception",
+  "corr_gain_pp": {
+   "look_again": [
+    22.5,
+    16.0,
+    28.999999999999996
+   ],
+   "ik_resolve": [
+    1.0,
+    -4.0,
+    5.5
+   ],
+   "touch_probe_calibration": [
+    16.5,
+    10.0,
+    22.5
+   ],
+   "speed_cap_3": [
+    7.5,
+    4.0,
+    11.5
+   ]
+  },
+  "rule_eval_pp": {
+   "budget_pick": 16.428571428571427,
+   "picked": "perception",
+   "always_look_again": 16.428571428571427,
+   "random_mean": 8.75,
+   "hindsight_best": 16.428571428571427
+  }
+ },
+ "base/ur10e": {
+  "full": 101,
+  "n": 200,
+  "budget_pp": {
+   "perception": [
+    28.999999999999996,
+    22.5,
+    35.5
+   ],
+   "retargeting": [
+    0.5,
+    -4.5,
+    6.0
+   ],
+   "calibration": [
+    16.5,
+    10.0,
+    23.0
+   ],
+   "timing": [
+    6.5,
+    3.5000000000000004,
+    10.0
+   ]
+  },
+  "oracle_all_pp": 49.5,
+  "largest_budget": "perception",
+  "corr_gain_pp": {
+   "look_again": [
+    27.0,
+    20.0,
+    34.0
+   ],
+   "ik_resolve": [
+    1.0,
+    -4.0,
+    6.0
+   ],
+   "touch_probe_calibration": [
+    17.0,
+    10.0,
+    23.5
+   ],
+   "speed_cap_3": [
+    6.5,
+    3.5000000000000004,
+    10.012499999999932
+   ]
+  },
+  "rule_eval_pp": {
+   "budget_pick": 23.57142857142857,
+   "picked": "perception",
+   "always_look_again": 23.57142857142857,
+   "random_mean": 11.785714285714286,
+   "hindsight_best": 23.57142857142857
+  }
+ },
+ "err_x0.5/ur5e": {
+  "full": 195,
+  "n": 200,
+  "budget_pp": {
+   "perception": [
+    2.5,
+    0.5,
+    5.0
+   ],
+   "retargeting": [
+    2.0,
+    0.5,
+    4.0
+   ],
+   "calibration": [
+    2.0,
+    0.5,
+    4.0
+   ],
+   "timing": [
+    0.5,
+    -1.0,
+    2.5
+   ]
+  },
+  "oracle_all_pp": 2.5,
+  "largest_budget": "perception",
+  "corr_gain_pp": {
+   "look_again": [
+    2.0,
+    0.5,
+    4.0
+   ],
+   "ik_resolve": [
+    2.0,
+    0.5,
+    4.0
+   ],
+   "touch_probe_calibration": [
+    1.5,
+    -0.5,
+    3.5000000000000004
+   ],
+   "speed_cap_3": [
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  "rule_eval_pp": {
+   "budget_pick": 2.857142857142857,
+   "picked": "perception",
+   "always_look_again": 2.857142857142857,
+   "random_mean": 1.9642857142857144,
+   "hindsight_best": 2.857142857142857
+  }
+ },
+ "err_x0.5/ur10e": {
+  "full": 196,
+  "n": 200,
+  "budget_pp": {
+   "perception": [
+    2.0,
+    0.5,
+    4.0
+   ],
+   "retargeting": [
+    1.5,
+    0.0,
+    3.5000000000000004
+   ],
+   "calibration": [
+    0.5,
+    -1.5,
+    3.0
+   ],
+   "timing": [
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  "oracle_all_pp": 2.0,
+  "largest_budget": "perception",
+  "corr_gain_pp": {
+   "look_again": [
+    2.0,
+    0.5,
+    4.0
+   ],
+   "ik_resolve": [
+    1.5,
+    0.0,
+    3.5000000000000004
+   ],
+   "touch_probe_calibration": [
+    0.5,
+    -1.5,
+    2.5
+   ],
+   "speed_cap_3": [
+    0.0,
+    0.0,
+    0.0
+   ]
+  },
+  "rule_eval_pp": {
+   "budget_pick": 2.142857142857143,
+   "picked": "perception",
+   "always_look_again": 2.142857142857143,
+   "random_mean": 0.8928571428571428,
+   "hindsight_best": 2.142857142857143
+  }
+ },
+ "err_x2/ur5e": {
+  "full": 13,
+  "n": 200,
+  "budget_pp": {
+   "perception": [
+    15.0,
+    10.5,
+    20.0
+   ],
+   "retargeting": [
+    0.5,
+    -2.5,
+    3.5000000000000004
+   ],
+   "calibration": [
+    7.000000000000001,
+    3.5000000000000004,
+    11.0
+   ],
+   "timing": [
+    8.0,
+    4.0,
+    12.5
+   ]
+  },
+  "oracle_all_pp": 93.5,
+  "largest_budget": "perception",
+  "corr_gain_pp": {
+   "look_again": [
+    11.0,
+    7.000000000000001,
+    15.5
+   ],
+   "ik_resolve": [
+    0.5,
+    -2.5,
+    3.5000000000000004
+   ],
+   "touch_probe_calibration": [
+    6.0,
+    2.5,
+    10.0
+   ],
+   "speed_cap_3": [
+    7.000000000000001,
+    3.5000000000000004,
+    11.0
+   ]
+  },
+  "rule_eval_pp": {
+   "budget_pick": 10.0,
+   "picked": "perception",
+   "always_look_again": 10.0,
+   "random_mean": 5.7142857142857135,
+   "hindsight_best": 10.0
+  }
+ },
+ "err_x2/ur10e": {
+  "full": 11,
+  "n": 200,
+  "budget_pp": {
+   "perception": [
+    16.5,
+    11.5,
+    22.0
+   ],
+   "retargeting": [
+    2.5,
+    -0.5,
+    5.5
+   ],
+   "calibration": [
+    9.0,
+    5.0,
+    13.0
+   ],
+   "timing": [
+    5.5,
+    2.5,
+    9.0
+   ]
+  },
+  "oracle_all_pp": 94.5,
+  "largest_budget": "perception",
+  "corr_gain_pp": {
+   "look_again": [
+    14.000000000000002,
+    9.5,
+    19.0
+   ],
+   "ik_resolve": [
+    2.0,
+    -0.5,
+    5.0
+   ],
+   "touch_probe_calibration": [
+    9.0,
+    5.0,
+    13.5
+   ],
+   "speed_cap_3": [
+    6.0,
+    3.0,
+    9.5
+   ]
+  },
+  "rule_eval_pp": {
+   "budget_pick": 13.571428571428571,
+   "picked": "perception",
+   "always_look_again": 13.571428571428571,
+   "random_mean": 8.214285714285715,
+   "hindsight_best": 13.571428571428571
+  }
+ },
+ "block_3cm/ur5e": {
+  "full": 88,
+  "n": 200,
+  "budget_pp": {
+   "perception": [
+    23.0,
+    16.0,
+    29.5
+   ],
+   "retargeting": [
+    2.5,
+    -2.0,
+    6.5
+   ],
+   "calibration": [
+    17.0,
+    10.0,
+    24.0
+   ],
+   "timing": [
+    12.0,
+    7.000000000000001,
+    17.5
+   ]
+  },
+  "oracle_all_pp": 56.00000000000001,
+  "largest_budget": "perception",
+  "corr_gain_pp": {
+   "look_again": [
+    23.0,
+    16.0,
+    30.0
+   ],
+   "ik_resolve": [
+    2.5,
+    -1.5,
+    7.000000000000001
+   ],
+   "touch_probe_calibration": [
+    16.0,
+    9.0,
+    23.0
+   ],
+   "speed_cap_3": [
+    9.5,
+    5.5,
+    14.000000000000002
+   ]
+  },
+  "rule_eval_pp": {
+   "budget_pick": 21.428571428571427,
+   "picked": "perception",
+   "always_look_again": 21.428571428571427,
+   "random_mean": 11.964285714285714,
+   "hindsight_best": 21.428571428571427
+  }
+ },
+ "block_3cm/ur10e": {
+  "full": 79,
+  "n": 200,
+  "budget_pp": {
+   "perception": [
+    25.0,
+    18.5,
+    32.0
+   ],
+   "retargeting": [
+    4.5,
+    -0.5,
+    10.0
+   ],
+   "calibration": [
+    15.5,
+    8.5,
+    22.5
+   ],
+   "timing": [
+    17.0,
+    11.5,
+    22.5
+   ]
+  },
+  "oracle_all_pp": 60.5,
+  "largest_budget": "perception",
+  "corr_gain_pp": {
+   "look_again": [
+    23.5,
+    16.987500000000004,
+    30.5
+   ],
+   "ik_resolve": [
+    4.5,
+    -0.5,
+    9.5
+   ],
+   "touch_probe_calibration": [
+    16.0,
+    10.0,
+    22.0
+   ],
+   "speed_cap_3": [
+    14.499999999999998,
+    9.5,
+    19.512499999999932
+   ]
+  },
+  "rule_eval_pp": {
+   "budget_pick": 19.28571428571429,
+   "picked": "perception",
+   "always_look_again": 19.28571428571429,
+   "random_mean": 12.142857142857142,
+   "hindsight_best": 19.28571428571429
+  }
+ },
+ "block_5cm/ur5e": {
+  "full": 83,
+  "n": 200,
+  "budget_pp": {
+   "perception": [
+    18.0,
+    11.5,
+    24.5
+   ],
+   "retargeting": [
+    2.0,
+    -2.0,
+    6.0
+   ],
+   "calibration": [
+    8.0,
+    2.0,
+    14.499999999999998
+   ],
+   "timing": [
+    11.0,
+    5.5,
+    16.5
+   ]
+  },
+  "oracle_all_pp": 58.5,
+  "largest_budget": "perception",
+  "corr_gain_pp": {
+   "look_again": [
+    17.0,
+    10.5,
+    23.0
+   ],
+   "ik_resolve": [
+    1.0,
+    -3.0,
+    5.0
+   ],
+   "touch_probe_calibration": [
+    7.000000000000001,
+    1.0,
+    13.0
+   ],
+   "speed_cap_3": [
+    10.5,
+    6.5,
+    15.012499999999932
+   ]
+  },
+  "rule_eval_pp": {
+   "budget_pick": 13.571428571428571,
+   "picked": "perception",
+   "always_look_again": 13.571428571428571,
+   "random_mean": 7.321428571428571,
+   "hindsight_best": 13.571428571428571
+  }
+ },
+ "block_5cm/ur10e": {
+  "full": 82,
+  "n": 200,
+  "budget_pp": {
+   "perception": [
+    22.0,
+    15.0,
+    28.499999999999996
+   ],
+   "retargeting": [
+    1.5,
+    -3.0,
+    5.5
+   ],
+   "calibration": [
+    8.5,
+    3.0,
+    14.000000000000002
+   ],
+   "timing": [
+    11.5,
+    7.000000000000001,
+    16.5
+   ]
+  },
+  "oracle_all_pp": 59.0,
+  "largest_budget": "perception",
+  "corr_gain_pp": {
+   "look_again": [
+    20.0,
+    14.000000000000002,
+    26.0
+   ],
+   "ik_resolve": [
+    1.0,
+    -3.5000000000000004,
+    5.5
+   ],
+   "touch_probe_calibration": [
+    7.000000000000001,
+    1.5,
+    13.0
+   ],
+   "speed_cap_3": [
+    10.0,
+    6.0,
+    14.499999999999998
+   ]
+  },
+  "rule_eval_pp": {
+   "budget_pick": 17.857142857142858,
+   "picked": "perception",
+   "always_look_again": 17.857142857142858,
+   "random_mean": 8.392857142857142,
+   "hindsight_best": 17.857142857142858
+  }
+ },
+ "jitter_5cm/ur5e": {
+  "full": 101,
+  "n": 200,
+  "budget_pp": {
+   "perception": [
+    22.5,
+    15.0,
+    29.5
+   ],
+   "retargeting": [
+    0.5,
+    -4.5,
+    5.5
+   ],
+   "calibration": [
+    13.5,
+    7.5,
+    20.0
+   ],
+   "timing": [
+    7.000000000000001,
+    2.5,
+    11.5
+   ]
+  },
+  "oracle_all_pp": 49.5,
+  "largest_budget": "perception",
+  "corr_gain_pp": {
+   "look_again": [
+    24.0,
+    17.5,
+    31.0
+   ],
+   "ik_resolve": [
+    0.0,
+    -4.5,
+    4.5
+   ],
+   "touch_probe_calibration": [
+    15.0,
+    8.5,
+    22.0
+   ],
+   "speed_cap_3": [
+    6.0,
+    3.0,
+    9.5
+   ]
+  },
+  "rule_eval_pp": {
+   "budget_pick": 18.571428571428573,
+   "picked": "perception",
+   "always_look_again": 18.571428571428573,
+   "random_mean": 8.571428571428571,
+   "hindsight_best": 18.571428571428573
+  }
+ },
+ "jitter_5cm/ur10e": {
+  "full": 102,
+  "n": 200,
+  "budget_pp": {
+   "perception": [
+    28.499999999999996,
+    22.5,
+    34.5
+   ],
+   "retargeting": [
+    0.0,
+    -5.0,
+    5.0
+   ],
+   "calibration": [
+    15.5,
+    8.5,
+    22.0
+   ],
+   "timing": [
+    7.000000000000001,
+    3.0,
+    11.0
+   ]
+  },
+  "oracle_all_pp": 49.0,
+  "largest_budget": "perception",
+  "corr_gain_pp": {
+   "look_again": [
+    27.0,
+    20.5,
+    34.5
+   ],
+   "ik_resolve": [
+    -0.5,
+    -5.5,
+    5.0
+   ],
+   "touch_probe_calibration": [
+    17.5,
+    11.0,
+    24.5
+   ],
+   "speed_cap_3": [
+    7.000000000000001,
+    3.9875000000000007,
+    10.5
+   ]
+  },
+  "rule_eval_pp": {
+   "budget_pick": 23.57142857142857,
+   "picked": "perception",
+   "always_look_again": 23.57142857142857,
+   "random_mean": 11.428571428571427,
+   "hindsight_best": 23.57142857142857
+  }
+ },
+ "perc_x0.25/ur5e": {
+  "full": 149,
+  "n": 200,
+  "budget_pp": {
+   "perception": [
+    -2.0,
+    -5.5,
+    1.5
+   ],
+   "retargeting": [
+    3.0,
+    -0.5,
+    7.000000000000001
+   ],
+   "calibration": [
+    13.5,
+    9.0,
+    18.0
+   ],
+   "timing": [
+    15.5,
+    10.0,
+    20.5
+   ]
+  },
+  "oracle_all_pp": 25.5,
+  "largest_budget": "timing",
+  "corr_gain_pp": {
+   "look_again": [
+    -1.5,
+    -6.012499999999999,
+    3.0
+   ],
+   "ik_resolve": [
+    3.5000000000000004,
+    0.0,
+    7.000000000000001
+   ],
+   "touch_probe_calibration": [
+    12.5,
+    7.5,
+    17.5
+   ],
+   "speed_cap_3": [
+    8.5,
+    5.0,
+    12.5
+   ]
+  },
+  "rule_eval_pp": {
+   "budget_pick": 8.571428571428571,
+   "picked": "timing",
+   "always_look_again": -1.4285714285714286,
+   "random_mean": 5.7142857142857135,
+   "hindsight_best": 12.857142857142856
+  }
+ },
+ "perc_x0.25/ur10e": {
+  "full": 157,
+  "n": 200,
+  "budget_pp": {
+   "perception": [
+    1.0,
+    -2.0,
+    4.0
+   ],
+   "retargeting": [
+    4.0,
+    0.0,
+    7.512499999999932
+   ],
+   "calibration": [
+    10.0,
+    5.5,
+    14.499999999999998
+   ],
+   "timing": [
+    8.5,
+    4.0,
+    13.0
+   ]
+  },
+  "oracle_all_pp": 21.5,
+  "largest_budget": "calibration",
+  "corr_gain_pp": {
+   "look_again": [
+    -0.5,
+    -4.0,
+    3.0
+   ],
+   "ik_resolve": [
+    4.0,
+    0.0,
+    8.0
+   ],
+   "touch_probe_calibration": [
+    10.5,
+    6.5,
+    15.0
+   ],
+   "speed_cap_3": [
+    10.0,
+    6.0,
+    14.499999999999998
+   ]
+  },
+  "rule_eval_pp": {
+   "budget_pick": 10.714285714285714,
+   "picked": "timing",
+   "always_look_again": 0.7142857142857143,
+   "random_mean": 6.785714285714285,
+   "hindsight_best": 12.142857142857142
+  }
+ },
+ "perc_x0.25_cal_x2/ur5e": {
+  "full": 86,
+  "n": 200,
+  "budget_pp": {
+   "perception": [
+    -4.0,
+    -8.5,
+    0.0
+   ],
+   "retargeting": [
+    -0.5,
+    -4.0,
+    3.5000000000000004
+   ],
+   "calibration": [
+    45.0,
+    38.5,
+    52.0
+   ],
+   "timing": [
+    5.5,
+    2.0,
+    9.5
+   ]
+  },
+  "oracle_all_pp": 56.99999999999999,
+  "largest_budget": "calibration",
+  "corr_gain_pp": {
+   "look_again": [
+    -5.5,
+    -9.5,
+    -2.0
+   ],
+   "ik_resolve": [
+    -0.5,
+    -4.0,
+    3.0
+   ],
+   "touch_probe_calibration": [
+    44.0,
+    37.0,
+    51.5
+   ],
+   "speed_cap_3": [
+    5.5,
+    2.5,
+    9.0
+   ]
+  },
+  "rule_eval_pp": {
+   "budget_pick": 44.285714285714285,
+   "picked": "calibration",
+   "always_look_again": -6.428571428571428,
+   "random_mean": 10.535714285714286,
+   "hindsight_best": 44.285714285714285
+  }
+ },
+ "perc_x0.25_cal_x2/ur10e": {
+  "full": 83,
+  "n": 200,
+  "budget_pp": {
+   "perception": [
+    1.5,
+    -1.5,
+    4.5
+   ],
+   "retargeting": [
+    4.0,
+    -0.01249999999999929,
+    8.5
+   ],
+   "calibration": [
+    47.0,
+    40.0,
+    53.5
+   ],
+   "timing": [
+    6.5,
+    3.5000000000000004,
+    10.5
+   ]
+  },
+  "oracle_all_pp": 58.5,
+  "largest_budget": "calibration",
+  "corr_gain_pp": {
+   "look_again": [
+    -1.0,
+    -4.5,
+    2.5
+   ],
+   "ik_resolve": [
+    3.0,
+    -1.0,
+    7.5
+   ],
+   "touch_probe_calibration": [
+    47.5,
+    40.5,
+    54.50000000000001
+   ],
+   "speed_cap_3": [
+    6.0,
+    3.0,
+    9.5
+   ]
+  },
+  "rule_eval_pp": {
+   "budget_pick": 47.14285714285714,
+   "picked": "calibration",
+   "always_look_again": -1.4285714285714286,
+   "random_mean": 13.392857142857142,
+   "hindsight_best": 47.14285714285714
+  }
+ }
+}

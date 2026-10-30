@@ -1,0 +1,147 @@
+{
+ "seeds": [
+  0,
+  59
+ ],
+ "conditions": {
+  "full": {
+   "oracle": "none",
+   "n": 60,
+   "successes": 33,
+   "success_rate": 0.55,
+   "wilson_95": [
+    0.4249193588533434,
+    0.6690634559324476
+   ],
+   "failure_reasons": {
+    "no_lift": 24,
+    "not_released_and_settled_at_goal": 27
+   }
+  },
+  "oracle_perception": {
+   "oracle": "perception",
+   "n": 60,
+   "successes": 41,
+   "success_rate": 0.6833333333333333,
+   "wilson_95": [
+    0.5576623297382323,
+    0.7869413244763347
+   ],
+   "failure_reasons": {
+    "no_lift": 14,
+    "not_released_and_settled_at_goal": 19
+   }
+  },
+  "oracle_retargeting": {
+   "oracle": "retargeting",
+   "n": 60,
+   "successes": 30,
+   "success_rate": 0.5,
+   "wilson_95": [
+    0.3773502424155577,
+    0.6226497575844423
+   ],
+   "failure_reasons": {
+    "no_lift": 28,
+    "not_released_and_settled_at_goal": 30
+   }
+  },
+  "oracle_calibration": {
+   "oracle": "calibration",
+   "n": 60,
+   "successes": 41,
+   "success_rate": 0.6833333333333333,
+   "wilson_95": [
+    0.5576623297382323,
+    0.7869413244763347
+   ],
+   "failure_reasons": {
+    "not_released_and_settled_at_goal": 19,
+    "no_lift": 14
+   }
+  },
+  "oracle_timing": {
+   "oracle": "timing",
+   "n": 60,
+   "successes": 39,
+   "success_rate": 0.65,
+   "wilson_95": [
+    0.5236261884175486,
+    0.7583222559398244
+   ],
+   "failure_reasons": {
+    "not_released_and_settled_at_goal": 21,
+    "no_lift": 18
+   }
+  },
+  "oracle_all": {
+   "oracle": "all",
+   "n": 60,
+   "successes": 60,
+   "success_rate": 1.0,
+   "wilson_95": [
+    0.93982814785791,
+    0.9999999999999998
+   ],
+   "failure_reasons": {}
+  }
+ },
+ "budget": {
+  "perception": {
+   "delta_pp": 13.333333333333334,
+   "ci95_pp": [
+    3.3333333333333335,
+    23.333333333333332
+   ],
+   "n": 60
+  },
+  "retargeting": {
+   "delta_pp": -5.0,
+   "ci95_pp": [
+    -15.0,
+    5.0
+   ],
+   "n": 60
+  },
+  "calibration": {
+   "delta_pp": 13.333333333333334,
+   "ci95_pp": [
+    1.6666666666666667,
+    26.666666666666668
+   ],
+   "n": 60
+  },
+  "timing": {
+   "delta_pp": 10.0,
+   "ci95_pp": [
+    0,
+    20.0
+   ],
+   "n": 60
+  }
+ },
+ "interaction": {
+  "sum_of_single_recoveries_pp": 31.666666666666668,
+  "oracle_all_recovery_pp": 45.0,
+  "oracle_all": {
+   "delta_pp": 45.0,
+   "ci95_pp": [
+    33.33333333333333,
+    58.333333333333336
+   ],
+   "n": 60
+  },
+  "sum_minus_all_pp": -13.333333333333332
+ },
+ "chosen_component": "perception",
+ "chosen_correction": "look_again",
+ "choice_rule": "argmax over {perception, retargeting, calibration, timing} of success(oracle_k)-success(full) on dev; ties -> perception, retargeting, calibration, timing order",
+ "robot": "ur5e",
+ "retarget_tool_error_descriptive": {
+  "n": 60,
+  "median_m": 0.006391915210876814,
+  "p90_m": 0.011730282451502467,
+  "max_m": 0.017278503697039194,
+  "note": "tool-point displacement at the nominal grasp pose caused by the injected joint-space retargeting error"
+ }
+}

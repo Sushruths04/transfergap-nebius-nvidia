@@ -1,0 +1,136 @@
+{
+ "model": "nvidia/Cosmos-Reason2-2B",
+ "adapter": "/ws/transfergap/runs/cosmos_critic_adapter",
+ "n_clips": 240,
+ "seconds": 183,
+ "zero_shot": {
+  "n": 240,
+  "positives": 191,
+  "accuracy": 0.7958,
+  "balanced_accuracy": 0.5,
+  "true_positive_rate": 1.0,
+  "true_negative_rate": 0.0,
+  "predicted_success_rate": 1.0
+ },
+ "fine_tuned": {
+  "n": 240,
+  "positives": 191,
+  "accuracy": 0.9625,
+  "balanced_accuracy": 0.9082,
+  "true_positive_rate": 1.0,
+  "true_negative_rate": 0.8163,
+  "predicted_success_rate": 0.8333
+ },
+ "zero_shot_by_cell": {
+  "kairos/fix": {
+   "n": 40,
+   "positives": 40,
+   "accuracy": 1.0,
+   "balanced_accuracy": 0.5,
+   "true_positive_rate": 1.0,
+   "true_negative_rate": 0.0,
+   "predicted_success_rate": 1.0
+  },
+  "kairos/raw": {
+   "n": 40,
+   "positives": 30,
+   "accuracy": 0.75,
+   "balanced_accuracy": 0.5,
+   "true_positive_rate": 1.0,
+   "true_negative_rate": 0.0,
+   "predicted_success_rate": 1.0
+  },
+  "ur10e/fix": {
+   "n": 40,
+   "positives": 40,
+   "accuracy": 1.0,
+   "balanced_accuracy": 0.5,
+   "true_positive_rate": 1.0,
+   "true_negative_rate": 0.0,
+   "predicted_success_rate": 1.0
+  },
+  "ur10e/raw": {
+   "n": 40,
+   "positives": 21,
+   "accuracy": 0.525,
+   "balanced_accuracy": 0.5,
+   "true_positive_rate": 1.0,
+   "true_negative_rate": 0.0,
+   "predicted_success_rate": 1.0
+  },
+  "ur5e/fix": {
+   "n": 40,
+   "positives": 40,
+   "accuracy": 1.0,
+   "balanced_accuracy": 0.5,
+   "true_positive_rate": 1.0,
+   "true_negative_rate": 0.0,
+   "predicted_success_rate": 1.0
+  },
+  "ur5e/raw": {
+   "n": 40,
+   "positives": 20,
+   "accuracy": 0.5,
+   "balanced_accuracy": 0.5,
+   "true_positive_rate": 1.0,
+   "true_negative_rate": 0.0,
+   "predicted_success_rate": 1.0
+  }
+ },
+ "fine_tuned_by_cell": {
+  "kairos/fix": {
+   "n": 40,
+   "positives": 40,
+   "accuracy": 1.0,
+   "balanced_accuracy": 0.5,
+   "true_positive_rate": 1.0,
+   "true_negative_rate": 0.0,
+   "predicted_success_rate": 1.0
+  },
+  "kairos/raw": {
+   "n": 40,
+   "positives": 30,
+   "accuracy": 0.9,
+   "balanced_accuracy": 0.8,
+   "true_positive_rate": 1.0,
+   "true_negative_rate": 0.6,
+   "predicted_success_rate": 0.85
+  },
+  "ur10e/fix": {
+   "n": 40,
+   "positives": 40,
+   "accuracy": 1.0,
+   "balanced_accuracy": 0.5,
+   "true_positive_rate": 1.0,
+   "true_negative_rate": 0.0,
+   "predicted_success_rate": 1.0
+  },
+  "ur10e/raw": {
+   "n": 40,
+   "positives": 21,
+   "accuracy": 0.95,
+   "balanced_accuracy": 0.9474,
+   "true_positive_rate": 1.0,
+   "true_negative_rate": 0.8947,
+   "predicted_success_rate": 0.575
+  },
+  "ur5e/fix": {
+   "n": 40,
+   "positives": 40,
+   "accuracy": 1.0,
+   "balanced_accuracy": 0.5,
+   "true_positive_rate": 1.0,
+   "true_negative_rate": 0.0,
+   "predicted_success_rate": 1.0
+  },
+  "ur5e/raw": {
+   "n": 40,
+   "positives": 20,
+   "accuracy": 0.925,
+   "balanced_accuracy": 0.925,
+   "true_positive_rate": 1.0,
+   "true_negative_rate": 0.85,
+   "predicted_success_rate": 0.575
+  }
+ }
+}

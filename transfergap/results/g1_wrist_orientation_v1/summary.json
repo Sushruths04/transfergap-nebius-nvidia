@@ -1,0 +1,78 @@
+{
+ "kind": "g1_wrist_orientation",
+ "n": 80,
+ "grasped": 32,
+ "features": {
+  "drift_cm": {
+   "auc": 0.333984375,
+   "ci95": [
+    0.21679675262374687,
+    0.4577916666666667
+   ],
+   "perm_p_two_sided": 0.0108,
+   "median_grasp": 6.085374839492655,
+   "median_nograsp": 7.340821947944129
+  },
+  "tilt_x": {
+   "auc": 0.4609375,
+   "ci95": [
+    0.3382003816168763,
+    0.5828706880419188
+   ],
+   "perm_p_two_sided": 0.5448,
+   "median_grasp": 85.07913710336098,
+   "median_nograsp": 85.45322176909029
+  },
+  "tilt_y": {
+   "auc": 0.4641927083333333,
+   "ci95": [
+    0.3444296988017918,
+    0.5888716941385393
+   ],
+   "perm_p_two_sided": 0.5836,
+   "median_grasp": 64.69985448892194,
+   "median_nograsp": 64.52183772476414
+  },
+  "tilt_z": {
+   "auc": 0.51171875,
+   "ci95": [
+    0.3815460471761899,
+    0.6389013213981245
+   ],
+   "perm_p_two_sided": 0.8638,
+   "median_grasp": 25.939571754695606,
+   "median_nograsp": 25.94242882434692
+  },
+  "rel_roll": {
+   "auc": 0.4602864583333333,
+   "ci95": [
+    0.33590545585844944,
+    0.5822484304500715
+   ],
+   "perm_p_two_sided": 0.5454,
+   "median_grasp": -25.57180131429022,
+   "median_nograsp": -25.38781475269206
+  },
+  "rel_pitch": {
+   "auc": 0.6451822916666666,
+   "ci95": [
+    0.5254674403610574,
+    0.7614581575977286
+   ],
+   "perm_p_two_sided": 0.0268,
+   "median_grasp": 6.697656278628551,
+   "median_nograsp": 4.50957378054763
+  },
+  "rel_yaw": {
+   "auc": 0.4485677083333333,
+   "ci95": [
+    0.32532379110251447,
+    0.5793314322391916
+   ],
+   "perm_p_two_sided": 0.43,
+   "median_grasp": -14.332118015987437,
+   "median_nograsp": -12.503110835389567
+  }
+ },
+ "note": "exploratory; 7 features, no multiplicity correction; AUC = P(feature of a grasping rollout > feature of a non-grasping one)"
+}

@@ -1,0 +1,84 @@
+{
+ "source_dir": "/tmp/work",
+ "note": "gap = final object xy vs goal xy; simulation only",
+ "results": {
+  "kairos": {
+   "scripted_ik[raw]": {
+    "n": 60,
+    "tolerance_cm": 3.0,
+    "gap_median_cm": 1.39,
+    "gap_p90_cm": 32.34,
+    "lift_median_cm": 18.4,
+    "within_tol": 48,
+    "within_tol_ci95": [
+     0.682,
+     0.882
+    ]
+   },
+   "scripted_ik[all_fixes]": {
+    "n": 60,
+    "tolerance_cm": 3.0,
+    "gap_median_cm": 0.6,
+    "gap_p90_cm": 1.13,
+    "lift_median_cm": 18.41,
+    "within_tol": 60,
+    "within_tol_ci95": [
+     0.94,
+     1.0
+    ]
+   }
+  },
+  "ur10e": {
+   "scripted_ik[raw]": {
+    "n": 60,
+    "tolerance_cm": 3.0,
+    "gap_median_cm": 2.24,
+    "gap_p90_cm": 35.45,
+    "lift_median_cm": 20.02,
+    "within_tol": 35,
+    "within_tol_ci95": [
+     0.457,
+     0.699
+    ]
+   },
+   "scripted_ik[all_fixes]": {
+    "n": 60,
+    "tolerance_cm": 3.0,
+    "gap_median_cm": 0.41,
+    "gap_p90_cm": 0.73,
+    "lift_median_cm": 20.18,
+    "within_tol": 60,
+    "within_tol_ci95": [
+     0.94,
+     1.0
+    ]
+   }
+  },
+  "ur5e": {
+   "scripted_ik[raw]": {
+    "n": 60,
+    "tolerance_cm": 3.0,
+    "gap_median_cm": 2.27,
+    "gap_p90_cm": 35.48,
+    "lift_median_cm": 18.92,
+    "within_tol": 31,
+    "within_tol_ci95": [
+     0.393,
+     0.638
+    ]
+   },
+   "scripted_ik[all_fixes]": {
+    "n": 60,
+    "tolerance_cm": 3.0,
+    "gap_median_cm": 0.45,
+    "gap_p90_cm": 0.62,
+    "lift_median_cm": 19.58,
+    "within_tol": 60,
+    "within_tol_ci95": [
+     0.94,
+     1.0
+    ]
+   }
+  }
+ }
+}

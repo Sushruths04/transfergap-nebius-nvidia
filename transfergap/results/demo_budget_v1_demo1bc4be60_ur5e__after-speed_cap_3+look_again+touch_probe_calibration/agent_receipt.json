@@ -1,0 +1,34 @@
+{
+ "schema_version": 1,
+ "kind": "hosted_inference",
+ "role": "nemotron",
+ "requested_model": "nvidia/nemotron-3-super-120b-a12b",
+ "endpoint_host": "api.tokenfactory.nebius.com",
+ "created_at": "2026-10-02T06:12:33.023816+00:00",
+ "request_sha256": "a4a851bc1ef7f7dd8b263388e8e516d2d07fd0d659d39532ede46290ccceb420",
+ "status": "succeeded",
+ "response_id": "chatcmpl-ad75d1ed22802c23",
+ "returned_model": "nvidia/nemotron-3-super-120b-a12b",
+ "usage": {
+  "completion_tokens": 218,
+  "prompt_tokens": 678,
+  "total_tokens": 896,
+  "completion_tokens_details": {
+   "accepted_prediction_tokens": null,
+   "audio_tokens": null,
+   "reasoning_tokens": 160,
+   "rejected_prediction_tokens": null
+  },
+  "prompt_tokens_details": {
+   "audio_tokens": null,
+   "cached_tokens": 0,
+   "created_cache_tokens": 0,
+   "multimodal_tokens": null
+  },
+  "prompt_cache_hit_tokens": 0,
+  "prompt_cache_miss_tokens": 678
+ },
+ "finish_reason": "stop",
+ "content": "\n\n{\n  \"correction\": \"speed_cap_2\",\n  \"rationale\": \"Capping speed reduces timing\u2011related failures (not released/settled) while the timing budget shows large path\u2011RMSE improvement and modest speed\u2011profile gain, preserving style.\"\n}",
+ "latency_s": 2.1314775119972182
+}

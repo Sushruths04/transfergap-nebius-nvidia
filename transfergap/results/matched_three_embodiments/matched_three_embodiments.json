@@ -1,0 +1,89 @@
+{
+ "arms": {
+  "ur5e": [
+   {
+    "step": "no fix",
+    "k": 0,
+    "n": 60,
+    "path_rmse_m": 0.1393644922831175
+   },
+   {
+    "step": "+ speed_cap_3",
+    "k": 10,
+    "n": 60,
+    "path_rmse_m": 0.07409049347433735
+   },
+   {
+    "step": "+ look_again",
+    "k": 35,
+    "n": 60,
+    "path_rmse_m": 0.07232166684802818
+   },
+   {
+    "step": "+ touch_probe_calibration",
+    "k": 50,
+    "n": 60,
+    "path_rmse_m": 0.070954004385893
+   },
+   {
+    "step": "+ speed_cap_2",
+    "k": 57,
+    "n": 60,
+    "path_rmse_m": 0.049588489595300246
+   }
+  ],
+  "ur10e": [
+   {
+    "step": "no fix",
+    "k": 0,
+    "n": 60,
+    "path_rmse_m": 0.0914734901695464
+   },
+   {
+    "step": "+ speed_cap_3",
+    "k": 15,
+    "n": 60,
+    "path_rmse_m": 0.045145721833952414
+   },
+   {
+    "step": "+ look_again",
+    "k": 35,
+    "n": 60,
+    "path_rmse_m": 0.04201789517089706
+   },
+   {
+    "step": "+ touch_probe_calibration",
+    "k": 51,
+    "n": 60,
+    "path_rmse_m": 0.039576846452570084
+   },
+   {
+    "step": "+ speed_cap_2",
+    "k": 60,
+    "n": 60,
+    "path_rmse_m": 0.02856870673247364
+   }
+  ]
+ },
+ "g1": [
+  {
+   "condition": "human pace",
+   "k": 0,
+   "n": 30,
+   "path_rmse_median_m": 0.06447617833596161
+  },
+  {
+   "condition": "speed cap 3x",
+   "k": 8,
+   "n": 30,
+   "path_rmse_median_m": 0.05959040425169734
+  },
+  {
+   "condition": "robot pace",
+   "k": 20,
+   "n": 30,
+   "path_rmse_median_m": 0.05513505315984354
+  }
+ ],
+ "note": "arm style = mean path RMSE of the tool point; G1 style = median wrist path RMSE"
+}

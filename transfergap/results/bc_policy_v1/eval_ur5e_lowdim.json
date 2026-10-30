@@ -1,0 +1,479 @@
+{
+ "ckpt": "/ws/transfergap/bc_v1/models_ur5e/policy_lowdim.pt",
+ "robot": "ur5e",
+ "seeds": [
+  6000,
+  6059
+ ],
+ "n": 60,
+ "policy_success": 11,
+ "policy_ci95": [
+  0.106,
+  0.299
+ ],
+ "scripted_success": null,
+ "failure_reasons": {
+  "not_released_and_settled_at_goal": 49,
+  "forbidden_collision": 47,
+  "no_lift": 10,
+  "fallen": 1
+ },
+ "per_seed": [
+  {
+   "seed": 6000,
+   "success": false,
+   "reasons": [
+    "not_released_and_settled_at_goal",
+    "forbidden_collision"
+   ]
+  },
+  {
+   "seed": 6001,
+   "success": false,
+   "reasons": [
+    "not_released_and_settled_at_goal",
+    "forbidden_collision"
+   ]
+  },
+  {
+   "seed": 6002,
+   "success": false,
+   "reasons": [
+    "not_released_and_settled_at_goal",
+    "forbidden_collision"
+   ]
+  },
+  {
+   "seed": 6003,
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal",
+    "forbidden_collision"
+   ]
+  },
+  {
+   "seed": 6004,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 6005,
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal",
+    "forbidden_collision"
+   ]
+  },
+  {
+   "seed": 6006,
+   "success": false,
+   "reasons": [
+    "not_released_and_settled_at_goal",
+    "forbidden_collision"
+   ]
+  },
+  {
+   "seed": 6007,
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal",
+    "forbidden_collision"
+   ]
+  },
+  {
+   "seed": 6008,
+   "success": false,
+   "reasons": [
+    "not_released_and_settled_at_goal",
+    "forbidden_collision"
+   ]
+  },
+  {
+   "seed": 6009,
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal",
+    "forbidden_collision"
+   ]
+  },
+  {
+   "seed": 6010,
+   "success": false,
+   "reasons": [
+    "not_released_and_settled_at_goal",
+    "forbidden_collision"
+   ]
+  },
+  {
+   "seed": 6011,
+   "success": false,
+   "reasons": [
+    "not_released_and_settled_at_goal",
+    "forbidden_collision"
+   ]
+  },
+  {
+   "seed": 6012,
+   "success": false,
+   "reasons": [
+    "not_released_and_settled_at_goal",
+    "forbidden_collision"
+   ]
+  },
+  {
+   "seed": 6013,
+   "success": false,
+   "reasons": [
+    "not_released_and_settled_at_goal",
+    "forbidden_collision"
+   ]
+  },
+  {
+   "seed": 6014,
+   "success": false,
+   "reasons": [
+    "not_released_and_settled_at_goal",
+    "forbidden_collision"
+   ]
+  },
+  {
+   "seed": 6015,
+   "success": false,
+   "reasons": [
+    "not_released_and_settled_at_goal",
+    "forbidden_collision"
+   ]
+  },
+  {
+   "seed": 6016,
+   "success": false,
+   "reasons": [
+    "not_released_and_settled_at_goal",
+    "forbidden_collision"
+   ]
+  },
+  {
+   "seed": 6017,
+   "success": false,
+   "reasons": [
+    "not_released_and_settled_at_goal",
+    "forbidden_collision"
+   ]
+  },
+  {
+   "seed": 6018,
+   "success": false,
+   "reasons": [
+    "not_released_and_settled_at_goal"
+   ]
+  },
+  {
+   "seed": 6019,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 6020,
+   "success": false,
+   "reasons": [
+    "not_released_and_settled_at_goal",
+    "forbidden_collision"
+   ]
+  },
+  {
+   "seed": 6021,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 6022,
+   "success": false,
+   "reasons": [
+    "not_released_and_settled_at_goal",
+    "forbidden_collision"
+   ]
+  },
+  {
+   "seed": 6023,
+   "success": false,
+   "reasons": [
+    "not_released_and_settled_at_goal"
+   ]
+  },
+  {
+   "seed": 6024,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 6025,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 6026,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 6027,
+   "success": false,
+   "reasons": [
+    "not_released_and_settled_at_goal",
+    "forbidden_collision"
+   ]
+  },
+  {
+   "seed": 6028,
+   "success": false,
+   "reasons": [
+    "not_released_and_settled_at_goal",
+    "forbidden_collision"
+   ]
+  },
+  {
+   "seed": 6029,
+   "success": false,
+   "reasons": [
+    "not_released_and_settled_at_goal",
+    "forbidden_collision"
+   ]
+  },
+  {
+   "seed": 6030,
+   "success": false,
+   "reasons": [
+    "not_released_and_settled_at_goal",
+    "forbidden_collision"
+   ]
+  },
+  {
+   "seed": 6031,
+   "success": false,
+   "reasons": [
+    "not_released_and_settled_at_goal",
+    "forbidden_collision"
+   ]
+  },
+  {
+   "seed": 6032,
+   "success": false,
+   "reasons": [
+    "not_released_and_settled_at_goal",
+    "forbidden_collision"
+   ]
+  },
+  {
+   "seed": 6033,
+   "success": false,
+   "reasons": [
+    "not_released_and_settled_at_goal",
+    "forbidden_collision"
+   ]
+  },
+  {
+   "seed": 6034,
+   "success": false,
+   "reasons": [
+    "not_released_and_settled_at_goal",
+    "forbidden_collision"
+   ]
+  },
+  {
+   "seed": 6035,
+   "success": false,
+   "reasons": [
+    "not_released_and_settled_at_goal",
+    "forbidden_collision"
+   ]
+  },
+  {
+   "seed": 6036,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 6037,
+   "success": false,
+   "reasons": [
+    "not_released_and_settled_at_goal",
+    "forbidden_collision"
+   ]
+  },
+  {
+   "seed": 6038,
+   "success": false,
+   "reasons": [
+    "not_released_and_settled_at_goal",
+    "forbidden_collision"
+   ]
+  },
+  {
+   "seed": 6039,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 6040,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 6041,
+   "success": false,
+   "reasons": [
+    "not_released_and_settled_at_goal",
+    "forbidden_collision"
+   ]
+  },
+  {
+   "seed": 6042,
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal",
+    "forbidden_collision"
+   ]
+  },
+  {
+   "seed": 6043,
+   "success": false,
+   "reasons": [
+    "not_released_and_settled_at_goal",
+    "forbidden_collision"
+   ]
+  },
+  {
+   "seed": 6044,
+   "success": false,
+   "reasons": [
+    "not_released_and_settled_at_goal",
+    "forbidden_collision"
+   ]
+  },
+  {
+   "seed": 6045,
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal",
+    "forbidden_collision"
+   ]
+  },
+  {
+   "seed": 6046,
+   "success": false,
+   "reasons": [
+    "not_released_and_settled_at_goal",
+    "forbidden_collision"
+   ]
+  },
+  {
+   "seed": 6047,
+   "success": false,
+   "reasons": [
+    "not_released_and_settled_at_goal",
+    "forbidden_collision"
+   ]
+  },
+  {
+   "seed": 6048,
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal",
+    "forbidden_collision"
+   ]
+  },
+  {
+   "seed": 6049,
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal",
+    "forbidden_collision"
+   ]
+  },
+  {
+   "seed": 6050,
+   "success": false,
+   "reasons": [
+    "not_released_and_settled_at_goal",
+    "forbidden_collision"
+   ]
+  },
+  {
+   "seed": 6051,
+   "success": false,
+   "reasons": [
+    "not_released_and_settled_at_goal",
+    "forbidden_collision"
+   ]
+  },
+  {
+   "seed": 6052,
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal",
+    "forbidden_collision"
+   ]
+  },
+  {
+   "seed": 6053,
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal",
+    "forbidden_collision"
+   ]
+  },
+  {
+   "seed": 6054,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 6055,
+   "success": false,
+   "reasons": [
+    "not_released_and_settled_at_goal",
+    "forbidden_collision"
+   ]
+  },
+  {
+   "seed": 6056,
+   "success": false,
+   "reasons": [
+    "not_released_and_settled_at_goal",
+    "forbidden_collision"
+   ]
+  },
+  {
+   "seed": 6057,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 6058,
+   "success": false,
+   "reasons": [
+    "not_released_and_settled_at_goal",
+    "forbidden_collision"
+   ]
+  },
+  {
+   "seed": 6059,
+   "success": false,
+   "reasons": [
+    "not_released_and_settled_at_goal",
+    "forbidden_collision",
+    "fallen"
+   ]
+  }
+ ]
+}

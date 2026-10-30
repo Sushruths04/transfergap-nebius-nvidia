@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "kind": "cosmos_critic",
+  "requested_model": "nvidia/Cosmos-Reason2-8B",
+  "endpoint_host": "127.0.0.1",
+  "created_at": "2026-10-01T18:25:13.154483+00:00",
+  "prompt_sha256": "309d056cd99e17d4cf39386b52595756f2aa8852a202542d9f321a4363545cd8",
+  "video_sha256": "c889ecc715d61d37d566cd29cf77370a4e2030a8c35c67862e836e6e7a97599b",
+  "request_sha256": "54bd0b43386333ece1a4b093b61e0f3cf4922629f519f59aef8fb763d35ae051",
+  "fps": 4,
+  "sampling": {
+    "max_tokens": 4096,
+    "temperature": 0.6,
+    "top_p": 0.95,
+    "top_k": 20,
+    "repetition_penalty": 1.0,
+    "presence_penalty": 0.0,
+    "seed": 1234
+  },
+  "guided_json": true,
+  "status": "succeeded",
+  "clip_id": "clip067",
+  "git_commit": "9715a642cd667a2c241d582d2ba8c3c8f3904ec3",
+  "response_id": "chatcmpl-8cf7ed04ee6139c5",
+  "returned_model": "nvidia/Cosmos-Reason2-8B",
+  "usage": {
+    "prompt_tokens": 8298,
+    "total_tokens": 8505,
+    "completion_tokens": 207,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 149
+    }
+  },
+  "finish_reason": "stop",
+  "content": "{\"success\": \"yes\", \"failing_stage\": \"none\", \"rationale\": \"The robot arm successfully grasped the red block, lifted it, moved it to the green tray, released it inside, and retracted. All steps were completed without error.\"}",
+  "reasoning_content": "\nOkay, let's see. The user wants to know if the robot successfully completed the task of picking up the red block and placing it into the green tray.\n\nLooking at the video, the robot arm starts by moving towards the red block, grasps it, lifts it, moves to the green tray, releases the block into the tray, and then retracts. The key points here are that the block was lifted off the table and placed inside the tray. The video shows the block ends up resting inside the tray, which means the task was completed as instructed. The video does not show any failure during the process, like dropping the block or missing the tray. So the answer should be \"yes\" because all steps were executed correctly.\n",
+  "parsed": true,
+  "answer": {
+    "success": true,
+    "failing_stage": "none",
+    "rationale": "The robot arm successfully grasped the red block, lifted it, moved it to the green tray, released it inside, and retracted. All steps were completed without error."
+  },
+  "parse_error": null,
+  "latency_s": 9.224868964000052
+}

@@ -1,0 +1,6228 @@
+{
+ "robot": "ur10e",
+ "split": "dev",
+ "seeds": [
+  0,
+  1,
+  2,
+  3,
+  4,
+  5,
+  6,
+  7,
+  8,
+  9
+ ],
+ "sizes_half_m": [
+  0.025,
+  0.03,
+  0.035
+ ],
+ "conditions": {
+  "truth_yaw_aware": {
+   "belief": "truth"
+  },
+  "truth_yaw_blind": {
+   "belief": "truth",
+   "use_yaw": false
+  },
+  "depth_aligned": {
+   "yaw": false
+  },
+  "depth_yaw": {},
+  "depth_yaw_blind": {
+   "use_yaw": false
+  },
+  "depth_distractors3": {
+   "n_distr": 3
+  },
+  "depth_calib_0p5deg_5mm": {
+   "calib_rot": 0.5,
+   "calib_trans": 5.0
+  },
+  "depth_calib_1deg_10mm": {
+   "calib_rot": 1.0,
+   "calib_trans": 10.0
+  },
+  "depth_calib_2deg_20mm": {
+   "calib_rot": 2.0,
+   "calib_trans": 20.0
+  },
+  "depth_noise_10mm": {
+   "sigma": 0.01
+  },
+  "depth_noise_20mm": {
+   "sigma": 0.02
+  },
+  "depth_dropout30_fly1": {
+   "dropout": 0.3,
+   "flying": 0.01
+  },
+  "depth_arm_side": {
+   "arm": [
+    0.1,
+    0.0,
+    0.15
+   ]
+  },
+  "depth_arm_over": {
+   "arm": [
+    0.0,
+    0.0,
+    0.3
+   ]
+  },
+  "depth_edge_blocks": {
+   "jitter": 0.12
+  },
+  "depth_combined": {
+   "n_distr": 3,
+   "calib_rot": 0.5,
+   "calib_trans": 5.0,
+   "sigma": 0.005,
+   "dropout": 0.1,
+   "flying": 0.005,
+   "jitter": 0.1
+  }
+ },
+ "base": {
+  "yaw": true,
+  "n_distr": 0,
+  "jitter": 0.03,
+  "sigma": 0.002,
+  "calib_rot": 0.0,
+  "calib_trans": 0.0,
+  "dropout": 0.0,
+  "flying": 0.0,
+  "arm": null,
+  "belief": "depth",
+  "use_yaw": true
+ },
+ "cells": {
+  "truth_yaw_aware/half0.025": {
+   "n": 10,
+   "success": 10,
+   "failures": [],
+   "rows": [
+    {
+     "seed": 0,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.00011584302620875276
+    },
+    {
+     "seed": 1,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.00013585645544963217
+    },
+    {
+     "seed": 2,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.000160885925494194
+    },
+    {
+     "seed": 3,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0006353387025406244
+    },
+    {
+     "seed": 4,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.00019095264135216987
+    },
+    {
+     "seed": 5,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.00012053660174131379
+    },
+    {
+     "seed": 6,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.00028930117107611063
+    },
+    {
+     "seed": 7,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.00033256756479229017
+    },
+    {
+     "seed": 8,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0005564045134074875
+    },
+    {
+     "seed": 9,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.00017282525491429002
+    }
+   ]
+  },
+  "truth_yaw_aware/half0.03": {
+   "n": 10,
+   "success": 10,
+   "failures": [],
+   "rows": [
+    {
+     "seed": 0,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.00015760666928980613
+    },
+    {
+     "seed": 1,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.00017622952976709594
+    },
+    {
+     "seed": 2,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.00019483500729232113
+    },
+    {
+     "seed": 3,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0005723040911278803
+    },
+    {
+     "seed": 4,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0001983139415504384
+    },
+    {
+     "seed": 5,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.00015963973503330586
+    },
+    {
+     "seed": 6,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.00025909315886239325
+    },
+    {
+     "seed": 7,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.00031964333992785544
+    },
+    {
+     "seed": 8,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0004976582042328592
+    },
+    {
+     "seed": 9,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.00018610770214973964
+    }
+   ]
+  },
+  "truth_yaw_aware/half0.035": {
+   "n": 10,
+   "success": 10,
+   "failures": [],
+   "rows": [
+    {
+     "seed": 0,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.00023437533155312883
+    },
+    {
+     "seed": 1,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.00022386936136581427
+    },
+    {
+     "seed": 2,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0002766929622405533
+    },
+    {
+     "seed": 3,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0005127607305945296
+    },
+    {
+     "seed": 4,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0002536160910990422
+    },
+    {
+     "seed": 5,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0002402441908577401
+    },
+    {
+     "seed": 6,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.00025034709676250485
+    },
+    {
+     "seed": 7,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0003542035896319464
+    },
+    {
+     "seed": 8,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.00044314208867293146
+    },
+    {
+     "seed": 9,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0002497475438041323
+    }
+   ]
+  },
+  "truth_yaw_blind/half0.025": {
+   "n": 10,
+   "success": 10,
+   "failures": [],
+   "rows": [
+    {
+     "seed": 0,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0003823740336324192
+    },
+    {
+     "seed": 1,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 9.155554706972809e-05
+    },
+    {
+     "seed": 2,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.00027423563611359074
+    },
+    {
+     "seed": 3,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.00023439898557960401
+    },
+    {
+     "seed": 4,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.010213697064064954
+    },
+    {
+     "seed": 5,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.00021672403236774662
+    },
+    {
+     "seed": 6,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.00017387944025973272
+    },
+    {
+     "seed": 7,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0002882877785739461
+    },
+    {
+     "seed": 8,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.00021069785152560803
+    },
+    {
+     "seed": 9,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0009488697316530512
+    }
+   ]
+  },
+  "truth_yaw_blind/half0.03": {
+   "n": 10,
+   "success": 10,
+   "failures": [],
+   "rows": [
+    {
+     "seed": 0,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0007325817711848969
+    },
+    {
+     "seed": 1,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.00018327226755933992
+    },
+    {
+     "seed": 2,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.00023048182022897777
+    },
+    {
+     "seed": 3,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.00028099057009801985
+    },
+    {
+     "seed": 4,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0005939361295514441
+    },
+    {
+     "seed": 5,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.00018434531231957681
+    },
+    {
+     "seed": 6,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 3.702754346335203e-05
+    },
+    {
+     "seed": 7,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.00030271103516434555
+    },
+    {
+     "seed": 8,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 7.47038482912903e-05
+    },
+    {
+     "seed": 9,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.00021564420301519835
+    }
+   ]
+  },
+  "truth_yaw_blind/half0.035": {
+   "n": 10,
+   "success": 5,
+   "failures": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ],
+   "rows": [
+    {
+     "seed": 0,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0008912421207828865
+    },
+    {
+     "seed": 1,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0003326321590570194
+    },
+    {
+     "seed": 2,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0002960670130008853
+    },
+    {
+     "seed": 3,
+     "half_mm": 35.0,
+     "success": false,
+     "reasons": [
+      "no_lift",
+      "not_released_and_settled_at_goal"
+     ],
+     "final_error_m": 0.3585735292174505
+    },
+    {
+     "seed": 4,
+     "half_mm": 35.0,
+     "success": false,
+     "reasons": [
+      "no_lift",
+      "not_released_and_settled_at_goal"
+     ],
+     "final_error_m": 0.34206675610963067
+    },
+    {
+     "seed": 5,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.001144506053373507
+    },
+    {
+     "seed": 6,
+     "half_mm": 35.0,
+     "success": false,
+     "reasons": [
+      "no_lift",
+      "not_released_and_settled_at_goal"
+     ],
+     "final_error_m": 0.35131596405863613
+    },
+    {
+     "seed": 7,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0003584037157001331
+    },
+    {
+     "seed": 8,
+     "half_mm": 35.0,
+     "success": false,
+     "reasons": [
+      "no_lift",
+      "not_released_and_settled_at_goal"
+     ],
+     "final_error_m": 0.3126491496376745
+    },
+    {
+     "seed": 9,
+     "half_mm": 35.0,
+     "success": false,
+     "reasons": [
+      "no_lift",
+      "not_released_and_settled_at_goal"
+     ],
+     "final_error_m": 0.35532038710688324
+    }
+   ]
+  },
+  "depth_aligned/half0.025": {
+   "n": 10,
+   "success": 10,
+   "failures": [],
+   "rows": [
+    {
+     "seed": 0,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0007569859500602482,
+     "estimate_error": {
+      "xy_mm": 0.23138869605712006,
+      "z_mm": 0.47939138376191726,
+      "yaw_deg": 0.0,
+      "goal_xy_mm": 0.6077709800953894
+     }
+    },
+    {
+     "seed": 1,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0007377707662933533,
+     "estimate_error": {
+      "xy_mm": 0.32453850601885004,
+      "z_mm": 0.6037973272445922,
+      "yaw_deg": 0.0,
+      "goal_xy_mm": 0.589072325159156
+     }
+    },
+    {
+     "seed": 2,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0007037313930900569,
+     "estimate_error": {
+      "xy_mm": 0.20094425664141863,
+      "z_mm": 0.5533683281848771,
+      "yaw_deg": 0.0,
+      "goal_xy_mm": 0.5955999206247125
+     }
+    },
+    {
+     "seed": 3,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0006889502606906285,
+     "estimate_error": {
+      "xy_mm": 0.30115128463914415,
+      "z_mm": 0.5855696703616735,
+      "yaw_deg": 0.0,
+      "goal_xy_mm": 0.5713285464585561
+     }
+    },
+    {
+     "seed": 4,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0007193559730233128,
+     "estimate_error": {
+      "xy_mm": 0.059573378724278155,
+      "z_mm": 0.5798103387568248,
+      "yaw_deg": 0.0,
+      "goal_xy_mm": 0.6140045833232791
+     }
+    },
+    {
+     "seed": 5,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0007152385232313043,
+     "estimate_error": {
+      "xy_mm": 0.35176783618581087,
+      "z_mm": 0.6852497838680909,
+      "yaw_deg": 0.0,
+      "goal_xy_mm": 0.6080431224297436
+     }
+    },
+    {
+     "seed": 6,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0007530446411492353,
+     "estimate_error": {
+      "xy_mm": 0.6154976506183926,
+      "z_mm": 0.5335001499498053,
+      "yaw_deg": 0.0,
+      "goal_xy_mm": 0.5829843999652334
+     }
+    },
+    {
+     "seed": 7,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0008968687500660179,
+     "estimate_error": {
+      "xy_mm": 0.5836011768580256,
+      "z_mm": 0.5829741269877224,
+      "yaw_deg": 0.0,
+      "goal_xy_mm": 0.5940397245296959
+     }
+    },
+    {
+     "seed": 8,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0008488046501994926,
+     "estimate_error": {
+      "xy_mm": 0.6532747985643272,
+      "z_mm": 0.5928687276917193,
+      "yaw_deg": 0.0,
+      "goal_xy_mm": 0.598729311779947
+     }
+    },
+    {
+     "seed": 9,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0008623766123541139,
+     "estimate_error": {
+      "xy_mm": 0.4358297452252573,
+      "z_mm": 0.5832667107679261,
+      "yaw_deg": 0.0,
+      "goal_xy_mm": 0.6192390468060555
+     }
+    }
+   ],
+   "estimate_error_median": {
+    "xy_mm": 0.33815317110233045,
+    "z_mm": 0.5831204188778243,
+    "yaw_deg": 0.0,
+    "goal_xy_mm": 0.5971646162023297
+   },
+   "estimate_error_max": {
+    "xy_mm": 0.6532747985643272,
+    "z_mm": 0.6852497838680909,
+    "yaw_deg": 0.0,
+    "goal_xy_mm": 0.6192390468060555
+   }
+  },
+  "depth_aligned/half0.03": {
+   "n": 10,
+   "success": 10,
+   "failures": [],
+   "rows": [
+    {
+     "seed": 0,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0007956576166329853,
+     "estimate_error": {
+      "xy_mm": 0.49393186463133254,
+      "z_mm": 0.4799855401867066,
+      "yaw_deg": 0.0,
+      "goal_xy_mm": 0.6077709800953894
+     }
+    },
+    {
+     "seed": 1,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0007876560892752034,
+     "estimate_error": {
+      "xy_mm": 0.7495385167494051,
+      "z_mm": 0.6167503330941244,
+      "yaw_deg": 0.0,
+      "goal_xy_mm": 0.589072325159156
+     }
+    },
+    {
+     "seed": 2,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0007851832164812537,
+     "estimate_error": {
+      "xy_mm": 0.7236121799151792,
+      "z_mm": 0.5794495605225998,
+      "yaw_deg": 0.0,
+      "goal_xy_mm": 0.5955999206247125
+     }
+    },
+    {
+     "seed": 3,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0007574678032436513,
+     "estimate_error": {
+      "xy_mm": 0.6736805789953242,
+      "z_mm": 0.5924843529218244,
+      "yaw_deg": 0.0,
+      "goal_xy_mm": 0.5713285464585561
+     }
+    },
+    {
+     "seed": 4,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0008135380958399948,
+     "estimate_error": {
+      "xy_mm": 0.5920081141997646,
+      "z_mm": 0.5872151206872296,
+      "yaw_deg": 0.0,
+      "goal_xy_mm": 0.6140045833232791
+     }
+    },
+    {
+     "seed": 5,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.000875606354336376,
+     "estimate_error": {
+      "xy_mm": 0.4735870381428954,
+      "z_mm": 0.6951981584595486,
+      "yaw_deg": 0.0,
+      "goal_xy_mm": 0.6080431224297436
+     }
+    },
+    {
+     "seed": 6,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0007759672939663337,
+     "estimate_error": {
+      "xy_mm": 0.9516096384183658,
+      "z_mm": 0.5335767841204326,
+      "yaw_deg": 0.0,
+      "goal_xy_mm": 0.5829843999652334
+     }
+    },
+    {
+     "seed": 7,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0010765019102388857,
+     "estimate_error": {
+      "xy_mm": 0.7675310778934735,
+      "z_mm": 0.5990671323325598,
+      "yaw_deg": 0.0,
+      "goal_xy_mm": 0.5940397245296959
+     }
+    },
+    {
+     "seed": 8,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0008753924400614131,
+     "estimate_error": {
+      "xy_mm": 0.5152825214029373,
+      "z_mm": 0.5502802578853556,
+      "yaw_deg": 0.0,
+      "goal_xy_mm": 0.598729311779947
+     }
+    },
+    {
+     "seed": 9,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0011423135134205759,
+     "estimate_error": {
+      "xy_mm": 0.9950548411038346,
+      "z_mm": 0.5908952658396811,
+      "yaw_deg": 0.0,
+      "goal_xy_mm": 0.6192390468060555
+     }
+    }
+   ],
+   "estimate_error_median": {
+    "xy_mm": 0.6986463794552518,
+    "z_mm": 0.5890551932634553,
+    "yaw_deg": 0.0,
+    "goal_xy_mm": 0.5971646162023297
+   },
+   "estimate_error_max": {
+    "xy_mm": 0.9950548411038346,
+    "z_mm": 0.6951981584595486,
+    "yaw_deg": 0.0,
+    "goal_xy_mm": 0.6192390468060555
+   }
+  },
+  "depth_aligned/half0.035": {
+   "n": 10,
+   "success": 10,
+   "failures": [],
+   "rows": [
+    {
+     "seed": 0,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0008675104846389109,
+     "estimate_error": {
+      "xy_mm": 0.25490528327507117,
+      "z_mm": 0.5286130202056399,
+      "yaw_deg": 0.0,
+      "goal_xy_mm": 0.6077709800953894
+     }
+    },
+    {
+     "seed": 1,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0008547920842539362,
+     "estimate_error": {
+      "xy_mm": 0.8500180171310064,
+      "z_mm": 0.6244390039830822,
+      "yaw_deg": 0.0,
+      "goal_xy_mm": 0.589072325159156
+     }
+    },
+    {
+     "seed": 2,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0010089951344144136,
+     "estimate_error": {
+      "xy_mm": 0.862474153947837,
+      "z_mm": 0.5868935204704911,
+      "yaw_deg": 0.0,
+      "goal_xy_mm": 0.5955999206247125
+     }
+    },
+    {
+     "seed": 3,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0007953342806074667,
+     "estimate_error": {
+      "xy_mm": 0.716161913525622,
+      "z_mm": 0.5855457043057039,
+      "yaw_deg": 0.0,
+      "goal_xy_mm": 0.5713285464585561
+     }
+    },
+    {
+     "seed": 4,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0009430065438851774,
+     "estimate_error": {
+      "xy_mm": 1.0903739791707536,
+      "z_mm": 0.5930476406034862,
+      "yaw_deg": 0.0,
+      "goal_xy_mm": 0.6140045833232791
+     }
+    },
+    {
+     "seed": 5,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0009027857246271444,
+     "estimate_error": {
+      "xy_mm": 0.7513334922693123,
+      "z_mm": 0.6436146402109127,
+      "yaw_deg": 0.0,
+      "goal_xy_mm": 0.6080431224297436
+     }
+    },
+    {
+     "seed": 6,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.00083375987124349,
+     "estimate_error": {
+      "xy_mm": 0.2600085589810411,
+      "z_mm": 0.550694877122962,
+      "yaw_deg": 0.0,
+      "goal_xy_mm": 0.5829843999652334
+     }
+    },
+    {
+     "seed": 7,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0011351605491573542,
+     "estimate_error": {
+      "xy_mm": 1.1655014101900605,
+      "z_mm": 0.5830818315636505,
+      "yaw_deg": 0.0,
+      "goal_xy_mm": 0.5940397245296959
+     }
+    },
+    {
+     "seed": 8,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0009057326012465543,
+     "estimate_error": {
+      "xy_mm": 0.5014827762432823,
+      "z_mm": 0.5703365945030209,
+      "yaw_deg": 0.0,
+      "goal_xy_mm": 0.598729311779947
+     }
+    },
+    {
+     "seed": 9,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0008729460042037905,
+     "estimate_error": {
+      "xy_mm": 1.0536410631694133,
+      "z_mm": 0.543634884683078,
+      "yaw_deg": 0.0,
+      "goal_xy_mm": 0.6192390468060555
+     }
+    }
+   ],
+   "estimate_error_median": {
+    "xy_mm": 0.8006757547001594,
+    "z_mm": 0.5843137679346772,
+    "yaw_deg": 0.0,
+    "goal_xy_mm": 0.5971646162023297
+   },
+   "estimate_error_max": {
+    "xy_mm": 1.1655014101900605,
+    "z_mm": 0.6436146402109127,
+    "yaw_deg": 0.0,
+    "goal_xy_mm": 0.6192390468060555
+   }
+  },
+  "depth_yaw/half0.025": {
+   "n": 10,
+   "success": 10,
+   "failures": [],
+   "rows": [
+    {
+     "seed": 0,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.000735207775253591,
+     "estimate_error": {
+      "xy_mm": 0.1492017197874022,
+      "z_mm": 0.4894620414526256,
+      "yaw_deg": 0.9429857479330448,
+      "goal_xy_mm": 0.6077709800953894
+     }
+    },
+    {
+     "seed": 1,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0007436548547372306,
+     "estimate_error": {
+      "xy_mm": 0.1352408125232575,
+      "z_mm": 0.5845031672335848,
+      "yaw_deg": 1.4823847737332536,
+      "goal_xy_mm": 0.589072325159156
+     }
+    },
+    {
+     "seed": 2,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0007983129107515082,
+     "estimate_error": {
+      "xy_mm": 0.2880765288620262,
+      "z_mm": 0.6080069289679073,
+      "yaw_deg": 1.1459638620169277,
+      "goal_xy_mm": 0.5955999206247125
+     }
+    },
+    {
+     "seed": 3,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0005578231006135225,
+     "estimate_error": {
+      "xy_mm": 0.334580229473476,
+      "z_mm": 0.5791376304184574,
+      "yaw_deg": 0.820451685374308,
+      "goal_xy_mm": 0.5713285464585561
+     }
+    },
+    {
+     "seed": 4,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0007530619560420877,
+     "estimate_error": {
+      "xy_mm": 0.3221946855910047,
+      "z_mm": 0.6234220655022653,
+      "yaw_deg": 0.8365138952638822,
+      "goal_xy_mm": 0.6140045833232791
+     }
+    },
+    {
+     "seed": 5,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0007494894771266763,
+     "estimate_error": {
+      "xy_mm": 0.22803573079404219,
+      "z_mm": 0.6895767631901022,
+      "yaw_deg": 0.8501582739195082,
+      "goal_xy_mm": 0.6080431224297436
+     }
+    },
+    {
+     "seed": 6,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0007840804799483878,
+     "estimate_error": {
+      "xy_mm": 0.4020554074451719,
+      "z_mm": 0.5709612936643065,
+      "yaw_deg": 1.612191061624711,
+      "goal_xy_mm": 0.5829843999652334
+     }
+    },
+    {
+     "seed": 7,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0006943505032074707,
+     "estimate_error": {
+      "xy_mm": 0.11202240580005465,
+      "z_mm": 0.5811939709559171,
+      "yaw_deg": 0.5275834680529486,
+      "goal_xy_mm": 0.5940397245296959
+     }
+    },
+    {
+     "seed": 8,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0005170082787801418,
+     "estimate_error": {
+      "xy_mm": 0.35847085356321823,
+      "z_mm": 0.6260392193144886,
+      "yaw_deg": 1.0860762147234908,
+      "goal_xy_mm": 0.598729311779947
+     }
+    },
+    {
+     "seed": 9,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0007884664494717189,
+     "estimate_error": {
+      "xy_mm": 0.2547305310600785,
+      "z_mm": 0.5575672584882778,
+      "yaw_deg": 0.9360558773456698,
+      "goal_xy_mm": 0.6192390468060555
+     }
+    }
+   ],
+   "estimate_error_median": {
+    "xy_mm": 0.2714035299610523,
+    "z_mm": 0.5828485690947509,
+    "yaw_deg": 0.9395208126393573,
+    "goal_xy_mm": 0.5971646162023297
+   },
+   "estimate_error_max": {
+    "xy_mm": 0.4020554074451719,
+    "z_mm": 0.6895767631901022,
+    "yaw_deg": 1.612191061624711,
+    "goal_xy_mm": 0.6192390468060555
+   }
+  },
+  "depth_yaw/half0.03": {
+   "n": 10,
+   "success": 10,
+   "failures": [],
+   "rows": [
+    {
+     "seed": 0,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0008311031069914196,
+     "estimate_error": {
+      "xy_mm": 0.3603860350967888,
+      "z_mm": 0.5259138668108516,
+      "yaw_deg": 1.9429857479330335,
+      "goal_xy_mm": 0.6077709800953894
+     }
+    },
+    {
+     "seed": 1,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0007575693197095229,
+     "estimate_error": {
+      "xy_mm": 0.17320485363733482,
+      "z_mm": 0.5943914354953512,
+      "yaw_deg": 1.5176152262667124,
+      "goal_xy_mm": 0.589072325159156
+     }
+    },
+    {
+     "seed": 2,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0007978209696636716,
+     "estimate_error": {
+      "xy_mm": 0.1864050564405036,
+      "z_mm": 0.5581603861505475,
+      "yaw_deg": 0.14596386201691355,
+      "goal_xy_mm": 0.5955999206247125
+     }
+    },
+    {
+     "seed": 3,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0005370484825623632,
+     "estimate_error": {
+      "xy_mm": 0.323160499095269,
+      "z_mm": 0.5952069963626356,
+      "yaw_deg": 1.8204516853743031,
+      "goal_xy_mm": 0.5713285464585561
+     }
+    },
+    {
+     "seed": 4,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0007615475443744294,
+     "estimate_error": {
+      "xy_mm": 0.21376785452780522,
+      "z_mm": 0.5769467455469974,
+      "yaw_deg": 0.8365138952638822,
+      "goal_xy_mm": 0.6140045833232791
+     }
+    },
+    {
+     "seed": 5,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0007723055684099757,
+     "estimate_error": {
+      "xy_mm": 0.11794268212963403,
+      "z_mm": 0.6664337960720808,
+      "yaw_deg": 0.149841726080506,
+      "goal_xy_mm": 0.6080431224297436
+     }
+    },
+    {
+     "seed": 6,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0006923954124382874,
+     "estimate_error": {
+      "xy_mm": 0.3390600927954752,
+      "z_mm": 0.5573588066979558,
+      "yaw_deg": 1.612191061624711,
+      "goal_xy_mm": 0.5829843999652334
+     }
+    },
+    {
+     "seed": 7,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0007140507695494147,
+     "estimate_error": {
+      "xy_mm": 0.11011768861523666,
+      "z_mm": 0.599134925739004,
+      "yaw_deg": 1.4724165319470541,
+      "goal_xy_mm": 0.5940397245296959
+     }
+    },
+    {
+     "seed": 8,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0005426871715729591,
+     "estimate_error": {
+      "xy_mm": 0.18383903471186439,
+      "z_mm": 0.5626748886644224,
+      "yaw_deg": 0.9139237852765056,
+      "goal_xy_mm": 0.598729311779947
+     }
+    },
+    {
+     "seed": 9,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0008803657948774096,
+     "estimate_error": {
+      "xy_mm": 0.377188631521781,
+      "z_mm": 0.5259231165048623,
+      "yaw_deg": 1.936055877345684,
+      "goal_xy_mm": 0.6192390468060555
+     }
+    }
+   ],
+   "estimate_error_median": {
+    "xy_mm": 0.2000864554841544,
+    "z_mm": 0.5698108171057099,
+    "yaw_deg": 1.4950158791068833,
+    "goal_xy_mm": 0.5971646162023297
+   },
+   "estimate_error_max": {
+    "xy_mm": 0.377188631521781,
+    "z_mm": 0.6664337960720808,
+    "yaw_deg": 1.9429857479330335,
+    "goal_xy_mm": 0.6192390468060555
+   }
+  },
+  "depth_yaw/half0.035": {
+   "n": 10,
+   "success": 10,
+   "failures": [],
+   "rows": [
+    {
+     "seed": 0,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0008686775048978485,
+     "estimate_error": {
+      "xy_mm": 0.2349939664495619,
+      "z_mm": 0.5215392120977019,
+      "yaw_deg": 2.0570142520669723,
+      "goal_xy_mm": 0.6077709800953894
+     }
+    },
+    {
+     "seed": 1,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0008720256674583257,
+     "estimate_error": {
+      "xy_mm": 0.18276524836176214,
+      "z_mm": 0.6184123955006587,
+      "yaw_deg": 0.5176152262667237,
+      "goal_xy_mm": 0.589072325159156
+     }
+    },
+    {
+     "seed": 2,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0009233768499993868,
+     "estimate_error": {
+      "xy_mm": 0.29182295717945406,
+      "z_mm": 0.5630040749700221,
+      "yaw_deg": 0.14596386201691355,
+      "goal_xy_mm": 0.5955999206247125
+     }
+    },
+    {
+     "seed": 3,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0005714183549253196,
+     "estimate_error": {
+      "xy_mm": 0.33989019024378225,
+      "z_mm": 0.5924647366136876,
+      "yaw_deg": 1.1795483146256946,
+      "goal_xy_mm": 0.5713285464585561
+     }
+    },
+    {
+     "seed": 4,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.000881397953618705,
+     "estimate_error": {
+      "xy_mm": 0.27289208112531416,
+      "z_mm": 0.5744414035741136,
+      "yaw_deg": 0.16348610473610647,
+      "goal_xy_mm": 0.6140045833232791
+     }
+    },
+    {
+     "seed": 5,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0008911832657607494,
+     "estimate_error": {
+      "xy_mm": 0.2629324789925927,
+      "z_mm": 0.6565305686496298,
+      "yaw_deg": 0.149841726080506,
+      "goal_xy_mm": 0.6080431224297436
+     }
+    },
+    {
+     "seed": 6,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0008216337615459975,
+     "estimate_error": {
+      "xy_mm": 0.35012659042608124,
+      "z_mm": 0.5506200349287976,
+      "yaw_deg": 1.612191061624711,
+      "goal_xy_mm": 0.5829843999652334
+     }
+    },
+    {
+     "seed": 7,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0008114135904725417,
+     "estimate_error": {
+      "xy_mm": 0.05127095844897006,
+      "z_mm": 0.5813117906339343,
+      "yaw_deg": 1.52758346805295,
+      "goal_xy_mm": 0.5940397245296959
+     }
+    },
+    {
+     "seed": 8,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0006101701829241143,
+     "estimate_error": {
+      "xy_mm": 0.2532656433374047,
+      "z_mm": 0.5951453508023646,
+      "yaw_deg": 1.0860762147234908,
+      "goal_xy_mm": 0.598729311779947
+     }
+    },
+    {
+     "seed": 9,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0009157851861358799,
+     "estimate_error": {
+      "xy_mm": 0.3422426730626317,
+      "z_mm": 0.5530430202411313,
+      "yaw_deg": 0.06394412265431892,
+      "goal_xy_mm": 0.6192390468060555
+     }
+    }
+   ],
+   "estimate_error_median": {
+    "xy_mm": 0.2679122800589534,
+    "z_mm": 0.577876597104024,
+    "yaw_deg": 0.8018457204951073,
+    "goal_xy_mm": 0.5971646162023297
+   },
+   "estimate_error_max": {
+    "xy_mm": 0.35012659042608124,
+    "z_mm": 0.6565305686496298,
+    "yaw_deg": 2.0570142520669723,
+    "goal_xy_mm": 0.6192390468060555
+   }
+  },
+  "depth_yaw_blind/half0.025": {
+   "n": 10,
+   "success": 10,
+   "failures": [],
+   "rows": [
+    {
+     "seed": 0,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0013075342902394318,
+     "estimate_error": {
+      "xy_mm": 0.1492017197874022,
+      "z_mm": 0.4894620414526256,
+      "yaw_deg": 0.9429857479330448,
+      "goal_xy_mm": 0.6077709800953894
+     }
+    },
+    {
+     "seed": 1,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.00072236140539626,
+     "estimate_error": {
+      "xy_mm": 0.1352408125232575,
+      "z_mm": 0.5845031672335848,
+      "yaw_deg": 1.4823847737332536,
+      "goal_xy_mm": 0.589072325159156
+     }
+    },
+    {
+     "seed": 2,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0008010832255554037,
+     "estimate_error": {
+      "xy_mm": 0.2880765288620262,
+      "z_mm": 0.6080069289679073,
+      "yaw_deg": 1.1459638620169277,
+      "goal_xy_mm": 0.5955999206247125
+     }
+    },
+    {
+     "seed": 3,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0007053164238587831,
+     "estimate_error": {
+      "xy_mm": 0.334580229473476,
+      "z_mm": 0.5791376304184574,
+      "yaw_deg": 0.820451685374308,
+      "goal_xy_mm": 0.5713285464585561
+     }
+    },
+    {
+     "seed": 4,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.007389960763070704,
+     "estimate_error": {
+      "xy_mm": 0.3221946855910047,
+      "z_mm": 0.6234220655022653,
+      "yaw_deg": 0.8365138952638822,
+      "goal_xy_mm": 0.6140045833232791
+     }
+    },
+    {
+     "seed": 5,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0007319803069434444,
+     "estimate_error": {
+      "xy_mm": 0.22803573079404219,
+      "z_mm": 0.6895767631901022,
+      "yaw_deg": 0.8501582739195082,
+      "goal_xy_mm": 0.6080431224297436
+     }
+    },
+    {
+     "seed": 6,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0007119592357154842,
+     "estimate_error": {
+      "xy_mm": 0.4020554074451719,
+      "z_mm": 0.5709612936643065,
+      "yaw_deg": 1.612191061624711,
+      "goal_xy_mm": 0.5829843999652334
+     }
+    },
+    {
+     "seed": 7,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0007623714471801431,
+     "estimate_error": {
+      "xy_mm": 0.11202240580005465,
+      "z_mm": 0.5811939709559171,
+      "yaw_deg": 0.5275834680529486,
+      "goal_xy_mm": 0.5940397245296959
+     }
+    },
+    {
+     "seed": 8,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0007033217883330452,
+     "estimate_error": {
+      "xy_mm": 0.35847085356321823,
+      "z_mm": 0.6260392193144886,
+      "yaw_deg": 1.0860762147234908,
+      "goal_xy_mm": 0.598729311779947
+     }
+    },
+    {
+     "seed": 9,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0007974927267945838,
+     "estimate_error": {
+      "xy_mm": 0.2547305310600785,
+      "z_mm": 0.5575672584882778,
+      "yaw_deg": 0.9360558773456698,
+      "goal_xy_mm": 0.6192390468060555
+     }
+    }
+   ],
+   "estimate_error_median": {
+    "xy_mm": 0.2714035299610523,
+    "z_mm": 0.5828485690947509,
+    "yaw_deg": 0.9395208126393573,
+    "goal_xy_mm": 0.5971646162023297
+   },
+   "estimate_error_max": {
+    "xy_mm": 0.4020554074451719,
+    "z_mm": 0.6895767631901022,
+    "yaw_deg": 1.612191061624711,
+    "goal_xy_mm": 0.6192390468060555
+   }
+  },
+  "depth_yaw_blind/half0.03": {
+   "n": 10,
+   "success": 10,
+   "failures": [],
+   "rows": [
+    {
+     "seed": 0,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0012471576307897568,
+     "estimate_error": {
+      "xy_mm": 0.3603860350967888,
+      "z_mm": 0.5259138668108516,
+      "yaw_deg": 1.9429857479330335,
+      "goal_xy_mm": 0.6077709800953894
+     }
+    },
+    {
+     "seed": 1,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0007778631670783982,
+     "estimate_error": {
+      "xy_mm": 0.17320485363733482,
+      "z_mm": 0.5943914354953512,
+      "yaw_deg": 1.5176152262667124,
+      "goal_xy_mm": 0.589072325159156
+     }
+    },
+    {
+     "seed": 2,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0008007026009664197,
+     "estimate_error": {
+      "xy_mm": 0.1864050564405036,
+      "z_mm": 0.5581603861505475,
+      "yaw_deg": 0.14596386201691355,
+      "goal_xy_mm": 0.5955999206247125
+     }
+    },
+    {
+     "seed": 3,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0008617230090965497,
+     "estimate_error": {
+      "xy_mm": 0.323160499095269,
+      "z_mm": 0.5952069963626356,
+      "yaw_deg": 1.8204516853743031,
+      "goal_xy_mm": 0.5713285464585561
+     }
+    },
+    {
+     "seed": 4,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.000772629444287068,
+     "estimate_error": {
+      "xy_mm": 0.21376785452780522,
+      "z_mm": 0.5769467455469974,
+      "yaw_deg": 0.8365138952638822,
+      "goal_xy_mm": 0.6140045833232791
+     }
+    },
+    {
+     "seed": 5,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0008388712574806592,
+     "estimate_error": {
+      "xy_mm": 0.11794268212963403,
+      "z_mm": 0.6664337960720808,
+      "yaw_deg": 0.149841726080506,
+      "goal_xy_mm": 0.6080431224297436
+     }
+    },
+    {
+     "seed": 6,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0006495066982499299,
+     "estimate_error": {
+      "xy_mm": 0.3390600927954752,
+      "z_mm": 0.5573588066979558,
+      "yaw_deg": 1.612191061624711,
+      "goal_xy_mm": 0.5829843999652334
+     }
+    },
+    {
+     "seed": 7,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0007408258900737106,
+     "estimate_error": {
+      "xy_mm": 0.11011768861523666,
+      "z_mm": 0.599134925739004,
+      "yaw_deg": 1.4724165319470541,
+      "goal_xy_mm": 0.5940397245296959
+     }
+    },
+    {
+     "seed": 8,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.00042158927911908287,
+     "estimate_error": {
+      "xy_mm": 0.18383903471186439,
+      "z_mm": 0.5626748886644224,
+      "yaw_deg": 0.9139237852765056,
+      "goal_xy_mm": 0.598729311779947
+     }
+    },
+    {
+     "seed": 9,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0008966658348059438,
+     "estimate_error": {
+      "xy_mm": 0.377188631521781,
+      "z_mm": 0.5259231165048623,
+      "yaw_deg": 1.936055877345684,
+      "goal_xy_mm": 0.6192390468060555
+     }
+    }
+   ],
+   "estimate_error_median": {
+    "xy_mm": 0.2000864554841544,
+    "z_mm": 0.5698108171057099,
+    "yaw_deg": 1.4950158791068833,
+    "goal_xy_mm": 0.5971646162023297
+   },
+   "estimate_error_max": {
+    "xy_mm": 0.377188631521781,
+    "z_mm": 0.6664337960720808,
+    "yaw_deg": 1.9429857479330335,
+    "goal_xy_mm": 0.6192390468060555
+   }
+  },
+  "depth_yaw_blind/half0.035": {
+   "n": 10,
+   "success": 5,
+   "failures": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ],
+   "rows": [
+    {
+     "seed": 0,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0015237920594904923,
+     "estimate_error": {
+      "xy_mm": 0.2349939664495619,
+      "z_mm": 0.5215392120977019,
+      "yaw_deg": 2.0570142520669723,
+      "goal_xy_mm": 0.6077709800953894
+     }
+    },
+    {
+     "seed": 1,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0008670619910236907,
+     "estimate_error": {
+      "xy_mm": 0.18276524836176214,
+      "z_mm": 0.6184123955006587,
+      "yaw_deg": 0.5176152262667237,
+      "goal_xy_mm": 0.589072325159156
+     }
+    },
+    {
+     "seed": 2,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0009370424271276766,
+     "estimate_error": {
+      "xy_mm": 0.29182295717945406,
+      "z_mm": 0.5630040749700221,
+      "yaw_deg": 0.14596386201691355,
+      "goal_xy_mm": 0.5955999206247125
+     }
+    },
+    {
+     "seed": 3,
+     "half_mm": 35.0,
+     "success": false,
+     "reasons": [
+      "no_lift",
+      "not_released_and_settled_at_goal"
+     ],
+     "final_error_m": 0.35849811010808824,
+     "estimate_error": {
+      "xy_mm": 0.33989019024378225,
+      "z_mm": 0.5924647366136876,
+      "yaw_deg": 1.1795483146256946,
+      "goal_xy_mm": 0.5713285464585561
+     }
+    },
+    {
+     "seed": 4,
+     "half_mm": 35.0,
+     "success": false,
+     "reasons": [
+      "no_lift",
+      "not_released_and_settled_at_goal"
+     ],
+     "final_error_m": 0.34190615170293265,
+     "estimate_error": {
+      "xy_mm": 0.27289208112531416,
+      "z_mm": 0.5744414035741136,
+      "yaw_deg": 0.16348610473610647,
+      "goal_xy_mm": 0.6140045833232791
+     }
+    },
+    {
+     "seed": 5,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.001638218311697281,
+     "estimate_error": {
+      "xy_mm": 0.2629324789925927,
+      "z_mm": 0.6565305686496298,
+      "yaw_deg": 0.149841726080506,
+      "goal_xy_mm": 0.6080431224297436
+     }
+    },
+    {
+     "seed": 6,
+     "half_mm": 35.0,
+     "success": false,
+     "reasons": [
+      "no_lift",
+      "not_released_and_settled_at_goal"
+     ],
+     "final_error_m": 0.3512612858903187,
+     "estimate_error": {
+      "xy_mm": 0.35012659042608124,
+      "z_mm": 0.5506200349287976,
+      "yaw_deg": 1.612191061624711,
+      "goal_xy_mm": 0.5829843999652334
+     }
+    },
+    {
+     "seed": 7,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0008720527093597256,
+     "estimate_error": {
+      "xy_mm": 0.05127095844897006,
+      "z_mm": 0.5813117906339343,
+      "yaw_deg": 1.52758346805295,
+      "goal_xy_mm": 0.5940397245296959
+     }
+    },
+    {
+     "seed": 8,
+     "half_mm": 35.0,
+     "success": false,
+     "reasons": [
+      "no_lift",
+      "not_released_and_settled_at_goal"
+     ],
+     "final_error_m": 0.3125801392549495,
+     "estimate_error": {
+      "xy_mm": 0.2532656433374047,
+      "z_mm": 0.5951453508023646,
+      "yaw_deg": 1.0860762147234908,
+      "goal_xy_mm": 0.598729311779947
+     }
+    },
+    {
+     "seed": 9,
+     "half_mm": 35.0,
+     "success": false,
+     "reasons": [
+      "no_lift",
+      "not_released_and_settled_at_goal"
+     ],
+     "final_error_m": 0.3552528332926078,
+     "estimate_error": {
+      "xy_mm": 0.3422426730626317,
+      "z_mm": 0.5530430202411313,
+      "yaw_deg": 0.06394412265431892,
+      "goal_xy_mm": 0.6192390468060555
+     }
+    }
+   ],
+   "estimate_error_median": {
+    "xy_mm": 0.2679122800589534,
+    "z_mm": 0.577876597104024,
+    "yaw_deg": 0.8018457204951073,
+    "goal_xy_mm": 0.5971646162023297
+   },
+   "estimate_error_max": {
+    "xy_mm": 0.35012659042608124,
+    "z_mm": 0.6565305686496298,
+    "yaw_deg": 2.0570142520669723,
+    "goal_xy_mm": 0.6192390468060555
+   }
+  },
+  "depth_distractors3/half0.025": {
+   "n": 10,
+   "success": 10,
+   "failures": [],
+   "rows": [
+    {
+     "seed": 0,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.000735358810182774,
+     "estimate_error": {
+      "xy_mm": 0.1492017197874022,
+      "z_mm": 0.48959663293042177,
+      "yaw_deg": 0.9429857479330448,
+      "goal_xy_mm": 0.6077709800953894
+     }
+    },
+    {
+     "seed": 1,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0007435929066416254,
+     "estimate_error": {
+      "xy_mm": 0.1352408125232575,
+      "z_mm": 0.5849629040496456,
+      "yaw_deg": 1.4823847737332536,
+      "goal_xy_mm": 0.589072325159156
+     }
+    },
+    {
+     "seed": 2,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0007986266861488292,
+     "estimate_error": {
+      "xy_mm": 0.2880765288620262,
+      "z_mm": 0.6081984222072283,
+      "yaw_deg": 1.1459638620169277,
+      "goal_xy_mm": 0.5955999206247125
+     }
+    },
+    {
+     "seed": 3,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0005577768241522939,
+     "estimate_error": {
+      "xy_mm": 0.334580229473476,
+      "z_mm": 0.5791460264380037,
+      "yaw_deg": 0.820451685374308,
+      "goal_xy_mm": 0.5713285464585561
+     }
+    },
+    {
+     "seed": 4,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0007530921953303707,
+     "estimate_error": {
+      "xy_mm": 0.3221946855910047,
+      "z_mm": 0.6236998285742528,
+      "yaw_deg": 0.8365138952638822,
+      "goal_xy_mm": 0.6140045833232791
+     }
+    },
+    {
+     "seed": 5,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0007494222901170311,
+     "estimate_error": {
+      "xy_mm": 0.22803573079404219,
+      "z_mm": 0.6899829321930888,
+      "yaw_deg": 0.8501582739195082,
+      "goal_xy_mm": 0.6080431224297436
+     }
+    },
+    {
+     "seed": 6,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0007839588776675398,
+     "estimate_error": {
+      "xy_mm": 0.4020554074451719,
+      "z_mm": 0.5713769773012072,
+      "yaw_deg": 1.612191061624711,
+      "goal_xy_mm": 0.5829843999652334
+     }
+    },
+    {
+     "seed": 7,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0006943940222293884,
+     "estimate_error": {
+      "xy_mm": 0.11202240580005465,
+      "z_mm": 0.5813302954848047,
+      "yaw_deg": 0.5275834680529486,
+      "goal_xy_mm": 0.5940397245296959
+     }
+    },
+    {
+     "seed": 8,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.000517051861728319,
+     "estimate_error": {
+      "xy_mm": 0.35847085356321823,
+      "z_mm": 0.62645790193867,
+      "yaw_deg": 1.0860762147234908,
+      "goal_xy_mm": 0.598729311779947
+     }
+    },
+    {
+     "seed": 9,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0007885528587292175,
+     "estimate_error": {
+      "xy_mm": 0.2547305310600785,
+      "z_mm": 0.557939205872559,
+      "yaw_deg": 0.9360558773456698,
+      "goal_xy_mm": 0.6192390468060555
+     }
+    }
+   ],
+   "estimate_error_median": {
+    "xy_mm": 0.2714035299610523,
+    "z_mm": 0.5831465997672252,
+    "yaw_deg": 0.9395208126393573,
+    "goal_xy_mm": 0.5971646162023297
+   },
+   "estimate_error_max": {
+    "xy_mm": 0.4020554074451719,
+    "z_mm": 0.6899829321930888,
+    "yaw_deg": 1.612191061624711,
+    "goal_xy_mm": 0.6192390468060555
+   }
+  },
+  "depth_distractors3/half0.03": {
+   "n": 10,
+   "success": 10,
+   "failures": [],
+   "rows": [
+    {
+     "seed": 0,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0008311070896783798,
+     "estimate_error": {
+      "xy_mm": 0.3603860350967888,
+      "z_mm": 0.5263960481379955,
+      "yaw_deg": 1.9429857479330335,
+      "goal_xy_mm": 0.6077709800953894
+     }
+    },
+    {
+     "seed": 1,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0007575695345981489,
+     "estimate_error": {
+      "xy_mm": 0.17320485363733482,
+      "z_mm": 0.5945361022584756,
+      "yaw_deg": 1.5176152262667124,
+      "goal_xy_mm": 0.589072325159156
+     }
+    },
+    {
+     "seed": 2,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.00079784981353196,
+     "estimate_error": {
+      "xy_mm": 0.1864050564405036,
+      "z_mm": 0.5582771546103933,
+      "yaw_deg": 0.14596386201691355,
+      "goal_xy_mm": 0.5955999206247125
+     }
+    },
+    {
+     "seed": 3,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0005369795326651197,
+     "estimate_error": {
+      "xy_mm": 0.323160499095269,
+      "z_mm": 0.5952219020359424,
+      "yaw_deg": 1.8204516853743031,
+      "goal_xy_mm": 0.5713285464585561
+     }
+    },
+    {
+     "seed": 4,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.000761547922992944,
+     "estimate_error": {
+      "xy_mm": 0.21376785452780522,
+      "z_mm": 0.5772558465592277,
+      "yaw_deg": 0.8365138952638822,
+      "goal_xy_mm": 0.6140045833232791
+     }
+    },
+    {
+     "seed": 5,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0007723059198436392,
+     "estimate_error": {
+      "xy_mm": 0.11794268212963403,
+      "z_mm": 0.6668499632230991,
+      "yaw_deg": 0.149841726080506,
+      "goal_xy_mm": 0.6080431224297436
+     }
+    },
+    {
+     "seed": 6,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0006923900368308295,
+     "estimate_error": {
+      "xy_mm": 0.3390600927954752,
+      "z_mm": 0.5577023826550849,
+      "yaw_deg": 1.612191061624711,
+      "goal_xy_mm": 0.5829843999652334
+     }
+    },
+    {
+     "seed": 7,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0007140508321574975,
+     "estimate_error": {
+      "xy_mm": 0.11011768861523666,
+      "z_mm": 0.5992306484985006,
+      "yaw_deg": 1.4724165319470541,
+      "goal_xy_mm": 0.5940397245296959
+     }
+    },
+    {
+     "seed": 8,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0005426213588895998,
+     "estimate_error": {
+      "xy_mm": 0.18383903471186439,
+      "z_mm": 0.5630592901748783,
+      "yaw_deg": 0.9139237852765056,
+      "goal_xy_mm": 0.598729311779947
+     }
+    },
+    {
+     "seed": 9,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0008803668828662036,
+     "estimate_error": {
+      "xy_mm": 0.377188631521781,
+      "z_mm": 0.5262477245712334,
+      "yaw_deg": 1.936055877345684,
+      "goal_xy_mm": 0.6192390468060555
+     }
+    }
+   ],
+   "estimate_error_median": {
+    "xy_mm": 0.2000864554841544,
+    "z_mm": 0.570157568367053,
+    "yaw_deg": 1.4950158791068833,
+    "goal_xy_mm": 0.5971646162023297
+   },
+   "estimate_error_max": {
+    "xy_mm": 0.377188631521781,
+    "z_mm": 0.6668499632230991,
+    "yaw_deg": 1.9429857479330335,
+    "goal_xy_mm": 0.6192390468060555
+   }
+  },
+  "depth_distractors3/half0.035": {
+   "n": 10,
+   "success": 10,
+   "failures": [],
+   "rows": [
+    {
+     "seed": 0,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0008686398326040152,
+     "estimate_error": {
+      "xy_mm": 0.2349939664495619,
+      "z_mm": 0.5220178065229591,
+      "yaw_deg": 2.0570142520669723,
+      "goal_xy_mm": 0.6077709800953894
+     }
+    },
+    {
+     "seed": 1,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0008719899051169029,
+     "estimate_error": {
+      "xy_mm": 0.18276524836176214,
+      "z_mm": 0.6186408117624526,
+      "yaw_deg": 0.5176152262667237,
+      "goal_xy_mm": 0.589072325159156
+     }
+    },
+    {
+     "seed": 2,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.000923513342905755,
+     "estimate_error": {
+      "xy_mm": 0.29182295717945406,
+      "z_mm": 0.5631155858165787,
+      "yaw_deg": 0.14596386201691355,
+      "goal_xy_mm": 0.5955999206247125
+     }
+    },
+    {
+     "seed": 3,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0005714311302397821,
+     "estimate_error": {
+      "xy_mm": 0.33989019024378225,
+      "z_mm": 0.5924795845502345,
+      "yaw_deg": 1.1795483146256946,
+      "goal_xy_mm": 0.5713285464585561
+     }
+    },
+    {
+     "seed": 4,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0008783824036799645,
+     "estimate_error": {
+      "xy_mm": 0.27289208112531416,
+      "z_mm": 0.5746989796777263,
+      "yaw_deg": 0.16348610473610647,
+      "goal_xy_mm": 0.6140045833232791
+     }
+    },
+    {
+     "seed": 5,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0008907707418680448,
+     "estimate_error": {
+      "xy_mm": 0.2629324789925927,
+      "z_mm": 0.6569613444466077,
+      "yaw_deg": 0.149841726080506,
+      "goal_xy_mm": 0.6080431224297436
+     }
+    },
+    {
+     "seed": 6,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0008217572911078114,
+     "estimate_error": {
+      "xy_mm": 0.35012659042608124,
+      "z_mm": 0.550869621859032,
+      "yaw_deg": 1.612191061624711,
+      "goal_xy_mm": 0.5829843999652334
+     }
+    },
+    {
+     "seed": 7,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0008114330743445613,
+     "estimate_error": {
+      "xy_mm": 0.05127095844897006,
+      "z_mm": 0.5814234952377234,
+      "yaw_deg": 1.52758346805295,
+      "goal_xy_mm": 0.5940397245296959
+     }
+    },
+    {
+     "seed": 8,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0006101703584142062,
+     "estimate_error": {
+      "xy_mm": 0.2532656433374047,
+      "z_mm": 0.595681892774827,
+      "yaw_deg": 1.0860762147234908,
+      "goal_xy_mm": 0.598729311779947
+     }
+    },
+    {
+     "seed": 9,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0009158393213933917,
+     "estimate_error": {
+      "xy_mm": 0.3422426730626317,
+      "z_mm": 0.5533259785611838,
+      "yaw_deg": 0.06394412265431892,
+      "goal_xy_mm": 0.6192390468060555
+     }
+    }
+   ],
+   "estimate_error_median": {
+    "xy_mm": 0.2679122800589534,
+    "z_mm": 0.5780612374577249,
+    "yaw_deg": 0.8018457204951073,
+    "goal_xy_mm": 0.5971646162023297
+   },
+   "estimate_error_max": {
+    "xy_mm": 0.35012659042608124,
+    "z_mm": 0.6569613444466077,
+    "yaw_deg": 2.0570142520669723,
+    "goal_xy_mm": 0.6192390468060555
+   }
+  },
+  "depth_calib_0p5deg_5mm/half0.025": {
+   "n": 10,
+   "success": 10,
+   "failures": [],
+   "rows": [
+    {
+     "seed": 0,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.008762944436277864,
+     "estimate_error": {
+      "xy_mm": 9.237466275051801,
+      "z_mm": 2.6444403444955444,
+      "yaw_deg": 0.9429857479330448,
+      "goal_xy_mm": 12.058224888108258
+     }
+    },
+    {
+     "seed": 1,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0013116664285218612,
+     "estimate_error": {
+      "xy_mm": 11.437747859890957,
+      "z_mm": 1.2547964586587732,
+      "yaw_deg": 1.4823847737332536,
+      "goal_xy_mm": 11.359332804241845
+     }
+    },
+    {
+     "seed": 2,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0022478657373646667,
+     "estimate_error": {
+      "xy_mm": 13.433736228088087,
+      "z_mm": 1.6071531763547677,
+      "yaw_deg": 0.14596386201691355,
+      "goal_xy_mm": 12.195479747607466
+     }
+    },
+    {
+     "seed": 3,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.01100826090822568,
+     "estimate_error": {
+      "xy_mm": 13.386948622943118,
+      "z_mm": 3.624924457307166,
+      "yaw_deg": 0.820451685374308,
+      "goal_xy_mm": 11.975307992387526
+     }
+    },
+    {
+     "seed": 4,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.009215531158074079,
+     "estimate_error": {
+      "xy_mm": 8.426758252415544,
+      "z_mm": 1.886943769961135,
+      "yaw_deg": 0.8365138952638822,
+      "goal_xy_mm": 9.674228368887022
+     }
+    },
+    {
+     "seed": 5,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.008377231219096275,
+     "estimate_error": {
+      "xy_mm": 15.344587545762497,
+      "z_mm": 1.001065495020652,
+      "yaw_deg": 0.8501582739195082,
+      "goal_xy_mm": 15.579009131176255
+     }
+    },
+    {
+     "seed": 6,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0048501565818913584,
+     "estimate_error": {
+      "xy_mm": 5.088969809520164,
+      "z_mm": 0.5918614883896056,
+      "yaw_deg": 0.6121910616246969,
+      "goal_xy_mm": 5.544166274817367
+     }
+    },
+    {
+     "seed": 7,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.00926876397824212,
+     "estimate_error": {
+      "xy_mm": 14.581950577181242,
+      "z_mm": 0.870726769993082,
+      "yaw_deg": 0.5275834680529486,
+      "goal_xy_mm": 12.9413509138669
+     }
+    },
+    {
+     "seed": 8,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0026017095907736503,
+     "estimate_error": {
+      "xy_mm": 7.43444889600873,
+      "z_mm": 3.242142389517446,
+      "yaw_deg": 1.0860762147234908,
+      "goal_xy_mm": 8.9826997751796
+     }
+    },
+    {
+     "seed": 9,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.008375726364961629,
+     "estimate_error": {
+      "xy_mm": 10.036304087606682,
+      "z_mm": 5.0324070341299,
+      "yaw_deg": 0.9360558773456698,
+      "goal_xy_mm": 9.515463735418967
+     }
+    }
+   ],
+   "estimate_error_median": {
+    "xy_mm": 10.73702597374882,
+    "z_mm": 1.7470484731579514,
+    "yaw_deg": 0.8433360845916952,
+    "goal_xy_mm": 11.667320398314686
+   },
+   "estimate_error_max": {
+    "xy_mm": 15.344587545762497,
+    "z_mm": 5.0324070341299,
+    "yaw_deg": 1.4823847737332536,
+    "goal_xy_mm": 15.579009131176255
+   }
+  },
+  "depth_calib_0p5deg_5mm/half0.03": {
+   "n": 10,
+   "success": 9,
+   "failures": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ],
+   "rows": [
+    {
+     "seed": 0,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.008954648959812007,
+     "estimate_error": {
+      "xy_mm": 8.996408878895856,
+      "z_mm": 2.669088236225626,
+      "yaw_deg": 1.9429857479330335,
+      "goal_xy_mm": 12.058224888108258
+     }
+    },
+    {
+     "seed": 1,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0006960895375549561,
+     "estimate_error": {
+      "xy_mm": 11.388622457944605,
+      "z_mm": 1.233157836194085,
+      "yaw_deg": 1.5176152262667124,
+      "goal_xy_mm": 11.359332804241845
+     }
+    },
+    {
+     "seed": 2,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.00234549954681379,
+     "estimate_error": {
+      "xy_mm": 13.368538273943875,
+      "z_mm": 1.6482608887309034,
+      "yaw_deg": 0.8540361379830751,
+      "goal_xy_mm": 12.195479747607466
+     }
+    },
+    {
+     "seed": 3,
+     "half_mm": 30.0,
+     "success": false,
+     "reasons": [
+      "no_lift",
+      "not_released_and_settled_at_goal"
+     ],
+     "final_error_m": 0.3659861973094855,
+     "estimate_error": {
+      "xy_mm": 13.293194475989495,
+      "z_mm": 3.620645535602311,
+      "yaw_deg": 0.820451685374308,
+      "goal_xy_mm": 11.975307992387526
+     }
+    },
+    {
+     "seed": 4,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.009162062092325021,
+     "estimate_error": {
+      "xy_mm": 8.47208886423249,
+      "z_mm": 1.9292824889948248,
+      "yaw_deg": 0.8365138952638822,
+      "goal_xy_mm": 9.674228368887022
+     }
+    },
+    {
+     "seed": 5,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.008561409735733456,
+     "estimate_error": {
+      "xy_mm": 15.35183741081989,
+      "z_mm": 0.9937639928701558,
+      "yaw_deg": 0.149841726080506,
+      "goal_xy_mm": 15.579009131176255
+     }
+    },
+    {
+     "seed": 6,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0048230394083787695,
+     "estimate_error": {
+      "xy_mm": 4.904048858265631,
+      "z_mm": 0.5867634789631162,
+      "yaw_deg": 1.612191061624711,
+      "goal_xy_mm": 5.544166274817367
+     }
+    },
+    {
+     "seed": 7,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.008910501682696992,
+     "estimate_error": {
+      "xy_mm": 14.603531627846474,
+      "z_mm": 0.8973356589091798,
+      "yaw_deg": 1.4724165319470541,
+      "goal_xy_mm": 12.9413509138669
+     }
+    },
+    {
+     "seed": 8,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.002338494392564234,
+     "estimate_error": {
+      "xy_mm": 7.517465922061226,
+      "z_mm": 3.174599833156908,
+      "yaw_deg": 0.9139237852765056,
+      "goal_xy_mm": 8.9826997751796
+     }
+    },
+    {
+     "seed": 9,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.008257104425242506,
+     "estimate_error": {
+      "xy_mm": 9.743720660726083,
+      "z_mm": 4.998089808449933,
+      "yaw_deg": 1.936055877345684,
+      "goal_xy_mm": 9.515463735418967
+     }
+    }
+   ],
+   "estimate_error_median": {
+    "xy_mm": 10.566171559335345,
+    "z_mm": 1.7887716888628642,
+    "yaw_deg": 1.19317015861178,
+    "goal_xy_mm": 11.667320398314686
+   },
+   "estimate_error_max": {
+    "xy_mm": 15.35183741081989,
+    "z_mm": 4.998089808449933,
+    "yaw_deg": 1.9429857479330335,
+    "goal_xy_mm": 15.579009131176255
+   }
+  },
+  "depth_calib_0p5deg_5mm/half0.035": {
+   "n": 10,
+   "success": 5,
+   "failures": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ],
+   "rows": [
+    {
+     "seed": 0,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.008763112904042495,
+     "estimate_error": {
+      "xy_mm": 8.955602008633049,
+      "z_mm": 2.6607029649057603,
+      "yaw_deg": 0.057014252066969334,
+      "goal_xy_mm": 12.058224888108258
+     }
+    },
+    {
+     "seed": 1,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0008349122827269646,
+     "estimate_error": {
+      "xy_mm": 11.354310345733527,
+      "z_mm": 1.2249220647670354,
+      "yaw_deg": 0.5176152262667237,
+      "goal_xy_mm": 11.359332804241845
+     }
+    },
+    {
+     "seed": 2,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0025945751538564406,
+     "estimate_error": {
+      "xy_mm": 13.363707498924787,
+      "z_mm": 1.6335392670639715,
+      "yaw_deg": 0.8540361379830751,
+      "goal_xy_mm": 12.195479747607466
+     }
+    },
+    {
+     "seed": 3,
+     "half_mm": 35.0,
+     "success": false,
+     "reasons": [
+      "no_lift",
+      "not_released_and_settled_at_goal"
+     ],
+     "final_error_m": 0.3676724212532458,
+     "estimate_error": {
+      "xy_mm": 13.20509874652002,
+      "z_mm": 3.643164175547553,
+      "yaw_deg": 2.179548314625696,
+      "goal_xy_mm": 11.975307992387526
+     }
+    },
+    {
+     "seed": 4,
+     "half_mm": 35.0,
+     "success": false,
+     "reasons": [
+      "no_lift",
+      "not_released_and_settled_at_goal"
+     ],
+     "final_error_m": 0.33428239101698715,
+     "estimate_error": {
+      "xy_mm": 8.294354837808076,
+      "z_mm": 1.9344731939923767,
+      "yaw_deg": 0.16348610473610647,
+      "goal_xy_mm": 9.674228368887022
+     }
+    },
+    {
+     "seed": 5,
+     "half_mm": 35.0,
+     "success": false,
+     "reasons": [
+      "no_lift",
+      "not_released_and_settled_at_goal"
+     ],
+     "final_error_m": 0.31478344233001004,
+     "estimate_error": {
+      "xy_mm": 15.181104791239973,
+      "z_mm": 0.9750911143647165,
+      "yaw_deg": 0.149841726080506,
+      "goal_xy_mm": 15.579009131176255
+     }
+    },
+    {
+     "seed": 6,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.004750389046432438,
+     "estimate_error": {
+      "xy_mm": 4.968247422096295,
+      "z_mm": 0.5782157266538759,
+      "yaw_deg": 0.3878089383752918,
+      "goal_xy_mm": 5.544166274817367
+     }
+    },
+    {
+     "seed": 7,
+     "half_mm": 35.0,
+     "success": false,
+     "reasons": [
+      "no_lift",
+      "not_released_and_settled_at_goal"
+     ],
+     "final_error_m": 0.31772509954352496,
+     "estimate_error": {
+      "xy_mm": 14.439464989533608,
+      "z_mm": 0.839738492764891,
+      "yaw_deg": 1.52758346805295,
+      "goal_xy_mm": 12.9413509138669
+     }
+    },
+    {
+     "seed": 8,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0028461579978822657,
+     "estimate_error": {
+      "xy_mm": 7.395798498631561,
+      "z_mm": 3.1845513342982636,
+      "yaw_deg": 1.0860762147234908,
+      "goal_xy_mm": 8.9826997751796
+     }
+    },
+    {
+     "seed": 9,
+     "half_mm": 35.0,
+     "success": false,
+     "reasons": [
+      "no_lift",
+      "not_released_and_settled_at_goal"
+     ],
+     "final_error_m": 0.34474314449881893,
+     "estimate_error": {
+      "xy_mm": 9.804451179124326,
+      "z_mm": 5.018987603298407,
+      "yaw_deg": 0.06394412265431892,
+      "goal_xy_mm": 9.515463735418967
+     }
+    }
+   ],
+   "estimate_error_median": {
+    "xy_mm": 10.579380762428926,
+    "z_mm": 1.784006230528174,
+    "yaw_deg": 0.4527120823210078,
+    "goal_xy_mm": 11.667320398314686
+   },
+   "estimate_error_max": {
+    "xy_mm": 15.181104791239973,
+    "z_mm": 5.018987603298407,
+    "yaw_deg": 2.179548314625696,
+    "goal_xy_mm": 15.579009131176255
+   }
+  },
+  "depth_calib_1deg_10mm/half0.025": {
+   "n": 10,
+   "success": 5,
+   "failures": [
+    "no_lift",
+    "not_released_and_settled_at_goal",
+    "perception_failed"
+   ],
+   "rows": [
+    {
+     "seed": 0,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.017010913723252613,
+     "estimate_error": {
+      "xy_mm": 18.41211101670898,
+      "z_mm": 4.67935181044837,
+      "yaw_deg": 1.9429857479330335,
+      "goal_xy_mm": 23.607148108033556
+     }
+    },
+    {
+     "seed": 1,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0033169614268042883,
+     "estimate_error": {
+      "xy_mm": 22.779908847540497,
+      "z_mm": 3.3250780321499307,
+      "yaw_deg": 1.4823847737332536,
+      "goal_xy_mm": 22.79983919941665
+     }
+    },
+    {
+     "seed": 2,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.005387977205705175,
+     "estimate_error": {
+      "xy_mm": 26.68383340604916,
+      "z_mm": 4.19241642245512,
+      "yaw_deg": 0.14596386201691355,
+      "goal_xy_mm": 24.666160135374167
+     }
+    },
+    {
+     "seed": 3,
+     "half_mm": 25.0,
+     "success": false,
+     "reasons": [
+      "no_lift",
+      "not_released_and_settled_at_goal"
+     ],
+     "final_error_m": 0.3581704941545077,
+     "estimate_error": {
+      "xy_mm": 26.46551837475936,
+      "z_mm": 7.2556866919356695,
+      "yaw_deg": 0.820451685374308,
+      "goal_xy_mm": 24.182830572801684
+     }
+    },
+    {
+     "seed": 4,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.019132865606251222,
+     "estimate_error": {
+      "xy_mm": 16.897694876103778,
+      "z_mm": 4.016903114292293,
+      "yaw_deg": 0.8365138952638822,
+      "goal_xy_mm": 20.019713791823303
+     }
+    },
+    {
+     "seed": 5,
+     "half_mm": 25.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block found, tray missing (2 clusters)"
+    },
+    {
+     "seed": 6,
+     "half_mm": 25.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block found, tray missing (2 clusters)"
+    },
+    {
+     "seed": 7,
+     "half_mm": 25.0,
+     "success": false,
+     "reasons": [
+      "no_lift",
+      "not_released_and_settled_at_goal"
+     ],
+     "final_error_m": 0.3155636803596251,
+     "estimate_error": {
+      "xy_mm": 29.176367266619522,
+      "z_mm": 1.3509876634815594,
+      "yaw_deg": 0.47241653194705274,
+      "goal_xy_mm": 26.441920201648244
+     }
+    },
+    {
+     "seed": 8,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0038137681042534764,
+     "estimate_error": {
+      "xy_mm": 15.17623881776438,
+      "z_mm": 5.868827132227066,
+      "yaw_deg": 1.913923785276507,
+      "goal_xy_mm": 17.40601731296623
+     }
+    },
+    {
+     "seed": 9,
+     "half_mm": 25.0,
+     "success": false,
+     "reasons": [
+      "no_lift",
+      "not_released_and_settled_at_goal"
+     ],
+     "final_error_m": 0.35072754313997523,
+     "estimate_error": {
+      "xy_mm": 20.101355544114686,
+      "z_mm": 9.49995077249607,
+      "yaw_deg": 0.9360558773456698,
+      "goal_xy_mm": 19.608994258298512
+     }
+    }
+   ],
+   "estimate_error_median": {
+    "xy_mm": 21.44063219582759,
+    "z_mm": 4.435884116451746,
+    "yaw_deg": 0.886284886304776,
+    "goal_xy_mm": 23.203493653725104
+   },
+   "estimate_error_max": {
+    "xy_mm": 29.176367266619522,
+    "z_mm": 9.49995077249607,
+    "yaw_deg": 1.9429857479330335,
+    "goal_xy_mm": 26.441920201648244
+   }
+  },
+  "depth_calib_1deg_10mm/half0.03": {
+   "n": 10,
+   "success": 4,
+   "failures": [
+    "no_lift",
+    "not_released_and_settled_at_goal",
+    "perception_failed"
+   ],
+   "rows": [
+    {
+     "seed": 0,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.01733405317319989,
+     "estimate_error": {
+      "xy_mm": 18.225528415404135,
+      "z_mm": 4.705613433423354,
+      "yaw_deg": 2.9429857479330477,
+      "goal_xy_mm": 23.607148108033556
+     }
+    },
+    {
+     "seed": 1,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.002953048431055033,
+     "estimate_error": {
+      "xy_mm": 22.656750880460947,
+      "z_mm": 3.3057992221340244,
+      "yaw_deg": 0.48238477373326494,
+      "goal_xy_mm": 22.79983919941665
+     }
+    },
+    {
+     "seed": 2,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.005406541741733491,
+     "estimate_error": {
+      "xy_mm": 26.486814198123433,
+      "z_mm": 4.263807451761425,
+      "yaw_deg": 0.8540361379830751,
+      "goal_xy_mm": 24.666160135374167
+     }
+    },
+    {
+     "seed": 3,
+     "half_mm": 30.0,
+     "success": false,
+     "reasons": [
+      "no_lift",
+      "not_released_and_settled_at_goal"
+     ],
+     "final_error_m": 0.3582722388255323,
+     "estimate_error": {
+      "xy_mm": 26.289136639096846,
+      "z_mm": 7.251437704348,
+      "yaw_deg": 0.820451685374308,
+      "goal_xy_mm": 24.182830572801684
+     }
+    },
+    {
+     "seed": 4,
+     "half_mm": 30.0,
+     "success": false,
+     "reasons": [
+      "no_lift",
+      "not_released_and_settled_at_goal"
+     ],
+     "final_error_m": 0.337375702958526,
+     "estimate_error": {
+      "xy_mm": 16.923732370392635,
+      "z_mm": 4.062214961381621,
+      "yaw_deg": 0.16348610473610647,
+      "goal_xy_mm": 20.019713791823303
+     }
+    },
+    {
+     "seed": 5,
+     "half_mm": 30.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block found, tray missing (2 clusters)"
+    },
+    {
+     "seed": 6,
+     "half_mm": 30.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block found, tray missing (2 clusters)"
+    },
+    {
+     "seed": 7,
+     "half_mm": 30.0,
+     "success": false,
+     "reasons": [
+      "no_lift",
+      "not_released_and_settled_at_goal"
+     ],
+     "final_error_m": 0.31655375626300963,
+     "estimate_error": {
+      "xy_mm": 29.15581125798805,
+      "z_mm": 1.3548969013793994,
+      "yaw_deg": 2.4724165319470557,
+      "goal_xy_mm": 26.441920201648244
+     }
+    },
+    {
+     "seed": 8,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.004055116904380636,
+     "estimate_error": {
+      "xy_mm": 15.049600471091606,
+      "z_mm": 5.789442679095081,
+      "yaw_deg": 1.913923785276507,
+      "goal_xy_mm": 17.40601731296623
+     }
+    },
+    {
+     "seed": 9,
+     "half_mm": 30.0,
+     "success": false,
+     "reasons": [
+      "no_lift",
+      "not_released_and_settled_at_goal"
+     ],
+     "final_error_m": 0.34879189561971474,
+     "estimate_error": {
+      "xy_mm": 19.76964571481474,
+      "z_mm": 9.46408588881151,
+      "yaw_deg": 1.936055877345684,
+      "goal_xy_mm": 19.609347906379064
+     }
+    }
+   ],
+   "estimate_error_median": {
+    "xy_mm": 21.213198297637845,
+    "z_mm": 4.484710442592389,
+    "yaw_deg": 1.383979961629791,
+    "goal_xy_mm": 23.203493653725104
+   },
+   "estimate_error_max": {
+    "xy_mm": 29.15581125798805,
+    "z_mm": 9.46408588881151,
+    "yaw_deg": 2.9429857479330477,
+    "goal_xy_mm": 26.441920201648244
+   }
+  },
+  "depth_calib_1deg_10mm/half0.035": {
+   "n": 10,
+   "success": 2,
+   "failures": [
+    "no_lift",
+    "not_released_and_settled_at_goal",
+    "perception_failed"
+   ],
+   "rows": [
+    {
+     "seed": 0,
+     "half_mm": 35.0,
+     "success": false,
+     "reasons": [
+      "no_lift",
+      "not_released_and_settled_at_goal"
+     ],
+     "final_error_m": 0.35951623637844476,
+     "estimate_error": {
+      "xy_mm": 18.131467095893537,
+      "z_mm": 4.701040998744133,
+      "yaw_deg": 1.057014252066958,
+      "goal_xy_mm": 23.607148108033556
+     }
+    },
+    {
+     "seed": 1,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0029237760457768466,
+     "estimate_error": {
+      "xy_mm": 22.535039587769433,
+      "z_mm": 3.3007638426987214,
+      "yaw_deg": 0.5176152262667237,
+      "goal_xy_mm": 22.79983919941665
+     }
+    },
+    {
+     "seed": 2,
+     "half_mm": 35.0,
+     "success": false,
+     "reasons": [
+      "no_lift",
+      "not_released_and_settled_at_goal"
+     ],
+     "final_error_m": 0.3559918082026721,
+     "estimate_error": {
+      "xy_mm": 26.420221863858373,
+      "z_mm": 4.2457118571436885,
+      "yaw_deg": 0.14596386201691355,
+      "goal_xy_mm": 24.666160135374167
+     }
+    },
+    {
+     "seed": 3,
+     "half_mm": 35.0,
+     "success": false,
+     "reasons": [
+      "no_lift",
+      "not_released_and_settled_at_goal"
+     ],
+     "final_error_m": 0.3625841942789927,
+     "estimate_error": {
+      "xy_mm": 26.109271949602707,
+      "z_mm": 7.280000286625017,
+      "yaw_deg": 2.179548314625696,
+      "goal_xy_mm": 24.182830572801684
+     }
+    },
+    {
+     "seed": 4,
+     "half_mm": 35.0,
+     "success": false,
+     "reasons": [
+      "no_lift",
+      "not_released_and_settled_at_goal"
+     ],
+     "final_error_m": 0.336708073994483,
+     "estimate_error": {
+      "xy_mm": 16.56901416545855,
+      "z_mm": 4.047466417251653,
+      "yaw_deg": 0.16348610473610647,
+      "goal_xy_mm": 20.019713791823303
+     }
+    },
+    {
+     "seed": 5,
+     "half_mm": 35.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block found, tray missing (2 clusters)"
+    },
+    {
+     "seed": 6,
+     "half_mm": 35.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block found, tray missing (2 clusters)"
+    },
+    {
+     "seed": 7,
+     "half_mm": 35.0,
+     "success": false,
+     "reasons": [
+      "no_lift",
+      "not_released_and_settled_at_goal"
+     ],
+     "final_error_m": 0.31615756468069445,
+     "estimate_error": {
+      "xy_mm": 28.90777041575711,
+      "z_mm": 1.3157052813388277,
+      "yaw_deg": 0.47241653194705274,
+      "goal_xy_mm": 26.441920201648244
+     }
+    },
+    {
+     "seed": 8,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.005147574665024201,
+     "estimate_error": {
+      "xy_mm": 14.8085280746729,
+      "z_mm": 5.812172008952385,
+      "yaw_deg": 1.0860762147234908,
+      "goal_xy_mm": 17.406022393936485
+     }
+    },
+    {
+     "seed": 9,
+     "half_mm": 35.0,
+     "success": false,
+     "reasons": [
+      "no_lift",
+      "not_released_and_settled_at_goal"
+     ],
+     "final_error_m": 0.34870193058083104,
+     "estimate_error": {
+      "xy_mm": 19.72213921810773,
+      "z_mm": 9.474682732148048,
+      "yaw_deg": 0.9360558773456698,
+      "goal_xy_mm": 19.60948936593611
+     }
+    }
+   ],
+   "estimate_error_median": {
+    "xy_mm": 21.12858940293858,
+    "z_mm": 4.4733764279439105,
+    "yaw_deg": 0.7268355518061967,
+    "goal_xy_mm": 23.203493653725104
+   },
+   "estimate_error_max": {
+    "xy_mm": 28.90777041575711,
+    "z_mm": 9.474682732148048,
+    "yaw_deg": 2.179548314625696,
+    "goal_xy_mm": 26.441920201648244
+   }
+  },
+  "depth_calib_2deg_20mm/half0.025": {
+   "n": 10,
+   "success": 0,
+   "failures": [
+    "perception_failed"
+   ],
+   "rows": [
+    {
+     "seed": 0,
+     "half_mm": 25.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block found, tray missing (3 clusters)"
+    },
+    {
+     "seed": 1,
+     "half_mm": 25.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray missing (2 clusters)"
+    },
+    {
+     "seed": 2,
+     "half_mm": 25.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block found, tray missing (2 clusters)"
+    },
+    {
+     "seed": 3,
+     "half_mm": 25.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block found, tray missing (2 clusters)"
+    },
+    {
+     "seed": 4,
+     "half_mm": 25.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block found, tray missing (2 clusters)"
+    },
+    {
+     "seed": 5,
+     "half_mm": 25.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray missing (1 clusters)"
+    },
+    {
+     "seed": 6,
+     "half_mm": 25.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray missing (1 clusters)"
+    },
+    {
+     "seed": 7,
+     "half_mm": 25.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block found, tray missing (2 clusters)"
+    },
+    {
+     "seed": 8,
+     "half_mm": 25.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray missing (1 clusters)"
+    },
+    {
+     "seed": 9,
+     "half_mm": 25.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block found, tray missing (2 clusters)"
+    }
+   ]
+  },
+  "depth_calib_2deg_20mm/half0.03": {
+   "n": 10,
+   "success": 0,
+   "failures": [
+    "perception_failed"
+   ],
+   "rows": [
+    {
+     "seed": 0,
+     "half_mm": 30.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block found, tray missing (3 clusters)"
+    },
+    {
+     "seed": 1,
+     "half_mm": 30.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block found, tray missing (2 clusters)"
+    },
+    {
+     "seed": 2,
+     "half_mm": 30.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block found, tray missing (2 clusters)"
+    },
+    {
+     "seed": 3,
+     "half_mm": 30.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block found, tray missing (2 clusters)"
+    },
+    {
+     "seed": 4,
+     "half_mm": 30.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block found, tray missing (2 clusters)"
+    },
+    {
+     "seed": 5,
+     "half_mm": 30.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray missing (1 clusters)"
+    },
+    {
+     "seed": 6,
+     "half_mm": 30.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block found, tray missing (2 clusters)"
+    },
+    {
+     "seed": 7,
+     "half_mm": 30.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block found, tray missing (2 clusters)"
+    },
+    {
+     "seed": 8,
+     "half_mm": 30.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block found, tray missing (2 clusters)"
+    },
+    {
+     "seed": 9,
+     "half_mm": 30.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block found, tray missing (2 clusters)"
+    }
+   ]
+  },
+  "depth_calib_2deg_20mm/half0.035": {
+   "n": 10,
+   "success": 0,
+   "failures": [
+    "perception_failed"
+   ],
+   "rows": [
+    {
+     "seed": 0,
+     "half_mm": 35.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block found, tray missing (3 clusters)"
+    },
+    {
+     "seed": 1,
+     "half_mm": 35.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block found, tray missing (2 clusters)"
+    },
+    {
+     "seed": 2,
+     "half_mm": 35.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block found, tray missing (2 clusters)"
+    },
+    {
+     "seed": 3,
+     "half_mm": 35.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block found, tray missing (2 clusters)"
+    },
+    {
+     "seed": 4,
+     "half_mm": 35.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block found, tray missing (2 clusters)"
+    },
+    {
+     "seed": 5,
+     "half_mm": 35.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block found, tray missing (2 clusters)"
+    },
+    {
+     "seed": 6,
+     "half_mm": 35.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block found, tray missing (2 clusters)"
+    },
+    {
+     "seed": 7,
+     "half_mm": 35.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block found, tray missing (2 clusters)"
+    },
+    {
+     "seed": 8,
+     "half_mm": 35.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block found, tray missing (2 clusters)"
+    },
+    {
+     "seed": 9,
+     "half_mm": 35.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block found, tray missing (2 clusters)"
+    }
+   ]
+  },
+  "depth_noise_10mm/half0.025": {
+   "n": 10,
+   "success": 0,
+   "failures": [
+    "perception_failed"
+   ],
+   "rows": [
+    {
+     "seed": 0,
+     "half_mm": 25.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block found, tray missing (2 clusters)"
+    },
+    {
+     "seed": 1,
+     "half_mm": 25.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block found, tray missing (2 clusters)"
+    },
+    {
+     "seed": 2,
+     "half_mm": 25.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block found, tray missing (2 clusters)"
+    },
+    {
+     "seed": 3,
+     "half_mm": 25.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block found, tray missing (2 clusters)"
+    },
+    {
+     "seed": 4,
+     "half_mm": 25.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block found, tray missing (2 clusters)"
+    },
+    {
+     "seed": 5,
+     "half_mm": 25.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block found, tray missing (2 clusters)"
+    },
+    {
+     "seed": 6,
+     "half_mm": 25.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block found, tray missing (2 clusters)"
+    },
+    {
+     "seed": 7,
+     "half_mm": 25.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block found, tray missing (2 clusters)"
+    },
+    {
+     "seed": 8,
+     "half_mm": 25.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block found, tray missing (2 clusters)"
+    },
+    {
+     "seed": 9,
+     "half_mm": 25.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block found, tray missing (2 clusters)"
+    }
+   ]
+  },
+  "depth_noise_10mm/half0.03": {
+   "n": 10,
+   "success": 0,
+   "failures": [
+    "perception_failed"
+   ],
+   "rows": [
+    {
+     "seed": 0,
+     "half_mm": 30.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block found, tray missing (2 clusters)"
+    },
+    {
+     "seed": 1,
+     "half_mm": 30.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block found, tray missing (2 clusters)"
+    },
+    {
+     "seed": 2,
+     "half_mm": 30.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block found, tray missing (2 clusters)"
+    },
+    {
+     "seed": 3,
+     "half_mm": 30.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block found, tray missing (2 clusters)"
+    },
+    {
+     "seed": 4,
+     "half_mm": 30.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block found, tray missing (2 clusters)"
+    },
+    {
+     "seed": 5,
+     "half_mm": 30.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block found, tray missing (2 clusters)"
+    },
+    {
+     "seed": 6,
+     "half_mm": 30.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block found, tray missing (2 clusters)"
+    },
+    {
+     "seed": 7,
+     "half_mm": 30.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block found, tray missing (2 clusters)"
+    },
+    {
+     "seed": 8,
+     "half_mm": 30.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block found, tray missing (2 clusters)"
+    },
+    {
+     "seed": 9,
+     "half_mm": 30.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block found, tray missing (2 clusters)"
+    }
+   ]
+  },
+  "depth_noise_10mm/half0.035": {
+   "n": 10,
+   "success": 0,
+   "failures": [
+    "perception_failed"
+   ],
+   "rows": [
+    {
+     "seed": 0,
+     "half_mm": 35.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block found, tray missing (2 clusters)"
+    },
+    {
+     "seed": 1,
+     "half_mm": 35.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block found, tray missing (2 clusters)"
+    },
+    {
+     "seed": 2,
+     "half_mm": 35.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block found, tray missing (2 clusters)"
+    },
+    {
+     "seed": 3,
+     "half_mm": 35.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block found, tray missing (2 clusters)"
+    },
+    {
+     "seed": 4,
+     "half_mm": 35.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block found, tray missing (2 clusters)"
+    },
+    {
+     "seed": 5,
+     "half_mm": 35.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block found, tray missing (2 clusters)"
+    },
+    {
+     "seed": 6,
+     "half_mm": 35.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block found, tray missing (2 clusters)"
+    },
+    {
+     "seed": 7,
+     "half_mm": 35.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block found, tray missing (2 clusters)"
+    },
+    {
+     "seed": 8,
+     "half_mm": 35.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block found, tray missing (2 clusters)"
+    },
+    {
+     "seed": 9,
+     "half_mm": 35.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block found, tray missing (2 clusters)"
+    }
+   ]
+  },
+  "depth_noise_20mm/half0.025": {
+   "n": 10,
+   "success": 0,
+   "failures": [
+    "perception_failed"
+   ],
+   "rows": [
+    {
+     "seed": 0,
+     "half_mm": 25.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray missing (1 clusters)"
+    },
+    {
+     "seed": 1,
+     "half_mm": 25.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray missing (1 clusters)"
+    },
+    {
+     "seed": 2,
+     "half_mm": 25.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray missing (1 clusters)"
+    },
+    {
+     "seed": 3,
+     "half_mm": 25.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray missing (1 clusters)"
+    },
+    {
+     "seed": 4,
+     "half_mm": 25.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray missing (1 clusters)"
+    },
+    {
+     "seed": 5,
+     "half_mm": 25.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray missing (1 clusters)"
+    },
+    {
+     "seed": 6,
+     "half_mm": 25.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray missing (1 clusters)"
+    },
+    {
+     "seed": 7,
+     "half_mm": 25.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray missing (1 clusters)"
+    },
+    {
+     "seed": 8,
+     "half_mm": 25.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray missing (1 clusters)"
+    },
+    {
+     "seed": 9,
+     "half_mm": 25.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray missing (1 clusters)"
+    }
+   ]
+  },
+  "depth_noise_20mm/half0.03": {
+   "n": 10,
+   "success": 0,
+   "failures": [
+    "perception_failed"
+   ],
+   "rows": [
+    {
+     "seed": 0,
+     "half_mm": 30.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray missing (3 clusters)"
+    },
+    {
+     "seed": 1,
+     "half_mm": 30.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray missing (4 clusters)"
+    },
+    {
+     "seed": 2,
+     "half_mm": 30.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray missing (4 clusters)"
+    },
+    {
+     "seed": 3,
+     "half_mm": 30.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray missing (4 clusters)"
+    },
+    {
+     "seed": 4,
+     "half_mm": 30.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray missing (4 clusters)"
+    },
+    {
+     "seed": 5,
+     "half_mm": 30.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray missing (3 clusters)"
+    },
+    {
+     "seed": 6,
+     "half_mm": 30.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray missing (3 clusters)"
+    },
+    {
+     "seed": 7,
+     "half_mm": 30.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray missing (3 clusters)"
+    },
+    {
+     "seed": 8,
+     "half_mm": 30.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray missing (4 clusters)"
+    },
+    {
+     "seed": 9,
+     "half_mm": 30.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray missing (5 clusters)"
+    }
+   ]
+  },
+  "depth_noise_20mm/half0.035": {
+   "n": 10,
+   "success": 0,
+   "failures": [
+    "perception_failed"
+   ],
+   "rows": [
+    {
+     "seed": 0,
+     "half_mm": 35.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block found, tray missing (2 clusters)"
+    },
+    {
+     "seed": 1,
+     "half_mm": 35.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block found, tray missing (2 clusters)"
+    },
+    {
+     "seed": 2,
+     "half_mm": 35.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block found, tray missing (2 clusters)"
+    },
+    {
+     "seed": 3,
+     "half_mm": 35.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block found, tray missing (2 clusters)"
+    },
+    {
+     "seed": 4,
+     "half_mm": 35.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block found, tray missing (2 clusters)"
+    },
+    {
+     "seed": 5,
+     "half_mm": 35.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block found, tray missing (2 clusters)"
+    },
+    {
+     "seed": 6,
+     "half_mm": 35.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block found, tray missing (2 clusters)"
+    },
+    {
+     "seed": 7,
+     "half_mm": 35.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray missing (3 clusters)"
+    },
+    {
+     "seed": 8,
+     "half_mm": 35.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block found, tray missing (2 clusters)"
+    },
+    {
+     "seed": 9,
+     "half_mm": 35.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block found, tray missing (2 clusters)"
+    }
+   ]
+  },
+  "depth_dropout30_fly1/half0.025": {
+   "n": 10,
+   "success": 9,
+   "failures": [
+    "not_released_and_settled_at_goal"
+   ],
+   "rows": [
+    {
+     "seed": 0,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0006915127573416367,
+     "estimate_error": {
+      "xy_mm": 0.35933739511834406,
+      "z_mm": 0.52316952910526,
+      "yaw_deg": 1.9429857479330335,
+      "goal_xy_mm": 0.5772235662288786
+     }
+    },
+    {
+     "seed": 1,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0007843928175618514,
+     "estimate_error": {
+      "xy_mm": 0.39488504668741137,
+      "z_mm": 0.5877947771342866,
+      "yaw_deg": 1.4823847737332536,
+      "goal_xy_mm": 0.6039874780230593
+     }
+    },
+    {
+     "seed": 2,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0008480118572642327,
+     "estimate_error": {
+      "xy_mm": 0.2119798911599039,
+      "z_mm": 0.6017417648076611,
+      "yaw_deg": 2.145963862016942,
+      "goal_xy_mm": 0.7036632061124808
+     }
+    },
+    {
+     "seed": 3,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0005424648764935172,
+     "estimate_error": {
+      "xy_mm": 0.39300639763064915,
+      "z_mm": 0.6202282809706465,
+      "yaw_deg": 1.1795483146256946,
+      "goal_xy_mm": 0.5592378125158456
+     }
+    },
+    {
+     "seed": 4,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.028946292892979134,
+     "estimate_error": {
+      "xy_mm": 0.4975330601561417,
+      "z_mm": 0.6617700140926879,
+      "yaw_deg": 1.1634861047361207,
+      "goal_xy_mm": 28.86341848712823
+     }
+    },
+    {
+     "seed": 5,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0006977285561030473,
+     "estimate_error": {
+      "xy_mm": 0.16180819203812205,
+      "z_mm": 0.7256407427009941,
+      "yaw_deg": 2.149841726080509,
+      "goal_xy_mm": 0.5812376959299724
+     }
+    },
+    {
+     "seed": 6,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0006637901086601151,
+     "estimate_error": {
+      "xy_mm": 0.5494479247382951,
+      "z_mm": 0.5787532313247905,
+      "yaw_deg": 1.612191061624711,
+      "goal_xy_mm": 0.5972115989062866
+     }
+    },
+    {
+     "seed": 7,
+     "half_mm": 25.0,
+     "success": false,
+     "reasons": [
+      "not_released_and_settled_at_goal"
+     ],
+     "final_error_m": 0.03983728386252162,
+     "estimate_error": {
+      "xy_mm": 0.24075057201852818,
+      "z_mm": 0.5584346018021151,
+      "yaw_deg": 0.5275834680529486,
+      "goal_xy_mm": 40.153958308137604
+     }
+    },
+    {
+     "seed": 8,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0004800447178604747,
+     "estimate_error": {
+      "xy_mm": 0.3715960234164599,
+      "z_mm": 0.5633591516778329,
+      "yaw_deg": 0.9139237852765056,
+      "goal_xy_mm": 0.5878672427555651
+     }
+    },
+    {
+     "seed": 9,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0007847129608161451,
+     "estimate_error": {
+      "xy_mm": 0.22866252712323304,
+      "z_mm": 0.5747625637355751,
+      "yaw_deg": 0.9360558773456698,
+      "goal_xy_mm": 0.6340398883595049
+     }
+    }
+   ],
+   "estimate_error_median": {
+    "xy_mm": 0.365466709267402,
+    "z_mm": 0.5832740042295386,
+    "yaw_deg": 1.330966544179474,
+    "goal_xy_mm": 0.600599538464673
+   },
+   "estimate_error_max": {
+    "xy_mm": 0.5494479247382951,
+    "z_mm": 0.7256407427009941,
+    "yaw_deg": 2.149841726080509,
+    "goal_xy_mm": 40.153958308137604
+   }
+  },
+  "depth_dropout30_fly1/half0.03": {
+   "n": 10,
+   "success": 9,
+   "failures": [
+    "not_released_and_settled_at_goal"
+   ],
+   "rows": [
+    {
+     "seed": 0,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0008522487427979074,
+     "estimate_error": {
+      "xy_mm": 0.40914764056335773,
+      "z_mm": 0.5255540242520458,
+      "yaw_deg": 1.9429857479330335,
+      "goal_xy_mm": 0.5772235662288786
+     }
+    },
+    {
+     "seed": 1,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0007642343874853713,
+     "estimate_error": {
+      "xy_mm": 0.14702485954818323,
+      "z_mm": 0.591340029240623,
+      "yaw_deg": 1.5176152262667124,
+      "goal_xy_mm": 0.6039874780230593
+     }
+    },
+    {
+     "seed": 2,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0008658671669344817,
+     "estimate_error": {
+      "xy_mm": 0.340680157267387,
+      "z_mm": 0.5345291608490794,
+      "yaw_deg": 1.8540361379830639,
+      "goal_xy_mm": 0.7036632061124808
+     }
+    },
+    {
+     "seed": 3,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0005503955412063857,
+     "estimate_error": {
+      "xy_mm": 0.30595367089646097,
+      "z_mm": 0.6105729325541938,
+      "yaw_deg": 0.17954831462569334,
+      "goal_xy_mm": 0.5592378125158456
+     }
+    },
+    {
+     "seed": 4,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.028711604200425126,
+     "estimate_error": {
+      "xy_mm": 0.11368150047205142,
+      "z_mm": 0.6649316822431479,
+      "yaw_deg": 1.1634861047361207,
+      "goal_xy_mm": 28.86341848712823
+     }
+    },
+    {
+     "seed": 5,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0007810417313551399,
+     "estimate_error": {
+      "xy_mm": 0.21689785533086153,
+      "z_mm": 0.6926346483621288,
+      "yaw_deg": 0.149841726080506,
+      "goal_xy_mm": 0.5812376959299724
+     }
+    },
+    {
+     "seed": 6,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0008610708818346679,
+     "estimate_error": {
+      "xy_mm": 0.5744772057791268,
+      "z_mm": 0.5598820940139921,
+      "yaw_deg": 0.3878089383752918,
+      "goal_xy_mm": 0.5972115989062866
+     }
+    },
+    {
+     "seed": 7,
+     "half_mm": 30.0,
+     "success": false,
+     "reasons": [
+      "not_released_and_settled_at_goal"
+     ],
+     "final_error_m": 0.032711491692177054,
+     "estimate_error": {
+      "xy_mm": 0.21929015116750503,
+      "z_mm": 0.617430497247013,
+      "yaw_deg": 1.4724165319470541,
+      "goal_xy_mm": 40.153958308137604
+     }
+    },
+    {
+     "seed": 8,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0005335366418221724,
+     "estimate_error": {
+      "xy_mm": 0.25252934818347755,
+      "z_mm": 0.5360944657870799,
+      "yaw_deg": 0.08607621472349576,
+      "goal_xy_mm": 0.5878672427555651
+     }
+    },
+    {
+     "seed": 9,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0008942181304092627,
+     "estimate_error": {
+      "xy_mm": 0.5307520328270847,
+      "z_mm": 0.5230306445827178,
+      "yaw_deg": 1.0639441226543076,
+      "goal_xy_mm": 0.6340398883595049
+     }
+    }
+   ],
+   "estimate_error_median": {
+    "xy_mm": 0.2792415095399693,
+    "z_mm": 0.5756110616273076,
+    "yaw_deg": 1.1137151136952141,
+    "goal_xy_mm": 0.600599538464673
+   },
+   "estimate_error_max": {
+    "xy_mm": 0.5744772057791268,
+    "z_mm": 0.6926346483621288,
+    "yaw_deg": 1.9429857479330335,
+    "goal_xy_mm": 40.153958308137604
+   }
+  },
+  "depth_dropout30_fly1/half0.035": {
+   "n": 10,
+   "success": 9,
+   "failures": [
+    "not_released_and_settled_at_goal"
+   ],
+   "rows": [
+    {
+     "seed": 0,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0007899229226487868,
+     "estimate_error": {
+      "xy_mm": 0.1455472548756325,
+      "z_mm": 0.5417362508833984,
+      "yaw_deg": 1.057014252066958,
+      "goal_xy_mm": 0.5772235662288786
+     }
+    },
+    {
+     "seed": 1,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0008797241712014644,
+     "estimate_error": {
+      "xy_mm": 0.21322372215907698,
+      "z_mm": 0.6233450083994035,
+      "yaw_deg": 0.48238477373326494,
+      "goal_xy_mm": 0.6039874780230593
+     }
+    },
+    {
+     "seed": 2,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0009946857455914507,
+     "estimate_error": {
+      "xy_mm": 0.261541312526872,
+      "z_mm": 0.5592648695709329,
+      "yaw_deg": 0.14596386201691355,
+      "goal_xy_mm": 0.7036632061124808
+     }
+    },
+    {
+     "seed": 3,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0005558283452931104,
+     "estimate_error": {
+      "xy_mm": 0.5556566789538827,
+      "z_mm": 0.6010006214045155,
+      "yaw_deg": 1.1795483146256946,
+      "goal_xy_mm": 0.5592378125158456
+     }
+    },
+    {
+     "seed": 4,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.024189778714190986,
+     "estimate_error": {
+      "xy_mm": 0.21075516687410206,
+      "z_mm": 0.6092857826649617,
+      "yaw_deg": 2.1634861047361347,
+      "goal_xy_mm": 28.86341848712823
+     }
+    },
+    {
+     "seed": 5,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0008264957625559278,
+     "estimate_error": {
+      "xy_mm": 0.20975692570257645,
+      "z_mm": 0.6445693092980292,
+      "yaw_deg": 0.8501582739195082,
+      "goal_xy_mm": 0.5812376959299724
+     }
+    },
+    {
+     "seed": 6,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0007396163814411968,
+     "estimate_error": {
+      "xy_mm": 0.38969002533863323,
+      "z_mm": 0.560138605364427,
+      "yaw_deg": 2.3878089383752945,
+      "goal_xy_mm": 0.5972115989062866
+     }
+    },
+    {
+     "seed": 7,
+     "half_mm": 35.0,
+     "success": false,
+     "reasons": [
+      "not_released_and_settled_at_goal"
+     ],
+     "final_error_m": 0.03172383679580624,
+     "estimate_error": {
+      "xy_mm": 0.25919497872816305,
+      "z_mm": 0.5999768040780978,
+      "yaw_deg": 1.52758346805295,
+      "goal_xy_mm": 40.153958308137604
+     }
+    },
+    {
+     "seed": 8,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0006584427759358633,
+     "estimate_error": {
+      "xy_mm": 0.5738329454591088,
+      "z_mm": 0.571310276211559,
+      "yaw_deg": 1.913923785276507,
+      "goal_xy_mm": 0.5878672427555651
+     }
+    },
+    {
+     "seed": 9,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0008499878842552039,
+     "estimate_error": {
+      "xy_mm": 0.1592842474078047,
+      "z_mm": 0.5622861144452124,
+      "yaw_deg": 0.9360558773456698,
+      "goal_xy_mm": 0.6340398883595049
+     }
+    }
+   ],
+   "estimate_error_median": {
+    "xy_mm": 0.23620935044362001,
+    "z_mm": 0.5856435401448284,
+    "yaw_deg": 1.1182812833463265,
+    "goal_xy_mm": 0.600599538464673
+   },
+   "estimate_error_max": {
+    "xy_mm": 0.5738329454591088,
+    "z_mm": 0.6445693092980292,
+    "yaw_deg": 2.3878089383752945,
+    "goal_xy_mm": 40.153958308137604
+   }
+  },
+  "depth_arm_side/half0.025": {
+   "n": 10,
+   "success": 0,
+   "failures": [
+    "perception_failed"
+   ],
+   "rows": [
+    {
+     "seed": 0,
+     "half_mm": 25.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray found (3 clusters)"
+    },
+    {
+     "seed": 1,
+     "half_mm": 25.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray found (2 clusters)"
+    },
+    {
+     "seed": 2,
+     "half_mm": 25.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray found (3 clusters)"
+    },
+    {
+     "seed": 3,
+     "half_mm": 25.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray found (3 clusters)"
+    },
+    {
+     "seed": 4,
+     "half_mm": 25.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray found (2 clusters)"
+    },
+    {
+     "seed": 5,
+     "half_mm": 25.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray found (2 clusters)"
+    },
+    {
+     "seed": 6,
+     "half_mm": 25.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray found (3 clusters)"
+    },
+    {
+     "seed": 7,
+     "half_mm": 25.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray found (2 clusters)"
+    },
+    {
+     "seed": 8,
+     "half_mm": 25.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray found (2 clusters)"
+    },
+    {
+     "seed": 9,
+     "half_mm": 25.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray found (3 clusters)"
+    }
+   ]
+  },
+  "depth_arm_side/half0.03": {
+   "n": 10,
+   "success": 0,
+   "failures": [
+    "perception_failed"
+   ],
+   "rows": [
+    {
+     "seed": 0,
+     "half_mm": 30.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray found (3 clusters)"
+    },
+    {
+     "seed": 1,
+     "half_mm": 30.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray found (2 clusters)"
+    },
+    {
+     "seed": 2,
+     "half_mm": 30.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray found (3 clusters)"
+    },
+    {
+     "seed": 3,
+     "half_mm": 30.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray found (3 clusters)"
+    },
+    {
+     "seed": 4,
+     "half_mm": 30.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray found (2 clusters)"
+    },
+    {
+     "seed": 5,
+     "half_mm": 30.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray found (2 clusters)"
+    },
+    {
+     "seed": 6,
+     "half_mm": 30.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray found (3 clusters)"
+    },
+    {
+     "seed": 7,
+     "half_mm": 30.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray found (2 clusters)"
+    },
+    {
+     "seed": 8,
+     "half_mm": 30.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray found (2 clusters)"
+    },
+    {
+     "seed": 9,
+     "half_mm": 30.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray found (3 clusters)"
+    }
+   ]
+  },
+  "depth_arm_side/half0.035": {
+   "n": 10,
+   "success": 0,
+   "failures": [
+    "perception_failed"
+   ],
+   "rows": [
+    {
+     "seed": 0,
+     "half_mm": 35.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray found (3 clusters)"
+    },
+    {
+     "seed": 1,
+     "half_mm": 35.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray found (2 clusters)"
+    },
+    {
+     "seed": 2,
+     "half_mm": 35.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray found (3 clusters)"
+    },
+    {
+     "seed": 3,
+     "half_mm": 35.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray found (3 clusters)"
+    },
+    {
+     "seed": 4,
+     "half_mm": 35.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray found (2 clusters)"
+    },
+    {
+     "seed": 5,
+     "half_mm": 35.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray found (2 clusters)"
+    },
+    {
+     "seed": 6,
+     "half_mm": 35.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray found (3 clusters)"
+    },
+    {
+     "seed": 7,
+     "half_mm": 35.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray found (2 clusters)"
+    },
+    {
+     "seed": 8,
+     "half_mm": 35.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray found (2 clusters)"
+    },
+    {
+     "seed": 9,
+     "half_mm": 35.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray found (3 clusters)"
+    }
+   ]
+  },
+  "depth_arm_over/half0.025": {
+   "n": 10,
+   "success": 1,
+   "failures": [
+    "perception_failed"
+   ],
+   "rows": [
+    {
+     "seed": 0,
+     "half_mm": 25.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray found (3 clusters)"
+    },
+    {
+     "seed": 1,
+     "half_mm": 25.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray found (3 clusters)"
+    },
+    {
+     "seed": 2,
+     "half_mm": 25.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray found (3 clusters)"
+    },
+    {
+     "seed": 3,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0007382760964293093,
+     "estimate_error": {
+      "xy_mm": 5.726190456142202,
+      "z_mm": 0.5673251903435366,
+      "yaw_deg": 5.179548314625694,
+      "goal_xy_mm": 0.5713285464585561
+     }
+    },
+    {
+     "seed": 4,
+     "half_mm": 25.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray found (3 clusters)"
+    },
+    {
+     "seed": 5,
+     "half_mm": 25.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray found (3 clusters)"
+    },
+    {
+     "seed": 6,
+     "half_mm": 25.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray found (3 clusters)"
+    },
+    {
+     "seed": 7,
+     "half_mm": 25.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray found (3 clusters)"
+    },
+    {
+     "seed": 8,
+     "half_mm": 25.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray found (3 clusters)"
+    },
+    {
+     "seed": 9,
+     "half_mm": 25.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray found (3 clusters)"
+    }
+   ],
+   "estimate_error_median": {
+    "xy_mm": 5.726190456142202,
+    "z_mm": 0.5673251903435366,
+    "yaw_deg": 5.179548314625694,
+    "goal_xy_mm": 0.5713285464585561
+   },
+   "estimate_error_max": {
+    "xy_mm": 5.726190456142202,
+    "z_mm": 0.5673251903435366,
+    "yaw_deg": 5.179548314625694,
+    "goal_xy_mm": 0.5713285464585561
+   }
+  },
+  "depth_arm_over/half0.03": {
+   "n": 10,
+   "success": 1,
+   "failures": [
+    "perception_failed"
+   ],
+   "rows": [
+    {
+     "seed": 0,
+     "half_mm": 30.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray found (3 clusters)"
+    },
+    {
+     "seed": 1,
+     "half_mm": 30.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray found (3 clusters)"
+    },
+    {
+     "seed": 2,
+     "half_mm": 30.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray found (3 clusters)"
+    },
+    {
+     "seed": 3,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.001126870305612177,
+     "estimate_error": {
+      "xy_mm": 7.449181612616132,
+      "z_mm": 0.5832772778949398,
+      "yaw_deg": 2.179548314625696,
+      "goal_xy_mm": 0.5713285464585561
+     }
+    },
+    {
+     "seed": 4,
+     "half_mm": 30.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray found (3 clusters)"
+    },
+    {
+     "seed": 5,
+     "half_mm": 30.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray found (3 clusters)"
+    },
+    {
+     "seed": 6,
+     "half_mm": 30.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray found (3 clusters)"
+    },
+    {
+     "seed": 7,
+     "half_mm": 30.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray found (3 clusters)"
+    },
+    {
+     "seed": 8,
+     "half_mm": 30.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray found (3 clusters)"
+    },
+    {
+     "seed": 9,
+     "half_mm": 30.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray found (3 clusters)"
+    }
+   ],
+   "estimate_error_median": {
+    "xy_mm": 7.449181612616132,
+    "z_mm": 0.5832772778949398,
+    "yaw_deg": 2.179548314625696,
+    "goal_xy_mm": 0.5713285464585561
+   },
+   "estimate_error_max": {
+    "xy_mm": 7.449181612616132,
+    "z_mm": 0.5832772778949398,
+    "yaw_deg": 2.179548314625696,
+    "goal_xy_mm": 0.5713285464585561
+   }
+  },
+  "depth_arm_over/half0.035": {
+   "n": 10,
+   "success": 0,
+   "failures": [
+    "perception_failed"
+   ],
+   "rows": [
+    {
+     "seed": 0,
+     "half_mm": 35.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray found (3 clusters)"
+    },
+    {
+     "seed": 1,
+     "half_mm": 35.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray found (3 clusters)"
+    },
+    {
+     "seed": 2,
+     "half_mm": 35.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray found (3 clusters)"
+    },
+    {
+     "seed": 3,
+     "half_mm": 35.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray found (3 clusters)"
+    },
+    {
+     "seed": 4,
+     "half_mm": 35.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray found (3 clusters)"
+    },
+    {
+     "seed": 5,
+     "half_mm": 35.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray found (3 clusters)"
+    },
+    {
+     "seed": 6,
+     "half_mm": 35.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray found (3 clusters)"
+    },
+    {
+     "seed": 7,
+     "half_mm": 35.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray found (3 clusters)"
+    },
+    {
+     "seed": 8,
+     "half_mm": 35.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray found (3 clusters)"
+    },
+    {
+     "seed": 9,
+     "half_mm": 35.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray found (3 clusters)"
+    }
+   ]
+  },
+  "depth_edge_blocks/half0.025": {
+   "n": 10,
+   "success": 10,
+   "failures": [],
+   "rows": [
+    {
+     "seed": 0,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0007170380817473933,
+     "estimate_error": {
+      "xy_mm": 0.15944989489290434,
+      "z_mm": 0.5709809154928018,
+      "yaw_deg": 2.0570142520669723,
+      "goal_xy_mm": 0.6077709800953894
+     }
+    },
+    {
+     "seed": 1,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0007111378277660358,
+     "estimate_error": {
+      "xy_mm": 0.032943281991797455,
+      "z_mm": 0.5925784711315989,
+      "yaw_deg": 1.5176152262667124,
+      "goal_xy_mm": 0.589072325159156
+     }
+    },
+    {
+     "seed": 2,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0007856848107142168,
+     "estimate_error": {
+      "xy_mm": 0.10961991224279537,
+      "z_mm": 0.596027645822294,
+      "yaw_deg": 1.1459638620169277,
+      "goal_xy_mm": 0.5955999206247125
+     }
+    },
+    {
+     "seed": 3,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0007880170979198858,
+     "estimate_error": {
+      "xy_mm": 0.5315516421187599,
+      "z_mm": 0.4773871908161469,
+      "yaw_deg": 0.820451685374308,
+      "goal_xy_mm": 0.5713285464585561
+     }
+    },
+    {
+     "seed": 4,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0007696153040840832,
+     "estimate_error": {
+      "xy_mm": 0.36905485922513426,
+      "z_mm": 0.5441976632474914,
+      "yaw_deg": 0.8365138952638822,
+      "goal_xy_mm": 0.6140045833232791
+     }
+    },
+    {
+     "seed": 5,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0007202814222161401,
+     "estimate_error": {
+      "xy_mm": 0.10651208496120076,
+      "z_mm": 0.5721837633575582,
+      "yaw_deg": 0.149841726080506,
+      "goal_xy_mm": 0.6080431224297436
+     }
+    },
+    {
+     "seed": 6,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0007744151729993328,
+     "estimate_error": {
+      "xy_mm": 0.5208206532358205,
+      "z_mm": 0.5748075318948824,
+      "yaw_deg": 0.6121910616246969,
+      "goal_xy_mm": 0.5829843999652334
+     }
+    },
+    {
+     "seed": 7,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0006862162935636886,
+     "estimate_error": {
+      "xy_mm": 0.13819377128135704,
+      "z_mm": 0.5864765914613372,
+      "yaw_deg": 0.47241653194705274,
+      "goal_xy_mm": 0.5940397245296959
+     }
+    },
+    {
+     "seed": 8,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0005165242249840699,
+     "estimate_error": {
+      "xy_mm": 0.06606234388116694,
+      "z_mm": 0.614260399307242,
+      "yaw_deg": 0.08607621472349576,
+      "goal_xy_mm": 0.598729311779947
+     }
+    },
+    {
+     "seed": 9,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0007090426500597908,
+     "estimate_error": {
+      "xy_mm": 0.3449555031542881,
+      "z_mm": 0.5251555312503868,
+      "yaw_deg": 0.06394412265431892,
+      "goal_xy_mm": 0.6192390468060555
+     }
+    }
+   ],
+   "estimate_error_median": {
+    "xy_mm": 0.1488218330871307,
+    "z_mm": 0.5734956476262203,
+    "yaw_deg": 0.7163213734995024,
+    "goal_xy_mm": 0.5971646162023297
+   },
+   "estimate_error_max": {
+    "xy_mm": 0.5315516421187599,
+    "z_mm": 0.614260399307242,
+    "yaw_deg": 2.0570142520669723,
+    "goal_xy_mm": 0.6192390468060555
+   }
+  },
+  "depth_edge_blocks/half0.03": {
+   "n": 10,
+   "success": 10,
+   "failures": [],
+   "rows": [
+    {
+     "seed": 0,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0007591512059976412,
+     "estimate_error": {
+      "xy_mm": 0.15210863005971587,
+      "z_mm": 0.5189459068869646,
+      "yaw_deg": 2.0570142520669723,
+      "goal_xy_mm": 0.6077709800953894
+     }
+    },
+    {
+     "seed": 1,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0007825078062146365,
+     "estimate_error": {
+      "xy_mm": 0.057686926345221115,
+      "z_mm": 0.6040072017124039,
+      "yaw_deg": 1.4823847737332536,
+      "goal_xy_mm": 0.589072325159156
+     }
+    },
+    {
+     "seed": 2,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0009219609236778254,
+     "estimate_error": {
+      "xy_mm": 0.38300571581949444,
+      "z_mm": 0.5773538558405851,
+      "yaw_deg": 1.1459638620169277,
+      "goal_xy_mm": 0.5955999206247125
+     }
+    },
+    {
+     "seed": 3,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0005754999019275834,
+     "estimate_error": {
+      "xy_mm": 0.5000342249741822,
+      "z_mm": 0.4905497031724888,
+      "yaw_deg": 0.17954831462569334,
+      "goal_xy_mm": 0.5713285464585561
+     }
+    },
+    {
+     "seed": 4,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.000756416592356865,
+     "estimate_error": {
+      "xy_mm": 0.13225946043445672,
+      "z_mm": 0.5458540834978494,
+      "yaw_deg": 1.8365138952638709,
+      "goal_xy_mm": 0.6140045833232791
+     }
+    },
+    {
+     "seed": 5,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.000768306220125241,
+     "estimate_error": {
+      "xy_mm": 0.040156089050416635,
+      "z_mm": 0.5504579469848454,
+      "yaw_deg": 0.149841726080506,
+      "goal_xy_mm": 0.6080431224297436
+     }
+    },
+    {
+     "seed": 6,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0008058894058698674,
+     "estimate_error": {
+      "xy_mm": 0.39313291046806476,
+      "z_mm": 0.5737868431504762,
+      "yaw_deg": 1.612191061624711,
+      "goal_xy_mm": 0.5829843999652334
+     }
+    },
+    {
+     "seed": 7,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0007272691224899082,
+     "estimate_error": {
+      "xy_mm": 0.09434387866544039,
+      "z_mm": 0.5782364459446971,
+      "yaw_deg": 0.47241653194705274,
+      "goal_xy_mm": 0.5940397245296959
+     }
+    },
+    {
+     "seed": 8,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0005329185634185643,
+     "estimate_error": {
+      "xy_mm": 0.08494486323111924,
+      "z_mm": 0.6601021452895712,
+      "yaw_deg": 0.9139237852765056,
+      "goal_xy_mm": 0.598729311779947
+     }
+    },
+    {
+     "seed": 9,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0007889108724289125,
+     "estimate_error": {
+      "xy_mm": 0.44716683804057683,
+      "z_mm": 0.4668062477301733,
+      "yaw_deg": 2.0639441226543216,
+      "goal_xy_mm": 0.6192390468060555
+     }
+    }
+   ],
+   "estimate_error_median": {
+    "xy_mm": 0.14218404524708628,
+    "z_mm": 0.5621223950676608,
+    "yaw_deg": 1.3141743178750906,
+    "goal_xy_mm": 0.5971646162023297
+   },
+   "estimate_error_max": {
+    "xy_mm": 0.5000342249741822,
+    "z_mm": 0.6601021452895712,
+    "yaw_deg": 2.0639441226543216,
+    "goal_xy_mm": 0.6192390468060555
+   }
+  },
+  "depth_edge_blocks/half0.035": {
+   "n": 10,
+   "success": 10,
+   "failures": [],
+   "rows": [
+    {
+     "seed": 0,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0008866578781787026,
+     "estimate_error": {
+      "xy_mm": 0.26842215167695344,
+      "z_mm": 0.5414916293454836,
+      "yaw_deg": 0.057014252066969334,
+      "goal_xy_mm": 0.6077709800953894
+     }
+    },
+    {
+     "seed": 1,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0008588541446569834,
+     "estimate_error": {
+      "xy_mm": 0.17311641758744056,
+      "z_mm": 0.6283801601497802,
+      "yaw_deg": 0.48238477373326494,
+      "goal_xy_mm": 0.589072325159156
+     }
+    },
+    {
+     "seed": 2,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.000994666256180288,
+     "estimate_error": {
+      "xy_mm": 0.3061919683198485,
+      "z_mm": 0.5790680228637962,
+      "yaw_deg": 0.14596386201691355,
+      "goal_xy_mm": 0.5955999206247125
+     }
+    },
+    {
+     "seed": 3,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0007568122103817304,
+     "estimate_error": {
+      "xy_mm": 0.6192955015053329,
+      "z_mm": 0.47769646336816296,
+      "yaw_deg": 0.820451685374308,
+      "goal_xy_mm": 0.5713285464585561
+     }
+    },
+    {
+     "seed": 4,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0008153828542524576,
+     "estimate_error": {
+      "xy_mm": 0.17813454550523292,
+      "z_mm": 0.5213100956348998,
+      "yaw_deg": 1.1634861047361207,
+      "goal_xy_mm": 0.6140045833232791
+     }
+    },
+    {
+     "seed": 5,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0006398220399678081,
+     "estimate_error": {
+      "xy_mm": 0.08895329670552075,
+      "z_mm": 0.5528585123230206,
+      "yaw_deg": 1.8501582739194968,
+      "goal_xy_mm": 0.6080431224297436
+     }
+    },
+    {
+     "seed": 6,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0007886143397496554,
+     "estimate_error": {
+      "xy_mm": 0.32477515241226235,
+      "z_mm": 0.570800754861836,
+      "yaw_deg": 1.3878089383752805,
+      "goal_xy_mm": 0.5829843999652334
+     }
+    },
+    {
+     "seed": 7,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0008112103731818658,
+     "estimate_error": {
+      "xy_mm": 0.07623762589547305,
+      "z_mm": 0.5771274047813441,
+      "yaw_deg": 0.47241653194705274,
+      "goal_xy_mm": 0.5940397245296959
+     }
+    },
+    {
+     "seed": 8,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0006169199935217018,
+     "estimate_error": {
+      "xy_mm": 0.06393626776384699,
+      "z_mm": 0.5952348182187289,
+      "yaw_deg": 0.9139237852765056,
+      "goal_xy_mm": 0.598729311779947
+     }
+    },
+    {
+     "seed": 9,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0008192144640565751,
+     "estimate_error": {
+      "xy_mm": 0.10816439643355395,
+      "z_mm": 0.47917465844306284,
+      "yaw_deg": 1.0639441226543076,
+      "goal_xy_mm": 0.6192390468060555
+     }
+    }
+   ],
+   "estimate_error_median": {
+    "xy_mm": 0.17562548154633673,
+    "z_mm": 0.5618296335924283,
+    "yaw_deg": 0.8671877353254068,
+    "goal_xy_mm": 0.5971646162023297
+   },
+   "estimate_error_max": {
+    "xy_mm": 0.6192955015053329,
+    "z_mm": 0.6283801601497802,
+    "yaw_deg": 1.8501582739194968,
+    "goal_xy_mm": 0.6192390468060555
+   }
+  },
+  "depth_combined/half0.025": {
+   "n": 10,
+   "success": 10,
+   "failures": [],
+   "rows": [
+    {
+     "seed": 0,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.009023438093222905,
+     "estimate_error": {
+      "xy_mm": 8.553704921264337,
+      "z_mm": 4.067434507152665,
+      "yaw_deg": 0.9429857479330448,
+      "goal_xy_mm": 12.316651850472816
+     }
+    },
+    {
+     "seed": 1,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0015528469783037302,
+     "estimate_error": {
+      "xy_mm": 11.521109592141528,
+      "z_mm": 0.08984847609277286,
+      "yaw_deg": 2.482384773733268,
+      "goal_xy_mm": 11.166582441740193
+     }
+    },
+    {
+     "seed": 2,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.002399230746724669,
+     "estimate_error": {
+      "xy_mm": 13.588081746534346,
+      "z_mm": 1.064403494769193,
+      "yaw_deg": 0.14596386201691355,
+      "goal_xy_mm": 12.000291887382506
+     }
+    },
+    {
+     "seed": 3,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.01080970932950422,
+     "estimate_error": {
+      "xy_mm": 14.014109455459531,
+      "z_mm": 3.2706481211345895,
+      "yaw_deg": 0.17954831462569334,
+      "goal_xy_mm": 11.633843385384269
+     }
+    },
+    {
+     "seed": 4,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.009377227950434615,
+     "estimate_error": {
+      "xy_mm": 7.925415684032804,
+      "z_mm": 1.3275517628202442,
+      "yaw_deg": 0.8365138952638822,
+      "goal_xy_mm": 9.762928115993043
+     }
+    },
+    {
+     "seed": 5,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.026120716965727646,
+     "estimate_error": {
+      "xy_mm": 15.312878143556924,
+      "z_mm": 1.226445023185356,
+      "yaw_deg": 0.149841726080506,
+      "goal_xy_mm": 68.90458398862596
+     }
+    },
+    {
+     "seed": 6,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.004813204282173515,
+     "estimate_error": {
+      "xy_mm": 4.716499830440474,
+      "z_mm": 2.075533424111181,
+      "yaw_deg": 0.3878089383752918,
+      "goal_xy_mm": 5.757697413691986
+     }
+    },
+    {
+     "seed": 7,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.009322304553632877,
+     "estimate_error": {
+      "xy_mm": 14.323043258465576,
+      "z_mm": 2.3801387051741973,
+      "yaw_deg": 1.52758346805295,
+      "goal_xy_mm": 13.079772772431303
+     }
+    },
+    {
+     "seed": 8,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0023232890435896767,
+     "estimate_error": {
+      "xy_mm": 7.656971021617376,
+      "z_mm": 4.889390574644739,
+      "yaw_deg": 1.913923785276507,
+      "goal_xy_mm": 8.81968249660431
+     }
+    },
+    {
+     "seed": 9,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.008818338928363598,
+     "estimate_error": {
+      "xy_mm": 9.796409624870783,
+      "z_mm": 5.750349394826011,
+      "yaw_deg": 2.0639441226543216,
+      "goal_xy_mm": 9.737733415987746
+     }
+    }
+   ],
+   "estimate_error_median": {
+    "xy_mm": 10.658759608506156,
+    "z_mm": 2.2278360646426894,
+    "yaw_deg": 0.8897498215984635,
+    "goal_xy_mm": 11.400212913562232
+   },
+   "estimate_error_max": {
+    "xy_mm": 15.312878143556924,
+    "z_mm": 5.750349394826011,
+    "yaw_deg": 2.482384773733268,
+    "goal_xy_mm": 68.90458398862596
+   }
+  },
+  "depth_combined/half0.03": {
+   "n": 10,
+   "success": 9,
+   "failures": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ],
+   "rows": [
+    {
+     "seed": 0,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.008900518336718346,
+     "estimate_error": {
+      "xy_mm": 8.517227978545815,
+      "z_mm": 3.958608521107344,
+      "yaw_deg": 0.057014252066969334,
+      "goal_xy_mm": 12.316651850472816
+     }
+    },
+    {
+     "seed": 1,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0007662585905113699,
+     "estimate_error": {
+      "xy_mm": 11.480027795760071,
+      "z_mm": 0.2030859210240682,
+      "yaw_deg": 1.5176152262667124,
+      "goal_xy_mm": 11.166582441740193
+     }
+    },
+    {
+     "seed": 2,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.002440988003622729,
+     "estimate_error": {
+      "xy_mm": 13.418834535840672,
+      "z_mm": 1.0249814745328065,
+      "yaw_deg": 1.1459638620169277,
+      "goal_xy_mm": 12.000291887382506
+     }
+    },
+    {
+     "seed": 3,
+     "half_mm": 30.0,
+     "success": false,
+     "reasons": [
+      "no_lift",
+      "not_released_and_settled_at_goal"
+     ],
+     "final_error_m": 0.4053223711841953,
+     "estimate_error": {
+      "xy_mm": 13.957297771000421,
+      "z_mm": 3.1248703717237576,
+      "yaw_deg": 0.820451685374308,
+      "goal_xy_mm": 11.633843385384269
+     }
+    },
+    {
+     "seed": 4,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.009402237934010823,
+     "estimate_error": {
+      "xy_mm": 8.25980928089036,
+      "z_mm": 1.1932764262012099,
+      "yaw_deg": 1.8365138952638709,
+      "goal_xy_mm": 9.762928115993043
+     }
+    },
+    {
+     "seed": 5,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.020415894691079916,
+     "estimate_error": {
+      "xy_mm": 15.154589175011433,
+      "z_mm": 1.40848969269863,
+      "yaw_deg": 1.14984172608052,
+      "goal_xy_mm": 68.90458398862596
+     }
+    },
+    {
+     "seed": 6,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0048347824479152025,
+     "estimate_error": {
+      "xy_mm": 4.715614000293429,
+      "z_mm": 2.0720864067196136,
+      "yaw_deg": 1.3878089383752805,
+      "goal_xy_mm": 5.757697413691986
+     }
+    },
+    {
+     "seed": 7,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.008765709458752715,
+     "estimate_error": {
+      "xy_mm": 13.966639514651536,
+      "z_mm": 2.4738248738873403,
+      "yaw_deg": 1.4724165319470541,
+      "goal_xy_mm": 13.079772772431303
+     }
+    },
+    {
+     "seed": 8,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0027980162716949473,
+     "estimate_error": {
+      "xy_mm": 7.864481981287381,
+      "z_mm": 5.140037326151179,
+      "yaw_deg": 1.0860762147234908,
+      "goal_xy_mm": 8.81968249660431
+     }
+    },
+    {
+     "seed": 9,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.00871882455758945,
+     "estimate_error": {
+      "xy_mm": 9.339116515387003,
+      "z_mm": 5.802141723353828,
+      "yaw_deg": 1.0639441226543076,
+      "goal_xy_mm": 9.737733415987746
+     }
+    }
+   ],
+   "estimate_error_median": {
+    "xy_mm": 10.409572155573537,
+    "z_mm": 2.272955640303477,
+    "yaw_deg": 1.1479027940487239,
+    "goal_xy_mm": 11.400212913562232
+   },
+   "estimate_error_max": {
+    "xy_mm": 15.154589175011433,
+    "z_mm": 5.802141723353828,
+    "yaw_deg": 1.8365138952638709,
+    "goal_xy_mm": 68.90458398862596
+   }
+  },
+  "depth_combined/half0.035": {
+   "n": 10,
+   "success": 5,
+   "failures": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ],
+   "rows": [
+    {
+     "seed": 0,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.009043442209681113,
+     "estimate_error": {
+      "xy_mm": 8.330213809074621,
+      "z_mm": 3.896659267119497,
+      "yaw_deg": 0.057014252066969334,
+      "goal_xy_mm": 12.316651850472816
+     }
+    },
+    {
+     "seed": 1,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0009760464704048147,
+     "estimate_error": {
+      "xy_mm": 11.313066173838644,
+      "z_mm": 0.06806159091054392,
+      "yaw_deg": 0.48238477373326494,
+      "goal_xy_mm": 11.166582441740193
+     }
+    },
+    {
+     "seed": 2,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0025534190175034656,
+     "estimate_error": {
+      "xy_mm": 13.157903543405238,
+      "z_mm": 1.1018028137119995,
+      "yaw_deg": 1.8540361379830639,
+      "goal_xy_mm": 12.000291887382506
+     }
+    },
+    {
+     "seed": 3,
+     "half_mm": 35.0,
+     "success": false,
+     "reasons": [
+      "no_lift",
+      "not_released_and_settled_at_goal"
+     ],
+     "final_error_m": 0.4135541265020731,
+     "estimate_error": {
+      "xy_mm": 13.52701007597241,
+      "z_mm": 3.0118311993249103,
+      "yaw_deg": 0.820451685374308,
+      "goal_xy_mm": 11.633843385384269
+     }
+    },
+    {
+     "seed": 4,
+     "half_mm": 35.0,
+     "success": false,
+     "reasons": [
+      "no_lift",
+      "not_released_and_settled_at_goal"
+     ],
+     "final_error_m": 0.33471288344077077,
+     "estimate_error": {
+      "xy_mm": 8.150185717628018,
+      "z_mm": 1.1961615990809318,
+      "yaw_deg": 1.1634861047361207,
+      "goal_xy_mm": 9.762928115993043
+     }
+    },
+    {
+     "seed": 5,
+     "half_mm": 35.0,
+     "success": false,
+     "reasons": [
+      "no_lift",
+      "not_released_and_settled_at_goal"
+     ],
+     "final_error_m": 0.2722219193762253,
+     "estimate_error": {
+      "xy_mm": 15.168402503944616,
+      "z_mm": 1.4718684905484156,
+      "yaw_deg": 1.14984172608052,
+      "goal_xy_mm": 68.90458398862596
+     }
+    },
+    {
+     "seed": 6,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.004835902470807173,
+     "estimate_error": {
+      "xy_mm": 4.678561396975125,
+      "z_mm": 2.100941303258809,
+      "yaw_deg": 2.3878089383752945,
+      "goal_xy_mm": 5.757697413691986
+     }
+    },
+    {
+     "seed": 7,
+     "half_mm": 35.0,
+     "success": false,
+     "reasons": [
+      "no_lift",
+      "not_released_and_settled_at_goal"
+     ],
+     "final_error_m": 0.2646049304626782,
+     "estimate_error": {
+      "xy_mm": 14.115597243947324,
+      "z_mm": 2.2675169955385375,
+      "yaw_deg": 1.4724165319470541,
+      "goal_xy_mm": 13.079772772431303
+     }
+    },
+    {
+     "seed": 8,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0026277510717077775,
+     "estimate_error": {
+      "xy_mm": 7.665526532543946,
+      "z_mm": 4.990791000275246,
+      "yaw_deg": 0.9139237852765056,
+      "goal_xy_mm": 8.81968249660431
+     }
+    },
+    {
+     "seed": 9,
+     "half_mm": 35.0,
+     "success": false,
+     "reasons": [
+      "no_lift",
+      "not_released_and_settled_at_goal"
+     ],
+     "final_error_m": 0.38051297744758494,
+     "estimate_error": {
+      "xy_mm": 9.163212817338678,
+      "z_mm": 5.876763196987343,
+      "yaw_deg": 1.936055877345684,
+      "goal_xy_mm": 9.737733415987746
+     }
+    }
+   ],
+   "estimate_error_median": {
+    "xy_mm": 10.238139495588662,
+    "z_mm": 2.184229149398673,
+    "yaw_deg": 1.1566639154083203,
+    "goal_xy_mm": 11.400212913562232
+   },
+   "estimate_error_max": {
+    "xy_mm": 15.168402503944616,
+    "z_mm": 5.876763196987343,
+    "yaw_deg": 2.3878089383752945,
+    "goal_xy_mm": 68.90458398862596
+   }
+  }
+ }
+}

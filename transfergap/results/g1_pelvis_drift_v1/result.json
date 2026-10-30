@@ -1,0 +1,14 @@
+{
+  "n_rollouts": 80,
+  "n_grasp_all": 32,
+  "n_in_window": 40,
+  "n_low": 19,
+  "n_high": 21,
+  "grasp_low": 16,
+  "grasp_high": 11,
+  "p_low": 0.8421052631578947,
+  "p_high": 0.5238095238095238,
+  "diff": 0.31829573934837085,
+  "fisher_one_sided": 0.03389652166070409,
+  "replicated": true
+}

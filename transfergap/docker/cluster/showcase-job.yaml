@@ -1,0 +1,35 @@
+# One-command integrated demo in image r5: person's clip -> pose -> robots -> measurements -> G1 mimic -> video. Free; needs the single GPU
+# (scale deploy/tg-dev to 0 first, back to 1 afterwards, then restore_tg_dev.sh in the pod).
+#   kubectl apply -f docker/cluster/showcase-job.yaml ; kubectl logs -f job/tg-showcase-r6 -n isaac-sim
+apiVersion: batch/v1
+kind: Job
+metadata: {name: tg-showcase-r6, namespace: isaac-sim, labels: {project: transfergap}}
+spec:
+  backoffLimit: 0
+  activeDeadlineSeconds: 10800
+  ttlSecondsAfterFinished: 86400
+  template:
+    metadata: {labels: {project: transfergap}}
+    spec:
+      restartPolicy: Never
+      runtimeClassName: nvidia
+      nodeSelector: {nvidia.com/gpu.product: NVIDIA-L40S, kubernetes.io/hostname: srv-hpc-gpu04}
+      imagePullSecrets: [{name: tg-ghcr}]
+      containers:
+      - name: showcase
+        image: ghcr.io/sushruths04/transfergap:full-2026-10-09b
+        imagePullPolicy: Always
+        args: [showcase, --video, /ws/transfergap/demos/user_clip.mp4, --out, /ws/transfergap/showcase_out_r6, --window, "60", "206", --events, "102", "166", --shoulder-width-m, "0.44"]
+        env:
+        - {name: NVIDIA_DRIVER_CAPABILITIES, value: all}
+        - {name: TG_OUT, value: /ws/transfergap/showcase_tmp}
+        - {name: SONIC_WEIGHTS_SRC, value: /ws/transfergap/repo/GR00T-WholeBodyControl/gear_sonic_deploy}
+        - {name: KAIROS_ASSETS, value: /ws/transfergap/kairos_assets}
+        - {name: HOME, value: /root}
+        resources:
+          requests: {cpu: "16", memory: 48Gi, ephemeral-storage: 20Gi, nvidia.com/gpu: 1}
+          limits: {cpu: "32", memory: 64Gi, ephemeral-storage: 100Gi, nvidia.com/gpu: 1}
+        volumeMounts: [{name: data, mountPath: /ws/transfergap}, {name: shm, mountPath: /dev/shm}]
+      volumes:
+      - {name: data, persistentVolumeClaim: {claimName: tg-dev-data}}
+      - {name: shm, emptyDir: {medium: Memory, sizeLimit: 16Gi}}

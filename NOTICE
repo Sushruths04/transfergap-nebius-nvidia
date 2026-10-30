@@ -1,0 +1,10 @@
+TransferGap
+Copyright (c) 2026 the TransferGap authors. Licensed under the MIT License (see LICENSE).
+
+Third-party components and data used by this project (each keeps its own licence):
+- MuJoCo physics engine (Apache-2.0, Google DeepMind).
+- MuJoCo Menagerie robot models (Universal Robots UR5e/UR10e, Robotiq 2F-85 gripper and others): Apache-2.0 or BSD-3-Clause per model; the model files are not redistributed in this repository, see transfergap/README for how to fetch them.
+- NVIDIA open models used through their own licences: Nemotron-3-Super (called through the Nebius Token Factory API), Cosmos-Reason2 (critic), GR00T-N1.5-3B (policy fine-tuning), GEAR-SONIC (humanoid whole-body control). Model weights are not included.
+- RTMW3D / RTMPose (Apache-2.0, OpenMMLab) and Fast SAM 3D Body for human pose estimation.
+- Short example clips from Pexels, used under the Pexels licence, for the internet-clip experiments only; they are not part of the demonstration video.
+- Product and company names (Universal Robots, Unitree, KAIROS, NVIDIA, Nebius) belong to their owners and are used only to identify the simulated robot models and services.

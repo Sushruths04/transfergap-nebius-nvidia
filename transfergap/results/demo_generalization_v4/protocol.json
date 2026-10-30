@@ -1,0 +1,12 @@
+{
+ "protocol": "demo_generalization_v4",
+ "frozen_before_trials": true,
+ "question": "Second person (Pexels 7205253) with the corrected object-height inference (object where the hand closes): does the same fixed stack transfer?",
+ "fix_stack": ["speed_cap_3", "look_again", "touch_probe_calibration", "speed_cap_2", "safe_path"],
+ "demo": "runs/demos/pexels_7205253_woman_box_v2.npz (demo/gemx.py object_height='hand_at_grasp')",
+ "why": "v3 failed 0/60 (no_lift) because the default lowest-hand rule mislocated the object height for a pick-from-stack; one exploratory oracle_all rollout (seed 1000) was used in that diagnosis",
+ "robots": ["ur5e", "ur10e"],
+ "seeds": [1000, 1059],
+ "conditions": ["raw (no fix)", "all_fixes (incl. safe_path)"],
+ "no_tuning": true
+}

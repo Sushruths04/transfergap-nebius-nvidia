@@ -1,0 +1,408 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TransferGap Live</title>
+<style>
+:root{--bg:#0a0d12;--panel:#10151d;--panel2:#151c27;--line:#1f2937;--text:#e6ebf2;--mute:#8693a7;--nv:#76b900;--cy:#38bdf8;--am:#fbbf24;--rd:#f87171;--vi:#a78bfa}
+*{box-sizing:border-box;margin:0;padding:0}
+html,body{height:100%}
+body{background:var(--bg);color:var(--text);font:14px/1.45 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;display:flex;flex-direction:column;overflow:hidden}
+header{display:flex;align-items:center;gap:12px;padding:10px 16px;border-bottom:1px solid var(--line);background:var(--panel)}
+header h1{font-size:16px;font-weight:700;letter-spacing:.2px}
+header h1 b{color:var(--nv)}
+.pill{font-size:11px;padding:3px 9px;border-radius:999px;border:1px solid var(--line);color:var(--mute)}
+.pill.ok{color:var(--nv);border-color:#2f4a00}.pill.bad{color:var(--rd);border-color:#5a2020}
+.sp{flex:1}
+button,select{background:var(--panel2);color:var(--text);border:1px solid var(--line);border-radius:8px;padding:6px 12px;font:inherit;cursor:pointer}
+button:hover{border-color:var(--nv)}button.on{background:#1d2b08;border-color:var(--nv);color:var(--nv)}
+a{color:var(--cy);text-decoration:none;font-size:13px}
+main{flex:1;display:grid;grid-template-columns:340px 1fr 320px;gap:10px;padding:10px;min-height:0}
+@media(max-width:1100px){main{grid-template-columns:1fr;overflow:auto}body{overflow:auto}}
+.col{display:flex;flex-direction:column;gap:10px;min-height:0}
+.card{background:var(--panel);border:1px solid var(--line);border-radius:12px;padding:10px 12px;min-height:0}
+.card h2{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--mute);margin-bottom:8px;font-weight:600}
+#camwrap{position:relative;aspect-ratio:4/3;background:#000;border-radius:8px;overflow:hidden}
+#cam,#ov{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+#cam{transform:scaleX(-1)}#ov{transform:scaleX(-1)}
+#camnote{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;color:var(--mute);text-align:center;padding:20px}
+.metrics{display:grid;grid-template-columns:1fr 1fr;gap:8px}
+.m{background:var(--panel2);border-radius:8px;padding:6px 10px}
+.m span{display:block;font-size:11px;color:var(--mute)}
+.m b{font-size:22px;font-variant-numeric:tabular-nums;font-weight:650}
+.m small{font-size:12px;color:var(--mute);font-weight:400}
+canvas.spark{width:100%;height:46px;display:block}
+#stage{position:relative;flex:1;min-height:340px;padding:0;overflow:hidden}
+#gl{position:absolute;inset:0;width:100%;height:100%;display:block}
+.tag{position:absolute;top:10px;font-size:12px;padding:3px 10px;border-radius:999px;background:rgba(10,13,18,.75);border:1px solid var(--line)}
+.score{position:absolute;bottom:10px;font-size:13px;padding:5px 12px;border-radius:10px;background:rgba(10,13,18,.8);border:1px solid var(--line);font-variant-numeric:tabular-nums}
+.phase{display:flex;gap:6px;flex-wrap:wrap}
+.ph{font-size:12px;padding:3px 10px;border-radius:999px;background:var(--panel2);color:var(--mute);border:1px solid transparent}
+.ph.on{color:#0a0d12;background:var(--nv);font-weight:700}
+table{width:100%;border-collapse:collapse;font-size:12.5px;font-variant-numeric:tabular-nums}
+td,th{padding:4px 4px;text-align:left;border-bottom:1px solid var(--line)}th{color:var(--mute);font-weight:500}
+.row{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+label{font-size:12px;color:var(--mute)}input[type=range]{accent-color:var(--nv);width:100%}
+.log{font:12px/1.5 ui-monospace,Consolas,monospace;color:var(--mute);height:110px;overflow:auto}
+.warn{font-size:12px;color:var(--am)}
+</style>
+</head>
+<body>
+<header>
+  <h1>Transfer<b>Gap</b> · Live</h1>
+  <span class="pill" id="pModel">models: loading</span>
+  <span class="pill" id="pCam">camera: off</span>
+  <span class="pill" id="pFps">– fps</span>
+  <div class="sp"></div>
+  <select id="arm"><option value="right">tracks: right arm</option><option value="left">tracks: left arm</option></select>
+  <button id="bDemo">▶ Scripted demo</button>
+  <button id="bCam">Start webcam</button>
+  <button id="bCal">Calibrate ball/tray</button>
+  <button id="bReset">Reset</button>
+  <button id="bSave">Save session</button>
+  <a href="index.html">Results console →</a>
+</header>
+<main>
+  <div class="col">
+    <div class="card">
+      <h2>Human · webcam</h2>
+      <div id="camwrap"><video id="cam" playsinline muted></video><canvas id="ov"></canvas>
+        <div id="camnote">Press <b>&nbsp;Start webcam&nbsp;</b> or run the scripted demo.<br>Stand 1.5–2 m back so the whole upper body is visible.</div></div>
+    </div>
+    <div class="card">
+      <h2>Measured, live</h2>
+      <div class="metrics">
+        <div class="m"><span>Elbow angle</span><b id="vElbow">–</b><small> °</small></div>
+        <div class="m"><span>Shoulder elevation</span><b id="vSh">–</b><small> °</small></div>
+        <div class="m"><span>Wrist speed</span><b id="vSpd">–</b><small> m/s</small></div>
+        <div class="m"><span>Pinch aperture</span><b id="vAp">–</b><small> cm</small></div>
+        <div class="m"><span>Upper arm / forearm</span><b id="vLen" style="font-size:16px">–</b></div>
+        <div class="m"><span>Reach fraction</span><b id="vReach">–</b></div>
+      </div>
+    </div>
+    <div class="card"><h2>Elbow · speed · pinch</h2><canvas class="spark" id="sp1"></canvas><canvas class="spark" id="sp2"></canvas><canvas class="spark" id="sp3"></canvas></div>
+  </div>
+
+  <div class="col">
+    <div class="card" id="stage">
+      <canvas id="gl"></canvas>
+      <div class="tag" style="left:12px">Unitree G1 · angle transfer</div>
+      <div class="tag" style="right:12px">KAIROS · UR10e + 2F-140 · position IK</div>
+      <div class="score" style="left:12px" id="scG">G1 · placed 0</div>
+      <div class="score" style="right:12px" id="scK">KAIROS · placed 0</div>
+    </div>
+    <div class="card"><h2>Task phase (human)</h2>
+      <div class="phase" id="phases"><span class="ph" data-p="reach">reach</span><span class="ph" data-p="grasp">grasp</span><span class="ph" data-p="carry">carry</span><span class="ph" data-p="release">release</span><span class="ph" data-p="retract">retract</span></div>
+      <div class="warn" style="margin-top:8px">Preview only: a kinematic stand-in in the browser (no physics, no contact, no controller). The validated simulation results are in the Results console.</div>
+    </div>
+  </div>
+
+  <div class="col">
+    <div class="card"><h2>Retargeting</h2>
+      <table>
+        <tr><th></th><th>Human</th><th>G1</th><th>UR10e</th></tr>
+        <tr><td>Upper arm (m)</td><td id="tHu">–</td><td>0.21</td><td>0.613</td></tr>
+        <tr><td>Forearm (m)</td><td id="tHf">–</td><td>0.24</td><td>0.572</td></tr>
+        <tr><td>Full reach (m)</td><td id="tHr">–</td><td>0.45</td><td>1.185</td></tr>
+        <tr><td>Scale vs human</td><td>1.00</td><td id="tSg">–</td><td id="tSk">–</td></tr>
+        <tr><td>Elbow (°)</td><td id="tEh">–</td><td id="tEg">–</td><td id="tEk">–</td></tr>
+        <tr><td>Method</td><td></td><td>link directions</td><td>wrist position → 2-link IK</td></tr>
+      </table>
+      <div class="warn" style="margin-top:6px">Robot link lengths are approximate catalogue values, not read from the MuJoCo models.</div>
+    </div>
+    <div class="card"><h2>Grip detection</h2>
+      <label>Close below <span id="lTh">5.5</span> cm (opens at +1.5 cm)</label>
+      <input type="range" id="th" min="2.5" max="9" step="0.1" value="5.5">
+      <div class="row" style="margin-top:6px"><span class="pill" id="pGrip">open</span><span class="pill" id="pCalState">calibration: default</span></div>
+    </div>
+    <div class="card" style="flex:1"><h2>Event log</h2><div class="log" id="log"></div></div>
+  </div>
+</main>
+
+<script type="importmap">{"imports":{"three":"https://cdn.jsdelivr.net/npm/three@0.160.0/build/three.module.js"}}</script>
+<script type="module">
+import * as THREE from "three";
+const $=id=>document.getElementById(id);
+const V=(x=0,y=0,z=0)=>new THREE.Vector3(x,y,z);
+const log=m=>{const l=$("log");l.textContent=new Date().toLocaleTimeString()+"  "+m+"\n"+l.textContent;l.textContent=l.textContent.slice(0,4000)};
+
+/* ---------- robots: approximate geometry (documented in the UI) ---------- */
+const G1={Lu:0.21,Lf:0.24,shoulder:V(0.0,1.12,-0.17)};   // local frame: +x forward, +y up, +z left
+const UR={Lu:0.613,Lf:0.572,shoulder:V(0.10,1.02,-0.0)};
+const REACH_G=G1.Lu+G1.Lf, REACH_U=UR.Lu+UR.Lf;
+
+/* ---------- state ---------- */
+const S={mode:"idle",hand:"right",armLen:{u:0.30,f:0.27},arm:null,aperture:0.08,closed:false,thr:0.055,
+  phase:"reach",calStep:0,rho:V(),speed:0,trace:{el:[],sp:[],ap:[]},rec:[],lastWrist:null,lastT:0,
+  // ball/tray in reach-fraction space (forward, up, right) relative to the shoulder, divided by arm length
+  ballRho:V(0.62,-0.42,0.12), trayRho:V(0.55,-0.42,-0.30)};
+
+/* ---------- three.js scene ---------- */
+const gl=$("gl");let renderer=null;
+try{renderer=new THREE.WebGLRenderer({canvas:gl,antialias:true});renderer.setPixelRatio(Math.min(devicePixelRatio,2))}
+catch(e){renderer=null;log("WebGL unavailable: using the 2D side view")}
+const scene=new THREE.Scene();scene.background=new THREE.Color(0x0a0d12);scene.fog=new THREE.Fog(0x0a0d12,6,14);
+const cam3=new THREE.PerspectiveCamera(42,1,.1,50);cam3.position.set(0,2.2,4.3);cam3.lookAt(0,0.95,0);
+scene.add(new THREE.HemisphereLight(0xcfe3ff,0x10151d,1.1));
+const sun=new THREE.DirectionalLight(0xffffff,1.6);sun.position.set(2,5,3);scene.add(sun);
+const floor=new THREE.Mesh(new THREE.PlaneGeometry(14,10),new THREE.MeshStandardMaterial({color:0x121923,roughness:.9}));floor.rotation.x=-Math.PI/2;scene.add(floor);
+scene.add(new THREE.GridHelper(14,28,0x1f2937,0x161d28));
+const mat=(c,r=.5,m=.1)=>new THREE.MeshStandardMaterial({color:c,roughness:r,metalness:m});
+function link(a,b,r,m){const g=new THREE.Mesh(new THREE.CylinderGeometry(r,r,1,14),m);g.userData={r};return g}
+function setLink(mesh,a,b){const d=b.clone().sub(a),L=d.length()||1e-4;mesh.position.copy(a).add(b).multiplyScalar(.5);
+  mesh.scale.set(1,L,1);mesh.quaternion.setFromUnitVectors(V(0,1,0),d.normalize())}
+
+function makeStation(x,kind){
+  const root=new THREE.Group();root.position.set(x,0,0);root.rotation.y=Math.PI/2; // local +x -> world -z (away from camera)
+  scene.add(root);
+  const tab=new THREE.Mesh(new THREE.BoxGeometry(0.9,0.04,1.1),mat(0x2b3544,.8));root.add(tab);
+  const tray=new THREE.Mesh(new THREE.CylinderGeometry(.11,.09,.04,24),mat(0x38bdf8,.6));root.add(tray);
+  const ball=new THREE.Mesh(new THREE.SphereGeometry(.03,20,16),mat(0xfbbf24,.4));root.add(ball);
+  const m1=mat(kind==="g1"?0x9aa7ba:0xe8edf5,.4,.3),m2=mat(kind==="g1"?0x76b900:0x38bdf8,.4,.2);
+  const up=link(0,0,kind==="g1"?.028:.05,m1),fo=link(0,0,kind==="g1"?.024:.042,m1);
+  const joint=()=>new THREE.Mesh(new THREE.SphereGeometry(kind==="g1"?.034:.058,16,12),m2);
+  const j0=joint(),j1=joint(),j2=joint();
+  root.add(up,fo,j0,j1,j2);
+  // body
+  if(kind==="g1"){
+    const torso=new THREE.Mesh(new THREE.BoxGeometry(.22,.42,.36),mat(0x2a3342,.6));torso.position.set(0,1.05,0);root.add(torso);
+    const head=new THREE.Mesh(new THREE.SphereGeometry(.09,20,14),mat(0x9aa7ba));head.position.set(0,1.37,0);root.add(head);
+    for(const z of[-.08,.08]){const lg=new THREE.Mesh(new THREE.CylinderGeometry(.045,.04,.76,12),mat(0x2a3342));lg.position.set(0,.4,z);root.add(lg)}
+    const lArm=new THREE.Mesh(new THREE.CylinderGeometry(.026,.022,.45,12),mat(0x9aa7ba));lArm.position.set(0,.88,.20);root.add(lArm);
+  }else{
+    const base=new THREE.Mesh(new THREE.BoxGeometry(.9,.42,.62),mat(0x2a3342,.6));base.position.set(0,.34,0);root.add(base);
+    const col=new THREE.Mesh(new THREE.CylinderGeometry(.09,.1,.5,16),mat(0x3a4659));col.position.set(UR.shoulder.x,.78,0);root.add(col);
+  }
+  const grip=new THREE.Group();root.add(grip);
+  const fa=new THREE.Mesh(new THREE.BoxGeometry(.012,.05,.012),mat(0xcbd5e1)),fb=fa.clone();grip.add(fa,fb);
+  return {tab,root,tray,ball,up,fo,j0,j1,j2,grip,fa,fb,kind,held:false,placed:0,cfg:kind==="g1"?G1:UR,reach:kind==="g1"?REACH_G:REACH_U,
+          elbow:V(),wrist:V(),elbowDeg:0}
+}
+const stG=makeStation(-1.55,"g1"), stK=makeStation(1.55,"kairos");
+const stations=[stG,stK];
+
+function placeTask(st){ // ball/tray in robot-local coords from the shared reach-fraction space
+  const c=st.cfg,R=st.reach*0.92; // forward, up, right  ->  local x, y, -z
+  const toLocal=r=>V(c.shoulder.x+r.x*R,c.shoulder.y+r.y*R,c.shoulder.z-r.z*R);
+  st.ballHome=toLocal(S.ballRho);st.trayPos=toLocal(S.trayRho);
+  st.tableY=st.ballHome.y-0.045;                       // table top sits just under the ball, so the retargeted hand can reach it
+  st.trayPos.y=st.tableY;st.ballHome.y=st.tableY+0.03;
+  st.tray.position.copy(st.trayPos);st.tab.position.set(st.ballHome.x+0.15,st.tableY-0.02,0);st.tab.scale.set(1,1,1);
+  if(!st.held)st.ball.position.copy(st.ballHome);
+}
+function resetStations(){for(const st of stations){st.held=false;st.placed=0;placeTask(st)}updScore()}
+function updScore(){$("scG").textContent="G1 · placed "+stG.placed;$("scK").textContent="KAIROS · placed "+stK.placed}
+
+/* ---------- retargeting ---------- */
+// human frame (r,f,u) -> robot-local pose of the arm.
+function ik2(sh,target,Lu,Lf,pole){ // 2-link IK, returns elbow
+  const d=target.clone().sub(sh);let D=d.length();const maxD=(Lu+Lf)*0.999;
+  if(D>maxD){d.multiplyScalar(maxD/D);D=maxD}
+  if(D<Math.abs(Lu-Lf)+1e-3){D=Math.abs(Lu-Lf)+1e-3;d.setLength(D)}
+  const a=(Lu*Lu-Lf*Lf+D*D)/(2*D),h=Math.sqrt(Math.max(Lu*Lu-a*a,0));
+  const dir=d.clone().normalize();
+  const p=pole.clone().sub(dir.clone().multiplyScalar(pole.dot(dir))).normalize();
+  return {elbow:sh.clone().add(dir.clone().multiplyScalar(a)).add(p.multiplyScalar(h)),wrist:sh.clone().add(d)};
+}
+function retarget(arm,ap,closed){
+  // arm: {sh,el,wr} in human frame (r,f,u) metres
+  const uh=arm.el.clone().sub(arm.sh),fh=arm.wr.clone().sub(arm.el);
+  const Lh=S.armLen.u+S.armLen.f;
+  S.rho.set((arm.wr.y-arm.sh.y)/Lh,(arm.wr.z-arm.sh.z)/Lh,(arm.wr.x-arm.sh.x)/Lh); // forward, up, right
+  const toL=(v)=>V(v.y,v.z,-v.x); // human (r,f,u) -> robot local (x fwd, y up, z left)
+  // G1: copy link directions
+  {const st=stG,c=st.cfg,sh=c.shoulder.clone();
+   const eh=sh.clone().add(toL(uh.clone().normalize()).multiplyScalar(c.Lu));
+   const wr=eh.clone().add(toL(fh.clone().normalize()).multiplyScalar(c.Lf));
+   st.elbow=eh;st.wrist=wr;
+   const a=sh.clone().sub(eh).normalize(),b=wr.clone().sub(eh).normalize();st.elbowDeg=Math.acos(THREE.MathUtils.clamp(a.dot(b),-1,1))*180/Math.PI;}
+  // KAIROS: wrist position scaled by reach, then IK (elbow up/out)
+  {const st=stK,c=st.cfg,R=st.reach*0.92;
+   const tgt=c.shoulder.clone().add(V(S.rho.x*R,S.rho.y*R,-S.rho.z*R));
+      const r=ik2(c.shoulder,tgt,c.Lu,c.Lf,V(0,1,-0.35));
+   st.elbow=r.elbow;st.wrist=r.wrist;
+   const a=c.shoulder.clone().sub(r.elbow).normalize(),b=r.wrist.clone().sub(r.elbow).normalize();st.elbowDeg=Math.acos(THREE.MathUtils.clamp(a.dot(b),-1,1))*180/Math.PI;}
+  for(const st of stations)driveStation(st,closed);
+}
+function driveStation(st,closed){
+  const c=st.cfg;
+  setLink(st.up,c.shoulder,st.elbow);setLink(st.fo,st.elbow,st.wrist);
+  st.j0.position.copy(c.shoulder);st.j1.position.copy(st.elbow);st.j2.position.copy(st.wrist);
+  st.grip.position.copy(st.wrist);
+  const open=closed?0.012:0.045;st.fa.position.set(0,-0.03,-open);st.fb.position.set(0,-0.03,open);
+  // ball logic (tool = wrist point, tolerance in metres scales with robot)
+  const tol=st.kind==="g1"?0.05:0.09, tool=st.wrist.clone().add(V(0,-0.03,0));
+  if(!st.held&&closed&&tool.distanceTo(st.ball.position)<tol){st.held=true;if(st===stG||st===stK)log(st.kind+": grasp")}
+  if(st.held&&!closed){st.held=false;
+    if(Math.hypot(tool.x-st.trayPos.x,tool.z-st.trayPos.z)<0.12&&tool.y<st.tableY+0.20){st.placed++;st.ball.position.set(st.trayPos.x,st.tableY+0.03,st.trayPos.z);updScore();log(st.kind+": placed in tray ("+st.placed+")")}
+    else{st.ball.position.set(tool.x,st.tableY+0.03,tool.z);log(st.kind+": dropped off-tray")}
+  }
+  if(st.held)st.ball.position.copy(tool);
+}
+
+/* ---------- measurements ---------- */
+const ang=(a,b,c)=>{const u=a.clone().sub(b).normalize(),v=c.clone().sub(b).normalize();return Math.acos(THREE.MathUtils.clamp(u.dot(v),-1,1))*180/Math.PI};
+function pushTrace(k,v,n=150){const t=S.trace[k];t.push(v);if(t.length>n)t.shift()}
+function spark(id,arr,lo,hi,col){const c=$(id),w=c.width=c.clientWidth*devicePixelRatio,h=c.height=46*devicePixelRatio,x=c.getContext("2d");
+  x.clearRect(0,0,w,h);x.strokeStyle=col;x.lineWidth=2*devicePixelRatio;x.beginPath();
+  arr.forEach((v,i)=>{const px=i/(150-1)*w,py=h-(THREE.MathUtils.clamp((v-lo)/(hi-lo),0,1))*(h-6)-3;i?x.lineTo(px,py):x.moveTo(px,py)});x.stroke()}
+
+function phaseOf(){
+  const g=S.closed,h=stG.held||stK.held;
+  let p; if(!g&&!h)p=(stG.placed+stK.placed>0&&S.rho.y<-0.1&&S.rho.x<0.4)?"retract":"reach"; else if(g&&!(h))p="grasp"; else p="carry";
+  if(S.justReleased&&performance.now()-S.justReleased<900)p="release";
+  document.querySelectorAll(".ph").forEach(e=>e.classList.toggle("on",e.dataset.p===p));S.phase=p;
+}
+
+/* ---------- one frame of input -> everything ---------- */
+function process(arm,ap,t){
+  const Lu=arm.el.distanceTo(arm.sh),Lf=arm.wr.distanceTo(arm.el);
+  if(Lu>0.12&&Lf>0.1&&Lu<0.5&&Lf<0.5){S.armLen.u=S.armLen.u*0.97+Lu*0.03;S.armLen.f=S.armLen.f*0.97+Lf*0.03}
+  const prevClosed=S.closed;
+  const thr=S.thr; if(!S.closed&&ap<thr)S.closed=true; else if(S.closed&&ap>thr+0.015)S.closed=false;
+  if(prevClosed&&!S.closed)S.justReleased=performance.now();
+  if(S.lastWrist){const dt=Math.max((t-S.lastT)/1000,1e-3);const sp=arm.wr.distanceTo(S.lastWrist)/dt;S.speed=S.speed*0.8+sp*0.2}
+  S.lastWrist=arm.wr.clone();S.lastT=t;S.aperture=ap;
+  retarget(arm,ap,S.closed);
+  // calibration: first pinch-close sets ball, next pinch-open sets tray
+  if(S.calStep===1&&!prevClosed&&S.closed){S.ballRho.copy(S.rho);S.calStep=2;$("pCalState").textContent="calibration: now release over the tray";log("calibration: ball set")}
+  else if(S.calStep===2&&prevClosed&&!S.closed){S.trayRho.copy(S.rho);S.calStep=0;$("pCalState").textContent="calibration: custom";$("bCal").classList.remove("on");resetStations();log("calibration: tray set")}
+  const el=ang(arm.sh,arm.el,arm.wr),sh=ang(V(arm.sh.x,arm.sh.y+1,arm.sh.z),arm.sh,arm.el);
+  $("vElbow").textContent=el.toFixed(0);$("vSh").textContent=sh.toFixed(0);$("vSpd").textContent=S.speed.toFixed(2);$("vAp").textContent=(ap*100).toFixed(1);
+  $("vLen").textContent=(S.armLen.u*100).toFixed(0)+" / "+(S.armLen.f*100).toFixed(0)+" cm";
+  const reach=Math.hypot(S.rho.x,S.rho.y,S.rho.z);$("vReach").textContent=(reach*100).toFixed(0)+" %";
+  $("tHu").textContent=S.armLen.u.toFixed(2);$("tHf").textContent=S.armLen.f.toFixed(2);const Lh=S.armLen.u+S.armLen.f;$("tHr").textContent=Lh.toFixed(2);
+  $("tSg").textContent="×"+(REACH_G/Lh).toFixed(2);$("tSk").textContent="×"+(REACH_U/Lh).toFixed(2);
+  $("tEh").textContent=el.toFixed(0);$("tEg").textContent=stG.elbowDeg.toFixed(0);$("tEk").textContent=stK.elbowDeg.toFixed(0);
+  const g=$("pGrip");g.textContent=S.closed?"closed":"open";g.className="pill "+(S.closed?"ok":"");
+  pushTrace("el",el);pushTrace("sp",S.speed);pushTrace("ap",ap*100);
+  spark("sp1",S.trace.el,60,180,"#76b900");spark("sp2",S.trace.sp,0,1.5,"#38bdf8");spark("sp3",S.trace.ap,2,12,"#fbbf24");
+  phaseOf();
+  if(S.recording)S.rec.push({t,elbow:el,shoulder:sh,speed:S.speed,aperture:ap,closed:S.closed,rho:[S.rho.x,S.rho.y,S.rho.z],
+    g1:{wrist:stG.wrist.toArray(),elbow_deg:stG.elbowDeg},ur10e:{wrist:stK.wrist.toArray(),elbow_deg:stK.elbowDeg}});
+}
+
+/* ---------- scripted demo (no camera needed): a synthetic pick-and-place in human frame ---------- */
+const keys=[ // time s, rho (fwd,up,right), closed
+ [0,V(.20,-.55,.10),0],[1.2,V(.62,-.30,.12),0],[2.0,V(.62,-.42,.12),0],[2.3,V(.62,-.42,.12),1],[3.0,V(.60,-.15,.0),1],
+ [4.0,V(.55,-.20,-.30),1],[4.5,V(.55,-.42,-.30),1],[4.8,V(.55,-.42,-.30),0],[5.6,V(.30,-.35,-.1),0],[7.0,V(.20,-.55,.10),0]];
+function scripted(tms){
+  const T=(tms/1000)%7.0;let i=0;while(i<keys.length-2&&keys[i+1][0]<T)i++;
+  const a=keys[i],b=keys[i+1],u=THREE.MathUtils.smoothstep((T-a[0])/(b[0]-a[0]),0,1);
+  const rho=a[1].clone().lerp(b[1],u);rho.x+=Math.sin(tms/700)*0.008;
+  const Lu=0.30,Lf=0.27,Lh=Lu+Lf,sh=V(0,0,0);
+  const wr=V(rho.z*Lh,rho.x*Lh,rho.y*Lh); // human (r,f,u)
+  const r=ik2(sh,wr,Lu,Lf,V(0.35,-0.15,-0.9));
+  const ap=0.075+(0.042-0.075)*THREE.MathUtils.smoothstep(a[2]+(b[2]-a[2])*u,0,1)-0.0;
+  return {arm:{sh,el:r.elbow,wr:r.wrist},ap:a[2]===1&&b[2]===1?0.04:(a[2]===b[2]?(a[2]?0.04:0.08):(a[2]?0.04+0.04*u:0.08-0.04*u))};
+}
+
+/* ---------- mediapipe (loaded lazily, falls back to demo if offline) ---------- */
+let pose=null,hands=null;
+async function loadModels(){
+  try{
+    const m=await import("https://cdn.jsdelivr.net/npm/@mediapipe/tasks-vision@0.10.14/vision_bundle.mjs");
+    const fs=await m.FilesetResolver.forVisionTasks("https://cdn.jsdelivr.net/npm/@mediapipe/tasks-vision@0.10.14/wasm");
+    const mk=async(delegate)=>{const opt=(url)=>({baseOptions:{modelAssetPath:url,delegate},runningMode:"VIDEO"});
+      const p=await m.PoseLandmarker.createFromOptions(fs,{...opt("https://storage.googleapis.com/mediapipe-models/pose_landmarker/pose_landmarker_lite/float16/1/pose_landmarker_lite.task"),numPoses:1});
+      const h=await m.HandLandmarker.createFromOptions(fs,{...opt("https://storage.googleapis.com/mediapipe-models/hand_landmarker/hand_landmarker/float16/1/hand_landmarker.task"),numHands:2});
+      return [p,h]};
+    try{[pose,hands]=await mk("GPU")}catch(e){log("GPU delegate failed, using CPU");[pose,hands]=await mk("CPU")}
+    $("pModel").textContent="models: ready";$("pModel").className="pill ok";
+  }catch(e){$("pModel").textContent="models: offline (demo only)";$("pModel").className="pill bad";log("model load failed: "+e.message)}
+}
+loadModels();
+
+const video=$("cam"),ov=$("ov"),octx=ov.getContext("2d");
+const BONES=[[11,13],[13,15],[12,14],[14,16],[11,12],[11,23],[12,24],[23,24],[15,19],[16,20],[15,21],[16,22]];
+let lastVT=-1;
+function fromCam(tms){
+  if(!pose||video.readyState<2||video.currentTime===lastVT)return false;lastVT=video.currentTime;
+  const r=pose.detectForVideo(video,tms),lm=r.landmarks[0],wl=r.worldLandmarks[0];
+  ov.width=video.videoWidth;ov.height=video.videoHeight;octx.clearRect(0,0,ov.width,ov.height);
+  if(!lm)return true;
+  const side=S.hand==="right"?{s:12,e:14,w:16,idx:20,th:22}:{s:11,e:13,w:15,idx:19,th:21};
+  const P=i=>{const q=wl[i];return V(-q.x,-q.z,-q.y)}; // mp world (x right-of-image, y down, z toward cam) -> human (r, f, u)
+  const arm={sh:P(side.s),el:P(side.e),wr:P(side.w)};
+  octx.strokeStyle="#76b900";octx.lineWidth=3;
+  for(const [a,b] of BONES){if(lm[a].visibility<.4||lm[b].visibility<.4)continue;octx.beginPath();octx.moveTo(lm[a].x*ov.width,lm[a].y*ov.height);octx.lineTo(lm[b].x*ov.width,lm[b].y*ov.height);octx.stroke()}
+  octx.fillStyle="#fbbf24";for(const i of[side.s,side.e,side.w]){octx.beginPath();octx.arc(lm[i].x*ov.width,lm[i].y*ov.height,6,0,7);octx.fill()}
+  // aperture from the hand landmarker (metres), choose the hand closest to the tracked wrist
+  let ap=S.aperture;
+  if(hands){const hr=hands.detectForVideo(video,tms);let best=1e9;
+    hr.landmarks.forEach((h,k)=>{const d=Math.hypot(h[0].x-lm[side.w].x,h[0].y-lm[side.w].y);if(d<best&&d<0.15){best=d;const w=hr.worldLandmarks[k];ap=Math.hypot(w[4].x-w[8].x,w[4].y-w[8].y,w[4].z-w[8].z);
+      octx.strokeStyle="#38bdf8";octx.beginPath();octx.moveTo(h[4].x*ov.width,h[4].y*ov.height);octx.lineTo(h[8].x*ov.width,h[8].y*ov.height);octx.stroke()}})}
+  if(Math.min(lm[side.s].visibility,lm[side.e].visibility,lm[side.w].visibility)<.4){$("camnote").style.display="flex";$("camnote").textContent="Arm not fully visible";return true}
+  $("camnote").style.display="none";
+  process(arm,ap,tms);return true;
+}
+
+
+/* ---------- 2D side-view fallback (no WebGL needed; also the lightest option for phones) ---------- */
+let c2=null;
+function draw2d(W,H){
+  if(!c2){c2=gl.getContext("2d")}
+  const dpr=Math.min(devicePixelRatio,2);if(gl.width!==W*dpr||gl.height!==H*dpr){gl.width=W*dpr;gl.height=H*dpr}
+  const x=c2;x.setTransform(dpr,0,0,dpr,0,0);x.clearRect(0,0,W,H);x.fillStyle="#0a0d12";x.fillRect(0,0,W,H);
+  const half=W/2,sc=Math.min(half/2.3,(H-70)/1.75),floorY=H-48;
+  const P=(st,v,ox)=>[ox+(v.x+0.55)*sc+v.z*0.35*sc,floorY-v.y*sc-v.z*0.18*sc];
+  stations.forEach((st,i)=>{
+    const ox=i*half+half*0.04;
+    x.strokeStyle="#1f2937";x.lineWidth=1;x.beginPath();x.moveTo(ox-10,floorY);x.lineTo(ox+half-10,floorY);x.stroke();
+    const R=(a,b,c,d,col)=>{const[p1,q1]=P(st,V(a,b,0),ox),[p2,q2]=P(st,V(c,d,0),ox);x.fillStyle=col;x.fillRect(p1,q2,p2-p1,q1-q2)};
+    const tx=st.ballHome.x,ty=st.tableY,tw=st.kind==="g1"?0.45:0.8;
+    R(tx-tw*0.5,ty-0.035,tx+tw*0.6,ty,"#2b3544");R(tx-tw*0.5+0.03,0,tx-tw*0.5+0.07,ty-0.035,"#1c2430");R(tx+tw*0.6-0.07,0,tx+tw*0.6-0.03,ty-0.035,"#1c2430");
+    if(st.kind==="g1"){R(-0.11,0.84,0.11,1.28,"#2a3342");R(-0.04,0,0.04,0.84,"#2a3342");
+      const[hx,hy]=P(st,V(0,1.37,0),ox);x.fillStyle="#9aa7ba";x.beginPath();x.arc(hx,hy,0.09*sc,0,7);x.fill()}
+    else{R(-0.45,0.13,0.45,0.55,"#2a3342");R(0.01,0.55,0.19,1.02,"#3a4659")}
+    // tray, ball
+    const[t1,t2]=P(st,V(st.trayPos.x-0.11,st.tableY+0.012,st.trayPos.z),ox),[t3]=P(st,V(st.trayPos.x+0.11,st.tableY+0.012,st.trayPos.z),ox);
+    x.fillStyle="#38bdf8";x.fillRect(t1,t2-2,t3-t1,5);
+    const lk=(a,b,w,col)=>{const[p,q]=P(st,a,ox),[r,t]=P(st,b,ox);x.strokeStyle=col;x.lineWidth=w*sc;x.lineCap="round";x.beginPath();x.moveTo(p,q);x.lineTo(r,t);x.stroke()};
+    const col=st.kind==="g1"?"#9aa7ba":"#e8edf5",jw=st.kind==="g1"?0.05:0.095,lw=st.kind==="g1"?0.045:0.08;
+    lk(st.cfg.shoulder,st.elbow,lw,col);lk(st.elbow,st.wrist,lw*0.85,col);
+    const dot=(v,r,c)=>{const[p,q]=P(st,v,ox);x.fillStyle=c;x.beginPath();x.arc(p,q,r*sc,0,7);x.fill()};
+    const jc=st.kind==="g1"?"#76b900":"#38bdf8";dot(st.cfg.shoulder,jw/2,jc);dot(st.elbow,jw/2,jc);dot(st.wrist,jw/2,jc);
+    const g=S.closed?0.012:0.045;lk(st.wrist.clone().add(V(0,-0.01,-g)),st.wrist.clone().add(V(0,-0.07,-g)),0.012,"#cbd5e1");lk(st.wrist.clone().add(V(0,-0.01,g)),st.wrist.clone().add(V(0,-0.07,g)),0.012,"#cbd5e1");
+    dot(st.ball.position,0.03,"#fbbf24");
+  });
+}
+
+/* ---------- loop ---------- */
+let frames=0,tFps=performance.now();
+function frame(t){
+  requestAnimationFrame(frame);
+  const w=gl.clientWidth,h=gl.clientHeight;
+  if(renderer){if(gl.width!==w*renderer.getPixelRatio()||gl.height!==h*renderer.getPixelRatio()){renderer.setSize(w,h,false);cam3.aspect=w/h;cam3.updateProjectionMatrix()}}
+  if(S.mode==="demo"){const d=scripted(t);process(d.arm,d.ap,t)}
+  else if(S.mode==="cam")fromCam(t);
+  if(renderer)renderer.render(scene,cam3);else draw2d(w,h);
+  frames++;if(t-tFps>1000){$("pFps").textContent=frames+" fps";frames=0;tFps=t}
+}
+
+/* ---------- controls ---------- */
+function setMode(m){S.mode=m;$("bDemo").classList.toggle("on",m==="demo");$("bCam").classList.toggle("on",m==="cam");
+  $("camnote").style.display=m==="demo"?"flex":"none";if(m==="demo")$("camnote").innerHTML="Scripted demo: a synthetic human arm drives both robots.<br>No camera needed.";}
+$("bDemo").onclick=()=>{setMode(S.mode==="demo"?"idle":"demo");resetStations()};
+$("bCam").onclick=async()=>{
+  if(S.mode==="cam"){video.srcObject?.getTracks().forEach(t=>t.stop());setMode("idle");$("pCam").textContent="camera: off";$("pCam").className="pill";return}
+  try{const st=await navigator.mediaDevices.getUserMedia({video:{width:640,height:480,facingMode:"user"},audio:false});
+    video.srcObject=st;await video.play();setMode("cam");$("pCam").textContent="camera: on";$("pCam").className="pill ok";log("webcam started")}
+  catch(e){log("camera error: "+e.message);$("pCam").textContent="camera: denied";$("pCam").className="pill bad"}};
+$("bCal").onclick=()=>{S.calStep=S.calStep?0:1;$("bCal").classList.toggle("on",!!S.calStep);$("pCalState").textContent=S.calStep?"calibration: pinch where the ball is":"calibration: default";log(S.calStep?"calibration started":"calibration cancelled")};
+$("bReset").onclick=()=>{S.ballRho.set(.62,-.42,.12);S.trayRho.set(.55,-.42,-.30);S.calStep=0;$("bCal").classList.remove("on");$("pCalState").textContent="calibration: default";resetStations();log("reset")};
+$("arm").onchange=e=>{S.hand=e.target.value};
+$("th").oninput=e=>{S.thr=e.target.value/100;$("lTh").textContent=(+e.target.value).toFixed(1)};
+$("bSave").onclick=()=>{
+  if(!S.recording){S.recording=true;S.rec=[];$("bSave").textContent="■ Stop & download";log("recording session");return}
+  S.recording=false;$("bSave").textContent="Save session";
+  const blob=new Blob([JSON.stringify({created:new Date().toISOString(),mode:S.mode,arm_len_m:S.armLen,ball_rho:S.ballRho.toArray(),tray_rho:S.trayRho.toArray(),
+    placed:{g1:stG.placed,ur10e:stK.placed},frames:S.rec},null,1)],{type:"application/json"});
+  const a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download="transfergap_live_session.json";a.click();log("saved "+S.rec.length+" frames")};
+
+resetStations();setMode("demo");requestAnimationFrame(frame);
+window.TGLive={S,stG,stK,process,scripted};
+</script>
+</body>
+</html>

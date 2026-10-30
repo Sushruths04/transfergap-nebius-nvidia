@@ -1,0 +1,15 @@
+{
+ "protocol": "demo_generalization_v1",
+ "frozen_before_trials": true,
+ "question": "Does the fix stack chosen by diagnosis on one human demo (Pexels notebook cycle) transfer unchanged to other demos of the same person with different objects and motions?",
+ "fix_stack": ["speed_cap_3", "look_again", "touch_probe_calibration", "speed_cap_2"],
+ "fix_stack_source": "results/demo_budget_v1_demo1bc4be60_* (notebook demo, steps 1-4)",
+ "demos": ["pexels_8135753_markers", "pexels_8135753_orange_marker", "pexels_8135753_notepad"],
+ "demo_note": "cycles of the same Pexels clip; grasp/release frames annotated by frame inspection (transfergap/demo/clips.py) after the notebook experiments; converted from the existing GEM-X joints; no re-tuning of anything",
+ "robots": ["ur5e", "ur10e"],
+ "seeds": [1000, 1059],
+ "conditions": ["raw (no fix)", "all_fixes"],
+ "report_all_demos": true,
+ "carry_scale_note": "the human carry is short for two demos (4-5 cm vs 9 cm for the notebook), so the retargeter stretches the human carry ~7-8x onto the robot's ~34 cm carry; no exclusion rule is applied — the stretch factor is reported per demo",
+ "runner": "python -m transfergap.sim.demo_repro --demo runs/demos/<demo>.npz --fixes <fix_stack> --out runs/demo_generalization_v1/<demo>"
+}

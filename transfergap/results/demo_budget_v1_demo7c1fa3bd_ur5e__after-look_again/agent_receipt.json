@@ -1,0 +1,34 @@
+{
+ "schema_version": 1,
+ "kind": "hosted_inference",
+ "role": "nemotron",
+ "requested_model": "nvidia/nemotron-3-super-120b-a12b",
+ "endpoint_host": "api.tokenfactory.nebius.com",
+ "created_at": "2026-10-09T11:19:29.325093+00:00",
+ "request_sha256": "a289f9f3d4cdccfb0b57f5f68b0a4a2f5690fda14ea90a53f456f90f04fd7867",
+ "status": "succeeded",
+ "response_id": "chatcmpl-a972b5056ca972de",
+ "returned_model": "nvidia/nemotron-3-super-120b-a12b",
+ "usage": {
+  "completion_tokens": 398,
+  "prompt_tokens": 723,
+  "total_tokens": 1121,
+  "completion_tokens_details": {
+   "accepted_prediction_tokens": null,
+   "audio_tokens": null,
+   "reasoning_tokens": 331,
+   "rejected_prediction_tokens": null
+  },
+  "prompt_tokens_details": {
+   "audio_tokens": null,
+   "cached_tokens": 0,
+   "created_cache_tokens": 0,
+   "multimodal_tokens": null
+  },
+  "prompt_cache_hit_tokens": 0,
+  "prompt_cache_miss_tokens": 723
+ },
+ "finish_reason": "stop",
+ "content": "\n\n{\n  \"correction\": \"touch_probe_calibration\",\n  \"rationale\": \"Calibration yields the largest success boost (+10\u202fpp) and eliminates all failures in oracle tests, while only minimally affecting speed profile correlation (\u20110.003), thus preserving the human's style.\"\n}",
+ "latency_s": 5.1667745809972985
+}

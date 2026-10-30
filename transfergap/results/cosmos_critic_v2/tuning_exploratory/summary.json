@@ -1,0 +1,977 @@
+{
+ "kind": "cosmos_critic_tuning",
+ "exploratory": true,
+ "split": "tuning",
+ "seeds": [
+  2000,
+  2019
+ ],
+ "configs": {
+  "t8b_v1_v1": {
+   "model": "nvidia/Cosmos-Reason2-8B",
+   "prompt": "v1",
+   "camera": "v1",
+   "prompt_sha256": "309d056cd99e17d4cf39386b52595756f2aa8852a202542d9f321a4363545cd8",
+   "git_commit": "5698ccf33f612a8d5fd18623e9d3a12bad9c9f68",
+   "results": {
+    "success": {
+     "accuracy": {
+      "correct": 6,
+      "n": 17,
+      "accuracy": 0.35294117647058826,
+      "wilson_95": [
+       0.17309720397243744,
+       0.5869963651478132
+      ]
+     },
+     "confusion": {
+      "yes": {
+       "yes": 6,
+       "no": 0,
+       "unparsed": 0
+      },
+      "no": {
+       "yes": 11,
+       "no": 0,
+       "unparsed": 0
+      },
+      "unparsed": {
+       "yes": 0,
+       "no": 0,
+       "unparsed": 0
+      }
+     },
+     "per_class": {
+      "yes": {
+       "support": 6,
+       "predicted": 17,
+       "precision": 0.35294117647058826,
+       "recall": 1.0
+      },
+      "no": {
+       "support": 11,
+       "predicted": 0,
+       "precision": null,
+       "recall": 0.0
+      }
+     },
+     "majority_baseline": {
+      "class": "no",
+      "correct": 11,
+      "n": 17,
+      "accuracy": 0.6470588235294118,
+      "wilson_95": [
+       0.41300363485218694,
+       0.8269027960275627
+      ]
+     },
+     "uniform_chance": 0.5
+    },
+    "stage": {
+     "accuracy": {
+      "correct": 6,
+      "n": 17,
+      "accuracy": 0.35294117647058826,
+      "wilson_95": [
+       0.17309720397243744,
+       0.5869963651478132
+      ]
+     },
+     "confusion": {
+      "none": {
+       "none": 6,
+       "grasp": 0,
+       "place": 0,
+       "unparsed": 0
+      },
+      "grasp": {
+       "none": 6,
+       "grasp": 0,
+       "place": 0,
+       "unparsed": 0
+      },
+      "place": {
+       "none": 5,
+       "grasp": 0,
+       "place": 0,
+       "unparsed": 0
+      },
+      "unparsed": {
+       "none": 0,
+       "grasp": 0,
+       "place": 0,
+       "unparsed": 0
+      }
+     },
+     "per_class": {
+      "none": {
+       "support": 6,
+       "predicted": 17,
+       "precision": 0.35294117647058826,
+       "recall": 1.0
+      },
+      "grasp": {
+       "support": 6,
+       "predicted": 0,
+       "precision": null,
+       "recall": 0.0
+      },
+      "place": {
+       "support": 5,
+       "predicted": 0,
+       "precision": null,
+       "recall": 0.0
+      }
+     },
+     "majority_baseline": {
+      "class": "grasp",
+      "correct": 6,
+      "n": 17,
+      "accuracy": 0.35294117647058826,
+      "wilson_95": [
+       0.17309720397243744,
+       0.5869963651478132
+      ]
+     },
+     "uniform_chance": 0.3333333333333333
+    },
+    "n": 17,
+    "parsed": 17,
+    "truncated": 0,
+    "internal_consistency": {
+     "success_yes_iff_stage_none": 17,
+     "of_parsed": 17
+    },
+    "latency_s": {
+     "median": 9.36382611299996,
+     "max": 11.787441304999447
+    },
+    "tokens_mean": {
+     "prompt_tokens": 3854.235294117647,
+     "completion_tokens": 225.23529411764707
+    },
+    "truth_per_stage": {
+     "grasp": 6,
+     "place": 5,
+     "none": 6
+    },
+    "static_controls": {
+     "n": 2,
+     "said_success": 1,
+     "said_grasp": 0,
+     "unparsed": 1
+    }
+   }
+  },
+  "t8b_v1_close": {
+   "model": "nvidia/Cosmos-Reason2-8B",
+   "prompt": "v1",
+   "camera": "close",
+   "prompt_sha256": "7c4d55e28bad7a8276f93318cb3a81e26187af48b0744469b4a94c8d81c1d463",
+   "git_commit": "5698ccf33f612a8d5fd18623e9d3a12bad9c9f68",
+   "results": {
+    "success": {
+     "accuracy": {
+      "correct": 8,
+      "n": 17,
+      "accuracy": 0.47058823529411764,
+      "wilson_95": [
+       0.26165106442409436,
+       0.6903676493999558
+      ]
+     },
+     "confusion": {
+      "yes": {
+       "yes": 6,
+       "no": 0,
+       "unparsed": 0
+      },
+      "no": {
+       "yes": 9,
+       "no": 2,
+       "unparsed": 0
+      },
+      "unparsed": {
+       "yes": 0,
+       "no": 0,
+       "unparsed": 0
+      }
+     },
+     "per_class": {
+      "yes": {
+       "support": 6,
+       "predicted": 15,
+       "precision": 0.4,
+       "recall": 1.0
+      },
+      "no": {
+       "support": 11,
+       "predicted": 2,
+       "precision": 1.0,
+       "recall": 0.18181818181818182
+      }
+     },
+     "majority_baseline": {
+      "class": "no",
+      "correct": 11,
+      "n": 17,
+      "accuracy": 0.6470588235294118,
+      "wilson_95": [
+       0.41300363485218694,
+       0.8269027960275627
+      ]
+     },
+     "uniform_chance": 0.5
+    },
+    "stage": {
+     "accuracy": {
+      "correct": 7,
+      "n": 17,
+      "accuracy": 0.4117647058823529,
+      "wilson_95": [
+       0.2161105679021481,
+       0.6399455735700021
+      ]
+     },
+     "confusion": {
+      "none": {
+       "none": 6,
+       "grasp": 0,
+       "place": 0,
+       "unparsed": 0
+      },
+      "grasp": {
+       "none": 4,
+       "grasp": 1,
+       "place": 1,
+       "unparsed": 0
+      },
+      "place": {
+       "none": 5,
+       "grasp": 0,
+       "place": 0,
+       "unparsed": 0
+      },
+      "unparsed": {
+       "none": 0,
+       "grasp": 0,
+       "place": 0,
+       "unparsed": 0
+      }
+     },
+     "per_class": {
+      "none": {
+       "support": 6,
+       "predicted": 15,
+       "precision": 0.4,
+       "recall": 1.0
+      },
+      "grasp": {
+       "support": 6,
+       "predicted": 1,
+       "precision": 1.0,
+       "recall": 0.16666666666666666
+      },
+      "place": {
+       "support": 5,
+       "predicted": 1,
+       "precision": 0.0,
+       "recall": 0.0
+      }
+     },
+     "majority_baseline": {
+      "class": "grasp",
+      "correct": 6,
+      "n": 17,
+      "accuracy": 0.35294117647058826,
+      "wilson_95": [
+       0.17309720397243744,
+       0.5869963651478132
+      ]
+     },
+     "uniform_chance": 0.3333333333333333
+    },
+    "n": 17,
+    "parsed": 17,
+    "truncated": 0,
+    "internal_consistency": {
+     "success_yes_iff_stage_none": 17,
+     "of_parsed": 17
+    },
+    "latency_s": {
+     "median": 8.902303220998874,
+     "max": 11.66795479999928
+    },
+    "tokens_mean": {
+     "prompt_tokens": 3854.235294117647,
+     "completion_tokens": 233.35294117647058
+    },
+    "truth_per_stage": {
+     "grasp": 6,
+     "place": 5,
+     "none": 6
+    },
+    "static_controls": {
+     "n": 2,
+     "said_success": 2,
+     "said_grasp": 0,
+     "unparsed": 0
+    }
+   }
+  },
+  "t8b_v1_close_top": {
+   "model": "nvidia/Cosmos-Reason2-8B",
+   "prompt": "v1",
+   "camera": "close_top",
+   "prompt_sha256": "61213f799ad647e9a600b556ec8eb4105df89d7da90a5a109b59f50ad4dc228a",
+   "git_commit": "5698ccf33f612a8d5fd18623e9d3a12bad9c9f68",
+   "results": {
+    "success": {
+     "accuracy": {
+      "correct": 6,
+      "n": 17,
+      "accuracy": 0.35294117647058826,
+      "wilson_95": [
+       0.17309720397243744,
+       0.5869963651478132
+      ]
+     },
+     "confusion": {
+      "yes": {
+       "yes": 6,
+       "no": 0,
+       "unparsed": 0
+      },
+      "no": {
+       "yes": 11,
+       "no": 0,
+       "unparsed": 0
+      },
+      "unparsed": {
+       "yes": 0,
+       "no": 0,
+       "unparsed": 0
+      }
+     },
+     "per_class": {
+      "yes": {
+       "support": 6,
+       "predicted": 17,
+       "precision": 0.35294117647058826,
+       "recall": 1.0
+      },
+      "no": {
+       "support": 11,
+       "predicted": 0,
+       "precision": null,
+       "recall": 0.0
+      }
+     },
+     "majority_baseline": {
+      "class": "no",
+      "correct": 11,
+      "n": 17,
+      "accuracy": 0.6470588235294118,
+      "wilson_95": [
+       0.41300363485218694,
+       0.8269027960275627
+      ]
+     },
+     "uniform_chance": 0.5
+    },
+    "stage": {
+     "accuracy": {
+      "correct": 6,
+      "n": 17,
+      "accuracy": 0.35294117647058826,
+      "wilson_95": [
+       0.17309720397243744,
+       0.5869963651478132
+      ]
+     },
+     "confusion": {
+      "none": {
+       "none": 6,
+       "grasp": 0,
+       "place": 0,
+       "unparsed": 0
+      },
+      "grasp": {
+       "none": 6,
+       "grasp": 0,
+       "place": 0,
+       "unparsed": 0
+      },
+      "place": {
+       "none": 5,
+       "grasp": 0,
+       "place": 0,
+       "unparsed": 0
+      },
+      "unparsed": {
+       "none": 0,
+       "grasp": 0,
+       "place": 0,
+       "unparsed": 0
+      }
+     },
+     "per_class": {
+      "none": {
+       "support": 6,
+       "predicted": 17,
+       "precision": 0.35294117647058826,
+       "recall": 1.0
+      },
+      "grasp": {
+       "support": 6,
+       "predicted": 0,
+       "precision": null,
+       "recall": 0.0
+      },
+      "place": {
+       "support": 5,
+       "predicted": 0,
+       "precision": null,
+       "recall": 0.0
+      }
+     },
+     "majority_baseline": {
+      "class": "grasp",
+      "correct": 6,
+      "n": 17,
+      "accuracy": 0.35294117647058826,
+      "wilson_95": [
+       0.17309720397243744,
+       0.5869963651478132
+      ]
+     },
+     "uniform_chance": 0.3333333333333333
+    },
+    "n": 17,
+    "parsed": 17,
+    "truncated": 0,
+    "internal_consistency": {
+     "success_yes_iff_stage_none": 17,
+     "of_parsed": 17
+    },
+    "latency_s": {
+     "median": 9.906559584000206,
+     "max": 12.210744153999258
+    },
+    "tokens_mean": {
+     "prompt_tokens": 4549.529411764706,
+     "completion_tokens": 234.64705882352942
+    },
+    "truth_per_stage": {
+     "grasp": 6,
+     "place": 5,
+     "none": 6
+    },
+    "static_controls": {
+     "n": 2,
+     "said_success": 0,
+     "said_grasp": 2,
+     "unparsed": 0
+    }
+   }
+  },
+  "t8b_obs_v1": {
+   "model": "nvidia/Cosmos-Reason2-8B",
+   "prompt": "obs",
+   "camera": "v1",
+   "prompt_sha256": "e738c8d3f887a17dabdad37303e3a46414de9c9df523d630f79748b0e3148f03",
+   "git_commit": "5698ccf33f612a8d5fd18623e9d3a12bad9c9f68",
+   "results": {
+    "success": {
+     "accuracy": {
+      "correct": 6,
+      "n": 17,
+      "accuracy": 0.35294117647058826,
+      "wilson_95": [
+       0.17309720397243744,
+       0.5869963651478132
+      ]
+     },
+     "confusion": {
+      "yes": {
+       "yes": 6,
+       "no": 0,
+       "unparsed": 0
+      },
+      "no": {
+       "yes": 11,
+       "no": 0,
+       "unparsed": 0
+      },
+      "unparsed": {
+       "yes": 0,
+       "no": 0,
+       "unparsed": 0
+      }
+     },
+     "per_class": {
+      "yes": {
+       "support": 6,
+       "predicted": 17,
+       "precision": 0.35294117647058826,
+       "recall": 1.0
+      },
+      "no": {
+       "support": 11,
+       "predicted": 0,
+       "precision": null,
+       "recall": 0.0
+      }
+     },
+     "majority_baseline": {
+      "class": "no",
+      "correct": 11,
+      "n": 17,
+      "accuracy": 0.6470588235294118,
+      "wilson_95": [
+       0.41300363485218694,
+       0.8269027960275627
+      ]
+     },
+     "uniform_chance": 0.5
+    },
+    "stage": {
+     "accuracy": {
+      "correct": 6,
+      "n": 17,
+      "accuracy": 0.35294117647058826,
+      "wilson_95": [
+       0.17309720397243744,
+       0.5869963651478132
+      ]
+     },
+     "confusion": {
+      "none": {
+       "none": 6,
+       "grasp": 0,
+       "place": 0,
+       "unparsed": 0
+      },
+      "grasp": {
+       "none": 6,
+       "grasp": 0,
+       "place": 0,
+       "unparsed": 0
+      },
+      "place": {
+       "none": 5,
+       "grasp": 0,
+       "place": 0,
+       "unparsed": 0
+      },
+      "unparsed": {
+       "none": 0,
+       "grasp": 0,
+       "place": 0,
+       "unparsed": 0
+      }
+     },
+     "per_class": {
+      "none": {
+       "support": 6,
+       "predicted": 17,
+       "precision": 0.35294117647058826,
+       "recall": 1.0
+      },
+      "grasp": {
+       "support": 6,
+       "predicted": 0,
+       "precision": null,
+       "recall": 0.0
+      },
+      "place": {
+       "support": 5,
+       "predicted": 0,
+       "precision": null,
+       "recall": 0.0
+      }
+     },
+     "majority_baseline": {
+      "class": "grasp",
+      "correct": 6,
+      "n": 17,
+      "accuracy": 0.35294117647058826,
+      "wilson_95": [
+       0.17309720397243744,
+       0.5869963651478132
+      ]
+     },
+     "uniform_chance": 0.3333333333333333
+    },
+    "n": 17,
+    "parsed": 17,
+    "truncated": 0,
+    "internal_consistency": {
+     "success_yes_iff_stage_none": 17,
+     "of_parsed": 17
+    },
+    "latency_s": {
+     "median": 9.516600228000243,
+     "max": 13.548431834999064
+    },
+    "tokens_mean": {
+     "prompt_tokens": 3818.235294117647,
+     "completion_tokens": 275.52941176470586
+    },
+    "truth_per_stage": {
+     "grasp": 6,
+     "place": 5,
+     "none": 6
+    },
+    "static_controls": {
+     "n": 2,
+     "said_success": 0,
+     "said_grasp": 2,
+     "unparsed": 0
+    },
+    "observed_answers": {
+     "cube_last_frame": {
+      "tray": 17
+     },
+     "cube_left_table": {
+      "yes": 14,
+      "no": 3
+     }
+    }
+   }
+  },
+  "t8b_obs_close": {
+   "model": "nvidia/Cosmos-Reason2-8B",
+   "prompt": "obs",
+   "camera": "close",
+   "prompt_sha256": "9b1e2d29448b883dfebd005b50ee9757d4ae95473bd894a1ad88ee24469c63cb",
+   "git_commit": "5698ccf33f612a8d5fd18623e9d3a12bad9c9f68",
+   "results": {
+    "success": {
+     "accuracy": {
+      "correct": 9,
+      "n": 17,
+      "accuracy": 0.5294117647058824,
+      "wilson_95": [
+       0.30963235060004424,
+       0.7383489355759056
+      ]
+     },
+     "confusion": {
+      "yes": {
+       "yes": 6,
+       "no": 0,
+       "unparsed": 0
+      },
+      "no": {
+       "yes": 8,
+       "no": 3,
+       "unparsed": 0
+      },
+      "unparsed": {
+       "yes": 0,
+       "no": 0,
+       "unparsed": 0
+      }
+     },
+     "per_class": {
+      "yes": {
+       "support": 6,
+       "predicted": 14,
+       "precision": 0.42857142857142855,
+       "recall": 1.0
+      },
+      "no": {
+       "support": 11,
+       "predicted": 3,
+       "precision": 1.0,
+       "recall": 0.2727272727272727
+      }
+     },
+     "majority_baseline": {
+      "class": "no",
+      "correct": 11,
+      "n": 17,
+      "accuracy": 0.6470588235294118,
+      "wilson_95": [
+       0.41300363485218694,
+       0.8269027960275627
+      ]
+     },
+     "uniform_chance": 0.5
+    },
+    "stage": {
+     "accuracy": {
+      "correct": 9,
+      "n": 17,
+      "accuracy": 0.5294117647058824,
+      "wilson_95": [
+       0.30963235060004424,
+       0.7383489355759056
+      ]
+     },
+     "confusion": {
+      "none": {
+       "none": 6,
+       "grasp": 0,
+       "place": 0,
+       "unparsed": 0
+      },
+      "grasp": {
+       "none": 3,
+       "grasp": 3,
+       "place": 0,
+       "unparsed": 0
+      },
+      "place": {
+       "none": 5,
+       "grasp": 0,
+       "place": 0,
+       "unparsed": 0
+      },
+      "unparsed": {
+       "none": 0,
+       "grasp": 0,
+       "place": 0,
+       "unparsed": 0
+      }
+     },
+     "per_class": {
+      "none": {
+       "support": 6,
+       "predicted": 14,
+       "precision": 0.42857142857142855,
+       "recall": 1.0
+      },
+      "grasp": {
+       "support": 6,
+       "predicted": 3,
+       "precision": 1.0,
+       "recall": 0.5
+      },
+      "place": {
+       "support": 5,
+       "predicted": 0,
+       "precision": null,
+       "recall": 0.0
+      }
+     },
+     "majority_baseline": {
+      "class": "grasp",
+      "correct": 6,
+      "n": 17,
+      "accuracy": 0.35294117647058826,
+      "wilson_95": [
+       0.17309720397243744,
+       0.5869963651478132
+      ]
+     },
+     "uniform_chance": 0.3333333333333333
+    },
+    "n": 17,
+    "parsed": 17,
+    "truncated": 0,
+    "internal_consistency": {
+     "success_yes_iff_stage_none": 17,
+     "of_parsed": 17
+    },
+    "latency_s": {
+     "median": 9.622304160000567,
+     "max": 12.78616434200012
+    },
+    "tokens_mean": {
+     "prompt_tokens": 3818.235294117647,
+     "completion_tokens": 259.29411764705884
+    },
+    "truth_per_stage": {
+     "grasp": 6,
+     "place": 5,
+     "none": 6
+    },
+    "static_controls": {
+     "n": 2,
+     "said_success": 0,
+     "said_grasp": 2,
+     "unparsed": 0
+    },
+    "observed_answers": {
+     "cube_last_frame": {
+      "table": 3,
+      "tray": 14
+     },
+     "cube_left_table": {
+      "no": 3,
+      "yes": 14
+     }
+    }
+   }
+  },
+  "t8b_obs_close_top": {
+   "model": "nvidia/Cosmos-Reason2-8B",
+   "prompt": "obs",
+   "camera": "close_top",
+   "prompt_sha256": "77b8390d1f4c4ba80c24a5b0c1c0cf7bca0b89fa331737ea859664ed7850d0e2",
+   "git_commit": "5698ccf33f612a8d5fd18623e9d3a12bad9c9f68",
+   "results": {
+    "success": {
+     "accuracy": {
+      "correct": 9,
+      "n": 17,
+      "accuracy": 0.5294117647058824,
+      "wilson_95": [
+       0.30963235060004424,
+       0.7383489355759056
+      ]
+     },
+     "confusion": {
+      "yes": {
+       "yes": 6,
+       "no": 0,
+       "unparsed": 0
+      },
+      "no": {
+       "yes": 8,
+       "no": 3,
+       "unparsed": 0
+      },
+      "unparsed": {
+       "yes": 0,
+       "no": 0,
+       "unparsed": 0
+      }
+     },
+     "per_class": {
+      "yes": {
+       "support": 6,
+       "predicted": 14,
+       "precision": 0.42857142857142855,
+       "recall": 1.0
+      },
+      "no": {
+       "support": 11,
+       "predicted": 3,
+       "precision": 1.0,
+       "recall": 0.2727272727272727
+      }
+     },
+     "majority_baseline": {
+      "class": "no",
+      "correct": 11,
+      "n": 17,
+      "accuracy": 0.6470588235294118,
+      "wilson_95": [
+       0.41300363485218694,
+       0.8269027960275627
+      ]
+     },
+     "uniform_chance": 0.5
+    },
+    "stage": {
+     "accuracy": {
+      "correct": 9,
+      "n": 17,
+      "accuracy": 0.5294117647058824,
+      "wilson_95": [
+       0.30963235060004424,
+       0.7383489355759056
+      ]
+     },
+     "confusion": {
+      "none": {
+       "none": 6,
+       "grasp": 0,
+       "place": 0,
+       "unparsed": 0
+      },
+      "grasp": {
+       "none": 3,
+       "grasp": 3,
+       "place": 0,
+       "unparsed": 0
+      },
+      "place": {
+       "none": 5,
+       "grasp": 0,
+       "place": 0,
+       "unparsed": 0
+      },
+      "unparsed": {
+       "none": 0,
+       "grasp": 0,
+       "place": 0,
+       "unparsed": 0
+      }
+     },
+     "per_class": {
+      "none": {
+       "support": 6,
+       "predicted": 14,
+       "precision": 0.42857142857142855,
+       "recall": 1.0
+      },
+      "grasp": {
+       "support": 6,
+       "predicted": 3,
+       "precision": 1.0,
+       "recall": 0.5
+      },
+      "place": {
+       "support": 5,
+       "predicted": 0,
+       "precision": null,
+       "recall": 0.0
+      }
+     },
+     "majority_baseline": {
+      "class": "grasp",
+      "correct": 6,
+      "n": 17,
+      "accuracy": 0.35294117647058826,
+      "wilson_95": [
+       0.17309720397243744,
+       0.5869963651478132
+      ]
+     },
+     "uniform_chance": 0.3333333333333333
+    },
+    "n": 17,
+    "parsed": 17,
+    "truncated": 0,
+    "internal_consistency": {
+     "success_yes_iff_stage_none": 17,
+     "of_parsed": 17
+    },
+    "latency_s": {
+     "median": 10.540270485000292,
+     "max": 14.228271550999125
+    },
+    "tokens_mean": {
+     "prompt_tokens": 4541.529411764706,
+     "completion_tokens": 273.5882352941176
+    },
+    "truth_per_stage": {
+     "grasp": 6,
+     "place": 5,
+     "none": 6
+    },
+    "static_controls": {
+     "n": 2,
+     "said_success": 0,
+     "said_grasp": 2,
+     "unparsed": 0
+    },
+    "observed_answers": {
+     "cube_last_frame": {
+      "tray": 14,
+      "table": 3
+     },
+     "cube_left_table": {
+      "yes": 14,
+      "no": 3
+     }
+    }
+   }
+  }
+ },
+ "note": "EXPLORATORY: small tuning set used to choose one configuration; not a confirmatory result."
+}

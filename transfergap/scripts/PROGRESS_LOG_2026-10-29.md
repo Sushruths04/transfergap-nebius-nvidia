@@ -1,0 +1,2 @@
+- 2026-10-30 06:57 Started qA1: GR00T datasets for ur5e and kairos (200 std seeds 2000-2199 + 200 mixed 4000-4199 each; CPU only) for the second GR00T variant (3 arms).
+- 2026-10-30 07:00 Datasets for ur5e/kairos done (each 200 std + 200 mixed; ur5e mixed 189 verified). Deleted ur10e checkpoint-4000 (quoted path; results logged), kept 5000. Started qB1: GR00T-N1.5-3B fine-tune on 3 arms (6 datasets, same recipe, 5000 steps, save every 2500) -> /ws/transfergap/groot_ft_3arm. Codec eval of ck5000 (qZ7) running at 64 s/episode.

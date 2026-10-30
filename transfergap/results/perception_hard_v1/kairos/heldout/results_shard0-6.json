@@ -1,0 +1,6813 @@
+{
+ "robot": "kairos",
+ "split": "heldout",
+ "seeds": [
+  100,
+  101,
+  102,
+  103,
+  104,
+  105,
+  106,
+  107,
+  108,
+  109,
+  110,
+  111,
+  112,
+  113,
+  114,
+  115,
+  116,
+  117,
+  118,
+  119,
+  120,
+  121,
+  122,
+  123,
+  124,
+  125,
+  126,
+  127,
+  128,
+  129,
+  130,
+  131,
+  132,
+  133,
+  134,
+  135,
+  136,
+  137,
+  138,
+  139
+ ],
+ "sizes_half_m": [
+  0.025,
+  0.03,
+  0.035
+ ],
+ "conditions": {
+  "truth_yaw_aware": {
+   "belief": "truth"
+  },
+  "truth_yaw_blind": {
+   "belief": "truth",
+   "use_yaw": false
+  },
+  "depth_aligned": {
+   "yaw": false
+  },
+  "depth_yaw": {},
+  "depth_yaw_blind": {
+   "use_yaw": false
+  },
+  "depth_distractors3": {
+   "n_distr": 3
+  },
+  "depth_calib_0p5deg_5mm": {
+   "calib_rot": 0.5,
+   "calib_trans": 5.0
+  },
+  "depth_calib_1deg_10mm": {
+   "calib_rot": 1.0,
+   "calib_trans": 10.0
+  },
+  "depth_calib_2deg_20mm": {
+   "calib_rot": 2.0,
+   "calib_trans": 20.0
+  },
+  "depth_noise_10mm": {
+   "sigma": 0.01
+  },
+  "depth_noise_20mm": {
+   "sigma": 0.02
+  },
+  "depth_dropout30_fly1": {
+   "dropout": 0.3,
+   "flying": 0.01
+  },
+  "depth_arm_side": {
+   "arm": [
+    0.1,
+    0.0,
+    0.15
+   ]
+  },
+  "depth_arm_over": {
+   "arm": [
+    0.0,
+    0.0,
+    0.3
+   ]
+  },
+  "depth_arm_side_retry": {
+   "arm": [
+    0.1,
+    0.0,
+    0.15
+   ],
+   "retry": true
+  },
+  "depth_arm_over_retry": {
+   "arm": [
+    0.0,
+    0.0,
+    0.3
+   ],
+   "retry": true
+  },
+  "depth_calib_1deg_10mm_wrist": {
+   "calib_rot": 1.0,
+   "calib_trans": 10.0,
+   "wrist": true
+  },
+  "depth_calib_2deg_20mm_wrist": {
+   "calib_rot": 2.0,
+   "calib_trans": 20.0,
+   "wrist": true
+  },
+  "depth_calib_1deg_10mm_wrist_tray": {
+   "calib_rot": 1.0,
+   "calib_trans": 10.0,
+   "wrist": true,
+   "tray_look": true
+  },
+  "depth_calib_2deg_20mm_wrist_tray": {
+   "calib_rot": 2.0,
+   "calib_trans": 20.0,
+   "wrist": true,
+   "tray_look": true
+  },
+  "depth_edge_blocks": {
+   "jitter": 0.12
+  },
+  "depth_combined": {
+   "n_distr": 3,
+   "calib_rot": 0.5,
+   "calib_trans": 5.0,
+   "sigma": 0.005,
+   "dropout": 0.1,
+   "flying": 0.005,
+   "jitter": 0.1
+  },
+  "depth_combined_wrist_tray": {
+   "n_distr": 3,
+   "calib_rot": 0.5,
+   "calib_trans": 5.0,
+   "sigma": 0.005,
+   "dropout": 0.1,
+   "flying": 0.005,
+   "jitter": 0.1,
+   "wrist": true,
+   "tray_look": true
+  },
+  "depth_combined_wrist": {
+   "n_distr": 3,
+   "calib_rot": 0.5,
+   "calib_trans": 5.0,
+   "sigma": 0.005,
+   "dropout": 0.1,
+   "flying": 0.005,
+   "jitter": 0.1,
+   "wrist": true
+  }
+ },
+ "base": {
+  "yaw": true,
+  "n_distr": 0,
+  "jitter": 0.03,
+  "sigma": 0.002,
+  "calib_rot": 0.0,
+  "calib_trans": 0.0,
+  "dropout": 0.0,
+  "flying": 0.0,
+  "arm": null,
+  "belief": "depth",
+  "use_yaw": true,
+  "wrist": false,
+  "retry": false,
+  "tray_look": false
+ },
+ "cells": {
+  "truth_yaw_aware/half0.025": {
+   "n": 40,
+   "success": 40,
+   "failures": [],
+   "rows": [
+    {
+     "seed": 100,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.003678192236383005
+    },
+    {
+     "seed": 101,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0032416765119495827
+    },
+    {
+     "seed": 102,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.003172990655678903
+    },
+    {
+     "seed": 103,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0033487162566409718
+    },
+    {
+     "seed": 104,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0030525922153164264
+    },
+    {
+     "seed": 105,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0031994594337454857
+    },
+    {
+     "seed": 106,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.003787368243386267
+    },
+    {
+     "seed": 107,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0032537023980805917
+    },
+    {
+     "seed": 108,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.003133612736120463
+    },
+    {
+     "seed": 109,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.003159116239451521
+    },
+    {
+     "seed": 110,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.004622237947889662
+    },
+    {
+     "seed": 111,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0032935030823411215
+    },
+    {
+     "seed": 112,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.00323892928330181
+    },
+    {
+     "seed": 113,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.005781717291069353
+    },
+    {
+     "seed": 114,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0031869455082574843
+    },
+    {
+     "seed": 115,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.003173831950877729
+    },
+    {
+     "seed": 116,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.003098455839649854
+    },
+    {
+     "seed": 117,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0032574473129400095
+    },
+    {
+     "seed": 118,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0031725744828232524
+    },
+    {
+     "seed": 119,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0032704470741327703
+    },
+    {
+     "seed": 120,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.003227502516387366
+    },
+    {
+     "seed": 121,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0031328768880521185
+    },
+    {
+     "seed": 122,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0034910320540622575
+    },
+    {
+     "seed": 123,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.003146306377346885
+    },
+    {
+     "seed": 124,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0034298876245556047
+    },
+    {
+     "seed": 125,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.003273011220293854
+    },
+    {
+     "seed": 126,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.003190069451192832
+    },
+    {
+     "seed": 127,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0032584886034725926
+    },
+    {
+     "seed": 128,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0030657795676090572
+    },
+    {
+     "seed": 129,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0031862805681685522
+    },
+    {
+     "seed": 130,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.004380742971856959
+    },
+    {
+     "seed": 131,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.003364054278045222
+    },
+    {
+     "seed": 132,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.003414885453804038
+    },
+    {
+     "seed": 133,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.003142380520200105
+    },
+    {
+     "seed": 134,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.003562518474238251
+    },
+    {
+     "seed": 135,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0032007772516090506
+    },
+    {
+     "seed": 136,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.003171503086138666
+    },
+    {
+     "seed": 137,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.003113630836742243
+    },
+    {
+     "seed": 138,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0032349441042617325
+    },
+    {
+     "seed": 139,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.003135329606129026
+    }
+   ]
+  },
+  "truth_yaw_aware/half0.03": {
+   "n": 40,
+   "success": 40,
+   "failures": [],
+   "rows": [
+    {
+     "seed": 100,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0016341465599321258
+    },
+    {
+     "seed": 101,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.000727813329943869
+    },
+    {
+     "seed": 102,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0007434399225068922
+    },
+    {
+     "seed": 103,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0008845162805257928
+    },
+    {
+     "seed": 104,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0017604897129915346
+    },
+    {
+     "seed": 105,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0008139318475809793
+    },
+    {
+     "seed": 106,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0015152743158196745
+    },
+    {
+     "seed": 107,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0015185169743583068
+    },
+    {
+     "seed": 108,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0015571896389628308
+    },
+    {
+     "seed": 109,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0017449158992054173
+    },
+    {
+     "seed": 110,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0022420250410310227
+    },
+    {
+     "seed": 111,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.00204394552497646
+    },
+    {
+     "seed": 112,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0024516059747562817
+    },
+    {
+     "seed": 113,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0004364053863164726
+    },
+    {
+     "seed": 114,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.001496975541589783
+    },
+    {
+     "seed": 115,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0008055308649582277
+    },
+    {
+     "seed": 116,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.002162825828063637
+    },
+    {
+     "seed": 117,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.001733731589298458
+    },
+    {
+     "seed": 118,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.001423432009422287
+    },
+    {
+     "seed": 119,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0007736804250893876
+    },
+    {
+     "seed": 120,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0009142802509725283
+    },
+    {
+     "seed": 121,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0006282579064796845
+    },
+    {
+     "seed": 122,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.002836025788246268
+    },
+    {
+     "seed": 123,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.002114643021389776
+    },
+    {
+     "seed": 124,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0015289801853024267
+    },
+    {
+     "seed": 125,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0011500459959635897
+    },
+    {
+     "seed": 126,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0024123040821234947
+    },
+    {
+     "seed": 127,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0006183596489243499
+    },
+    {
+     "seed": 128,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.002108657398437783
+    },
+    {
+     "seed": 129,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0005793401687643168
+    },
+    {
+     "seed": 130,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0021746048647994245
+    },
+    {
+     "seed": 131,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0005192653080416999
+    },
+    {
+     "seed": 132,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0006161515925740166
+    },
+    {
+     "seed": 133,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0005550886011129179
+    },
+    {
+     "seed": 134,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0008100920297978359
+    },
+    {
+     "seed": 135,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0007581847781596358
+    },
+    {
+     "seed": 136,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.001524861366263469
+    },
+    {
+     "seed": 137,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.00028248968374145964
+    },
+    {
+     "seed": 138,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0011105499826095423
+    },
+    {
+     "seed": 139,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.002231369486919704
+    }
+   ]
+  },
+  "truth_yaw_aware/half0.035": {
+   "n": 40,
+   "success": 40,
+   "failures": [],
+   "rows": [
+    {
+     "seed": 100,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0007841022681948001
+    },
+    {
+     "seed": 101,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0009839006320629057
+    },
+    {
+     "seed": 102,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0008462466052727532
+    },
+    {
+     "seed": 103,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0007007417330892019
+    },
+    {
+     "seed": 104,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.004233569814355396
+    },
+    {
+     "seed": 105,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.000909602686772686
+    },
+    {
+     "seed": 106,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0008366037993401012
+    },
+    {
+     "seed": 107,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0008542940261597256
+    },
+    {
+     "seed": 108,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.002477695361279049
+    },
+    {
+     "seed": 109,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.001786731736711186
+    },
+    {
+     "seed": 110,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0010594635319442502
+    },
+    {
+     "seed": 111,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0020258858948009406
+    },
+    {
+     "seed": 112,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.002276816691868961
+    },
+    {
+     "seed": 113,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.003641379874578544
+    },
+    {
+     "seed": 114,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.000853073426546692
+    },
+    {
+     "seed": 115,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0009627579224428099
+    },
+    {
+     "seed": 116,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0024632763744629727
+    },
+    {
+     "seed": 117,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0021062632406832634
+    },
+    {
+     "seed": 118,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.002381757255015254
+    },
+    {
+     "seed": 119,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0009054641048407136
+    },
+    {
+     "seed": 120,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0008791906152995378
+    },
+    {
+     "seed": 121,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0006987291024187912
+    },
+    {
+     "seed": 122,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0007642278778084618
+    },
+    {
+     "seed": 123,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0025408822933674483
+    },
+    {
+     "seed": 124,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0023783028193731437
+    },
+    {
+     "seed": 125,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0008389427185201626
+    },
+    {
+     "seed": 126,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.002794249441655857
+    },
+    {
+     "seed": 127,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0009674046335951978
+    },
+    {
+     "seed": 128,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.002609194873633439
+    },
+    {
+     "seed": 129,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0017235341120847962
+    },
+    {
+     "seed": 130,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0009333759334561876
+    },
+    {
+     "seed": 131,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0004928026667471392
+    },
+    {
+     "seed": 132,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0009468262104107998
+    },
+    {
+     "seed": 133,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0007487933825410892
+    },
+    {
+     "seed": 134,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0008549870149623859
+    },
+    {
+     "seed": 135,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.000885342634153103
+    },
+    {
+     "seed": 136,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.002695237980651078
+    },
+    {
+     "seed": 137,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0006265221529066455
+    },
+    {
+     "seed": 138,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0006997011338460586
+    },
+    {
+     "seed": 139,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0021725324575039293
+    }
+   ]
+  },
+  "depth_calib_0p5deg_5mm/half0.025": {
+   "n": 40,
+   "success": 40,
+   "failures": [],
+   "rows": [
+    {
+     "seed": 100,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.006801845578775426,
+     "estimate_error": {
+      "xy_mm": 8.234098133104762,
+      "z_mm": 2.332970524453887,
+      "yaw_deg": 0.5035955537483974,
+      "goal_xy_mm": 6.714716011274453
+     },
+     "retried": false
+    },
+    {
+     "seed": 101,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.008894975601050813,
+     "estimate_error": {
+      "xy_mm": 6.323479243482424,
+      "z_mm": 2.040725930034869,
+      "yaw_deg": 0.01745018644741525,
+      "goal_xy_mm": 6.058784524600254
+     },
+     "retried": false
+    },
+    {
+     "seed": 102,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.007643731760411855,
+     "estimate_error": {
+      "xy_mm": 9.0906360812033,
+      "z_mm": 4.0557826692097825,
+      "yaw_deg": 0.45212390800049573,
+      "goal_xy_mm": 6.5800225090150875
+     },
+     "retried": false
+    },
+    {
+     "seed": 103,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0026626726741972658,
+     "estimate_error": {
+      "xy_mm": 8.634690590889653,
+      "z_mm": 4.11874324812481,
+      "yaw_deg": 0.6526867938664818,
+      "goal_xy_mm": 9.837333496287462
+     },
+     "retried": false
+    },
+    {
+     "seed": 104,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0032836654198877767,
+     "estimate_error": {
+      "xy_mm": 10.366161534012585,
+      "z_mm": 3.236872938156728,
+      "yaw_deg": 1.8130846741140312,
+      "goal_xy_mm": 10.205513988181448
+     },
+     "retried": false
+    },
+    {
+     "seed": 105,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.002859531768042121,
+     "estimate_error": {
+      "xy_mm": 13.219385698009358,
+      "z_mm": 3.1587195089427498,
+      "yaw_deg": 0.9296690332832653,
+      "goal_xy_mm": 13.504339468263213
+     },
+     "retried": false
+    },
+    {
+     "seed": 106,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0024198103392668226,
+     "estimate_error": {
+      "xy_mm": 2.629518789071438,
+      "z_mm": 2.6650893968450036,
+      "yaw_deg": 0.30686421282215803,
+      "goal_xy_mm": 4.227706787543861
+     },
+     "retried": false
+    },
+    {
+     "seed": 107,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.00885716499764931,
+     "estimate_error": {
+      "xy_mm": 7.861653756220066,
+      "z_mm": 4.10960090645331,
+      "yaw_deg": 0.9699211663223898,
+      "goal_xy_mm": 10.509317299732665
+     },
+     "retried": false
+    },
+    {
+     "seed": 108,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.013183133408140403,
+     "estimate_error": {
+      "xy_mm": 11.94757775196524,
+      "z_mm": 2.6819360400583623,
+      "yaw_deg": 2.01272186722844,
+      "goal_xy_mm": 10.46228284969188
+     },
+     "retried": false
+    },
+    {
+     "seed": 109,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.01547965923801702,
+     "estimate_error": {
+      "xy_mm": 15.505656306908126,
+      "z_mm": 1.6885962685129763,
+      "yaw_deg": 0.6453548127269961,
+      "goal_xy_mm": 15.649214696470505
+     },
+     "retried": false
+    },
+    {
+     "seed": 110,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0056769765184917255,
+     "estimate_error": {
+      "xy_mm": 4.451407492584637,
+      "z_mm": 4.3549877946769575,
+      "yaw_deg": 1.3169186454924997,
+      "goal_xy_mm": 5.152924316786502
+     },
+     "retried": false
+    },
+    {
+     "seed": 111,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.00490552663956454,
+     "estimate_error": {
+      "xy_mm": 12.711926624302535,
+      "z_mm": 2.542367918128511,
+      "yaw_deg": 1.065864534183132,
+      "goal_xy_mm": 12.44023193826075
+     },
+     "retried": false
+    },
+    {
+     "seed": 112,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0017235894831143929,
+     "estimate_error": {
+      "xy_mm": 10.603124420563956,
+      "z_mm": 5.512966554739051,
+      "yaw_deg": 0.9054154165572282,
+      "goal_xy_mm": 10.323394061534996
+     },
+     "retried": false
+    },
+    {
+     "seed": 113,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.014613990904903645,
+     "estimate_error": {
+      "xy_mm": 13.521418582872027,
+      "z_mm": 3.4457788664112727,
+      "yaw_deg": 0.430455598345123,
+      "goal_xy_mm": 11.635995066954438
+     },
+     "retried": false
+    },
+    {
+     "seed": 114,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.004040298765538262,
+     "estimate_error": {
+      "xy_mm": 6.839256088086071,
+      "z_mm": 3.672192478047627,
+      "yaw_deg": 1.1185711782355223,
+      "goal_xy_mm": 7.573050663648151
+     },
+     "retried": false
+    },
+    {
+     "seed": 115,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.007701800245862948,
+     "estimate_error": {
+      "xy_mm": 12.605181375953391,
+      "z_mm": 2.5118437483781197,
+      "yaw_deg": 1.8963816204640822,
+      "goal_xy_mm": 12.825859371412996
+     },
+     "retried": false
+    },
+    {
+     "seed": 116,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.012420235574490698,
+     "estimate_error": {
+      "xy_mm": 11.285852601107209,
+      "z_mm": 4.482387075411032,
+      "yaw_deg": 0.652188862730716,
+      "goal_xy_mm": 11.437361715634108
+     },
+     "retried": false
+    },
+    {
+     "seed": 117,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.011172487992849306,
+     "estimate_error": {
+      "xy_mm": 11.83839169044588,
+      "z_mm": 5.457996491530348,
+      "yaw_deg": 1.2605555046240875,
+      "goal_xy_mm": 13.299366447941491
+     },
+     "retried": false
+    },
+    {
+     "seed": 118,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0061179457080921765,
+     "estimate_error": {
+      "xy_mm": 7.218033451039075,
+      "z_mm": 3.8865739885752815,
+      "yaw_deg": 0.6634974614474889,
+      "goal_xy_mm": 5.8078825904923335
+     },
+     "retried": false
+    },
+    {
+     "seed": 119,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.004138130661619898,
+     "estimate_error": {
+      "xy_mm": 6.00831784548082,
+      "z_mm": 4.251222260525905,
+      "yaw_deg": 0.15205049514719302,
+      "goal_xy_mm": 5.253266979026867
+     },
+     "retried": false
+    },
+    {
+     "seed": 120,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.00468846352003893,
+     "estimate_error": {
+      "xy_mm": 10.37891195734051,
+      "z_mm": 3.0096253382651885,
+      "yaw_deg": 1.016561289455185,
+      "goal_xy_mm": 11.632261901343702
+     },
+     "retried": false
+    },
+    {
+     "seed": 121,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.01243453884115729,
+     "estimate_error": {
+      "xy_mm": 14.95617596399579,
+      "z_mm": 2.762395914358822,
+      "yaw_deg": 1.0060807708366977,
+      "goal_xy_mm": 14.034257415456514
+     },
+     "retried": false
+    },
+    {
+     "seed": 122,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.00785855548651875,
+     "estimate_error": {
+      "xy_mm": 16.427321215571542,
+      "z_mm": 0.5201866996152292,
+      "yaw_deg": 1.3989634918695801,
+      "goal_xy_mm": 16.38403590560795
+     },
+     "retried": false
+    },
+    {
+     "seed": 123,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0010276248120563323,
+     "estimate_error": {
+      "xy_mm": 5.24368659791638,
+      "z_mm": 0.39035114939035487,
+      "yaw_deg": 0.4319936176180885,
+      "goal_xy_mm": 6.21500341547277
+     },
+     "retried": false
+    },
+    {
+     "seed": 124,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.005658416741459365,
+     "estimate_error": {
+      "xy_mm": 7.800149540816523,
+      "z_mm": 5.291707537379731,
+      "yaw_deg": 1.6678843695102807,
+      "goal_xy_mm": 7.278988498570711
+     },
+     "retried": false
+    },
+    {
+     "seed": 125,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.008424414186192594,
+     "estimate_error": {
+      "xy_mm": 9.781568487494571,
+      "z_mm": 2.864721882440444,
+      "yaw_deg": 2.1020103195562436,
+      "goal_xy_mm": 10.018281740682358
+     },
+     "retried": false
+    },
+    {
+     "seed": 126,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.008915046151208049,
+     "estimate_error": {
+      "xy_mm": 11.258693054764926,
+      "z_mm": 1.9184313190311886,
+      "yaw_deg": 1.2163180677005452,
+      "goal_xy_mm": 11.62558712101664
+     },
+     "retried": false
+    },
+    {
+     "seed": 127,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.001119425465175867,
+     "estimate_error": {
+      "xy_mm": 2.432312550541374,
+      "z_mm": 2.9784415475809753,
+      "yaw_deg": 0.2866220537096289,
+      "goal_xy_mm": 3.458777994747574
+     },
+     "retried": false
+    },
+    {
+     "seed": 128,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.004403815776621813,
+     "estimate_error": {
+      "xy_mm": 8.248165502658502,
+      "z_mm": 0.6246288288225855,
+      "yaw_deg": 1.758418698287488,
+      "goal_xy_mm": 8.897297742039589
+     },
+     "retried": false
+    },
+    {
+     "seed": 129,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.010885789094928138,
+     "estimate_error": {
+      "xy_mm": 14.055800432441893,
+      "z_mm": 3.4982821521193816,
+      "yaw_deg": 1.825470209208963,
+      "goal_xy_mm": 13.577151278412702
+     },
+     "retried": false
+    },
+    {
+     "seed": 130,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.014516901220374917,
+     "estimate_error": {
+      "xy_mm": 14.012457998070643,
+      "z_mm": 2.2882146199630915,
+      "yaw_deg": 1.8456987002299508,
+      "goal_xy_mm": 12.89250185267902
+     },
+     "retried": false
+    },
+    {
+     "seed": 131,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.00881647057603365,
+     "estimate_error": {
+      "xy_mm": 9.869894214043848,
+      "z_mm": 3.8684898688764493,
+      "yaw_deg": 0.9611219810201038,
+      "goal_xy_mm": 9.783844394772833
+     },
+     "retried": false
+    },
+    {
+     "seed": 132,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.008017711514079573,
+     "estimate_error": {
+      "xy_mm": 7.351869985742647,
+      "z_mm": 4.007665767538772,
+      "yaw_deg": 0.5854107178164417,
+      "goal_xy_mm": 9.867639896442743
+     },
+     "retried": false
+    },
+    {
+     "seed": 133,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.005722828413386233,
+     "estimate_error": {
+      "xy_mm": 8.920934733738283,
+      "z_mm": 2.0177763900336534,
+      "yaw_deg": 0.281388315255995,
+      "goal_xy_mm": 9.17814191969215
+     },
+     "retried": false
+    },
+    {
+     "seed": 134,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.013998477753053224,
+     "estimate_error": {
+      "xy_mm": 11.5485984667172,
+      "z_mm": 1.7743416559645522,
+      "yaw_deg": 1.1575295015347769,
+      "goal_xy_mm": 11.102071032709425
+     },
+     "retried": false
+    },
+    {
+     "seed": 135,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0180484428558427,
+     "estimate_error": {
+      "xy_mm": 13.795697355352274,
+      "z_mm": 2.9273914497880416,
+      "yaw_deg": 1.0005477535389886,
+      "goal_xy_mm": 14.25774579625211
+     },
+     "retried": false
+    },
+    {
+     "seed": 136,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.001326677792922835,
+     "estimate_error": {
+      "xy_mm": 8.526240499383796,
+      "z_mm": 4.14822752288091,
+      "yaw_deg": 1.2515377076453078,
+      "goal_xy_mm": 9.117663374405472
+     },
+     "retried": false
+    },
+    {
+     "seed": 137,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0008650593094314351,
+     "estimate_error": {
+      "xy_mm": 12.836228364052486,
+      "z_mm": 1.7190310373466597,
+      "yaw_deg": 0.17927927509206526,
+      "goal_xy_mm": 12.338420001019676
+     },
+     "retried": false
+    },
+    {
+     "seed": 138,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.007041789142041156,
+     "estimate_error": {
+      "xy_mm": 8.575100596477881,
+      "z_mm": 2.4060349108786934,
+      "yaw_deg": 2.15465577744201,
+      "goal_xy_mm": 11.083435731997003
+     },
+     "retried": false
+    },
+    {
+     "seed": 139,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.013478564928225995,
+     "estimate_error": {
+      "xy_mm": 14.426371812925968,
+      "z_mm": 2.0783701470591214,
+      "yaw_deg": 1.0345857142103592,
+      "goal_xy_mm": 16.008823177636376
+     },
+     "retried": false
+    }
+   ],
+   "estimate_error_median": {
+    "xy_mm": 10.118027874028217,
+    "z_mm": 2.9529164986845085,
+    "yaw_deg": 1.003314262187843,
+    "goal_xy_mm": 10.392838455613438
+   },
+   "estimate_error_max": {
+    "xy_mm": 16.427321215571542,
+    "z_mm": 5.512966554739051,
+    "yaw_deg": 2.15465577744201,
+    "goal_xy_mm": 16.38403590560795
+   }
+  },
+  "depth_calib_0p5deg_5mm/half0.03": {
+   "n": 40,
+   "success": 40,
+   "failures": [],
+   "rows": [
+    {
+     "seed": 100,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.003942181097310988,
+     "estimate_error": {
+      "xy_mm": 8.415270649791513,
+      "z_mm": 2.346894841701329,
+      "yaw_deg": 1.4964044462516055,
+      "goal_xy_mm": 6.714714901380653
+     },
+     "retried": false
+    },
+    {
+     "seed": 101,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.007207354260902636,
+     "estimate_error": {
+      "xy_mm": 6.298711624868814,
+      "z_mm": 2.0715806975993187,
+      "yaw_deg": 0.01745018644741525,
+      "goal_xy_mm": 6.058788578665489
+     },
+     "retried": false
+    },
+    {
+     "seed": 102,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.007442649176401108,
+     "estimate_error": {
+      "xy_mm": 9.01600276089054,
+      "z_mm": 4.074185871837079,
+      "yaw_deg": 1.5478760919995072,
+      "goal_xy_mm": 6.580025168055429
+     },
+     "retried": false
+    },
+    {
+     "seed": 103,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.004089316018744947,
+     "estimate_error": {
+      "xy_mm": 8.831992182892671,
+      "z_mm": 4.110094123539649,
+      "yaw_deg": 1.3473132061335147,
+      "goal_xy_mm": 9.837332050585786
+     },
+     "retried": false
+    },
+    {
+     "seed": 104,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0017738640080470676,
+     "estimate_error": {
+      "xy_mm": 10.206949419804968,
+      "z_mm": 3.2124715158452397,
+      "yaw_deg": 1.8130846741140312,
+      "goal_xy_mm": 10.205518565514089
+     },
+     "retried": false
+    },
+    {
+     "seed": 105,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.005475049697984475,
+     "estimate_error": {
+      "xy_mm": 13.372962945143398,
+      "z_mm": 3.1704362286225365,
+      "yaw_deg": 0.07033096671673607,
+      "goal_xy_mm": 13.504326980658641
+     },
+     "retried": false
+    },
+    {
+     "seed": 106,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.004390725014649228,
+     "estimate_error": {
+      "xy_mm": 2.7298756028513154,
+      "z_mm": 2.6583125452302356,
+      "yaw_deg": 0.30686421282215803,
+      "goal_xy_mm": 4.227707672539051
+     },
+     "retried": false
+    },
+    {
+     "seed": 107,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.009070262020755834,
+     "estimate_error": {
+      "xy_mm": 8.111493106603554,
+      "z_mm": 4.115594310169935,
+      "yaw_deg": 0.03007883367761168,
+      "goal_xy_mm": 10.50931991548542
+     },
+     "retried": false
+    },
+    {
+     "seed": 108,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.011358789426189784,
+     "estimate_error": {
+      "xy_mm": 11.74443971832823,
+      "z_mm": 2.675912507151771,
+      "yaw_deg": 0.9872781327715577,
+      "goal_xy_mm": 10.46228622009468
+     },
+     "retried": false
+    },
+    {
+     "seed": 109,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.014456107474490111,
+     "estimate_error": {
+      "xy_mm": 15.53557859178251,
+      "z_mm": 1.6859694818577124,
+      "yaw_deg": 1.3546451872730068,
+      "goal_xy_mm": 15.649223464186793
+     },
+     "retried": false
+    },
+    {
+     "seed": 110,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.006823997702319262,
+     "estimate_error": {
+      "xy_mm": 4.514989645950835,
+      "z_mm": 4.3439592978806,
+      "yaw_deg": 0.683081354507503,
+      "goal_xy_mm": 5.1529240949309605
+     },
+     "retried": false
+    },
+    {
+     "seed": 111,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0029261823577626136,
+     "estimate_error": {
+      "xy_mm": 12.471003252574317,
+      "z_mm": 2.538042468735506,
+      "yaw_deg": 1.065864534183132,
+      "goal_xy_mm": 12.440228693475941
+     },
+     "retried": false
+    },
+    {
+     "seed": 112,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.002983056523700383,
+     "estimate_error": {
+      "xy_mm": 10.361717257382093,
+      "z_mm": 5.5706467125017545,
+      "yaw_deg": 0.09458458344277317,
+      "goal_xy_mm": 10.323395864554652
+     },
+     "retried": false
+    },
+    {
+     "seed": 113,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.016542039092568538,
+     "estimate_error": {
+      "xy_mm": 13.429333980745861,
+      "z_mm": 3.4706599135023266,
+      "yaw_deg": 2.4304555983451257,
+      "goal_xy_mm": 11.635999598598053
+     },
+     "retried": false
+    },
+    {
+     "seed": 114,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.005410075305104325,
+     "estimate_error": {
+      "xy_mm": 6.884762675728666,
+      "z_mm": 3.615029965163743,
+      "yaw_deg": 1.1185711782355223,
+      "goal_xy_mm": 7.573056374899161
+     },
+     "retried": false
+    },
+    {
+     "seed": 115,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.002234517495882068,
+     "estimate_error": {
+      "xy_mm": 12.78293066380232,
+      "z_mm": 2.5040510335920354,
+      "yaw_deg": 0.10361837953589506,
+      "goal_xy_mm": 12.825858165288219
+     },
+     "retried": false
+    },
+    {
+     "seed": 116,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.011424500004445235,
+     "estimate_error": {
+      "xy_mm": 11.217624566995921,
+      "z_mm": 4.537153358637806,
+      "yaw_deg": 0.652188862730716,
+      "goal_xy_mm": 11.43735782870274
+     },
+     "retried": false
+    },
+    {
+     "seed": 117,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.010792377221993542,
+     "estimate_error": {
+      "xy_mm": 11.925192805222538,
+      "z_mm": 5.464466692016261,
+      "yaw_deg": 3.7394444953759134,
+      "goal_xy_mm": 13.29936746252159
+     },
+     "retried": false
+    },
+    {
+     "seed": 118,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.004648918216135333,
+     "estimate_error": {
+      "xy_mm": 7.258738377695934,
+      "z_mm": 3.973033325906931,
+      "yaw_deg": 0.6634974614474889,
+      "goal_xy_mm": 5.8078902062401365
+     },
+     "retried": false
+    },
+    {
+     "seed": 119,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.004321747540452995,
+     "estimate_error": {
+      "xy_mm": 5.970667251372651,
+      "z_mm": 4.244496803297856,
+      "yaw_deg": 0.8479495048528021,
+      "goal_xy_mm": 5.253267210992732
+     },
+     "retried": false
+    },
+    {
+     "seed": 120,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.008321714451722187,
+     "estimate_error": {
+      "xy_mm": 10.274576330681821,
+      "z_mm": 3.013334442962395,
+      "yaw_deg": 1.9834387105448128,
+      "goal_xy_mm": 11.63226331797073
+     },
+     "retried": false
+    },
+    {
+     "seed": 121,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.013265379055398952,
+     "estimate_error": {
+      "xy_mm": 14.8993706896938,
+      "z_mm": 2.7377343243511034,
+      "yaw_deg": 2.0060807708366863,
+      "goal_xy_mm": 14.034269323626923
+     },
+     "retried": false
+    },
+    {
+     "seed": 122,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.004505717766991533,
+     "estimate_error": {
+      "xy_mm": 16.380001960435752,
+      "z_mm": 0.5392834550009551,
+      "yaw_deg": 0.6010365081304164,
+      "goal_xy_mm": 16.384029080963376
+     },
+     "retried": false
+    },
+    {
+     "seed": 123,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.003643578920372682,
+     "estimate_error": {
+      "xy_mm": 5.191770907917747,
+      "z_mm": 0.3815062183647189,
+      "yaw_deg": 1.4319936176181027,
+      "goal_xy_mm": 6.214992857558597
+     },
+     "retried": false
+    },
+    {
+     "seed": 124,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.00226979294707737,
+     "estimate_error": {
+      "xy_mm": 7.916266483192412,
+      "z_mm": 5.306617535943445,
+      "yaw_deg": 1.3321156304897364,
+      "goal_xy_mm": 7.27898732059162
+     },
+     "retried": false
+    },
+    {
+     "seed": 125,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.007689639061864608,
+     "estimate_error": {
+      "xy_mm": 9.928656720804067,
+      "z_mm": 2.867282202132098,
+      "yaw_deg": 0.8979896804437605,
+      "goal_xy_mm": 10.018282400141274
+     },
+     "retried": false
+    },
+    {
+     "seed": 126,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.007082789394247896,
+     "estimate_error": {
+      "xy_mm": 11.373217236736048,
+      "z_mm": 1.9088396725461636,
+      "yaw_deg": 0.21631806770054368,
+      "goal_xy_mm": 11.625582669455651
+     },
+     "retried": false
+    },
+    {
+     "seed": 127,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.00048101129674391757,
+     "estimate_error": {
+      "xy_mm": 2.312286138764793,
+      "z_mm": 3.007412877594699,
+      "yaw_deg": 1.286622053709643,
+      "goal_xy_mm": 3.4587749047871807
+     },
+     "retried": false
+    },
+    {
+     "seed": 128,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.00523574973835782,
+     "estimate_error": {
+      "xy_mm": 8.07617742402602,
+      "z_mm": 0.618912154569648,
+      "yaw_deg": 0.7584186982874866,
+      "goal_xy_mm": 8.897294523198944
+     },
+     "retried": false
+    },
+    {
+     "seed": 129,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.01113475784580838,
+     "estimate_error": {
+      "xy_mm": 14.106019916493965,
+      "z_mm": 3.4980745954403156,
+      "yaw_deg": 1.174529790791035,
+      "goal_xy_mm": 13.57714660432395
+     },
+     "retried": false
+    },
+    {
+     "seed": 130,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.01735520372715875,
+     "estimate_error": {
+      "xy_mm": 14.151450754265987,
+      "z_mm": 2.347226734962408,
+      "yaw_deg": 0.8456987002299365,
+      "goal_xy_mm": 12.892502540134922
+     },
+     "retried": false
+    },
+    {
+     "seed": 131,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.007617884824135622,
+     "estimate_error": {
+      "xy_mm": 10.025836730934605,
+      "z_mm": 3.8709833885860467,
+      "yaw_deg": 0.03887801897989762,
+      "goal_xy_mm": 9.783838519139245
+     },
+     "retried": false
+    },
+    {
+     "seed": 132,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.00828898066505981,
+     "estimate_error": {
+      "xy_mm": 7.883901949517575,
+      "z_mm": 3.960723995528697,
+      "yaw_deg": 2.4145892821835497,
+      "goal_xy_mm": 9.867628475574872
+     },
+     "retried": false
+    },
+    {
+     "seed": 133,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.003886865021661294,
+     "estimate_error": {
+      "xy_mm": 9.033002910825692,
+      "z_mm": 1.9834333051619544,
+      "yaw_deg": 0.281388315255995,
+      "goal_xy_mm": 9.178135471375786
+     },
+     "retried": false
+    },
+    {
+     "seed": 134,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.023271703590578202,
+     "estimate_error": {
+      "xy_mm": 11.457614096352152,
+      "z_mm": 1.82011396921768,
+      "yaw_deg": 0.15752950153476264,
+      "goal_xy_mm": 11.102066567367647
+     },
+     "retried": false
+    },
+    {
+     "seed": 135,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.016025432536807695,
+     "estimate_error": {
+      "xy_mm": 13.934912659766674,
+      "z_mm": 2.9325247278095095,
+      "yaw_deg": 0.0005477535389998611,
+      "goal_xy_mm": 14.257747438856425
+     },
+     "retried": false
+    },
+    {
+     "seed": 136,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0018451890767589832,
+     "estimate_error": {
+      "xy_mm": 8.050687499626948,
+      "z_mm": 4.162243536353916,
+      "yaw_deg": 1.2515377076453078,
+      "goal_xy_mm": 9.117655459791788
+     },
+     "retried": false
+    },
+    {
+     "seed": 137,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0011267725213301165,
+     "estimate_error": {
+      "xy_mm": 13.047509186183907,
+      "z_mm": 1.7122699453968222,
+      "yaw_deg": 0.8207207249079489,
+      "goal_xy_mm": 12.33841727506127
+     },
+     "retried": false
+    },
+    {
+     "seed": 138,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.00773043888020168,
+     "estimate_error": {
+      "xy_mm": 8.625137982839599,
+      "z_mm": 2.407818017840336,
+      "yaw_deg": 1.1546557774420085,
+      "goal_xy_mm": 11.083432408322889
+     },
+     "retried": false
+    },
+    {
+     "seed": 139,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0133410329755832,
+     "estimate_error": {
+      "xy_mm": 14.47801386134917,
+      "z_mm": 2.0641882667049063,
+      "yaw_deg": 1.0345857142103592,
+      "goal_xy_mm": 16.008819109558303
+     },
+     "retried": false
+    }
+   ],
+   "estimate_error_median": {
+    "xy_mm": 10.116393075369785,
+    "z_mm": 2.9699688027021045,
+    "yaw_deg": 0.9426339066076591,
+    "goal_xy_mm": 10.392841042324665
+   },
+   "estimate_error_max": {
+    "xy_mm": 16.380001960435752,
+    "z_mm": 5.5706467125017545,
+    "yaw_deg": 3.7394444953759134,
+    "goal_xy_mm": 16.384029080963376
+   }
+  },
+  "depth_calib_0p5deg_5mm/half0.035": {
+   "n": 40,
+   "success": 40,
+   "failures": [],
+   "rows": [
+    {
+     "seed": 100,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.003923508956524512,
+     "estimate_error": {
+      "xy_mm": 8.400799149812876,
+      "z_mm": 2.3851167148674843,
+      "yaw_deg": 0.4964044462516168,
+      "goal_xy_mm": 6.714714720021186
+     },
+     "retried": false
+    },
+    {
+     "seed": 101,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.009165537657237497,
+     "estimate_error": {
+      "xy_mm": 6.5856716648045595,
+      "z_mm": 2.073325702208723,
+      "yaw_deg": 0.9825498135525734,
+      "goal_xy_mm": 6.058798401807565
+     },
+     "retried": false
+    },
+    {
+     "seed": 102,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.007862118796501295,
+     "estimate_error": {
+      "xy_mm": 9.017162225605981,
+      "z_mm": 4.08148556980243,
+      "yaw_deg": 0.45212390800049573,
+      "goal_xy_mm": 6.580028968690228
+     },
+     "retried": false
+    },
+    {
+     "seed": 103,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.00313432126062052,
+     "estimate_error": {
+      "xy_mm": 8.83061874740844,
+      "z_mm": 4.0948799947953525,
+      "yaw_deg": 0.34731320613351324,
+      "goal_xy_mm": 9.837343851800943
+     },
+     "retried": false
+    },
+    {
+     "seed": 104,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0052626893555430005,
+     "estimate_error": {
+      "xy_mm": 10.254221695794365,
+      "z_mm": 3.195257015021845,
+      "yaw_deg": 0.18691532588597173,
+      "goal_xy_mm": 10.205522094062644
+     },
+     "retried": false
+    },
+    {
+     "seed": 105,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.003424146704867094,
+     "estimate_error": {
+      "xy_mm": 13.263544259225537,
+      "z_mm": 3.2031731932378182,
+      "yaw_deg": 1.0703309667167376,
+      "goal_xy_mm": 13.50431169491959
+     },
+     "retried": false
+    },
+    {
+     "seed": 106,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.004355546741246886,
+     "estimate_error": {
+      "xy_mm": 2.662911566715977,
+      "z_mm": 2.6432613341569393,
+      "yaw_deg": 0.30686421282215803,
+      "goal_xy_mm": 4.227692189274474
+     },
+     "retried": false
+    },
+    {
+     "seed": 107,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.008743874313072367,
+     "estimate_error": {
+      "xy_mm": 7.986344543001917,
+      "z_mm": 4.11869922442816,
+      "yaw_deg": 0.9699211663223898,
+      "goal_xy_mm": 10.509317893949214
+     },
+     "retried": false
+    },
+    {
+     "seed": 108,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.01234495962070181,
+     "estimate_error": {
+      "xy_mm": 11.827396949895222,
+      "z_mm": 2.6532459444551653,
+      "yaw_deg": 0.9872781327715577,
+      "goal_xy_mm": 10.462290223577094
+     },
+     "retried": false
+    },
+    {
+     "seed": 109,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.01598147455210074,
+     "estimate_error": {
+      "xy_mm": 15.483430611035502,
+      "z_mm": 1.728368518902443,
+      "yaw_deg": 0.6453548127269961,
+      "goal_xy_mm": 15.649221938530136
+     },
+     "retried": false
+    },
+    {
+     "seed": 110,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.00818971062051458,
+     "estimate_error": {
+      "xy_mm": 4.563021938258549,
+      "z_mm": 4.329027859634321,
+      "yaw_deg": 0.683081354507503,
+      "goal_xy_mm": 5.152926876524495
+     },
+     "retried": false
+    },
+    {
+     "seed": 111,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0008479645937336925,
+     "estimate_error": {
+      "xy_mm": 12.622937466748844,
+      "z_mm": 2.5570125507302714,
+      "yaw_deg": 0.9341354658168454,
+      "goal_xy_mm": 12.44021318061575
+     },
+     "retried": false
+    },
+    {
+     "seed": 112,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.00375849796216792,
+     "estimate_error": {
+      "xy_mm": 10.513124639235519,
+      "z_mm": 5.563011842528671,
+      "yaw_deg": 1.9054154165572232,
+      "goal_xy_mm": 10.323403537293878
+     },
+     "retried": false
+    },
+    {
+     "seed": 113,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.019084642212598275,
+     "estimate_error": {
+      "xy_mm": 13.337305753756704,
+      "z_mm": 3.468066562328259,
+      "yaw_deg": 0.5695444016548912,
+      "goal_xy_mm": 11.636004186273256
+     },
+     "retried": false
+    },
+    {
+     "seed": 114,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.005148863165190693,
+     "estimate_error": {
+      "xy_mm": 6.894654494919701,
+      "z_mm": 3.644017489020629,
+      "yaw_deg": 0.11857117823552728,
+      "goal_xy_mm": 7.573057599265684
+     },
+     "retried": false
+    },
+    {
+     "seed": 115,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0006185134772964504,
+     "estimate_error": {
+      "xy_mm": 12.7884046373496,
+      "z_mm": 2.520182417057086,
+      "yaw_deg": 0.8963816204640936,
+      "goal_xy_mm": 12.825860389968652
+     },
+     "retried": false
+    },
+    {
+     "seed": 116,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.014378083304037559,
+     "estimate_error": {
+      "xy_mm": 11.14928861083316,
+      "z_mm": 4.529468011046298,
+      "yaw_deg": 1.3478111372692805,
+      "goal_xy_mm": 11.437357321121045
+     },
+     "retried": false
+    },
+    {
+     "seed": 117,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.010301365549397274,
+     "estimate_error": {
+      "xy_mm": 12.006906712637818,
+      "z_mm": 5.456231656572781,
+      "yaw_deg": 0.7394444953759154,
+      "goal_xy_mm": 13.29935782889753
+     },
+     "retried": false
+    },
+    {
+     "seed": 118,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0036270846196677035,
+     "estimate_error": {
+      "xy_mm": 7.057327017396272,
+      "z_mm": 3.945515443993665,
+      "yaw_deg": 0.6634974614474889,
+      "goal_xy_mm": 5.80788845157645
+     },
+     "retried": false
+    },
+    {
+     "seed": 119,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0042513217586394245,
+     "estimate_error": {
+      "xy_mm": 5.882156914438643,
+      "z_mm": 4.238993731545744,
+      "yaw_deg": 0.15205049514719302,
+      "goal_xy_mm": 5.253266703977788
+     },
+     "retried": false
+    },
+    {
+     "seed": 120,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.007071042659392484,
+     "estimate_error": {
+      "xy_mm": 10.335634739456681,
+      "z_mm": 3.0328568492567767,
+      "yaw_deg": 1.016561289455185,
+      "goal_xy_mm": 11.63226421931539
+     },
+     "retried": false
+    },
+    {
+     "seed": 121,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.016563125478060926,
+     "estimate_error": {
+      "xy_mm": 14.918912892440904,
+      "z_mm": 2.7341866995757234,
+      "yaw_deg": 0.9939192291633306,
+      "goal_xy_mm": 14.034269974689021
+     },
+     "retried": false
+    },
+    {
+     "seed": 122,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0028667342486714898,
+     "estimate_error": {
+      "xy_mm": 16.18299480221543,
+      "z_mm": 0.5460380615601723,
+      "yaw_deg": 1.3989634918695801,
+      "goal_xy_mm": 16.38403096476464
+     },
+     "retried": false
+    },
+    {
+     "seed": 123,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0038013479459949274,
+     "estimate_error": {
+      "xy_mm": 5.003982853735195,
+      "z_mm": 0.37996491745481004,
+      "yaw_deg": 1.4319936176181027,
+      "goal_xy_mm": 6.21498671848054
+     },
+     "retried": false
+    },
+    {
+     "seed": 124,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.004281504968039424,
+     "estimate_error": {
+      "xy_mm": 7.97261117776033,
+      "z_mm": 5.356313949260172,
+      "yaw_deg": 1.3321156304897364,
+      "goal_xy_mm": 7.278988666966503
+     },
+     "retried": false
+    },
+    {
+     "seed": 125,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.007021266259066444,
+     "estimate_error": {
+      "xy_mm": 10.098482744611289,
+      "z_mm": 2.835764710132686,
+      "yaw_deg": 0.8979896804437605,
+      "goal_xy_mm": 10.018296616332727
+     },
+     "retried": false
+    },
+    {
+     "seed": 126,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.010107673033560166,
+     "estimate_error": {
+      "xy_mm": 11.28318338449824,
+      "z_mm": 1.8797218913120597,
+      "yaw_deg": 0.7836819322994577,
+      "goal_xy_mm": 11.625584592092848
+     },
+     "retried": false
+    },
+    {
+     "seed": 127,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0032431567318382056,
+     "estimate_error": {
+      "xy_mm": 2.3966561116512213,
+      "z_mm": 2.982527750334904,
+      "yaw_deg": 0.7133779462903852,
+      "goal_xy_mm": 3.458773340543871
+     },
+     "retried": false
+    },
+    {
+     "seed": 128,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.00559399711637493,
+     "estimate_error": {
+      "xy_mm": 8.05746568384826,
+      "z_mm": 0.6379419898873695,
+      "yaw_deg": 0.2415813017125148,
+      "goal_xy_mm": 8.897291318831849
+     },
+     "retried": false
+    },
+    {
+     "seed": 129,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0117763021347911,
+     "estimate_error": {
+      "xy_mm": 13.374249815030247,
+      "z_mm": 3.4815583144238507,
+      "yaw_deg": 1.174529790791035,
+      "goal_xy_mm": 13.577142571582026
+     },
+     "retried": false
+    },
+    {
+     "seed": 130,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.02265533577694619,
+     "estimate_error": {
+      "xy_mm": 14.09059857651339,
+      "z_mm": 2.3157989279863553,
+      "yaw_deg": 0.15430129977005214,
+      "goal_xy_mm": 12.892506894467429
+     },
+     "retried": false
+    },
+    {
+     "seed": 131,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.00904949231232443,
+     "estimate_error": {
+      "xy_mm": 9.869723307481305,
+      "z_mm": 3.873948459926984,
+      "yaw_deg": 1.0388780189798927,
+      "goal_xy_mm": 9.783830259794543
+     },
+     "retried": false
+    },
+    {
+     "seed": 132,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0082201067545993,
+     "estimate_error": {
+      "xy_mm": 7.870608092329607,
+      "z_mm": 3.924654346178544,
+      "yaw_deg": 1.414589282183561,
+      "goal_xy_mm": 9.867617316703303
+     },
+     "retried": false
+    },
+    {
+     "seed": 133,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0021671805272857935,
+     "estimate_error": {
+      "xy_mm": 8.938412746607062,
+      "z_mm": 1.9614998861329294,
+      "yaw_deg": 0.281388315255995,
+      "goal_xy_mm": 9.17813447884452
+     },
+     "retried": false
+    },
+    {
+     "seed": 134,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.019932974785071247,
+     "estimate_error": {
+      "xy_mm": 11.640946295543104,
+      "z_mm": 1.801021410152856,
+      "yaw_deg": 1.8424704984652147,
+      "goal_xy_mm": 11.102071739449736
+     },
+     "retried": false
+    },
+    {
+     "seed": 135,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.016266454373983327,
+     "estimate_error": {
+      "xy_mm": 13.934036789616812,
+      "z_mm": 2.9611893672671155,
+      "yaw_deg": 0.9994522464609888,
+      "goal_xy_mm": 14.257751247486086
+     },
+     "retried": false
+    },
+    {
+     "seed": 136,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.004148921197696676,
+     "estimate_error": {
+      "xy_mm": 8.132911133533979,
+      "z_mm": 4.183115182583623,
+      "yaw_deg": 1.7484622923546964,
+      "goal_xy_mm": 9.117645461491767
+     },
+     "retried": false
+    },
+    {
+     "seed": 137,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.003512448080076894,
+     "estimate_error": {
+      "xy_mm": 12.910568331226449,
+      "z_mm": 1.7104647932959933,
+      "yaw_deg": 1.1792792750920793,
+      "goal_xy_mm": 12.338416000607937
+     },
+     "retried": false
+    },
+    {
+     "seed": 138,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.007893478204652981,
+     "estimate_error": {
+      "xy_mm": 8.652373947771052,
+      "z_mm": 2.4340287865646446,
+      "yaw_deg": 1.1546557774420085,
+      "goal_xy_mm": 11.083434491841265
+     },
+     "retried": false
+    },
+    {
+     "seed": 139,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.013480307072646155,
+     "estimate_error": {
+      "xy_mm": 14.327389840457256,
+      "z_mm": 2.0874481182905704,
+      "yaw_deg": 0.9654142857896436,
+      "goal_xy_mm": 16.008821004598712
+     },
+     "retried": false
+    }
+   ],
+   "estimate_error_median": {
+    "xy_mm": 10.176352220202826,
+    "z_mm": 2.97185855880101,
+    "yaw_deg": 0.9497748758032445,
+    "goal_xy_mm": 10.392846880435485
+   },
+   "estimate_error_max": {
+    "xy_mm": 16.18299480221543,
+    "z_mm": 5.563011842528671,
+    "yaw_deg": 1.9054154165572232,
+    "goal_xy_mm": 16.38403096476464
+   }
+  },
+  "depth_arm_side/half0.025": {
+   "n": 40,
+   "success": 5,
+   "failures": [
+    "perception_failed"
+   ],
+   "rows": [
+    {
+     "seed": 100,
+     "half_mm": 25.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray found (6 clusters)"
+    },
+    {
+     "seed": 101,
+     "half_mm": 25.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray found (5 clusters)"
+    },
+    {
+     "seed": 102,
+     "half_mm": 25.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray found (3 clusters)"
+    },
+    {
+     "seed": 103,
+     "half_mm": 25.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray found (3 clusters)"
+    },
+    {
+     "seed": 104,
+     "half_mm": 25.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray found (4 clusters)"
+    },
+    {
+     "seed": 105,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.002499606257437026,
+     "estimate_error": {
+      "xy_mm": 0.07233288082645023,
+      "z_mm": 0.592250577679164,
+      "yaw_deg": 0.9296690332832653,
+      "goal_xy_mm": 0.5745350679367375
+     },
+     "retried": false
+    },
+    {
+     "seed": 106,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0029847980016424014,
+     "estimate_error": {
+      "xy_mm": 0.3476183598085595,
+      "z_mm": 0.5816272857690763,
+      "yaw_deg": 1.6931357871778447,
+      "goal_xy_mm": 0.5747531544326095
+     },
+     "retried": false
+    },
+    {
+     "seed": 107,
+     "half_mm": 25.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray found (4 clusters)"
+    },
+    {
+     "seed": 108,
+     "half_mm": 25.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray found (6 clusters)"
+    },
+    {
+     "seed": 109,
+     "half_mm": 25.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray found (3 clusters)"
+    },
+    {
+     "seed": 110,
+     "half_mm": 25.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray found (4 clusters)"
+    },
+    {
+     "seed": 111,
+     "half_mm": 25.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray found (4 clusters)"
+    },
+    {
+     "seed": 112,
+     "half_mm": 25.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray found (3 clusters)"
+    },
+    {
+     "seed": 113,
+     "half_mm": 25.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray found (3 clusters)"
+    },
+    {
+     "seed": 114,
+     "half_mm": 25.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray found (4 clusters)"
+    },
+    {
+     "seed": 115,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0023133244373267116,
+     "estimate_error": {
+      "xy_mm": 0.30236528026162807,
+      "z_mm": 0.5746989224273344,
+      "yaw_deg": 1.8963816204640822,
+      "goal_xy_mm": 0.6075328574965402
+     },
+     "retried": false
+    },
+    {
+     "seed": 116,
+     "half_mm": 25.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray found (4 clusters)"
+    },
+    {
+     "seed": 117,
+     "half_mm": 25.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray found (4 clusters)"
+    },
+    {
+     "seed": 118,
+     "half_mm": 25.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray found (5 clusters)"
+    },
+    {
+     "seed": 119,
+     "half_mm": 25.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray found (5 clusters)"
+    },
+    {
+     "seed": 120,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0025719420161625975,
+     "estimate_error": {
+      "xy_mm": 0.39630178019698775,
+      "z_mm": 0.6290683755509272,
+      "yaw_deg": 1.9834387105448128,
+      "goal_xy_mm": 0.6022630317757688
+     },
+     "retried": false
+    },
+    {
+     "seed": 121,
+     "half_mm": 25.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray found (3 clusters)"
+    },
+    {
+     "seed": 122,
+     "half_mm": 25.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray found (3 clusters)"
+    },
+    {
+     "seed": 123,
+     "half_mm": 25.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray found (4 clusters)"
+    },
+    {
+     "seed": 124,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.002926036714900991,
+     "estimate_error": {
+      "xy_mm": 0.6087988408632995,
+      "z_mm": 0.5041064361267846,
+      "yaw_deg": 1.6678843695102807,
+      "goal_xy_mm": 0.5845771629897475
+     },
+     "retried": false
+    },
+    {
+     "seed": 125,
+     "half_mm": 25.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray found (3 clusters)"
+    },
+    {
+     "seed": 126,
+     "half_mm": 25.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray found (3 clusters)"
+    },
+    {
+     "seed": 127,
+     "half_mm": 25.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray found (3 clusters)"
+    },
+    {
+     "seed": 128,
+     "half_mm": 25.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray found (3 clusters)"
+    },
+    {
+     "seed": 129,
+     "half_mm": 25.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray found (3 clusters)"
+    },
+    {
+     "seed": 130,
+     "half_mm": 25.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray found (3 clusters)"
+    },
+    {
+     "seed": 131,
+     "half_mm": 25.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray found (3 clusters)"
+    },
+    {
+     "seed": 132,
+     "half_mm": 25.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray found (3 clusters)"
+    },
+    {
+     "seed": 133,
+     "half_mm": 25.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray found (6 clusters)"
+    },
+    {
+     "seed": 134,
+     "half_mm": 25.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray found (4 clusters)"
+    },
+    {
+     "seed": 135,
+     "half_mm": 25.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray found (3 clusters)"
+    },
+    {
+     "seed": 136,
+     "half_mm": 25.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray found (3 clusters)"
+    },
+    {
+     "seed": 137,
+     "half_mm": 25.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray found (4 clusters)"
+    },
+    {
+     "seed": 138,
+     "half_mm": 25.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray found (3 clusters)"
+    },
+    {
+     "seed": 139,
+     "half_mm": 25.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray found (4 clusters)"
+    }
+   ],
+   "estimate_error_median": {
+    "xy_mm": 0.3476183598085595,
+    "z_mm": 0.5816272857690763,
+    "yaw_deg": 1.6931357871778447,
+    "goal_xy_mm": 0.5845771629897475
+   },
+   "estimate_error_max": {
+    "xy_mm": 0.6087988408632995,
+    "z_mm": 0.6290683755509272,
+    "yaw_deg": 1.9834387105448128,
+    "goal_xy_mm": 0.6075328574965402
+   }
+  },
+  "depth_arm_side/half0.03": {
+   "n": 40,
+   "success": 1,
+   "failures": [
+    "perception_failed"
+   ],
+   "rows": [
+    {
+     "seed": 100,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.001745556404420182,
+     "estimate_error": {
+      "xy_mm": 0.34028634622587195,
+      "z_mm": 0.6180704187942963,
+      "yaw_deg": 1.4964044462516055,
+      "goal_xy_mm": 0.557060863395789
+     },
+     "retried": false
+    },
+    {
+     "seed": 101,
+     "half_mm": 30.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray found (5 clusters)"
+    },
+    {
+     "seed": 102,
+     "half_mm": 30.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray found (3 clusters)"
+    },
+    {
+     "seed": 103,
+     "half_mm": 30.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray found (4 clusters)"
+    },
+    {
+     "seed": 104,
+     "half_mm": 30.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray found (3 clusters)"
+    },
+    {
+     "seed": 105,
+     "half_mm": 30.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray found (4 clusters)"
+    },
+    {
+     "seed": 106,
+     "half_mm": 30.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray found (4 clusters)"
+    },
+    {
+     "seed": 107,
+     "half_mm": 30.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray found (3 clusters)"
+    },
+    {
+     "seed": 108,
+     "half_mm": 30.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray found (7 clusters)"
+    },
+    {
+     "seed": 109,
+     "half_mm": 30.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray found (4 clusters)"
+    },
+    {
+     "seed": 110,
+     "half_mm": 30.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray found (4 clusters)"
+    },
+    {
+     "seed": 111,
+     "half_mm": 30.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray found (3 clusters)"
+    },
+    {
+     "seed": 112,
+     "half_mm": 30.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray found (3 clusters)"
+    },
+    {
+     "seed": 113,
+     "half_mm": 30.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray found (3 clusters)"
+    },
+    {
+     "seed": 114,
+     "half_mm": 30.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray found (3 clusters)"
+    },
+    {
+     "seed": 115,
+     "half_mm": 30.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray found (6 clusters)"
+    },
+    {
+     "seed": 116,
+     "half_mm": 30.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray found (4 clusters)"
+    },
+    {
+     "seed": 117,
+     "half_mm": 30.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray found (5 clusters)"
+    },
+    {
+     "seed": 118,
+     "half_mm": 30.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray found (5 clusters)"
+    },
+    {
+     "seed": 119,
+     "half_mm": 30.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray found (4 clusters)"
+    },
+    {
+     "seed": 120,
+     "half_mm": 30.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray found (4 clusters)"
+    },
+    {
+     "seed": 121,
+     "half_mm": 30.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray found (3 clusters)"
+    },
+    {
+     "seed": 122,
+     "half_mm": 30.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray found (4 clusters)"
+    },
+    {
+     "seed": 123,
+     "half_mm": 30.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray found (4 clusters)"
+    },
+    {
+     "seed": 124,
+     "half_mm": 30.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray found (3 clusters)"
+    },
+    {
+     "seed": 125,
+     "half_mm": 30.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray found (4 clusters)"
+    },
+    {
+     "seed": 126,
+     "half_mm": 30.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray found (3 clusters)"
+    },
+    {
+     "seed": 127,
+     "half_mm": 30.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray found (3 clusters)"
+    },
+    {
+     "seed": 128,
+     "half_mm": 30.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray found (4 clusters)"
+    },
+    {
+     "seed": 129,
+     "half_mm": 30.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray found (3 clusters)"
+    },
+    {
+     "seed": 130,
+     "half_mm": 30.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray found (3 clusters)"
+    },
+    {
+     "seed": 131,
+     "half_mm": 30.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray found (6 clusters)"
+    },
+    {
+     "seed": 132,
+     "half_mm": 30.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray found (3 clusters)"
+    },
+    {
+     "seed": 133,
+     "half_mm": 30.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray found (6 clusters)"
+    },
+    {
+     "seed": 134,
+     "half_mm": 30.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray found (6 clusters)"
+    },
+    {
+     "seed": 135,
+     "half_mm": 30.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray found (3 clusters)"
+    },
+    {
+     "seed": 136,
+     "half_mm": 30.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray found (3 clusters)"
+    },
+    {
+     "seed": 137,
+     "half_mm": 30.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray found (4 clusters)"
+    },
+    {
+     "seed": 138,
+     "half_mm": 30.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray found (4 clusters)"
+    },
+    {
+     "seed": 139,
+     "half_mm": 30.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray found (3 clusters)"
+    }
+   ],
+   "estimate_error_median": {
+    "xy_mm": 0.34028634622587195,
+    "z_mm": 0.6180704187942963,
+    "yaw_deg": 1.4964044462516055,
+    "goal_xy_mm": 0.557060863395789
+   },
+   "estimate_error_max": {
+    "xy_mm": 0.34028634622587195,
+    "z_mm": 0.6180704187942963,
+    "yaw_deg": 1.4964044462516055,
+    "goal_xy_mm": 0.557060863395789
+   }
+  },
+  "depth_arm_side/half0.035": {
+   "n": 40,
+   "success": 2,
+   "failures": [
+    "perception_failed"
+   ],
+   "rows": [
+    {
+     "seed": 100,
+     "half_mm": 35.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray found (6 clusters)"
+    },
+    {
+     "seed": 101,
+     "half_mm": 35.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray found (5 clusters)"
+    },
+    {
+     "seed": 102,
+     "half_mm": 35.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray found (3 clusters)"
+    },
+    {
+     "seed": 103,
+     "half_mm": 35.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray found (3 clusters)"
+    },
+    {
+     "seed": 104,
+     "half_mm": 35.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray found (5 clusters)"
+    },
+    {
+     "seed": 105,
+     "half_mm": 35.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray found (3 clusters)"
+    },
+    {
+     "seed": 106,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0014876654351994362,
+     "estimate_error": {
+      "xy_mm": 0.4424423964597063,
+      "z_mm": 0.5518105681442814,
+      "yaw_deg": 1.6931357871778447,
+      "goal_xy_mm": 0.5747124765324664
+     },
+     "retried": false
+    },
+    {
+     "seed": 107,
+     "half_mm": 35.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray found (4 clusters)"
+    },
+    {
+     "seed": 108,
+     "half_mm": 35.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray found (5 clusters)"
+    },
+    {
+     "seed": 109,
+     "half_mm": 35.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray found (3 clusters)"
+    },
+    {
+     "seed": 110,
+     "half_mm": 35.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray found (4 clusters)"
+    },
+    {
+     "seed": 111,
+     "half_mm": 35.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray found (3 clusters)"
+    },
+    {
+     "seed": 112,
+     "half_mm": 35.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray found (4 clusters)"
+    },
+    {
+     "seed": 113,
+     "half_mm": 35.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray found (3 clusters)"
+    },
+    {
+     "seed": 114,
+     "half_mm": 35.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray found (3 clusters)"
+    },
+    {
+     "seed": 115,
+     "half_mm": 35.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray found (5 clusters)"
+    },
+    {
+     "seed": 116,
+     "half_mm": 35.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray found (3 clusters)"
+    },
+    {
+     "seed": 117,
+     "half_mm": 35.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray found (6 clusters)"
+    },
+    {
+     "seed": 118,
+     "half_mm": 35.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray found (5 clusters)"
+    },
+    {
+     "seed": 119,
+     "half_mm": 35.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray found (5 clusters)"
+    },
+    {
+     "seed": 120,
+     "half_mm": 35.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray found (3 clusters)"
+    },
+    {
+     "seed": 121,
+     "half_mm": 35.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray found (3 clusters)"
+    },
+    {
+     "seed": 122,
+     "half_mm": 35.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray found (5 clusters)"
+    },
+    {
+     "seed": 123,
+     "half_mm": 35.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray found (3 clusters)"
+    },
+    {
+     "seed": 124,
+     "half_mm": 35.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray found (3 clusters)"
+    },
+    {
+     "seed": 125,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0011003292676973276,
+     "estimate_error": {
+      "xy_mm": 0.4171233033014774,
+      "z_mm": 0.6422157099031032,
+      "yaw_deg": 0.10201031955624099,
+      "goal_xy_mm": 0.5601377301994481
+     },
+     "retried": false
+    },
+    {
+     "seed": 126,
+     "half_mm": 35.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray found (3 clusters)"
+    },
+    {
+     "seed": 127,
+     "half_mm": 35.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray found (3 clusters)"
+    },
+    {
+     "seed": 128,
+     "half_mm": 35.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray found (3 clusters)"
+    },
+    {
+     "seed": 129,
+     "half_mm": 35.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray found (4 clusters)"
+    },
+    {
+     "seed": 130,
+     "half_mm": 35.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray found (3 clusters)"
+    },
+    {
+     "seed": 131,
+     "half_mm": 35.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray found (7 clusters)"
+    },
+    {
+     "seed": 132,
+     "half_mm": 35.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray found (3 clusters)"
+    },
+    {
+     "seed": 133,
+     "half_mm": 35.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray found (4 clusters)"
+    },
+    {
+     "seed": 134,
+     "half_mm": 35.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray found (5 clusters)"
+    },
+    {
+     "seed": 135,
+     "half_mm": 35.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray found (3 clusters)"
+    },
+    {
+     "seed": 136,
+     "half_mm": 35.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray found (3 clusters)"
+    },
+    {
+     "seed": 137,
+     "half_mm": 35.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray found (4 clusters)"
+    },
+    {
+     "seed": 138,
+     "half_mm": 35.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray found (6 clusters)"
+    },
+    {
+     "seed": 139,
+     "half_mm": 35.0,
+     "success": false,
+     "reasons": [
+      "perception_failed"
+     ],
+     "error": "perception failed: block missing, tray found (3 clusters)"
+    }
+   ],
+   "estimate_error_median": {
+    "xy_mm": 0.42978284988059184,
+    "z_mm": 0.5970131390236924,
+    "yaw_deg": 0.8975730533670429,
+    "goal_xy_mm": 0.5674251033659572
+   },
+   "estimate_error_max": {
+    "xy_mm": 0.4424423964597063,
+    "z_mm": 0.6422157099031032,
+    "yaw_deg": 1.6931357871778447,
+    "goal_xy_mm": 0.5747124765324664
+   }
+  },
+  "depth_calib_1deg_10mm_wrist_tray/half0.025": {
+   "n": 40,
+   "success": 38,
+   "failures": [
+    "not_released_and_settled_at_goal"
+   ],
+   "rows": [
+    {
+     "seed": 100,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.012177946249170792,
+     "estimate_error": {
+      "xy_mm": 16.427605255589206,
+      "z_mm": 5.233671405990383,
+      "yaw_deg": 0.5035955537483974,
+      "goal_xy_mm": 13.634037918840514
+     },
+     "retried": false,
+     "wrist_failed": false,
+     "wrist_error": {
+      "xy_mm": 12.88425650927102,
+      "yaw_deg": 0.4964044462516168
+     },
+     "tray_look_failed": false,
+     "tray_look_error": {
+      "tray_xy_mm": 17.081200019687373
+     }
+    },
+    {
+     "seed": 101,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.02382815770313163,
+     "estimate_error": {
+      "xy_mm": 12.796636622982446,
+      "z_mm": 3.6763194452918495,
+      "yaw_deg": 0.01745018644741525,
+      "goal_xy_mm": 12.60028264975486
+     },
+     "retried": false,
+     "wrist_failed": false,
+     "wrist_error": {
+      "xy_mm": 17.453019197597495,
+      "yaw_deg": 0.9825498135525734
+     },
+     "tray_look_failed": false,
+     "tray_look_error": {
+      "tray_xy_mm": 14.444800233221843
+     }
+    },
+    {
+     "seed": 102,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.013647827371166479,
+     "estimate_error": {
+      "xy_mm": 17.97505860358397,
+      "z_mm": 7.606613784765033,
+      "yaw_deg": 0.45212390800049573,
+      "goal_xy_mm": 13.715227599163503
+     },
+     "retried": false,
+     "wrist_failed": false,
+     "wrist_error": {
+      "xy_mm": 11.654101925949709,
+      "yaw_deg": 1.4521239080004844
+     },
+     "tray_look_failed": false,
+     "tray_look_error": {
+      "tray_xy_mm": 10.58441023573551
+     }
+    },
+    {
+     "seed": 103,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.009189936919080917,
+     "estimate_error": {
+      "xy_mm": 17.384563777371998,
+      "z_mm": 8.717371091248358,
+      "yaw_deg": 0.6526867938664818,
+      "goal_xy_mm": 19.286763785452393
+     },
+     "retried": false,
+     "wrist_failed": false,
+     "wrist_error": {
+      "xy_mm": 11.0698363975487,
+      "yaw_deg": 1.3473132061335147
+     },
+     "tray_look_failed": false,
+     "tray_look_error": {
+      "tray_xy_mm": 21.785429622724706
+     }
+    },
+    {
+     "seed": 104,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.029406765523227817,
+     "estimate_error": {
+      "xy_mm": 20.780224304839944,
+      "z_mm": 5.996258276048914,
+      "yaw_deg": 1.8130846741140312,
+      "goal_xy_mm": 20.616803208758835
+     },
+     "retried": false,
+     "wrist_failed": false,
+     "wrist_error": {
+      "xy_mm": 12.99178844061592,
+      "yaw_deg": 0.18691532588597173
+     },
+     "tray_look_failed": false,
+     "tray_look_error": {
+      "tray_xy_mm": 25.499484640338764
+     }
+    },
+    {
+     "seed": 105,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.012163589667185904,
+     "estimate_error": {
+      "xy_mm": 26.51015107609348,
+      "z_mm": 6.806016138567967,
+      "yaw_deg": 0.9296690332832653,
+      "goal_xy_mm": 26.600852928738014
+     },
+     "retried": false,
+     "wrist_failed": false,
+     "wrist_error": {
+      "xy_mm": 7.528603430644027,
+      "yaw_deg": 0.07033096671673607
+     },
+     "tray_look_failed": false,
+     "tray_look_error": {
+      "tray_xy_mm": 9.323746894997909
+     }
+    },
+    {
+     "seed": 106,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.012899792219737643,
+     "estimate_error": {
+      "xy_mm": 5.248108050626681,
+      "z_mm": 4.802938165775019,
+      "yaw_deg": 1.6931357871778447,
+      "goal_xy_mm": 7.882944458412633
+     },
+     "retried": false,
+     "wrist_failed": false,
+     "wrist_error": {
+      "xy_mm": 13.037624213891663,
+      "yaw_deg": 1.3068642128221468
+     },
+     "tray_look_failed": false,
+     "tray_look_error": {
+      "tray_xy_mm": 14.946368325935167
+     }
+    },
+    {
+     "seed": 107,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.008733595987420007,
+     "estimate_error": {
+      "xy_mm": 16.097967975229228,
+      "z_mm": 7.619927327385961,
+      "yaw_deg": 0.03007883367761168,
+      "goal_xy_mm": 20.487802867954358
+     },
+     "retried": false,
+     "wrist_failed": false,
+     "wrist_error": {
+      "xy_mm": 8.300076898343352,
+      "yaw_deg": 1.9699211663223912
+     },
+     "tray_look_failed": false,
+     "tray_look_error": {
+      "tray_xy_mm": 6.972395428563143
+     }
+    },
+    {
+     "seed": 108,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.011406485213615768,
+     "estimate_error": {
+      "xy_mm": 23.69791504804277,
+      "z_mm": 5.837237721355904,
+      "yaw_deg": 2.01272186722844,
+      "goal_xy_mm": 21.392383851618256
+     },
+     "retried": false,
+     "wrist_failed": false,
+     "wrist_error": {
+      "xy_mm": 11.099240218526386,
+      "yaw_deg": 1.012721867228445
+     },
+     "tray_look_failed": false,
+     "tray_look_error": {
+      "tray_xy_mm": 11.646899881872512
+     }
+    },
+    {
+     "seed": 109,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.02507164861050753,
+     "estimate_error": {
+      "xy_mm": 31.062330717655794,
+      "z_mm": 2.9059041771260716,
+      "yaw_deg": 0.6453548127269961,
+      "goal_xy_mm": 31.83364275495927
+     },
+     "retried": false,
+     "wrist_failed": false,
+     "wrist_error": {
+      "xy_mm": 2.820769301357819,
+      "yaw_deg": 1.6453548127270103
+     },
+     "tray_look_failed": false,
+     "tray_look_error": {
+      "tray_xy_mm": 26.429992127436194
+     }
+    },
+    {
+     "seed": 110,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.01611895015068288,
+     "estimate_error": {
+      "xy_mm": 9.146077665476286,
+      "z_mm": 8.091798808957826,
+      "yaw_deg": 1.3169186454924997,
+      "goal_xy_mm": 10.726495194693362
+     },
+     "retried": false,
+     "wrist_failed": false,
+     "wrist_error": {
+      "xy_mm": 6.872950684675476,
+      "yaw_deg": 0.31691864549251114
+     },
+     "tray_look_failed": false,
+     "tray_look_error": {
+      "tray_xy_mm": 28.22645927135169
+     }
+    },
+    {
+     "seed": 111,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.013495278847801946,
+     "estimate_error": {
+      "xy_mm": 25.195372630855818,
+      "z_mm": 5.56945073608334,
+      "yaw_deg": 0.0658645341831433,
+      "goal_xy_mm": 24.883347238033636
+     },
+     "retried": false,
+     "wrist_failed": false,
+     "wrist_error": {
+      "xy_mm": 9.160189495254823,
+      "yaw_deg": 0.0658645341831433
+     },
+     "tray_look_failed": false,
+     "tray_look_error": {
+      "tray_xy_mm": 13.818056574946421
+     }
+    },
+    {
+     "seed": 112,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.029539633490436805,
+     "estimate_error": {
+      "xy_mm": 21.24017620458065,
+      "z_mm": 10.48952480809995,
+      "yaw_deg": 1.9054154165572232,
+      "goal_xy_mm": 20.547988137453842
+     },
+     "retried": false,
+     "wrist_failed": false,
+     "wrist_error": {
+      "xy_mm": 4.63751538847323,
+      "yaw_deg": 0.9054154165572282
+     },
+     "tray_look_failed": false,
+     "tray_look_error": {
+      "tray_xy_mm": 26.57373902578428
+     }
+    },
+    {
+     "seed": 113,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.019168223587174217,
+     "estimate_error": {
+      "xy_mm": 26.89051630259471,
+      "z_mm": 6.45349379891166,
+      "yaw_deg": 0.430455598345123,
+      "goal_xy_mm": 23.870603486446008
+     },
+     "retried": false,
+     "wrist_failed": false,
+     "wrist_error": {
+      "xy_mm": 8.513702782813894,
+      "yaw_deg": 0.5695444016548912
+     },
+     "tray_look_failed": false,
+     "tray_look_error": {
+      "tray_xy_mm": 7.186173017369425
+     }
+    },
+    {
+     "seed": 114,
+     "half_mm": 25.0,
+     "success": false,
+     "reasons": [
+      "not_released_and_settled_at_goal"
+     ],
+     "final_error_m": 0.03328265944828337,
+     "estimate_error": {
+      "xy_mm": 13.98529433879942,
+      "z_mm": 6.7706918247272085,
+      "yaw_deg": 1.1185711782355223,
+      "goal_xy_mm": 14.958379792103836
+     },
+     "retried": false,
+     "wrist_failed": false,
+     "wrist_error": {
+      "xy_mm": 16.02772799266901,
+      "yaw_deg": 0.8814288217644741
+     },
+     "tray_look_failed": false,
+     "tray_look_error": {
+      "tray_xy_mm": 10.989752108024044
+     }
+    },
+    {
+     "seed": 115,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.025340070693841508,
+     "estimate_error": {
+      "xy_mm": 25.492427921864493,
+      "z_mm": 4.550923242530272,
+      "yaw_deg": 1.8963816204640822,
+      "goal_xy_mm": 25.419483345006608
+     },
+     "retried": false,
+     "wrist_failed": false,
+     "wrist_error": {
+      "xy_mm": 11.84181770750552,
+      "yaw_deg": 2.103618379535923
+     },
+     "tray_look_failed": false,
+     "tray_look_error": {
+      "tray_xy_mm": 31.724176297837914
+     }
+    },
+    {
+     "seed": 116,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.010531865057284814,
+     "estimate_error": {
+      "xy_mm": 22.406110814739456,
+      "z_mm": 8.521640693626795,
+      "yaw_deg": 0.652188862730716,
+      "goal_xy_mm": 23.36830564677099
+     },
+     "retried": false,
+     "wrist_failed": false,
+     "wrist_error": {
+      "xy_mm": 8.200129006169917,
+      "yaw_deg": 0.652188862730716
+     },
+     "tray_look_failed": false,
+     "tray_look_error": {
+      "tray_xy_mm": 18.345290873821476
+     }
+    },
+    {
+     "seed": 117,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.007136063149292588,
+     "estimate_error": {
+      "xy_mm": 23.80133257668004,
+      "z_mm": 10.389826333810216,
+      "yaw_deg": 1.2605555046240875,
+      "goal_xy_mm": 26.025341400443388
+     },
+     "retried": false,
+     "wrist_failed": false,
+     "wrist_error": {
+      "xy_mm": 4.937333738785621,
+      "yaw_deg": 0.7394444953759154
+     },
+     "tray_look_failed": false,
+     "tray_look_error": {
+      "tray_xy_mm": 9.070217762919944
+     }
+    },
+    {
+     "seed": 118,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.018321209347324716,
+     "estimate_error": {
+      "xy_mm": 14.537520520106863,
+      "z_mm": 8.348971508105242,
+      "yaw_deg": 0.6634974614474889,
+      "goal_xy_mm": 11.83716514576542
+     },
+     "retried": false,
+     "wrist_failed": false,
+     "wrist_error": {
+      "xy_mm": 4.968255280557431,
+      "yaw_deg": 1.6634974614474902
+     },
+     "tray_look_failed": false,
+     "tray_look_error": {
+      "tray_xy_mm": 23.169418626656988
+     }
+    },
+    {
+     "seed": 119,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.025478791732466158,
+     "estimate_error": {
+      "xy_mm": 12.246833214965328,
+      "z_mm": 7.969890590941924,
+      "yaw_deg": 1.1520504951471944,
+      "goal_xy_mm": 10.168544887237164
+     },
+     "retried": false,
+     "wrist_failed": false,
+     "wrist_error": {
+      "xy_mm": 13.938822234068214,
+      "yaw_deg": 1.1520504951471944
+     },
+     "tray_look_failed": false,
+     "tray_look_error": {
+      "tray_xy_mm": 15.840263724655003
+     }
+    },
+    {
+     "seed": 120,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.02201074052068206,
+     "estimate_error": {
+      "xy_mm": 21.033462273857676,
+      "z_mm": 6.541299679197952,
+      "yaw_deg": 1.016561289455185,
+      "goal_xy_mm": 22.930129565721558
+     },
+     "retried": false,
+     "wrist_failed": false,
+     "wrist_error": {
+      "xy_mm": 9.881299681558097,
+      "yaw_deg": 0.01656128945518355
+     },
+     "tray_look_failed": false,
+     "tray_look_error": {
+      "tray_xy_mm": 21.643245533122222
+     }
+    },
+    {
+     "seed": 121,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.023803166202586365,
+     "estimate_error": {
+      "xy_mm": 29.99049018283947,
+      "z_mm": 4.994696582021625,
+      "yaw_deg": 1.0060807708366977,
+      "goal_xy_mm": 28.52243968036681
+     },
+     "retried": false,
+     "wrist_failed": false,
+     "wrist_error": {
+      "xy_mm": 5.465099899967584,
+      "yaw_deg": 1.0060807708366977
+     },
+     "tray_look_failed": false,
+     "tray_look_error": {
+      "tray_xy_mm": 21.029269469803083
+     }
+    },
+    {
+     "seed": 122,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0058301402544906605,
+     "estimate_error": {
+      "xy_mm": 32.699917931402965,
+      "z_mm": 0.5325798359010724,
+      "yaw_deg": 1.3989634918695801,
+      "goal_xy_mm": 32.32008943660453
+     },
+     "retried": false,
+     "wrist_failed": false,
+     "wrist_error": {
+      "xy_mm": 2.3739089171488885,
+      "yaw_deg": 0.6010365081304164
+     },
+     "tray_look_failed": false,
+     "tray_look_error": {
+      "tray_xy_mm": 3.6644485248463843
+     }
+    },
+    {
+     "seed": 123,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.019949548940266026,
+     "estimate_error": {
+      "xy_mm": 10.15502138396132,
+      "z_mm": 1.2574123081755957,
+      "yaw_deg": 0.4319936176180885,
+      "goal_xy_mm": 11.832702970346977
+     },
+     "retried": false,
+     "wrist_failed": false,
+     "wrist_error": {
+      "xy_mm": 15.571697959026302,
+      "yaw_deg": 1.4319936176181027
+     },
+     "tray_look_failed": false,
+     "tray_look_error": {
+      "tray_xy_mm": 26.53543362845366
+     }
+    },
+    {
+     "seed": 124,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.02343834279757946,
+     "estimate_error": {
+      "xy_mm": 15.754183593299887,
+      "z_mm": 10.092646540901033,
+      "yaw_deg": 2.6678843695102694,
+      "goal_xy_mm": 14.30012152210389
+     },
+     "retried": false,
+     "wrist_failed": false,
+     "wrist_error": {
+      "xy_mm": 4.187948960986491,
+      "yaw_deg": 1.6678843695102807
+     },
+     "tray_look_failed": false,
+     "tray_look_error": {
+      "tray_xy_mm": 29.001937860032644
+     }
+    },
+    {
+     "seed": 125,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.022958210969226817,
+     "estimate_error": {
+      "xy_mm": 19.87292376518006,
+      "z_mm": 5.170452304234314,
+      "yaw_deg": 2.1020103195562436,
+      "goal_xy_mm": 20.498617273326335
+     },
+     "retried": false,
+     "wrist_failed": false,
+     "wrist_error": {
+      "xy_mm": 13.716822372380232,
+      "yaw_deg": 1.1020103195562423
+     },
+     "tray_look_failed": false,
+     "tray_look_error": {
+      "tray_xy_mm": 28.247609142814426
+     }
+    },
+    {
+     "seed": 126,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.010281886666269077,
+     "estimate_error": {
+      "xy_mm": 22.578362046829817,
+      "z_mm": 4.374745726736857,
+      "yaw_deg": 0.21631806770054368,
+      "goal_xy_mm": 23.529721049040962
+     },
+     "retried": false,
+     "wrist_failed": false,
+     "wrist_error": {
+      "xy_mm": 5.209567127202944,
+      "yaw_deg": 0.21631806770054368
+     },
+     "tray_look_failed": false,
+     "tray_look_error": {
+      "tray_xy_mm": 5.610790400462544
+     }
+    },
+    {
+     "seed": 127,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.02051863358169776,
+     "estimate_error": {
+      "xy_mm": 4.88174051291424,
+      "z_mm": 6.547743867754665,
+      "yaw_deg": 2.286622053709632,
+      "goal_xy_mm": 6.377219260441701
+     },
+     "retried": false,
+     "wrist_failed": false,
+     "wrist_error": {
+      "xy_mm": 8.893912499967566,
+      "yaw_deg": 1.286622053709643
+     },
+     "tray_look_failed": false,
+     "tray_look_error": {
+      "tray_xy_mm": 27.16324458564588
+     }
+    },
+    {
+     "seed": 128,
+     "half_mm": 25.0,
+     "success": false,
+     "reasons": [
+      "not_released_and_settled_at_goal"
+     ],
+     "final_error_m": 0.030767821455775606,
+     "estimate_error": {
+      "xy_mm": 16.450706661767033,
+      "z_mm": 1.7979014334280445,
+      "yaw_deg": 1.758418698287488,
+      "goal_xy_mm": 17.476486557568887
+     },
+     "retried": false,
+     "wrist_failed": false,
+     "wrist_error": {
+      "xy_mm": 15.71176339967561,
+      "yaw_deg": 0.7584186982874866
+     },
+     "tray_look_failed": false,
+     "tray_look_error": {
+      "tray_xy_mm": 28.530756124525876
+     }
+    },
+    {
+     "seed": 129,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.009102041087387666,
+     "estimate_error": {
+      "xy_mm": 27.951614476552532,
+      "z_mm": 6.485788424982697,
+      "yaw_deg": 1.825470209208963,
+      "goal_xy_mm": 26.645395759688906
+     },
+     "retried": false,
+     "wrist_failed": false,
+     "wrist_error": {
+      "xy_mm": 8.090505421116179,
+      "yaw_deg": 0.17452979079103353
+     },
+     "tray_look_failed": false,
+     "tray_look_error": {
+      "tray_xy_mm": 2.1699147613203005
+     }
+    },
+    {
+     "seed": 130,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.005988679616350503,
+     "estimate_error": {
+      "xy_mm": 27.972322073433833,
+      "z_mm": 4.187500154113833,
+      "yaw_deg": 1.8456987002299508,
+      "goal_xy_mm": 26.38319077791524
+     },
+     "retried": false,
+     "wrist_failed": false,
+     "wrist_error": {
+      "xy_mm": 9.74448836210429,
+      "yaw_deg": 0.15430129977005214
+     },
+     "tray_look_failed": false,
+     "tray_look_error": {
+      "tray_xy_mm": 21.78895674236167
+     }
+    },
+    {
+     "seed": 131,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.009404247249482751,
+     "estimate_error": {
+      "xy_mm": 19.665032893199363,
+      "z_mm": 8.227590127134723,
+      "yaw_deg": 0.9611219810201038,
+      "goal_xy_mm": 19.564805885594126
+     },
+     "retried": false,
+     "wrist_failed": false,
+     "wrist_error": {
+      "xy_mm": 12.243202257459181,
+      "yaw_deg": 1.0388780189798927
+     },
+     "tray_look_failed": false,
+     "tray_look_error": {
+      "tray_xy_mm": 20.662356867468567
+     }
+    },
+    {
+     "seed": 132,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.008407581984440946,
+     "estimate_error": {
+      "xy_mm": 15.048841681727698,
+      "z_mm": 7.387605320003498,
+      "yaw_deg": 0.5854107178164417,
+      "goal_xy_mm": 19.089322451806932
+     },
+     "retried": false,
+     "wrist_failed": false,
+     "wrist_error": {
+      "xy_mm": 9.347253987826868,
+      "yaw_deg": 1.414589282183561
+     },
+     "tray_look_failed": false,
+     "tray_look_error": {
+      "tray_xy_mm": 9.122402749966863
+     }
+    },
+    {
+     "seed": 133,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.007840566091081596,
+     "estimate_error": {
+      "xy_mm": 17.588307934533436,
+      "z_mm": 4.510891038794686,
+      "yaw_deg": 0.281388315255995,
+      "goal_xy_mm": 18.50598948465156
+     },
+     "retried": false,
+     "wrist_failed": false,
+     "wrist_error": {
+      "xy_mm": 6.53217310494971,
+      "yaw_deg": 2.2813883152560233
+     },
+     "tray_look_failed": false,
+     "tray_look_error": {
+      "tray_xy_mm": 6.078798902636693
+     }
+    },
+    {
+     "seed": 134,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.003533553964828685,
+     "estimate_error": {
+      "xy_mm": 22.84090524470173,
+      "z_mm": 3.10475488548366,
+      "yaw_deg": 1.1575295015347769,
+      "goal_xy_mm": 22.74739772207381
+     },
+     "retried": false,
+     "wrist_failed": false,
+     "wrist_error": {
+      "xy_mm": 13.428864259471366,
+      "yaw_deg": 0.15752950153476264
+     },
+     "tray_look_failed": false,
+     "tray_look_error": {
+      "tray_xy_mm": 24.25491589933869
+     }
+    },
+    {
+     "seed": 135,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.015133394650746094,
+     "estimate_error": {
+      "xy_mm": 27.604043406942615,
+      "z_mm": 6.336262745201511,
+      "yaw_deg": 1.0005477535389886,
+      "goal_xy_mm": 29.014362680836445
+     },
+     "retried": false,
+     "wrist_failed": false,
+     "wrist_error": {
+      "xy_mm": 0.35264103128365293,
+      "yaw_deg": 0.0005477535389998611
+     },
+     "tray_look_failed": false,
+     "tray_look_error": {
+      "tray_xy_mm": 15.9056231490119
+     }
+    },
+    {
+     "seed": 136,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.013243219195584492,
+     "estimate_error": {
+      "xy_mm": 16.678289081540278,
+      "z_mm": 8.851990889176781,
+      "yaw_deg": 1.2515377076453078,
+      "goal_xy_mm": 17.907509353741254
+     },
+     "retried": false,
+     "wrist_failed": false,
+     "wrist_error": {
+      "xy_mm": 7.313039140240205,
+      "yaw_deg": 0.7484622923546822
+     },
+     "tray_look_failed": false,
+     "tray_look_error": {
+      "tray_xy_mm": 16.422045068607726
+     }
+    },
+    {
+     "seed": 137,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.023578425804605653,
+     "estimate_error": {
+      "xy_mm": 25.981854462718733,
+      "z_mm": 2.8220736656669603,
+      "yaw_deg": 3.179279275092057,
+      "goal_xy_mm": 24.505181046188273
+     },
+     "retried": false,
+     "wrist_failed": false,
+     "wrist_error": {
+      "xy_mm": 6.4561767709512425,
+      "yaw_deg": 1.1792792750920793
+     },
+     "tray_look_failed": false,
+     "tray_look_error": {
+      "tray_xy_mm": 35.48261194939887
+     }
+    },
+    {
+     "seed": 138,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.018090691961541474,
+     "estimate_error": {
+      "xy_mm": 17.09019862275883,
+      "z_mm": 4.207354369341509,
+      "yaw_deg": 0.15465577744201345,
+      "goal_xy_mm": 21.56041599200831
+     },
+     "retried": false,
+     "wrist_failed": false,
+     "wrist_error": {
+      "xy_mm": 7.896910622582288,
+      "yaw_deg": 1.1546557774420085
+     },
+     "tray_look_failed": false,
+     "tray_look_error": {
+      "tray_xy_mm": 21.024192142085866
+     }
+    },
+    {
+     "seed": 139,
+     "half_mm": 25.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.008303847554194324,
+     "estimate_error": {
+      "xy_mm": 28.922046470840414,
+      "z_mm": 3.685925356013437,
+      "yaw_deg": 1.0345857142103592,
+      "goal_xy_mm": 31.4883537734163
+     },
+     "retried": false,
+     "wrist_failed": false,
+     "wrist_error": {
+      "xy_mm": 5.012926512388695,
+      "yaw_deg": 1.965414285789645
+     },
+     "tray_look_failed": false,
+     "tray_look_error": {
+      "tray_xy_mm": 14.374993001571411
+     }
+    }
+   ],
+   "estimate_error_median": {
+    "xy_mm": 20.326574035010005,
+    "z_mm": 6.166260510625213,
+    "yaw_deg": 1.025573501832772,
+    "goal_xy_mm": 20.58239567310634
+   },
+   "estimate_error_max": {
+    "xy_mm": 32.699917931402965,
+    "z_mm": 10.48952480809995,
+    "yaw_deg": 3.179279275092057,
+    "goal_xy_mm": 32.32008943660453
+   }
+  },
+  "depth_calib_1deg_10mm_wrist_tray/half0.03": {
+   "n": 40,
+   "success": 36,
+   "failures": [
+    "not_released_and_settled_at_goal"
+   ],
+   "rows": [
+    {
+     "seed": 100,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.01062798132180532,
+     "estimate_error": {
+      "xy_mm": 16.48502915210195,
+      "z_mm": 5.247779474453027,
+      "yaw_deg": 0.4964044462516168,
+      "goal_xy_mm": 13.634037944933997
+     },
+     "retried": false,
+     "wrist_failed": false,
+     "wrist_error": {
+      "xy_mm": 12.958804931081962,
+      "yaw_deg": 1.4964044462516055
+     },
+     "tray_look_failed": false,
+     "tray_look_error": {
+      "tray_xy_mm": 13.214488454666292
+     }
+    },
+    {
+     "seed": 101,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.020792915180627283,
+     "estimate_error": {
+      "xy_mm": 12.777705866166064,
+      "z_mm": 3.7056370302647363,
+      "yaw_deg": 0.01745018644741525,
+      "goal_xy_mm": 12.600304418265264
+     },
+     "retried": false,
+     "wrist_failed": false,
+     "wrist_error": {
+      "xy_mm": 17.4836388674751,
+      "yaw_deg": 1.9825498135525876
+     },
+     "tray_look_failed": false,
+     "tray_look_error": {
+      "tray_xy_mm": 14.624219418481543
+     }
+    },
+    {
+     "seed": 102,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.012408548393843779,
+     "estimate_error": {
+      "xy_mm": 17.908934197878605,
+      "z_mm": 7.624594821314275,
+      "yaw_deg": 1.5478760919995072,
+      "goal_xy_mm": 13.715232753621061
+     },
+     "retried": false,
+     "wrist_failed": false,
+     "wrist_error": {
+      "xy_mm": 11.731107925640792,
+      "yaw_deg": 0.5478760919995185
+     },
+     "tray_look_failed": false,
+     "tray_look_error": {
+      "tray_xy_mm": 11.135509296704761
+     }
+    },
+    {
+     "seed": 103,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0042351949389442855,
+     "estimate_error": {
+      "xy_mm": 17.585015658432734,
+      "z_mm": 8.707314685774392,
+      "yaw_deg": 1.3473132061335147,
+      "goal_xy_mm": 19.286746385149886
+     },
+     "retried": false,
+     "wrist_failed": false,
+     "wrist_error": {
+      "xy_mm": 11.043212819179955,
+      "yaw_deg": 0.34731320613351324
+     },
+     "tray_look_failed": false,
+     "tray_look_error": {
+      "tray_xy_mm": 15.1418695211317
+     }
+    },
+    {
+     "seed": 104,
+     "half_mm": 30.0,
+     "success": false,
+     "reasons": [
+      "not_released_and_settled_at_goal"
+     ],
+     "final_error_m": 0.031089559072525762,
+     "estimate_error": {
+      "xy_mm": 20.577528316708623,
+      "z_mm": 5.970490446104818,
+      "yaw_deg": 1.8130846741140312,
+      "goal_xy_mm": 20.61682291663213
+     },
+     "retried": false,
+     "wrist_failed": false,
+     "wrist_error": {
+      "xy_mm": 13.091809559268688,
+      "yaw_deg": 0.18691532588597173
+     },
+     "tray_look_failed": false,
+     "tray_look_error": {
+      "tray_xy_mm": 28.489394895004455
+     }
+    },
+    {
+     "seed": 105,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.011576952682904386,
+     "estimate_error": {
+      "xy_mm": 26.698438800039746,
+      "z_mm": 6.816607692922343,
+      "yaw_deg": 0.07033096671673607,
+      "goal_xy_mm": 26.600824535301108
+     },
+     "retried": false,
+     "wrist_failed": false,
+     "wrist_error": {
+      "xy_mm": 7.6994164262405125,
+      "yaw_deg": 1.0703309667167376
+     },
+     "tray_look_failed": false,
+     "tray_look_error": {
+      "tray_xy_mm": 9.060896822640965
+     }
+    },
+    {
+     "seed": 106,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.015600285656561167,
+     "estimate_error": {
+      "xy_mm": 5.248559059661828,
+      "z_mm": 4.797206005242648,
+      "yaw_deg": 2.3068642128221355,
+      "goal_xy_mm": 7.882937869010736
+     },
+     "retried": false,
+     "wrist_failed": false,
+     "wrist_error": {
+      "xy_mm": 13.032464355495511,
+      "yaw_deg": 0.30686421282215803
+     },
+     "tray_look_failed": false,
+     "tray_look_error": {
+      "tray_xy_mm": 15.673125434703525
+     }
+    },
+    {
+     "seed": 107,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.023456514010054136,
+     "estimate_error": {
+      "xy_mm": 16.2937524895334,
+      "z_mm": 7.6253664427404395,
+      "yaw_deg": 0.03007883367761168,
+      "goal_xy_mm": 20.487809768364247
+     },
+     "retried": false,
+     "wrist_failed": false,
+     "wrist_error": {
+      "xy_mm": 8.425214205301602,
+      "yaw_deg": 0.03007883367761168
+     },
+     "tray_look_failed": false,
+     "tray_look_error": {
+      "tray_xy_mm": 19.16297507200534
+     }
+    },
+    {
+     "seed": 108,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.009642834628358448,
+     "estimate_error": {
+      "xy_mm": 23.53722883256174,
+      "z_mm": 5.831903503776856,
+      "yaw_deg": 0.9872781327715577,
+      "goal_xy_mm": 21.392395461753093
+     },
+     "retried": false,
+     "wrist_failed": false,
+     "wrist_error": {
+      "xy_mm": 11.185549535578275,
+      "yaw_deg": 1.012721867228445
+     },
+     "tray_look_failed": false,
+     "tray_look_error": {
+      "tray_xy_mm": 10.603866452641563
+     }
+    },
+    {
+     "seed": 109,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.02473672611665678,
+     "estimate_error": {
+      "xy_mm": 31.12225746391757,
+      "z_mm": 2.902182622910542,
+      "yaw_deg": 1.3546451872730068,
+      "goal_xy_mm": 31.833663338340028
+     },
+     "retried": false,
+     "wrist_failed": false,
+     "wrist_error": {
+      "xy_mm": 2.677256166560609,
+      "yaw_deg": 0.6453548127269961
+     },
+     "tray_look_failed": false,
+     "tray_look_error": {
+      "tray_xy_mm": 23.26745966741157
+     }
+    },
+    {
+     "seed": 110,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.010623249037056288,
+     "estimate_error": {
+      "xy_mm": 9.185385352368025,
+      "z_mm": 8.080443284811775,
+      "yaw_deg": 2.316918645492514,
+      "goal_xy_mm": 10.72649578587149
+     },
+     "retried": false,
+     "wrist_failed": false,
+     "wrist_error": {
+      "xy_mm": 6.862180032575731,
+      "yaw_deg": 0.31691864549251114
+     },
+     "tray_look_failed": false,
+     "tray_look_error": {
+      "tray_xy_mm": 21.317875140670406
+     }
+    },
+    {
+     "seed": 111,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.015821515879228518,
+     "estimate_error": {
+      "xy_mm": 24.914789757479834,
+      "z_mm": 5.563619830494114,
+      "yaw_deg": 1.065864534183132,
+      "goal_xy_mm": 24.883334612204898
+     },
+     "retried": false,
+     "wrist_failed": false,
+     "wrist_error": {
+      "xy_mm": 9.121715822464843,
+      "yaw_deg": 0.9341354658168454
+     },
+     "tray_look_failed": false,
+     "tray_look_error": {
+      "tray_xy_mm": 16.241355694152507
+     }
+    },
+    {
+     "seed": 112,
+     "half_mm": 30.0,
+     "success": false,
+     "reasons": [
+      "not_released_and_settled_at_goal"
+     ],
+     "final_error_m": 0.03224508343702566,
+     "estimate_error": {
+      "xy_mm": 20.977393744216307,
+      "z_mm": 10.54658555358717,
+      "yaw_deg": 0.9054154165572282,
+      "goal_xy_mm": 20.547996076526953
+     },
+     "retried": false,
+     "wrist_failed": false,
+     "wrist_error": {
+      "xy_mm": 4.650255523648317,
+      "yaw_deg": 0.9054154165572282
+     },
+     "tray_look_failed": false,
+     "tray_look_error": {
+      "tray_xy_mm": 29.45012467184438
+     }
+    },
+    {
+     "seed": 113,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.022873884325523616,
+     "estimate_error": {
+      "xy_mm": 26.794616495157268,
+      "z_mm": 6.477227838270347,
+      "yaw_deg": 2.4304555983451257,
+      "goal_xy_mm": 23.87061828264551
+     },
+     "retried": false,
+     "wrist_failed": false,
+     "wrist_error": {
+      "xy_mm": 8.546461082876029,
+      "yaw_deg": 1.430455598345137
+     },
+     "tray_look_failed": false,
+     "tray_look_error": {
+      "tray_xy_mm": 10.768119753514874
+     }
+    },
+    {
+     "seed": 114,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.01103879385764977,
+     "estimate_error": {
+      "xy_mm": 14.019362784099462,
+      "z_mm": 6.7123737318678,
+      "yaw_deg": 1.1185711782355223,
+      "goal_xy_mm": 14.958399873959909
+     },
+     "retried": false,
+     "wrist_failed": false,
+     "wrist_error": {
+      "xy_mm": 16.140641200168595,
+      "yaw_deg": 0.11857117823552728
+     },
+     "tray_look_failed": false,
+     "tray_look_error": {
+      "tray_xy_mm": 14.189871687002825
+     }
+    },
+    {
+     "seed": 115,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.02535609203774892,
+     "estimate_error": {
+      "xy_mm": 25.679782007592788,
+      "z_mm": 4.5430124001178305,
+      "yaw_deg": 0.10361837953589506,
+      "goal_xy_mm": 25.41948307001425
+     },
+     "retried": false,
+     "wrist_failed": false,
+     "wrist_error": {
+      "xy_mm": 11.814727141328758,
+      "yaw_deg": 0.10361837953589506
+     },
+     "tray_look_failed": false,
+     "tray_look_error": {
+      "tray_xy_mm": 27.022579097994495
+     }
+    },
+    {
+     "seed": 116,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.01110187452669642,
+     "estimate_error": {
+      "xy_mm": 22.313898336164858,
+      "z_mm": 8.576663220536764,
+      "yaw_deg": 0.652188862730716,
+      "goal_xy_mm": 23.368297926734517
+     },
+     "retried": false,
+     "wrist_failed": false,
+     "wrist_error": {
+      "xy_mm": 8.234900404938761,
+      "yaw_deg": 1.3478111372692805
+     },
+     "tray_look_failed": false,
+     "tray_look_error": {
+      "tray_xy_mm": 16.926261993684214
+     }
+    },
+    {
+     "seed": 117,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.00880923272086611,
+     "estimate_error": {
+      "xy_mm": 23.865589155100576,
+      "z_mm": 10.397255445109842,
+      "yaw_deg": 3.7394444953759134,
+      "goal_xy_mm": 26.02533171516514
+     },
+     "retried": false,
+     "wrist_failed": false,
+     "wrist_error": {
+      "xy_mm": 5.172260933298641,
+      "yaw_deg": 0.7394444953759154
+     },
+     "tray_look_failed": false,
+     "tray_look_error": {
+      "tray_xy_mm": 9.04451182611513
+     }
+    },
+    {
+     "seed": 118,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.024855103826021088,
+     "estimate_error": {
+      "xy_mm": 14.531811919689648,
+      "z_mm": 8.436124858558856,
+      "yaw_deg": 0.6634974614474889,
+      "goal_xy_mm": 11.837174887141432
+     },
+     "retried": false,
+     "wrist_failed": false,
+     "wrist_error": {
+      "xy_mm": 5.006641488687698,
+      "yaw_deg": 0.6634974614474889
+     },
+     "tray_look_failed": false,
+     "tray_look_error": {
+      "tray_xy_mm": 28.338694135851636
+     }
+    },
+    {
+     "seed": 119,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.012443792160467246,
+     "estimate_error": {
+      "xy_mm": 12.172659680498535,
+      "z_mm": 7.962988027758019,
+      "yaw_deg": 0.8479495048528021,
+      "goal_xy_mm": 10.168547160081609
+     },
+     "retried": false,
+     "wrist_failed": false,
+     "wrist_error": {
+      "xy_mm": 13.983409904897977,
+      "yaw_deg": 1.1520504951471944
+     },
+     "tray_look_failed": false,
+     "tray_look_error": {
+      "tray_xy_mm": 14.893385510905407
+     }
+    },
+    {
+     "seed": 120,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.028312572298136447,
+     "estimate_error": {
+      "xy_mm": 20.87621211669622,
+      "z_mm": 6.544949352922269,
+      "yaw_deg": 1.9834387105448128,
+      "goal_xy_mm": 22.93013187263079
+     },
+     "retried": false,
+     "wrist_failed": false,
+     "wrist_error": {
+      "xy_mm": 9.951542546165266,
+      "yaw_deg": 1.016561289455185
+     },
+     "tray_look_failed": false,
+     "tray_look_error": {
+      "tray_xy_mm": 29.095085086645387
+     }
+    },
+    {
+     "seed": 121,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.02229849459191541,
+     "estimate_error": {
+      "xy_mm": 29.943416146793382,
+      "z_mm": 4.968561962230955,
+      "yaw_deg": 2.0060807708366863,
+      "goal_xy_mm": 28.52246960404327
+     },
+     "retried": false,
+     "wrist_failed": false,
+     "wrist_error": {
+      "xy_mm": 5.594445521532167,
+      "yaw_deg": 0.006080770836683503
+     },
+     "tray_look_failed": false,
+     "tray_look_error": {
+      "tray_xy_mm": 19.037775711370163
+     }
+    },
+    {
+     "seed": 122,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.009961283330868818,
+     "estimate_error": {
+      "xy_mm": 32.63411951450323,
+      "z_mm": 0.5533351001955379,
+      "yaw_deg": 0.6010365081304164,
+      "goal_xy_mm": 32.32006153173653
+     },
+     "retried": false,
+     "wrist_failed": false,
+     "wrist_error": {
+      "xy_mm": 2.2645665942133233,
+      "yaw_deg": 0.3989634918695787
+     },
+     "tray_look_failed": false,
+     "tray_look_error": {
+      "tray_xy_mm": 7.069494994616011
+     }
+    },
+    {
+     "seed": 123,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.025064161386848555,
+     "estimate_error": {
+      "xy_mm": 10.116365910525118,
+      "z_mm": 1.2472476197876898,
+      "yaw_deg": 1.4319936176181027,
+      "goal_xy_mm": 11.832677535517968
+     },
+     "retried": false,
+     "wrist_failed": false,
+     "wrist_error": {
+      "xy_mm": 15.608973485106457,
+      "yaw_deg": 0.5680063823819002
+     },
+     "tray_look_failed": false,
+     "tray_look_error": {
+      "tray_xy_mm": 29.80139613403717
+     }
+    },
+    {
+     "seed": 124,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.02707136114478929,
+     "estimate_error": {
+      "xy_mm": 15.927611729801116,
+      "z_mm": 10.107287592854318,
+      "yaw_deg": 0.33211563048972215,
+      "goal_xy_mm": 14.300123778596191
+     },
+     "retried": false,
+     "wrist_failed": false,
+     "wrist_error": {
+      "xy_mm": 4.253394693058839,
+      "yaw_deg": 1.6678843695102807
+     },
+     "tray_look_failed": false,
+     "tray_look_error": {
+      "tray_xy_mm": 28.2080764106343
+     }
+    },
+    {
+     "seed": 125,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.024186812433623583,
+     "estimate_error": {
+      "xy_mm": 20.035730640293455,
+      "z_mm": 5.1717812580914755,
+      "yaw_deg": 0.8979896804437605,
+      "goal_xy_mm": 20.49863090115075
+     },
+     "retried": false,
+     "wrist_failed": false,
+     "wrist_error": {
+      "xy_mm": 13.799196388525527,
+      "yaw_deg": 0.8979896804437605
+     },
+     "tray_look_failed": false,
+     "tray_look_error": {
+      "tray_xy_mm": 28.619618737003698
+     }
+    },
+    {
+     "seed": 126,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.010719086317116476,
+     "estimate_error": {
+      "xy_mm": 22.544013283978153,
+      "z_mm": 4.364582829215906,
+      "yaw_deg": 0.7836819322994577,
+      "goal_xy_mm": 23.52971103119961
+     },
+     "retried": false,
+     "wrist_failed": false,
+     "wrist_error": {
+      "xy_mm": 5.200242338796139,
+      "yaw_deg": 1.783681932299459
+     },
+     "tray_look_failed": false,
+     "tray_look_error": {
+      "tray_xy_mm": 6.859653074614483
+     }
+    },
+    {
+     "seed": 127,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.025422045421085032,
+     "estimate_error": {
+      "xy_mm": 4.818515019078613,
+      "z_mm": 6.576749287943065,
+      "yaw_deg": 2.286622053709632,
+      "goal_xy_mm": 6.377215780918551
+     },
+     "retried": false,
+     "wrist_failed": false,
+     "wrist_error": {
+      "xy_mm": 8.919762334602552,
+      "yaw_deg": 1.286622053709643
+     },
+     "tray_look_failed": false,
+     "tray_look_error": {
+      "tray_xy_mm": 30.98659953075669
+     }
+    },
+    {
+     "seed": 128,
+     "half_mm": 30.0,
+     "success": false,
+     "reasons": [
+      "not_released_and_settled_at_goal"
+     ],
+     "final_error_m": 0.031076644490706826,
+     "estimate_error": {
+      "xy_mm": 16.29923941907862,
+      "z_mm": 1.7919914684220681,
+      "yaw_deg": 0.7584186982874866,
+      "goal_xy_mm": 17.476482363833977
+     },
+     "retried": false,
+     "wrist_failed": false,
+     "wrist_error": {
+      "xy_mm": 15.921690371712138,
+      "yaw_deg": 0.7584186982874866
+     },
+     "tray_look_failed": false,
+     "tray_look_error": {
+      "tray_xy_mm": 30.67861053629133
+     }
+    },
+    {
+     "seed": 129,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.009357918563951679,
+     "estimate_error": {
+      "xy_mm": 27.984230970952783,
+      "z_mm": 6.485444697410119,
+      "yaw_deg": 1.174529790791035,
+      "goal_xy_mm": 26.64538881225815
+     },
+     "retried": false,
+     "wrist_failed": false,
+     "wrist_error": {
+      "xy_mm": 8.114025435065418,
+      "yaw_deg": 0.8254702092089679
+     },
+     "tray_look_failed": false,
+     "tray_look_error": {
+      "tray_xy_mm": 1.3170679601430841
+     }
+    },
+    {
+     "seed": 130,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.011107445929566133,
+     "estimate_error": {
+      "xy_mm": 28.095080665745147,
+      "z_mm": 4.246316601930641,
+      "yaw_deg": 0.8456987002299365,
+      "goal_xy_mm": 26.383193781622953
+     },
+     "retried": false,
+     "wrist_failed": false,
+     "wrist_error": {
+      "xy_mm": 9.741775084713128,
+      "yaw_deg": 0.8456987002299365
+     },
+     "tray_look_failed": false,
+     "tray_look_error": {
+      "tray_xy_mm": 25.696285024366546
+     }
+    },
+    {
+     "seed": 131,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.00969534514217761,
+     "estimate_error": {
+      "xy_mm": 19.820014478928503,
+      "z_mm": 8.229008638084636,
+      "yaw_deg": 0.03887801897989762,
+      "goal_xy_mm": 19.564784194591105
+     },
+     "retried": false,
+     "wrist_failed": false,
+     "wrist_error": {
+      "xy_mm": 12.362834816868864,
+      "yaw_deg": 0.9611219810201038
+     },
+     "tray_look_failed": false,
+     "tray_look_error": {
+      "tray_xy_mm": 22.77002739207471
+     }
+    },
+    {
+     "seed": 132,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.017208249808321998,
+     "estimate_error": {
+      "xy_mm": 15.631612293564128,
+      "z_mm": 7.341143845566178,
+      "yaw_deg": 2.4145892821835497,
+      "goal_xy_mm": 19.089305095933124
+     },
+     "retried": false,
+     "wrist_failed": false,
+     "wrist_error": {
+      "xy_mm": 9.27999324917748,
+      "yaw_deg": 0.5854107178164417
+     },
+     "tray_look_failed": false,
+     "tray_look_error": {
+      "tray_xy_mm": 13.115527002686363
+     }
+    },
+    {
+     "seed": 133,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.01139480911449415,
+     "estimate_error": {
+      "xy_mm": 17.730704381829845,
+      "z_mm": 4.476195828730302,
+      "yaw_deg": 0.281388315255995,
+      "goal_xy_mm": 18.505979912435727
+     },
+     "retried": false,
+     "wrist_failed": false,
+     "wrist_error": {
+      "xy_mm": 6.536387592282809,
+      "yaw_deg": 0.281388315255995
+     },
+     "tray_look_failed": false,
+     "tray_look_error": {
+      "tray_xy_mm": 9.07288517353389
+     }
+    },
+    {
+     "seed": 134,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.011448290912739936,
+     "estimate_error": {
+      "xy_mm": 22.759411323012326,
+      "z_mm": 3.1503601352354353,
+      "yaw_deg": 0.15752950153476264,
+      "goal_xy_mm": 22.74739704593315
+     },
+     "retried": false,
+     "wrist_failed": false,
+     "wrist_error": {
+      "xy_mm": 13.439336007020085,
+      "yaw_deg": 1.1575295015347769
+     },
+     "tray_look_failed": false,
+     "tray_look_error": {
+      "tray_xy_mm": 30.287146718749103
+     }
+    },
+    {
+     "seed": 135,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0111273872440391,
+     "estimate_error": {
+      "xy_mm": 27.70567653026729,
+      "z_mm": 6.341735803031569,
+      "yaw_deg": 0.0005477535389998611,
+      "goal_xy_mm": 29.014367601645464
+     },
+     "retried": false,
+     "wrist_failed": false,
+     "wrist_error": {
+      "xy_mm": 0.32714843702273316,
+      "yaw_deg": 0.9994522464609888
+     },
+     "tray_look_failed": false,
+     "tray_look_error": {
+      "tray_xy_mm": 12.15236336369265
+     }
+    },
+    {
+     "seed": 136,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.01669175201913482,
+     "estimate_error": {
+      "xy_mm": 16.2504857790068,
+      "z_mm": 8.864854566532093,
+      "yaw_deg": 1.2515377076453078,
+      "goal_xy_mm": 17.907489914151494
+     },
+     "retried": false,
+     "wrist_failed": false,
+     "wrist_error": {
+      "xy_mm": 7.316174365414046,
+      "yaw_deg": 0.2515377076453065
+     },
+     "tray_look_failed": false,
+     "tray_look_error": {
+      "tray_xy_mm": 20.76414606314311
+     }
+    },
+    {
+     "seed": 137,
+     "half_mm": 30.0,
+     "success": false,
+     "reasons": [
+      "not_released_and_settled_at_goal"
+     ],
+     "final_error_m": 0.033280839796002944,
+     "estimate_error": {
+      "xy_mm": 26.167587282510922,
+      "z_mm": 2.8147633896888866,
+      "yaw_deg": 0.8207207249079489,
+      "goal_xy_mm": 24.5051830885381
+     },
+     "retried": false,
+     "wrist_failed": false,
+     "wrist_error": {
+      "xy_mm": 6.3569166233466365,
+      "yaw_deg": 1.1792792750920793
+     },
+     "tray_look_failed": false,
+     "tray_look_error": {
+      "tray_xy_mm": 37.82659818504366
+     }
+    },
+    {
+     "seed": 138,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.016531092590165195,
+     "estimate_error": {
+      "xy_mm": 17.272741416437118,
+      "z_mm": 4.20888826603966,
+      "yaw_deg": 0.8453442225579879,
+      "goal_xy_mm": 21.560414045430527
+     },
+     "retried": false,
+     "wrist_failed": false,
+     "wrist_error": {
+      "xy_mm": 7.8226480594596595,
+      "yaw_deg": 1.1546557774420085
+     },
+     "tray_look_failed": false,
+     "tray_look_error": {
+      "tray_xy_mm": 18.367371037603267
+     }
+    },
+    {
+     "seed": 139,
+     "half_mm": 30.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.018050690187623362,
+     "estimate_error": {
+      "xy_mm": 28.93269677046,
+      "z_mm": 3.67214215670238,
+      "yaw_deg": 1.0345857142103592,
+      "goal_xy_mm": 31.4883424927987
+     },
+     "retried": false,
+     "wrist_failed": false,
+     "wrist_error": {
+      "xy_mm": 4.919768317872518,
+      "yaw_deg": 0.03458571421035785
+     },
+     "tray_look_failed": false,
+     "tray_look_error": {
+      "tray_xy_mm": 20.478959081938804
+     }
+    }
+   ],
+   "estimate_error_median": {
+    "xy_mm": 20.306629478501037,
+    "z_mm": 6.1561131245681935,
+    "yaw_deg": 0.9017025485004944,
+    "goal_xy_mm": 20.582409496579544
+   },
+   "estimate_error_max": {
+    "xy_mm": 32.63411951450323,
+    "z_mm": 10.54658555358717,
+    "yaw_deg": 3.7394444953759134,
+    "goal_xy_mm": 32.32006153173653
+   }
+  },
+  "depth_calib_1deg_10mm_wrist_tray/half0.035": {
+   "n": 40,
+   "success": 39,
+   "failures": [
+    "not_released_and_settled_at_goal"
+   ],
+   "rows": [
+    {
+     "seed": 100,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.011068275058808181,
+     "estimate_error": {
+      "xy_mm": 16.58691726502545,
+      "z_mm": 5.286215466975444,
+      "yaw_deg": 0.4964044462516168,
+      "goal_xy_mm": 13.63403922518703
+     },
+     "retried": false,
+     "wrist_failed": false,
+     "wrist_error": {
+      "xy_mm": 13.042679899361378,
+      "yaw_deg": 1.4964044462516055
+     },
+     "tray_look_failed": false,
+     "tray_look_error": {
+      "tray_xy_mm": 14.158665032342467
+     }
+    },
+    {
+     "seed": 101,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.024508345418817738,
+     "estimate_error": {
+      "xy_mm": 13.061477909973288,
+      "z_mm": 3.7053607704752576,
+      "yaw_deg": 0.9825498135525734,
+      "goal_xy_mm": 12.60034341932411
+     },
+     "retried": false,
+     "wrist_failed": false,
+     "wrist_error": {
+      "xy_mm": 17.684829064753778,
+      "yaw_deg": 1.0174501864474295
+     },
+     "tray_look_failed": false,
+     "tray_look_error": {
+      "tray_xy_mm": 16.726382292787317
+     }
+    },
+    {
+     "seed": 102,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.016860572973526604,
+     "estimate_error": {
+      "xy_mm": 17.918944108600886,
+      "z_mm": 7.6313941626627715,
+      "yaw_deg": 0.45212390800049573,
+      "goal_xy_mm": 13.715239575745318
+     },
+     "retried": false,
+     "wrist_failed": false,
+     "wrist_error": {
+      "xy_mm": 11.745263112877106,
+      "yaw_deg": 0.45212390800049573
+     },
+     "tray_look_failed": false,
+     "tray_look_error": {
+      "tray_xy_mm": 13.83137903915196
+     }
+    },
+    {
+     "seed": 103,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.00905825321904462,
+     "estimate_error": {
+      "xy_mm": 17.521803812061776,
+      "z_mm": 8.690404112508869,
+      "yaw_deg": 0.34731320613351324,
+      "goal_xy_mm": 19.286735955977058
+     },
+     "retried": false,
+     "wrist_failed": false,
+     "wrist_error": {
+      "xy_mm": 11.09192310169367,
+      "yaw_deg": 0.6526867938664818
+     },
+     "tray_look_failed": false,
+     "tray_look_error": {
+      "tray_xy_mm": 17.186126264980683
+     }
+    },
+    {
+     "seed": 104,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.023724683057843116,
+     "estimate_error": {
+      "xy_mm": 20.629908554128306,
+      "z_mm": 5.951652238137858,
+      "yaw_deg": 0.18691532588597173,
+      "goal_xy_mm": 20.61684524310227
+     },
+     "retried": false,
+     "wrist_failed": false,
+     "wrist_error": {
+      "xy_mm": 13.125702688818745,
+      "yaw_deg": 0.813084674114017
+     },
+     "tray_look_failed": false,
+     "tray_look_error": {
+      "tray_xy_mm": 24.528635934700283
+     }
+    },
+    {
+     "seed": 105,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.012277855730688307,
+     "estimate_error": {
+      "xy_mm": 26.552606294570165,
+      "z_mm": 6.847971622897003,
+      "yaw_deg": 1.0703309667167376,
+      "goal_xy_mm": 26.60079014747047
+     },
+     "retried": false,
+     "wrist_failed": false,
+     "wrist_error": {
+      "xy_mm": 7.802103927843127,
+      "yaw_deg": 0.07033096671673607
+     },
+     "tray_look_failed": false,
+     "tray_look_error": {
+      "tray_xy_mm": 10.426046626646732
+     }
+    },
+    {
+     "seed": 106,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.022516383156743522,
+     "estimate_error": {
+      "xy_mm": 5.118017165756124,
+      "z_mm": 4.783441223677985,
+      "yaw_deg": 1.3068642128221468,
+      "goal_xy_mm": 7.882910476049002
+     },
+     "retried": false,
+     "wrist_failed": false,
+     "wrist_error": {
+      "xy_mm": 13.22689015252202,
+      "yaw_deg": 0.30686421282215803
+     },
+     "tray_look_failed": false,
+     "tray_look_error": {
+      "tray_xy_mm": 20.298818338043702
+     }
+    },
+    {
+     "seed": 107,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.02393246480388514,
+     "estimate_error": {
+      "xy_mm": 16.287680678842356,
+      "z_mm": 7.6277866529000855,
+      "yaw_deg": 0.9699211663223898,
+      "goal_xy_mm": 20.48781292669483
+     },
+     "retried": false,
+     "wrist_failed": false,
+     "wrist_error": {
+      "xy_mm": 8.362192663260746,
+      "yaw_deg": 0.03007883367761168
+     },
+     "tray_look_failed": false,
+     "tray_look_error": {
+      "tray_xy_mm": 24.936801197490233
+     }
+    },
+    {
+     "seed": 108,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.017187206238510253,
+     "estimate_error": {
+      "xy_mm": 23.506333973406804,
+      "z_mm": 5.810089630664369,
+      "yaw_deg": 1.012721867228445,
+      "goal_xy_mm": 21.392408273392366
+     },
+     "retried": false,
+     "wrist_failed": false,
+     "wrist_error": {
+      "xy_mm": 11.245704571504557,
+      "yaw_deg": 0.012721867228443722
+     },
+     "tray_look_failed": false,
+     "tray_look_error": {
+      "tray_xy_mm": 12.247469117642448
+     }
+    },
+    {
+     "seed": 109,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.026441132273178947,
+     "estimate_error": {
+      "xy_mm": 30.92025145430801,
+      "z_mm": 2.9432649066007537,
+      "yaw_deg": 0.35464518727299255,
+      "goal_xy_mm": 31.833679932766334
+     },
+     "retried": false,
+     "wrist_failed": false,
+     "wrist_error": {
+      "xy_mm": 2.58060459091992,
+      "yaw_deg": 1.6453548127270103
+     },
+     "tray_look_failed": false,
+     "tray_look_error": {
+      "tray_xy_mm": 25.374878785477005
+     }
+    },
+    {
+     "seed": 110,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.003098853225400611,
+     "estimate_error": {
+      "xy_mm": 9.159226633029835,
+      "z_mm": 8.065093327051354,
+      "yaw_deg": 0.31691864549251114,
+      "goal_xy_mm": 10.726499671258741
+     },
+     "retried": false,
+     "wrist_failed": false,
+     "wrist_error": {
+      "xy_mm": 6.887878624511349,
+      "yaw_deg": 0.31691864549251114
+     },
+     "tray_look_failed": false,
+     "tray_look_error": {
+      "tray_xy_mm": 10.444240992610673
+     }
+    },
+    {
+     "seed": 111,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.015392238383637945,
+     "estimate_error": {
+      "xy_mm": 25.05308570821461,
+      "z_mm": 5.580876472888504,
+      "yaw_deg": 0.9341354658168454,
+      "goal_xy_mm": 24.883298191654692
+     },
+     "retried": false,
+     "wrist_failed": false,
+     "wrist_error": {
+      "xy_mm": 9.204985460731095,
+      "yaw_deg": 0.9341354658168454
+     },
+     "tray_look_failed": false,
+     "tray_look_error": {
+      "tray_xy_mm": 14.854159466362871
+     }
+    },
+    {
+     "seed": 112,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.023211697873347408,
+     "estimate_error": {
+      "xy_mm": 21.113023271247805,
+      "z_mm": 10.5381693138707,
+      "yaw_deg": 0.09458458344277317,
+      "goal_xy_mm": 20.548009666714737
+     },
+     "retried": false,
+     "wrist_failed": false,
+     "wrist_error": {
+      "xy_mm": 4.741990999065534,
+      "yaw_deg": 1.0945845834427745
+     },
+     "tray_look_failed": false,
+     "tray_look_error": {
+      "tray_xy_mm": 22.9112472848272
+     }
+    },
+    {
+     "seed": 113,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.025127882689397623,
+     "estimate_error": {
+      "xy_mm": 26.69587989064274,
+      "z_mm": 6.473282995001904,
+      "yaw_deg": 0.5695444016548912,
+      "goal_xy_mm": 23.87063815037237
+     },
+     "retried": false,
+     "wrist_failed": false,
+     "wrist_error": {
+      "xy_mm": 8.596834199079796,
+      "yaw_deg": 0.5695444016548912
+     },
+     "tray_look_failed": false,
+     "tray_look_error": {
+      "tray_xy_mm": 13.10578805141695
+     }
+    },
+    {
+     "seed": 114,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.028799989921506643,
+     "estimate_error": {
+      "xy_mm": 14.028544798949081,
+      "z_mm": 6.73992468690595,
+      "yaw_deg": 0.11857117823552728,
+      "goal_xy_mm": 14.958423114576858
+     },
+     "retried": false,
+     "wrist_failed": false,
+     "wrist_error": {
+      "xy_mm": 16.213028106344133,
+      "yaw_deg": 0.11857117823552728
+     },
+     "tray_look_failed": false,
+     "tray_look_error": {
+      "tray_xy_mm": 12.78078296464006
+     }
+    },
+    {
+     "seed": 115,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.021515555354426775,
+     "estimate_error": {
+      "xy_mm": 25.692722913207053,
+      "z_mm": 4.559040138023766,
+      "yaw_deg": 0.8963816204640936,
+      "goal_xy_mm": 25.419484980571305
+     },
+     "retried": false,
+     "wrist_failed": false,
+     "wrist_error": {
+      "xy_mm": 11.832553110775255,
+      "yaw_deg": 0.8963816204640936
+     },
+     "tray_look_failed": false,
+     "tray_look_error": {
+      "tray_xy_mm": 20.905233447462898
+     }
+    },
+    {
+     "seed": 116,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.014606508229784904,
+     "estimate_error": {
+      "xy_mm": 22.329650688127142,
+      "z_mm": 8.569312014817164,
+      "yaw_deg": 0.652188862730716,
+      "goal_xy_mm": 23.36829345928332
+     },
+     "retried": false,
+     "wrist_failed": false,
+     "wrist_error": {
+      "xy_mm": 8.260273132163745,
+      "yaw_deg": 1.3478111372692805
+     },
+     "tray_look_failed": false,
+     "tray_look_error": {
+      "tray_xy_mm": 19.940023013975413
+     }
+    },
+    {
+     "seed": 117,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.02317640006605397,
+     "estimate_error": {
+      "xy_mm": 23.893620074073784,
+      "z_mm": 10.39021493641816,
+      "yaw_deg": 1.739444495375904,
+      "goal_xy_mm": 26.025305614567312
+     },
+     "retried": false,
+     "wrist_failed": false,
+     "wrist_error": {
+      "xy_mm": 5.25675066431464,
+      "yaw_deg": 1.739444495375904
+     },
+     "tray_look_failed": false,
+     "tray_look_error": {
+      "tray_xy_mm": 22.19204273239739
+     }
+    },
+    {
+     "seed": 118,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.024755223123289087,
+     "estimate_error": {
+      "xy_mm": 14.265833486848551,
+      "z_mm": 8.409417907189573,
+      "yaw_deg": 0.6634974614474889,
+      "goal_xy_mm": 11.837178856503453
+     },
+     "retried": false,
+     "wrist_failed": false,
+     "wrist_error": {
+      "xy_mm": 4.977651595510733,
+      "yaw_deg": 1.6634974614474902
+     },
+     "tray_look_failed": false,
+     "tray_look_error": {
+      "tray_xy_mm": 26.11622045212989
+     }
+    },
+    {
+     "seed": 119,
+     "half_mm": 35.0,
+     "success": false,
+     "reasons": [
+      "not_released_and_settled_at_goal"
+     ],
+     "final_error_m": 0.03405652216356776,
+     "estimate_error": {
+      "xy_mm": 12.194036209702597,
+      "z_mm": 7.957268910322092,
+      "yaw_deg": 0.15205049514719302,
+      "goal_xy_mm": 10.16854747366674
+     },
+     "retried": false,
+     "wrist_failed": false,
+     "wrist_error": {
+      "xy_mm": 14.015182223635092,
+      "yaw_deg": 1.1520504951471944
+     },
+     "tray_look_failed": false,
+     "tray_look_error": {
+      "tray_xy_mm": 21.49038226882858
+     }
+    },
+    {
+     "seed": 120,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.0240846875285426,
+     "estimate_error": {
+      "xy_mm": 20.93245417019229,
+      "z_mm": 6.564419492076135,
+      "yaw_deg": 1.016561289455185,
+      "goal_xy_mm": 22.930132533786395
+     },
+     "retried": false,
+     "wrist_failed": false,
+     "wrist_error": {
+      "xy_mm": 10.070533224071038,
+      "yaw_deg": 0.01656128945518355
+     },
+     "tray_look_failed": false,
+     "tray_look_error": {
+      "tray_xy_mm": 28.222380181009388
+     }
+    },
+    {
+     "seed": 121,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.027314749589537366,
+     "estimate_error": {
+      "xy_mm": 29.97928547639103,
+      "z_mm": 4.9631319564956495,
+      "yaw_deg": 0.9939192291633306,
+      "goal_xy_mm": 28.52249506466024
+     },
+     "retried": false,
+     "wrist_failed": false,
+     "wrist_error": {
+      "xy_mm": 5.560044582818072,
+      "yaw_deg": 1.0060807708366977
+     },
+     "tray_look_failed": false,
+     "tray_look_error": {
+      "tray_xy_mm": 23.700102303140746
+     }
+    },
+    {
+     "seed": 122,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.010048791041672195,
+     "estimate_error": {
+      "xy_mm": 32.47796261259655,
+      "z_mm": 0.562047963599932,
+      "yaw_deg": 1.3989634918695801,
+      "goal_xy_mm": 32.320039214826345
+     },
+     "retried": false,
+     "wrist_failed": false,
+     "wrist_error": {
+      "xy_mm": 2.1837752667699473,
+      "yaw_deg": 0.6010365081304164
+     },
+     "tray_look_failed": false,
+     "tray_look_error": {
+      "tray_xy_mm": 9.569884766730166
+     }
+    },
+    {
+     "seed": 123,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.018761373000612206,
+     "estimate_error": {
+      "xy_mm": 10.017860721005302,
+      "z_mm": 1.2441068933213977,
+      "yaw_deg": 0.5680063823819002,
+      "goal_xy_mm": 11.832654732050681
+     },
+     "retried": false,
+     "wrist_failed": false,
+     "wrist_error": {
+      "xy_mm": 15.767274506672903,
+      "yaw_deg": 1.4319936176181027
+     },
+     "tray_look_failed": false,
+     "tray_look_error": {
+      "tray_xy_mm": 19.19289685376558
+     }
+    },
+    {
+     "seed": 124,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.015517148305024007,
+     "estimate_error": {
+      "xy_mm": 16.033836812417203,
+      "z_mm": 10.156670081726215,
+      "yaw_deg": 0.6678843695102665,
+      "goal_xy_mm": 14.30012671018744
+     },
+     "retried": false,
+     "wrist_failed": false,
+     "wrist_error": {
+      "xy_mm": 4.134403667085226,
+      "yaw_deg": 0.33211563048972215
+     },
+     "tray_look_failed": false,
+     "tray_look_error": {
+      "tray_xy_mm": 14.233949186406045
+     }
+    },
+    {
+     "seed": 125,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.028298671560871666,
+     "estimate_error": {
+      "xy_mm": 20.149994471057994,
+      "z_mm": 5.13870081345704,
+      "yaw_deg": 0.10201031955624099,
+      "goal_xy_mm": 20.498664166293327
+     },
+     "retried": false,
+     "wrist_failed": false,
+     "wrist_error": {
+      "xy_mm": 13.819007431951817,
+      "yaw_deg": 0.10201031955624099
+     },
+     "tray_look_failed": false,
+     "tray_look_error": {
+      "tray_xy_mm": 32.899478819684624
+     }
+    },
+    {
+     "seed": 126,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.01160770869614309,
+     "estimate_error": {
+      "xy_mm": 22.455530166670556,
+      "z_mm": 4.334763174060632,
+      "yaw_deg": 1.783681932299459,
+      "goal_xy_mm": 23.529707694544324
+     },
+     "retried": false,
+     "wrist_failed": false,
+     "wrist_error": {
+      "xy_mm": 5.170940724851511,
+      "yaw_deg": 0.7836819322994577
+     },
+     "tray_look_failed": false,
+     "tray_look_error": {
+      "tray_xy_mm": 9.583335520656952
+     }
+    },
+    {
+     "seed": 127,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.017928983304947084,
+     "estimate_error": {
+      "xy_mm": 4.8303805306473695,
+      "z_mm": 6.551911010312036,
+      "yaw_deg": 0.2866220537096289,
+      "goal_xy_mm": 6.377214262949833
+     },
+     "retried": false,
+     "wrist_failed": false,
+     "wrist_error": {
+      "xy_mm": 8.948601871747057,
+      "yaw_deg": 2.286622053709632
+     },
+     "tray_look_failed": false,
+     "tray_look_error": {
+      "tray_xy_mm": 22.282965096783528
+     }
+    },
+    {
+     "seed": 128,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.024048520315270907,
+     "estimate_error": {
+      "xy_mm": 16.27361291640003,
+      "z_mm": 1.810826741836212,
+      "yaw_deg": 0.7584186982874866,
+      "goal_xy_mm": 17.47647826065336
+     },
+     "retried": false,
+     "wrist_failed": false,
+     "wrist_error": {
+      "xy_mm": 15.959850852116656,
+      "yaw_deg": 1.2415813017125161
+     },
+     "tray_look_failed": false,
+     "tray_look_error": {
+      "tray_xy_mm": 21.71844999588178
+     }
+    },
+    {
+     "seed": 129,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.021351053961172026,
+     "estimate_error": {
+      "xy_mm": 27.284731133015477,
+      "z_mm": 6.468720487807521,
+      "yaw_deg": 1.174529790791035,
+      "goal_xy_mm": 26.645388293800913
+     },
+     "retried": false,
+     "wrist_failed": false,
+     "wrist_error": {
+      "xy_mm": 8.224835947165039,
+      "yaw_deg": 1.174529790791035
+     },
+     "tray_look_failed": false,
+     "tray_look_error": {
+      "tray_xy_mm": 13.130366637570322
+     }
+    },
+    {
+     "seed": 130,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.018294264019176675,
+     "estimate_error": {
+      "xy_mm": 28.051636816742768,
+      "z_mm": 4.214659544136912,
+      "yaw_deg": 0.15430129977005214,
+      "goal_xy_mm": 26.383200852648372
+     },
+     "retried": false,
+     "wrist_failed": false,
+     "wrist_error": {
+      "xy_mm": 9.750905072120414,
+      "yaw_deg": 0.15430129977005214
+     },
+     "tray_look_failed": false,
+     "tray_look_error": {
+      "tray_xy_mm": 30.398403861968657
+     }
+    },
+    {
+     "seed": 131,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.017128734264974698,
+     "estimate_error": {
+      "xy_mm": 19.664729404943625,
+      "z_mm": 8.230609108096816,
+      "yaw_deg": 1.0388780189798927,
+      "goal_xy_mm": 19.564758781813595
+     },
+     "retried": false,
+     "wrist_failed": false,
+     "wrist_error": {
+      "xy_mm": 12.379415767342755,
+      "yaw_deg": 0.9611219810201038
+     },
+     "tray_look_failed": false,
+     "tray_look_error": {
+      "tray_xy_mm": 26.76397262495967
+     }
+    },
+    {
+     "seed": 132,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.019665946730475222,
+     "estimate_error": {
+      "xy_mm": 15.652150252527104,
+      "z_mm": 7.305672425551898,
+      "yaw_deg": 1.414589282183561,
+      "goal_xy_mm": 19.08928807014098
+     },
+     "retried": false,
+     "wrist_failed": false,
+     "wrist_error": {
+      "xy_mm": 9.37236029562819,
+      "yaw_deg": 0.41458928218354696
+     },
+     "tray_look_failed": false,
+     "tray_look_error": {
+      "tray_xy_mm": 13.428835343912347
+     }
+    },
+    {
+     "seed": 133,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.009415930662425897,
+     "estimate_error": {
+      "xy_mm": 17.65265530494747,
+      "z_mm": 4.453834573621182,
+      "yaw_deg": 0.281388315255995,
+      "goal_xy_mm": 18.505976277181073
+     },
+     "retried": false,
+     "wrist_failed": false,
+     "wrist_error": {
+      "xy_mm": 6.553919164413574,
+      "yaw_deg": 2.2813883152560233
+     },
+     "tray_look_failed": false,
+     "tray_look_error": {
+      "tray_xy_mm": 7.320700989145779
+     }
+    },
+    {
+     "seed": 134,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.015446343983922363,
+     "estimate_error": {
+      "xy_mm": 22.932288740768332,
+      "z_mm": 3.131117047080377,
+      "yaw_deg": 1.8424704984652147,
+      "goal_xy_mm": 22.74739982988914
+     },
+     "retried": false,
+     "wrist_failed": false,
+     "wrist_error": {
+      "xy_mm": 13.580736380349084,
+      "yaw_deg": 1.1575295015347769
+     },
+     "tray_look_failed": false,
+     "tray_look_error": {
+      "tray_xy_mm": 33.50835453505041
+     }
+    },
+    {
+     "seed": 135,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.013529612152387134,
+     "estimate_error": {
+      "xy_mm": 27.72775847283963,
+      "z_mm": 6.370816729009861,
+      "yaw_deg": 0.9994522464609888,
+      "goal_xy_mm": 29.014372854378838
+     },
+     "retried": false,
+     "wrist_failed": false,
+     "wrist_error": {
+      "xy_mm": 0.24473180420632393,
+      "yaw_deg": 0.9994522464609888
+     },
+     "tray_look_failed": false,
+     "tray_look_error": {
+      "tray_xy_mm": 14.097725152297972
+     }
+    },
+    {
+     "seed": 136,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.009310041551491715,
+     "estimate_error": {
+      "xy_mm": 16.236052304348615,
+      "z_mm": 8.884317491855427,
+      "yaw_deg": 0.7484622923546822,
+      "goal_xy_mm": 17.907467120206025
+     },
+     "retried": false,
+     "wrist_failed": false,
+     "wrist_error": {
+      "xy_mm": 7.441555510477116,
+      "yaw_deg": 0.7484622923546822
+     },
+     "tray_look_failed": false,
+     "tray_look_error": {
+      "tray_xy_mm": 11.90603086545788
+     }
+    },
+    {
+     "seed": 137,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.023099151101073984,
+     "estimate_error": {
+      "xy_mm": 25.95975151693647,
+      "z_mm": 2.8122531619077034,
+      "yaw_deg": 1.1792792750920793,
+      "goal_xy_mm": 24.50519014560549
+     },
+     "retried": false,
+     "wrist_failed": false,
+     "wrist_error": {
+      "xy_mm": 6.415147459907913,
+      "yaw_deg": 0.17927927509206526
+     },
+     "tray_look_failed": false,
+     "tray_look_error": {
+      "tray_xy_mm": 26.567671061518947
+     }
+    },
+    {
+     "seed": 138,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.013925921964000092,
+     "estimate_error": {
+      "xy_mm": 17.188912333532123,
+      "z_mm": 4.234789539063727,
+      "yaw_deg": 2.15465577744201,
+      "goal_xy_mm": 21.560418046266435
+     },
+     "retried": false,
+     "wrist_failed": false,
+     "wrist_error": {
+      "xy_mm": 7.702974881733594,
+      "yaw_deg": 0.15465577744201345
+     },
+     "tray_look_failed": false,
+     "tray_look_error": {
+      "tray_xy_mm": 16.03713619132144
+     }
+    },
+    {
+     "seed": 139,
+     "half_mm": 35.0,
+     "success": true,
+     "reasons": [],
+     "final_error_m": 0.021711653785039486,
+     "estimate_error": {
+      "xy_mm": 28.834766702358895,
+      "z_mm": 3.6959105871620657,
+      "yaw_deg": 0.9654142857896436,
+      "goal_xy_mm": 31.4883395332076
+     },
+     "retried": false,
+     "wrist_failed": false,
+     "wrist_error": {
+      "xy_mm": 5.062177689327507,
+      "yaw_deg": 0.9654142857896436
+     },
+     "tray_look_failed": false,
+     "tray_look_error": {
+      "tray_xy_mm": 24.140500975513792
+     }
+    }
+   ],
+   "estimate_error_median": {
+    "xy_mm": 20.38995151259315,
+    "z_mm": 6.1612344835738595,
+    "yaw_deg": 0.8274001593757901,
+    "goal_xy_mm": 20.582427454908505
+   },
+   "estimate_error_max": {
+    "xy_mm": 32.47796261259655,
+    "z_mm": 10.5381693138707,
+    "yaw_deg": 2.15465577744201,
+    "goal_xy_mm": 32.320039214826345
+   }
+  }
+ }
+}

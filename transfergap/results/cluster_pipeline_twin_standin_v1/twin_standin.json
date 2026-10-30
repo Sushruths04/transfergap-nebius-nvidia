@@ -1,0 +1,4 @@
+{"schema":"transfergap.twin/v1","name":"STAND-IN twin from the author's pose (sizes ASSUMED, not measured)","source":"derived from the RTMW3D pose carry vector; object 6x4x3 cm and target 12x10 cm are assumptions",
+ "object":{"size_m":[0.06,0.04,0.03],"xy_m":[0.0,0.0]},
+ "target":{"inner_size_m":[0.12,0.10],"wall_height_m":0.06,"xy_m":[-0.259,-0.012]},
+ "placement":{"yaw_deg":267.3,"anchor_xy_m":[0.45,0.0]}}

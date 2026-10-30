@@ -1,0 +1,208 @@
+{
+ "schema": "transfergap.diagnosis_report/v1",
+ "created_at": "2026-10-01T17:53:55.354535+00:00",
+ "git_commit": "bea3fedf896919ee072f019131b7e72ee97cc3ba",
+ "run_dir": "transfergap/runs/diagnose/20261001T175347Z-49747",
+ "trace_sha256": "5479d565a24d32c9edc004d8b47b3abfccff0870201dfbe9276c445e85038771",
+ "split": "dev",
+ "seeds": [
+  0,
+  1,
+  2,
+  3,
+  4,
+  5,
+  6,
+  7,
+  8,
+  9,
+  10,
+  11,
+  12,
+  13,
+  14,
+  15,
+  16,
+  17,
+  18,
+  19,
+  20,
+  21,
+  22,
+  23,
+  24,
+  25,
+  26,
+  27,
+  28,
+  29,
+  30,
+  31,
+  32,
+  33,
+  34,
+  35,
+  36,
+  37,
+  38,
+  39,
+  40,
+  41,
+  42,
+  43,
+  44,
+  45,
+  46,
+  47,
+  48,
+  49,
+  50,
+  51,
+  52,
+  53,
+  54,
+  55,
+  56,
+  57,
+  58,
+  59
+ ],
+ "rule_based": {
+  "status": "ok",
+  "proposal": {
+   "target_stage": "perception",
+   "operator": "look_again",
+   "params": {
+    "looks": 1
+   },
+   "rationale": "rule: largest dev budget item perception (+11.7 pp); default params"
+  }
+ },
+ "nemotron_super": {
+  "status": "succeeded",
+  "validated": true,
+  "receipt": "transfergap/runs/diagnose/20261001T175347Z-49747/nemotron_super_receipt.json",
+  "response_id": "chatcmpl-b984bdaec1776667",
+  "latency_s": 5.37347310899986,
+  "usage": {
+   "completion_tokens": 809,
+   "prompt_tokens": 6248,
+   "total_tokens": 7057,
+   "completion_tokens_details": {
+    "accepted_prediction_tokens": null,
+    "audio_tokens": null,
+    "reasoning_tokens": 668,
+    "rejected_prediction_tokens": null
+   },
+   "prompt_tokens_details": {
+    "audio_tokens": null,
+    "cached_tokens": 0,
+    "created_cache_tokens": 0,
+    "multimodal_tokens": null
+   },
+   "prompt_cache_hit_tokens": 0,
+   "prompt_cache_miss_tokens": 6248
+  },
+  "proposal": {
+   "target_stage": "timing",
+   "operator": "timing_scale",
+   "params": {
+    "speed_cap": 3.0
+   },
+   "rationale": "Place failures (not_released_and_settled_at_goal) are the most frequent error (26/60 trials) and often occur at high commanded speed factors (>4). The timing oracle alone improves success by ~11.7 pp, indicating that reducing execution speed mitigates placement errors. Capping the speed factor at 3.0 aligns with the range of successful trials and should reduce overshoot/settling issues without overly slowing the robot."
+  },
+  "validation_error": null
+ },
+ "heldout_touched": false,
+ "agreement": {
+  "same_operator": false,
+  "same_params": false
+ },
+ "dev_evaluation": {
+  "by_correction": {
+   "look_again[looks=1]": {
+    "full": {
+     "oracle": "none",
+     "n": 60,
+     "successes": 34,
+     "success_rate": 0.5666666666666667,
+     "wilson_95": [
+      0.44103438776125564,
+      0.6842760319531324
+     ],
+     "failure_reasons": {
+      "not_released_and_settled_at_goal": 26,
+      "no_lift": 20
+     }
+    },
+    "corrected": {
+     "oracle": "none",
+     "n": 60,
+     "successes": 40,
+     "success_rate": 0.6666666666666666,
+     "wilson_95": [
+      0.5405686645211968,
+      0.7727073847647731
+     ],
+     "failure_reasons": {
+      "not_released_and_settled_at_goal": 20,
+      "no_lift": 15
+     }
+    },
+    "paired_gap_corrected_minus_full": {
+     "delta_pp": 10.0,
+     "ci95_pp": [
+      0,
+      20.0
+     ],
+     "n": 60
+    },
+    "ci_excludes_zero": false
+   },
+   "timing_scale[speed_cap=3]": {
+    "full": {
+     "oracle": "none",
+     "n": 60,
+     "successes": 34,
+     "success_rate": 0.5666666666666667,
+     "wilson_95": [
+      0.44103438776125564,
+      0.6842760319531324
+     ],
+     "failure_reasons": {
+      "not_released_and_settled_at_goal": 26,
+      "no_lift": 20
+     }
+    },
+    "corrected": {
+     "oracle": "none",
+     "n": 60,
+     "successes": 38,
+     "success_rate": 0.6333333333333333,
+     "wilson_95": [
+      0.5068300063010303,
+      0.7437908331277456
+     ],
+     "failure_reasons": {
+      "not_released_and_settled_at_goal": 22,
+      "no_lift": 19
+     }
+    },
+    "paired_gap_corrected_minus_full": {
+     "delta_pp": 6.666666666666667,
+     "ci95_pp": [
+      0,
+      15.0
+     ],
+     "n": 60
+    },
+    "ci_excludes_zero": false
+   }
+  },
+  "by_diagnoser": {
+   "rule_based": "look_again[looks=1]",
+   "nemotron_super": "timing_scale[speed_cap=3]"
+  },
+  "note": "dev seeds only; a held-out claim needs a frozen, committed protocol"
+ }
+}

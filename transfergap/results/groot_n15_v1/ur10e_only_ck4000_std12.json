@@ -1,0 +1,124 @@
+{
+ "ckpt": "/ws/transfergap/groot_ft_ur10e/checkpoint-4000",
+ "robot": "ur10e",
+ "exec": "ensemble",
+ "block_half": null,
+ "n_distractors": 0,
+ "mixed": false,
+ "n": 12,
+ "success": 0,
+ "ci95": [
+  0.0,
+  0.243
+ ],
+ "per_seed": [
+  {
+   "seed": 6000,
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ],
+   "seconds": 28.7
+  },
+  {
+   "seed": 6001,
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ],
+   "seconds": 28.4
+  },
+  {
+   "seed": 6002,
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ],
+   "seconds": 28.4
+  },
+  {
+   "seed": 6003,
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ],
+   "seconds": 28.2
+  },
+  {
+   "seed": 6004,
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ],
+   "seconds": 28.3
+  },
+  {
+   "seed": 6005,
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ],
+   "seconds": 28.3
+  },
+  {
+   "seed": 6006,
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ],
+   "seconds": 28.2
+  },
+  {
+   "seed": 6007,
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ],
+   "seconds": 28.4
+  },
+  {
+   "seed": 6008,
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ],
+   "seconds": 28.4
+  },
+  {
+   "seed": 6009,
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ],
+   "seconds": 28.3
+  },
+  {
+   "seed": 6010,
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ],
+   "seconds": 28.3
+  },
+  {
+   "seed": 6011,
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ],
+   "seconds": 28.3
+  }
+ ]
+}

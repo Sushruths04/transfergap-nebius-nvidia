@@ -1,0 +1,34 @@
+{
+ "model": "nvidia/nemotron-3-super-120b-a12b",
+ "menu": [
+  "look_again",
+  "touch_probe_calibration",
+  "speed_cap_3"
+ ],
+ "rule_choice": "look_again",
+ "valid": true,
+ "agent_choice": "look_again",
+ "rationale": "Perception errors cause most failures (no lift/release). Re\u2011perceiving the object after approach recovers ~25 percentage points of success while minimally affecting path RMSE and speed profile, thus preserving the human's demonstrated style.",
+ "response_id": "chatcmpl-b1ca8c9ffb799941",
+ "latency_s": 2.4467981190027785,
+ "usage": {
+  "completion_tokens": 277,
+  "prompt_tokens": 752,
+  "total_tokens": 1029,
+  "completion_tokens_details": {
+   "accepted_prediction_tokens": null,
+   "audio_tokens": null,
+   "reasoning_tokens": 209,
+   "rejected_prediction_tokens": null
+  },
+  "prompt_tokens_details": {
+   "audio_tokens": null,
+   "cached_tokens": 0,
+   "created_cache_tokens": 0,
+   "multimodal_tokens": null
+  },
+  "prompt_cache_hit_tokens": 0,
+  "prompt_cache_miss_tokens": 752
+ },
+ "agrees_with_rule": true
+}

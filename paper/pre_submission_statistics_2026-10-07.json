@@ -1,0 +1,198 @@
+{
+  "all_recomputed_values_match": true,
+  "all_interval_rng_reconstruction_match": true,
+  "settings": [
+    {
+      "setting": "err_x0.5",
+      "arm": "ur5e",
+      "oracle_budget_n": 500,
+      "development_range": [
+        6000,
+        6099
+      ],
+      "evaluation_range": [
+        6100,
+        6499
+      ],
+      "selected": "perception",
+      "gain_and_ci": [
+        3.5000000000000004,
+        1.7500000000000002,
+        5.5
+      ],
+      "advantage_and_ci": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "setting": "err_x0.5",
+      "arm": "ur10e",
+      "oracle_budget_n": 500,
+      "development_range": [
+        6000,
+        6099
+      ],
+      "evaluation_range": [
+        6100,
+        6499
+      ],
+      "selected": "perception",
+      "gain_and_ci": [
+        3.0,
+        1.5,
+        4.75
+      ],
+      "advantage_and_ci": [
+        0.0,
+        0.0,
+        0.0
+      ]
+    },
+    {
+      "setting": "perc_x0.25",
+      "arm": "ur5e",
+      "oracle_budget_n": 500,
+      "development_range": [
+        6000,
+        6099
+      ],
+      "evaluation_range": [
+        6100,
+        6499
+      ],
+      "selected": "timing",
+      "gain_and_ci": [
+        14.000000000000002,
+        10.75,
+        17.5
+      ],
+      "advantage_and_ci": [
+        11.75,
+        7.5,
+        16.0
+      ]
+    },
+    {
+      "setting": "perc_x0.25",
+      "arm": "ur10e",
+      "oracle_budget_n": 500,
+      "development_range": [
+        6000,
+        6099
+      ],
+      "evaluation_range": [
+        6100,
+        6499
+      ],
+      "selected": "timing",
+      "gain_and_ci": [
+        13.0,
+        9.75,
+        16.25
+      ],
+      "advantage_and_ci": [
+        12.0,
+        7.75,
+        16.25
+      ]
+    },
+    {
+      "setting": "perc_x0.25_cal_x2",
+      "arm": "ur5e",
+      "oracle_budget_n": 500,
+      "development_range": [
+        6000,
+        6099
+      ],
+      "evaluation_range": [
+        6100,
+        6499
+      ],
+      "selected": "calibration",
+      "gain_and_ci": [
+        43.75,
+        38.75,
+        48.5
+      ],
+      "advantage_and_ci": [
+        43.75,
+        39.0,
+        48.5
+      ]
+    },
+    {
+      "setting": "perc_x0.25_cal_x2",
+      "arm": "ur10e",
+      "oracle_budget_n": 500,
+      "development_range": [
+        6000,
+        6099
+      ],
+      "evaluation_range": [
+        6100,
+        6499
+      ],
+      "selected": "calibration",
+      "gain_and_ci": [
+        44.5,
+        39.5,
+        49.5
+      ],
+      "advantage_and_ci": [
+        44.0,
+        39.0,
+        49.0
+      ]
+    },
+    {
+      "setting": "timing_measured",
+      "arm": "ur5e",
+      "oracle_budget_n": 500,
+      "development_range": [
+        7400,
+        7499
+      ],
+      "evaluation_range": [
+        7500,
+        7899
+      ],
+      "selected": "timing",
+      "gain_and_ci": [
+        42.5,
+        37.75,
+        47.5
+      ],
+      "advantage_and_ci": [
+        31.75,
+        25.0,
+        38.25
+      ]
+    },
+    {
+      "setting": "timing_measured",
+      "arm": "ur10e",
+      "oracle_budget_n": 500,
+      "development_range": [
+        7400,
+        7499
+      ],
+      "evaluation_range": [
+        7500,
+        7899
+      ],
+      "selected": "timing",
+      "gain_and_ci": [
+        44.0,
+        39.0,
+        49.0
+      ],
+      "advantage_and_ci": [
+        35.25,
+        28.749999999999996,
+        41.75
+      ]
+    }
+  ]
+}

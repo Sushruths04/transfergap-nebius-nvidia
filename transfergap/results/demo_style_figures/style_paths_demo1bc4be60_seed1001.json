@@ -1,0 +1,20 @@
+{
+ "demo": {
+  "kind": "file",
+  "path": "runs/demos/pexels_8135753_notebook.npz",
+  "sha256": "1bc4be603ba4f79f9df6a01a019fe76c759a8e1a6032a219cd8552e693e948bc",
+  "tag": "demo1bc4be60"
+ },
+ "fixes": [
+  "speed_cap_3",
+  "look_again",
+  "touch_probe_calibration"
+ ],
+ "seed": 1001,
+ "success": {
+  "ur5e|none": false,
+  "ur5e|speed_cap_3+look_again+touch_probe_calibration": true,
+  "ur10e|none": false,
+  "ur10e|speed_cap_3+look_again+touch_probe_calibration": true
+ }
+}

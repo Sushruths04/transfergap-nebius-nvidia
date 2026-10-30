@@ -1,0 +1,167 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TransferGap Live Console</title>
+<!--
+  DESIGN SHELL for the real run. It shows streams that the GPU cluster produces (MuJoCo / Isaac renders, GEM-X skeleton) and
+  sends button commands to the hub. It does no pose estimation, no robot maths and no 3D drawing in the browser (near-zero CPU).
+  Offline or before the GPU run, every pane shows its placeholder. ?design=1 fills the numbers with SAMPLE values for layout review only.
+  Ports follow live/viewer.html: webcam 8090, arm sim 8091, skeleton 8092, G1 8093 (through kubectl port-forward on 127.0.0.1).
+  KAIROS has no dedicated stream yet (PLANNED channel 8094); until then the arm pane shows the UR arms.
+-->
+<style>
+:root{--bg:#090c11;--p:#0f141c;--p2:#141b26;--line:#1d2635;--tx:#e7ecf3;--mu:#8592a6;--nv:#76b900;--cy:#38bdf8;--am:#fbbf24;--rd:#f87171}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg);color:var(--tx);font:14px/1.45 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;min-height:100vh}
+header{display:flex;align-items:center;gap:10px;padding:12px 18px;border-bottom:1px solid var(--line);background:var(--p);position:sticky;top:0;z-index:5}
+h1{font-size:16px;font-weight:700}h1 b{color:var(--nv)}
+.chip{font-size:11px;padding:3px 10px;border-radius:999px;border:1px solid var(--line);color:var(--mu)}
+.chip.ok{color:var(--nv);border-color:#2f4a00}.chip.warn{color:var(--am);border-color:#4a3a00}.chip.bad{color:var(--rd);border-color:#5a2020}
+.sp{flex:1}
+button{background:var(--p2);color:var(--tx);border:1px solid var(--line);border-radius:9px;padding:8px 14px;font:inherit;cursor:pointer}
+button:hover{border-color:var(--nv)}button.primary{background:#1d2b08;border-color:var(--nv);color:var(--nv);font-weight:650}
+input{background:var(--p2);color:var(--tx);border:1px solid var(--line);border-radius:8px;padding:6px 10px;font:inherit;width:150px}
+main{display:grid;grid-template-columns:1fr 330px;gap:12px;padding:12px 18px;max-width:1700px;margin:0 auto}
+@media(max-width:1000px){main{grid-template-columns:1fr}}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:700px){.grid{grid-template-columns:1fr}}
+.pane{background:var(--p);border:1px solid var(--line);border-radius:14px;overflow:hidden;position:relative}
+.pane .bar{display:flex;align-items:center;gap:8px;padding:8px 12px;font-size:12px;color:var(--mu);letter-spacing:.06em;text-transform:uppercase;font-weight:600}
+.pane .bar .dot{width:8px;height:8px;border-radius:50%;background:#3a4558}.pane.live .dot{background:var(--nv)}.pane.err .dot{background:var(--rd)}
+.pane .bar i{margin-left:auto;font-style:normal;text-transform:none;letter-spacing:0;font-weight:400}
+.view{aspect-ratio:16/10;background:#06080c;position:relative;display:flex;align-items:center;justify-content:center}
+.view img{width:100%;height:100%;object-fit:contain;display:none}.pane.live .view img{display:block}
+.ph{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;color:var(--mu);text-align:center;padding:18px;
+ background:repeating-linear-gradient(135deg,#0a0e14 0 14px,#0c1017 14px 28px)}
+.pane.live .ph{display:none}.ph b{color:var(--tx);font-size:15px}.ph small{max-width:300px}
+.rail{display:flex;flex-direction:column;gap:12px}
+.card{background:var(--p);border:1px solid var(--line);border-radius:14px;padding:12px 14px}
+.card h2{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--mu);margin-bottom:10px;font-weight:600}
+.step{display:flex;gap:10px;align-items:flex-start;padding:8px 0;border-bottom:1px solid var(--line)}.step:last-child{border:0}
+.n{width:22px;height:22px;border-radius:50%;background:var(--p2);display:flex;align-items:center;justify-content:center;font-size:12px;color:var(--mu);flex:none}
+.step.done .n{background:var(--nv);color:#06080c}.step.now .n{border:1px solid var(--nv);color:var(--nv)}
+.step p{font-size:12.5px;color:var(--mu)}.step b{font-size:13.5px}
+.btns{display:flex;flex-wrap:wrap;gap:8px;margin-top:8px}
+.kv{display:grid;grid-template-columns:1fr auto;gap:4px 10px;font-size:13px}.kv span{color:var(--mu)}.kv b{font-variant-numeric:tabular-nums;font-weight:600}
+.note{font-size:12px;color:var(--am);margin-top:8px}
+.foot{padding:4px 18px 24px;max-width:1700px;margin:0 auto;color:var(--mu);font-size:12px}
+a{color:var(--cy);text-decoration:none}
+</style>
+<link rel="stylesheet" href="light.css">
+</head>
+<body>
+<header>
+  <h1>Transfer<b>Gap</b> · Live console</h1>
+  <span class="chip" id="cLink">hub: not connected</span>
+  <span class="chip" id="cDesign" style="display:none">design preview · sample numbers</span>
+  <div class="sp"></div>
+  <label class="chip" style="display:flex;gap:6px;align-items:center">host <input id="host" value="127.0.0.1"></label>
+  <button id="bConnect" class="primary">Connect</button>
+  <a href="index.html">Results →</a>
+</header>
+<main>
+  <section class="grid" id="panes"></section>
+  <aside class="rail">
+    <div class="card">
+      <h2>Session</h2>
+      <div class="step" id="s1"><div class="n">1</div><div><b>Calibrate: arms down</b><p>3 s countdown, then stand straight, arms hanging.</p></div></div>
+      <div class="step" id="s2"><div class="n">2</div><div><b>Touch the object</b><p>Right fingertips on the ball. Sets the table height.</p></div></div>
+      <div class="step" id="s3"><div class="n">3</div><div><b>Pick the ball, place it in the tray</b><p>Robots copy your wrists live.</p></div></div>
+      <div class="step" id="s4"><div class="n">4</div><div><b>Review</b><p>Recorded session goes to the Results console.</p></div></div>
+      <div class="btns">
+        <button data-cmd="g1calib">1 · Calibrate</button>
+        <button data-cmd="tablecalib">2 · Touch object</button>
+        <button data-cmd="reset">Reset scene</button>
+      </div>
+      <div class="note" id="cmdNote"></div>
+    </div>
+    <div class="card">
+      <h2>Link health</h2>
+      <div class="kv">
+        <span>Webcam to hub</span><b id="kCam">–</b>
+        <span>Pose rate</span><b id="kRate">–</b>
+        <span>Capture to publish</span><b id="kLat">–</b>
+        <span>Hands tracked</span><b id="kHands">–</b>
+      </div>
+    </div>
+    <div class="card">
+      <h2>Fingers · right hand</h2>
+      <canvas id="handc" width="300" height="170" style="width:100%;background:#0a0e14;border-radius:8px"></canvas>
+      <div id="fing" class="kv" style="margin-top:8px"></div>
+      <div class="note">21 hand keypoints from the pose model. Bend: 180° straight, lower = curled. Parallel grippers only use the pinch; the G1's Dex3 hand could use these.</div>
+    </div>
+    <div class="card">
+      <h2>Your measurements</h2>
+      <div class="kv">
+        <span>Upper arm</span><b id="mU">–</b>
+        <span>Forearm</span><b id="mF">–</b>
+        <span>Elbow angle</span><b id="mE">–</b>
+        <span>Pinch aperture</span><b id="mA">–</b>
+      </div>
+      <div class="note">Values arrive from the hub; nothing is computed in this page.</div>
+    </div>
+  </aside>
+</main>
+<div class="foot">Streams come from the GPU run (MuJoCo today, Isaac Sim later). Port plan: 8090 webcam · 8091 arm sim · 8092 skeleton · 8093 G1 · 8094 KAIROS (planned).
+ Everything here is a view; the algorithms run on the cluster.</div>
+
+<script>
+const $=id=>document.getElementById(id);
+const DESIGN=new URLSearchParams(location.search).has("design");
+const PANES=[
+ {id:"cam",  title:"You · webcam",              port:8090,path:"stream.mjpg",hint:"Local camera, no round trip"},
+ {id:"skel", title:"What the robots see",       port:8092,path:"cam.mjpg",  hint:"GEM-X / RTMW3D skeleton + hands"},
+ {id:"g1",   title:"Unitree G1 · SONIC",        port:8093,path:"g1.mjpg",   hint:"Humanoid whole body, MuJoCo today"},
+ {id:"arm",  title:"KAIROS · UR10e + 2F-140",   port:8091,path:"robot.mjpg",hint:"UR10e + 2F-140 arm sim following your hand"},
+ {id:"hand", title:"Your fingers · Allegro hand", port:8094,path:"hand.mjpg",hint:"Fingertip retargeting from 21 keypoints (kinematic)"}];
+$("panes").innerHTML=PANES.map(p=>`<div class="pane" id="p_${p.id}"><div class="bar"><span class="dot"></span>${p.title}<i id="i_${p.id}">waiting</i></div>
+ <div class="view"><img id="im_${p.id}" alt="${p.title}"><div class="ph"><b>No stream</b><small>${p.hint}</small></div></div></div>`).join("");
+let host=$("host").value,hubPort=8092;
+function connect(){
+  host=$("host").value;
+  PANES.forEach(p=>{const im=$("im_"+p.id),pane=$("p_"+p.id);
+    im.onload=()=>{pane.classList.add("live");pane.classList.remove("err");$("i_"+p.id).textContent="live"};
+    im.onerror=()=>{pane.classList.remove("live");pane.classList.add("err");$("i_"+p.id).textContent="no stream";setTimeout(()=>{im.src=`http://${host}:${p.port}/${p.path}?t=${Date.now()}`},3000)};
+    im.src=`http://${host}:${p.port}/${p.path}?t=${Date.now()}`});
+  $("cLink").textContent="hub: connecting…";$("cLink").className="chip warn";
+}
+$("bConnect").onclick=connect;
+// light telemetry poll: 2 Hz, one tiny JSON
+
+const FN=["thumb","index","middle","ring","pinky"],FC=["#fbbf24","#38bdf8","#76b900","#a78bfa","#f87171"];
+function drawHand(h){
+  const c=$("handc"),x=c.getContext("2d");x.clearRect(0,0,c.width,c.height);if(!h)return;
+  const P=h.kp,xs=P.map(p=>p[0]),ys=P.map(p=>p[1]),mx=Math.min(...xs),Mx=Math.max(...xs),my=Math.min(...ys),My=Math.max(...ys);
+  const sc=Math.min((c.width-30)/(Mx-mx||1),(c.height-20)/(My-my||1)),ox=(c.width-(Mx-mx)*sc)/2,oy=(c.height-(My-my)*sc)/2;
+  const T=p=>[ox+(p[0]-mx)*sc,c.height-oy-(p[1]-my)*sc];
+  FN.forEach((n,f)=>{x.strokeStyle=FC[f];x.lineWidth=3;x.beginPath();let q=T(P[0]);x.moveTo(q[0],q[1]);for(let k=1;k<=4;k++){q=T(P[1+4*f+k-1]);x.lineTo(q[0],q[1])}x.stroke();
+    x.fillStyle=FC[f];for(let k=1;k<=4;k++){q=T(P[1+4*f+k-1]);x.beginPath();x.arc(q[0],q[1],3,0,7);x.fill()}});
+  const w=T(P[0]);x.fillStyle="#e7ecf3";x.beginPath();x.arc(w[0],w[1],4,0,7);x.fill();
+  $("fing").innerHTML=FN.map((n,f)=>{const b=h.bend[n],a=(b[0]+b[1])/2;return `<span style="color:${FC[f]}">${n}</span><b>${a.toFixed(0)}°</b>`}).join("");
+}
+let lastSeq=null,lastT=null;
+async function poll(){
+  try{const r=await fetch(`http://${host}:${hubPort}/hands.json`,{cache:"no-store"});const j=await r.json();
+    $("cLink").textContent="hub: connected";$("cLink").className="chip ok";
+    const now=performance.now();if(lastSeq!=null&&j.seq>lastSeq){$("kRate").textContent=((j.seq-lastSeq)/((now-lastT)/1000)).toFixed(1)+" /s"}
+    lastSeq=j.seq;lastT=now;if(j.t_pub&&j.t_cap)$("kLat").textContent=((j.t_pub-j.t_cap)*1000).toFixed(0)+" ms";
+    $("kHands").textContent=[j.left&&"left",j.right&&"right"].filter(Boolean).join(" + ")||"–";
+    if(j.hands_detail)drawHand(j.hands_detail.Right);
+  }catch(e){if(!DESIGN){$("cLink").textContent="hub: not connected";$("cLink").className="chip"}}
+}
+setInterval(poll,500);
+document.querySelectorAll("button[data-cmd]").forEach(b=>b.onclick=async()=>{
+  try{await fetch(`http://${host}:${hubPort}/cmd/${b.dataset.cmd}`,{mode:"no-cors"});$("cmdNote").textContent="sent: "+b.dataset.cmd;
+    if(b.dataset.cmd==="g1calib")step(1);if(b.dataset.cmd==="tablecalib")step(2)}
+  catch(e){$("cmdNote").textContent="hub not reachable"}});
+function step(n){["s1","s2","s3","s4"].forEach((id,i)=>{const e=$(id);e.classList.toggle("done",i<n);e.classList.toggle("now",i===n)})}
+step(0);
+if(DESIGN){$("cDesign").style.display="";$("cLink").textContent="hub: sample";$("cLink").className="chip warn";
+  Object.assign($("kCam"),{textContent:"640×480 · 12 fps"});$("kRate").textContent="17.4 /s";$("kLat").textContent="48 ms";$("kHands").textContent="right";
+  drawHand({kp:Array.from({length:21},(_,i)=>{const f=Math.floor((i-1)/4),k=(i-1)%4;return i===0?[0,0]:[(f-2)*0.022+(k*0.004*(f-2)),0.03+k*0.028*(1-0.1*Math.abs(f-2))]}),bend:{thumb:[150,150],index:[120,100],middle:[165,140],ring:[140,145],pinky:[146,171]}});$("mU").textContent="29.8 cm";$("mF").textContent="25.7 cm";$("mE").textContent="107–172°";$("mA").textContent="5.0 cm";step(2)}
+else connect();
+</script>
+</body>
+</html>

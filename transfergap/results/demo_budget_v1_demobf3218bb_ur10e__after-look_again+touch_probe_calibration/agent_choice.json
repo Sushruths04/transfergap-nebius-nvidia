@@ -1,0 +1,33 @@
+{
+ "model": "nvidia/nemotron-3-super-120b-a12b",
+ "menu": [
+  "speed_cap_3",
+  "safe_path"
+ ],
+ "rule_choice": null,
+ "valid": true,
+ "agent_choice": "safe_path",
+ "rationale": "Safe_path prevents the copied hand trajectory from dipping below object-contact height, directly reducing forbidden collisions (the second\u2011largest failure mode) while altering the style minimally compared to timing adjustments.",
+ "response_id": "chatcmpl-93b108dc76371325",
+ "latency_s": 4.226963427994633,
+ "usage": {
+  "completion_tokens": 424,
+  "prompt_tokens": 746,
+  "total_tokens": 1170,
+  "completion_tokens_details": {
+   "accepted_prediction_tokens": null,
+   "audio_tokens": null,
+   "reasoning_tokens": 366,
+   "rejected_prediction_tokens": null
+  },
+  "prompt_tokens_details": {
+   "audio_tokens": null,
+   "cached_tokens": 0,
+   "created_cache_tokens": 0,
+   "multimodal_tokens": null
+  },
+  "prompt_cache_hit_tokens": 0,
+  "prompt_cache_miss_tokens": 746
+ },
+ "agrees_with_rule": false
+}

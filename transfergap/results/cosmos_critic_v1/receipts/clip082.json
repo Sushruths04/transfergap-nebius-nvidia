@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "kind": "cosmos_critic",
+  "requested_model": "nvidia/Cosmos-Reason2-8B",
+  "endpoint_host": "127.0.0.1",
+  "created_at": "2026-10-01T18:25:59.631661+00:00",
+  "prompt_sha256": "309d056cd99e17d4cf39386b52595756f2aa8852a202542d9f321a4363545cd8",
+  "video_sha256": "e7d12a494009d4ec453799a07777f96fded740d9290069a40f7f9c9bfd0cf68a",
+  "request_sha256": "98ca3e281642c2e6f8ebe3a79711b4ed781a3bb45aae7521b584061196f428c0",
+  "fps": 4,
+  "sampling": {
+    "max_tokens": 4096,
+    "temperature": 0.6,
+    "top_p": 0.95,
+    "top_k": 20,
+    "repetition_penalty": 1.0,
+    "presence_penalty": 0.0,
+    "seed": 1234
+  },
+  "guided_json": true,
+  "status": "succeeded",
+  "clip_id": "clip082",
+  "git_commit": "9715a642cd667a2c241d582d2ba8c3c8f3904ec3",
+  "response_id": "chatcmpl-8f2fbd8a28c13e0d",
+  "returned_model": "nvidia/Cosmos-Reason2-8B",
+  "usage": {
+    "prompt_tokens": 4596,
+    "total_tokens": 4815,
+    "completion_tokens": 219,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 152
+    }
+  },
+  "finish_reason": "stop",
+  "content": "{\"success\": \"yes\", \"failing_stage\": \"none\", \"rationale\": \"The robot arm successfully grasped the red block, lifted it, moved it over the green tray, released it into the tray, and moved the gripper away. The block is now resting inside the tray as required.\"}",
+  "reasoning_content": "\nOkay, let's see. The user wants me to determine if the robot successfully completed the task. The task was to pick up the red block, carry it to the green tray, release it inside, and then move the gripper away.\n\nLooking at the video: The robot arm does pick up the red block, lifts it, moves it over the green tray, releases it into the tray, and then moves the gripper away. The block ends up inside the tray. The video does not show any failure steps like dropping the block or missing the tray. The camera angle shows the entire process without any obstructions. So all the required steps were done correctly. The answer should be \"yes\" because the block is in the tray as intended.\n",
+  "parsed": true,
+  "answer": {
+    "success": true,
+    "failing_stage": "none",
+    "rationale": "The robot arm successfully grasped the red block, lifted it, moved it over the green tray, released it into the tray, and moved the gripper away. The block is now resting inside the tray as required."
+  },
+  "parse_error": null,
+  "latency_s": 14.972705333999329
+}

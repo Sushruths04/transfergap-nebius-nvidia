@@ -1,0 +1,52 @@
+{
+  "metadata": {
+    "id": "aijob-e00fzswzrgy0snz3ty",
+    "parent_id": "project-e00rt2zapr004vtt8961b5",
+    "name": "tg-repro-person2-1002-1015",
+    "resource_version": "1",
+    "created_at": "2026-10-02T10:15:02.215373Z",
+    "updated_at": "2026-10-02T10:15:02.215373Z"
+  },
+  "spec": {
+    "image": "cr.eu-north1.nebius.cloud/e00x55kgpmznfqapgg/transfergap-sweep:7266371",
+    "environment_variables": [
+      {
+        "name": "TG_MODE",
+        "value": "demo_repro"
+      },
+      {
+        "name": "TG_PROCS",
+        "value": "16"
+      },
+      {
+        "name": "TG_DEMO",
+        "value": "runs/demos/pexels_7205253_woman_box_v2.npz"
+      },
+      {
+        "name": "TG_FIXES",
+        "value": "look_again,touch_probe_calibration,safe_path_v2"
+      }
+    ],
+    "platform": "cpu-d3",
+    "preset": "16vcpu-64gb",
+    "disk": {
+      "type": "NETWORK_SSD",
+      "size_bytes": "53687091200"
+    },
+    "subnet_id": "vpcsubnet-e00qys30ryvavtj936",
+    "timeout": "3600s"
+  },
+  "status": {
+    "instances": [
+      {
+        "state": "COMPLETED",
+        "compute_instance_id": "computeinstance-e00c8xp87ahjsewj4f",
+        "compute_instance_state": "RUNNING",
+        "private_ip": "10.0.0.0"
+      }
+    ],
+    "state": "COMPLETED",
+    "started_at": "2026-10-02T10:17:15.181601186Z",
+    "finished_at": "2026-10-02T10:17:51.365659119Z"
+  }
+}

@@ -1,0 +1,12 @@
+{
+  "schema": "transfergap.twin/v1",
+  "name": "FILL_ME: a short name for the scene",
+  "source": "tape",
+  "measured_on": "FILL_ME: YYYY-MM-DD",
+  "object": {"size_m": ["FILL_ME length", "FILL_ME width", "FILL_ME height"], "mass_kg": "optional: delete this line if unknown", "xy_m": ["FILL_ME x", "FILL_ME y"]},
+  "target": {"inner_size_m": ["FILL_ME inner length", "FILL_ME inner width"], "wall_height_m": "FILL_ME", "xy_m": ["FILL_ME x", "FILL_ME y"]},
+  "table": {"top_z_m": 0.0},
+  "placement": {"yaw_deg": 0.0, "anchor_xy_m": [0.45, 0.0]},
+  "jitter_m": 0.01,
+  "_how": "All lengths in METRES (30 cm = 0.30). xy_m are centre positions in a table frame you choose: put x along one table edge, y along the other, measure from one corner. Delete this _how line if you like; the loader ignores it."
+}

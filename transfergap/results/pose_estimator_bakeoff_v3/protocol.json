@@ -1,0 +1,114 @@
+{
+ "protocol": "pose_estimator_bakeoff_v3",
+ "frozen_before_run": true,
+ "question": "Add a third estimator family (RTMW3D, OpenMMLab / Shanghai AI Lab, real-time whole-body 3D keypoints) and the author's own demo to the v1 bake-off; same clips, annotations, builder, frozen stacks, held-out seeds. Which estimator transfers human style best, per demo and overall?",
+ "estimators": {
+  "gemx": {
+   "joints": {
+    "8135753": "runs/demos/pexels_8135753_joints.npz",
+    "7205253": "runs/demos/pexels_7205253_joints.npz",
+    "user": "runs/demos/live/user_take1_joints.npz"
+   },
+   "fps_reported": "9.5-9.8 (live mode, window 30, measured 2026-10-02; offline export timing not recorded)",
+   "note": "GEM-X commit 32992550, SOMA joints, temporal (sliding-window) model, gravity-view world frame"
+  },
+  "fast_sam_3d_body": {
+   "joints": {
+    "8135753": "runs/demos/fsam/pexels_8135753_fsam_joints.npz",
+    "7205253": "runs/demos/fsam/pexels_7205253_fsam_joints.npz",
+    "user": "runs/demos/fsam/user_take1_fsam_joints.npz"
+   },
+   "note": "github.com/yangtiming/Fast-SAM-3D-Body d72aa36 (MIT), facebook/sam-3d-body-dinov3, per-frame (no temporal model), MoGe FOV, torch.compile settings of run_demo.sh, no TensorRT engines; world up = mean hip->neck direction (assumption)"
+  },
+  "rtmw3d": {
+   "joints": {
+    "8135753": "runs/demos/rtmw3d/pexels_8135753_rtmw3d_joints.npz",
+    "7205253": "runs/demos/rtmw3d/pexels_7205253_rtmw3d_joints.npz",
+    "user": "runs/demos/rtmw3d/user_take1_rtmw3d_joints.npz"
+   },
+   "note": "RTMW3D-L via github.com/b-arac/rtmpose3d f86467c (Apache-2.0, weights rbarac/rtmpose3d); OpenMMLab / Shanghai AI Lab RTMW (arXiv 2407.08634); per-frame, 133 COCO-WholeBody keypoints in metres, camera frame z-up; integrated RTMDet detector"
+  }
+ },
+ "demos": {
+  "pexels_8135753_notebook": {
+   "video_key": "8135753",
+   "stack": [
+    "speed_cap_3",
+    "look_again",
+    "touch_probe_calibration",
+    "speed_cap_2",
+    "safe_path_v2"
+   ]
+  },
+  "pexels_8135753_markers": {
+   "video_key": "8135753",
+   "stack": [
+    "speed_cap_3",
+    "look_again",
+    "touch_probe_calibration",
+    "speed_cap_2",
+    "safe_path_v2"
+   ]
+  },
+  "pexels_8135753_orange_marker": {
+   "video_key": "8135753",
+   "stack": [
+    "speed_cap_3",
+    "look_again",
+    "touch_probe_calibration",
+    "speed_cap_2",
+    "safe_path_v2"
+   ]
+  },
+  "pexels_8135753_notepad": {
+   "video_key": "8135753",
+   "stack": [
+    "speed_cap_3",
+    "look_again",
+    "touch_probe_calibration",
+    "speed_cap_2",
+    "safe_path_v2"
+   ]
+  },
+  "pexels_7205253_woman_box": {
+   "video_key": "7205253",
+   "stack": [
+    "look_again",
+    "touch_probe_calibration",
+    "safe_path_v2"
+   ]
+  },
+  "user_take1_right": {
+   "video_key": "user",
+   "stack": [
+    "speed_cap_3",
+    "look_again",
+    "touch_probe_calibration",
+    "speed_cap_2",
+    "safe_path_v2"
+   ]
+  }
+ },
+ "robots": [
+  "ur5e",
+  "ur10e"
+ ],
+ "seeds": [
+  1000,
+  1059
+ ],
+ "conditions": [
+  "raw",
+  "stack"
+ ],
+ "primary_metric": "held-out success with the stack, per demo x arm, paired by seed across estimators (same seeds); report all cells",
+ "secondary_metrics": [
+  "exporter fps on the L40S",
+  "pinch jitter (RMS second difference, mm)",
+  "aperture-only grasp/release event error vs the annotation (frames)",
+  "feasibility pre-check verdict of the raw plan"
+ ],
+ "sanity_check": "gemx and fast_sam_3d_body rows of the 5 v1 demos must reproduce v1 exactly",
+ "no_tuning": "no parameter of the builder, stacks or estimators is changed after seeing any bake-off number",
+ "runner": "PYTHONPATH=. .venv/bin/python -m transfergap.sim.estimator_bakeoff --protocol results/pose_estimator_bakeoff_v3/protocol.json"
+}

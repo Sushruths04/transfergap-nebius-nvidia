@@ -1,0 +1,86 @@
+{
+ "protocol": "demo_budget_v1",
+ "frozen_before_heldout": true,
+ "robot": "ur5e",
+ "robot_label": "ur5e_2f85_fixed",
+ "demo": {
+  "kind": "file",
+  "path": "/ws/transfergap/demos/pexels_fsam_demo.npz",
+  "sha256": "44864be947d4905ba24a193ee349d3d11a557e55d5b16d358d386017ac76d812",
+  "tag": "demo44864be9"
+ },
+ "base_corrections": [
+  "safe_path_v2",
+  "speed_cap_3"
+ ],
+ "stacking": {
+  "speed_ladder": [
+   "speed_cap_3",
+   "speed_cap_2",
+   "speed_cap_1.5"
+  ],
+  "base_applied_under_every_condition": true
+ },
+ "strict_choice": true,
+ "components": [
+  "perception",
+  "calibration",
+  "timing"
+ ],
+ "conditions": {
+  "full": "none",
+  "oracle_perception": "perception",
+  "oracle_calibration": "calibration",
+  "oracle_timing": "timing",
+  "oracle_all": "all"
+ },
+ "corrections": {
+  "perception": "look_again",
+  "retargeting": "smooth_demo",
+  "calibration": "touch_probe_calibration",
+  "timing": "speed_cap_3"
+ },
+ "chosen_component": "timing",
+ "style_summary_note": "path_rmse_median_m and n_diverged (path RMSE > 0.20 m) were added to the style summaries after inspecting dev outliers (UR10e IK divergence from the home pose); success scoring and the correction rule were not changed",
+ "chosen_correction": "speed_cap_2",
+ "dev_seeds": [
+  0,
+  59
+ ],
+ "heldout_seeds": [
+  1000,
+  1059
+ ],
+ "heldout_conditions": [
+  "full",
+  "full+speed_cap_2"
+ ],
+ "constants": {
+  "HAND_EST_SIGMA_M": 0.01,
+  "SMOOTH_WINDOW_S": 0.2,
+  "SPEED_CAP": 3.0,
+  "v2_constants_for_perception_calibration": {
+   "PERCEPTION_SIGMA_M": 0.015,
+   "RETARGET_JOINT_SIGMA_RAD": 0.008726646259971648,
+   "CALIBRATION_MAX_M": 0.03,
+   "CALIBRATION_DIRECTION": "uniform on sphere, per seed",
+   "TIMING_SPEED_RANGE": [
+    1.0,
+    4.5
+   ],
+   "GRIP_FORCE_SCALE": 1.0,
+   "LOOK_AGAIN_SIGMA_M": 0.004,
+   "IK_RESOLVE_SIGMA_RAD": 0.0008726646259971648,
+   "PROBE_SIGMA_M": 0.002,
+   "SPEED_CAP": 3.0,
+   "all_values_are_assumptions": true
+  },
+  "all_values_are_assumptions": true
+ },
+ "env": {
+  "mujoco": "3.14.0",
+  "menagerie_commit": "4d038b3feae26ec82b46a4d586379114012a8ac7"
+ },
+ "scoring": "success: metrics.score_episode (block_to_tray_v1); style: demo.style.style_metrics vs clean retargeted human path",
+ "code_commit_at_freeze": "fe671a9cebbc4d6014b35bc674f573ce9c2b1116"
+}

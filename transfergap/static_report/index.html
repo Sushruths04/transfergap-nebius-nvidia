@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="theme-color" content="#11151b">
+  <link rel="icon" href="data:,">
+  <title>TransferGap — evidence report</title>
+  <meta name="description" content="Recorded simulator evidence for robot transfer gaps, corrections, and video critique.">
+  <link rel="stylesheet" href="styles.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <div class="wrap header-inner"><a class="brand" href="#top">TRANSFER<span>GAP</span></a><nav aria-label="Sections"><a href="#arms">Two arms</a><a href="#g1">Humanoid</a><a href="#cosmos">Video critic</a><a href="#methods">Methods</a></nav></div>
+  </header>
+  <main id="top">
+    <section class="hero wrap">
+      <div class="eyebrow"><span class="live-dot"></span> Evidence report · 01 OCT 2026</div>
+      <h1>Where does a robot<br><em>lose the demonstration?</em></h1>
+      <p class="lede">TransferGap measures which part of a simulated pick-and-place pipeline causes failure, chooses one correction on development trials, then tests it on held-out trials.</p>
+      <div class="hero-notes"><span>MuJoCo simulation</span><span>Frozen protocols</span><span>Paired trials</span></div>
+      <div class="caveat"><strong>Scope of this report</strong><p>The arm controller is scripted and its error sizes are assumptions. The G1 contact motion uses IK keyframes. A human walking video drove a separate tracking demonstration; it did not drive this pick-and-place task.</p></div>
+    </section>
+    <section id="arms" class="section wrap">
+      <div class="section-head"><div><div class="eyebrow">01 / CORRECTION</div><h2>Two arms. One chosen fix.</h2></div><p>Each stage is replaced with simulator ground truth on development seeds. A close-range second look was chosen before held-out testing.</p></div>
+      <div id="arm-cards" class="arm-grid" aria-live="polite"><p>Loading recorded results…</p></div>
+      <div class="note">Gains are paired percentage points with seed bootstrap 95% intervals. They apply to the assumed error model and scripted controller.</div>
+    </section>
+    <section id="g1" class="section contrast"><div class="wrap"><div class="section-head"><div><div class="eyebrow">02 / SECOND EMBODIMENT</div><h2>G1 reaches contact.</h2></div><p>The humanoid tracks an open-loop IK motion through SONIC. Touch, lift-in-hand, and settled place are scored separately.</p></div><div id="g1-content" class="panel" aria-live="polite"></div><div class="note">The true-target condition receives simulator-known block coordinates before execution. It is an oracle diagnostic. Three repeats share each scene seed and may disagree.</div></div></section>
+    <section id="cosmos" class="section wrap"><div class="section-head"><div><div class="eyebrow">03 / VIDEO CRITIC</div><h2>Can a model see failure?</h2></div><p>Cosmos-Reason2-8B judged rendered robot clips against simulator labels. A new observational prompt and closer camera were selected on a separate tuning split.</p></div><div id="cosmos-cards" class="arm-grid" aria-live="polite"></div><div class="note">Versions use different clips, so the change in accuracy is descriptive, not a paired estimate. Static no-motion clips are separate from v2's 116 ordinary clips.</div></section>
+    <section id="methods" class="section methods"><div class="wrap"><div class="section-head"><div><div class="eyebrow">04 / METHODS & ARTIFACTS</div><h2>See the receipts.</h2></div><p>Every headline number comes from a recorded summary. Open the detailed result files or regenerate this page from them.</p></div><div class="method-grid"><article><span>01</span><h3>Arm gap budget</h3><p>60 development seeds per arm and 60 held-out seeds per correction condition. Simulator state defines labels and oracle substitutions.</p><div id="arm-links"></div></article><article><span>02</span><h3>G1 contact tiers</h3><p>Ten scene seeds, three repeats per condition. Seed-level and rollout-level rates are reported separately.</p><a href="../results/g1_contact_v1/summary.md">G1 detailed report ↗</a></article><article><span>03</span><h3>Cosmos critic</h3><p>Simulator renders, frozen prompts, model receipts, confusion matrices and six static controls in v2.</p><a href="../results/cosmos_critic_v1/summary.md">Cosmos v1 ↗</a><a href="../results/cosmos_critic_v2/summary.md">Cosmos v2 ↗</a></article></div><p class="method-footer">The local Gradio app supports episode upload and optional live Nemotron diagnosis. This static report shows saved evidence and makes no model API calls.</p></div></section>
+  </main>
+  <footer><div class="wrap footer-inner"><span>TRANSFERGAP · NEBIUS × NVIDIA HACKATHON</span><span>Research prototype · simulator only</span></div></footer>
+</body>
+</html>

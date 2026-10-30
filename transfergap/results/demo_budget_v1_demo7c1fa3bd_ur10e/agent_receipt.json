@@ -1,0 +1,34 @@
+{
+ "schema_version": 1,
+ "kind": "hosted_inference",
+ "role": "nemotron",
+ "requested_model": "nvidia/nemotron-3-super-120b-a12b",
+ "endpoint_host": "api.tokenfactory.nebius.com",
+ "created_at": "2026-10-09T11:21:12.428447+00:00",
+ "request_sha256": "9707604617a5af522214e0be0335f710c1d6d2407e229ff832c94a81c21776d0",
+ "status": "succeeded",
+ "response_id": "chatcmpl-8722b22c3c0c10c3",
+ "returned_model": "nvidia/nemotron-3-super-120b-a12b",
+ "usage": {
+  "completion_tokens": 375,
+  "prompt_tokens": 783,
+  "total_tokens": 1158,
+  "completion_tokens_details": {
+   "accepted_prediction_tokens": null,
+   "audio_tokens": null,
+   "reasoning_tokens": 301,
+   "rejected_prediction_tokens": null
+  },
+  "prompt_tokens_details": {
+   "audio_tokens": null,
+   "cached_tokens": 0,
+   "created_cache_tokens": 0,
+   "multimodal_tokens": null
+  },
+  "prompt_cache_hit_tokens": 0,
+  "prompt_cache_miss_tokens": 783
+ },
+ "finish_reason": "stop",
+ "content": "\n\n{\n  \"correction\": \"look_again\",\n  \"rationale\": \"Perception errors dominate failures (no_lift, not_released). Re\u2011perceiving the object after approach directly addresses these issues with minimal impact on the copied human style, as shown by the large perception recovery (+25\u202fpp) and modest style cost.\"\n}",
+ "latency_s": 3.1857610210026905
+}

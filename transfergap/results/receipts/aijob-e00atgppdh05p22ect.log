@@ -1,0 +1,100 @@
+   "successes": 30,
+   "wilson_95": [
+    0.8864866068260312,
+    0.9999999999999999
+   ]
+  },
+  {
+   "level_m": 0.03,
+   "n": 30,
+   "successes": 8,
+   "wilson_95": [
+    0.14182663319596317,
+    0.4444796169518888
+   ]
+  },
+  {
+   "level_m": 0.04,
+   "n": 30,
+   "successes": 0,
+   "wilson_95": [
+    0.0,
+    0.11351339317396876
+   ]
+  },
+  {
+   "level_m": 0.05,
+   "n": 30,
+   "successes": 0,
+   "wilson_95": [
+    0.0,
+    0.11351339317396876
+   ]
+  }
+ ],
+ "tcp_offset_m": [
+  {
+   "level_m": 0.0,
+   "n": 30,
+   "successes": 30,
+   "wilson_95": [
+    0.8864866068260312,
+    0.9999999999999999
+   ]
+  },
+  {
+   "level_m": 0.01,
+   "n": 30,
+   "successes": 30,
+   "wilson_95": [
+    0.8864866068260312,
+    0.9999999999999999
+   ]
+  },
+  {
+   "level_m": 0.02,
+   "n": 30,
+   "successes": 30,
+   "wilson_95": [
+    0.8864866068260312,
+    0.9999999999999999
+   ]
+  },
+  {
+   "level_m": 0.03,
+   "n": 30,
+   "successes": 21,
+   "wilson_95": [
+    0.5212421254128504,
+    0.8333525173175619
+   ]
+  },
+  {
+   "level_m": 0.04,
+   "n": 30,
+   "successes": 3,
+   "wilson_95": [
+    0.03459988874733419,
+    0.25621082579184085
+   ]
+  },
+  {
+   "level_m": 0.05,
+   "n": 30,
+   "successes": 0,
+   "wilson_95": [
+    0.0,
+    0.11351339317396876
+   ]
+  },
+  {
+   "level_m": 0.06,
+   "n": 30,
+   "successes": 0,
+   "wilson_95": [
+    0.0,
+    0.11351339317396876
+   ]
+  }
+ ]
+}TRANSFERGAP_RECEIPT {"schema": "transfergap.job_receipt/v1", "mode": "gap_budget_sweep", "exit_code": 0, "started_at": "2026-10-01T18:08:55Z", "ended_at": "2026-10-01T18:10:13Z", "git_commit": "eac073fc8a688be684812f3592e7d736a16751a7", "image_git_commit": "eac073fc8a688be684812f3592e7d736a16751a7", "menagerie_commit": "4d038b3feae26ec82b46a4d586379114012a8ac7", "host": {"hostname": "88992a13637b", "platform": "Linux-6.11.0-1016-nvidia-x86_64-with-glibc2.41", "machine": "x86_64", "cpu_model": "AMD EPYC-Genoa Processor", "nproc": 16, "mem_total": "65843252 kB", "procs_used": 16}, "python": "3.12.14", "mujoco": "3.14.0", "outputs": {"sweep_random_dir.json": {"bytes": 1691, "sha256": "6df4c6c2faa289fb44126c0ee2931a6fbc219fcd8b68eae3105fc650322bd5c7"}, "sweep_random_dir.jsonl": {"bytes": 67853296, "sha256": "9deb3f0cd8767d3fc0e4d06757174b12928f7732b213663f81a579ac4a3591a5"}}}

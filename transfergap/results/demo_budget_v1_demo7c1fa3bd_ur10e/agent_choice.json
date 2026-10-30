@@ -1,0 +1,35 @@
+{
+ "model": "nvidia/nemotron-3-super-120b-a12b",
+ "menu": [
+  "look_again",
+  "touch_probe_calibration",
+  "speed_cap_3",
+  "safe_path"
+ ],
+ "rule_choice": "look_again",
+ "valid": true,
+ "agent_choice": "look_again",
+ "rationale": "Perception errors dominate failures (no_lift, not_released). Re\u2011perceiving the object after approach directly addresses these issues with minimal impact on the copied human style, as shown by the large perception recovery (+25\u202fpp) and modest style cost.",
+ "response_id": "chatcmpl-8722b22c3c0c10c3",
+ "latency_s": 3.1857610210026905,
+ "usage": {
+  "completion_tokens": 375,
+  "prompt_tokens": 783,
+  "total_tokens": 1158,
+  "completion_tokens_details": {
+   "accepted_prediction_tokens": null,
+   "audio_tokens": null,
+   "reasoning_tokens": 301,
+   "rejected_prediction_tokens": null
+  },
+  "prompt_tokens_details": {
+   "audio_tokens": null,
+   "cached_tokens": 0,
+   "created_cache_tokens": 0,
+   "multimodal_tokens": null
+  },
+  "prompt_cache_hit_tokens": 0,
+  "prompt_cache_miss_tokens": 783
+ },
+ "agrees_with_rule": true
+}

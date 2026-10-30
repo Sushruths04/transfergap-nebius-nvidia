@@ -1,0 +1,34 @@
+{
+ "model": "nvidia/nemotron-3-super-120b-a12b",
+ "menu": [
+  "look_again",
+  "touch_probe_calibration",
+  "speed_cap_1.5"
+ ],
+ "rule_choice": "look_again",
+ "valid": true,
+ "agent_choice": "speed_cap_1.5",
+ "rationale": "Adding the slowest speed cap reduces forbidden collisions and improves lift/release control, while the timing fix\u2019s style budget shows the largest path\u2011RMSE reduction and a positive speed\u2011profile correlation gain, preserving human-like motion.",
+ "response_id": "chatcmpl-8a9f44c458ec4842",
+ "latency_s": 5.576262599002803,
+ "usage": {
+  "completion_tokens": 615,
+  "prompt_tokens": 811,
+  "total_tokens": 1426,
+  "completion_tokens_details": {
+   "accepted_prediction_tokens": null,
+   "audio_tokens": null,
+   "reasoning_tokens": 546,
+   "rejected_prediction_tokens": null
+  },
+  "prompt_tokens_details": {
+   "audio_tokens": null,
+   "cached_tokens": 0,
+   "created_cache_tokens": 0,
+   "multimodal_tokens": null
+  },
+  "prompt_cache_hit_tokens": 0,
+  "prompt_cache_miss_tokens": 811
+ },
+ "agrees_with_rule": false
+}

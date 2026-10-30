@@ -1,0 +1,22 @@
+{
+ "episodes": 120,
+ "critic_pass": 120,
+ "critic_margin_min": 1.125,
+ "pool_240_clips": {
+  "no_filter": {
+   "admitted": 240,
+   "physically_successful": 191,
+   "purity": 0.7958
+  },
+  "zero_shot_critic": {
+   "admitted": 240,
+   "physically_successful": 191,
+   "purity": 0.7958
+  },
+  "lora_critic": {
+   "admitted": 200,
+   "physically_successful": 191,
+   "purity": 0.955
+  }
+ }
+}

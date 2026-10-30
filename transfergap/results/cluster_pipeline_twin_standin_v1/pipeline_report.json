@@ -1,0 +1,98 @@
+{
+ "input": "/ws/transfergap/ctx_cam/user_pose_v2.npz",
+ "robots": [
+  "ur5e",
+  "ur10e",
+  "kairos_mobile"
+ ],
+ "fixes": "speed_cap_3,look_again,touch_probe_calibration,speed_cap_2,safe_path_v2",
+ "stages": {
+  "perceive": {
+   "status": "ok",
+   "seconds": 0.0
+  },
+  "demo": {
+   "detail": {
+    "metric_scale": 0.3846,
+    "shoulder_width_ref_m": 0.4,
+    "frames": 147,
+    "events": "given",
+    "pinch_extent_m": [
+     0.278,
+     0.032,
+     0.221
+    ],
+    "plausibility": "ok",
+    "scene": "STAND-IN twin from the author's pose (sizes ASSUMED, not measured)",
+    "scene_sha": "6875929c3e57",
+    "human_carry_m": 0.259,
+    "scene_carry_m": 0.259,
+    "carry_scale_factor": 1.002,
+    "scale_from": "shoulder",
+    "align_yaw_deg": 267.4,
+    "twin_problems": {
+     "ur5e": [],
+     "ur10e": [],
+     "kairos_mobile": []
+    }
+   },
+   "status": "ok",
+   "seconds": 0.0
+  },
+  "feasibility": {
+   "detail": {
+    "ur5e": {
+     "verdict": "style infeasible for this robot",
+     "reasons": [
+      "collides: carry 1.4 cm, retreat 1.6 cm (g_left_follower, g_right_follower)"
+     ],
+     "worst": {
+      "max_ik_err_m": 0.0001965729127497628,
+      "max_penetration_m": 0.01613360790082624
+     }
+    },
+    "ur10e": {
+     "verdict": "style infeasible for this robot",
+     "reasons": [
+      "collides: carry 1.4 cm, retreat 1.6 cm (g_left_follower, g_right_follower)"
+     ],
+     "worst": {
+      "max_ik_err_m": 0.00019669893890381787,
+      "max_penetration_m": 0.016135337150733287
+     }
+    },
+    "kairos_mobile": {
+     "verdict": "style infeasible for this robot",
+     "reasons": [
+      "collides: retreat 0.9 cm (g_left_pad, g_right_pad)"
+     ],
+     "worst": {
+      "max_ik_err_m": 0.00019372653113874377,
+      "max_penetration_m": 0.009041086604118585
+     }
+    }
+   },
+   "status": "ok",
+   "seconds": 1.9
+  },
+  "rollouts": {
+   "detail": {
+    "ur5e": {
+     "raw": "7/60",
+     "all_fixes": "52/60"
+    },
+    "ur10e": {
+     "raw": "9/60",
+     "all_fixes": "51/60"
+    },
+    "kairos_mobile": {
+     "raw": "13/60",
+     "all_fixes": "60/60"
+    }
+   },
+   "status": "ok",
+   "seconds": 27.6
+  }
+ },
+ "ok": true
+}

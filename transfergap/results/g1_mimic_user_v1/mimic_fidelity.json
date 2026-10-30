@@ -1,0 +1,26 @@
+{
+ "offset_s": 6.3,
+ "samples": 628,
+ "axes": [
+  {
+   "g1_axis": "x",
+   "person_axis": 2,
+   "pearson_r": -0.238,
+   "range_ratio_g1_over_person": 1.03
+  },
+  {
+   "g1_axis": "y",
+   "person_axis": 0,
+   "pearson_r": -0.951,
+   "range_ratio_g1_over_person": 1.18
+  },
+  {
+   "g1_axis": "z",
+   "person_axis": 1,
+   "pearson_r": 0.415,
+   "range_ratio_g1_over_person": 1.65
+  }
+ ],
+ "mean_abs_r": 0.535,
+ "shuffled_baseline_mean_abs_r_p95": 0.068
+}

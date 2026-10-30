@@ -1,0 +1,34 @@
+{
+ "model": "nvidia/nemotron-3-super-120b-a12b",
+ "menu": [
+  "touch_probe_calibration",
+  "speed_cap_3",
+  "safe_path"
+ ],
+ "rule_choice": "touch_probe_calibration",
+ "valid": true,
+ "agent_choice": "touch_probe_calibration",
+ "rationale": "Calibrating the tool\u2011frame offset directly reduces systematic misplacements that cause lift, release, and collision failures, offering the largest success gain while minimally altering the copied human style.",
+ "response_id": "chatcmpl-a52005b17caae638",
+ "latency_s": 4.249996667000232,
+ "usage": {
+  "completion_tokens": 466,
+  "prompt_tokens": 797,
+  "total_tokens": 1263,
+  "completion_tokens_details": {
+   "accepted_prediction_tokens": null,
+   "audio_tokens": null,
+   "reasoning_tokens": 405,
+   "rejected_prediction_tokens": null
+  },
+  "prompt_tokens_details": {
+   "audio_tokens": null,
+   "cached_tokens": 0,
+   "created_cache_tokens": 0,
+   "multimodal_tokens": null
+  },
+  "prompt_cache_hit_tokens": 0,
+  "prompt_cache_miss_tokens": 797
+ },
+ "agrees_with_rule": true
+}

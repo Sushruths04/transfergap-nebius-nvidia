@@ -1,0 +1,27 @@
+{
+ "kind": "e2e_cluster",
+ "info": {
+  "status": "PASS",
+  "detail": "python 3.10.12 numpy 2.2.6 mujoco 3.14.0 EGL ok | GPU 0: NVIDIA L40S (UUID: GPU-6e00a967-7178-f0a7-e426-3f8cfb1c1d5a)"
+ },
+ "tests": {
+  "status": "PASS",
+  "detail": "Ran 198 tests in 67.661s  OK (skipped=3) "
+ },
+ "arm_repro": {
+  "status": "PASS",
+  "detail": "ur5e full / look_again (232, 366) committed (232, 366) ur10e full / look_again (240, 369) committed (240, 369) "
+ },
+ "perception": {
+  "status": "PASS",
+  "detail": "ur5e dev depth_combined_wrist 60 mm: 2/2 [] (332s) ur5e dev depth_combined_wrist 70 mm: 2/2 [] (339s) "
+ },
+ "style": {
+  "status": "PASS",
+  "detail": "/opt/transfergap_src/transfergap/transfergap/sim/perception.py:126: RuntimeWarning: All-NaN slice encountered   out = np.nanmedian(win, axis=-1) "
+ },
+ "g1": {
+  "status": "PASS",
+  "detail": "4/4 rollouts logged, 4 grasped (lift>=5 cm); lifts cm: 8.5, 15.7, 13.0, 14.6"
+ }
+}

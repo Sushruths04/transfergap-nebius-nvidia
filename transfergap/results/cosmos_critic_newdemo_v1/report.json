@@ -1,0 +1,100 @@
+{
+ "model": "nvidia/Cosmos-Reason2-2B",
+ "adapter": "/ws/transfergap/runs/cosmos_critic_adapter",
+ "n_clips": 240,
+ "seconds": 178,
+ "zero_shot": {
+  "n": 240,
+  "positives": 185,
+  "accuracy": 0.7708,
+  "balanced_accuracy": 0.5,
+  "true_positive_rate": 1.0,
+  "true_negative_rate": 0.0,
+  "predicted_success_rate": 1.0
+ },
+ "fine_tuned": {
+  "n": 240,
+  "positives": 185,
+  "accuracy": 0.975,
+  "balanced_accuracy": 0.9455,
+  "true_positive_rate": 1.0,
+  "true_negative_rate": 0.8909,
+  "predicted_success_rate": 0.7958
+ },
+ "zero_shot_by_cell": {
+  "ur10e/fix": {
+   "n": 60,
+   "positives": 60,
+   "accuracy": 1.0,
+   "balanced_accuracy": 0.5,
+   "true_positive_rate": 1.0,
+   "true_negative_rate": 0.0,
+   "predicted_success_rate": 1.0
+  },
+  "ur10e/raw": {
+   "n": 60,
+   "positives": 34,
+   "accuracy": 0.5667,
+   "balanced_accuracy": 0.5,
+   "true_positive_rate": 1.0,
+   "true_negative_rate": 0.0,
+   "predicted_success_rate": 1.0
+  },
+  "ur5e/fix": {
+   "n": 60,
+   "positives": 60,
+   "accuracy": 1.0,
+   "balanced_accuracy": 0.5,
+   "true_positive_rate": 1.0,
+   "true_negative_rate": 0.0,
+   "predicted_success_rate": 1.0
+  },
+  "ur5e/raw": {
+   "n": 60,
+   "positives": 31,
+   "accuracy": 0.5167,
+   "balanced_accuracy": 0.5,
+   "true_positive_rate": 1.0,
+   "true_negative_rate": 0.0,
+   "predicted_success_rate": 1.0
+  }
+ },
+ "fine_tuned_by_cell": {
+  "ur10e/fix": {
+   "n": 60,
+   "positives": 60,
+   "accuracy": 1.0,
+   "balanced_accuracy": 0.5,
+   "true_positive_rate": 1.0,
+   "true_negative_rate": 0.0,
+   "predicted_success_rate": 1.0
+  },
+  "ur10e/raw": {
+   "n": 60,
+   "positives": 34,
+   "accuracy": 0.9667,
+   "balanced_accuracy": 0.9615,
+   "true_positive_rate": 1.0,
+   "true_negative_rate": 0.9231,
+   "predicted_success_rate": 0.6
+  },
+  "ur5e/fix": {
+   "n": 60,
+   "positives": 60,
+   "accuracy": 1.0,
+   "balanced_accuracy": 0.5,
+   "true_positive_rate": 1.0,
+   "true_negative_rate": 0.0,
+   "predicted_success_rate": 1.0
+  },
+  "ur5e/raw": {
+   "n": 60,
+   "positives": 31,
+   "accuracy": 0.9333,
+   "balanced_accuracy": 0.931,
+   "true_positive_rate": 1.0,
+   "true_negative_rate": 0.8621,
+   "predicted_success_rate": 0.5833
+  }
+ }
+}

@@ -1,0 +1,235 @@
+% TransferGap -- anonymized CoRL 2026 Scaling H2R workshop short paper.
+% Build: tectonic main.tex (or latexmk -pdf main.tex).
+% Numeric provenance: figures/number_sources.txt; review_recount.py.
+\documentclass{article}
+\usepackage{corl_2026}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{amsmath,amssymb}
+\usepackage{xcolor}
+\usepackage{microtype}
+
+\newcommand{\pp}{\,pp}
+\input{figures/numbers.tex}
+\input{figures/v3_numbers.tex}
+\input{figures/real_numbers.tex}
+\input{figures/fresh_numbers.tex}
+\input{figures/v2_numbers.tex}
+
+\title{Diagnosing Human-to-Robot Transfer Failures\\with a Transfer Gap Budget in Simulation}
+\author{Anonymous Author(s)}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Human-to-robot transfer combines perception, retargeting, calibration, and execution timing, making task failures difficult to attribute. We introduce the \emph{Transfer Gap Budget}, a paired oracle-intervention framework that estimates each component's recoverable contribution to success and selects targeted corrections. Across UR5e and UR10e simulations, perception dominates under the nominal error model, recovering approximately 30 percentage points. However, setting timing perturbations to span speeds measured in six human demonstrations makes timing dominant. The diagnosis is thus conditional on the transfer-error distribution. On human-video demonstrations, diagnosis-driven corrections and a revised retreat improve success on unused seeds; the notebook example rises from 0/60 to 60/60 on both arms. These findings motivate measuring demonstration-associated errors when choosing which transfer component to improve. All robot evaluations are in simulation.
+\end{abstract}
+
+\keywords{human-to-robot transfer, failure diagnosis, oracle substitution}
+
+\section{Introduction}
+
+Human demonstrations provide motion and timing, but transferring them requires perception, motion retargeting, tool-frame calibration, and executable timing. Mismatches at several stages can produce the same task failure. Success alone therefore does not reveal which component should be improved; embodiment adaptation remains a broader challenge for robot learning~\citep{domae2026embodimentgap}.
+
+As human demonstration datasets grow in quantity and diversity, it matters whether additional data addresses the dominant transfer bottleneck, a question relevant to Scaling H2R~\citep{scalingh2r}. Different demonstrations can change motion and timing statistics, while varied scenes can change perception challenges. The resulting error distribution may alter which component limits success. We study this diagnostic question using six demonstrations from three people to ground timing ranges and provide motion for simulated transfer.
+
+We introduce the \emph{Transfer Gap Budget}: paired oracle substitutions measure each component's recoverable success contribution and select a correction on development seeds. We show that perception dominates under the nominal error model, but demonstration-derived timing makes timing dominant. Diagnosis-driven corrections and a retreat revision improve human-video transfer on unused seeds. The framework diagnoses which transfer component limits successful transfer from human data.
+
+\section{Related Work}
+
+\textbf{Human-to-robot transfer.} H2RBench reports transfer gains
+by execution stage on a Franka arm~\citep{xiao2026h2rbench}; we intervene on pipeline components. Human-as-Humanoid
+and HumanEgo learn from human video~\citep{lin2026humanashumanoid,wang2026humanego}; hand-pose quality and motion mismatch affect cotraining~\citep{cotrain2026humanvideos}.
+
+\textbf{Diagnosis and correction.} AHA, RoboFAC, and Guardian diagnose manipulation failures~\citep{aha2024,robofac2025,guardian2025}. RHO and GaP search policy code and skill graphs~\citep{elmaaroufi2026rho,chen2026gap}.
+We use oracle gains to select from a fixed correction menu.
+
+\begin{figure}[tbp]
+ \centering
+ \includegraphics[width=0.95\linewidth]{figures/gap_budget_v3.pdf}
+ \vspace{-1.6em}
+ \caption{\textbf{Nominal error model: 500 fresh seeds per arm.} (a)~Oracle gains: perception dominates. (b)~Correction gains; look-again selected on development seeds. Bars: paired bootstrap 95\% intervals. Demonstration-derived timing changes the dominant budget (Sec.~\ref{sec:sensitivity}).}
+ \label{fig:budget}
+ \vspace{-0.8em}
+\end{figure}
+
+\section{Method: the Transfer Gap Budget}
+\label{sec:method}
+
+\textbf{Paired interventions.} Let $\mathcal{K}$ contain perception, retargeting, tool-frame calibration,
+and execution timing. In the controlled-error study, \emph{full} includes all four perturbations;
+\emph{oracle}$_k$ removes only perturbation $k$, and \emph{oracle-all} removes all four. Their ideal outputs are exact object pose, unperturbed IK, zero tool offset, and nominal timing. Each random stream is keyed by seed and component, preserving initial scenes and
+unreplaced error draws across conditions. For binary success $s_c(i)$ on seed $i$ in condition $c$,
+\begin{equation}
+ B_k=\frac{1}{n}\sum_{i=1}^{n}\bigl(s_{\mathrm{oracle}_k}(i)-s_{\mathrm{full}}(i)\bigr),
+ \qquad \Delta_{\mathrm{int}}=\sum_{k\in\mathcal{K}} B_k-B_{\mathrm{all}}.
+\end{equation}
+Here $B_{\mathrm{all}}$ uses the joint oracle in the same paired difference. Budgets are signed net gains:
+an oracle can both rescue and lose trials. The residual shows whether summed single-stage gains exceed ($>0$) or fall below ($<0$) the joint gain; it does not allocate failures to interactions.
+Oracle interventions are diagnostic, not deployment mechanisms. Budgets are conditional on the modelled error distribution, motivating measurements from demonstrations and the deployment pipeline.
+
+\textbf{Correction selection.} The menu pairs perception with look-again, retargeting with an IK re-solve,
+calibration with a modelled touch probe, and timing with a speed cap. We select
+$k^\star=\arg\max_k B_k$ on development seeds, breaking ties in pipeline order. Look-again and probing reduce assumed residual errors; their manoeuvres are not simulated.
+
+\textbf{Statistics.} Paired percentile bootstraps resample seeds with all condition scores (95\%). Demo intervals are descriptive for reused seeds, conditional on the six demonstrations for fresh seeds.
+
+\section{Experimental Setup}
+
+\textbf{Task.} MuJoCo simulates a fixed-base UR5e or UR10e with a Robotiq 2F-85 from MuJoCo
+Menagerie~\citep{menagerie}, a 4\,cm block with $\pm$3\,cm position jitter, and a tray with 14\,cm inner width.
+A scripted IK controller uses simulated contact in a UR5e-tuned layout. Success requires a lift of at least 5\,cm, release within 3\,cm of the goal,
+and speed below 0.02\,m/s for 0.5\,s after release.
+
+\textbf{A: controlled errors.} The injected magnitudes are assumptions. Both arms receive the same seed-dependent draws: Gaussian $xy$ perception error
+($\sigma=\cPercSigmaCm$\,cm), joint offsets ($\sigma=\cRetSigmaDeg^\circ$ per joint),
+a uniformly directed tool-frame offset with magnitude $\mathcal{U}(0,\cCalMaxCm)$\,cm, and a timing
+speed-up of $\mathcal{U}(\cSpeedLo,\cSpeedHi)$ relative to robot pace. The corrections reduce perception
+noise to 0.4\,cm, joint-offset noise to $0.05^\circ$, or calibration noise to 2\,mm per axis, or cap
+speed-up at $3\times$. Development seeds 0--59 select look-again on both arms. After freezing the
+protocol, we evaluate ten conditions on 500 fresh seeds (3000--3499) per arm: \emph{full}, four single oracles, the joint oracle, and four corrections.
+
+\textbf{D: exploratory sensitivity.} Fresh seeds test changed error magnitudes, block sizes, jitter, layouts, and measurement-matched perception and timing (Appendix~\ref{app:sensitivity}): 200 seeds per arm, or 500 for half errors, reduced perception, and demonstration-derived timing. Correction constants are unchanged.
+
+\textbf{B: real-video motion.} Five pick-and-place cycles from two people in two freely licensed videos,
+plus one from a third person's 50\,s recording, supply motion and timing. GEM-X~\citep{gemx}
+estimates hand trajectories; grasp and release frames are annotated manually. Reach and retreat
+are anchored to the simulated grasp and release points, and the carry path is rotated and scaled to connect them; the scene is not reconstructed. Perception and calibration errors remain injected; no object
+detector is used, and retargeting is excluded from the real-video oracle analysis. Each demo--arm pair uses 60 seeds from the revision period (1000--1059) and 60 unused seeds (5000--5059). We report leg-wise path RMSE against the retargeted reference.
+
+\textbf{C: depth perception.} A geometric estimator fits the table plane, clusters points above it, and selects a cube and tray; its position, yaw, and size drive the controller. We test 5, 6, and 7\,cm cubes on the two arms and a third manipulator
+(UR10e with a Robotiq 2F-140), with 40 seeds per size: 120 episodes per condition.
+
+\section{Results}
+
+\subsection{Controlled errors on two arms}
+
+Uncorrected success is \vFiveFullK/\vFiveN{} on the UR5e and
+\vTenFullK/\vTenN{} on the UR10e. Removing all errors recovers \vFiveBudAll{} and \vTenBudAll\pp{}.
+Under the nominal error model, perception has the largest budget: \vFiveBudPerception{} [\vFiveBudPerceptionLo,
+\vFiveBudPerceptionHi]\pp{} on the UR5e and \vTenBudPerception{} [\vTenBudPerceptionLo,
+\vTenBudPerceptionHi]\pp{} on the UR10e. Calibration follows (\vFiveBudCalibration{} and \vTenBudCalibration\pp{}), then timing (\vFiveBudTiming{} and \vTenBudTiming\pp{}) and retargeting
+(\vFiveBudRetargeting{} and \vTenBudRetargeting\pp{}); all single-stage intervals exclude zero
+(Fig.~\ref{fig:budget}a).
+
+The interaction residual is \vFiveInter{} [\vFiveInterLo,
+\vFiveInterHi]\pp{} on the UR5e and \vTenInter{} [\vTenInterLo, \vTenInterHi]\pp{} on the UR10e.
+
+
+Look-again, selected on development trials, raises success from \vFiveFullK{} to
+\vFiveCorrLookAgainK/\vFiveN{} (UR5e) and \vTenFullK{} to \vTenCorrLookAgainK/\vTenN{} (UR10e); the paired gains are \vFiveCorrLookAgain{}
+[\vFiveCorrLookAgainLo, \vFiveCorrLookAgainHi]\pp{} and \vTenCorrLookAgain{}
+[\vTenCorrLookAgainLo, \vTenCorrLookAgainHi]\pp{}, respectively, the largest observed. Probing gives \vFiveCorrTouchProbe{} and
+\vTenCorrTouchProbe\pp{}; IK re-solving and the speed cap 6--8\pp{} (Fig.~\ref{fig:budget}b).
+
+\subsection{The dominant budget depends on the error distribution}
+\label{sec:sensitivity}
+
+The six human demonstrations span 2.0--9.4$\times$ robot pace (nominal error model: 1.0--4.5$\times$). Sampling $\mathcal{U}(2.01,9.38)$ changes the diagnosis: timing leads with budgets \tmBudA{} and \tmBudB\pp{} (\tmFullA{} and \tmFullB{} of 500 uncorrected),
+\tmMarA{} [\tmMarLoA, \tmMarHiA] and \tmMarB{} [\tmMarLoB, \tmMarHiB]\pp{} above the next stage. The endpoints are measured; uniformity, calibration and retargeting magnitudes remain assumed.
+
+Nominal, doubled-error, and shifted-layout variants retain perception as the largest point estimate; varying perception error alone changes the ranking (Fig.~\ref{fig:curve}, Appendix~\ref{app:sensitivity}).
+
+\begin{figure}[!ht]
+ \centering
+ \includegraphics[width=0.9\linewidth]{figures/scale_curve.pdf}
+ \vspace{-0.9em}
+ \caption{Point-estimate budgets against perception error (200 seeds per point); dotted: assumed value.}
+ \label{fig:curve}
+ \vspace{-0.8em}
+\end{figure}
+
+Matching perception magnitudes to simulated depth measurements also changes the dominant budget between timing and perception (Appendix~\ref{app:sensitivity}).
+
+Each 500-seed setting uses 100 development and 400 evaluation seeds.
+With the demonstration-derived timing range, the budget rule picks timing: gains \tmRuleA{} and \tmRuleB\pp{}, exceeding look-again by \tmDiffA{} [\tmDiffLoA, \tmDiffHiA] and \tmDiffB{} [\tmDiffLoB, \tmDiffHiB]\pp{}.
+This matches the hindsight best. Reduced perception error, alone or with doubled calibration error, also favours targeted corrections over look-again (Appendix~\ref{app:sensitivity}). Where perception dominates, the rule picks look-again and ties.
+
+\subsection{Real-video demonstrations}
+
+\begin{table}[!ht]
+ \centering
+ \caption{Successes of 60 paired seeds, uncorrected $\to$ revised stack; left seeds were reused in development, right seeds not. P1--P3: demonstrators.}
+ \label{tab:demos}
+ \footnotesize
+ \begin{tabular}{lcccc}
+  \toprule
+   & \multicolumn{2}{c}{Seeds 1000--1059} & \multicolumn{2}{c}{Unused seeds} \\
+  Demonstration & UR5e & UR10e & UR5e & UR10e \\
+  \midrule
+  P1 notebook & \dmNotebookFiveRaw $\to$ \dmNotebookFiveStack & \dmNotebookTenRaw $\to$ \dmNotebookTenStack & \frNotebookFiveRaw $\to$ \frNotebookFiveStack & \frNotebookTenRaw $\to$ \frNotebookTenStack \\
+  P1 markers & \dmMarkersFiveRaw $\to$ \dmMarkersFiveStack & \dmMarkersTenRaw $\to$ \dmMarkersTenStack & \frMarkersFiveRaw $\to$ \frMarkersFiveStack & \frMarkersTenRaw $\to$ \frMarkersTenStack \\
+  P1 orange marker & \dmOrangeFiveRaw $\to$ \dmOrangeFiveStack & \dmOrangeTenRaw $\to$ \dmOrangeTenStack & \frOrangeFiveRaw $\to$ \frOrangeFiveStack & \frOrangeTenRaw $\to$ \frOrangeTenStack \\
+  P1 notepad & \dmNotepadFiveRaw $\to$ \dmNotepadFiveStack & \dmNotepadTenRaw $\to$ \dmNotepadTenStack & \frNotepadFiveRaw $\to$ \frNotepadFiveStack & \frNotepadTenRaw $\to$ \frNotepadTenStack \\
+  P2 box (own stack) & \dmPTwoOwnFiveRaw $\to$ \dmPTwoOwnFiveStack & \dmPTwoOwnTenRaw $\to$ \dmPTwoOwnTenStack & \frPTwoOwnFiveRaw $\to$ \frPTwoOwnFiveStack & \frPTwoOwnTenRaw $\to$ \frPTwoOwnTenStack \\
+  P2 box (P1 stack) & \dmPTwoPOneFiveRaw $\to$ \dmPTwoPOneFiveStack & \dmPTwoPOneTenRaw $\to$ \dmPTwoPOneTenStack & \frPTwoPOneFiveRaw $\to$ \frPTwoPOneFiveStack & \frPTwoPOneTenRaw $\to$ \frPTwoPOneTenStack \\
+  P3 recording (P1 stack) & \dmOwnFiveRaw $\to$ \dmOwnFiveStack & \dmOwnTenRaw $\to$ \dmOwnTenStack & \frOwnFiveRaw $\to$ \frOwnFiveStack & \frOwnTenRaw $\to$ \frOwnTenStack \\
+  \bottomrule
+ \end{tabular}
+ \vspace{-0.8em}
+\end{table}
+
+These experiments transfer human motion and timing into simulation. The notebook demo fails uncorrected on both arms at about $6\times$ robot pace. Sequential diagnosis
+selects a $3\times$ speed cap, look-again, calibration probing, then a tighter $2\times$ cap; with the revised retreat the stack reaches
+\dmNotebookFiveStack/60 and \dmNotebookTenStack/60 (Table~\ref{tab:demos}), and RMSE to the retargeted
+reference falls from \dmPathRawFive{} to \dmPathFixFive\,cm (UR5e) and \dmPathRawTen{} to \dmPathFixTen\,cm (UR10e).
+
+The original stack scored \dmVOneMax/60 on all \dmVOneDemos{} additional P1 cycles because the copied retreat paths intersected the tray. On P2, the same retreat caused UR5e success to drop from \dmVFourRaw/60 to \dmVFourStack/60.
+We therefore added a 5\,cm lift before retreating along the human path (selected on development seeds 0--19; path-RMSE cost \dmCostMin--\dmCostMax\,cm).
+The revised P1 stack transfers to P2 and P3 without retuning; P1 markers remain difficult on the UR10e (\dmMarkersTenStack/60).
+Seeds 1000--1059 informed revision; those columns are exploratory. On unused seeds 5000--5059, every cell improves: the revised stack reaches \frStackMin--60/60 against at most \frRawMax/60 uncorrected,
+all paired intervals exclude zero, and P1 markers on the UR10e reach \frMarkersTenStack/60.
+
+\subsection{Depth perception}
+
+All \pcBarMet/\pcBarCells{} pre-declared acceptance cells reach the 90\% point-estimate threshold across three manipulators. Separate notebook-path comparisons show close depth and ground-truth results. Calibration stress and occlusion expose limits (Appendix~\ref{app:depth}); physical-camera transfer remains untested.
+
+\section{Limitations and Conclusion}
+\label{sec:limits}
+
+The budget is conditional on the assumed or measured error distribution. Timing ranges come from six demonstrations and depth-error magnitudes from simulation; calibration and retargeting errors and correction models remain assumed. The study uses one simulated task, scripted controllers, and a UR5e-tuned layout; layout shifts leave the table and task fixed. Three demonstrators and unreconstructed scenes limit generalisation. Look-again and probing manoeuvres and their time costs are not simulated. Real-robot performance is untested.
+
+The Transfer Gap Budget diagnoses recoverable transfer failures through paired interventions. Perception dominates under the nominal error model; demonstration-derived timing makes timing dominant. Corrections and a revised retreat improve human-video transfer on unused seeds. These results suggest that the value of additional human data should be evaluated together with the transfer-error distribution it induces, since changes in timing, motion, or scene variation can shift the dominant transfer bottleneck.
+
+\textbf{Author responsibility.} Reported values were checked against available experimental records; the authors are responsible for the work.
+
+\clearpage
+\acknowledgments{Omitted for blind review.}
+\bibliography{refs}
+
+\clearpage
+\appendix
+\section{Additional simulation results}
+
+\subsection{Additional error-distribution sensitivity}
+\label{app:sensitivity}
+\textbf{E: exploratory sensitivity.} Fresh seeds (200 per arm unless stated) test A's oracles and selected corrections with errors scaled 0.5$\times$ (500 seeds) or 2$\times$, 3 or 5\,cm blocks, $\pm$5\,cm jitter, tray or block shifts of 8--10\,cm,
+perception error scaled 0.1--2$\times$, cut to 25\% alone or with doubled calibration error (500 seeds), matched to simulated depth-error measurements, and timing spanning demonstration speeds (500 seeds). Correction constants are unchanged.
+
+Perception has the largest point-estimate budget at nominal and doubled errors, with 3 or 5\,cm blocks, $\pm$5\,cm jitter (ten cells), and moved tray or block (six cells).
+At $0.5\times$ errors (\ehFullFive{} and \ehFullTen{} of 500 uncorrected) it still leads, by \ehMarginFive\pp{} [\ehMarginLoFive, \ehMarginHiFive] over calibration on both arms.
+Varying only perception error (Fig.~\ref{fig:curve}), perception leads from the assumed 1.5\,cm upward; at 0.75$\times$ and below calibration and timing take over.
+
+Tying magnitudes to measurements changes the ranking. The simulated depth estimator's block-position error is \mmNom\,mm RMS per axis with exact camera calibration, and \mmHalf{} and \mmOne\,mm with $0.5^\circ$/5\,mm and $1^\circ$/10\,mm calibration error.
+Injected as the perception error, these give perception budgets of \DnNomPercFive{} and \DnNomPercTen\pp{}, \DnHalfPercFive{} and \DnHalfPercTen\pp{} (timing leads at both), and \DnOnePercFive{} and \DnOnePercTen\pp{} (perception leads).
+
+Each 500-seed correction setting uses 100 development and 400 evaluation seeds.
+With perception error cut to 25\%, the rule picks timing: gains \rpA{} and \rpB\pp{} versus \rlA{} and \rlB\pp{} for look-again, a difference of \rdA{} [\rdAlo, \rdAhi] and \rdB{} [\rdBlo, \rdBhi]\pp{}.
+It trails hindsight-best calibration by 1.2 and 1.5\pp{} (difference intervals include zero).
+With calibration error also doubled, it picks calibration: gains \rcA{} and \rcB\pp{} versus about zero for look-again, differences \reA{} [\reAlo, \reAhi] and \reB{} [\reBlo, \reBhi]\pp{}.
+The doubled-calibration setting matches the hindsight best.
+
+
+\subsection{Depth comparison details}
+\label{app:depth}
+All \pcBarMet/\pcBarCells{} pre-declared acceptance cells reach the 90\% point-estimate threshold (\pcBarMin--\pcN{} of \pcN{} episodes), covering yaw, distractors, depth noise, occlusion with a retry, and combined stressors on three manipulators.
+Report-only stress tests expose limits: $2^\circ$/20\,mm calibration error gives \pcCalibTwoFive/\pcN{} on the UR5e, and occlusion without retry \pcArmMin--\pcArmMax/\pcN{}.
+For the notebook path at robot pace, depth versus ground-truth success is \spKFiveDepth{} versus \spKFiveTruth/\spN{} (UR5e), \spKTenDepth{} versus \spKTenTruth/\spN{} (UR10e), and \spKKaiDepth{} versus \spKKaiTruth/\spN{} (UR10e with a Robotiq 2F-140). Depth success is 0.8--1.7\pp{} higher, with path RMSE within 0.01\,cm. All three arms meet the point-estimate margins of 10\pp{} success loss and 0.5\,cm added RMSE (no inferential non-inferiority test). These simulated measurements inform the sensitivity analysis; physical-camera transfer remains untested.
+
+\subsection{Exploratory humanoid runtime sensitivity}
+\label{app:g1}
+A Unitree G1 with Dex3 hands uses SONIC whole-body control~\citep{sonic2025}. We score grasp (5\,cm lift with contact) and placement within 5\,cm of the goal; we do not estimate stage budgets here.
+With IK-planned targets, the same frozen closed-loop controller places \giHostPlace/\giN{} objects in a volume-based installation and \giImgPlace/\giN{} in a packaged container (same GPU, seeds 1200--1239; discordant placements \giOnlyImg{} to \giOnlyHost{}, exact McNemar $p=\giP$). Code and environment checks did not identify the cause; a four-seed MuJoCo 3.15.0 rebuild (\mjGraspNew/\mjNNew{} lifts versus \mjGraspOld/\mjNOld{} on 3.14.0) also changed \texttt{filelock}. This unresolved runtime sensitivity is exploratory and does not support a causal explanation or the main Transfer Gap Budget claims.
+\end{document}

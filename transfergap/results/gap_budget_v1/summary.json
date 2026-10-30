@@ -1,0 +1,187 @@
+{
+ "git_commit": "f8dd798a564f1d1d039d9f511626818df4d60d8d",
+ "protocol_commit_hint": "be89bc12877f63e53f52939421cca31cf4fcafe8",
+ "constants": {
+  "PERCEPTION_SIGMA_M": 0.015,
+  "CALIBRATION_MAX_M": 0.03,
+  "TIMING_SPEED_RANGE": [
+   1.0,
+   4.5
+  ],
+  "GRIP_FORCE_SCALE": 1.0,
+  "LOOK_AGAIN_SIGMA_M": 0.004,
+  "PROBE_SIGMA_M": 0.002,
+  "SPEED_CAP": 3.0,
+  "all_values_are_assumptions": true
+ },
+ "dev": {
+  "seeds": [
+   0,
+   59
+  ],
+  "conditions": {
+   "full": {
+    "oracle": "none",
+    "n": 60,
+    "successes": 34,
+    "success_rate": 0.5666666666666667,
+    "wilson_95": [
+     0.44103438776125564,
+     0.6842760319531324
+    ],
+    "failure_reasons": {
+     "not_released_and_settled_at_goal": 26,
+     "no_lift": 20
+    }
+   },
+   "oracle_perception": {
+    "oracle": "perception",
+    "n": 60,
+    "successes": 41,
+    "success_rate": 0.6833333333333333,
+    "wilson_95": [
+     0.5576623297382323,
+     0.7869413244763347
+    ],
+    "failure_reasons": {
+     "not_released_and_settled_at_goal": 19,
+     "no_lift": 13
+    }
+   },
+   "oracle_calibration": {
+    "oracle": "calibration",
+    "n": 60,
+    "successes": 41,
+    "success_rate": 0.6833333333333333,
+    "wilson_95": [
+     0.5576623297382323,
+     0.7869413244763347
+    ],
+    "failure_reasons": {
+     "not_released_and_settled_at_goal": 19,
+     "no_lift": 13
+    }
+   },
+   "oracle_timing": {
+    "oracle": "timing",
+    "n": 60,
+    "successes": 41,
+    "success_rate": 0.6833333333333333,
+    "wilson_95": [
+     0.5576623297382323,
+     0.7869413244763347
+    ],
+    "failure_reasons": {
+     "not_released_and_settled_at_goal": 19,
+     "no_lift": 16
+    }
+   },
+   "oracle_all": {
+    "oracle": "all",
+    "n": 60,
+    "successes": 60,
+    "success_rate": 1.0,
+    "wilson_95": [
+     0.93982814785791,
+     0.9999999999999998
+    ],
+    "failure_reasons": {}
+   }
+  },
+  "budget": {
+   "perception": {
+    "delta_pp": 11.666666666666666,
+    "ci95_pp": [
+     0,
+     23.333333333333332
+    ],
+    "n": 60
+   },
+   "calibration": {
+    "delta_pp": 11.666666666666666,
+    "ci95_pp": [
+     3.3333333333333335,
+     21.666666666666668
+    ],
+    "n": 60
+   },
+   "timing": {
+    "delta_pp": 11.666666666666666,
+    "ci95_pp": [
+     1.6666666666666667,
+     21.666666666666668
+    ],
+    "n": 60
+   }
+  },
+  "interaction": {
+   "sum_of_single_recoveries_pp": 35.0,
+   "oracle_all_recovery_pp": 43.333333333333336,
+   "oracle_all": {
+    "delta_pp": 43.333333333333336,
+    "ci95_pp": [
+     30.0,
+     55.00000000000001
+    ],
+    "n": 60
+   },
+   "sum_minus_all_pp": -8.333333333333336
+  },
+  "chosen_component": "perception",
+  "chosen_correction": "look_again",
+  "choice_rule": "argmax over {perception, calibration, timing} of success(oracle_k)-success(full) on dev; ties -> perception, calibration, timing order"
+ },
+ "heldout": {
+  "seeds": [
+   1000,
+   1059
+  ],
+  "correction": "look_again",
+  "conditions": {
+   "full": {
+    "oracle": "none",
+    "n": 60,
+    "successes": 32,
+    "success_rate": 0.5333333333333333,
+    "wilson_95": [
+     0.4089342702715789,
+     0.6537209395856151
+    ],
+    "failure_reasons": {
+     "not_released_and_settled_at_goal": 28,
+     "no_lift": 22
+    }
+   },
+   "full+look_again": {
+    "oracle": "none",
+    "n": 60,
+    "successes": 45,
+    "success_rate": 0.75,
+    "wilson_95": [
+     0.6276792992295218,
+     0.8422347746994333
+    ],
+    "failure_reasons": {
+     "not_released_and_settled_at_goal": 15,
+     "no_lift": 10
+    }
+   }
+  },
+  "paired_gap_corrected_minus_full": {
+   "delta_pp": 21.666666666666668,
+   "ci95_pp": [
+    10.0,
+    33.33333333333333
+   ],
+   "n": 60
+  },
+  "ci_excludes_zero": true
+ },
+ "caveats": [
+  "all error magnitudes are assumptions, not measured",
+  "scripted IK controller, not a learned policy; no human demo drives it",
+  "grip force is nominal; contact oracle not informative",
+  "touch probe is a noise model, probe motion and time are not simulated",
+  "look-again and probe corrections take no execution time in the simulation"
+ ]
+}

@@ -1,0 +1,32 @@
+{
+ "model": "nvidia/nemotron-3-super-120b-a12b",
+ "menu": [
+  "speed_cap_2"
+ ],
+ "rule_choice": "speed_cap_2",
+ "valid": true,
+ "agent_choice": "speed_cap_2",
+ "rationale": "Timing errors dominate failures (not released/settled) and yield the highest recovery (\u224810\u202fpp) and style improvements (path RMSE \u21932.35\u202fcm, speed correlation \u21910.55). Adding a tighter speed cap should further reduce timing\u2011related errors.",
+ "response_id": "chatcmpl-a11e516855d03426",
+ "latency_s": 2.738877945994318,
+ "usage": {
+  "completion_tokens": 341,
+  "prompt_tokens": 628,
+  "total_tokens": 969,
+  "completion_tokens_details": {
+   "accepted_prediction_tokens": null,
+   "audio_tokens": null,
+   "reasoning_tokens": 260,
+   "rejected_prediction_tokens": null
+  },
+  "prompt_tokens_details": {
+   "audio_tokens": null,
+   "cached_tokens": 0,
+   "created_cache_tokens": 0,
+   "multimodal_tokens": null
+  },
+  "prompt_cache_hit_tokens": 0,
+  "prompt_cache_miss_tokens": 628
+ },
+ "agrees_with_rule": true
+}

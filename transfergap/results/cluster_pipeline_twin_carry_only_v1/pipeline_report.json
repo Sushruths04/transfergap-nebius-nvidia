@@ -1,0 +1,94 @@
+{
+ "input": "/ws/transfergap/ctx_cam/user_pose_v2.npz",
+ "robots": [
+  "ur5e",
+  "ur10e",
+  "kairos_mobile"
+ ],
+ "fixes": "speed_cap_3,look_again,touch_probe_calibration,speed_cap_2,safe_path_v2",
+ "stages": {
+  "perceive": {
+   "status": "ok",
+   "seconds": 0.0
+  },
+  "demo": {
+   "detail": {
+    "metric_scale": 0.3846,
+    "shoulder_width_ref_m": 0.4,
+    "frames": 147,
+    "events": "given",
+    "pinch_extent_m": [
+     0.278,
+     0.032,
+     0.221
+    ],
+    "plausibility": "ok",
+    "scene": "ABLATION: real carry vector, default cube and tray sizes",
+    "scene_sha": "81b2af1fabcf",
+    "human_carry_m": 0.259,
+    "scene_carry_m": 0.259,
+    "carry_scale_factor": 1.002,
+    "scale_from": "shoulder",
+    "align_yaw_deg": 267.4,
+    "twin_problems": {
+     "ur5e": [],
+     "ur10e": [],
+     "kairos_mobile": []
+    }
+   },
+   "status": "ok",
+   "seconds": 0.0
+  },
+  "feasibility": {
+   "detail": {
+    "ur5e": {
+     "verdict": "feasible",
+     "reasons": [],
+     "worst": {
+      "max_ik_err_m": 0.00019628312794906202,
+      "max_penetration_m": 0.0025825397635881667
+     }
+    },
+    "ur10e": {
+     "verdict": "feasible",
+     "reasons": [],
+     "worst": {
+      "max_ik_err_m": 0.00019960493664018353,
+      "max_penetration_m": 0.0025825397635881667
+     }
+    },
+    "kairos_mobile": {
+     "verdict": "style infeasible for this robot",
+     "reasons": [
+      "collides: carry 0.5 cm, retreat 0.8 cm (g_left_pad, g_right_pad)"
+     ],
+     "worst": {
+      "max_ik_err_m": 0.0001918453149219832,
+      "max_penetration_m": 0.008041245911068376
+     }
+    }
+   },
+   "status": "ok",
+   "seconds": 1.2
+  },
+  "rollouts": {
+   "detail": {
+    "ur5e": {
+     "raw": "36/60",
+     "all_fixes": "60/60"
+    },
+    "ur10e": {
+     "raw": "33/60",
+     "all_fixes": "60/60"
+    },
+    "kairos_mobile": {
+     "raw": "47/60",
+     "all_fixes": "60/60"
+    }
+   },
+   "status": "ok",
+   "seconds": 27.4
+  }
+ },
+ "ok": true
+}

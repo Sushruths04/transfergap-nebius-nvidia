@@ -1,0 +1,117 @@
+{
+ "seeds": [
+  0,
+  59
+ ],
+ "conditions": {
+  "full": {
+   "oracle": "none",
+   "n": 60,
+   "successes": 34,
+   "success_rate": 0.5666666666666667,
+   "wilson_95": [
+    0.44103438776125564,
+    0.6842760319531324
+   ],
+   "failure_reasons": {
+    "not_released_and_settled_at_goal": 26,
+    "no_lift": 20
+   }
+  },
+  "oracle_perception": {
+   "oracle": "perception",
+   "n": 60,
+   "successes": 41,
+   "success_rate": 0.6833333333333333,
+   "wilson_95": [
+    0.5576623297382323,
+    0.7869413244763347
+   ],
+   "failure_reasons": {
+    "not_released_and_settled_at_goal": 19,
+    "no_lift": 13
+   }
+  },
+  "oracle_calibration": {
+   "oracle": "calibration",
+   "n": 60,
+   "successes": 41,
+   "success_rate": 0.6833333333333333,
+   "wilson_95": [
+    0.5576623297382323,
+    0.7869413244763347
+   ],
+   "failure_reasons": {
+    "not_released_and_settled_at_goal": 19,
+    "no_lift": 13
+   }
+  },
+  "oracle_timing": {
+   "oracle": "timing",
+   "n": 60,
+   "successes": 41,
+   "success_rate": 0.6833333333333333,
+   "wilson_95": [
+    0.5576623297382323,
+    0.7869413244763347
+   ],
+   "failure_reasons": {
+    "not_released_and_settled_at_goal": 19,
+    "no_lift": 16
+   }
+  },
+  "oracle_all": {
+   "oracle": "all",
+   "n": 60,
+   "successes": 60,
+   "success_rate": 1.0,
+   "wilson_95": [
+    0.93982814785791,
+    0.9999999999999998
+   ],
+   "failure_reasons": {}
+  }
+ },
+ "budget": {
+  "perception": {
+   "delta_pp": 11.666666666666666,
+   "ci95_pp": [
+    0,
+    23.333333333333332
+   ],
+   "n": 60
+  },
+  "calibration": {
+   "delta_pp": 11.666666666666666,
+   "ci95_pp": [
+    3.3333333333333335,
+    21.666666666666668
+   ],
+   "n": 60
+  },
+  "timing": {
+   "delta_pp": 11.666666666666666,
+   "ci95_pp": [
+    1.6666666666666667,
+    21.666666666666668
+   ],
+   "n": 60
+  }
+ },
+ "interaction": {
+  "sum_of_single_recoveries_pp": 35.0,
+  "oracle_all_recovery_pp": 43.333333333333336,
+  "oracle_all": {
+   "delta_pp": 43.333333333333336,
+   "ci95_pp": [
+    30.0,
+    55.00000000000001
+   ],
+   "n": 60
+  },
+  "sum_minus_all_pp": -8.333333333333336
+ },
+ "chosen_component": "perception",
+ "chosen_correction": "look_again",
+ "choice_rule": "argmax over {perception, calibration, timing} of success(oracle_k)-success(full) on dev; ties -> perception, calibration, timing order"
+}

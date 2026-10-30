@@ -1,0 +1,236 @@
+{
+ "ckpt": "/ws/transfergap/groot_ft_ur10e",
+ "robot": "ur10e",
+ "exec": "ensemble",
+ "block_half": null,
+ "n_distractors": 0,
+ "mixed": true,
+ "n": 30,
+ "success": 16,
+ "ci95": [
+  0.361,
+  0.698
+ ],
+ "per_seed": [
+  {
+   "seed": 6100,
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ],
+   "seconds": 29.8
+  },
+  {
+   "seed": 6101,
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ],
+   "seconds": 29.8
+  },
+  {
+   "seed": 6102,
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ],
+   "seconds": 29.7
+  },
+  {
+   "seed": 6103,
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ],
+   "seconds": 29.7
+  },
+  {
+   "seed": 6104,
+   "success": true,
+   "reasons": [],
+   "seconds": 29.8
+  },
+  {
+   "seed": 6105,
+   "success": true,
+   "reasons": [],
+   "seconds": 29.8
+  },
+  {
+   "seed": 6106,
+   "success": true,
+   "reasons": [],
+   "seconds": 29.8
+  },
+  {
+   "seed": 6107,
+   "success": true,
+   "reasons": [],
+   "seconds": 29.8
+  },
+  {
+   "seed": 6108,
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ],
+   "seconds": 29.0
+  },
+  {
+   "seed": 6109,
+   "success": true,
+   "reasons": [],
+   "seconds": 27.0
+  },
+  {
+   "seed": 6110,
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ],
+   "seconds": 32.5
+  },
+  {
+   "seed": 6111,
+   "success": true,
+   "reasons": [],
+   "seconds": 44.7
+  },
+  {
+   "seed": 6112,
+   "success": true,
+   "reasons": [],
+   "seconds": 44.6
+  },
+  {
+   "seed": 6113,
+   "success": false,
+   "reasons": [
+    "not_released_and_settled_at_goal"
+   ],
+   "seconds": 44.6
+  },
+  {
+   "seed": 6114,
+   "success": true,
+   "reasons": [],
+   "seconds": 44.6
+  },
+  {
+   "seed": 6115,
+   "success": true,
+   "reasons": [],
+   "seconds": 44.7
+  },
+  {
+   "seed": 6116,
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ],
+   "seconds": 44.6
+  },
+  {
+   "seed": 6117,
+   "success": true,
+   "reasons": [],
+   "seconds": 44.6
+  },
+  {
+   "seed": 6118,
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ],
+   "seconds": 44.8
+  },
+  {
+   "seed": 6119,
+   "success": true,
+   "reasons": [],
+   "seconds": 44.7
+  },
+  {
+   "seed": 6120,
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ],
+   "seconds": 44.7
+  },
+  {
+   "seed": 6121,
+   "success": true,
+   "reasons": [],
+   "seconds": 44.6
+  },
+  {
+   "seed": 6122,
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ],
+   "seconds": 42.3
+  },
+  {
+   "seed": 6123,
+   "success": true,
+   "reasons": [],
+   "seconds": 29.7
+  },
+  {
+   "seed": 6124,
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ],
+   "seconds": 29.8
+  },
+  {
+   "seed": 6125,
+   "success": true,
+   "reasons": [],
+   "seconds": 29.7
+  },
+  {
+   "seed": 6126,
+   "success": true,
+   "reasons": [],
+   "seconds": 29.8
+  },
+  {
+   "seed": 6127,
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ],
+   "seconds": 29.7
+  },
+  {
+   "seed": 6128,
+   "success": true,
+   "reasons": [],
+   "seconds": 29.8
+  },
+  {
+   "seed": 6129,
+   "success": false,
+   "reasons": [
+    "not_released_and_settled_at_goal"
+   ],
+   "seconds": 29.7
+  }
+ ]
+}

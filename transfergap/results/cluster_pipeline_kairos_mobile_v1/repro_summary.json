@@ -1,0 +1,96 @@
+{
+ "demo": {
+  "kind": "file",
+  "path": "/ws/transfergap/ctx_cam/pipe_user_mobile/demo.npz",
+  "sha256": "abff434543c890cf12d71d67a0ba2f42e2bed6bc41a70f98e0afaf74037bf762",
+  "tag": "demoabff4345"
+ },
+ "fixes": [
+  "speed_cap_3",
+  "look_again",
+  "touch_probe_calibration",
+  "speed_cap_2",
+  "safe_path_v2"
+ ],
+ "seeds": [
+  1000,
+  1059
+ ],
+ "robots": {
+  "kairos": {
+   "conditions": {
+    "raw": {
+     "oracle": "none",
+     "n": 60,
+     "successes": 41,
+     "success_rate": 0.6833333333333333,
+     "wilson_95": [
+      0.5576623297382323,
+      0.7869413244763347
+     ],
+     "failure_reasons": {
+      "no_lift": 12,
+      "not_released_and_settled_at_goal": 19
+     }
+    },
+    "all_fixes": {
+     "oracle": "none",
+     "n": 60,
+     "successes": 60,
+     "success_rate": 1.0,
+     "wilson_95": [
+      0.93982814785791,
+      0.9999999999999998
+     ],
+     "failure_reasons": {}
+    }
+   },
+   "gap_all_fixes_minus_raw": {
+    "delta_pp": 31.666666666666664,
+    "ci95_pp": [
+     20.0,
+     43.333333333333336
+    ],
+    "n": 60
+   }
+  },
+  "kairos_mobile": {
+   "conditions": {
+    "raw": {
+     "oracle": "none",
+     "n": 60,
+     "successes": 41,
+     "success_rate": 0.6833333333333333,
+     "wilson_95": [
+      0.5576623297382323,
+      0.7869413244763347
+     ],
+     "failure_reasons": {
+      "no_lift": 12,
+      "not_released_and_settled_at_goal": 19,
+      "fallen": 1
+     }
+    },
+    "all_fixes": {
+     "oracle": "none",
+     "n": 60,
+     "successes": 60,
+     "success_rate": 1.0,
+     "wilson_95": [
+      0.93982814785791,
+      0.9999999999999998
+     ],
+     "failure_reasons": {}
+    }
+   },
+   "gap_all_fixes_minus_raw": {
+    "delta_pp": 31.666666666666664,
+    "ci95_pp": [
+     20.0,
+     43.333333333333336
+    ],
+    "n": 60
+   }
+  }
+ }
+}

@@ -1,0 +1,97 @@
+{
+ "input": "/ws/transfergap/ctx_cam/user_pose_v2.npz",
+ "robots": [
+  "ur5e",
+  "ur10e",
+  "kairos",
+  "kairos_mobile"
+ ],
+ "fixes": "speed_cap_3,look_again,touch_probe_calibration,speed_cap_2,safe_path_v2",
+ "stages": {
+  "perceive": {
+   "status": "ok",
+   "seconds": 0.0
+  },
+  "demo": {
+   "detail": {
+    "metric_scale": 0.3846,
+    "shoulder_width_ref_m": 0.4,
+    "frames": 147,
+    "events": "given",
+    "pinch_extent_m": [
+     0.278,
+     0.032,
+     0.221
+    ],
+    "plausibility": "ok"
+   },
+   "status": "ok",
+   "seconds": 0.1
+  },
+  "feasibility": {
+   "detail": {
+    "ur5e": {
+     "verdict": "feasible",
+     "reasons": [],
+     "worst": {
+      "max_ik_err_m": 0.0001998279289387459,
+      "max_penetration_m": 0.0025825397635881667
+     }
+    },
+    "ur10e": {
+     "verdict": "feasible",
+     "reasons": [],
+     "worst": {
+      "max_ik_err_m": 0.00019802330536345105,
+      "max_penetration_m": 0.0025825397635881667
+     }
+    },
+    "kairos": {
+     "verdict": "style infeasible for this robot",
+     "reasons": [
+      "collides: carry 0.6 cm, retreat 0.9 cm (g_left_pad, g_right_pad)"
+     ],
+     "worst": {
+      "max_ik_err_m": 0.00019986539606569445,
+      "max_penetration_m": 0.008566255221362529
+     }
+    },
+    "kairos_mobile": {
+     "verdict": "style infeasible for this robot",
+     "reasons": [
+      "collides: carry 0.6 cm, retreat 0.9 cm (g_left_pad, g_right_pad)"
+     ],
+     "worst": {
+      "max_ik_err_m": 0.00019986539606562764,
+      "max_penetration_m": 0.008566255221362529
+     }
+    }
+   },
+   "status": "ok",
+   "seconds": 2.0
+  },
+  "rollouts": {
+   "detail": {
+    "ur5e": {
+     "raw": "35/60",
+     "all_fixes": "60/60"
+    },
+    "ur10e": {
+     "raw": "36/60",
+     "all_fixes": "60/60"
+    },
+    "kairos": {
+     "raw": "49/60",
+     "all_fixes": "60/60"
+    },
+    "kairos_mobile": {
+     "raw": "49/60",
+     "all_fixes": "60/60"
+    }
+   },
+   "status": "ok",
+   "seconds": 35.5
+  }
+ },
+ "ok": true
+}

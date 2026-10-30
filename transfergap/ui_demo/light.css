@@ -1,0 +1,23 @@
+/* Light technical theme shared by all console pages (loaded after each page's own <style>) */
+:root{--bg:#eef2f6;--p:#ffffff;--p2:#f3f6fa;--line:#d3dce6;--tx:#0e1a2b;--mu:#5a6a7f;--nv:#3f7d00;--cy:#1d4ed8;--am:#a8530a;--rd:#c0392b;
+  --mono:ui-monospace,"SF Mono","JetBrains Mono",Menlo,Consolas,monospace}
+body{background:var(--bg);color:var(--tx);background-image:radial-gradient(#c9d3de 1px,transparent 1px);background-size:22px 22px;background-attachment:fixed}
+header{background:rgba(255,255,255,.88)!important;backdrop-filter:blur(8px);border-bottom:1px solid var(--line)!important;box-shadow:0 1px 0 rgba(14,26,43,.04)}
+h1 b{color:var(--nv)}
+.card,.pane,.row,.v,.tr div{background:var(--p)!important;border:1px solid var(--line)!important;box-shadow:0 1px 2px rgba(14,26,43,.05),0 8px 24px -12px rgba(14,26,43,.12)}
+.card h2,.pane .bar,.v h2,.tr span{color:var(--mu)!important;font-family:var(--mono);letter-spacing:.14em}
+button,select,input[type=text],input:not([type]){background:var(--p)!important;color:var(--tx)!important;border:1px solid var(--line)!important}
+button:hover{border-color:var(--nv)!important}
+button.primary,button.on,.seg button.on{background:#e8f4d6!important;color:var(--nv)!important;border-color:var(--nv)!important;font-weight:650}
+.seg{border-color:var(--line)!important}.seg button{background:var(--p2)!important;color:var(--mu)!important}
+.view,.v video,.view img{background:#e4eaf0!important}
+.ph{background:repeating-linear-gradient(135deg,#eaf0f5 0 14px,#e2e9f0 14px 28px)!important;color:var(--mu)}
+.ph b{color:var(--tx)}
+.m,.step .n{background:var(--p2)!important}
+.kv b,.m b,.gain,.k b,#tl{font-family:var(--mono)}
+.chip{color:var(--mu)!important;border-color:var(--line)!important;background:var(--p)}
+.chip.ok{color:var(--nv)!important;border-color:var(--nv)!important}.chip.warn{color:var(--am)!important}.chip.bad{color:var(--rd)!important}
+.bar{background:transparent}.bar i{opacity:.9}
+.note{color:var(--am)!important}
+canvas#handc{background:#f3f6fa!important}
+a{color:var(--cy)!important}

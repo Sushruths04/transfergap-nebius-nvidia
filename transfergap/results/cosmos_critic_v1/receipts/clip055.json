@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "kind": "cosmos_critic",
+  "requested_model": "nvidia/Cosmos-Reason2-8B",
+  "endpoint_host": "127.0.0.1",
+  "created_at": "2026-10-01T18:24:38.661068+00:00",
+  "prompt_sha256": "309d056cd99e17d4cf39386b52595756f2aa8852a202542d9f321a4363545cd8",
+  "video_sha256": "4b3502949876facc6933d5c670aebc13513c6274a5859b0468b1259c091d558f",
+  "request_sha256": "4ed073443d14cbda48628da70e76beb75db1bac8bfb8b246f5d016b0b4af7add",
+  "fps": 4,
+  "sampling": {
+    "max_tokens": 4096,
+    "temperature": 0.6,
+    "top_p": 0.95,
+    "top_k": 20,
+    "repetition_penalty": 1.0,
+    "presence_penalty": 0.0,
+    "seed": 1234
+  },
+  "guided_json": true,
+  "status": "succeeded",
+  "clip_id": "clip055",
+  "git_commit": "9715a642cd667a2c241d582d2ba8c3c8f3904ec3",
+  "response_id": "chatcmpl-b72f122b0bd54f16",
+  "returned_model": "nvidia/Cosmos-Reason2-8B",
+  "usage": {
+    "prompt_tokens": 2440,
+    "total_tokens": 2660,
+    "completion_tokens": 220,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 161
+    }
+  },
+  "finish_reason": "stop",
+  "content": "{\"success\": \"yes\", \"failing_stage\": \"none\", \"rationale\": \"The robot arm successfully grasped the red block, moved it over the green tray, released it inside the tray, and moved the gripper away, completing the task as instructed.\"}",
+  "reasoning_content": "\nOkay, let's see. The user wants to know if the robot successfully completed the task of moving the red block into the green tray. The video shows the robot arm moved towards the red block, grasped it, lifted it, moved it over the green tray, and released it. The key points here are whether the block ended up inside the tray and if the gripper was properly released.\n\nThe video shows that the red block was released and rests inside the green tray. The gripper then moves away. So according to the output requirements, if the block is in the tray and the gripper has moved away, the task is successful. The video does not show any failure in grasping or placing, so the answer should be \"yes\" with \"none\" as the failing stage.\n",
+  "parsed": true,
+  "answer": {
+    "success": true,
+    "failing_stage": "none",
+    "rationale": "The robot arm successfully grasped the red block, moved it over the green tray, released it inside the tray, and moved the gripper away, completing the task as instructed."
+  },
+  "parse_error": null,
+  "latency_s": 7.922176199001115
+}

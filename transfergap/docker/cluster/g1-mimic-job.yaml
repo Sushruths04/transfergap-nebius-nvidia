@@ -1,0 +1,36 @@
+# G1 mimic job (image r4, code from the volume). End-to-end check of the unified image on the GPU cluster (one Job, one GPU). Free. Needs the single GPU: scale deploy/tg-dev to 0 first and back
+# to 1 afterwards (then run restore_tg_dev.sh in the pod). Volume paths: demo plan/npz and SONIC weights are NOT in the image.
+#   kubectl scale deploy/tg-dev -n isaac-sim --replicas=0 ; kubectl apply -f docker/cluster/e2e-job.yaml ; kubectl logs -f job/tg-e2e-r4 -n isaac-sim
+apiVersion: batch/v1
+kind: Job
+metadata: {name: tg-g1-mimic-r1, namespace: isaac-sim, labels: {project: transfergap}}
+spec:
+  backoffLimit: 0
+  activeDeadlineSeconds: 10800
+  ttlSecondsAfterFinished: 86400
+  template:
+    metadata: {labels: {project: transfergap}}
+    spec:
+      restartPolicy: Never
+      runtimeClassName: nvidia
+      nodeSelector: {nvidia.com/gpu.product: NVIDIA-L40S, kubernetes.io/hostname: srv-hpc-gpu04}
+      imagePullSecrets: [{name: tg-ghcr}]
+      containers:
+      - name: e2e
+        image: ghcr.io/sushruths04/transfergap:full-2026-10-06c
+        imagePullPolicy: Always
+        args: [bash, /ws/transfergap/ctx_cam/transfergap/g1/image_g1_mimic.sh]
+        env:
+        - {name: NVIDIA_DRIVER_CAPABILITIES, value: all}
+        - {name: HOME, value: /root}
+        - {name: TG_CODE, value: /ws/transfergap/ctx_cam/transfergap}
+        - {name: JOINTS, value: /ws/transfergap/ctx_cam/pipe_user_scaled/joints_scaled.npz}
+        - {name: OUT, value: /ws/transfergap/g1_mimic_out_user_v1}
+        - {name: SONIC_WEIGHTS_SRC, value: /ws/transfergap/repo/GR00T-WholeBodyControl/gear_sonic_deploy}
+        resources:
+          requests: {cpu: "16", memory: 48Gi, ephemeral-storage: 20Gi, nvidia.com/gpu: 1}
+          limits: {cpu: "32", memory: 64Gi, ephemeral-storage: 100Gi, nvidia.com/gpu: 1}
+        volumeMounts: [{name: data, mountPath: /ws/transfergap}, {name: shm, mountPath: /dev/shm}]
+      volumes:
+      - {name: data, persistentVolumeClaim: {claimName: tg-dev-data}}
+      - {name: shm, emptyDir: {medium: Memory, sizeLimit: 16Gi}}

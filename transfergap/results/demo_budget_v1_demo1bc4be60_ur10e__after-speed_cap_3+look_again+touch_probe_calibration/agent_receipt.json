@@ -1,0 +1,34 @@
+{
+ "schema_version": 1,
+ "kind": "hosted_inference",
+ "role": "nemotron",
+ "requested_model": "nvidia/nemotron-3-super-120b-a12b",
+ "endpoint_host": "api.tokenfactory.nebius.com",
+ "created_at": "2026-10-02T06:12:35.360449+00:00",
+ "request_sha256": "abac7958718c521f6d45687784e62595adbafd334f14a4a262538c8e769adf4f",
+ "status": "succeeded",
+ "response_id": "chatcmpl-a11e516855d03426",
+ "returned_model": "nvidia/nemotron-3-super-120b-a12b",
+ "usage": {
+  "completion_tokens": 341,
+  "prompt_tokens": 628,
+  "total_tokens": 969,
+  "completion_tokens_details": {
+   "accepted_prediction_tokens": null,
+   "audio_tokens": null,
+   "reasoning_tokens": 260,
+   "rejected_prediction_tokens": null
+  },
+  "prompt_tokens_details": {
+   "audio_tokens": null,
+   "cached_tokens": 0,
+   "created_cache_tokens": 0,
+   "multimodal_tokens": null
+  },
+  "prompt_cache_hit_tokens": 0,
+  "prompt_cache_miss_tokens": 628
+ },
+ "finish_reason": "stop",
+ "content": "\n\n{\"correction\": \"speed_cap_2\", \"rationale\": \"Timing errors dominate failures (not released/settled) and yield the highest recovery (\u224810\u202fpp) and style improvements (path RMSE \u21932.35\u202fcm, speed correlation \u21910.55). Adding a tighter speed cap should further reduce timing\u2011related errors.\"}",
+ "latency_s": 2.738877945994318
+}

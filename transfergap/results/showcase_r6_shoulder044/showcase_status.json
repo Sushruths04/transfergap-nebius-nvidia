@@ -1,0 +1,30 @@
+{
+ "pose": {
+  "status": "PASS",
+  "detail": ""
+ },
+ "pipeline": {
+  "status": "PASS",
+  "detail": ""
+ },
+ "analyze": {
+  "status": "PASS",
+  "detail": ""
+ },
+ "robots_render": {
+  "status": "PASS",
+  "detail": ""
+ },
+ "g1_mimic": {
+  "status": "PASS",
+  "detail": ""
+ },
+ "mimic_fidelity": {
+  "status": "PASS",
+  "detail": ""
+ },
+ "showcase": {
+  "status": "PASS",
+  "detail": ""
+ }
+}

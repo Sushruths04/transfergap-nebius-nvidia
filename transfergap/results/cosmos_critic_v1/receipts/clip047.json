@@ -1,0 +1,46 @@
+{
+  "schema_version": 1,
+  "kind": "cosmos_critic",
+  "requested_model": "nvidia/Cosmos-Reason2-8B",
+  "endpoint_host": "127.0.0.1",
+  "created_at": "2026-10-01T18:24:13.578734+00:00",
+  "prompt_sha256": "309d056cd99e17d4cf39386b52595756f2aa8852a202542d9f321a4363545cd8",
+  "video_sha256": "6df4f81c80d95248715d9bfba0a81f1c11ad2a06bd727155d2abccbbdee05962",
+  "request_sha256": "9103f791486629e9f7dd06ff6b2055e1874a5a8750b5bb21766f90903a0b6012",
+  "fps": 4,
+  "sampling": {
+    "max_tokens": 4096,
+    "temperature": 0.6,
+    "top_p": 0.95,
+    "top_k": 20,
+    "repetition_penalty": 1.0,
+    "presence_penalty": 0.0,
+    "seed": 1234
+  },
+  "guided_json": true,
+  "status": "succeeded",
+  "clip_id": "clip047",
+  "git_commit": "9715a642cd667a2c241d582d2ba8c3c8f3904ec3",
+  "response_id": "chatcmpl-adbb1109a5d7d572",
+  "returned_model": "nvidia/Cosmos-Reason2-8B",
+  "usage": {
+    "prompt_tokens": 8298,
+    "total_tokens": 8524,
+    "completion_tokens": 226,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 176
+    }
+  },
+  "finish_reason": "stop",
+  "content": "{\"success\": \"yes\", \"failing_stage\": \"none\", \"rationale\": \"The robot arm successfully grasped the red block, moved it to the green tray, released it inside, and retracted without issues.\"}",
+  "reasoning_content": "\nOkay, let's see. The user wants to know if the robot successfully completed the task of picking up the red block and placing it into the green tray.\n\nLooking at the video, the robot arm first picks up the red block, moves it over the green tray, releases it, and then moves away. The key points here are that the block was lifted, carried to the tray, and released inside. The video shows the block is released into the tray and the gripper moves away. \n\nNow, checking the failure conditions. If the block wasn't released or didn't end up in the tray, that would be a failure. But according to the video, the block is released into the tray. So the task was completed as intended. Therefore, the success is \"yes\" and the failing stage is \"none\" because there were no issues during the process.\n",
+  "parsed": true,
+  "answer": {
+    "success": true,
+    "failing_stage": "none",
+    "rationale": "The robot arm successfully grasped the red block, moved it to the green tray, released it inside, and retracted without issues."
+  },
+  "parse_error": null,
+  "latency_s": 10.331962154999928
+}

@@ -1,0 +1,28 @@
+{
+ "ur5e": {
+  "verdict": "feasible",
+  "reasons": [],
+  "worst": {
+   "max_ik_err_m": 0.00019628312794906202,
+   "max_penetration_m": 0.0025825397635881667
+  }
+ },
+ "ur10e": {
+  "verdict": "feasible",
+  "reasons": [],
+  "worst": {
+   "max_ik_err_m": 0.00019960493664018353,
+   "max_penetration_m": 0.0025825397635881667
+  }
+ },
+ "kairos_mobile": {
+  "verdict": "style infeasible for this robot",
+  "reasons": [
+   "collides: carry 0.5 cm, retreat 0.8 cm (g_left_pad, g_right_pad)"
+  ],
+  "worst": {
+   "max_ik_err_m": 0.0001918453149219832,
+   "max_penetration_m": 0.008041245911068376
+  }
+ }
+}

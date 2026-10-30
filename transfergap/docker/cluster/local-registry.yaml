@@ -1,0 +1,15 @@
+# Throwaway in-cluster registry on the GPU node (the GPU cluster GitLab registry answers 503 for the project repo).
+# hostPort 5000: containerd on the node pulls localhost:5000/... over plain http. Data lives on the project volume.
+apiVersion: v1
+kind: Pod
+metadata: {name: tg-local-registry, namespace: isaac-sim, labels: {app: tg-local-registry, project: transfergap}}
+spec:
+  nodeSelector: {kubernetes.io/hostname: srv-hpc-gpu04}
+  containers:
+  - name: registry
+    image: registry:2
+    ports: [{containerPort: 5000, hostPort: 5000}]
+    env: [{name: REGISTRY_STORAGE_FILESYSTEM_ROOTDIRECTORY, value: /ws/registry-data}]
+    resources: {requests: {cpu: "1", memory: 1Gi}, limits: {cpu: "4", memory: 4Gi}}
+    volumeMounts: [{name: data, mountPath: /ws}]
+  volumes: [{name: data, persistentVolumeClaim: {claimName: tg-dev-data}}]

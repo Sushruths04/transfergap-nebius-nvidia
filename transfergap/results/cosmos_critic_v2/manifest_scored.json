@@ -1,0 +1,16 @@
+{
+ "model": "nvidia/Cosmos-Reason2-8B",
+ "base_url_host": "127.0.0.1",
+ "git_commit": "5973b39608c7ac334378fcb490eaba0a0d6606f1",
+ "prompt_sha256": "9b1e2d29448b883dfebd005b50ee9757d4ae95473bd894a1ad88ee24469c63cb",
+ "labels": "transfergap/runs/cosmos_critic_v2/scored/labels.jsonl",
+ "labels_sha256": "26dafb082f27e7515d9add3d539f336d0763e0d1ab4da93e0ba3aa75484de2cf",
+ "n": 122,
+ "workers": 3,
+ "guided_json": true,
+ "finished_at": "2026-10-01T19:04:58.903442+00:00",
+ "prompt": "obs",
+ "camera": "close",
+ "split": "v2",
+ "frozen_v2": true
+}

@@ -1,0 +1,13 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+*.egg-info/
+.env
+runs/
+checkpoints/
+data/
+transfergap/sim/assets/menagerie/
+jobs/data/
+demo_input/
+transfergap/sim/assets/kairos/

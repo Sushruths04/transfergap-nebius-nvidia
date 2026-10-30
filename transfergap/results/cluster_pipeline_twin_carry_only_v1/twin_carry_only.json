@@ -1,0 +1,4 @@
+{"schema":"transfergap.twin/v1","name":"ABLATION: real carry vector, default cube and tray sizes","source":"derived from the author's pose carry vector; sizes are the simulator defaults (4 cm cube, 14 cm tray, 2.5 cm walls)",
+ "object":{"size_m":[0.04,0.04,0.04],"xy_m":[0.0,0.0]},
+ "target":{"inner_size_m":[0.14,0.14],"wall_height_m":0.025,"xy_m":[-0.259,-0.012]},
+ "placement":{"yaw_deg":267.3,"anchor_xy_m":[0.45,0.0]}}

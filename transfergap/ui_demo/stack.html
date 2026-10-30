@@ -1,0 +1,175 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>TransferGap Technical Overview</title>
+<style>
+:root{--bg:#eef2f6;--p:#fff;--p2:#f3f6fa;--line:#d3dce6;--tx:#0e1a2b;--mu:#5a6a7f;--nv:#3f7d00;--cy:#1d4ed8;--am:#a8530a;--rd:#c0392b;--mono:ui-monospace,"SF Mono",Menlo,Consolas,monospace}
+*{box-sizing:border-box;margin:0;padding:0}
+body{background:var(--bg) radial-gradient(#c9d3de 1px,transparent 1px);background-size:auto,22px 22px;color:var(--tx);font:15px/1.6 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif}
+nav{position:sticky;top:0;z-index:9;display:flex;gap:6px;align-items:center;padding:10px 24px;background:rgba(255,255,255,.9);backdrop-filter:blur(8px);border-bottom:1px solid var(--line);overflow-x:auto}
+nav b{font-weight:800;margin-right:14px}nav b i{font-style:normal;color:var(--nv)}
+nav a{color:var(--mu);text-decoration:none;font-size:13px;padding:6px 11px;border-radius:999px;white-space:nowrap}nav a:hover{background:var(--p2);color:var(--tx)}
+nav .sp{flex:1}
+main{max-width:1180px;margin:0 auto;padding:30px 24px 80px}
+section{margin-top:44px;scroll-margin-top:60px}
+.eb{font:600 11px var(--mono);letter-spacing:.18em;text-transform:uppercase;color:var(--nv);margin-bottom:8px}
+h1{font-size:clamp(34px,5.4vw,60px);line-height:1.04;letter-spacing:-.03em;font-weight:800;max-width:900px}
+h1 span{color:var(--nv)}
+h2{font-size:26px;letter-spacing:-.01em;margin-bottom:6px}
+.lead{color:var(--mu);font-size:18px;max-width:760px;margin-top:14px}
+.grid{display:grid;gap:14px}.g2{grid-template-columns:1fr 1fr}.g3{grid-template-columns:repeat(3,1fr)}.g4{grid-template-columns:repeat(4,1fr)}
+@media(max-width:900px){.g2,.g3,.g4{grid-template-columns:1fr}}
+.card{background:var(--p);border:1px solid var(--line);border-radius:14px;padding:16px 18px;box-shadow:0 1px 2px rgba(14,26,43,.05),0 10px 26px -14px rgba(14,26,43,.14);position:relative}
+.card:before{content:"";position:absolute;left:0;top:0;width:34px;height:3px;background:var(--nv);border-radius:14px 0 0 0}
+.card h3{font:600 11px var(--mono);letter-spacing:.14em;text-transform:uppercase;color:var(--mu);margin-bottom:10px}
+.big{font:700 34px var(--mono);letter-spacing:-.02em}.big small{font-size:14px;color:var(--mu);font-weight:500}
+.sub{font-size:13px;color:var(--mu)}
+code,.mono{font-family:var(--mono);font-size:13px}
+pre{font:13px/1.6 var(--mono);background:var(--p2);border:1px solid var(--line);border-radius:10px;padding:12px 14px;overflow-x:auto;color:#10243d}
+table{width:100%;border-collapse:collapse;font-size:13.5px}th,td{text-align:left;padding:7px 8px;border-bottom:1px solid var(--line);vertical-align:top}th{font:600 11px var(--mono);letter-spacing:.1em;text-transform:uppercase;color:var(--mu)}
+td.n{font-family:var(--mono);text-align:right;white-space:nowrap}
+.tag{font:600 10.5px var(--mono);padding:2px 8px;border-radius:999px;border:1px solid var(--line);white-space:nowrap}
+.tag.v{color:var(--nv);border-color:var(--nv);background:#eef8dd}.tag.p{color:var(--am);border-color:#e8c79a;background:#fdf3e4}.tag.x{color:var(--rd);border-color:#efb3ab;background:#fdecea}
+svg text{font-family:var(--mono);font-size:11px;fill:#33465d}svg .ax{stroke:#b9c6d4;stroke-width:1}svg .gl{stroke:#e3e9f0;stroke-width:1}
+.pipe{display:flex;gap:0;align-items:stretch;overflow-x:auto;padding-bottom:6px}
+.st{flex:1;min-width:150px;background:var(--p);border:1px solid var(--line);padding:12px 12px 10px;position:relative}
+.st:first-child{border-radius:12px 0 0 12px}.st:last-child{border-radius:0 12px 12px 0}.st+.st{margin-left:-1px}
+.st .k{font:600 10px var(--mono);color:var(--nv);letter-spacing:.14em}.st b{display:block;margin:2px 0 4px}.st p{font-size:12.5px;color:var(--mu);line-height:1.4}.st .m{font:600 12px var(--mono);margin-top:6px;color:var(--tx)}
+.callout{border-left:3px solid var(--am);background:#fdf6ea;padding:10px 14px;border-radius:0 10px 10px 0;font-size:13.5px;margin-top:12px}
+.foot{margin-top:50px;color:var(--mu);font-size:12.5px}
+</style>
+</head>
+<body>
+<nav><b>Transfer<i>Gap</i></b><a href="#pipe">Pipeline</a><a href="#map">Hand to robot</a><a href="#kin">Kinematics</a><a href="#budget">Error budget</a><a href="#size">Object size</a><a href="#live">Live path</a><a href="#evidence">Evidence</a><a href="#limits">Limits</a><span class="sp"></span>
+  <a href="console.html?design=1">Live console</a><a href="replay.html">Replay</a><a href="review.html">Before / After</a></nav>
+<main>
+  <div class="eb">Human-to-robot transfer, diagnosed</div>
+  <h1>Show a task once. <span>Copy it onto a different body.</span> Know why it fails.</h1>
+  <p class="lead">A human arm has 7 degrees of freedom, a hand with fingers and a wrist that rolls. A UR arm has 6 joints and a two-finger gripper. This page documents exactly how the pipeline bridges that gap, what each stage costs, and what has and has not been verified.</p>
+  <div class="grid g4" style="margin-top:22px">
+    <div class="card"><h3>Held-out success</h3><div class="big">31<small> → </small>60<small> / 60</small></div><div class="sub">UR5e, same clip, frozen fix stack (UR10e 34→60, KAIROS 48→60)</div></div>
+    <div class="card"><h3>Grasp-contact gap</h3><div class="big">0.45<small> cm</small></div><div class="sub">median with fixes vs 2.02 cm raw (UR5e); simulation</div></div>
+    <div class="card"><h3>Camera → robot</h3><div class="big">78<small> ms</small></div><div class="sub">live path, recorded clip as camera; pose ~17 fps on the L40S</div></div>
+    <div class="card"><h3>Hand tracking</h3><div class="big">21<small> × 2</small></div><div class="sub">keypoints per hand and bend angle per finger, published live</div></div>
+  </div>
+
+  <section id="pipe"><div class="eb">01 · Pipeline</div><h2>Six stages, each with a measured number</h2>
+    <div class="pipe">
+      <div class="st"><span class="k">A</span><b>Capture</b><p>Webcam frames pushed to a relay on the GPU pod over a port-forward.</p><div class="m">640×480 · 15 fps</div></div>
+      <div class="st"><span class="k">B</span><b>Pose</b><p>RTMW3D whole-body 3D keypoints (133 incl. 2×21 hand points).</p><div class="m">~17 fps · 28 ms</div></div>
+      <div class="st"><span class="k">C</span><b>Person model</b><p>Limb lengths, elbow and wrist angles, pinch aperture, grasp and release events.</p><div class="m">metric via shoulder width</div></div>
+      <div class="st"><span class="k">D</span><b>Retarget</b><p>Hand position in the body frame → robot tool target; pinch → gripper.</p><div class="m">gain + smoothing</div></div>
+      <div class="st"><span class="k">E</span><b>Simulate</b><p>MuJoCo physics, IK, controller; UR5e, UR10e, KAIROS.</p><div class="m">physics-identical renders</div></div>
+      <div class="st"><span class="k">F</span><b>Diagnose</b><p>Paired oracle substitution names the failing stage; fixes checked on held-out seeds.</p><div class="m">60 seeds / cell</div></div>
+    </div></section>
+
+  <section id="map"><div class="eb">02 · Hand to robot</div><h2>How your movement becomes a robot movement</h2>
+    <p class="sub" style="max-width:820px">The live retargeting in <code>live/arm_live.py</code> is a calibrated, relative mapping, not a pose copy. Joint angles are never transferred between the human and the UR arm; only the hand's position and the pinch are.</p>
+    <div class="grid g2" style="margin-top:14px">
+      <div class="card"><h3>Mapping (as implemented)</h3>
+<pre>p_h  = hand position in the person's body frame
+       (forward, left, up) from the hip line,
+       relative to the right shoulder
+
+calibrate:  p_0 = median(p_h) over the first seconds
+            (arms down)  →  robot READY point r_0
+
+each frame: r = clip( r_0 + g · (p_h − p_0) , workspace )
+            r ← EMA(r)                 (smoothing)
+            q = IK(r, tool pointing down)   6 DoF
+
+gripper:    open  if  d(thumb,index) &gt; a_open
+            close if  d(thumb,index) &lt; a_close   (hysteresis)</pre></div>
+      <div class="card"><h3>What this does not do</h3>
+        <table><tr><th>Human</th><th>Robot</th><th>Handled by</th></tr>
+        <tr><td>Shoulder 3 + elbow 1 + wrist 3 DoF</td><td>6 joints</td><td>position-only target, IK solves the joints</td></tr>
+        <tr><td>Wrist roll / hand orientation</td><td>tool pinned downward</td><td class="sub">not copied (a known loss)</td></tr>
+        <tr><td>5 fingers, 21 keypoints</td><td>2-finger parallel gripper</td><td>only thumb-index distance is used</td></tr>
+        <tr><td>Arm length 0.69 m (measured)</td><td>UR5e 0.85 m · UR10e 1.30 m</td><td>gain g (set by calibration), not yet fitted per person</td></tr></table>
+        <div class="callout">The gain <b>g</b> and the workspace alignment decide how faithfully “I put the apple there” becomes “the robot puts the apple there”. Fitting them from the object position (touch-the-object calibration) and checking the replay error is the next accuracy step.</div></div>
+    </div></section>
+
+  <section id="kin"><div class="eb">03 · Kinematics</div><h2>Human arm versus robot arms</h2>
+    <div class="grid g2"><div class="card"><h3>Link lengths and reach</h3><svg id="kinsvg" viewBox="0 0 520 210" width="100%"></svg><div class="sub">Human links are the median of the measured clip (shoulder-width scale 0.44 m, derived, monocular). UR values are the catalogue reach.</div></div>
+    <div class="card"><h3>Person measured from the clip</h3><table id="humtab"></table></div></div></section>
+
+  <section id="budget"><div class="eb">04 · Error budget</div><h2>Which stage costs the most</h2>
+    <div class="grid g2"><div class="card"><h3>Paired oracle gain by stage (pp, 500 seeds per arm)</h3><svg id="budsvg" viewBox="0 0 520 250" width="100%"></svg>
+      <div class="sub">Gain in success when one stage is replaced by ground truth, paired by seed. Error sizes in the simulator are assumed, not measured on hardware.</div></div>
+    <div class="card"><h3>How to read it</h3><table>
+      <tr><td><b>Perception</b></td><td>largest budget item on both arms; “look again” is the best correction (+26.8 / +25.8 pp held-out)</td></tr>
+      <tr><td><b>Calibration</b></td><td>second; touch-probe calibration fixes most of it</td></tr>
+      <tr><td><b>Timing</b></td><td>small and sign-unstable; speed caps help on some demos</td></tr>
+      <tr><td><b>Non-additivity</b></td><td>the joint oracle gain is not the sum of the single-stage gains</td></tr></table>
+      <div class="callout">Source: <code>results/gap_budget_v3</code> and the paper figure. The paper was rejected; its reviews are still to be addressed.</div></div></div></section>
+
+  <section id="size"><div class="eb">05 · Object size</div><h2>Does the copied style survive a bigger object?</h2>
+    <div class="grid g2"><div class="card"><h3>Success vs cube edge (UR10e, 60 seeds, 95% Wilson band)</h3><svg id="sizesvg" viewBox="0 0 520 260" width="100%"></svg></div>
+    <div class="card"><h3>Reading</h3><p style="font-size:14px">Without fixes the copy collapses to 0/60 at 7 cm on both UR arms. With the fixes UR10e holds 56/60 and UR5e 47/60 (near its 8.5 cm gripper opening); KAIROS (12.8 cm opening) stays at 60/60. The fixes were tuned at 4 cm only. Exploratory: one clip, one cube shape, sizes chosen by us.</p>
+      <p class="sub" style="margin-top:8px">Idea from HOI-Retarget’s object-scale experiments; data in <code>results/object_scale_v1</code>.</p></div></div></section>
+
+  <section id="live"><div class="eb">06 · Live path</div><h2>Latency and accuracy of the real-time loop</h2>
+    <div class="grid g2"><div class="card"><h3>Camera → robot latency budget (ms)</h3><svg id="latsvg" viewBox="0 0 520 120" width="100%"></svg>
+      <div class="sub">Measured with a recorded clip as the camera: 77–79 ms end to end; capture to publish 28 ms. A real webcam adds sensor and USB delay.</div></div>
+    <div class="card"><h3>Tracking lag</h3><div class="big">0.8–3.4<small> cm</small></div><div class="sub">median distance by which the robot tool lags the hand path (last 30 frames), UR5e dry run. Not yet measured with a person holding an object.</div></div></div></section>
+
+  <section id="evidence"><div class="eb">07 · Evidence ledger</div><h2>What is verified, what is not</h2>
+    <div class="card"><table>
+      <tr><th>Claim</th><th>Result</th><th>Where</th><th>Status</th></tr>
+      <tr><td>Arms copy the author’s style</td><td class="n">31/34/48 → 60/60</td><td><code>showcase_r6_shoulder044</code></td><td><span class="tag v">verified</span></td></tr>
+      <tr><td>Reproduced on the laptop (CPU)</td><td class="n">UR5e 31 → 60</td><td><code>object_scale_v1/local_repro…</code></td><td><span class="tag v">verified</span></td></tr>
+      <tr><td>Object-size sweep 3–7 cm</td><td class="n">0 → 56/60 at 7 cm</td><td><code>object_scale_v1</code></td><td><span class="tag p">exploratory</span></td></tr>
+      <tr><td>Grasp-contact gap</td><td class="n">0.45–0.66 cm</td><td><code>contact_gap_ee_v1</code></td><td><span class="tag p">exploratory</span></td></tr>
+      <tr><td>G1 closed loop in the image</td><td class="n">31/40 + 7/12 places</td><td><code>g1_in_image_v1</code>, <code>g1_image_oct29_v1</code></td><td><span class="tag p">generic block</span></td></tr>
+      <tr><td>G1 copies the author’s grasp style</td><td class="n">0/30</td><td><code>g1_style_user_v1</code></td><td><span class="tag x">not solved</span></td></tr>
+      <tr><td>Live loop with a recorded clip</td><td class="n">78 ms, 0.8–3.4 cm</td><td><code>live/run_live_cluster.sh --autocalib</code></td><td><span class="tag p">dry run</span></td></tr>
+      <tr><td>Style fidelity (offline replay)</td><td class="n">path 2.8–4.8 cm · speed corr ≤0.43</td><td><code>style_fidelity_v1</code></td><td><span class="tag p">measured, weak</span></td></tr>
+      <tr><td>Apple-shaped (sphere) object</td><td class="n">UR10e 52/60 at 7 cm</td><td><code>object_apple_v1</code></td><td><span class="tag p">exploratory</span></td></tr>
+      <tr><td>Fingertip retargeting to a dexterous hand (Allegro)</td><td class="n">0.5–1.6 cm, thumb 4.1 cm</td><td><code>hand_retarget_v1</code></td><td><span class="tag p">offline, kinematic</span></td></tr>
+      <tr><td>Cosmos critic on the data-engine clips</td><td class="n">96.3% acc · TNR 82%</td><td><code>critic_dataset_v1</code></td><td><span class="tag p">simulated video</span></td></tr>
+      <tr><td>Verified dataset (state + video)</td><td class="n">120 episodes</td><td><code>runs/dataset_v1_lerobot</code></td><td><span class="tag p">one demo, sim</span></td></tr>
+      <tr><td>One learned policy for 4 robots (UR5e, UR10e, KAIROS arm, KAIROS on its parked mobile base)</td><td class="n">60/60 in all 12 cells, 2 training runs</td><td><code>bc_policy_v1</code></td><td><span class="tag p">simulation, scripted data</span></td></tr>
+      <tr><td>GR00T-N1.5-3B fine-tuned on our simulation data, run with 4-step look-ahead</td><td class="n">25/30 UR10e std (UR10e-only), 27/30 KAIROS std (3-arm); UR arms of the 3-arm model 5–10/30</td><td><code>groot_n15_v1</code></td><td><span class="tag p">works, worse than the small policy (60/60)</span></td></tr>
+      <tr><td>GR00T with first-step execution (before the fix)</td><td class="n">0–1/30 per checkpoint</td><td><code>groot_n15_v1</code></td><td><span class="tag x">stalled 2–5 cm short of the cube</span></td></tr>
+      <tr><td>Live loop with a real webcam and an object</td><td class="n">–</td><td>–</td><td><span class="tag x">in progress</span></td></tr>
+      <tr><td>Finger retargeting to a dexterous hand</td><td class="n">–</td><td>–</td><td><span class="tag x">not done</span></td></tr></table></div></section>
+
+  <section id="limits"><div class="eb">08 · Limits</div><h2>Read before quoting a number</h2>
+    <div class="card"><ul style="padding-left:18px;font-size:14px"><li>Simulation only; one clip and one person; shoulder width 0.44 m is derived, not measured.</li><li>Perception and calibration error sizes are assumed values.</li><li>Joint angles are not copied; the tool orientation is fixed; the gripper uses only the pinch.</li><li>The G1’s 27% on the long-lived pod versus 77% in the image is unexplained.</li><li>Single-seed videos are illustrations; the 60-seed counts are the evidence.</li></ul></div></section>
+  <p class="foot">TransferGap · simulation results from committed files under <code>transfergap/results/</code>.</p>
+</main>
+<script src="data.js"></script><script src="scale_ci.js"></script>
+<script>
+const NS="http://www.w3.org/2000/svg",$=id=>document.getElementById(id);
+function el(p,t,a,txt){const e=document.createElementNS(NS,t);for(const k in a)e.setAttribute(k,a[k]);if(txt!=null)e.textContent=txt;p.appendChild(e);return e}
+// kinematics: horizontal bars of reach
+(function(){const s=$("kinsvg"),H=window.TG.human.lengths,hu=H.upper_arm_m.median,hf=H.forearm_m.median,rows=[["Human arm",hu+hf,[hu,hf],"#3f7d00"],["UR5e",0.85,null,"#1d4ed8"],["UR10e / KAIROS arm",1.30,null,"#1d4ed8"]];
+  const x0=130,sc=330/1.4;[0,.25,.5,.75,1,1.25].forEach(v=>{el(s,"line",{x1:x0+v*sc,x2:x0+v*sc,y1:20,y2:170,class:"gl"});el(s,"text",{x:x0+v*sc-8,y:190},v.toFixed(2)+" m")});
+  rows.forEach((r,i)=>{const y=34+i*46;el(s,"text",{x:8,y:y+16},r[0]);
+    if(r[2]){el(s,"rect",{x:x0,y,width:r[2][0]*sc,height:24,fill:"#3f7d00",opacity:.85});el(s,"rect",{x:x0+r[2][0]*sc,y,width:r[2][1]*sc,height:24,fill:"#86b83f",opacity:.9});el(s,"text",{x:x0+r[1]*sc+6,y:y+16},`${hu.toFixed(2)} + ${hf.toFixed(2)} = ${r[1].toFixed(2)} m`)}
+    else{el(s,"rect",{x:x0,y,width:r[1]*sc,height:24,fill:r[3],opacity:.85});el(s,"text",{x:x0+r[1]*sc+6,y:y+16},`reach ${r[1].toFixed(2)} m  (×${(r[1]/(hu+hf)).toFixed(2)})`)}})})();
+(function(){const H=window.TG.human,L=H.lengths,A=H.angles,t=$("humtab");
+  t.innerHTML=`<tr><th>Quantity</th><th>Median</th><th>p10 – p90</th></tr>`+[["Upper arm","upper_arm_m"],["Forearm","forearm_m"],["Hand","hand_m"],["Shoulder width","shoulder_width_m"],["Torso","torso_m"]].map(([n,k])=>`<tr><td>${n}</td><td class="n">${(L[k].median*100).toFixed(1)} cm</td><td class="n">${(L[k].p10*100).toFixed(1)} – ${(L[k].p90*100).toFixed(1)}</td></tr>`).join("")+
+  `<tr><td>Elbow angle</td><td class="n">${A.elbow_deg.median.toFixed(0)}°</td><td class="n">${A.elbow_deg.min.toFixed(0)} – ${A.elbow_deg.max.toFixed(0)} (range)</td></tr><tr><td>Pinch aperture</td><td class="n">${(H.hand.aperture_m.median*100).toFixed(1)} cm</td><td class="n">${(H.hand.aperture_m.p10*100).toFixed(1)} – ${(H.hand.aperture_m.p90*100).toFixed(1)}</td></tr><tr><td>Peak hand speed</td><td class="n">${H.hand.peak_speed_m_s.toFixed(2)} m/s</td><td class="n">${H.frames} frames @ ${H.fps} fps</td></tr>`})();
+// error budget: paper-figure numbers (oracle gains, pp) from the committed budget figure source
+(function(){const s=$("budsvg"),D=[["perception",30,29],["retarget",8,6],["calibration",16,11],["timing",10,7],["joint (all)",53,51]];
+  const x0=50,y0=210,h=170,sc=h/60;[0,20,40,60].forEach(v=>{el(s,"line",{x1:x0,x2:510,y1:y0-v*sc,y2:y0-v*sc,class:"gl"});el(s,"text",{x:8,y:y0-v*sc+4},v+" pp")});
+  D.forEach((d,i)=>{const x=x0+14+i*92;[[d[1],"#1d4ed8"],[d[2],"#3f7d00"]].forEach(([v,c],k)=>el(s,"rect",{x:x+k*30,y:y0-v*sc,width:26,height:v*sc,fill:c,opacity:.88}));el(s,"text",{x:x-2,y:y0+18},d[0])});
+  el(s,"rect",{x:330,y:12,width:10,height:10,fill:"#1d4ed8"});el(s,"text",{x:346,y:21},"UR5e");el(s,"rect",{x:400,y:12,width:10,height:10,fill:"#3f7d00"});el(s,"text",{x:416,y:21},"UR10e")})();
+// object size: success vs cube edge with Wilson bands (UR10e, raw vs fixes)
+(function(){const s=$("sizesvg"),C=window.TGCI.ur10e,ks=Object.keys(C),x0=46,y0=220,w=450,h=190,X=i=>x0+i*(w/(ks.length-1)),Y=v=>y0-v*h;
+  [0,.25,.5,.75,1].forEach(v=>{el(s,"line",{x1:x0,x2:x0+w,y1:Y(v),y2:Y(v),class:"gl"});el(s,"text",{x:6,y:Y(v)+4},Math.round(v*100)+"%")});
+  ks.forEach((k,i)=>el(s,"text",{x:X(i)-12,y:y0+18},k.replace(".0","")));
+  [["raw","#c0392b"],["fix","#3f7d00"]].forEach(([c,col])=>{const pts=ks.map((k,i)=>[X(i),Y(C[k][c][0]/C[k][c][1]),Y(C[k][c][2][0]),Y(C[k][c][2][1])]);
+    el(s,"path",{d:"M"+pts.map(p=>p[0]+","+p[2]).join(" L")+" L"+pts.slice().reverse().map(p=>p[0]+","+p[3]).join(" L")+" Z",fill:col,opacity:.16});
+    el(s,"path",{d:"M"+pts.map(p=>p[0]+","+p[1]).join(" L"),fill:"none",stroke:col,"stroke-width":2.5});pts.forEach(p=>el(s,"circle",{cx:p[0],cy:p[1],r:3.5,fill:col}))});
+  el(s,"text",{x:x0+8,y:14},"■ raw copy");el(s,"text",{x:x0+110,y:14},"■ with fixes");})();
+// latency stacked bar
+(function(){const s=$("latsvg"),parts=[["capture→publish",28,"#1d4ed8"],["publish→robot target",32,"#3f7d00"],["sim + render",18,"#9aa9bb"]],tot=parts.reduce((a,b)=>a+b[1],0),sc=470/90;let x=20;
+  parts.forEach(p=>{el(s,"rect",{x,y:30,width:p[1]*sc,height:34,fill:p[2],opacity:.9});el(s,"text",{x:x+4,y:52},p[1]+" ms");el(s,"text",{x:x,y:86},p[0]);x+=p[1]*sc});
+  el(s,"text",{x:20,y:112},"split of the 78 ms: capture→publish measured (28 ms); the other two are an estimate of the remainder, not separately measured")})();
+</script>
+</body>
+</html>

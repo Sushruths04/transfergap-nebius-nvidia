@@ -1,0 +1,214 @@
+{
+ "rows": [
+  {
+   "demo": "pexels_8135753_notebook",
+   "robot": "ur5e",
+   "selected": "gemx",
+   "dev": {
+    "gemx": "20/20",
+    "fast_sam_3d_body": "19/20",
+    "fast_sam_3d_body_smooth": "3/20"
+   },
+   "gemx": "57/60",
+   "selected_heldout": "57/60",
+   "gap_selected_minus_gemx": {
+    "delta_pp": 0,
+    "ci95_pp": [
+     0,
+     0
+    ],
+    "n": 60
+   }
+  },
+  {
+   "demo": "pexels_8135753_notebook",
+   "robot": "ur10e",
+   "selected": "gemx",
+   "dev": {
+    "gemx": "20/20",
+    "fast_sam_3d_body": "20/20",
+    "fast_sam_3d_body_smooth": "7/20"
+   },
+   "gemx": "60/60",
+   "selected_heldout": "60/60",
+   "gap_selected_minus_gemx": {
+    "delta_pp": 0,
+    "ci95_pp": [
+     0,
+     0
+    ],
+    "n": 60
+   }
+  },
+  {
+   "demo": "pexels_8135753_markers",
+   "robot": "ur5e",
+   "selected": "fast_sam_3d_body",
+   "dev": {
+    "gemx": "17/20",
+    "fast_sam_3d_body": "20/20",
+    "fast_sam_3d_body_smooth": "17/20"
+   },
+   "gemx": "51/60",
+   "selected_heldout": "60/60",
+   "gap_selected_minus_gemx": {
+    "delta_pp": 15.0,
+    "ci95_pp": [
+     6.666666666666667,
+     25.0
+    ],
+    "n": 60
+   }
+  },
+  {
+   "demo": "pexels_8135753_markers",
+   "robot": "ur10e",
+   "selected": "fast_sam_3d_body_smooth",
+   "dev": {
+    "gemx": "10/20",
+    "fast_sam_3d_body": "19/20",
+    "fast_sam_3d_body_smooth": "20/20"
+   },
+   "gemx": "25/60",
+   "selected_heldout": "60/60",
+   "gap_selected_minus_gemx": {
+    "delta_pp": 58.333333333333336,
+    "ci95_pp": [
+     45.0,
+     71.66666666666667
+    ],
+    "n": 60
+   }
+  },
+  {
+   "demo": "pexels_8135753_orange_marker",
+   "robot": "ur5e",
+   "selected": "gemx",
+   "dev": {
+    "gemx": "17/20",
+    "fast_sam_3d_body": "5/20",
+    "fast_sam_3d_body_smooth": "14/20"
+   },
+   "gemx": "46/60",
+   "selected_heldout": "46/60",
+   "gap_selected_minus_gemx": {
+    "delta_pp": 0,
+    "ci95_pp": [
+     0,
+     0
+    ],
+    "n": 60
+   }
+  },
+  {
+   "demo": "pexels_8135753_orange_marker",
+   "robot": "ur10e",
+   "selected": "gemx",
+   "dev": {
+    "gemx": "19/20",
+    "fast_sam_3d_body": "3/20",
+    "fast_sam_3d_body_smooth": "17/20"
+   },
+   "gemx": "58/60",
+   "selected_heldout": "58/60",
+   "gap_selected_minus_gemx": {
+    "delta_pp": 0,
+    "ci95_pp": [
+     0,
+     0
+    ],
+    "n": 60
+   }
+  },
+  {
+   "demo": "pexels_8135753_notepad",
+   "robot": "ur5e",
+   "selected": "gemx",
+   "dev": {
+    "gemx": "20/20",
+    "fast_sam_3d_body": "20/20",
+    "fast_sam_3d_body_smooth": "20/20"
+   },
+   "gemx": "58/60",
+   "selected_heldout": "58/60",
+   "gap_selected_minus_gemx": {
+    "delta_pp": 0,
+    "ci95_pp": [
+     0,
+     0
+    ],
+    "n": 60
+   }
+  },
+  {
+   "demo": "pexels_8135753_notepad",
+   "robot": "ur10e",
+   "selected": "fast_sam_3d_body",
+   "dev": {
+    "gemx": "19/20",
+    "fast_sam_3d_body": "20/20",
+    "fast_sam_3d_body_smooth": "20/20"
+   },
+   "gemx": "58/60",
+   "selected_heldout": "57/60",
+   "gap_selected_minus_gemx": {
+    "delta_pp": -1.6666666666666667,
+    "ci95_pp": [
+     -10.0,
+     5.0
+    ],
+    "n": 60
+   }
+  },
+  {
+   "demo": "pexels_7205253_woman_box",
+   "robot": "ur5e",
+   "selected": "gemx",
+   "dev": {
+    "gemx": "20/20",
+    "fast_sam_3d_body": "0/20",
+    "fast_sam_3d_body_smooth": "0/20"
+   },
+   "gemx": "60/60",
+   "selected_heldout": "60/60",
+   "gap_selected_minus_gemx": {
+    "delta_pp": 0,
+    "ci95_pp": [
+     0,
+     0
+    ],
+    "n": 60
+   }
+  },
+  {
+   "demo": "pexels_7205253_woman_box",
+   "robot": "ur10e",
+   "selected": "fast_sam_3d_body",
+   "dev": {
+    "gemx": "19/20",
+    "fast_sam_3d_body": "20/20",
+    "fast_sam_3d_body_smooth": "0/20"
+   },
+   "gemx": "55/60",
+   "selected_heldout": "60/60",
+   "gap_selected_minus_gemx": {
+    "delta_pp": 8.333333333333332,
+    "ci95_pp": [
+     1.6666666666666667,
+     15.0
+    ],
+    "n": 60
+   }
+  }
+ ],
+ "total": {
+  "gemx": [
+   528,
+   600
+  ],
+  "selected": [
+   576,
+   600
+  ]
+ }
+}

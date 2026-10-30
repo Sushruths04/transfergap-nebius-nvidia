@@ -1,0 +1,52 @@
+{
+ "phases": [
+  {
+   "phase": "drive_to_table",
+   "seconds": 5.16,
+   "final_pose": [
+    -0.0089,
+    -0.0066,
+    0.01
+   ],
+   "parked_within_tolerance": true
+  },
+  {
+   "phase": "pick_and_place",
+   "seconds": 12.91,
+   "block_xyz": [
+    0.4444,
+    0.2205,
+    0.024
+   ],
+   "goal_xyz": [
+    0.45,
+    0.22,
+    0.024
+   ],
+   "placed_on_tray": true
+  },
+  {
+   "phase": "drive_away",
+   "seconds": 2.0,
+   "final_pose": [
+    -0.535,
+    -0.762,
+    0.673
+   ]
+  }
+ ],
+ "robot": "kairos_mobile",
+ "seed": 0,
+ "start_pose": [
+  -1.3,
+  -0.9,
+  0.9
+ ],
+ "video": "/ws/transfergap/ctx_cam/kairos_mobile_demo_v1/kairos_mobile_demo.mp4",
+ "model": {
+  "base": "Summit XLS chassis (lab URDF), planar servo base",
+  "wheels": "visual only",
+  "arm": "UR10e + Robotiq 2F-140",
+  "arm_base_height_above_floor_m": 0.5076
+ }
+}

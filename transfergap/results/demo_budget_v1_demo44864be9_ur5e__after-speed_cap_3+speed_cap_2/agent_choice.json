@@ -1,0 +1,35 @@
+{
+ "model": "nvidia/nemotron-3-super-120b-a12b",
+ "menu": [
+  "look_again",
+  "touch_probe_calibration",
+  "speed_cap_1.5",
+  "safe_path"
+ ],
+ "rule_choice": "safe_path_v2",
+ "valid": true,
+ "agent_choice": "speed_cap_1.5",
+ "rationale": "Slowing execution to 1.5\u00d7 nominal reduces collisions and improves release/settle timing, addressing the top failure modes while minimally affecting the copied human style (timing fix shows the largest path\u2011RMSE gain and positive speed\u2011profile correlation).",
+ "response_id": "chatcmpl-abc0155d4f8a73f2",
+ "latency_s": 4.848077697999543,
+ "usage": {
+  "completion_tokens": 508,
+  "prompt_tokens": 842,
+  "total_tokens": 1350,
+  "completion_tokens_details": {
+   "accepted_prediction_tokens": null,
+   "audio_tokens": null,
+   "reasoning_tokens": 432,
+   "rejected_prediction_tokens": null
+  },
+  "prompt_tokens_details": {
+   "audio_tokens": null,
+   "cached_tokens": 0,
+   "created_cache_tokens": 0,
+   "multimodal_tokens": null
+  },
+  "prompt_cache_hit_tokens": 0,
+  "prompt_cache_miss_tokens": 842
+ },
+ "agrees_with_rule": false
+}

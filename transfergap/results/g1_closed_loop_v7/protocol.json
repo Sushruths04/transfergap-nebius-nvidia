@@ -1,0 +1,15 @@
+{
+  "id": "g1_vr3_vs_hybrid_v7",
+  "written_before_running": true,
+  "follows": "VR 3-point dev sanity on seeds 1000-1004 (not reused): touch 4/5, grasp 2/5, place 2/5, no falls. Runner fix: zmq_manager starts control from the streamer start command, so the streamer must be running before the deploy.",
+  "hypothesis": "Feeding wrist poses through SONIC VR 3-point mode avoids the lossy wrist/elbow joint tracking, so the hand follows the plan and place rate is higher than the frozen hybrid.",
+  "seeds": "1100-1139 (40 new seeds), 1 rollout each, same seeds for both conditions",
+  "conditions": {
+    "vr3": "run_trials_vr3.py on plans/cl_seed{seed}.npz (stance 0), compliance default 0.05, no other tuning",
+    "hybrid_frozen": "the frozen v4 hybrid, unchanged: stream_cl.py --mode rr --kr 1 --lim 0.6 --w-rot 0.05 --tail-traj plans/ol_seed{seed}.npz --tail-from lift --blend-s 1.0"
+  },
+  "primary_metric": "place (repo scorer)",
+  "decision_rule": "VR3 is called better than the hybrid only if place_vr3 - place_hybrid >= 5 of 40 AND paired McNemar exact p < 0.05. Otherwise it is reported as not shown better (comparable or worse). Pooled earlier hybrid result (27/80 = 34%) is context, not the comparison.",
+  "no_retuning_after_seeing_results": true,
+  "all_results_reported": true
+}

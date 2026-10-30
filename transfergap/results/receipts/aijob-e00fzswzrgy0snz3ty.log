@@ -1,0 +1,100 @@
+ ],
+ "robots": {
+  "ur5e": {
+   "conditions": {
+    "raw": {
+     "oracle": "none",
+     "n": 60,
+     "successes": 11,
+     "success_rate": 0.18333333333333332,
+     "wilson_95": [
+      0.10557796889197638,
+      0.2991975374646805
+     ],
+     "failure_reasons": {
+      "no_lift": 48,
+      "not_released_and_settled_at_goal": 49,
+      "forbidden_collision": 2
+     }
+    },
+    "all_fixes": {
+     "oracle": "none",
+     "n": 60,
+     "successes": 60,
+     "success_rate": 1.0,
+     "wilson_95": [
+      0.93982814785791,
+      0.9999999999999998
+     ],
+     "failure_reasons": {}
+    }
+   },
+   "gap_all_fixes_minus_raw": {
+    "delta_pp": 81.66666666666667,
+    "ci95_pp": [
+     71.66666666666667,
+     91.66666666666666
+    ],
+    "n": 60
+   },
+   "committed_cumulative_gap": {
+    "delta_pp": 76.66666666666667,
+    "ci95_pp": [
+     66.66666666666666,
+     86.66666666666667
+    ],
+    "n": 60
+   },
+   "reproduced_exactly": false
+  },
+  "ur10e": {
+   "conditions": {
+    "raw": {
+     "oracle": "none",
+     "n": 60,
+     "successes": 4,
+     "success_rate": 0.06666666666666667,
+     "wilson_95": [
+      0.026228698724506214,
+      0.1592535731319717
+     ],
+     "failure_reasons": {
+      "no_lift": 55,
+      "not_released_and_settled_at_goal": 55,
+      "forbidden_collision": 9
+     }
+    },
+    "all_fixes": {
+     "oracle": "none",
+     "n": 60,
+     "successes": 55,
+     "success_rate": 0.9166666666666666,
+     "wilson_95": [
+      0.8193105798166558,
+      0.9638795433982692
+     ],
+     "failure_reasons": {
+      "forbidden_collision": 5
+     }
+    }
+   },
+   "gap_all_fixes_minus_raw": {
+    "delta_pp": 85.0,
+    "ci95_pp": [
+     75.0,
+     93.33333333333333
+    ],
+    "n": 60
+   },
+   "committed_cumulative_gap": {
+    "delta_pp": -6.666666666666667,
+    "ci95_pp": [
+     -13.333333333333334,
+     -1.6666666666666667
+    ],
+    "n": 60
+   },
+   "reproduced_exactly": false
+  }
+ }
+}TRANSFERGAP_RECEIPT {"schema": "transfergap.job_receipt/v1", "mode": "demo_repro", "exit_code": 0, "started_at": "2026-10-02T10:17:15Z", "ended_at": "2026-10-02T10:17:50Z", "git_commit": "726637194aef10f6d7b8d95ab58f821c05f5860d", "image_git_commit": "726637194aef10f6d7b8d95ab58f821c05f5860d", "menagerie_commit": "4d038b3feae26ec82b46a4d586379114012a8ac7", "host": {"hostname": "af6ff22995e7", "platform": "Linux-6.11.0-1016-nvidia-x86_64-with-glibc2.41", "machine": "x86_64", "cpu_model": "AMD EPYC-Genoa Processor", "nproc": 16, "mem_total": "65843248 kB", "procs_used": 16}, "python": "3.12.15", "mujoco": "3.14.0", "outputs": {"episodes_ur10e.jsonl": {"bytes": 11824689, "sha256": "a31a80a54e74d4ca7b7ca3ce7c40d94cc6aae31d903f0d799f845d0d3ea84771"}, "episodes_ur5e.jsonl": {"bytes": 11815809, "sha256": "0e9fd058fb0465ba84384804f77858884979b6ab6581cd66340e1120ca00cd80"}, "repro_summary.json": {"bytes": 2218, "sha256": "71111a90c2f6b904f8916c7111ba38e76229dcddafb2eed305f63f85ef6a75ab"}}}

@@ -1,0 +1,409 @@
+{
+ "exec": "open4",
+ "ckpt": "/ws/transfergap/bc_v1/models_ur5e_800/policy_vision.pt",
+ "robot": "ur5e",
+ "seeds": [
+  6000,
+  6059
+ ],
+ "n": 60,
+ "policy_success": 32,
+ "policy_ci95": [
+  0.409,
+  0.654
+ ],
+ "scripted_success": null,
+ "failure_reasons": {
+  "no_lift": 27,
+  "not_released_and_settled_at_goal": 28,
+  "forbidden_collision": 3
+ },
+ "per_seed": [
+  {
+   "seed": 6000,
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ]
+  },
+  {
+   "seed": 6001,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 6002,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 6003,
+   "success": false,
+   "reasons": [
+    "not_released_and_settled_at_goal",
+    "forbidden_collision"
+   ]
+  },
+  {
+   "seed": 6004,
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ]
+  },
+  {
+   "seed": 6005,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 6006,
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ]
+  },
+  {
+   "seed": 6007,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 6008,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 6009,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 6010,
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ]
+  },
+  {
+   "seed": 6011,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 6012,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 6013,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 6014,
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ]
+  },
+  {
+   "seed": 6015,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 6016,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 6017,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 6018,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 6019,
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ]
+  },
+  {
+   "seed": 6020,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 6021,
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ]
+  },
+  {
+   "seed": 6022,
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ]
+  },
+  {
+   "seed": 6023,
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ]
+  },
+  {
+   "seed": 6024,
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ]
+  },
+  {
+   "seed": 6025,
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ]
+  },
+  {
+   "seed": 6026,
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ]
+  },
+  {
+   "seed": 6027,
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ]
+  },
+  {
+   "seed": 6028,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 6029,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 6030,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 6031,
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ]
+  },
+  {
+   "seed": 6032,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 6033,
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ]
+  },
+  {
+   "seed": 6034,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 6035,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 6036,
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ]
+  },
+  {
+   "seed": 6037,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 6038,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 6039,
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ]
+  },
+  {
+   "seed": 6040,
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ]
+  },
+  {
+   "seed": 6041,
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ]
+  },
+  {
+   "seed": 6042,
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ]
+  },
+  {
+   "seed": 6043,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 6044,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 6045,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 6046,
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ]
+  },
+  {
+   "seed": 6047,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 6048,
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal",
+    "forbidden_collision"
+   ]
+  },
+  {
+   "seed": 6049,
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ]
+  },
+  {
+   "seed": 6050,
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ]
+  },
+  {
+   "seed": 6051,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 6052,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 6053,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 6054,
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ]
+  },
+  {
+   "seed": 6055,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 6056,
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ]
+  },
+  {
+   "seed": 6057,
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal",
+    "forbidden_collision"
+   ]
+  },
+  {
+   "seed": 6058,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 6059,
+   "success": true,
+   "reasons": []
+  }
+ ]
+}

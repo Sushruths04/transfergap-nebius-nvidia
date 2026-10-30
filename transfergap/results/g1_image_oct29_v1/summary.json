@@ -1,0 +1,251 @@
+{
+ "kind": "g1_contact",
+ "protocol_id": "g1_block_to_tray_v1",
+ "task": {
+  "position_tolerance_m": 0.05,
+  "min_lift_m": 0.05,
+  "settle_duration_s": 0.5,
+  "max_settle_speed_m_s": 0.02
+ },
+ "robot": "g1_sonic",
+ "code_commit_at_scoring": "",
+ "conditions": {
+  "hybrid": {
+   "oracle": "none",
+   "plan": {
+    "per_seed_plans": [
+     "/ws/transfergap/g1_out/g1_image_oct29/plans/cl_seed1300.json",
+     "/ws/transfergap/g1_out/g1_image_oct29/plans/cl_seed1301.json",
+     "/ws/transfergap/g1_out/g1_image_oct29/plans/cl_seed1302.json",
+     "/ws/transfergap/g1_out/g1_image_oct29/plans/cl_seed1303.json",
+     "/ws/transfergap/g1_out/g1_image_oct29/plans/cl_seed1304.json",
+     "/ws/transfergap/g1_out/g1_image_oct29/plans/cl_seed1305.json",
+     "/ws/transfergap/g1_out/g1_image_oct29/plans/cl_seed1306.json",
+     "/ws/transfergap/g1_out/g1_image_oct29/plans/cl_seed1307.json",
+     "/ws/transfergap/g1_out/g1_image_oct29/plans/cl_seed1308.json",
+     "/ws/transfergap/g1_out/g1_image_oct29/plans/cl_seed1309.json",
+     "/ws/transfergap/g1_out/g1_image_oct29/plans/cl_seed1310.json",
+     "/ws/transfergap/g1_out/g1_image_oct29/plans/cl_seed1311.json"
+    ]
+   },
+   "rollouts": 12,
+   "trials": 12,
+   "touch_rollout_rate": {
+    "k": 12,
+    "n": 12,
+    "rate": 1.0,
+    "wilson_95": [
+     0.758,
+     1.0
+    ]
+   },
+   "grasp_rollout_rate": {
+    "k": 11,
+    "n": 12,
+    "rate": 0.917,
+    "wilson_95": [
+     0.646,
+     0.985
+    ]
+   },
+   "place_rollout_rate": {
+    "k": 7,
+    "n": 12,
+    "rate": 0.583,
+    "wilson_95": [
+     0.32,
+     0.807
+    ]
+   },
+   "touch_trial_any_rollout": {
+    "k": 12,
+    "n": 12,
+    "rate": 1.0,
+    "wilson_95": [
+     0.758,
+     1.0
+    ]
+   },
+   "touch_trials_with_mixed_outcomes": 0,
+   "grasp_trial_any_rollout": {
+    "k": 11,
+    "n": 12,
+    "rate": 0.917,
+    "wilson_95": [
+     0.646,
+     0.985
+    ]
+   },
+   "grasp_trials_with_mixed_outcomes": 0,
+   "place_trial_any_rollout": {
+    "k": 7,
+    "n": 12,
+    "rate": 0.583,
+    "wilson_95": [
+     0.32,
+     0.807
+    ]
+   },
+   "place_trials_with_mixed_outcomes": 0,
+   "place_failure_reasons": {
+    "no_lift": 1,
+    "not_released_and_settled_at_goal": 5
+   },
+   "robot_fell": 0,
+   "max_lift_m_median": 0.1502,
+   "per_rollout": [
+    {
+     "seed": 1300,
+     "rollout": 0,
+     "touch": true,
+     "grasp": false,
+     "place": false,
+     "max_lift_m": 0.0066,
+     "block_displacement_xy_m": 0.002,
+     "failure_reasons": [
+      "no_lift",
+      "not_released_and_settled_at_goal"
+     ]
+    },
+    {
+     "seed": 1301,
+     "rollout": 0,
+     "touch": true,
+     "grasp": true,
+     "place": false,
+     "max_lift_m": 0.1541,
+     "block_displacement_xy_m": 0.1645,
+     "failure_reasons": [
+      "not_released_and_settled_at_goal"
+     ]
+    },
+    {
+     "seed": 1302,
+     "rollout": 0,
+     "touch": true,
+     "grasp": true,
+     "place": false,
+     "max_lift_m": 0.1541,
+     "block_displacement_xy_m": 0.1572,
+     "failure_reasons": [
+      "not_released_and_settled_at_goal"
+     ]
+    },
+    {
+     "seed": 1303,
+     "rollout": 0,
+     "touch": true,
+     "grasp": true,
+     "place": true,
+     "max_lift_m": 0.1502,
+     "block_displacement_xy_m": 0.1834,
+     "failure_reasons": []
+    },
+    {
+     "seed": 1304,
+     "rollout": 0,
+     "touch": true,
+     "grasp": true,
+     "place": true,
+     "max_lift_m": 0.16,
+     "block_displacement_xy_m": 0.186,
+     "failure_reasons": []
+    },
+    {
+     "seed": 1305,
+     "rollout": 0,
+     "touch": true,
+     "grasp": true,
+     "place": true,
+     "max_lift_m": 0.1382,
+     "block_displacement_xy_m": 0.1764,
+     "failure_reasons": []
+    },
+    {
+     "seed": 1306,
+     "rollout": 0,
+     "touch": true,
+     "grasp": true,
+     "place": false,
+     "max_lift_m": 0.1501,
+     "block_displacement_xy_m": 0.2317,
+     "failure_reasons": [
+      "not_released_and_settled_at_goal"
+     ]
+    },
+    {
+     "seed": 1307,
+     "rollout": 0,
+     "touch": true,
+     "grasp": true,
+     "place": true,
+     "max_lift_m": 0.1469,
+     "block_displacement_xy_m": 0.1763,
+     "failure_reasons": []
+    },
+    {
+     "seed": 1308,
+     "rollout": 0,
+     "touch": true,
+     "grasp": true,
+     "place": true,
+     "max_lift_m": 0.1211,
+     "block_displacement_xy_m": 0.1953,
+     "failure_reasons": []
+    },
+    {
+     "seed": 1309,
+     "rollout": 0,
+     "touch": true,
+     "grasp": true,
+     "place": true,
+     "max_lift_m": 0.151,
+     "block_displacement_xy_m": 0.1868,
+     "failure_reasons": []
+    },
+    {
+     "seed": 1310,
+     "rollout": 0,
+     "touch": true,
+     "grasp": true,
+     "place": false,
+     "max_lift_m": 0.1583,
+     "block_displacement_xy_m": 0.1772,
+     "failure_reasons": [
+      "not_released_and_settled_at_goal"
+     ]
+    },
+    {
+     "seed": 1311,
+     "rollout": 0,
+     "touch": true,
+     "grasp": true,
+     "place": true,
+     "max_lift_m": 0.1278,
+     "block_displacement_xy_m": 0.1873,
+     "failure_reasons": []
+    }
+   ]
+  }
+ },
+ "metrics_summarize": {
+  "contains_fixtures": false,
+  "groups": [
+   {
+    "source": "simulation",
+    "protocol_id": "g1_block_to_tray_v1",
+    "robot": "g1_sonic",
+    "method": "sonic_zmq_v1_stream[hybrid]",
+    "sensor": "oracle",
+    "oracle": "none",
+    "episodes": 12,
+    "successes": 7,
+    "success_rate": 0.5833333333333334,
+    "success_wilson_95": [
+     0.31951131254954973,
+     0.8067396863412435
+    ]
+   }
+  ]
+ }
+}

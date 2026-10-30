@@ -1,0 +1,228 @@
+{
+ "kind": "cosmos_critic",
+ "version": "v2",
+ "what": "Cosmos-Reason2-8B as a video critic of UR5e/UR10e block-to-tray rollouts, scored against simulator labels",
+ "run": {
+  "model": "nvidia/Cosmos-Reason2-8B",
+  "base_url_host": "127.0.0.1",
+  "git_commit": "5973b39608c7ac334378fcb490eaba0a0d6606f1",
+  "prompt_sha256": "9b1e2d29448b883dfebd005b50ee9757d4ae95473bd894a1ad88ee24469c63cb",
+  "labels": "transfergap/runs/cosmos_critic_v2/scored/labels.jsonl",
+  "labels_sha256": "26dafb082f27e7515d9add3d539f336d0763e0d1ab4da93e0ba3aa75484de2cf",
+  "n": 122,
+  "workers": 3,
+  "guided_json": true,
+  "finished_at": "2026-10-01T19:04:58.903442+00:00",
+  "prompt": "obs",
+  "camera": "close",
+  "split": "v2",
+  "frozen_v2": true
+ },
+ "protocol": "gap_budget_v2",
+ "robots": [
+  "ur5e",
+  "ur10e"
+ ],
+ "seeds": "v2 split, seeds 2020-2079",
+ "prompt": "obs",
+ "camera": "close",
+ "camera_config": {
+  "views": [
+   {
+    "lookat": [
+     0.45,
+     0.05,
+     0.11
+    ],
+    "distance": 0.42,
+    "azimuth": 180.0,
+    "elevation": -18.0
+   }
+  ],
+  "size": [
+   480,
+   640
+  ]
+ },
+ "stages": {
+  "none": "success",
+  "grasp": "no_lift",
+  "place": "lifted but not released and settled at goal"
+ },
+ "fps": 4,
+ "sampling": {
+  "max_tokens": 4096,
+  "temperature": 0.6,
+  "top_p": 0.95,
+  "top_k": 20,
+  "repetition_penalty": 1.0,
+  "presence_penalty": 0.0,
+  "seed": 1234
+ },
+ "results": {
+  "success": {
+   "accuracy": {
+    "correct": 62,
+    "n": 116,
+    "accuracy": 0.5344827586206896,
+    "wilson_95": [
+     0.4440648694183697,
+     0.6226899922023448
+    ]
+   },
+   "confusion": {
+    "yes": {
+     "yes": 40,
+     "no": 0,
+     "unparsed": 0
+    },
+    "no": {
+     "yes": 54,
+     "no": 22,
+     "unparsed": 0
+    },
+    "unparsed": {
+     "yes": 0,
+     "no": 0,
+     "unparsed": 0
+    }
+   },
+   "per_class": {
+    "yes": {
+     "support": 40,
+     "predicted": 94,
+     "precision": 0.425531914893617,
+     "recall": 1.0
+    },
+    "no": {
+     "support": 76,
+     "predicted": 22,
+     "precision": 1.0,
+     "recall": 0.2894736842105263
+    }
+   },
+   "majority_baseline": {
+    "class": "no",
+    "correct": 76,
+    "n": 116,
+    "accuracy": 0.6551724137931034,
+    "wilson_95": [
+     0.5649544164278093,
+     0.7354424608654062
+    ]
+   },
+   "uniform_chance": 0.5
+  },
+  "stage": {
+   "accuracy": {
+    "correct": 56,
+    "n": 116,
+    "accuracy": 0.4827586206896552,
+    "wilson_95": [
+     0.39384395327057964,
+     0.5727786159190631
+    ]
+   },
+   "confusion": {
+    "none": {
+     "none": 40,
+     "grasp": 0,
+     "place": 0,
+     "unparsed": 0
+    },
+    "grasp": {
+     "none": 20,
+     "grasp": 14,
+     "place": 6,
+     "unparsed": 0
+    },
+    "place": {
+     "none": 34,
+     "grasp": 0,
+     "place": 2,
+     "unparsed": 0
+    },
+    "unparsed": {
+     "none": 0,
+     "grasp": 0,
+     "place": 0,
+     "unparsed": 0
+    }
+   },
+   "per_class": {
+    "none": {
+     "support": 40,
+     "predicted": 94,
+     "precision": 0.425531914893617,
+     "recall": 1.0
+    },
+    "grasp": {
+     "support": 40,
+     "predicted": 14,
+     "precision": 1.0,
+     "recall": 0.35
+    },
+    "place": {
+     "support": 36,
+     "predicted": 8,
+     "precision": 0.25,
+     "recall": 0.05555555555555555
+    }
+   },
+   "majority_baseline": {
+    "class": "none",
+    "correct": 40,
+    "n": 116,
+    "accuracy": 0.3448275862068966,
+    "wilson_95": [
+     0.26455753913459384,
+     0.43504558357219064
+    ]
+   },
+   "uniform_chance": 0.3333333333333333
+  },
+  "n": 116,
+  "parsed": 116,
+  "truncated": 0,
+  "internal_consistency": {
+   "success_yes_iff_stage_none": 116,
+   "of_parsed": 116
+  },
+  "latency_s": {
+   "median": 10.992963407999923,
+   "max": 75.79544120399987
+  },
+  "tokens_mean": {
+   "prompt_tokens": 4681.3448275862065,
+   "completion_tokens": 269.3103448275862
+  },
+  "truth_per_stage": {
+   "none": 40,
+   "place": 36,
+   "grasp": 40
+  },
+  "static_controls": {
+   "n": 6,
+   "said_success": 0,
+   "said_grasp": 6,
+   "unparsed": 0
+  },
+  "observed_answers": {
+   "cube_last_frame": {
+    "tray": 94,
+    "table": 22
+   },
+   "cube_left_table": {
+    "yes": 100,
+    "no": 16
+   }
+  }
+ },
+ "caveats": [
+  "simulator renders, not real video; camera config 'close': {'views': [{'lookat': [0.45, 0.05, 0.11], 'distance': 0.42, 'azimuth': 180.0, 'elevation': -18.0}], 'size': [480, 640]}",
+  "classes balanced by construction (sampled per stage), so accuracy is not the deployment-mix accuracy",
+  "one sample per clip at temperature 0.6 (model-card reasoning defaults), seed 1234",
+  "the failing-stage definitions are ours; the model was not fine-tuned on them",
+  "success and stage are derived in code from the observational answers (cube in tray -> success; else lifted -> place, not lifted -> grasp)"
+ ]
+}

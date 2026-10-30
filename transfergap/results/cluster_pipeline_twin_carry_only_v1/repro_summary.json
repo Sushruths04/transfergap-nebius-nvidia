@@ -1,0 +1,134 @@
+{
+ "demo": {
+  "kind": "file",
+  "path": "/ws/transfergap/ctx_cam/pipe_user_twin_carry_only/demo.npz",
+  "sha256": "a8f69a2fb97b2e0bc064c05a5abb74e7aca4a97dcb40c3b6f7f7b48cad8579cf",
+  "tag": "demoa8f69a2f"
+ },
+ "fixes": [
+  "speed_cap_3",
+  "look_again",
+  "touch_probe_calibration",
+  "speed_cap_2",
+  "safe_path_v2"
+ ],
+ "seeds": [
+  1000,
+  1059
+ ],
+ "robots": {
+  "ur5e": {
+   "conditions": {
+    "raw": {
+     "oracle": "none",
+     "n": 60,
+     "successes": 36,
+     "success_rate": 0.6,
+     "wilson_95": [
+      0.4736605349204075,
+      0.7143050946511744
+     ],
+     "failure_reasons": {
+      "no_lift": 21,
+      "not_released_and_settled_at_goal": 24
+     }
+    },
+    "all_fixes": {
+     "oracle": "none",
+     "n": 60,
+     "successes": 60,
+     "success_rate": 1.0,
+     "wilson_95": [
+      0.93982814785791,
+      0.9999999999999998
+     ],
+     "failure_reasons": {}
+    }
+   },
+   "gap_all_fixes_minus_raw": {
+    "delta_pp": 40.0,
+    "ci95_pp": [
+     28.333333333333332,
+     53.333333333333336
+    ],
+    "n": 60
+   }
+  },
+  "ur10e": {
+   "conditions": {
+    "raw": {
+     "oracle": "none",
+     "n": 60,
+     "successes": 33,
+     "success_rate": 0.55,
+     "wilson_95": [
+      0.4249193588533434,
+      0.6690634559324476
+     ],
+     "failure_reasons": {
+      "no_lift": 23,
+      "not_released_and_settled_at_goal": 27,
+      "forbidden_collision": 1
+     }
+    },
+    "all_fixes": {
+     "oracle": "none",
+     "n": 60,
+     "successes": 60,
+     "success_rate": 1.0,
+     "wilson_95": [
+      0.93982814785791,
+      0.9999999999999998
+     ],
+     "failure_reasons": {}
+    }
+   },
+   "gap_all_fixes_minus_raw": {
+    "delta_pp": 45.0,
+    "ci95_pp": [
+     31.666666666666664,
+     58.333333333333336
+    ],
+    "n": 60
+   }
+  },
+  "kairos_mobile": {
+   "conditions": {
+    "raw": {
+     "oracle": "none",
+     "n": 60,
+     "successes": 47,
+     "success_rate": 0.7833333333333333,
+     "wilson_95": [
+      0.6637997242680521,
+      0.868769559518097
+     ],
+     "failure_reasons": {
+      "no_lift": 10,
+      "not_released_and_settled_at_goal": 13,
+      "fallen": 2
+     }
+    },
+    "all_fixes": {
+     "oracle": "none",
+     "n": 60,
+     "successes": 60,
+     "success_rate": 1.0,
+     "wilson_95": [
+      0.93982814785791,
+      0.9999999999999998
+     ],
+     "failure_reasons": {}
+    }
+   },
+   "gap_all_fixes_minus_raw": {
+    "delta_pp": 21.666666666666668,
+    "ci95_pp": [
+     11.666666666666666,
+     31.666666666666664
+    ],
+    "n": 60
+   }
+  }
+ }
+}

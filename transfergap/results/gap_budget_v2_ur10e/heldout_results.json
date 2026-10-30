@@ -1,0 +1,47 @@
+{
+ "seeds": [
+  1000,
+  1059
+ ],
+ "correction": "look_again",
+ "conditions": {
+  "full": {
+   "oracle": "none",
+   "n": 60,
+   "successes": 33,
+   "success_rate": 0.55,
+   "wilson_95": [
+    0.4249193588533434,
+    0.6690634559324476
+   ],
+   "failure_reasons": {
+    "not_released_and_settled_at_goal": 27,
+    "no_lift": 23
+   }
+  },
+  "full+look_again": {
+   "oracle": "none",
+   "n": 60,
+   "successes": 46,
+   "success_rate": 0.7666666666666667,
+   "wilson_95": [
+    0.6456372962239805,
+    0.8556043826335717
+   ],
+   "failure_reasons": {
+    "not_released_and_settled_at_goal": 13,
+    "no_lift": 8,
+    "forbidden_collision": 1
+   }
+  }
+ },
+ "paired_gap_corrected_minus_full": {
+  "delta_pp": 21.666666666666668,
+  "ci95_pp": [
+   10.0,
+   33.33333333333333
+  ],
+  "n": 60
+ },
+ "ci_excludes_zero": true
+}

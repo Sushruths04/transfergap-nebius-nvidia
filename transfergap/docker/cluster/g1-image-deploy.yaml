@@ -1,0 +1,28 @@
+# Test of the open hypothesis "Deployment pod vs Job pod": the same `full` image as a long-lived Deployment pod
+# (sleep), then `kubectl exec` runs in_image_run.sh. Resources identical to g1-in-image-v3-hostlike.yaml.
+# Needs the single GPU free: scale deploy/tg-dev to 0 first, and back to 1 (then run restore_tg_dev.sh) afterwards.
+apiVersion: apps/v1
+kind: Deployment
+metadata: {name: tg-image-deploy, namespace: isaac-sim, labels: {project: transfergap}}
+spec:
+  replicas: 1
+  selector: {matchLabels: {app: tg-image-deploy}}
+  template:
+    metadata: {labels: {app: tg-image-deploy, project: transfergap}}
+    spec:
+      runtimeClassName: nvidia
+      nodeSelector: {nvidia.com/gpu.product: NVIDIA-L40S, kubernetes.io/hostname: srv-hpc-gpu04}
+      imagePullSecrets: [{name: tg-ghcr}]
+      containers:
+      - name: g1
+        image: ghcr.io/sushruths04/transfergap:full-2026-10-05
+        imagePullPolicy: IfNotPresent
+        command: [sleep, infinity]
+        env: [{name: NVIDIA_DRIVER_CAPABILITIES, value: all}]
+        resources:
+          requests: {cpu: "16", memory: 48Gi, ephemeral-storage: 20Gi, nvidia.com/gpu: 1}
+          limits: {cpu: "32", memory: 64Gi, ephemeral-storage: 100Gi, nvidia.com/gpu: 1}
+        volumeMounts: [{name: data, mountPath: /ws/transfergap}, {name: shm, mountPath: /dev/shm}]
+      volumes:
+      - {name: data, persistentVolumeClaim: {claimName: tg-dev-data}}
+      - {name: shm, emptyDir: {medium: Memory, sizeLimit: 16Gi}}

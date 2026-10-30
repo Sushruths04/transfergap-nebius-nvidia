@@ -1,0 +1,29 @@
+{
+  "id": "g1_pelvis_drift_v1",
+  "status": "amended before any outcome of seeds 1200-1279 was read; not yet analysed",
+  "origin": "exploratory finding in results/g1_hybrid_failure_analysis_v1 (120 rollouts, pelvis drift 6.6 vs 4.7 cm, p=0.005, 5 features tested)",
+  "hypothesis": "Among rollouts whose hand closes inside the position window, those with large pelvis drift grasp less often, i.e. the earlier association replicates on fresh seeds.",
+  "seeds": "1200-1279 (80 new seeds, never used), 1 rollout each, frozen hybrid controller unchanged (stream_cl.py settings of g1/CLOSED_LOOP.md)",
+  "position_window": {
+    "rule": "|dx-mu|<=2sd, |dy-mu|<=2sd, |dz-mu|<=2sd (cm), mu and sd of the grasped dev rollouts",
+    "mu": {
+      "dx": -1.5837382000943845,
+      "dy": 1.141738003004164,
+      "dz": 1.7652046801967969
+    },
+    "sd": {
+      "dx": 0.9081676020556314,
+      "dy": 0.7311413307443854,
+      "dz": 0.6168574314335917
+    }
+  },
+  "drift_threshold_cm": 6.25,
+  "threshold_note": "median pelvis drift of the 63 in-window dev rollouts (rule fixed, value frozen). Dev: drift below it 27/31 grasp (87%), at or above it 16/32 (50%), one-sided Fisher p=0.0016",
+  "primary_test": "among in-window rollouts: P(grasp | drift < threshold) - P(grasp | drift >= threshold) >= 0.25 AND one-sided Fisher exact p < 0.05",
+  "required_n": "at least 30 in-window rollouts and at least 8 in each drift group; otherwise reported as underpowered, not as a result",
+  "secondary_report_only": "wrist orientation relative to the block at close, computed offline from the logged full qpos (*.diag.npz) by forward kinematics; no new runner code",
+  "causal_note": "this tests replication of an association only. It does not show drift causes non-grasps; a causal test needs an intervention that limits drift and is a separate pre-registration.",
+  "no_retuning_after_seeing_results": true,
+  "all_results_reported": true,
+  "amendment": "The original extraction script of the dev analysis was not kept and a reimplementation did not reproduce its values, so features are redefined in g1/drift_features.py (measured grasp point minus block position, and pelvis drift from the origin, both at plan frame 300 = start of the close phase) and the window and threshold are re-derived on the same 120 dev rollouts (v4 710-749, v6 800-839, v7 1100-1139; grasp label = lift >= 5 cm, identical to the old labels on all 120). The 80-seed run had started but no outcome had been inspected when this was frozen."
+}

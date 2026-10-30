@@ -1,0 +1,321 @@
+{
+ "block_half": null,
+ "n_distractors": 0,
+ "exec": "ensemble",
+ "ckpt": "/ws/transfergap/bc_v1/models_multi4/policy_vision.pt",
+ "robot": "ur10e",
+ "seeds": [
+  7000,
+  7059
+ ],
+ "n": 60,
+ "policy_success": 60,
+ "policy_ci95": [
+  0.94,
+  1.0
+ ],
+ "scripted_success": 60,
+ "failure_reasons": {},
+ "per_seed": [
+  {
+   "seed": 7000,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 7001,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 7002,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 7003,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 7004,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 7005,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 7006,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 7007,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 7008,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 7009,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 7010,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 7011,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 7012,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 7013,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 7014,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 7015,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 7016,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 7017,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 7018,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 7019,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 7020,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 7021,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 7022,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 7023,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 7024,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 7025,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 7026,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 7027,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 7028,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 7029,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 7030,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 7031,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 7032,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 7033,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 7034,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 7035,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 7036,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 7037,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 7038,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 7039,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 7040,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 7041,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 7042,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 7043,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 7044,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 7045,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 7046,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 7047,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 7048,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 7049,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 7050,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 7051,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 7052,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 7053,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 7054,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 7055,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 7056,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 7057,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 7058,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 7059,
+   "success": true,
+   "reasons": []
+  }
+ ]
+}

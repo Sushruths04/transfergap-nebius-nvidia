@@ -1,0 +1,34 @@
+{
+ "schema_version": 1,
+ "kind": "hosted_inference",
+ "role": "nemotron",
+ "requested_model": "nvidia/nemotron-3-super-120b-a12b",
+ "endpoint_host": "api.tokenfactory.nebius.com",
+ "created_at": "2026-10-02T04:28:54.106614+00:00",
+ "request_sha256": "fc0ddcbf8c01b18f89d80bfb44da5a0e86203c1613fdd1be6346664e48bebb9d",
+ "status": "succeeded",
+ "response_id": "chatcmpl-81d95f53d806980c",
+ "returned_model": "nvidia/nemotron-3-super-120b-a12b",
+ "usage": {
+  "completion_tokens": 279,
+  "prompt_tokens": 715,
+  "total_tokens": 994,
+  "completion_tokens_details": {
+   "accepted_prediction_tokens": null,
+   "audio_tokens": null,
+   "reasoning_tokens": 210,
+   "rejected_prediction_tokens": null
+  },
+  "prompt_tokens_details": {
+   "audio_tokens": null,
+   "cached_tokens": 0,
+   "created_cache_tokens": 0,
+   "multimodal_tokens": null
+  },
+  "prompt_cache_hit_tokens": 0,
+  "prompt_cache_miss_tokens": 715
+ },
+ "finish_reason": "stop",
+ "content": "\n{\n  \"correction\": \"touch_probe_calibration\",\n  \"rationale\": \"Calibration fixes the dominant error source (tool\u2011frame offset), yielding ~50\u202fpp success gain with minimal impact on the demonstrated hand path and speed profile, thus preserving style while markedly improving unseen\u2011trial performance.\"\n}",
+ "latency_s": 4.210468384997512
+}

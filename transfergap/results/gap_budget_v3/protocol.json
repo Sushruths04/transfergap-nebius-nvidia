@@ -1,0 +1,69 @@
+{
+ "protocol": "gap_budget_v3",
+ "seeds": [
+  3000,
+  3499
+ ],
+ "n_seeds": 500,
+ "robots": [
+  "ur5e",
+  "ur10e"
+ ],
+ "error_model": "errors_v2 (frozen constants below)",
+ "constants": {
+  "PERCEPTION_SIGMA_M": 0.015,
+  "RETARGET_JOINT_SIGMA_RAD": 0.008726646259971648,
+  "CALIBRATION_MAX_M": 0.03,
+  "CALIBRATION_DIRECTION": "uniform on sphere, per seed",
+  "TIMING_SPEED_RANGE": [
+   1.0,
+   4.5
+  ],
+  "GRIP_FORCE_SCALE": 1.0,
+  "LOOK_AGAIN_SIGMA_M": 0.004,
+  "IK_RESOLVE_SIGMA_RAD": 0.0008726646259971648,
+  "PROBE_SIGMA_M": 0.002,
+  "SPEED_CAP": 3.0,
+  "all_values_are_assumptions": true
+ },
+ "conditions": [
+  "full",
+  "oracle_perception",
+  "oracle_retargeting",
+  "oracle_calibration",
+  "oracle_timing",
+  "oracle_all",
+  "full+look_again",
+  "full+ik_resolve",
+  "full+touch_probe_calibration",
+  "full+speed_cap_3"
+ ],
+ "dev_choice_from_gap_budget_v2": "look_again (perception) on both arms",
+ "hypotheses": {
+  "H1": "On both arms, paired success of full+look_again minus full has a 95% bootstrap interval above zero (replication of the gap_budget_v2 held-out result with 500 fresh seeds).",
+  "H2": "The correction chosen on dev seeds (look_again, perception) is the largest gain of the four corrections on each arm. This is reported either way; it is not a pass/fail bar.",
+  "H3": "The sign of the interaction term (sum of single budgets minus oracle_all) differs between the arms, as in gap_budget_v2. Reported with a bootstrap 95% interval on each arm; if both intervals include zero the earlier sign flip is not supported.",
+  "H4": "Retargeting budget at the assumed 0.5 degree joint error is indistinguishable from zero on both arms."
+ },
+ "bootstrap": {
+  "samples": 5000,
+  "seed": 12345,
+  "unit": "seed"
+ },
+ "disjoint_from": {
+  "dev": [
+   0,
+   59
+  ],
+  "heldout_v2": [
+   1000,
+   1059
+  ],
+  "sweep": [
+   2000,
+   2029
+  ]
+ },
+ "code_commit_at_freeze": "dffe35e72c0440a0cdcbcf3e8408242b4bf78ddc",
+ "rule": "No threshold or error constant is changed after seeing results; all four corrections are reported."
+}

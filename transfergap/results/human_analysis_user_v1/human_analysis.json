@@ -1,0 +1,75 @@
+{
+ "side": "Right",
+ "frames": 270,
+ "fps": 21.4,
+ "lengths_m": {
+  "upper_arm_m": {
+   "median": 0.2979,
+   "p10": 0.2605,
+   "p90": 0.3537,
+   "cv_pct": 11.9
+  },
+  "forearm_m": {
+   "median": 0.2566,
+   "p10": 0.2053,
+   "p90": 0.2915,
+   "cv_pct": 10.9
+  },
+  "hand_m": {
+   "median": 0.1727,
+   "p10": 0.1403,
+   "p90": 0.1982,
+   "cv_pct": 13.1
+  },
+  "shoulder_width_m": {
+   "median": 0.4,
+   "p10": 0.3546,
+   "p90": 0.4202,
+   "cv_pct": 6.2
+  },
+  "torso_m": {
+   "median": 0.6067,
+   "p10": 0.5904,
+   "p90": 0.6222,
+   "cv_pct": 2.1
+  }
+ },
+ "angles_deg": {
+  "elbow_deg": {
+   "min": 106.6,
+   "median": 149.5,
+   "max": 171.9
+  },
+  "shoulder_deg": {
+   "min": 4.4,
+   "median": 12.5,
+   "max": 29.9
+  },
+  "wrist_deg": {
+   "min": 102.3,
+   "median": 165.7,
+   "max": 178.1
+  }
+ },
+ "hand": {
+  "aperture_m": {
+   "median": 0.05,
+   "p10": 0.0384,
+   "p90": 0.0718,
+   "cv_pct": 33.2
+  },
+  "peak_speed_m_s": 1.057,
+  "pinch_path_extent_m": [
+   0.278,
+   0.221,
+   0.049
+  ]
+ },
+ "note": "monocular estimates; lengths are stable (cv_pct) or not, never validated against ground truth",
+ "metric_scale": {
+  "factor": 0.3846,
+  "reference_shoulder_width_m": 0.4,
+  "note": "RTMW3D output is not metric; scaled so the median shoulder width equals the reference (ASSUMED unless measured)"
+ },
+ "overlay": "/ws/transfergap/ctx_cam/human_analysis_user_v2/human_overlay.mp4"
+}

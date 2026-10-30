@@ -1,0 +1,38 @@
+{
+ "protocol": "gap_budget_v1",
+ "frozen_before_heldout": true,
+ "chosen_component": "perception",
+ "chosen_correction": "look_again",
+ "dev_budget_pp": {
+  "perception": 11.666666666666666,
+  "calibration": 11.666666666666666,
+  "timing": 11.666666666666666
+ },
+ "dev_seeds": [
+  0,
+  59
+ ],
+ "heldout_seeds": [
+  1000,
+  1059
+ ],
+ "heldout_conditions": [
+  "full",
+  "full+look_again"
+ ],
+ "constants": {
+  "PERCEPTION_SIGMA_M": 0.015,
+  "CALIBRATION_MAX_M": 0.03,
+  "TIMING_SPEED_RANGE": [
+   1.0,
+   4.5
+  ],
+  "GRIP_FORCE_SCALE": 1.0,
+  "LOOK_AGAIN_SIGMA_M": 0.004,
+  "PROBE_SIGMA_M": 0.002,
+  "SPEED_CAP": 3.0,
+  "all_values_are_assumptions": true
+ },
+ "scoring": "metrics.score_episode, task block_to_tray_v1",
+ "code_commit_at_freeze": "be89bc12877f63e53f52939421cca31cf4fcafe8"
+}

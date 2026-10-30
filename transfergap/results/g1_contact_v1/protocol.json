@@ -1,0 +1,24 @@
+{
+ "protocol_id": "g1_block_to_tray_v1",
+ "frozen_before_trials": true,
+ "robot": "g1_sonic: Unitree G1 29-DoF + Dex3 hands (upstream scene_43dof.xml) tracked by the GEAR-SONIC release policy, deploy.sh --input-type zmq --zmq-host localhost sim",
+ "task": {"position_tolerance_m": 0.05, "min_lift_m": 0.05, "settle_duration_s": 0.5, "max_settle_speed_m_s": 0.02,
+          "block": "4 cm cube, 50 g", "block_nominal_xy": [0.33, -0.20], "block_jitter_m": 0.02,
+          "table_top_z": 0.72, "tray_xy": [0.34, 0.0], "tray_inner_half_m": 0.07},
+ "motion": {"source": "IK keyframes (g1/plan_reach.py); NOT a human demonstration. Streamed as SONIC protocol v1 joint targets plus Dex3 hand targets over the same ZMQ 'pose' topic the GEM-X bridge uses",
+            "plan_args": {"stance_offset": [-0.075, 0.005], "grasp_dz": 0.03, "pitch_down": -0.2, "roll": -0.4, "grasp_dxy": [0.0, 0.0]},
+            "hand_closed": "upstream g1_gripper_ik_solver middle-close preset (right hand)"},
+ "conditions": {
+   "nominal_target": {"oracle": "none", "plan": "one trajectory aimed at the nominal block pose; the block is jittered per seed (+/-2 cm) and never sensed"},
+   "true_target": {"oracle": "perception", "plan": "per-seed trajectory aimed at the seeded block pose from scene.py (ground-truth pose substituted for perception, before the rollout)"}},
+ "trial_seeds": "100-109",
+ "rollouts_per_seed": 3,
+ "dev_seeds_used": [0, 1],
+ "dev_history": [
+   "test1: table top 0.68, block x 0.36, unweighted IK used waist roll -> robot leaned back, no contact",
+   "test2: table top 0.72, block x 0.33, waist IK cost 20 -> touch only (pelvis stood ~5-9 cm behind origin)",
+   "test3: stance offset (-0.06, 0.02), hand pitched down 0.25 -> touch, block dragged 4.5 cm",
+   "test4: stance offset (-0.075, 0.005), pitch 0 -> fingertips rode on the table / block top",
+   "kinematic grasp_search.py (no rollouts) -> pitch -0.2, roll -0.4, grasp_dz 0.03",
+   "test5 (dev seeds 0 and 1, one rollout each): both lifted 12.6 cm and released in the tray"]
+}

@@ -1,0 +1,32 @@
+# G1 closed-loop hybrid, 12 fresh seeds (1300-1311), inside image full-2026-10-09b. Replicates the in-image result of results/g1_in_image_v1 on new seeds.
+apiVersion: batch/v1
+kind: Job
+metadata: {name: tg-g1-image-oct29, namespace: isaac-sim, labels: {project: transfergap}}
+spec:
+  backoffLimit: 0
+  activeDeadlineSeconds: 10800
+  ttlSecondsAfterFinished: 86400
+  template:
+    spec:
+      restartPolicy: Never
+      runtimeClassName: nvidia
+      nodeSelector: {nvidia.com/gpu.product: NVIDIA-L40S, kubernetes.io/hostname: srv-hpc-gpu04}
+      imagePullSecrets: [{name: tg-ghcr}]
+      containers:
+      - name: g1
+        image: ghcr.io/sushruths04/transfergap:full-2026-10-09b
+        imagePullPolicy: IfNotPresent
+        command: [bash, /opt/transfergap_src/transfergap/g1/image_g1_trials.sh, "1300-1311"]
+        env:
+        - {name: NVIDIA_DRIVER_CAPABILITIES, value: all}
+        - {name: SONIC_WEIGHTS_SRC, value: /ws/transfergap/repo/GR00T-WholeBodyControl/gear_sonic_deploy}
+        - {name: G1_OUT_ROOT, value: /ws/transfergap/g1_out}
+        - {name: OUTNAME, value: g1_image_oct29}
+        - {name: HOME, value: /root}
+        resources:
+          requests: {cpu: "16", memory: 48Gi, ephemeral-storage: 20Gi, nvidia.com/gpu: 1}
+          limits: {cpu: "32", memory: 64Gi, ephemeral-storage: 100Gi, nvidia.com/gpu: 1}
+        volumeMounts: [{name: data, mountPath: /ws/transfergap}, {name: shm, mountPath: /dev/shm}]
+      volumes:
+      - {name: data, persistentVolumeClaim: {claimName: tg-dev-data}}
+      - {name: shm, emptyDir: {medium: Memory, sizeLimit: 16Gi}}

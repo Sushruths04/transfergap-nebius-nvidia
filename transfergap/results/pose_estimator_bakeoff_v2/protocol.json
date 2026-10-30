@@ -1,0 +1,81 @@
+{
+ "protocol": "pose_estimator_bakeoff_v2",
+ "frozen_before_run": true,
+ "question": "Treat the human pose estimator as a transfer-gap stage: choose it per demo x arm on dev seeds, verify on held-out. Does per-demo selection beat always using GEM-X?",
+ "motivation": "pose_estimator_bakeoff_v1 (a59eef6): neither estimator dominates; Fast SAM 3D Body is 1.5-13x jitterier per frame",
+ "candidates": [
+  "gemx",
+  "fast_sam_3d_body",
+  "fast_sam_3d_body_smooth"
+ ],
+ "candidate_note": "fast_sam_3d_body_smooth = errors_demo._smooth_path with SMOOTH_WINDOW_S (0.20 s, unchanged since demo_budget_v1) applied to the v1 Fast SAM demo; no new parameter",
+ "demos": {
+  "pexels_8135753_notebook": {
+   "video_key": "8135753",
+   "stack": [
+    "speed_cap_3",
+    "look_again",
+    "touch_probe_calibration",
+    "speed_cap_2",
+    "safe_path_v2"
+   ]
+  },
+  "pexels_8135753_markers": {
+   "video_key": "8135753",
+   "stack": [
+    "speed_cap_3",
+    "look_again",
+    "touch_probe_calibration",
+    "speed_cap_2",
+    "safe_path_v2"
+   ]
+  },
+  "pexels_8135753_orange_marker": {
+   "video_key": "8135753",
+   "stack": [
+    "speed_cap_3",
+    "look_again",
+    "touch_probe_calibration",
+    "speed_cap_2",
+    "safe_path_v2"
+   ]
+  },
+  "pexels_8135753_notepad": {
+   "video_key": "8135753",
+   "stack": [
+    "speed_cap_3",
+    "look_again",
+    "touch_probe_calibration",
+    "speed_cap_2",
+    "safe_path_v2"
+   ]
+  },
+  "pexels_7205253_woman_box": {
+   "video_key": "7205253",
+   "stack": [
+    "look_again",
+    "touch_probe_calibration",
+    "safe_path_v2"
+   ]
+  }
+ },
+ "robots": [
+  "ur5e",
+  "ur10e"
+ ],
+ "dev_seeds": [
+  0,
+  19
+ ],
+ "heldout_seeds": [
+  1000,
+  1059
+ ],
+ "selection_rule": "max dev successes with the demo's frozen stack; ties -> candidate order (gemx first)",
+ "primary_metric": "total held-out successes over 10 demo x arm cells, selected vs gemx (paired by seed per cell)",
+ "runner": [
+  "PYTHONPATH=. .venv/bin/python -m transfergap.sim.estimator_select dev",
+  "commit dev_selection.json",
+  "PYTHONPATH=. .venv/bin/python -m transfergap.sim.estimator_select heldout"
+ ]
+}

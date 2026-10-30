@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "kind": "cosmos_critic",
+  "requested_model": "nvidia/Cosmos-Reason2-8B",
+  "endpoint_host": "127.0.0.1",
+  "created_at": "2026-10-01T18:57:03.149085+00:00",
+  "prompt_sha256": "9b1e2d29448b883dfebd005b50ee9757d4ae95473bd894a1ad88ee24469c63cb",
+  "video_sha256": "85947db86a596bf717f7e3c240927481c93a58bc9921328550d52d2134b2f218",
+  "request_sha256": "e55c9328762156337a31acb25d21d55d1806d1916a54dff506680f7df71056c9",
+  "fps": 4,
+  "sampling": {
+    "max_tokens": 4096,
+    "temperature": 0.6,
+    "top_p": 0.95,
+    "top_k": 20,
+    "repetition_penalty": 1.0,
+    "presence_penalty": 0.0,
+    "seed": 1234
+  },
+  "guided_json": true,
+  "status": "succeeded",
+  "clip_id": "clip008",
+  "git_commit": "5973b39608c7ac334378fcb490eaba0a0d6606f1",
+  "prompt": "obs",
+  "camera": "close",
+  "response_id": "chatcmpl-9ff85e1e7ca2cc78",
+  "returned_model": "nvidia/Cosmos-Reason2-8B",
+  "usage": {
+    "prompt_tokens": 2712,
+    "total_tokens": 2928,
+    "completion_tokens": 216,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 172
+    }
+  },
+  "finish_reason": "stop",
+  "content": "{\"cube_last_frame\": \"table\", \"cube_left_table\": \"no\", \"observations\": \"The red cube remains stationary on the table throughout the video, with no interaction from the robot arm.\"}",
+  "reasoning_content": "\nOkay, let's see. The user is asking about the red cube's position and movement in the video.\n\nFirst, the question (a) is about where the red cube is in the last frame. The video shows that the red cube is on the left side of the table, stationary throughout. The robot arm moves but doesn't interact with the cube. So in the last frame, the cube should still be on the table, not in the tray or gripper. The answer would be \"table\"\n\nQuestion (b) asks if the cube was ever lifted off the table. The video states the cube remains stationary, so no. The answer is \"no\"\n\nQuestion (c) requires a description. The cube stays in place, no interaction with the arm. So the observation is that the red cube remains stationary on the table throughout the video.\n",
+  "parsed": true,
+  "answer": {
+    "success": false,
+    "failing_stage": "grasp",
+    "rationale": "The red cube remains stationary on the table throughout the video, with no interaction from the robot arm.",
+    "observed": {
+      "cube_last_frame": "table",
+      "cube_left_table": "no"
+    }
+  },
+  "parse_error": null,
+  "latency_s": 7.60173665199909
+}

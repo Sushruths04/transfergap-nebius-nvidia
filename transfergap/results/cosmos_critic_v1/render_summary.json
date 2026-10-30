@@ -1,0 +1,31 @@
+{
+ "labels": "transfergap/runs/cosmos_critic_v1/labels.jsonl",
+ "n": 120,
+ "per_stage": {
+  "place": 40,
+  "grasp": 40,
+  "none": 40
+ },
+ "per_robot_stage": {
+  "ur5e:place": 18,
+  "ur10e:grasp": 18,
+  "ur5e:grasp": 22,
+  "ur5e:none": 17,
+  "ur10e:none": 23,
+  "ur10e:place": 22
+ },
+ "distinct_robot_seed_pairs_per_stage": {
+  "none": 40,
+  "grasp": 40,
+  "place": 24
+ },
+ "candidate_pool_per_stage": {
+  "ur5e:grasp": 98,
+  "ur5e:none": 244,
+  "ur5e:place": 18,
+  "ur10e:place": 25,
+  "ur10e:none": 245,
+  "ur10e:grasp": 90
+ },
+ "candidate_pool_n": 720
+}

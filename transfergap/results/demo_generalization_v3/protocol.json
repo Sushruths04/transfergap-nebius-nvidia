@@ -1,0 +1,13 @@
+{
+ "protocol": "demo_generalization_v3",
+ "frozen_before_trials": true,
+ "question": "Does the same fixed stack (chosen on the first person's notebook demo, plus safe_path) transfer to a DIFFERENT PERSON with a different style?",
+ "fix_stack": ["speed_cap_3", "look_again", "touch_probe_calibration", "speed_cap_2", "safe_path"],
+ "demo": "pexels_7205253_woman_box (Pexels 7205253: a woman lifts a box off a stack with both hands, walks, sets it on another box)",
+ "demo_style_summary": "two-handed; reach sweep ~0.8 m while walking; lift ~0.36 m; carry ~0.7 m; slow placement 2.1 s; pace ~2x robot nominal",
+ "caveats": ["camera pans while she walks; this GEM-X release has no visual odometry (static-camera fallback)", "grasp/release annotated by frame inspection (+/- 6 frames)", "box size unknown, so no object-normalised offsets (grasp offset 0 by construction, as for all GEM-X demos)"],
+ "robots": ["ur5e", "ur10e"],
+ "seeds": [1000, 1059],
+ "conditions": ["raw (no fix)", "all_fixes (incl. safe_path)"],
+ "no_tuning": true
+}

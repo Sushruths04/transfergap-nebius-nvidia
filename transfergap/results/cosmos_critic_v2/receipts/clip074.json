@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "kind": "cosmos_critic",
+  "requested_model": "nvidia/Cosmos-Reason2-8B",
+  "endpoint_host": "127.0.0.1",
+  "created_at": "2026-10-01T19:02:03.481076+00:00",
+  "prompt_sha256": "9b1e2d29448b883dfebd005b50ee9757d4ae95473bd894a1ad88ee24469c63cb",
+  "video_sha256": "c497501ad95edeb58225f5a020d1ecc785f6f482fbe6ce7c1fab32283c1e0f73",
+  "request_sha256": "4d98319dd8b476d4e5f1611a1a39dbabe7e167821b28e39385994f30d3fc6024",
+  "fps": 4,
+  "sampling": {
+    "max_tokens": 4096,
+    "temperature": 0.6,
+    "top_p": 0.95,
+    "top_k": 20,
+    "repetition_penalty": 1.0,
+    "presence_penalty": 0.0,
+    "seed": 1234
+  },
+  "guided_json": true,
+  "status": "succeeded",
+  "clip_id": "clip074",
+  "git_commit": "5973b39608c7ac334378fcb490eaba0a0d6606f1",
+  "prompt": "obs",
+  "camera": "close",
+  "response_id": "chatcmpl-a391467535b6d8d0",
+  "returned_model": "nvidia/Cosmos-Reason2-8B",
+  "usage": {
+    "prompt_tokens": 8262,
+    "total_tokens": 8434,
+    "completion_tokens": 172,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 125
+    }
+  },
+  "finish_reason": "stop",
+  "content": "{\"cube_last_frame\": \"tray\", \"cube_left_table\": \"yes\", \"observations\": \"The red cube is initially on the table, then lifted by the robot arm and placed into the green tray.\"}",
+  "reasoning_content": "\nOkay, let's see. The user is asking about the red cube's position in the last frame and whether it was lifted off the table. The video shows that the robot arm picks up the red cube and places it into the green tray. In the last frame, the cube is inside the green tray. So the answer for cube_last_frame should be \"tray\" The question about whether it was lifted off the table is yes because the arm lifted it from the table to the tray. The observations should mention the cube being moved from the table to the tray. Let me check the details again to make sure.\n",
+  "parsed": true,
+  "answer": {
+    "success": true,
+    "failing_stage": "none",
+    "rationale": "The red cube is initially on the table, then lifted by the robot arm and placed into the green tray.",
+    "observed": {
+      "cube_last_frame": "tray",
+      "cube_left_table": "yes"
+    }
+  },
+  "parse_error": null,
+  "latency_s": 13.594287388999874
+}

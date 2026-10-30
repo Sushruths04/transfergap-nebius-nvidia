@@ -1,0 +1,11 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+*.egg-info/
+.DS_Store
+transfergap/demo_input/
+transfergap/results/demo_budget_v1_democ9158b03_ur10e__after-*/
+transfergap/.venv
+transfergap/demo_input
+transfergap/transfergap/sim/assets/menagerie

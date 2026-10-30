@@ -1,0 +1,52 @@
+{
+  "schema_version": 1,
+  "kind": "cosmos_critic",
+  "requested_model": "nvidia/Cosmos-Reason2-8B",
+  "endpoint_host": "127.0.0.1",
+  "created_at": "2026-10-01T19:02:47.818734+00:00",
+  "prompt_sha256": "9b1e2d29448b883dfebd005b50ee9757d4ae95473bd894a1ad88ee24469c63cb",
+  "video_sha256": "f0fe1333ac0e0fc185c83a355d6ecf6661d9e567832ae7bc2ccf9fe8f5984725",
+  "request_sha256": "e4818d3f7705e1f0e7b617bacf47fe33609aa92ed115b76b2f47c876ad0e7b8c",
+  "fps": 4,
+  "sampling": {
+    "max_tokens": 4096,
+    "temperature": 0.6,
+    "top_p": 0.95,
+    "top_k": 20,
+    "repetition_penalty": 1.0,
+    "presence_penalty": 0.0,
+    "seed": 1234
+  },
+  "guided_json": true,
+  "status": "succeeded",
+  "clip_id": "clip086",
+  "git_commit": "5973b39608c7ac334378fcb490eaba0a0d6606f1",
+  "prompt": "obs",
+  "camera": "close",
+  "response_id": "chatcmpl-ad9e82b3c3805703",
+  "returned_model": "nvidia/Cosmos-Reason2-8B",
+  "usage": {
+    "prompt_tokens": 6100,
+    "total_tokens": 6377,
+    "completion_tokens": 277,
+    "prompt_tokens_details": null,
+    "completion_tokens_details": {
+      "reasoning_tokens": 230
+    }
+  },
+  "finish_reason": "stop",
+  "content": "{\"cube_last_frame\": \"tray\", \"cube_left_table\": \"yes\", \"observations\": \"The red cube is initially on the table, then lifted by the robot arm and placed into the green tray.\"}",
+  "reasoning_content": "\nOkay, let's see. The user is asking about the red cube's position in the last frame of the video. The video shows that the robot arm moves the red cube from the left side of the table to the green tray on the right. The last action shown is the robot placing the cube into the tray and then retracting.\n\nSo, in the final frame, the red cube should be inside the green tray. The options are \"tray\" or \"table\" or \"gripper\" Since the robot placed it in the tray, the answer should be \"tray\" \n\nNext question: was the red cube lifted off the table into the air at any time? The video shows the robot arm picks up the cube and moves it. Lifting would mean it's not touching the table anymore. The answer here is \"yes\" because the arm lifted it.\n\nFinally, the observations need to be a short description. The cube starts on the table, is picked up, moved, and placed into the tray. So the key points are the movement from left to right and placement into the tray. The answer should mention that.\n",
+  "parsed": true,
+  "answer": {
+    "success": true,
+    "failing_stage": "none",
+    "rationale": "The red cube is initially on the table, then lifted by the robot arm and placed into the green tray.",
+    "observed": {
+      "cube_last_frame": "tray",
+      "cube_left_table": "yes"
+    }
+  },
+  "parse_error": null,
+  "latency_s": 10.30915396799901
+}

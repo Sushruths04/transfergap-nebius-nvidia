@@ -1,0 +1,58 @@
+{
+ "demo": "pipe_user_scaled/demo.npz",
+ "seed": null,
+ "fixes": [
+  "speed_cap_3",
+  "look_again",
+  "touch_probe_calibration",
+  "speed_cap_2",
+  "safe_path_v2"
+ ],
+ "rows": {
+  "ur5e/raw": {
+   "seed": 1001,
+   "success": false,
+   "video": "ur5e_raw_seed1001.mp4",
+   "failure_reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ]
+  },
+  "ur5e/stack": {
+   "seed": 1001,
+   "success": true,
+   "video": "ur5e_stack_seed1001.mp4",
+   "failure_reasons": []
+  },
+  "ur10e/raw": {
+   "seed": 1001,
+   "success": false,
+   "video": "ur10e_raw_seed1001.mp4",
+   "failure_reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ]
+  },
+  "ur10e/stack": {
+   "seed": 1001,
+   "success": true,
+   "video": "ur10e_stack_seed1001.mp4",
+   "failure_reasons": []
+  },
+  "kairos_mobile/raw": {
+   "seed": 1001,
+   "success": false,
+   "video": "kairos_mobile_raw_seed1001.mp4",
+   "failure_reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ]
+  },
+  "kairos_mobile/stack": {
+   "seed": 1001,
+   "success": true,
+   "video": "kairos_mobile_stack_seed1001.mp4",
+   "failure_reasons": []
+  }
+ }
+}

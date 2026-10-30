@@ -1,0 +1,167 @@
+% refs.bib -- TransferGap workshop short paper.
+% RULE: entries come from the repo's research reports (research/2026-09-29 deep research/*.md,
+% Knowledge/Related Work.md). On 2026-10-01 every arXiv entry below was checked against its arXiv
+% record (export.arxiv.org API: title, full author list, comments, journal_ref) and titles/authors
+% were filled in from there. Venue notes are printed only where the arXiv record states them.
+% All 18 entries were checked against primary records on 2026-10-07;
+% citation support and publication-year conventions are in REFERENCE_AUDIT_2026-10-07.md.
+
+% --- Closest work -------------------------------------------------------------
+
+% arXiv record comment: "10th Conference on Robot Learning (CoRL 2026), Austin, TX, USA".
+@article{xiao2026h2rbench,
+  title   = {{H2RBench}: A Real-to-Sim Benchmark for Evaluating Human-to-Robot Transfer},
+  author  = {Chuyang Xiao and Haotian Zhan and Sriram Krishna and Peilin Meng and Muhammad Zubair Irshad and Sergey Zakharov and David Held},
+  journal = {arXiv preprint arXiv:2609.24778},
+  year    = {2026},
+  note    = {CoRL 2026}
+}
+
+% arXiv record journal_ref: "Transactions on Machine Learning Research, August 2026".
+@article{domae2026embodimentgap,
+  title   = {The Embodiment Gap in Robot Foundation Models},
+  author  = {Yukiyasu Domae and Keisuke Shirai and Hanbit Oh and Ryoichi Nakajo and Tomohiro Motoda and Koshi Makihara and Masaki Murooka and Takuma Yagi and Yoshiaki Bando and Ryo Hanai},
+  journal = {Transactions on Machine Learning Research},
+  year    = {2026},
+  note    = {arXiv:2608.18433}
+}
+
+@article{cotrain2026humanvideos,
+  title   = {What Matters When Cotraining Robot Manipulation Policies on Everyday Human Videos?},
+  author  = {Richard Li and Aditya Prakash and Andrew Wen and Saurabh Gupta and Yilun Du and Pulkit Agrawal},
+  journal = {arXiv preprint arXiv:2606.06627},
+  year    = {2026}
+}
+
+@article{lin2026humanashumanoid,
+  title   = {{Human-as-Humanoid}: Enabling Zero-Shot Humanoid Learning from Ego-Exo Human Videos with Human-Aligned Embodiments},
+  author  = {Xiaopeng Lin and Ruoqi Yang and Shijie Lian and Zhaolong Shen and Bin Yu and Changti Wu and Haibao Liu and Yuxiang Zhang and Hong Li and Qiyuan Su and Haochen Liu and Xuguo He and Yukun Shi and Cong Huang and Zhirui Zhang and Bojun Cheng and Kai Chen},
+  journal = {arXiv preprint arXiv:2606.32009},
+  year    = {2026}
+}
+
+@article{wang2026humanego,
+  title   = {{HumanEgo}: Zero-Shot Robot Learning from Minutes of Human Egocentric Videos},
+  author  = {Zhi Wang and Botao He and Kelin Yu and Seungjae Lee and Ruohan Gao and Furong Huang and Yiannis Aloimonos},
+  journal = {arXiv preprint arXiv:2605.24934},
+  year    = {2026}
+}
+
+% --- Failure diagnosis --------------------------------------------------------
+
+@inproceedings{aha2024,
+  title     = {{AHA}: A Vision-Language-Model for Detecting and Reasoning Over Failures in Robotic Manipulation},
+  author    = {Jiafei Duan and Wilbert Pumacay and Nishanth Kumar and Yi Ru Wang and Shulin Tian and Wentao Yuan and Ranjay Krishna and Dieter Fox and Ajay Mandlekar and Yijie Guo},
+  booktitle = {International Conference on Learning Representations (ICLR)},
+  year      = {2025},
+  note      = {arXiv:2410.00371}
+}
+
+@article{robofac2025,
+  title   = {{RoboFAC}: A Comprehensive Framework for Robotic Failure Analysis and Correction},
+  author  = {Zewei Ye and Weifeng Lu and Minghao Ye and Tao Lin and Shuo Yang and Junchi Yan and Bo Zhao},
+  journal = {arXiv preprint arXiv:2505.12224},
+  year    = {2025}
+}
+
+@article{guardian2025,
+  title   = {{Guardian}: Detecting Robotic Planning and Execution Errors with Vision-Language Models},
+  author  = {Paul Pacaud and Ricardo Garcia and Shizhe Chen and Cordelia Schmid},
+  journal = {arXiv preprint arXiv:2512.01946},
+  year    = {2025}
+}
+
+@article{elmaaroufi2026rho,
+  title   = {{RHO}: Your Coding Agent is Secretly a Roboticist},
+  author  = {Karim Elmaaroufi and Justin Svegliato and Sarunas Kalade and Graham Schelle and Sanjit A. Seshia and Matei Zaharia},
+  journal = {arXiv preprint arXiv:2606.16458},
+  year    = {2026}
+}
+
+@article{chen2026gap,
+  title   = {{GaP}: A Graph-as-Policy Multi-Agent Self-Learning Harness For Variational Automation Tasks},
+  author  = {Kaiyuan Chen and Shuangyu Xie and Letian Fu and Justin Yu and William Pacini and Sandeep Bajamahal and Hudson Kim and Jaimyn Drake and Daehwa Kim and Haoru Xue and Jonathan Francis and Christian Juette and Peter Schaldenbrand and Muhammet Yunus Seker and Ruwan Wickramarachchi and Uksang Yoo and Guanzhi Wang and Adithyavairavan Murali and Balakumar Sundaralingam and S. Shankar Sastry and Spencer Huang and Yuke Zhu and Linxi Fan and Ken Goldberg},
+  journal = {arXiv preprint arXiv:2607.05369},
+  year    = {2026}
+}
+
+% 10_nvidia_stack.md: VERIFIED (repo + NVIDIA tech blog). Software, no arXiv id in the reports.
+@misc{isaaclabarena,
+  key          = {Isaac Lab-Arena},
+  year         = {2026},
+  title        = {{Isaac Lab-Arena}},
+  howpublished = {\url{https://github.com/isaac-sim/IsaacLab-Arena}},
+  note         = {Accessed Oct.\ 2026}
+}
+% RSS 2026 venue is from the reports; not re-checked.
+@misc{robolab,
+  key          = {RoboLab},
+  year         = {2026},
+  title        = {{RoboLab}},
+  howpublished = {\url{https://github.com/NVLabs/RoboLab}},
+  note         = {Accessed Oct.\ 2026}
+}
+
+% --- Systems used / planned ---------------------------------------------------
+
+% Verified against the project's official repository on 2026-10-06.
+@misc{gemx,
+  key          = {GEM-X},
+  year         = {2026},
+  title        = {{GEM: A Generalist Model for Human Motion}},
+  howpublished = {NVIDIA Research},
+  note         = {Software repository}
+}
+
+% Menagerie is pinned in the internal provenance. Software, no arXiv id.
+@misc{menagerie,
+  key          = {MuJoCo Menagerie},
+  year         = {2026},
+  title        = {{MuJoCo Menagerie}},
+  howpublished = {\url{https://github.com/google-deepmind/mujoco_menagerie}},
+  note         = {Software repository, accessed Oct.\ 2026}
+}
+
+% arXiv record journal_ref: "Science Robotics 11 (117), eaed4592 (2026)".
+@article{sonic2025,
+  title   = {{SONIC}: Supersizing Motion Tracking for Natural Humanoid Whole-Body Control},
+  author  = {Zhengyi Luo and Ye Yuan and Tingwu Wang and Chenran Li and Fernando Casta{\~n}eda and Sirui Chen and Zi-Ang Cao and Jiefeng Li and David Minor and Qingwei Ben and Jinhyung Park and David Sami and Zi Wang and Xingye Da and Runyu Ding and Cyrus Hogg and Lina Song and Edy Lim and Eugene Jeong and Tairan He and Haoru Xue and Wenli Xiao and Simon Yuen and Jan Kautz and Yan Chang and Umar Iqbal and Linxi Fan and Yuke Zhu},
+  journal = {Science Robotics},
+  volume  = {11},
+  number  = {117},
+  pages   = {eaed4592},
+  year    = {2026},
+  note    = {arXiv:2511.07820}
+}
+
+% UNVERIFIED venue: the reports say ICCV 2025, but the arXiv record has no journal_ref/comment for it,
+% so the venue is not printed. Check the ICCV 2025 proceedings before adding it.
+@article{genmo2025,
+  title   = {{GENMO}: A {GENeralist} Model for Human {MOtion}},
+  author  = {Jiefeng Li and Jinkun Cao and Haotian Zhang and Davis Rempe and Jan Kautz and Umar Iqbal and Ye Yuan},
+  journal = {arXiv preprint arXiv:2505.01425},
+  year    = {2025}
+}
+
+% Not cited in main.tex at the moment.
+@article{curobov2,
+  title   = {{cuRoboV2}: Dynamics-Aware Motion Generation with Depth-Fused Distance Fields for High-{DoF} Robots},
+  author  = {Balakumar Sundaralingam and Adithyavairavan Murali and Stan Birchfield},
+  journal = {arXiv preprint arXiv:2603.05493},
+  year    = {2026}
+}
+
+% 07_novelty_gaps.md: VERIFIED (workshop page). Used for the quoted open question.
+@misc{scalingh2r,
+  key          = {Scaling H2R},
+  year         = {2026},
+  title        = {{CoRL 2026 Workshop ``Scaling H2R'' (Human-to-Robot)}},
+  howpublished = {\url{https://scaling-h2r-corl.github.io/}},
+  note         = {Call for papers, accessed Oct.\ 2026}
+}
+
+% NOT CITED: BeyondRetarget, arXiv 2609.29850 ("BeyondRetarget: Learning Executable Humanoid Motions
+% Directly from Monocular Video", Xiong et al.; arXiv record checked 2026-10-01; its abstract does not
+% mention the oracle-SMPL ablation the reports describe from a snippet; full text not read).
+% Also flagged UNVERIFIED in the reports and not cited: ActiveArena (2609.24124, snippet), RoboMD
+% (2412.02818, snippet), EPFL Science Robotics "Demonstrate once, execute on many" (403).

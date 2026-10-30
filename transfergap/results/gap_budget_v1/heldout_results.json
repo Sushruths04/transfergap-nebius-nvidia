@@ -1,0 +1,46 @@
+{
+ "seeds": [
+  1000,
+  1059
+ ],
+ "correction": "look_again",
+ "conditions": {
+  "full": {
+   "oracle": "none",
+   "n": 60,
+   "successes": 32,
+   "success_rate": 0.5333333333333333,
+   "wilson_95": [
+    0.4089342702715789,
+    0.6537209395856151
+   ],
+   "failure_reasons": {
+    "not_released_and_settled_at_goal": 28,
+    "no_lift": 22
+   }
+  },
+  "full+look_again": {
+   "oracle": "none",
+   "n": 60,
+   "successes": 45,
+   "success_rate": 0.75,
+   "wilson_95": [
+    0.6276792992295218,
+    0.8422347746994333
+   ],
+   "failure_reasons": {
+    "not_released_and_settled_at_goal": 15,
+    "no_lift": 10
+   }
+  }
+ },
+ "paired_gap_corrected_minus_full": {
+  "delta_pp": 21.666666666666668,
+  "ci95_pp": [
+   10.0,
+   33.33333333333333
+  ],
+  "n": 60
+ },
+ "ci_excludes_zero": true
+}

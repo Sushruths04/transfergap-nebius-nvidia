@@ -1,0 +1,616 @@
+{
+ "kind": "g1_contact",
+ "protocol_id": "g1_block_to_tray_v1",
+ "task": {
+  "position_tolerance_m": 0.05,
+  "min_lift_m": 0.05,
+  "settle_duration_s": 0.5,
+  "max_settle_speed_m_s": 0.02
+ },
+ "robot": "g1_sonic",
+ "code_commit_at_scoring": "5988ee04706a3a2fdcb0cb12dd663a8f4a4fdb52",
+ "conditions": {
+  "img": {
+   "oracle": "fixed",
+   "plan": {
+    "fps": 50,
+    "frames": 935,
+    "stance_offset": [
+     0.0,
+     0.0
+    ],
+    "target_xy_world": [
+     0.3330825398556257,
+     -0.2164113534291428
+    ],
+    "target_xy_robot": [
+     0.3330825398556257,
+     -0.2164113534291428
+    ],
+    "grasp_dz": 0.03,
+    "lift": 0.12,
+    "pitch_down": -0.2,
+    "roll": -0.4,
+    "grasp_dxy": [
+     0.0,
+     0.0
+    ],
+    "carry_offset": [
+     0.0,
+     0.0,
+     0.0
+    ],
+    "settle_s": 0.0,
+    "final_ik_error_m": {
+     "approach": 0.0004642632651420514,
+     "descend": 0.0003861436050346914,
+     "lift": 0.0003874513669794368,
+     "transport": 0.0002766534590897357,
+     "lower": 0.000479225618115786,
+     "retreat": 0.0003833978979920803
+    },
+    "waypoints": {
+     "pre": [
+      0.3330825398556257,
+      -0.2164113534291428,
+      0.87
+     ],
+     "grasp": [
+      0.3330825398556257,
+      -0.2164113534291428,
+      0.77
+     ],
+     "lifted": [
+      0.3330825398556257,
+      -0.2164113534291428,
+      0.89
+     ],
+     "over": [
+      0.34,
+      0.0,
+      0.89
+     ],
+     "place": [
+      0.34,
+      0.0,
+      0.794
+     ]
+    },
+    "argv": {
+     "sonic_root": "/root/GR00T-WholeBodyControl",
+     "out": "/ws/transfergap/runs/g1_cl/plans/cl_seed1200.npz",
+     "target_xy": [
+      0.3330825398556257,
+      -0.2164113534291428
+     ],
+     "grasp_dz": 0.03,
+     "pitch_down": -0.2,
+     "roll": -0.4,
+     "grasp_dxy": [
+      0.0,
+      0.0
+     ],
+     "carry_offset": [
+      0.0,
+      0.0,
+      0.0
+     ],
+     "settle": 0.0,
+     "stance_offset": [
+      0.0,
+      0.0
+     ],
+     "demo_plan": null,
+     "timing_scale": 1.0
+    }
+   },
+   "rollouts": 40,
+   "trials": 40,
+   "touch_rollout_rate": {
+    "k": 40,
+    "n": 40,
+    "rate": 1.0,
+    "wilson_95": [
+     0.912,
+     1.0
+    ]
+   },
+   "grasp_rollout_rate": {
+    "k": 38,
+    "n": 40,
+    "rate": 0.95,
+    "wilson_95": [
+     0.835,
+     0.986
+    ]
+   },
+   "place_rollout_rate": {
+    "k": 31,
+    "n": 40,
+    "rate": 0.775,
+    "wilson_95": [
+     0.625,
+     0.877
+    ]
+   },
+   "touch_trial_any_rollout": {
+    "k": 40,
+    "n": 40,
+    "rate": 1.0,
+    "wilson_95": [
+     0.912,
+     1.0
+    ]
+   },
+   "touch_trials_with_mixed_outcomes": 0,
+   "grasp_trial_any_rollout": {
+    "k": 38,
+    "n": 40,
+    "rate": 0.95,
+    "wilson_95": [
+     0.835,
+     0.986
+    ]
+   },
+   "grasp_trials_with_mixed_outcomes": 0,
+   "place_trial_any_rollout": {
+    "k": 31,
+    "n": 40,
+    "rate": 0.775,
+    "wilson_95": [
+     0.625,
+     0.877
+    ]
+   },
+   "place_trials_with_mixed_outcomes": 0,
+   "place_failure_reasons": {
+    "not_released_and_settled_at_goal": 9,
+    "no_lift": 2
+   },
+   "robot_fell": 0,
+   "max_lift_m_median": 0.1487,
+   "per_rollout": [
+    {
+     "seed": 1200,
+     "rollout": 0,
+     "touch": true,
+     "grasp": true,
+     "place": true,
+     "max_lift_m": 0.1564,
+     "block_displacement_xy_m": 0.1856,
+     "failure_reasons": []
+    },
+    {
+     "seed": 1201,
+     "rollout": 0,
+     "touch": true,
+     "grasp": true,
+     "place": true,
+     "max_lift_m": 0.1244,
+     "block_displacement_xy_m": 0.1726,
+     "failure_reasons": []
+    },
+    {
+     "seed": 1202,
+     "rollout": 0,
+     "touch": true,
+     "grasp": true,
+     "place": false,
+     "max_lift_m": 0.1578,
+     "block_displacement_xy_m": 0.1136,
+     "failure_reasons": [
+      "not_released_and_settled_at_goal"
+     ]
+    },
+    {
+     "seed": 1203,
+     "rollout": 0,
+     "touch": true,
+     "grasp": false,
+     "place": false,
+     "max_lift_m": 0.0025,
+     "block_displacement_xy_m": 0.0254,
+     "failure_reasons": [
+      "no_lift",
+      "not_released_and_settled_at_goal"
+     ]
+    },
+    {
+     "seed": 1204,
+     "rollout": 0,
+     "touch": true,
+     "grasp": true,
+     "place": true,
+     "max_lift_m": 0.1397,
+     "block_displacement_xy_m": 0.2101,
+     "failure_reasons": []
+    },
+    {
+     "seed": 1205,
+     "rollout": 0,
+     "touch": true,
+     "grasp": true,
+     "place": true,
+     "max_lift_m": 0.1387,
+     "block_displacement_xy_m": 0.1984,
+     "failure_reasons": []
+    },
+    {
+     "seed": 1206,
+     "rollout": 0,
+     "touch": true,
+     "grasp": true,
+     "place": true,
+     "max_lift_m": 0.1479,
+     "block_displacement_xy_m": 0.1596,
+     "failure_reasons": []
+    },
+    {
+     "seed": 1207,
+     "rollout": 0,
+     "touch": true,
+     "grasp": true,
+     "place": false,
+     "max_lift_m": 0.1567,
+     "block_displacement_xy_m": 0.1382,
+     "failure_reasons": [
+      "not_released_and_settled_at_goal"
+     ]
+    },
+    {
+     "seed": 1208,
+     "rollout": 0,
+     "touch": true,
+     "grasp": true,
+     "place": true,
+     "max_lift_m": 0.1213,
+     "block_displacement_xy_m": 0.1617,
+     "failure_reasons": []
+    },
+    {
+     "seed": 1209,
+     "rollout": 0,
+     "touch": true,
+     "grasp": true,
+     "place": false,
+     "max_lift_m": 0.1324,
+     "block_displacement_xy_m": 0.259,
+     "failure_reasons": [
+      "not_released_and_settled_at_goal"
+     ]
+    },
+    {
+     "seed": 1210,
+     "rollout": 0,
+     "touch": true,
+     "grasp": true,
+     "place": true,
+     "max_lift_m": 0.1555,
+     "block_displacement_xy_m": 0.1684,
+     "failure_reasons": []
+    },
+    {
+     "seed": 1211,
+     "rollout": 0,
+     "touch": true,
+     "grasp": true,
+     "place": false,
+     "max_lift_m": 0.1556,
+     "block_displacement_xy_m": 0.1576,
+     "failure_reasons": [
+      "not_released_and_settled_at_goal"
+     ]
+    },
+    {
+     "seed": 1212,
+     "rollout": 0,
+     "touch": true,
+     "grasp": true,
+     "place": true,
+     "max_lift_m": 0.1569,
+     "block_displacement_xy_m": 0.1688,
+     "failure_reasons": []
+    },
+    {
+     "seed": 1213,
+     "rollout": 0,
+     "touch": true,
+     "grasp": true,
+     "place": true,
+     "max_lift_m": 0.1296,
+     "block_displacement_xy_m": 0.2049,
+     "failure_reasons": []
+    },
+    {
+     "seed": 1214,
+     "rollout": 0,
+     "touch": true,
+     "grasp": true,
+     "place": true,
+     "max_lift_m": 0.1216,
+     "block_displacement_xy_m": 0.1737,
+     "failure_reasons": []
+    },
+    {
+     "seed": 1215,
+     "rollout": 0,
+     "touch": true,
+     "grasp": true,
+     "place": true,
+     "max_lift_m": 0.1566,
+     "block_displacement_xy_m": 0.1874,
+     "failure_reasons": []
+    },
+    {
+     "seed": 1216,
+     "rollout": 0,
+     "touch": true,
+     "grasp": true,
+     "place": true,
+     "max_lift_m": 0.1487,
+     "block_displacement_xy_m": 0.1665,
+     "failure_reasons": []
+    },
+    {
+     "seed": 1217,
+     "rollout": 0,
+     "touch": true,
+     "grasp": true,
+     "place": true,
+     "max_lift_m": 0.1502,
+     "block_displacement_xy_m": 0.1561,
+     "failure_reasons": []
+    },
+    {
+     "seed": 1218,
+     "rollout": 0,
+     "touch": true,
+     "grasp": true,
+     "place": true,
+     "max_lift_m": 0.1561,
+     "block_displacement_xy_m": 0.1829,
+     "failure_reasons": []
+    },
+    {
+     "seed": 1219,
+     "rollout": 0,
+     "touch": true,
+     "grasp": true,
+     "place": true,
+     "max_lift_m": 0.1441,
+     "block_displacement_xy_m": 0.2086,
+     "failure_reasons": []
+    },
+    {
+     "seed": 1220,
+     "rollout": 0,
+     "touch": true,
+     "grasp": true,
+     "place": false,
+     "max_lift_m": 0.1506,
+     "block_displacement_xy_m": 0.1688,
+     "failure_reasons": [
+      "not_released_and_settled_at_goal"
+     ]
+    },
+    {
+     "seed": 1221,
+     "rollout": 0,
+     "touch": true,
+     "grasp": true,
+     "place": true,
+     "max_lift_m": 0.1242,
+     "block_displacement_xy_m": 0.2026,
+     "failure_reasons": []
+    },
+    {
+     "seed": 1222,
+     "rollout": 0,
+     "touch": true,
+     "grasp": true,
+     "place": true,
+     "max_lift_m": 0.1548,
+     "block_displacement_xy_m": 0.1859,
+     "failure_reasons": []
+    },
+    {
+     "seed": 1223,
+     "rollout": 0,
+     "touch": true,
+     "grasp": false,
+     "place": false,
+     "max_lift_m": 0.0022,
+     "block_displacement_xy_m": 0.0264,
+     "failure_reasons": [
+      "no_lift",
+      "not_released_and_settled_at_goal"
+     ]
+    },
+    {
+     "seed": 1224,
+     "rollout": 0,
+     "touch": true,
+     "grasp": true,
+     "place": true,
+     "max_lift_m": 0.1566,
+     "block_displacement_xy_m": 0.1628,
+     "failure_reasons": []
+    },
+    {
+     "seed": 1225,
+     "rollout": 0,
+     "touch": true,
+     "grasp": true,
+     "place": true,
+     "max_lift_m": 0.1457,
+     "block_displacement_xy_m": 0.1768,
+     "failure_reasons": []
+    },
+    {
+     "seed": 1226,
+     "rollout": 0,
+     "touch": true,
+     "grasp": true,
+     "place": true,
+     "max_lift_m": 0.1433,
+     "block_displacement_xy_m": 0.1804,
+     "failure_reasons": []
+    },
+    {
+     "seed": 1227,
+     "rollout": 0,
+     "touch": true,
+     "grasp": true,
+     "place": true,
+     "max_lift_m": 0.1541,
+     "block_displacement_xy_m": 0.1815,
+     "failure_reasons": []
+    },
+    {
+     "seed": 1228,
+     "rollout": 0,
+     "touch": true,
+     "grasp": true,
+     "place": true,
+     "max_lift_m": 0.154,
+     "block_displacement_xy_m": 0.1762,
+     "failure_reasons": []
+    },
+    {
+     "seed": 1229,
+     "rollout": 0,
+     "touch": true,
+     "grasp": true,
+     "place": true,
+     "max_lift_m": 0.1549,
+     "block_displacement_xy_m": 0.1814,
+     "failure_reasons": []
+    },
+    {
+     "seed": 1230,
+     "rollout": 0,
+     "touch": true,
+     "grasp": true,
+     "place": true,
+     "max_lift_m": 0.1551,
+     "block_displacement_xy_m": 0.1724,
+     "failure_reasons": []
+    },
+    {
+     "seed": 1231,
+     "rollout": 0,
+     "touch": true,
+     "grasp": true,
+     "place": true,
+     "max_lift_m": 0.1496,
+     "block_displacement_xy_m": 0.2007,
+     "failure_reasons": []
+    },
+    {
+     "seed": 1232,
+     "rollout": 0,
+     "touch": true,
+     "grasp": true,
+     "place": true,
+     "max_lift_m": 0.1486,
+     "block_displacement_xy_m": 0.1738,
+     "failure_reasons": []
+    },
+    {
+     "seed": 1233,
+     "rollout": 0,
+     "touch": true,
+     "grasp": true,
+     "place": false,
+     "max_lift_m": 0.1498,
+     "block_displacement_xy_m": 0.1236,
+     "failure_reasons": [
+      "not_released_and_settled_at_goal"
+     ]
+    },
+    {
+     "seed": 1234,
+     "rollout": 0,
+     "touch": true,
+     "grasp": true,
+     "place": true,
+     "max_lift_m": 0.1361,
+     "block_displacement_xy_m": 0.1753,
+     "failure_reasons": []
+    },
+    {
+     "seed": 1235,
+     "rollout": 0,
+     "touch": true,
+     "grasp": true,
+     "place": true,
+     "max_lift_m": 0.1447,
+     "block_displacement_xy_m": 0.2061,
+     "failure_reasons": []
+    },
+    {
+     "seed": 1236,
+     "rollout": 0,
+     "touch": true,
+     "grasp": true,
+     "place": true,
+     "max_lift_m": 0.1369,
+     "block_displacement_xy_m": 0.1734,
+     "failure_reasons": []
+    },
+    {
+     "seed": 1237,
+     "rollout": 0,
+     "touch": true,
+     "grasp": true,
+     "place": true,
+     "max_lift_m": 0.1437,
+     "block_displacement_xy_m": 0.1877,
+     "failure_reasons": []
+    },
+    {
+     "seed": 1238,
+     "rollout": 0,
+     "touch": true,
+     "grasp": true,
+     "place": false,
+     "max_lift_m": 0.1513,
+     "block_displacement_xy_m": 0.0699,
+     "failure_reasons": [
+      "not_released_and_settled_at_goal"
+     ]
+    },
+    {
+     "seed": 1239,
+     "rollout": 0,
+     "touch": true,
+     "grasp": true,
+     "place": true,
+     "max_lift_m": 0.132,
+     "block_displacement_xy_m": 0.1637,
+     "failure_reasons": []
+    }
+   ]
+  }
+ },
+ "metrics_summarize": {
+  "contains_fixtures": false,
+  "groups": [
+   {
+    "source": "simulation",
+    "protocol_id": "g1_block_to_tray_v1",
+    "robot": "g1_sonic",
+    "method": "sonic_zmq_v1_stream[img]",
+    "sensor": "oracle",
+    "oracle": "fixed",
+    "episodes": 40,
+    "successes": 31,
+    "success_rate": 0.775,
+    "success_wilson_95": [
+     0.6249690325768998,
+     0.8768390867645927
+    ]
+   }
+  ]
+ }
+}

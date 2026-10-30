@@ -1,0 +1,29 @@
+{
+ "protocol": "user_demo_v1",
+ "frozen_before_trials": true,
+ "question": "Does the frozen single fix stack from demo_generalization_v5 transfer a NEW person's recorded pick-and-place style (the project author, own camera) to both arms, without any re-tuning?",
+ "demo": "runs/demos/live/user_take1_right.npz (gitignored; built from runs/demos/live/user_take1_joints.npz with demo.clips CLIPS['user_take1_right'], GEM-X offline, static Brio 100 camera, 21.4 fps)",
+ "precheck_before_run": "sim/feasibility.py: UR5e and UR10e infeasible (reach collides 1.7 cm, fingers into the table), G1 feasible",
+ "stack": [
+  "speed_cap_3",
+  "look_again",
+  "touch_probe_calibration",
+  "speed_cap_2",
+  "safe_path_v2"
+ ],
+ "stack_source": "demo_generalization_v5 question B (single recipe for everyone)",
+ "robots": [
+  "ur5e",
+  "ur10e"
+ ],
+ "seeds": [
+  1000,
+  1059
+ ],
+ "conditions": [
+  "raw",
+  "stack"
+ ],
+ "report_all": true,
+ "runner": "PYTHONPATH=. .venv/bin/python -m transfergap.sim.demo_repro --demo runs/demos/live/user_take1_right.npz --fixes speed_cap_3,look_again,touch_probe_calibration,speed_cap_2,safe_path_v2 --out results/user_demo_v1"
+}

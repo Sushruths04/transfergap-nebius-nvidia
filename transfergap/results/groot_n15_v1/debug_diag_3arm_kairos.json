@@ -1,0 +1,82 @@
+{
+ "ckpt": "/ws/transfergap/groot_ft_3arm",
+ "robot": "kairos",
+ "exec": "ensemble",
+ "block_half": null,
+ "n_distractors": 0,
+ "mixed": false,
+ "n": 8,
+ "success": 2,
+ "ci95": [
+  0.071,
+  0.591
+ ],
+ "per_seed": [
+  {
+   "seed": 6000,
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ],
+   "seconds": 16.0
+  },
+  {
+   "seed": 6001,
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ],
+   "seconds": 15.7
+  },
+  {
+   "seed": 6002,
+   "success": true,
+   "reasons": [],
+   "seconds": 15.6
+  },
+  {
+   "seed": 6003,
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ],
+   "seconds": 17.3
+  },
+  {
+   "seed": 6004,
+   "success": true,
+   "reasons": [],
+   "seconds": 22.4
+  },
+  {
+   "seed": 6005,
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ],
+   "seconds": 22.5
+  },
+  {
+   "seed": 6006,
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ],
+   "seconds": 22.5
+  },
+  {
+   "seed": 6007,
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ],
+   "seconds": 22.1
+  }
+ ]
+}

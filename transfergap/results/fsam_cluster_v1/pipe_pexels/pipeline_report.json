@@ -1,0 +1,71 @@
+{
+ "input": "/ws/transfergap/fsam_cmp/pexels_fsam.npz",
+ "robots": [
+  "ur5e",
+  "ur10e"
+ ],
+ "fixes": "speed_cap_3,look_again,touch_probe_calibration,speed_cap_2,safe_path_v2",
+ "stages": {
+  "perceive": {
+   "status": "ok",
+   "seconds": 0.0
+  },
+  "demo": {
+   "detail": {
+    "metric_scale": 1.0651,
+    "shoulder_width_ref_m": 0.4,
+    "frames": 55,
+    "events": "given",
+    "pinch_extent_m": [
+     0.27,
+     0.499,
+     0.409
+    ],
+    "plausibility": "ok"
+   },
+   "status": "ok",
+   "seconds": 0.0
+  },
+  "feasibility": {
+   "detail": {
+    "ur5e": {
+     "verdict": "style infeasible for this robot",
+     "reasons": [
+      "collides: carry 4.6 cm, retreat 5.4 cm (carried_block, g_base, g_left_coupler, g_left_follower, g_left_pad, g_left_spring_link, g_right_coupler, g_right_follower, g_right_pad)"
+     ],
+     "worst": {
+      "max_ik_err_m": 0.00019952281804315897,
+      "max_penetration_m": 0.053712242362498906
+     }
+    },
+    "ur10e": {
+     "verdict": "style infeasible for this robot",
+     "reasons": [
+      "collides: carry 4.6 cm, retreat 5.4 cm (carried_block, g_base, g_left_coupler, g_left_follower, g_left_pad, g_left_spring_link, g_right_coupler, g_right_follower, g_right_pad)"
+     ],
+     "worst": {
+      "max_ik_err_m": 0.00019770740653037797,
+      "max_penetration_m": 0.05371215251745564
+     }
+    }
+   },
+   "status": "ok",
+   "seconds": 1.0
+  },
+  "rollouts": {
+   "detail": {
+    "ur5e": {
+     "raw": "0/60",
+     "all_fixes": "1/60"
+    },
+    "ur10e": {
+     "raw": "0/60",
+     "all_fixes": "0/60"
+    }
+   },
+   "status": "ok",
+   "seconds": 14.1
+  }
+ },
+ "ok": true
+}

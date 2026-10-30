@@ -1,0 +1,34 @@
+{
+ "schema_version": 1,
+ "kind": "hosted_inference",
+ "role": "nemotron",
+ "requested_model": "nvidia/nemotron-3-super-120b-a12b",
+ "endpoint_host": "api.tokenfactory.nebius.com",
+ "created_at": "2026-10-09T15:30:17.856931+00:00",
+ "request_sha256": "2be30444418e908fac8e9f7c14904c7324a0ac93c2498adb5d1287f16829b7dd",
+ "status": "succeeded",
+ "response_id": "chatcmpl-ad0b513ac2b4e25e",
+ "returned_model": "nvidia/nemotron-3-super-120b-a12b",
+ "usage": {
+  "completion_tokens": 391,
+  "prompt_tokens": 859,
+  "total_tokens": 1250,
+  "completion_tokens_details": {
+   "accepted_prediction_tokens": null,
+   "audio_tokens": null,
+   "reasoning_tokens": 328,
+   "rejected_prediction_tokens": null
+  },
+  "prompt_tokens_details": {
+   "audio_tokens": null,
+   "cached_tokens": 0,
+   "created_cache_tokens": 0,
+   "multimodal_tokens": null
+  },
+  "prompt_cache_hit_tokens": 0,
+  "prompt_cache_miss_tokens": 859
+ },
+ "finish_reason": "stop",
+ "content": "\n\n{\n  \"correction\": \"look_again\",\n  \"rationale\": \"Perception fix yields the largest success boost (+11.7 pp) with minimal style impact (tiny path RMSE and speed\u2011profile changes), improving lift and release while keeping the human\u2011like motion.\"\n}",
+ "latency_s": 3.49121881499741
+}

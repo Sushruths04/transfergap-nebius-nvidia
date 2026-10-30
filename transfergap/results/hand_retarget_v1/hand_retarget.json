@@ -1,0 +1,42 @@
+{
+ "alignment_rotation": [
+  [
+   0.0,
+   0.0,
+   -1.0
+  ],
+  [
+   0.0,
+   1.0,
+   0.0
+  ],
+  [
+   1.0,
+   0.0,
+   0.0
+  ]
+ ],
+ "alignment_search_best_cm": 2.32,
+ "frames": 270,
+ "scale_robot_per_human": 0.877,
+ "reference_frame": 266,
+ "fingertip_error": {
+  "th": {
+   "median_cm": 4.1,
+   "p90_cm": 6.26
+  },
+  "ff": {
+   "median_cm": 1.56,
+   "p90_cm": 3.73
+  },
+  "mf": {
+   "median_cm": 1.6,
+   "p90_cm": 2.49
+  },
+  "rf": {
+   "median_cm": 0.47,
+   "p90_cm": 4.95
+  }
+ },
+ "note": "kinematic fit of fingertip positions in the robot's scale; no contact; palm fixed; pinky not mapped"
+}

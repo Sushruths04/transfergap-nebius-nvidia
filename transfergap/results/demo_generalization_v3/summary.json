@@ -1,0 +1,26 @@
+{
+ "kind": "demo_generalization",
+ "protocol": "demo_generalization_v3",
+ "result": "negative",
+ "robots": {
+  "ur5e": {
+   "raw": 0,
+   "all_fixes": 0,
+   "n": 60,
+   "failure_reasons_all_fixes": {
+    "no_lift": 60,
+    "not_released_and_settled_at_goal": 60
+   }
+  },
+  "ur10e": {
+   "raw": 0,
+   "all_fixes": 0,
+   "n": 60,
+   "failure_reasons_all_fixes": {
+    "no_lift": 60,
+    "not_released_and_settled_at_goal": 60
+   }
+  }
+ },
+ "diagnosis_after_result": "GEM-X has no object detector; the default 'lowest_hand' rule put the table under her lowest hand point, but she lifts the box off a stack and sets it lower, so the inferred grasp was ~4 cm above the object -> no_lift on every trial. Fixed by an explicit object_height='hand_at_grasp' option (demo/gemx.py) used for this clip only; see demo_generalization_v4."
+}

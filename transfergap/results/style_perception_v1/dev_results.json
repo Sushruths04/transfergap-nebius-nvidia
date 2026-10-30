@@ -1,0 +1,6703 @@
+{
+ "split": "dev",
+ "protocol": "style_perception_v1",
+ "demo_tag": "demo1bc4be60",
+ "summary": {
+  "ur5e/truth/50mm": {
+   "n": 10,
+   "success": 10,
+   "failures": [],
+   "n_styled": 10,
+   "path_rmse_cm": 2.574738253929591,
+   "approach_deg": 5.181369411847886,
+   "lift_err_cm": 0.459924625675823,
+   "speed_corr": 0.008127144735321183
+  },
+  "ur5e/truth/60mm": {
+   "n": 10,
+   "success": 10,
+   "failures": [],
+   "n_styled": 10,
+   "path_rmse_cm": 2.5757287518448746,
+   "approach_deg": 5.180985285044317,
+   "lift_err_cm": 0.5234918280721442,
+   "speed_corr": 0.009072577902867968
+  },
+  "ur5e/truth/70mm": {
+   "n": 10,
+   "success": 5,
+   "failures": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ],
+   "n_styled": 10,
+   "path_rmse_cm": 2.571435691275293,
+   "approach_deg": 5.348826099101063,
+   "lift_err_cm": 0.558493291026547,
+   "speed_corr": 0.00886768601429122
+  },
+  "ur5e/depth/50mm": {
+   "n": 10,
+   "success": 8,
+   "failures": [
+    "not_released_and_settled_at_goal"
+   ],
+   "n_styled": 10,
+   "path_rmse_cm": 2.5655950346016234,
+   "approach_deg": 5.181369182693234,
+   "lift_err_cm": 0.45886104206214223,
+   "speed_corr": 0.008077085313343611
+  },
+  "ur5e/depth/60mm": {
+   "n": 10,
+   "success": 10,
+   "failures": [],
+   "n_styled": 10,
+   "path_rmse_cm": 2.5666921863813097,
+   "approach_deg": 5.180974509311229,
+   "lift_err_cm": 0.5286007112655472,
+   "speed_corr": 0.008918088356542314
+  },
+  "ur5e/depth/70mm": {
+   "n": 10,
+   "success": 5,
+   "failures": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ],
+   "n_styled": 10,
+   "path_rmse_cm": 2.562242432228634,
+   "approach_deg": 5.347596261034477,
+   "lift_err_cm": 0.5544914361337028,
+   "speed_corr": 0.0092190572612248
+  },
+  "ur5e/depth_hard/50mm": {
+   "n": 10,
+   "success": 9,
+   "failures": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ],
+   "n_styled": 10,
+   "path_rmse_cm": 2.8610849644866034,
+   "approach_deg": 5.185016051421518,
+   "lift_err_cm": 0.42774169917442345,
+   "speed_corr": 0.0009668134719282309
+  },
+  "ur5e/depth_hard/60mm": {
+   "n": 10,
+   "success": 6,
+   "failures": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ],
+   "n_styled": 10,
+   "path_rmse_cm": 2.752806586572041,
+   "approach_deg": 5.332617393168805,
+   "lift_err_cm": 0.4668688703620513,
+   "speed_corr": -0.02020510238040364
+  },
+  "ur5e/depth_hard/70mm": {
+   "n": 10,
+   "success": 2,
+   "failures": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ],
+   "n_styled": 10,
+   "path_rmse_cm": 2.757598765251378,
+   "approach_deg": 5.422130698019172,
+   "lift_err_cm": 0.5105032695772321,
+   "speed_corr": -0.019913259738820115
+  },
+  "ur10e/truth/50mm": {
+   "n": 10,
+   "success": 10,
+   "failures": [],
+   "n_styled": 10,
+   "path_rmse_cm": 1.4756797077131478,
+   "approach_deg": 2.731682759730476,
+   "lift_err_cm": 0.18128301409943676,
+   "speed_corr": 0.47349413056257567
+  },
+  "ur10e/truth/60mm": {
+   "n": 10,
+   "success": 10,
+   "failures": [],
+   "n_styled": 10,
+   "path_rmse_cm": 1.475499452792327,
+   "approach_deg": 2.731806763390505,
+   "lift_err_cm": 0.19574823798157365,
+   "speed_corr": 0.4869941733647626
+  },
+  "ur10e/truth/70mm": {
+   "n": 10,
+   "success": 5,
+   "failures": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ],
+   "n_styled": 10,
+   "path_rmse_cm": 1.482244183662321,
+   "approach_deg": 2.724144495842908,
+   "lift_err_cm": 0.22429510480290182,
+   "speed_corr": 0.4815274572424686
+  },
+  "ur10e/depth/50mm": {
+   "n": 10,
+   "success": 10,
+   "failures": [],
+   "n_styled": 10,
+   "path_rmse_cm": 1.4697889336036458,
+   "approach_deg": 2.7317215941452,
+   "lift_err_cm": 0.18519826005675782,
+   "speed_corr": 0.4734943675395127
+  },
+  "ur10e/depth/60mm": {
+   "n": 10,
+   "success": 10,
+   "failures": [],
+   "n_styled": 10,
+   "path_rmse_cm": 1.4698751475097516,
+   "approach_deg": 2.731840162962174,
+   "lift_err_cm": 0.20250407858014965,
+   "speed_corr": 0.48692228882681227
+  },
+  "ur10e/depth/70mm": {
+   "n": 10,
+   "success": 6,
+   "failures": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ],
+   "n_styled": 10,
+   "path_rmse_cm": 1.4673496806716801,
+   "approach_deg": 2.725075223351719,
+   "lift_err_cm": 0.2269497540041998,
+   "speed_corr": 0.48690752599291376
+  },
+  "ur10e/depth_hard/50mm": {
+   "n": 10,
+   "success": 7,
+   "failures": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ],
+   "n_styled": 10,
+   "path_rmse_cm": 1.922875825665998,
+   "approach_deg": 2.732307231957921,
+   "lift_err_cm": 0.17157102852611822,
+   "speed_corr": 0.040001514436903814
+  },
+  "ur10e/depth_hard/60mm": {
+   "n": 10,
+   "success": 4,
+   "failures": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ],
+   "n_styled": 10,
+   "path_rmse_cm": 1.7955589630964066,
+   "approach_deg": 2.72900920396341,
+   "lift_err_cm": 0.18632674897895996,
+   "speed_corr": 0.028888192552865455
+  },
+  "ur10e/depth_hard/70mm": {
+   "n": 10,
+   "success": 1,
+   "failures": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ],
+   "n_styled": 10,
+   "path_rmse_cm": 1.7966005084942251,
+   "approach_deg": 2.715903270621058,
+   "lift_err_cm": 0.2517624240390967,
+   "speed_corr": 0.02507030326545152
+  },
+  "kairos/truth/50mm": {
+   "n": 10,
+   "success": 10,
+   "failures": [],
+   "n_styled": 10,
+   "path_rmse_cm": 1.4779770289712308,
+   "approach_deg": 2.7333100194688664,
+   "lift_err_cm": 0.22692433062539846,
+   "speed_corr": 0.47060524351760435
+  },
+  "kairos/truth/60mm": {
+   "n": 10,
+   "success": 10,
+   "failures": [],
+   "n_styled": 10,
+   "path_rmse_cm": 1.476883643828747,
+   "approach_deg": 2.733470828461669,
+   "lift_err_cm": 0.25684536864070795,
+   "speed_corr": 0.4855528136680384
+  },
+  "kairos/truth/70mm": {
+   "n": 10,
+   "success": 10,
+   "failures": [],
+   "n_styled": 10,
+   "path_rmse_cm": 1.4779490773018091,
+   "approach_deg": 2.7336305136410366,
+   "lift_err_cm": 0.28781454730793493,
+   "speed_corr": 0.5071070386978799
+  },
+  "kairos/depth/50mm": {
+   "n": 10,
+   "success": 10,
+   "failures": [],
+   "n_styled": 10,
+   "path_rmse_cm": 1.4727010021533782,
+   "approach_deg": 2.733350787462153,
+   "lift_err_cm": 0.22629243474246744,
+   "speed_corr": 0.4705325581203678
+  },
+  "kairos/depth/60mm": {
+   "n": 10,
+   "success": 10,
+   "failures": [],
+   "n_styled": 10,
+   "path_rmse_cm": 1.4716458467554174,
+   "approach_deg": 2.7335066321766055,
+   "lift_err_cm": 0.2565219704869956,
+   "speed_corr": 0.4855173683583877
+  },
+  "kairos/depth/70mm": {
+   "n": 10,
+   "success": 10,
+   "failures": [],
+   "n_styled": 10,
+   "path_rmse_cm": 1.471785133249052,
+   "approach_deg": 2.7336704528053746,
+   "lift_err_cm": 0.28582554233946955,
+   "speed_corr": 0.5073564016062176
+  },
+  "kairos/depth_hard/50mm": {
+   "n": 10,
+   "success": 7,
+   "failures": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ],
+   "n_styled": 10,
+   "path_rmse_cm": 2.063630536268135,
+   "approach_deg": 2.7340587779952936,
+   "lift_err_cm": 0.24654316893958664,
+   "speed_corr": 0.035793111008459735
+  },
+  "kairos/depth_hard/60mm": {
+   "n": 10,
+   "success": 8,
+   "failures": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ],
+   "n_styled": 10,
+   "path_rmse_cm": 2.007689194245465,
+   "approach_deg": 2.734204654657034,
+   "lift_err_cm": 0.2789426589459268,
+   "speed_corr": 0.036245190797384974
+  },
+  "kairos/depth_hard/70mm": {
+   "n": 10,
+   "success": 8,
+   "failures": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ],
+   "n_styled": 10,
+   "path_rmse_cm": 2.0207389359635655,
+   "approach_deg": 3.501651706136228,
+   "lift_err_cm": 0.46901647204943525,
+   "speed_corr": 0.03910357328611169
+  }
+ },
+ "rows": [
+  {
+   "robot": "ur5e",
+   "seed": 0,
+   "half_mm": 25.0,
+   "cond": "truth",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.02641256766362669,
+     "carry": 0.03842636176172099,
+     "retreat": 0.014047085144450976
+    },
+    "path_rmse_mean_m": 0.026295338189932887,
+    "approach_angle_deg": 5.180977718833434,
+    "lift_height_err_m": 0.004502559059238964,
+    "speed_profile_corr": 0.01215569975437281
+   }
+  },
+  {
+   "robot": "ur5e",
+   "seed": 1,
+   "half_mm": 25.0,
+   "cond": "truth",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.026281005405674625,
+     "carry": 0.03464728188100402,
+     "retreat": 0.014047246484168273
+    },
+    "path_rmse_mean_m": 0.02499184459028231,
+    "approach_angle_deg": 5.1832081576588696,
+    "lift_height_err_m": 0.004842071271007664,
+    "speed_profile_corr": 0.0031249654206834134
+   }
+  },
+  {
+   "robot": "ur5e",
+   "seed": 2,
+   "half_mm": 25.0,
+   "cond": "truth",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.026371465230962236,
+     "carry": 0.03830689029348717,
+     "retreat": 0.014047174578949459
+    },
+    "path_rmse_mean_m": 0.02624184336779962,
+    "approach_angle_deg": 5.175788142846154,
+    "lift_height_err_m": 0.0048777272048874665,
+    "speed_profile_corr": 0.011010762524506942
+   }
+  },
+  {
+   "robot": "ur5e",
+   "seed": 3,
+   "half_mm": 25.0,
+   "cond": "truth",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.02636618301788925,
+     "carry": 0.03857598841336066,
+     "retreat": 0.014047191728142118
+    },
+    "path_rmse_mean_m": 0.02632978771979734,
+    "approach_angle_deg": 5.17273965183081,
+    "lift_height_err_m": 0.004566193345440478,
+    "speed_profile_corr": 0.01175549491128481
+   }
+  },
+  {
+   "robot": "ur5e",
+   "seed": 4,
+   "half_mm": 25.0,
+   "cond": "truth",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.026400926642200423,
+     "carry": 0.0372032264455838,
+     "retreat": 0.014047061156807709
+    },
+    "path_rmse_mean_m": 0.025883738081530643,
+    "approach_angle_deg": 5.185861837737854,
+    "lift_height_err_m": 0.004444867188782314,
+    "speed_profile_corr": 0.009578462232389309
+   }
+  },
+  {
+   "robot": "ur5e",
+   "seed": 5,
+   "half_mm": 25.0,
+   "cond": "truth",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.02633621032695618,
+     "carry": 0.03548657571003933,
+     "retreat": 0.014047152343404992
+    },
+    "path_rmse_mean_m": 0.0252899794601335,
+    "approach_angle_deg": 5.185928896043386,
+    "lift_height_err_m": 0.004502243436810882,
+    "speed_profile_corr": 0.0052598895519313455
+   }
+  },
+  {
+   "robot": "ur5e",
+   "seed": 6,
+   "half_mm": 25.0,
+   "cond": "truth",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.026390049421261934,
+     "carry": 0.038039749130791,
+     "retreat": 0.014047116462977252
+    },
+    "path_rmse_mean_m": 0.02615897167167673,
+    "approach_angle_deg": 5.179977838096608,
+    "lift_height_err_m": 0.004464146456182955,
+    "speed_profile_corr": 0.011078614702982957
+   }
+  },
+  {
+   "robot": "ur5e",
+   "seed": 7,
+   "half_mm": 25.0,
+   "cond": "truth",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.026302092912089223,
+     "carry": 0.034906159916426746,
+     "retreat": 0.014047211085219467
+    },
+    "path_rmse_mean_m": 0.025085154637911816,
+    "approach_angle_deg": 5.18430270851172,
+    "lift_height_err_m": 0.00477348278232953,
+    "speed_profile_corr": 0.0030576355071030067
+   }
+  },
+  {
+   "robot": "ur5e",
+   "seed": 8,
+   "half_mm": 25.0,
+   "cond": "truth",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.02625528488293197,
+     "carry": 0.03438265273695278,
+     "retreat": 0.014047286466290191
+    },
+    "path_rmse_mean_m": 0.02489507469539165,
+    "approach_angle_deg": 5.180940057300551,
+    "lift_height_err_m": 0.004571346495008705,
+    "speed_profile_corr": 0.001768094579241577
+   }
+  },
+  {
+   "robot": "ur5e",
+   "seed": 9,
+   "half_mm": 25.0,
+   "cond": "truth",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.02643217290766018,
+     "carry": 0.03842707167408784,
+     "retreat": 0.014047034353759784
+    },
+    "path_rmse_mean_m": 0.0263020929785026,
+    "approach_angle_deg": 5.183969109619466,
+    "lift_height_err_m": 0.00444782532789334,
+    "speed_profile_corr": 0.012481828168715653
+   }
+  },
+  {
+   "robot": "ur5e",
+   "seed": 0,
+   "half_mm": 30.0,
+   "cond": "truth",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.02641475675357405,
+     "carry": 0.0384719225441741,
+     "retreat": 0.014045983727581606
+    },
+    "path_rmse_mean_m": 0.026310887675109917,
+    "approach_angle_deg": 5.180571483713772,
+    "lift_height_err_m": 0.005198915461576276,
+    "speed_profile_corr": 0.01314723817562404
+   }
+  },
+  {
+   "robot": "ur5e",
+   "seed": 1,
+   "half_mm": 30.0,
+   "cond": "truth",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.0262830885506362,
+     "carry": 0.0347235597625392,
+     "retreat": 0.014046146519319352
+    },
+    "path_rmse_mean_m": 0.02501759827749825,
+    "approach_angle_deg": 5.182845760968181,
+    "lift_height_err_m": 0.005181384877359224,
+    "speed_profile_corr": 0.0037300430668478885
+   }
+  },
+  {
+   "robot": "ur5e",
+   "seed": 2,
+   "half_mm": 30.0,
+   "cond": "truth",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.02637383351450046,
+     "carry": 0.03836978050141575,
+     "retreat": 0.01404607495004017
+    },
+    "path_rmse_mean_m": 0.026263229655318788,
+    "approach_angle_deg": 5.175401300960111,
+    "lift_height_err_m": 0.005184018085652886,
+    "speed_profile_corr": 0.012229872910143233
+   }
+  },
+  {
+   "robot": "ur5e",
+   "seed": 3,
+   "half_mm": 30.0,
+   "cond": "truth",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.02636865898250908,
+     "carry": 0.038589396755048515,
+     "retreat": 0.014046078204079519
+    },
+    "path_rmse_mean_m": 0.02633471131387904,
+    "approach_angle_deg": 5.172362246182984,
+    "lift_height_err_m": 0.005312074079401846,
+    "speed_profile_corr": 0.012722471097810101
+   }
+  },
+  {
+   "robot": "ur5e",
+   "seed": 4,
+   "half_mm": 30.0,
+   "cond": "truth",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.026402861506736396,
+     "carry": 0.037212436404460154,
+     "retreat": 0.014045958628480749
+    },
+    "path_rmse_mean_m": 0.025887085513225768,
+    "approach_angle_deg": 5.185462850364952,
+    "lift_height_err_m": 0.005167693570259452,
+    "speed_profile_corr": 0.010231686280822673
+   }
+  },
+  {
+   "robot": "ur5e",
+   "seed": 5,
+   "half_mm": 30.0,
+   "cond": "truth",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.02633816100884726,
+     "carry": 0.035520137674423746,
+     "retreat": 0.014046051182116156
+    },
+    "path_rmse_mean_m": 0.025301449955129052,
+    "approach_angle_deg": 5.185548525240066,
+    "lift_height_err_m": 0.005197245964497388,
+    "speed_profile_corr": 0.005867320431005662
+   }
+  },
+  {
+   "robot": "ur5e",
+   "seed": 6,
+   "half_mm": 30.0,
+   "cond": "truth",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.026392272589636306,
+     "carry": 0.03805463379478974,
+     "retreat": 0.014046008456665572
+    },
+    "path_rmse_mean_m": 0.026164304947030537,
+    "approach_angle_deg": 5.179579376437411,
+    "lift_height_err_m": 0.005335850320498187,
+    "speed_profile_corr": 0.011805666256178059
+   }
+  },
+  {
+   "robot": "ur5e",
+   "seed": 7,
+   "half_mm": 30.0,
+   "cond": "truth",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.026304115773708597,
+     "carry": 0.03494283961606711,
+     "retreat": 0.014046108928598233
+    },
+    "path_rmse_mean_m": 0.025097688106124644,
+    "approach_angle_deg": 5.183932431612763,
+    "lift_height_err_m": 0.005282905813416117,
+    "speed_profile_corr": 0.004692194317380573
+   }
+  },
+  {
+   "robot": "ur5e",
+   "seed": 8,
+   "half_mm": 30.0,
+   "cond": "truth",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.026257450365667175,
+     "carry": 0.03438434828626669,
+     "retreat": 0.014046174112085957
+    },
+    "path_rmse_mean_m": 0.02489599092133994,
+    "approach_angle_deg": 5.180590068018638,
+    "lift_height_err_m": 0.005310724785425297,
+    "speed_profile_corr": 0.00290687140584932
+   }
+  },
+  {
+   "robot": "ur5e",
+   "seed": 9,
+   "half_mm": 30.0,
+   "cond": "truth",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.026434223248383567,
+     "carry": 0.038419629876696504,
+     "retreat": 0.014045933334414439
+    },
+    "path_rmse_mean_m": 0.026299928819831505,
+    "approach_angle_deg": 5.183558806944284,
+    "lift_height_err_m": 0.005178369849127756,
+    "speed_profile_corr": 0.01339241508701814
+   }
+  },
+  {
+   "robot": "ur5e",
+   "seed": 0,
+   "half_mm": 35.0,
+   "cond": "truth",
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.026426238857648145,
+     "carry": 0.037994038729499004,
+     "retreat": 0.014043687688113742
+    },
+    "path_rmse_mean_m": 0.02615465509175363,
+    "approach_angle_deg": 5.494309551473696,
+    "lift_height_err_m": 0.004688080287637758,
+    "speed_profile_corr": 0.012893939775697558
+   }
+  },
+  {
+   "robot": "ur5e",
+   "seed": 1,
+   "half_mm": 35.0,
+   "cond": "truth",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.02628533574567438,
+     "carry": 0.03483701788586931,
+     "retreat": 0.014045407583928205
+    },
+    "path_rmse_mean_m": 0.025055920405157302,
+    "approach_angle_deg": 5.182497606968868,
+    "lift_height_err_m": 0.006433141338532067,
+    "speed_profile_corr": 0.0049204533733062964
+   }
+  },
+  {
+   "robot": "ur5e",
+   "seed": 2,
+   "half_mm": 35.0,
+   "cond": "truth",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.02637638895154641,
+     "carry": 0.03845413051912677,
+     "retreat": 0.014045346474438312
+    },
+    "path_rmse_mean_m": 0.026291955315037165,
+    "approach_angle_deg": 5.175032860128778,
+    "lift_height_err_m": 0.006394252411211665,
+    "speed_profile_corr": 0.012985722955090971
+   }
+  },
+  {
+   "robot": "ur5e",
+   "seed": 3,
+   "half_mm": 35.0,
+   "cond": "truth",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.02637130548595307,
+     "carry": 0.03864384466882725,
+     "retreat": 0.014045293911042733
+    },
+    "path_rmse_mean_m": 0.02635348135527435,
+    "approach_angle_deg": 5.172006157952459,
+    "lift_height_err_m": 0.006382891543007835,
+    "speed_profile_corr": 0.01325304099093644
+   }
+  },
+  {
+   "robot": "ur5e",
+   "seed": 4,
+   "half_mm": 35.0,
+   "cond": "truth",
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.026413392775735567,
+     "carry": 0.03698905244907115,
+     "retreat": 0.014043666091399641
+    },
+    "path_rmse_mean_m": 0.02581537043873545,
+    "approach_angle_deg": 5.524471432709645,
+    "lift_height_err_m": 0.004781823690799963,
+    "speed_profile_corr": 0.009455048489311089
+   }
+  },
+  {
+   "robot": "ur5e",
+   "seed": 5,
+   "half_mm": 35.0,
+   "cond": "truth",
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.02634900576557425,
+     "carry": 0.0351095754842041,
+     "retreat": 0.014043755348745022
+    },
+    "path_rmse_mean_m": 0.025167445532841125,
+    "approach_angle_deg": 5.515031119261805,
+    "lift_height_err_m": 0.004720796805293609,
+    "speed_profile_corr": 0.004922264060207395
+   }
+  },
+  {
+   "robot": "ur5e",
+   "seed": 6,
+   "half_mm": 35.0,
+   "cond": "truth",
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.02640199554472401,
+     "carry": 0.03790680032471436,
+     "retreat": 0.014043724948778341
+    },
+    "path_rmse_mean_m": 0.02611750693940557,
+    "approach_angle_deg": 5.545318133358549,
+    "lift_height_err_m": 0.00475685814848778,
+    "speed_profile_corr": 0.00893542257198273
+   }
+  },
+  {
+   "robot": "ur5e",
+   "seed": 7,
+   "half_mm": 35.0,
+   "cond": "truth",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.026306319830601044,
+     "carry": 0.034999550252999743,
+     "retreat": 0.014045371502085555
+    },
+    "path_rmse_mean_m": 0.025117080528562114,
+    "approach_angle_deg": 5.183575328634886,
+    "lift_height_err_m": 0.006457330624840302,
+    "speed_profile_corr": 0.005733830382108695
+   }
+  },
+  {
+   "robot": "ur5e",
+   "seed": 8,
+   "half_mm": 35.0,
+   "cond": "truth",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.026259782369734714,
+     "carry": 0.03441954452256888,
+     "retreat": 0.014045411025377312
+    },
+    "path_rmse_mean_m": 0.024908245972560306,
+    "approach_angle_deg": 5.180256915549958,
+    "lift_height_err_m": 0.006529934214757643,
+    "speed_profile_corr": 0.0034597520878772324
+   }
+  },
+  {
+   "robot": "ur5e",
+   "seed": 9,
+   "half_mm": 35.0,
+   "cond": "truth",
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.02644512449661881,
+     "carry": 0.03799696116849547,
+     "retreat": 0.014043636979492524
+    },
+    "path_rmse_mean_m": 0.02616190754820227,
+    "approach_angle_deg": 5.515761884971992,
+    "lift_height_err_m": 0.004704220038086071,
+    "speed_profile_corr": 0.012117385456393806
+   }
+  },
+  {
+   "robot": "ur5e",
+   "seed": 0,
+   "half_mm": 25.0,
+   "cond": "depth",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.02669437752690504,
+     "carry": 0.038188435744205586,
+     "retreat": 0.013768789897115287
+    },
+    "path_rmse_mean_m": 0.026217201056075303,
+    "approach_angle_deg": 5.180944464155452,
+    "lift_height_err_m": 0.004471313721450321,
+    "speed_profile_corr": 0.012236820253127011
+   },
+   "estimate_error": {
+    "xy_mm": 0.15411106477730346,
+    "z_mm": 0.500960891356917,
+    "yaw_deg": 0.9429857479330448,
+    "goal_xy_mm": 0.6077295296250588
+   }
+  },
+  {
+   "robot": "ur5e",
+   "seed": 1,
+   "half_mm": 25.0,
+   "cond": "depth",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.026637161737999997,
+     "carry": 0.034408722726250174,
+     "retreat": 0.013735121488081137
+    },
+    "path_rmse_mean_m": 0.024927001984110436,
+    "approach_angle_deg": 5.183169572516745,
+    "lift_height_err_m": 0.004880248524791131,
+    "speed_profile_corr": 0.0026274851547655738
+   },
+   "estimate_error": {
+    "xy_mm": 0.13795531053879392,
+    "z_mm": 0.5953975108475805,
+    "yaw_deg": 1.4823847737332536,
+    "goal_xy_mm": 0.5881822109717705
+   }
+  },
+  {
+   "robot": "ur5e",
+   "seed": 2,
+   "half_mm": 25.0,
+   "cond": "depth",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.02669168119835805,
+     "carry": 0.03799612033856879,
+     "retreat": 0.013716829833742004
+    },
+    "path_rmse_mean_m": 0.02613487712355628,
+    "approach_angle_deg": 5.17578245222124,
+    "lift_height_err_m": 0.004827070769599817,
+    "speed_profile_corr": 0.011073961777395789
+   },
+   "estimate_error": {
+    "xy_mm": 0.2935509900219616,
+    "z_mm": 0.6273241129912642,
+    "yaw_deg": 1.1459638620169277,
+    "goal_xy_mm": 0.5949699294306559
+   }
+  },
+  {
+   "robot": "ur5e",
+   "seed": 3,
+   "half_mm": 25.0,
+   "cond": "depth",
+   "success": false,
+   "reasons": [
+    "not_released_and_settled_at_goal"
+   ],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.02668572457433769,
+     "carry": 0.038326559096846714,
+     "retreat": 0.013715665703008816
+    },
+    "path_rmse_mean_m": 0.026242649791397742,
+    "approach_angle_deg": 5.172781949905808,
+    "lift_height_err_m": 0.004476850313857722,
+    "speed_profile_corr": 0.011879965131509974
+   },
+   "estimate_error": {
+    "xy_mm": 0.3384397904763932,
+    "z_mm": 0.5887400433496268,
+    "yaw_deg": 0.820451685374308,
+    "goal_xy_mm": 0.5710353038034761
+   }
+  },
+  {
+   "robot": "ur5e",
+   "seed": 4,
+   "half_mm": 25.0,
+   "cond": "depth",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.02670994231332067,
+     "carry": 0.03687002667566215,
+     "retreat": 0.013674588388342195
+    },
+    "path_rmse_mean_m": 0.025751519125775005,
+    "approach_angle_deg": 5.185851472278032,
+    "lift_height_err_m": 0.0044106976494012184,
+    "speed_profile_corr": 0.009570890666278862
+   },
+   "estimate_error": {
+    "xy_mm": 0.3258508926703084,
+    "z_mm": 0.6320886777724556,
+    "yaw_deg": 0.8365138952638822,
+    "goal_xy_mm": 0.613812941538929
+   }
+  },
+  {
+   "robot": "ur5e",
+   "seed": 5,
+   "half_mm": 25.0,
+   "cond": "depth",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.02672550338106874,
+     "carry": 0.03515713737867521,
+     "retreat": 0.013612171652962761
+    },
+    "path_rmse_mean_m": 0.025164937470902236,
+    "approach_angle_deg": 5.185897869271802,
+    "lift_height_err_m": 0.0044276084960825635,
+    "speed_profile_corr": 0.0052516584524153
+   },
+   "estimate_error": {
+    "xy_mm": 0.23354821433202214,
+    "z_mm": 0.701240422266422,
+    "yaw_deg": 0.8501582739195082,
+    "goal_xy_mm": 0.6077823882721108
+   }
+  },
+  {
+   "robot": "ur5e",
+   "seed": 6,
+   "half_mm": 25.0,
+   "cond": "depth",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.02670127873775548,
+     "carry": 0.03778393961384251,
+     "retreat": 0.013734937779055503
+    },
+    "path_rmse_mean_m": 0.026073385376884497,
+    "approach_angle_deg": 5.180024585360835,
+    "lift_height_err_m": 0.0044936019716143305,
+    "speed_profile_corr": 0.010890507759076988
+   },
+   "estimate_error": {
+    "xy_mm": 0.4059418371269917,
+    "z_mm": 0.5857740534237488,
+    "yaw_deg": 1.612191061624711,
+    "goal_xy_mm": 0.5824173499347606
+   }
+  },
+  {
+   "robot": "ur5e",
+   "seed": 7,
+   "half_mm": 25.0,
+   "cond": "depth",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.026665133640132153,
+     "carry": 0.03466883966157814,
+     "retreat": 0.013720931195280207
+    },
+    "path_rmse_mean_m": 0.025018301498996837,
+    "approach_angle_deg": 5.184282007665726,
+    "lift_height_err_m": 0.004857063122718719,
+    "speed_profile_corr": 0.0030924516147079494
+   },
+   "estimate_error": {
+    "xy_mm": 0.11645287587180332,
+    "z_mm": 0.592798887913179,
+    "yaw_deg": 0.5275834680529486,
+    "goal_xy_mm": 0.5938714085446946
+   }
+  },
+  {
+   "robot": "ur5e",
+   "seed": 8,
+   "half_mm": 25.0,
+   "cond": "depth",
+   "success": false,
+   "reasons": [
+    "not_released_and_settled_at_goal"
+   ],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.02664225133496262,
+     "carry": 0.034088380293337106,
+     "retreat": 0.013783092793291696
+    },
+    "path_rmse_mean_m": 0.02483790814053047,
+    "approach_angle_deg": 5.180990265422014,
+    "lift_height_err_m": 0.004625334774910561,
+    "speed_profile_corr": 0.0017061592075483048
+   },
+   "estimate_error": {
+    "xy_mm": 0.3612992613640922,
+    "z_mm": 0.6371426039370569,
+    "yaw_deg": 1.0860762147234908,
+    "goal_xy_mm": 0.598752824674001
+   }
+  },
+  {
+   "robot": "ur5e",
+   "seed": 9,
+   "half_mm": 25.0,
+   "cond": "depth",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.02673647608266435,
+     "carry": 0.03813716782326147,
+     "retreat": 0.013701521769874709
+    },
+    "path_rmse_mean_m": 0.02619172189193351,
+    "approach_angle_deg": 5.183967188134685,
+    "lift_height_err_m": 0.00441631486178784,
+    "speed_profile_corr": 0.01244095311661036
+   },
+   "estimate_error": {
+    "xy_mm": 0.26072519653773263,
+    "z_mm": 0.5694856453627335,
+    "yaw_deg": 0.9360558773456698,
+    "goal_xy_mm": 0.6191124497656706
+   }
+  },
+  {
+   "robot": "ur5e",
+   "seed": 0,
+   "half_mm": 30.0,
+   "cond": "depth",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.02664647557861261,
+     "carry": 0.038170790201883964,
+     "retreat": 0.013745817329190026
+    },
+    "path_rmse_mean_m": 0.026187694369895532,
+    "approach_angle_deg": 5.180540739332419,
+    "lift_height_err_m": 0.005272484836261138,
+    "speed_profile_corr": 0.013226857579502992
+   },
+   "estimate_error": {
+    "xy_mm": 0.3661659156331978,
+    "z_mm": 0.5381826056108201,
+    "yaw_deg": 1.9429857479330335,
+    "goal_xy_mm": 0.6077317395979209
+   }
+  },
+  {
+   "robot": "ur5e",
+   "seed": 1,
+   "half_mm": 30.0,
+   "cond": "depth",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.026652554978759953,
+     "carry": 0.03446782671636327,
+     "retreat": 0.013728319583133947
+    },
+    "path_rmse_mean_m": 0.02494956709275239,
+    "approach_angle_deg": 5.18284741469202,
+    "lift_height_err_m": 0.00534170230206113,
+    "speed_profile_corr": 0.0035918649782211627
+   },
+   "estimate_error": {
+    "xy_mm": 0.1780983041050001,
+    "z_mm": 0.6050365817423242,
+    "yaw_deg": 1.5176152262667124,
+    "goal_xy_mm": 0.588185471161627
+   }
+  },
+  {
+   "robot": "ur5e",
+   "seed": 2,
+   "half_mm": 30.0,
+   "cond": "depth",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.0266919402533494,
+     "carry": 0.03812768715691349,
+     "retreat": 0.013745997772128688
+    },
+    "path_rmse_mean_m": 0.026188541727463863,
+    "approach_angle_deg": 5.175375989371612,
+    "lift_height_err_m": 0.005248580289115123,
+    "speed_profile_corr": 0.011988418370567994
+   },
+   "estimate_error": {
+    "xy_mm": 0.1922788400171976,
+    "z_mm": 0.5755771880816378,
+    "yaw_deg": 0.14596386201691355,
+    "goal_xy_mm": 0.594967183171145
+   }
+  },
+  {
+   "robot": "ur5e",
+   "seed": 3,
+   "half_mm": 30.0,
+   "cond": "depth",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.02669502106256241,
+     "carry": 0.038300547147809796,
+     "retreat": 0.013704121848139806
+    },
+    "path_rmse_mean_m": 0.026233230019504006,
+    "approach_angle_deg": 5.172399813977213,
+    "lift_height_err_m": 0.005385219267775021,
+    "speed_profile_corr": 0.012480175912763203
+   },
+   "estimate_error": {
+    "xy_mm": 0.32804339445592323,
+    "z_mm": 0.6064152732710403,
+    "yaw_deg": 1.8204516853743031,
+    "goal_xy_mm": 0.571041140373719
+   }
+  },
+  {
+   "robot": "ur5e",
+   "seed": 4,
+   "half_mm": 30.0,
+   "cond": "depth",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.026750960807479532,
+     "carry": 0.036902138987319824,
+     "retreat": 0.01370049579701807
+    },
+    "path_rmse_mean_m": 0.025784531863939142,
+    "approach_angle_deg": 5.185461729311607,
+    "lift_height_err_m": 0.005204089350134583,
+    "speed_profile_corr": 0.01009436130067082
+   },
+   "estimate_error": {
+    "xy_mm": 0.21764189946357063,
+    "z_mm": 0.5855931850925998,
+    "yaw_deg": 0.8365138952638822,
+    "goal_xy_mm": 0.6138095239554657
+   }
+  },
+  {
+   "robot": "ur5e",
+   "seed": 5,
+   "half_mm": 30.0,
+   "cond": "depth",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.026751392834945438,
+     "carry": 0.035232101641232444,
+     "retreat": 0.013624777573553393
+    },
+    "path_rmse_mean_m": 0.025202757349910426,
+    "approach_angle_deg": 5.185516475137861,
+    "lift_height_err_m": 0.005082623864838071,
+    "speed_profile_corr": 0.005797876341706257
+   },
+   "estimate_error": {
+    "xy_mm": 0.12526999556387308,
+    "z_mm": 0.67717438813698,
+    "yaw_deg": 0.149841726080506,
+    "goal_xy_mm": 0.6077900933886357
+   }
+  },
+  {
+   "robot": "ur5e",
+   "seed": 6,
+   "half_mm": 30.0,
+   "cond": "depth",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.0266543637143411,
+     "carry": 0.03777217895581642,
+     "retreat": 0.013741200029222123
+    },
+    "path_rmse_mean_m": 0.026055914233126545,
+    "approach_angle_deg": 5.179578404367188,
+    "lift_height_err_m": 0.005301511355661315,
+    "speed_profile_corr": 0.011655533328359606
+   },
+   "estimate_error": {
+    "xy_mm": 0.3444590210519425,
+    "z_mm": 0.5731070959889873,
+    "yaw_deg": 1.612191061624711,
+    "goal_xy_mm": 0.5824191287331345
+   }
+  },
+  {
+   "robot": "ur5e",
+   "seed": 7,
+   "half_mm": 30.0,
+   "cond": "depth",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.02675721766562515,
+     "carry": 0.034716953719612614,
+     "retreat": 0.013709890217127336
+    },
+    "path_rmse_mean_m": 0.025061353867455033,
+    "approach_angle_deg": 5.183871578858461,
+    "lift_height_err_m": 0.005293655790371582,
+    "speed_profile_corr": 0.004468838434141522
+   },
+   "estimate_error": {
+    "xy_mm": 0.10461841902619169,
+    "z_mm": 0.6096269691877841,
+    "yaw_deg": 1.4724165319470541,
+    "goal_xy_mm": 0.593876730089348
+   }
+  },
+  {
+   "robot": "ur5e",
+   "seed": 8,
+   "half_mm": 30.0,
+   "cond": "depth",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.026602178774833174,
+     "carry": 0.03410952387219142,
+     "retreat": 0.01381929154611507
+    },
+    "path_rmse_mean_m": 0.024843664731046555,
+    "approach_angle_deg": 5.180601250316877,
+    "lift_height_err_m": 0.005503908236125898,
+    "speed_profile_corr": 0.0029540351592995443
+   },
+   "estimate_error": {
+    "xy_mm": 0.18841949173059222,
+    "z_mm": 0.5739691393204447,
+    "yaw_deg": 0.9139237852765056,
+    "goal_xy_mm": 0.5987499528042552
+   }
+  },
+  {
+   "robot": "ur5e",
+   "seed": 9,
+   "half_mm": 30.0,
+   "cond": "depth",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.026657133152899064,
+     "carry": 0.038111126742655335,
+     "retreat": 0.013717630253558084
+    },
+    "path_rmse_mean_m": 0.026161963383037497,
+    "approach_angle_deg": 5.183551697747033,
+    "lift_height_err_m": 0.005226295834210859,
+    "speed_profile_corr": 0.012922922160190045
+   },
+   "estimate_error": {
+    "xy_mm": 0.3849489435423816,
+    "z_mm": 0.5400613036575553,
+    "yaw_deg": 1.936055877345684,
+    "goal_xy_mm": 0.619110600871017
+   }
+  },
+  {
+   "robot": "ur5e",
+   "seed": 0,
+   "half_mm": 35.0,
+   "cond": "depth",
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.02672183768184993,
+     "carry": 0.03771324749010853,
+     "retreat": 0.013746150062404849
+    },
+    "path_rmse_mean_m": 0.026060411744787765,
+    "approach_angle_deg": 5.505956768755429,
+    "lift_height_err_m": 0.004489221115246661,
+    "speed_profile_corr": 0.01375244200276866
+   },
+   "estimate_error": {
+    "xy_mm": 0.2413134425798765,
+    "z_mm": 0.5338502262224321,
+    "yaw_deg": 2.0570142520669723,
+    "goal_xy_mm": 0.6077299489995336
+   }
+  },
+  {
+   "robot": "ur5e",
+   "seed": 1,
+   "half_mm": 35.0,
+   "cond": "depth",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.026651118617334223,
+     "carry": 0.034540732676729476,
+     "retreat": 0.013713072102798015
+    },
+    "path_rmse_mean_m": 0.0249683077989539,
+    "approach_angle_deg": 5.182496806390373,
+    "lift_height_err_m": 0.0063841083026197065,
+    "speed_profile_corr": 0.0050347988984012545
+   },
+   "estimate_error": {
+    "xy_mm": 0.18905072776051252,
+    "z_mm": 0.6296900061785529,
+    "yaw_deg": 0.5176152262667237,
+    "goal_xy_mm": 0.5881871683964489
+   }
+  },
+  {
+   "robot": "ur5e",
+   "seed": 2,
+   "half_mm": 35.0,
+   "cond": "depth",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.026663383636477318,
+     "carry": 0.038201736334548646,
+     "retreat": 0.013741079711748627
+    },
+    "path_rmse_mean_m": 0.02620206656092486,
+    "approach_angle_deg": 5.174999274384738,
+    "lift_height_err_m": 0.006411056283274125,
+    "speed_profile_corr": 0.013239993810925405
+   },
+   "estimate_error": {
+    "xy_mm": 0.2976679787364245,
+    "z_mm": 0.5826916541701519,
+    "yaw_deg": 0.14596386201691355,
+    "goal_xy_mm": 0.5949659579007688
+   }
+  },
+  {
+   "robot": "ur5e",
+   "seed": 3,
+   "half_mm": 35.0,
+   "cond": "depth",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.026689921656963402,
+     "carry": 0.0383244199508795,
+     "retreat": 0.01370542329833753
+    },
+    "path_rmse_mean_m": 0.026239921635393477,
+    "approach_angle_deg": 5.1720503428908415,
+    "lift_height_err_m": 0.006453032227886263,
+    "speed_profile_corr": 0.013245029604165764
+   },
+   "estimate_error": {
+    "xy_mm": 0.3457558529244112,
+    "z_mm": 0.6030031114943393,
+    "yaw_deg": 1.1795483146256946,
+    "goal_xy_mm": 0.5710367883138212
+   }
+  },
+  {
+   "robot": "ur5e",
+   "seed": 4,
+   "half_mm": 35.0,
+   "cond": "depth",
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.026707782621091584,
+     "carry": 0.03670927053623057,
+     "retreat": 0.013699273163739924
+    },
+    "path_rmse_mean_m": 0.025705442107020693,
+    "approach_angle_deg": 5.523857305406645,
+    "lift_height_err_m": 0.004553706971791943,
+    "speed_profile_corr": 0.009625204713505515
+   },
+   "estimate_error": {
+    "xy_mm": 0.27844743848242703,
+    "z_mm": 0.5836579035878655,
+    "yaw_deg": 0.16348610473610647,
+    "goal_xy_mm": 0.6138196641940575
+   }
+  },
+  {
+   "robot": "ur5e",
+   "seed": 5,
+   "half_mm": 35.0,
+   "cond": "depth",
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.026704479861716413,
+     "carry": 0.03474628534411639,
+     "retreat": 0.013627796769078618
+    },
+    "path_rmse_mean_m": 0.025026187324970472,
+    "approach_angle_deg": 5.507324394759077,
+    "lift_height_err_m": 0.004652308611006073,
+    "speed_profile_corr": 0.005578304504124288
+   },
+   "estimate_error": {
+    "xy_mm": 0.27138009396849827,
+    "z_mm": 0.6683833836226977,
+    "yaw_deg": 0.149841726080506,
+    "goal_xy_mm": 0.6077787868744736
+   }
+  },
+  {
+   "robot": "ur5e",
+   "seed": 6,
+   "half_mm": 35.0,
+   "cond": "depth",
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.026689503358871294,
+     "carry": 0.03762869120073446,
+     "retreat": 0.0137428585052304
+    },
+    "path_rmse_mean_m": 0.026020351021612053,
+    "approach_angle_deg": 5.535100858137741,
+    "lift_height_err_m": 0.004775940650841554,
+    "speed_profile_corr": 0.008973382548867792
+   },
+   "estimate_error": {
+    "xy_mm": 0.3561618130912469,
+    "z_mm": 0.5668118014981599,
+    "yaw_deg": 1.612191061624711,
+    "goal_xy_mm": 0.5824083320265279
+   }
+  },
+  {
+   "robot": "ur5e",
+   "seed": 7,
+   "half_mm": 35.0,
+   "cond": "depth",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.026688204060180822,
+     "carry": 0.03481464379618603,
+     "retreat": 0.013719128484426338
+    },
+    "path_rmse_mean_m": 0.02507399211359773,
+    "approach_angle_deg": 5.183536413232603,
+    "lift_height_err_m": 0.006512612036566501,
+    "speed_profile_corr": 0.005814571155472857
+   },
+   "estimate_error": {
+    "xy_mm": 0.05674125715137709,
+    "z_mm": 0.5927691514193909,
+    "yaw_deg": 1.52758346805295,
+    "goal_xy_mm": 0.5938636177805222
+   }
+  },
+  {
+   "robot": "ur5e",
+   "seed": 8,
+   "half_mm": 35.0,
+   "cond": "depth",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.026616229948233868,
+     "carry": 0.03413613632418345,
+     "retreat": 0.013798433663081026
+    },
+    "path_rmse_mean_m": 0.024850266645166114,
+    "approach_angle_deg": 5.180286626748349,
+    "lift_height_err_m": 0.006527071298182141,
+    "speed_profile_corr": 0.0035286789616757407
+   },
+   "estimate_error": {
+    "xy_mm": 0.2582604016174125,
+    "z_mm": 0.6081164432854558,
+    "yaw_deg": 1.0860762147234908,
+    "goal_xy_mm": 0.5987482440380705
+   }
+  },
+  {
+   "robot": "ur5e",
+   "seed": 9,
+   "half_mm": 35.0,
+   "cond": "depth",
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.026711450866690103,
+     "carry": 0.03782024475948992,
+     "retreat": 0.01370019318512899
+    },
+    "path_rmse_mean_m": 0.02607729627043634,
+    "approach_angle_deg": 5.5103538196389685,
+    "lift_height_err_m": 0.004690086115955311,
+    "speed_profile_corr": 0.013398166412340725
+   },
+   "estimate_error": {
+    "xy_mm": 0.3507900975480035,
+    "z_mm": 0.5662580648621296,
+    "yaw_deg": 0.06394412265431892,
+    "goal_xy_mm": 0.6191059351778311
+   }
+  },
+  {
+   "robot": "ur5e",
+   "seed": 0,
+   "half_mm": 25.0,
+   "cond": "depth_hard",
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.031553650535942175,
+     "carry": 0.043787286339965564,
+     "retreat": 0.016950185052565382
+    },
+    "path_rmse_mean_m": 0.030763707309491035,
+    "approach_angle_deg": 5.1815780278405414,
+    "lift_height_err_m": 0.004541849682682564,
+    "speed_profile_corr": 0.2288679337293676
+   },
+   "estimate_error": {
+    "xy_mm": 8.754193514973528,
+    "z_mm": 2.545734372716223,
+    "yaw_deg": 1.9429857479330335,
+    "goal_xy_mm": 12.084341249609722
+   }
+  },
+  {
+   "robot": "ur5e",
+   "seed": 1,
+   "half_mm": 25.0,
+   "cond": "depth_hard",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.023455368915225223,
+     "carry": 0.02791106960293698,
+     "retreat": 0.01617917075097059
+    },
+    "path_rmse_mean_m": 0.02251520308971093,
+    "approach_angle_deg": 5.1960158043749916,
+    "lift_height_err_m": 0.004472728575651813,
+    "speed_profile_corr": -0.08002916992319618
+   },
+   "estimate_error": {
+    "xy_mm": 11.809051734947802,
+    "z_mm": 1.2699965132925843,
+    "yaw_deg": 0.5176152262667237,
+    "goal_xy_mm": 11.946054678681946
+   }
+  },
+  {
+   "robot": "ur5e",
+   "seed": 2,
+   "half_mm": 25.0,
+   "cond": "depth_hard",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.024321685071436557,
+     "carry": 0.06501412504970906,
+     "retreat": 0.014855347258482044
+    },
+    "path_rmse_mean_m": 0.03473038579320922,
+    "approach_angle_deg": 5.167760200872291,
+    "lift_height_err_m": 0.00447990593973796,
+    "speed_profile_corr": -0.018905646267532546
+   },
+   "estimate_error": {
+    "xy_mm": 13.362159761827774,
+    "z_mm": 1.6650155820357726,
+    "yaw_deg": 2.8540361379830523,
+    "goal_xy_mm": 12.74205133126478
+   }
+  },
+  {
+   "robot": "ur5e",
+   "seed": 3,
+   "half_mm": 25.0,
+   "cond": "depth_hard",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.02348715924436593,
+     "carry": 0.042714748713863875,
+     "retreat": 0.016319747190183566
+    },
+    "path_rmse_mean_m": 0.027507218382804455,
+    "approach_angle_deg": 5.156233115476773,
+    "lift_height_err_m": 0.00442754684647606,
+    "speed_profile_corr": 0.04929766167456397
+   },
+   "estimate_error": {
+    "xy_mm": 13.841504468828944,
+    "z_mm": 3.930562791922915,
+    "yaw_deg": 0.17954831462569334,
+    "goal_xy_mm": 12.408143580283689
+   }
+  },
+  {
+   "robot": "ur5e",
+   "seed": 4,
+   "half_mm": 25.0,
+   "cond": "depth_hard",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.026957002115411494,
+     "carry": 0.041120644689223676,
+     "retreat": 0.015519097919447295
+    },
+    "path_rmse_mean_m": 0.027865581574694154,
+    "approach_angle_deg": 5.196883145262131,
+    "lift_height_err_m": 0.0037553347362104528,
+    "speed_profile_corr": -0.05097368742778364
+   },
+   "estimate_error": {
+    "xy_mm": 8.501638988333674,
+    "z_mm": 2.3699608688591245,
+    "yaw_deg": 2.836513895263885,
+    "goal_xy_mm": 9.918794356475207
+   }
+  },
+  {
+   "robot": "ur5e",
+   "seed": 5,
+   "half_mm": 25.0,
+   "cond": "depth_hard",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.03545646722841651,
+     "carry": 0.040607831209425606,
+     "retreat": 0.01983407676347466
+    },
+    "path_rmse_mean_m": 0.0319661250671056,
+    "approach_angle_deg": 5.196927594183971,
+    "lift_height_err_m": 0.004405257273067065,
+    "speed_profile_corr": -0.027290950616559687
+   },
+   "estimate_error": {
+    "xy_mm": 16.047563422004995,
+    "z_mm": 0.08689944853339931,
+    "yaw_deg": 1.8501582739194968,
+    "goal_xy_mm": 15.610130590629907
+   }
+  },
+  {
+   "robot": "ur5e",
+   "seed": 6,
+   "half_mm": 25.0,
+   "cond": "depth_hard",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.02895364886091987,
+     "carry": 0.04267100292051931,
+     "retreat": 0.017538389472263657
+    },
+    "path_rmse_mean_m": 0.029721013751234277,
+    "approach_angle_deg": 5.179831834722534,
+    "lift_height_err_m": 0.004066011019437904,
+    "speed_profile_corr": -0.038312680114128056
+   },
+   "estimate_error": {
+    "xy_mm": 5.5519708357959665,
+    "z_mm": 0.03134751983483591,
+    "yaw_deg": 1.3878089383752805,
+    "goal_xy_mm": 5.492399817159113
+   }
+  },
+  {
+   "robot": "ur5e",
+   "seed": 7,
+   "half_mm": 25.0,
+   "cond": "depth_hard",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.032123655947931734,
+     "carry": 0.03518137979827175,
+     "retreat": 0.016028370005909995
+    },
+    "path_rmse_mean_m": 0.02777780191737116,
+    "approach_angle_deg": 5.196306357793941,
+    "lift_height_err_m": 0.004286180711925186,
+    "speed_profile_corr": -0.06893742008165703
+   },
+   "estimate_error": {
+    "xy_mm": 14.554110880046203,
+    "z_mm": 0.5016216675369709,
+    "yaw_deg": 2.4724165319470557,
+    "goal_xy_mm": 13.054255026507702
+   }
+  },
+  {
+   "robot": "ur5e",
+   "seed": 8,
+   "half_mm": 25.0,
+   "cond": "depth_hard",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.02753940814818429,
+     "carry": 0.02708286865326916,
+     "retreat": 0.012483456093554706
+    },
+    "path_rmse_mean_m": 0.022368577631669384,
+    "approach_angle_deg": 5.1870249945357205,
+    "lift_height_err_m": 0.00465935215300603,
+    "speed_profile_corr": 0.06686201170798789
+   },
+   "estimate_error": {
+    "xy_mm": 7.986472258244053,
+    "z_mm": 3.433480345958188,
+    "yaw_deg": 0.9139237852765056,
+    "goal_xy_mm": 9.350784935356367
+   }
+  },
+  {
+   "robot": "ur5e",
+   "seed": 9,
+   "half_mm": 25.0,
+   "cond": "depth_hard",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.03346037993023218,
+     "carry": 0.04555244753060109,
+     "retreat": 0.013665818333276965
+    },
+    "path_rmse_mean_m": 0.030892881931370075,
+    "approach_angle_deg": 5.191599439152282,
+    "lift_height_err_m": 0.00368000297924731,
+    "speed_profile_corr": -0.050909917961779974
+   },
+   "estimate_error": {
+    "xy_mm": 10.45340240913532,
+    "z_mm": 4.025717076703655,
+    "yaw_deg": 1.936055877345684,
+    "goal_xy_mm": 9.595178663462432
+   }
+  },
+  {
+   "robot": "ur5e",
+   "seed": 0,
+   "half_mm": 30.0,
+   "cond": "depth_hard",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.03176970278855376,
+     "carry": 0.04429946049344071,
+     "retreat": 0.013093826616282308
+    },
+    "path_rmse_mean_m": 0.029720996632758928,
+    "approach_angle_deg": 5.181074183950175,
+    "lift_height_err_m": 0.00561909812394884,
+    "speed_profile_corr": 0.04576422149964035
+   },
+   "estimate_error": {
+    "xy_mm": 9.140790489557999,
+    "z_mm": 2.5604725916013282,
+    "yaw_deg": 0.9429857479330448,
+    "goal_xy_mm": 12.084333270343018
+   }
+  },
+  {
+   "robot": "ur5e",
+   "seed": 1,
+   "half_mm": 30.0,
+   "cond": "depth_hard",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.02346591268379194,
+     "carry": 0.028074187887422834,
+     "retreat": 0.016115138067876195
+    },
+    "path_rmse_mean_m": 0.022551746213030324,
+    "approach_angle_deg": 5.19573057472096,
+    "lift_height_err_m": 0.005109322105282532,
+    "speed_profile_corr": -0.07465384660756094
+   },
+   "estimate_error": {
+    "xy_mm": 11.841958948738483,
+    "z_mm": 1.3160028677759346,
+    "yaw_deg": 0.5176152262667237,
+    "goal_xy_mm": 11.946054141051407
+   }
+  },
+  {
+   "robot": "ur5e",
+   "seed": 2,
+   "half_mm": 30.0,
+   "cond": "depth_hard",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.02434746652420544,
+     "carry": 0.04211291496691766,
+     "retreat": 0.015622952228334071
+    },
+    "path_rmse_mean_m": 0.027361111239819057,
+    "approach_angle_deg": 5.167407557064947,
+    "lift_height_err_m": 0.0051728677013399005,
+    "speed_profile_corr": -0.0027881784088001865
+   },
+   "estimate_error": {
+    "xy_mm": 13.588589521298656,
+    "z_mm": 1.6637675413891593,
+    "yaw_deg": 0.8540361379830751,
+    "goal_xy_mm": 12.742055841932515
+   }
+  },
+  {
+   "robot": "ur5e",
+   "seed": 3,
+   "half_mm": 30.0,
+   "cond": "depth_hard",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.023468409639350492,
+     "carry": 0.04278692903289339,
+     "retreat": 0.01613251897621966
+    },
+    "path_rmse_mean_m": 0.027462619216154515,
+    "approach_angle_deg": 5.155786958237265,
+    "lift_height_err_m": 0.005381051220791272,
+    "speed_profile_corr": 0.04555887360477321
+   },
+   "estimate_error": {
+    "xy_mm": 13.70390453246587,
+    "z_mm": 3.755964824545075,
+    "yaw_deg": 0.17954831462569334,
+    "goal_xy_mm": 12.408126525132145
+   }
+  },
+  {
+   "robot": "ur5e",
+   "seed": 4,
+   "half_mm": 30.0,
+   "cond": "depth_hard",
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.027466242075971144,
+     "carry": 0.04099910264297128,
+     "retreat": 0.015341794975470205
+    },
+    "path_rmse_mean_m": 0.02793571323147088,
+    "approach_angle_deg": 5.550719161357973,
+    "lift_height_err_m": 0.0037694227300205385,
+    "speed_profile_corr": -0.05089450677926727
+   },
+   "estimate_error": {
+    "xy_mm": 9.195113009133188,
+    "z_mm": 2.12098983323707,
+    "yaw_deg": 0.16348610473610647,
+    "goal_xy_mm": 9.918783982691217
+   }
+  },
+  {
+   "robot": "ur5e",
+   "seed": 5,
+   "half_mm": 30.0,
+   "cond": "depth_hard",
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.03550102729681451,
+     "carry": 0.04021285491378516,
+     "retreat": 0.014717117979958227
+    },
+    "path_rmse_mean_m": 0.030143666730185963,
+    "approach_angle_deg": 5.548532029085744,
+    "lift_height_err_m": 0.0035119428911505324,
+    "speed_profile_corr": -0.06712451156809901
+   },
+   "estimate_error": {
+    "xy_mm": 15.910284594382912,
+    "z_mm": 0.2659016285571636,
+    "yaw_deg": 0.149841726080506,
+    "goal_xy_mm": 15.610146725982503
+   }
+  },
+  {
+   "robot": "ur5e",
+   "seed": 6,
+   "half_mm": 30.0,
+   "cond": "depth_hard",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.028850011383322834,
+     "carry": 0.042876777636340395,
+     "retreat": 0.0175738013646707
+    },
+    "path_rmse_mean_m": 0.02976686346144464,
+    "approach_angle_deg": 5.600054031783929,
+    "lift_height_err_m": 0.005066581779684914,
+    "speed_profile_corr": -0.03751849943887958
+   },
+   "estimate_error": {
+    "xy_mm": 5.3460727923106335,
+    "z_mm": 0.024829710472538957,
+    "yaw_deg": 2.3878089383752945,
+    "goal_xy_mm": 5.492414795293085
+   }
+  },
+  {
+   "robot": "ur5e",
+   "seed": 7,
+   "half_mm": 30.0,
+   "cond": "depth_hard",
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.03225140806054701,
+     "carry": 0.03528445150608233,
+     "retreat": 0.014341787838809752
+    },
+    "path_rmse_mean_m": 0.027292549135146362,
+    "approach_angle_deg": 5.548828841403171,
+    "lift_height_err_m": 0.0038469956246457992,
+    "speed_profile_corr": -0.07422099446463176
+   },
+   "estimate_error": {
+    "xy_mm": 14.57336373587088,
+    "z_mm": 0.49102832505355104,
+    "yaw_deg": 2.4724165319470557,
+    "goal_xy_mm": 13.054266045467681
+   }
+  },
+  {
+   "robot": "ur5e",
+   "seed": 8,
+   "half_mm": 30.0,
+   "cond": "depth_hard",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.02763038058660807,
+     "carry": 0.02694297378508494,
+     "retreat": 0.012440957920338997
+    },
+    "path_rmse_mean_m": 0.022338104097344005,
+    "approach_angle_deg": 5.186824488714163,
+    "lift_height_err_m": 0.005455358774694469,
+    "speed_profile_corr": 0.06468568362270509
+   },
+   "estimate_error": {
+    "xy_mm": 7.931151973973245,
+    "z_mm": 3.611626905194041,
+    "yaw_deg": 2.086076214723492,
+    "goal_xy_mm": 9.350787310961339
+   }
+  },
+  {
+   "robot": "ur5e",
+   "seed": 9,
+   "half_mm": 30.0,
+   "cond": "depth_hard",
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.03349217714859334,
+     "carry": 0.04502825390326274,
+     "retreat": 0.01360143504769219
+    },
+    "path_rmse_mean_m": 0.030707288699849424,
+    "approach_angle_deg": 5.191216105369728,
+    "lift_height_err_m": 0.0037542460846463344,
+    "speed_profile_corr": -0.050859265263916355
+   },
+   "estimate_error": {
+    "xy_mm": 10.601698662150449,
+    "z_mm": 4.119603837405412,
+    "yaw_deg": 1.0639441226543076,
+    "goal_xy_mm": 9.595196807654082
+   }
+  },
+  {
+   "robot": "ur5e",
+   "seed": 0,
+   "half_mm": 35.0,
+   "cond": "depth_hard",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.03165775024312696,
+     "carry": 0.044439479270912866,
+     "retreat": 0.013346301388928384
+    },
+    "path_rmse_mean_m": 0.029814510300989402,
+    "approach_angle_deg": 5.18068453729484,
+    "lift_height_err_m": 0.006854536931337557,
+    "speed_profile_corr": 0.07004634091656407
+   },
+   "estimate_error": {
+    "xy_mm": 8.932209543203761,
+    "z_mm": 2.531290432174718,
+    "yaw_deg": 0.057014252066969334,
+    "goal_xy_mm": 12.08433283080701
+   }
+  },
+  {
+   "robot": "ur5e",
+   "seed": 1,
+   "half_mm": 35.0,
+   "cond": "depth_hard",
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.023477400375530828,
+     "carry": 0.027570972106197855,
+     "retreat": 0.01629228445400124
+    },
+    "path_rmse_mean_m": 0.022446885645243306,
+    "approach_angle_deg": 5.519940483980256,
+    "lift_height_err_m": 0.004751224495137429,
+    "speed_profile_corr": -0.07753567055608285
+   },
+   "estimate_error": {
+    "xy_mm": 11.277206311932504,
+    "z_mm": 1.1867622953190617,
+    "yaw_deg": 0.48238477373326494,
+    "goal_xy_mm": 11.946055726318448
+   }
+  },
+  {
+   "robot": "ur5e",
+   "seed": 2,
+   "half_mm": 35.0,
+   "cond": "depth_hard",
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.024549009616102582,
+     "carry": 0.04143183617348412,
+     "retreat": 0.0156296265172374
+    },
+    "path_rmse_mean_m": 0.02720349076894137,
+    "approach_angle_deg": 5.398097547973157,
+    "lift_height_err_m": 0.004513106475021789,
+    "speed_profile_corr": -0.011647413918639828
+   },
+   "estimate_error": {
+    "xy_mm": 13.543309473877995,
+    "z_mm": 1.547825754107203,
+    "yaw_deg": 0.14596386201691355,
+    "goal_xy_mm": 12.74207285890274
+   }
+  },
+  {
+   "robot": "ur5e",
+   "seed": 3,
+   "half_mm": 35.0,
+   "cond": "depth_hard",
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.02365474858428883,
+     "carry": 0.041928649099762294,
+     "retreat": 0.016101720944942007
+    },
+    "path_rmse_mean_m": 0.027228372876331047,
+    "approach_angle_deg": 5.32944239072738,
+    "lift_height_err_m": 0.005878447880783649,
+    "speed_profile_corr": 0.04889277837210667
+   },
+   "estimate_error": {
+    "xy_mm": 13.616347885739383,
+    "z_mm": 3.6583479982030545,
+    "yaw_deg": 0.17954831462569334,
+    "goal_xy_mm": 12.408098016150864
+   }
+  },
+  {
+   "robot": "ur5e",
+   "seed": 4,
+   "half_mm": 35.0,
+   "cond": "depth_hard",
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.027263942390152483,
+     "carry": 0.04103117473988039,
+     "retreat": 0.015374342004292437
+    },
+    "path_rmse_mean_m": 0.027889819711441773,
+    "approach_angle_deg": 5.548798938196295,
+    "lift_height_err_m": 0.004425300570259305,
+    "speed_profile_corr": -0.050059941888606636
+   },
+   "estimate_error": {
+    "xy_mm": 8.905575961705129,
+    "z_mm": 2.1439393761619185,
+    "yaw_deg": 0.16348610473610647,
+    "goal_xy_mm": 9.918795759864459
+   }
+  },
+  {
+   "robot": "ur5e",
+   "seed": 5,
+   "half_mm": 35.0,
+   "cond": "depth_hard",
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.03561796300704918,
+     "carry": 0.04114896635641773,
+     "retreat": 0.014606649191529293
+    },
+    "path_rmse_mean_m": 0.030457859518332065,
+    "approach_angle_deg": 5.512855469365398,
+    "lift_height_err_m": 0.004333802051046137,
+    "speed_profile_corr": -0.07061689727628453
+   },
+   "estimate_error": {
+    "xy_mm": 16.08649303854541,
+    "z_mm": 0.2703843232555944,
+    "yaw_deg": 0.149841726080506,
+    "goal_xy_mm": 15.610171857948965
+   }
+  },
+  {
+   "robot": "ur5e",
+   "seed": 6,
+   "half_mm": 35.0,
+   "cond": "depth_hard",
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.028957935801648873,
+     "carry": 0.042697415638087335,
+     "retreat": 0.017699810966312384
+    },
+    "path_rmse_mean_m": 0.029785054135349532,
+    "approach_angle_deg": 5.541611327600416,
+    "lift_height_err_m": 0.0048378683591600025,
+    "speed_profile_corr": -0.035652113862015555
+   },
+   "estimate_error": {
+    "xy_mm": 5.3332810727691795,
+    "z_mm": 0.0775247908441079,
+    "yaw_deg": 2.3878089383752945,
+    "goal_xy_mm": 5.492397052777896
+   }
+  },
+  {
+   "robot": "ur5e",
+   "seed": 7,
+   "half_mm": 35.0,
+   "cond": "depth_hard",
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.03263916510623859,
+     "carry": 0.03640642446651592,
+     "retreat": 0.014222249977888764
+    },
+    "path_rmse_mean_m": 0.027755946516881094,
+    "approach_angle_deg": 5.487529344149671,
+    "lift_height_err_m": 0.004394497708656381,
+    "speed_profile_corr": -0.07719836695537931
+   },
+   "estimate_error": {
+    "xy_mm": 15.169364022939085,
+    "z_mm": 0.4314281934713962,
+    "yaw_deg": 1.4724165319470541,
+    "goal_xy_mm": 13.05427109631341
+   }
+  },
+  {
+   "robot": "ur5e",
+   "seed": 8,
+   "half_mm": 35.0,
+   "cond": "depth_hard",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.02753404512003995,
+     "carry": 0.027041909695410798,
+     "retreat": 0.012529495442792837
+    },
+    "path_rmse_mean_m": 0.022368483419414525,
+    "approach_angle_deg": 5.186710436139102,
+    "lift_height_err_m": 0.006748583200394703,
+    "speed_profile_corr": 0.05541053553457006
+   },
+   "estimate_error": {
+    "xy_mm": 8.173316675587472,
+    "z_mm": 3.588889431358794,
+    "yaw_deg": 1.0860762147234908,
+    "goal_xy_mm": 9.350649076326828
+   }
+  },
+  {
+   "robot": "ur5e",
+   "seed": 9,
+   "half_mm": 35.0,
+   "cond": "depth_hard",
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.0336597521937179,
+     "carry": 0.04516680767742524,
+     "retreat": 0.013601801025498145
+    },
+    "path_rmse_mean_m": 0.030809453632213758,
+    "approach_angle_deg": 5.515636504765211,
+    "lift_height_err_m": 0.00431295928592626,
+    "speed_profile_corr": -0.050771847754433254
+   },
+   "estimate_error": {
+    "xy_mm": 10.578369503322717,
+    "z_mm": 4.174176676798883,
+    "yaw_deg": 0.9360558773456698,
+    "goal_xy_mm": 9.595178316586257
+   }
+  },
+  {
+   "robot": "ur10e",
+   "seed": 0,
+   "half_mm": 25.0,
+   "cond": "truth",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.013724600465005682,
+     "carry": 0.022386474026013414,
+     "retreat": 0.00910892551423371
+    },
+    "path_rmse_mean_m": 0.015073333335084267,
+    "approach_angle_deg": 2.7308652118844137,
+    "lift_height_err_m": 0.001721315337803092,
+    "speed_profile_corr": 0.49000565065227425
+   }
+  },
+  {
+   "robot": "ur10e",
+   "seed": 1,
+   "half_mm": 25.0,
+   "cond": "truth",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.013709530009815183,
+     "carry": 0.02012461047580807,
+     "retreat": 0.009108925997526737
+    },
+    "path_rmse_mean_m": 0.014314355494383332,
+    "approach_angle_deg": 2.7333783336278175,
+    "lift_height_err_m": 0.001969190504801599,
+    "speed_profile_corr": 0.4504289853820883
+   }
+  },
+  {
+   "robot": "ur10e",
+   "seed": 2,
+   "half_mm": 25.0,
+   "cond": "truth",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.013717368237288122,
+     "carry": 0.022291509275788823,
+     "retreat": 0.009108925889122576
+    },
+    "path_rmse_mean_m": 0.015039267800733174,
+    "approach_angle_deg": 2.7291707646246453,
+    "lift_height_err_m": 0.0019822399523696244,
+    "speed_profile_corr": 0.4872851210832869
+   }
+  },
+  {
+   "robot": "ur10e",
+   "seed": 3,
+   "half_mm": 25.0,
+   "cond": "truth",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.01371545956070943,
+     "carry": 0.02249431706891842,
+     "retreat": 0.009108925199956038
+    },
+    "path_rmse_mean_m": 0.01510623394319463,
+    "approach_angle_deg": 2.7278576702063995,
+    "lift_height_err_m": 0.0017848058705610126,
+    "speed_profile_corr": 0.49199562698761345
+   }
+  },
+  {
+   "robot": "ur10e",
+   "seed": 4,
+   "half_mm": 25.0,
+   "cond": "truth",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.013725550779956363,
+     "carry": 0.02165943501798938,
+     "retreat": 0.009108925173445552
+    },
+    "path_rmse_mean_m": 0.014831303657130432,
+    "approach_angle_deg": 2.7329290532613437,
+    "lift_height_err_m": 0.0017144996132843204,
+    "speed_profile_corr": 0.47736681932616953
+   }
+  },
+  {
+   "robot": "ur10e",
+   "seed": 5,
+   "half_mm": 25.0,
+   "cond": "truth",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.01371748807970565,
+     "carry": 0.020645546516770016,
+     "retreat": 0.009108925606936482
+    },
+    "path_rmse_mean_m": 0.014490653401137385,
+    "approach_angle_deg": 2.7337681011338355,
+    "lift_height_err_m": 0.0017272085671342363,
+    "speed_profile_corr": 0.46047708741512916
+   }
+  },
+  {
+   "robot": "ur10e",
+   "seed": 6,
+   "half_mm": 25.0,
+   "cond": "truth",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.013721416397426014,
+     "carry": 0.022161989236652867,
+     "retreat": 0.00910892465149842
+    },
+    "path_rmse_mean_m": 0.014997443428525768,
+    "approach_angle_deg": 2.730742122446503,
+    "lift_height_err_m": 0.0017162833406152156,
+    "speed_profile_corr": 0.4859770122838265
+   }
+  },
+  {
+   "robot": "ur10e",
+   "seed": 7,
+   "half_mm": 25.0,
+   "cond": "truth",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.013712561760358326,
+     "carry": 0.02031627959481598,
+     "retreat": 0.00910892597019239
+    },
+    "path_rmse_mean_m": 0.014379255775122233,
+    "approach_angle_deg": 2.733561073932399,
+    "lift_height_err_m": 0.0020011422304066495,
+    "speed_profile_corr": 0.45343432299872455
+   }
+  },
+  {
+   "robot": "ur10e",
+   "seed": 8,
+   "half_mm": 25.0,
+   "cond": "truth",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.013705531240530984,
+     "carry": 0.020006915023775215,
+     "retreat": 0.009108925352800109
+    },
+    "path_rmse_mean_m": 0.014273790539035436,
+    "approach_angle_deg": 2.7327537408593052,
+    "lift_height_err_m": 0.0017988777934050404,
+    "speed_profile_corr": 0.44829589763766725
+   }
+  },
+  {
+   "robot": "ur10e",
+   "seed": 9,
+   "half_mm": 25.0,
+   "cond": "truth",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.013728510732612102,
+     "carry": 0.022349564243430722,
+     "retreat": 0.009108925214861499
+    },
+    "path_rmse_mean_m": 0.015062333396968108,
+    "approach_angle_deg": 2.731801525328099,
+    "lift_height_err_m": 0.0017127381995628854,
+    "speed_profile_corr": 0.48967478185897684
+   }
+  },
+  {
+   "robot": "ur10e",
+   "seed": 0,
+   "half_mm": 30.0,
+   "cond": "truth",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.013722991461552073,
+     "carry": 0.022371321169049704,
+     "retreat": 0.00910803479124575
+    },
+    "path_rmse_mean_m": 0.015067449140615842,
+    "approach_angle_deg": 2.7309877440858545,
+    "lift_height_err_m": 0.00193284769434246,
+    "speed_profile_corr": 0.5032789907685024
+   }
+  },
+  {
+   "robot": "ur10e",
+   "seed": 1,
+   "half_mm": 30.0,
+   "cond": "truth",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.013707887023047859,
+     "carry": 0.020152486543205676,
+     "retreat": 0.009108035105082813
+    },
+    "path_rmse_mean_m": 0.014322802890445449,
+    "approach_angle_deg": 2.7334833169164403,
+    "lift_height_err_m": 0.0019470075273484155,
+    "speed_profile_corr": 0.4652394329518082
+   }
+  },
+  {
+   "robot": "ur10e",
+   "seed": 2,
+   "half_mm": 30.0,
+   "cond": "truth",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.013715719875061044,
+     "carry": 0.022314400249368305,
+     "retreat": 0.009108035008551162
+    },
+    "path_rmse_mean_m": 0.015046051710993503,
+    "approach_angle_deg": 2.7293541030322515,
+    "lift_height_err_m": 0.001942155945045515,
+    "speed_profile_corr": 0.5015278287746924
+   }
+  },
+  {
+   "robot": "ur10e",
+   "seed": 3,
+   "half_mm": 30.0,
+   "cond": "truth",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.013713878896732519,
+     "carry": 0.02247691504210217,
+     "retreat": 0.009108034363651518
+    },
+    "path_rmse_mean_m": 0.015099609434162069,
+    "approach_angle_deg": 2.7280813833281066,
+    "lift_height_err_m": 0.0019796390168891065,
+    "speed_profile_corr": 0.5039719644719036
+   }
+  },
+  {
+   "robot": "ur10e",
+   "seed": 4,
+   "half_mm": 30.0,
+   "cond": "truth",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.013723926603869913,
+     "carry": 0.021634482350920345,
+     "retreat": 0.009108034329353377
+    },
+    "path_rmse_mean_m": 0.01482214776138121,
+    "approach_angle_deg": 2.7330056664529434,
+    "lift_height_err_m": 0.0018991864914842116,
+    "speed_profile_corr": 0.4903881001018081
+   }
+  },
+  {
+   "robot": "ur10e",
+   "seed": 5,
+   "half_mm": 30.0,
+   "cond": "truth",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.013715841617513335,
+     "carry": 0.02064701740542521,
+     "retreat": 0.009108034867892027
+    },
+    "path_rmse_mean_m": 0.01449029796361019,
+    "approach_angle_deg": 2.733845292334932,
+    "lift_height_err_m": 0.0019377919097274543,
+    "speed_profile_corr": 0.47403704286608733
+   }
+  },
+  {
+   "robot": "ur10e",
+   "seed": 6,
+   "half_mm": 30.0,
+   "cond": "truth",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.013719778435822892,
+     "carry": 0.022140436816996536,
+     "retreat": 0.00910803369786368
+    },
+    "path_rmse_mean_m": 0.014989416316894369,
+    "approach_angle_deg": 2.7308760470382207,
+    "lift_height_err_m": 0.001984370333826674,
+    "speed_profile_corr": 0.4992801138392869
+   }
+  },
+  {
+   "robot": "ur10e",
+   "seed": 7,
+   "half_mm": 30.0,
+   "cond": "truth",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.013710910252059335,
+     "carry": 0.02032697853875446,
+     "retreat": 0.009108035101275495
+    },
+    "path_rmse_mean_m": 0.01438197463069643,
+    "approach_angle_deg": 2.7336545060301902,
+    "lift_height_err_m": 0.002040538628383576,
+    "speed_profile_corr": 0.4676454612216178
+   }
+  },
+  {
+   "robot": "ur10e",
+   "seed": 8,
+   "half_mm": 30.0,
+   "cond": "truth",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.01370387739150356,
+     "carry": 0.019989365400838895,
+     "retreat": 0.009108034496803866
+    },
+    "path_rmse_mean_m": 0.014267092429715439,
+    "approach_angle_deg": 2.732885118780647,
+    "lift_height_err_m": 0.001988029173818767,
+    "speed_profile_corr": 0.46172666616899366
+   }
+  },
+  {
+   "robot": "ur10e",
+   "seed": 9,
+   "half_mm": 30.0,
+   "cond": "truth",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.013726906549985023,
+     "carry": 0.022354368009712668,
+     "retreat": 0.009108034442456883
+    },
+    "path_rmse_mean_m": 0.01506310300071819,
+    "approach_angle_deg": 2.7318944559054645,
+    "lift_height_err_m": 0.001923257077291185,
+    "speed_profile_corr": 0.5028461324829259
+   }
+  },
+  {
+   "robot": "ur10e",
+   "seed": 0,
+   "half_mm": 35.0,
+   "cond": "truth",
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.013731035242920487,
+     "carry": 0.023739468091771132,
+     "retreat": 0.00910712043695335
+    },
+    "path_rmse_mean_m": 0.015525874590548322,
+    "approach_angle_deg": 2.7058400226355093,
+    "lift_height_err_m": 0.0022760151032977516,
+    "speed_profile_corr": 0.4716676142655156
+   }
+  },
+  {
+   "robot": "ur10e",
+   "seed": 1,
+   "half_mm": 35.0,
+   "cond": "truth",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.013706263812657913,
+     "carry": 0.020185577429599776,
+     "retreat": 0.009107164158418975
+    },
+    "path_rmse_mean_m": 0.014333001800225556,
+    "approach_angle_deg": 2.733590260623998,
+    "lift_height_err_m": 0.0022826622119558326,
+    "speed_profile_corr": 0.48451213556337686
+   }
+  },
+  {
+   "robot": "ur10e",
+   "seed": 2,
+   "half_mm": 35.0,
+   "cond": "truth",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.013714151261088662,
+     "carry": 0.02233149856278047,
+     "retreat": 0.009107164078257927
+    },
+    "path_rmse_mean_m": 0.015050937967375687,
+    "approach_angle_deg": 2.729539325473976,
+    "lift_height_err_m": 0.0022777556665058707,
+    "speed_profile_corr": 0.5200781848605454
+   }
+  },
+  {
+   "robot": "ur10e",
+   "seed": 3,
+   "half_mm": 35.0,
+   "cond": "truth",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.013712310869574569,
+     "carry": 0.022482679106742925,
+     "retreat": 0.0091071614541635
+    },
+    "path_rmse_mean_m": 0.015100717143493666,
+    "approach_angle_deg": 2.7283066728454544,
+    "lift_height_err_m": 0.0022397777033154043,
+    "speed_profile_corr": 0.521590404264592
+   }
+  },
+  {
+   "robot": "ur10e",
+   "seed": 4,
+   "half_mm": 35.0,
+   "cond": "truth",
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.013731310605882055,
+     "carry": 0.021491522343895987,
+     "retreat": 0.009107120239578092
+    },
+    "path_rmse_mean_m": 0.014776651063118712,
+    "approach_angle_deg": 2.7190851573289123,
+    "lift_height_err_m": 0.0022100050588323983,
+    "speed_profile_corr": 0.46231956778990063
+   }
+  },
+  {
+   "robot": "ur10e",
+   "seed": 5,
+   "half_mm": 35.0,
+   "cond": "truth",
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.013723431698500661,
+     "carry": 0.02164599737051392,
+     "retreat": 0.009107120540569382
+    },
+    "path_rmse_mean_m": 0.014825516536527987,
+    "approach_angle_deg": 2.7216018363192784,
+    "lift_height_err_m": 0.002166320898321944,
+    "speed_profile_corr": 0.44074392279243235
+   }
+  },
+  {
+   "robot": "ur10e",
+   "seed": 6,
+   "half_mm": 35.0,
+   "cond": "truth",
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.013726185563366152,
+     "carry": 0.021987720126711813,
+     "retreat": 0.009107119775698206
+    },
+    "path_rmse_mean_m": 0.01494034182192539,
+    "approach_angle_deg": 2.723970380594446,
+    "lift_height_err_m": 0.0021934966053586136,
+    "speed_profile_corr": 0.47070200229651527
+   }
+  },
+  {
+   "robot": "ur10e",
+   "seed": 7,
+   "half_mm": 35.0,
+   "cond": "truth",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.0137092892127927,
+     "carry": 0.020333400827534133,
+     "retreat": 0.009107164136212091
+    },
+    "path_rmse_mean_m": 0.014383284725512974,
+    "approach_angle_deg": 2.7337495332709323,
+    "lift_height_err_m": 0.002342200562342217,
+    "speed_profile_corr": 0.4881949448381001
+   }
+  },
+  {
+   "robot": "ur10e",
+   "seed": 8,
+   "half_mm": 35.0,
+   "cond": "truth",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.013702262599904523,
+     "carry": 0.020001686817793306,
+     "retreat": 0.00910716186633782
+    },
+    "path_rmse_mean_m": 0.014270370428011886,
+    "approach_angle_deg": 2.7330182096982187,
+    "lift_height_err_m": 0.0022457408456352523,
+    "speed_profile_corr": 0.4811399012064514
+   }
+  },
+  {
+   "robot": "ur10e",
+   "seed": 9,
+   "half_mm": 35.0,
+   "cond": "truth",
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.013734428085375287,
+     "carry": 0.02221161852252996,
+     "retreat": 0.009107120260570528
+    },
+    "path_rmse_mean_m": 0.015017722289491926,
+    "approach_angle_deg": 2.7127435596383513,
+    "lift_height_err_m": 0.002195535824724898,
+    "speed_profile_corr": 0.4743258945472559
+   }
+  },
+  {
+   "robot": "ur10e",
+   "seed": 0,
+   "half_mm": 25.0,
+   "cond": "depth",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.014009440139022274,
+     "carry": 0.022183112831871545,
+     "retreat": 0.008882780689960465
+    },
+    "path_rmse_mean_m": 0.015025111220284762,
+    "approach_angle_deg": 2.7308869416270403,
+    "lift_height_err_m": 0.0017938671883561963,
+    "speed_profile_corr": 0.4903143609592543
+   },
+   "estimate_error": {
+    "xy_mm": 0.15412585808005336,
+    "z_mm": 0.5008367587575717,
+    "yaw_deg": 0.9429857479330448,
+    "goal_xy_mm": 0.607680774002933
+   }
+  },
+  {
+   "robot": "ur10e",
+   "seed": 1,
+   "half_mm": 25.0,
+   "cond": "depth",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.014072803315940045,
+     "carry": 0.019915220366950686,
+     "retreat": 0.00885503321914287
+    },
+    "path_rmse_mean_m": 0.014281018967344532,
+    "approach_angle_deg": 2.733398141591378,
+    "lift_height_err_m": 0.0020134050150626415,
+    "speed_profile_corr": 0.45028733761289014
+   },
+   "estimate_error": {
+    "xy_mm": 0.13793455515097985,
+    "z_mm": 0.5953913361986078,
+    "yaw_deg": 1.4823847737332536,
+    "goal_xy_mm": 0.5881476106344086
+   }
+  },
+  {
+   "robot": "ur10e",
+   "seed": 2,
+   "half_mm": 25.0,
+   "cond": "depth",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.014040477157864072,
+     "carry": 0.02202444961090603,
+     "retreat": 0.008838954972322182
+    },
+    "path_rmse_mean_m": 0.014967960580364094,
+    "approach_angle_deg": 2.7292220382804575,
+    "lift_height_err_m": 0.0019844292851855516,
+    "speed_profile_corr": 0.48813526649231165
+   },
+   "estimate_error": {
+    "xy_mm": 0.2935395727409722,
+    "z_mm": 0.6275942889868401,
+    "yaw_deg": 1.1459638620169277,
+    "goal_xy_mm": 0.5949708479266235
+   }
+  },
+  {
+   "robot": "ur10e",
+   "seed": 3,
+   "half_mm": 25.0,
+   "cond": "depth",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.014045818737520586,
+     "carry": 0.02222661211102257,
+     "retreat": 0.00883755350494001
+    },
+    "path_rmse_mean_m": 0.015036661451161054,
+    "approach_angle_deg": 2.7279268945300714,
+    "lift_height_err_m": 0.0018020726974344314,
+    "speed_profile_corr": 0.4916428691520557
+   },
+   "estimate_error": {
+    "xy_mm": 0.3383321917848689,
+    "z_mm": 0.589232659917234,
+    "yaw_deg": 0.820451685374308,
+    "goal_xy_mm": 0.5711053997976556
+   }
+  },
+  {
+   "robot": "ur10e",
+   "seed": 4,
+   "half_mm": 25.0,
+   "cond": "depth",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.014035152864929571,
+     "carry": 0.02136350269680966,
+     "retreat": 0.008805063840401877
+    },
+    "path_rmse_mean_m": 0.014734573134047036,
+    "approach_angle_deg": 2.7329637642694897,
+    "lift_height_err_m": 0.001760516854915406,
+    "speed_profile_corr": 0.47762278265482366
+   },
+   "estimate_error": {
+    "xy_mm": 0.32586343701267934,
+    "z_mm": 0.6321618549973845,
+    "yaw_deg": 0.8365138952638822,
+    "goal_xy_mm": 0.6138040865136916
+   }
+  },
+  {
+   "robot": "ur10e",
+   "seed": 5,
+   "half_mm": 25.0,
+   "cond": "depth",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.014112815920106369,
+     "carry": 0.02038322033420719,
+     "retreat": 0.008754203733083828
+    },
+    "path_rmse_mean_m": 0.014416746662465793,
+    "approach_angle_deg": 2.733795643299382,
+    "lift_height_err_m": 0.001737699353285188,
+    "speed_profile_corr": 0.4607523511924366
+   },
+   "estimate_error": {
+    "xy_mm": 0.23354688587433317,
+    "z_mm": 0.7015587290711035,
+    "yaw_deg": 0.8501582739195082,
+    "goal_xy_mm": 0.6078146758947518
+   }
+  },
+  {
+   "robot": "ur10e",
+   "seed": 6,
+   "half_mm": 25.0,
+   "cond": "depth",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.01404526183549546,
+     "carry": 0.021893865979357833,
+     "retreat": 0.008854339419251652
+    },
+    "path_rmse_mean_m": 0.014931155744701649,
+    "approach_angle_deg": 2.730798121195642,
+    "lift_height_err_m": 0.0018314209487604316,
+    "speed_profile_corr": 0.48502558161244935
+   },
+   "estimate_error": {
+    "xy_mm": 0.4058402024308502,
+    "z_mm": 0.5862413857064819,
+    "yaw_deg": 1.612191061624711,
+    "goal_xy_mm": 0.582479553349797
+   }
+  },
+  {
+   "robot": "ur10e",
+   "seed": 7,
+   "half_mm": 25.0,
+   "cond": "depth",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.014087125913646959,
+     "carry": 0.0200936559729493,
+     "retreat": 0.008843437316970758
+    },
+    "path_rmse_mean_m": 0.014341406401189007,
+    "approach_angle_deg": 2.733583469425208,
+    "lift_height_err_m": 0.001938514447564238,
+    "speed_profile_corr": 0.45357572293151904
+   },
+   "estimate_error": {
+    "xy_mm": 0.11636367812831482,
+    "z_mm": 0.59340949763962,
+    "yaw_deg": 0.5275834680529486,
+    "goal_xy_mm": 0.5939677294030541
+   }
+  },
+  {
+   "robot": "ur10e",
+   "seed": 8,
+   "half_mm": 25.0,
+   "cond": "depth",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.014112787391381536,
+     "carry": 0.01975182867388586,
+     "retreat": 0.008894187477872543
+    },
+    "path_rmse_mean_m": 0.01425293451437998,
+    "approach_angle_deg": 2.7328066167569967,
+    "lift_height_err_m": 0.0019467863099085492,
+    "speed_profile_corr": 0.4481223590429011
+   },
+   "estimate_error": {
+    "xy_mm": 0.3612330153207744,
+    "z_mm": 0.6374591392155106,
+    "yaw_deg": 1.0860762147234908,
+    "goal_xy_mm": 0.5987876877331837
+   }
+  },
+  {
+   "robot": "ur10e",
+   "seed": 9,
+   "half_mm": 25.0,
+   "cond": "depth",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.014039547888998727,
+     "carry": 0.022106248396785586,
+     "retreat": 0.008828177767495692
+    },
+    "path_rmse_mean_m": 0.014991324684426668,
+    "approach_angle_deg": 2.7318343104763345,
+    "lift_height_err_m": 0.0017111139052031488,
+    "speed_profile_corr": 0.48946504374448524
+   },
+   "estimate_error": {
+    "xy_mm": 0.2606319380636294,
+    "z_mm": 0.5701228862549611,
+    "yaw_deg": 0.9360558773456698,
+    "goal_xy_mm": 0.6192023631842997
+   }
+  },
+  {
+   "robot": "ur10e",
+   "seed": 0,
+   "half_mm": 30.0,
+   "cond": "depth",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.013946393390879766,
+     "carry": 0.022126902610641097,
+     "retreat": 0.008863763897049511
+    },
+    "path_rmse_mean_m": 0.014979019966190124,
+    "approach_angle_deg": 2.731021070851967,
+    "lift_height_err_m": 0.002032963868827259,
+    "speed_profile_corr": 0.5030673954332866
+   },
+   "estimate_error": {
+    "xy_mm": 0.36617233010988565,
+    "z_mm": 0.5380998004061478,
+    "yaw_deg": 1.9429857479330335,
+    "goal_xy_mm": 0.6076829264420394
+   }
+  },
+  {
+   "robot": "ur10e",
+   "seed": 1,
+   "half_mm": 30.0,
+   "cond": "depth",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.014091076954642822,
+     "carry": 0.019938231338260944,
+     "retreat": 0.008849465638942577
+    },
+    "path_rmse_mean_m": 0.014292924643948782,
+    "approach_angle_deg": 2.733513706762054,
+    "lift_height_err_m": 0.0020524409029790136,
+    "speed_profile_corr": 0.4647387023695545
+   },
+   "estimate_error": {
+    "xy_mm": 0.17816129200372013,
+    "z_mm": 0.6050346977899517,
+    "yaw_deg": 1.5176152262667124,
+    "goal_xy_mm": 0.5881508174955361
+   }
+  },
+  {
+   "robot": "ur10e",
+   "seed": 2,
+   "half_mm": 30.0,
+   "cond": "depth",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.014038043728073563,
+     "carry": 0.022078896169513175,
+     "retreat": 0.008863114358357169
+    },
+    "path_rmse_mean_m": 0.01499335141864797,
+    "approach_angle_deg": 2.7293901695301934,
+    "lift_height_err_m": 0.0019464316738656007,
+    "speed_profile_corr": 0.5014925549895739
+   },
+   "estimate_error": {
+    "xy_mm": 0.1922663811380122,
+    "z_mm": 0.5758523422896635,
+    "yaw_deg": 0.14596386201691355,
+    "goal_xy_mm": 0.5949681856483794
+   }
+  },
+  {
+   "robot": "ur10e",
+   "seed": 3,
+   "half_mm": 30.0,
+   "cond": "depth",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.014050111819535156,
+     "carry": 0.022221020571960803,
+     "retreat": 0.008828120524156156
+    },
+    "path_rmse_mean_m": 0.015033084305217373,
+    "approach_angle_deg": 2.728148917797691,
+    "lift_height_err_m": 0.002054839776995415,
+    "speed_profile_corr": 0.5041390242485507
+   },
+   "estimate_error": {
+    "xy_mm": 0.32791773864862483,
+    "z_mm": 0.6069049548543294,
+    "yaw_deg": 1.8204516853743031,
+    "goal_xy_mm": 0.5711110270741863
+   }
+  },
+  {
+   "robot": "ur10e",
+   "seed": 4,
+   "half_mm": 30.0,
+   "cond": "depth",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.01408508314341582,
+     "carry": 0.0213777597579692,
+     "retreat": 0.008826361450954114
+    },
+    "path_rmse_mean_m": 0.014763068117446378,
+    "approach_angle_deg": 2.7330314208094,
+    "lift_height_err_m": 0.0019551799685006976,
+    "speed_profile_corr": 0.4911019950983041
+   },
+   "estimate_error": {
+    "xy_mm": 0.2176707925137029,
+    "z_mm": 0.585672712174478,
+    "yaw_deg": 0.8365138952638822,
+    "goal_xy_mm": 0.6138007311617485
+   }
+  },
+  {
+   "robot": "ur10e",
+   "seed": 5,
+   "half_mm": 30.0,
+   "cond": "depth",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.014141320290475502,
+     "carry": 0.02038428587546358,
+     "retreat": 0.008764462226093436
+    },
+    "path_rmse_mean_m": 0.014430022797344172,
+    "approach_angle_deg": 2.733866197296235,
+    "lift_height_err_m": 0.0018946854400571367,
+    "speed_profile_corr": 0.47395817277567726
+   },
+   "estimate_error": {
+    "xy_mm": 0.12524325820942037,
+    "z_mm": 0.6774591645604746,
+    "yaw_deg": 0.149841726080506,
+    "goal_xy_mm": 0.6078224831450286
+   }
+  },
+  {
+   "robot": "ur10e",
+   "seed": 6,
+   "half_mm": 30.0,
+   "cond": "depth",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.013979847503672524,
+     "carry": 0.021883771031123902,
+     "retreat": 0.008859606366204916
+    },
+    "path_rmse_mean_m": 0.014907741633667116,
+    "approach_angle_deg": 2.7309203104841635,
+    "lift_height_err_m": 0.0020672143926994124,
+    "speed_profile_corr": 0.4982294908370874
+   },
+   "estimate_error": {
+    "xy_mm": 0.34442524649596157,
+    "z_mm": 0.5735507301846167,
+    "yaw_deg": 1.612191061624711,
+    "goal_xy_mm": 0.5824812686820041
+   }
+  },
+  {
+   "robot": "ur10e",
+   "seed": 7,
+   "half_mm": 30.0,
+   "cond": "depth",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.014186490448098308,
+     "carry": 0.020126522094758778,
+     "retreat": 0.008834407053309005
+    },
+    "path_rmse_mean_m": 0.01438247319872203,
+    "approach_angle_deg": 2.733656796511146,
+    "lift_height_err_m": 0.002075054650660768,
+    "speed_profile_corr": 0.46827969458417723
+   },
+   "estimate_error": {
+    "xy_mm": 0.10466074664628626,
+    "z_mm": 0.610287674729662,
+    "yaw_deg": 1.4724165319470541,
+    "goal_xy_mm": 0.5939700376371196
+   }
+  },
+  {
+   "robot": "ur10e",
+   "seed": 8,
+   "half_mm": 30.0,
+   "cond": "depth",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.014061064262395773,
+     "carry": 0.019767843458532327,
+     "retreat": 0.008924526605944776
+    },
+    "path_rmse_mean_m": 0.014251144775624293,
+    "approach_angle_deg": 2.73292109479449,
+    "lift_height_err_m": 0.0021940849750536062,
+    "speed_profile_corr": 0.461623686765395
+   },
+   "estimate_error": {
+    "xy_mm": 0.18835715856368773,
+    "z_mm": 0.5743005494341196,
+    "yaw_deg": 0.9139237852765056,
+    "goal_xy_mm": 0.5987847915216915
+   }
+  },
+  {
+   "robot": "ur10e",
+   "seed": 9,
+   "half_mm": 30.0,
+   "cond": "depth",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.01394339047297454,
+     "carry": 0.02207918283731438,
+     "retreat": 0.008841478372211829
+    },
+    "path_rmse_mean_m": 0.014954683894166917,
+    "approach_angle_deg": 2.7319319447843977,
+    "lift_height_err_m": 0.0019775122083760532,
+    "speed_profile_corr": 0.5025921711665154
+   },
+   "estimate_error": {
+    "xy_mm": 0.38492261135875366,
+    "z_mm": 0.540692911472438,
+    "yaw_deg": 1.936055877345684,
+    "goal_xy_mm": 0.6191973556455774
+   }
+  },
+  {
+   "robot": "ur10e",
+   "seed": 0,
+   "half_mm": 35.0,
+   "cond": "depth",
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.014034581288953412,
+     "carry": 0.02194685014180754,
+     "retreat": 0.008865066285669737
+    },
+    "path_rmse_mean_m": 0.014948832572143562,
+    "approach_angle_deg": 2.708614288870978,
+    "lift_height_err_m": 0.002102548375937513,
+    "speed_profile_corr": 0.4753845776326474
+   },
+   "estimate_error": {
+    "xy_mm": 0.24142001152723402,
+    "z_mm": 0.5336650317330562,
+    "yaw_deg": 2.0570142520669723,
+    "goal_xy_mm": 0.6076817942648879
+   }
+  },
+  {
+   "robot": "ur10e",
+   "seed": 1,
+   "half_mm": 35.0,
+   "cond": "depth",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.014082349757444185,
+     "carry": 0.019941389827323627,
+     "retreat": 0.008836711725166695
+    },
+    "path_rmse_mean_m": 0.014286817103311504,
+    "approach_angle_deg": 2.733622716926108,
+    "lift_height_err_m": 0.0024210202218085952,
+    "speed_profile_corr": 0.485269845330967
+   },
+   "estimate_error": {
+    "xy_mm": 0.1891031104179492,
+    "z_mm": 0.6296217118720443,
+    "yaw_deg": 0.5176152262667237,
+    "goal_xy_mm": 0.5881491600989006
+   }
+  },
+  {
+   "robot": "ur10e",
+   "seed": 2,
+   "half_mm": 35.0,
+   "cond": "depth",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.013998616756321428,
+     "carry": 0.02208818858483941,
+     "retreat": 0.0088588847701881
+    },
+    "path_rmse_mean_m": 0.014981896703782978,
+    "approach_angle_deg": 2.7295766285585166,
+    "lift_height_err_m": 0.0023411428776421717,
+    "speed_profile_corr": 0.519347465302252
+   },
+   "estimate_error": {
+    "xy_mm": 0.29764011575271404,
+    "z_mm": 0.5829188730720053,
+    "yaw_deg": 0.14596386201691355,
+    "goal_xy_mm": 0.594967136950594
+   }
+  },
+  {
+   "robot": "ur10e",
+   "seed": 3,
+   "half_mm": 35.0,
+   "cond": "depth",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.014040297986020512,
+     "carry": 0.022209515931201896,
+     "retreat": 0.008829053598978615
+    },
+    "path_rmse_mean_m": 0.015026289172067006,
+    "approach_angle_deg": 2.7283751110408754,
+    "lift_height_err_m": 0.002288323050379043,
+    "speed_profile_corr": 0.5213554207395903
+   },
+   "estimate_error": {
+    "xy_mm": 0.34559751157376795,
+    "z_mm": 0.6034425493910909,
+    "yaw_deg": 1.1795483146256946,
+    "goal_xy_mm": 0.5711069517140192
+   }
+  },
+  {
+   "robot": "ur10e",
+   "seed": 4,
+   "half_mm": 35.0,
+   "cond": "depth",
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.014027330032992306,
+     "carry": 0.021258499290576105,
+     "retreat": 0.008826326080338863
+    },
+    "path_rmse_mean_m": 0.014704051801302425,
+    "approach_angle_deg": 2.720559326505772,
+    "lift_height_err_m": 0.0021461935578049873,
+    "speed_profile_corr": 0.4619250402495598
+   },
+   "estimate_error": {
+    "xy_mm": 0.27845969908959284,
+    "z_mm": 0.5836795604827818,
+    "yaw_deg": 0.16348610473610647,
+    "goal_xy_mm": 0.6138106789932126
+   }
+  },
+  {
+   "robot": "ur10e",
+   "seed": 5,
+   "half_mm": 35.0,
+   "cond": "depth",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.014083995124544878,
+     "carry": 0.020374047010804756,
+     "retreat": 0.00876787895084829
+    },
+    "path_rmse_mean_m": 0.014408640362065975,
+    "approach_angle_deg": 2.726297327655804,
+    "lift_height_err_m": 0.002222433832137577,
+    "speed_profile_corr": 0.49348504657049896
+   },
+   "estimate_error": {
+    "xy_mm": 0.2713294456641441,
+    "z_mm": 0.6686159280758566,
+    "yaw_deg": 0.149841726080506,
+    "goal_xy_mm": 0.607811317685069
+   }
+  },
+  {
+   "robot": "ur10e",
+   "seed": 6,
+   "half_mm": 35.0,
+   "cond": "depth",
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.014020983967702952,
+     "carry": 0.02172403362452752,
+     "retreat": 0.008861974290285025
+    },
+    "path_rmse_mean_m": 0.014868997294171833,
+    "approach_angle_deg": 2.720959414277491,
+    "lift_height_err_m": 0.0022474111493131776,
+    "speed_profile_corr": 0.47057664983919517
+   },
+   "estimate_error": {
+    "xy_mm": 0.356036938047997,
+    "z_mm": 0.567182968346909,
+    "yaw_deg": 1.612191061624711,
+    "goal_xy_mm": 0.5824683160138506
+   }
+  },
+  {
+   "robot": "ur10e",
+   "seed": 7,
+   "half_mm": 35.0,
+   "cond": "depth",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.014103782752917744,
+     "carry": 0.020127795661976478,
+     "retreat": 0.008841850613457655
+    },
+    "path_rmse_mean_m": 0.014357809676117292,
+    "approach_angle_deg": 2.733763994475854,
+    "lift_height_err_m": 0.002361025455012572,
+    "speed_profile_corr": 0.4878264812777061
+   },
+   "estimate_error": {
+    "xy_mm": 0.056818503385210474,
+    "z_mm": 0.5933145039535292,
+    "yaw_deg": 1.52758346805295,
+    "goal_xy_mm": 0.5939618910188296
+   }
+  },
+  {
+   "robot": "ur10e",
+   "seed": 8,
+   "half_mm": 35.0,
+   "cond": "depth",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.014072535543764775,
+     "carry": 0.019753416313269167,
+     "retreat": 0.008906922069170107
+    },
+    "path_rmse_mean_m": 0.014244291308734683,
+    "approach_angle_deg": 2.7330618160657965,
+    "lift_height_err_m": 0.002475410560085489,
+    "speed_profile_corr": 0.48067800889709283
+   },
+   "estimate_error": {
+    "xy_mm": 0.2581811513904551,
+    "z_mm": 0.608387662098482,
+    "yaw_deg": 1.0860762147234908,
+    "goal_xy_mm": 0.5987832664779912
+   }
+  },
+  {
+   "robot": "ur10e",
+   "seed": 9,
+   "half_mm": 35.0,
+   "cond": "depth",
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.014002554460083413,
+     "carry": 0.021891369357089997,
+     "retreat": 0.0088281024032389
+    },
+    "path_rmse_mean_m": 0.014907342073470768,
+    "approach_angle_deg": 2.715921609139996,
+    "lift_height_err_m": 0.002089466320298855,
+    "speed_profile_corr": 0.4732267240896281
+   },
+   "estimate_error": {
+    "xy_mm": 0.35067421615054284,
+    "z_mm": 0.5668930139047859,
+    "yaw_deg": 0.06394412265431892,
+    "goal_xy_mm": 0.6191960676399093
+   }
+  },
+  {
+   "robot": "ur10e",
+   "seed": 0,
+   "half_mm": 25.0,
+   "cond": "depth_hard",
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.019673387195228362,
+     "carry": 0.027918041928568817,
+     "retreat": 0.00945276017458891
+    },
+    "path_rmse_mean_m": 0.019014729766128696,
+    "approach_angle_deg": 2.7294241242591535,
+    "lift_height_err_m": 0.0017655105921948466,
+    "speed_profile_corr": 0.16473630766887606
+   },
+   "estimate_error": {
+    "xy_mm": 8.753983586620086,
+    "z_mm": 2.530026349635818,
+    "yaw_deg": 1.9429857479330335,
+    "goal_xy_mm": 12.084241644413725
+   }
+  },
+  {
+   "robot": "ur10e",
+   "seed": 1,
+   "half_mm": 25.0,
+   "cond": "depth_hard",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.013006072484566174,
+     "carry": 0.017913509447790205,
+     "retreat": 0.012489165448350067
+    },
+    "path_rmse_mean_m": 0.014469582460235483,
+    "approach_angle_deg": 2.7401505146937404,
+    "lift_height_err_m": 0.0018785675638889332,
+    "speed_profile_corr": -0.069450489075716
+   },
+   "estimate_error": {
+    "xy_mm": 11.808996027755107,
+    "z_mm": 1.245794483955849,
+    "yaw_deg": 0.5176152262667237,
+    "goal_xy_mm": 11.945977482062187
+   }
+  },
+  {
+   "robot": "ur10e",
+   "seed": 2,
+   "half_mm": 25.0,
+   "cond": "depth_hard",
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.014268669468865867,
+     "carry": 0.057299229571479836,
+     "retreat": 0.010338861857853002
+    },
+    "path_rmse_mean_m": 0.027302253632732903,
+    "approach_angle_deg": 2.7250780788815248,
+    "lift_height_err_m": 0.0017730397554635013,
+    "speed_profile_corr": 0.032693463002702504
+   },
+   "estimate_error": {
+    "xy_mm": 13.36224433695142,
+    "z_mm": 1.6476608392541372,
+    "yaw_deg": 2.8540361379830523,
+    "goal_xy_mm": 12.742053128909534
+   }
+  },
+  {
+   "robot": "ur10e",
+   "seed": 3,
+   "half_mm": 25.0,
+   "cond": "depth_hard",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.01403320091776048,
+     "carry": 0.027213208005527807,
+     "retreat": 0.011469601458593486
+    },
+    "path_rmse_mean_m": 0.017572003460627258,
+    "approach_angle_deg": 2.7189614738920733,
+    "lift_height_err_m": 0.0016359448888122463,
+    "speed_profile_corr": 0.06763859452706965
+   },
+   "estimate_error": {
+    "xy_mm": 13.841332946528533,
+    "z_mm": 3.91429404051883,
+    "yaw_deg": 0.17954831462569334,
+    "goal_xy_mm": 12.408028633525273
+   }
+  },
+  {
+   "robot": "ur10e",
+   "seed": 4,
+   "half_mm": 25.0,
+   "cond": "depth_hard",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.0157488219123056,
+     "carry": 0.025742146469274006,
+     "retreat": 0.011097324120451574
+    },
+    "path_rmse_mean_m": 0.01752943083401039,
+    "approach_angle_deg": 2.7345240024017214,
+    "lift_height_err_m": 0.0012658322128489552,
+    "speed_profile_corr": 0.025907813461820767
+   },
+   "estimate_error": {
+    "xy_mm": 8.501694389239287,
+    "z_mm": 2.3456997174532424,
+    "yaw_deg": 2.836513895263885,
+    "goal_xy_mm": 9.918790847674796
+   }
+  },
+  {
+   "robot": "ur10e",
+   "seed": 5,
+   "half_mm": 25.0,
+   "cond": "depth_hard",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.02526483808843597,
+     "carry": 0.02814399036777954,
+     "retreat": 0.01855780230166243
+    },
+    "path_rmse_mean_m": 0.023988876919292648,
+    "approach_angle_deg": 2.7371221149818137,
+    "lift_height_err_m": 0.0016246570145060923,
+    "speed_profile_corr": 0.14725621299732075
+   },
+   "estimate_error": {
+    "xy_mm": 16.047615840878738,
+    "z_mm": 0.09228164185019067,
+    "yaw_deg": 1.8501582739194968,
+    "goal_xy_mm": 15.610150181012564
+   }
+  },
+  {
+   "robot": "ur10e",
+   "seed": 6,
+   "half_mm": 25.0,
+   "cond": "depth_hard",
+   "success": false,
+   "reasons": [
+    "not_released_and_settled_at_goal"
+   ],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.016912411543235983,
+     "carry": 0.026101233007712842,
+     "retreat": 0.013269334548787847
+    },
+    "path_rmse_mean_m": 0.01876099303324556,
+    "approach_angle_deg": 2.7294381016064877,
+    "lift_height_err_m": 0.001738555408589998,
+    "speed_profile_corr": 0.053226921317626144
+   },
+   "estimate_error": {
+    "xy_mm": 5.551920368653977,
+    "z_mm": 0.03405934320461698,
+    "yaw_deg": 1.3878089383752805,
+    "goal_xy_mm": 5.4923660521950985
+   }
+  },
+  {
+   "robot": "ur10e",
+   "seed": 7,
+   "half_mm": 25.0,
+   "cond": "depth_hard",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.022173542734587586,
+     "carry": 0.02405076122525306,
+     "retreat": 0.012697308487983668
+    },
+    "path_rmse_mean_m": 0.019640537482608106,
+    "approach_angle_deg": 2.738593297864108,
+    "lift_height_err_m": 0.0017938903266526696,
+    "speed_profile_corr": -0.009296855179508484
+   },
+   "estimate_error": {
+    "xy_mm": 14.553974545099129,
+    "z_mm": 0.5253347645058013,
+    "yaw_deg": 2.4724165319470557,
+    "goal_xy_mm": 13.054146131896394
+   }
+  },
+  {
+   "robot": "ur10e",
+   "seed": 8,
+   "half_mm": 25.0,
+   "cond": "depth_hard",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.015954242443417452,
+     "carry": 0.01633877630957824,
+     "retreat": 0.00927751787383095
+    },
+    "path_rmse_mean_m": 0.013856845542275549,
+    "approach_angle_deg": 2.738079990419446,
+    "lift_height_err_m": 0.002137318052793019,
+    "speed_profile_corr": -0.037053923841204386
+   },
+   "estimate_error": {
+    "xy_mm": 7.986698920429069,
+    "z_mm": 3.419501789647412,
+    "yaw_deg": 0.9139237852765056,
+    "goal_xy_mm": 9.350944736258503
+   }
+  },
+  {
+   "robot": "ur10e",
+   "seed": 9,
+   "half_mm": 25.0,
+   "cond": "depth_hard",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.022018623138075934,
+     "carry": 0.028690607410760037,
+     "retreat": 0.009747757757493614
+    },
+    "path_rmse_mean_m": 0.020152329435443195,
+    "approach_angle_deg": 2.7317006205791436,
+    "lift_height_err_m": 0.0015437870368615603,
+    "speed_profile_corr": 0.024357099490051055
+   },
+   "estimate_error": {
+    "xy_mm": 10.453044318078186,
+    "z_mm": 4.055585363440403,
+    "yaw_deg": 1.936055877345684,
+    "goal_xy_mm": 9.594931315920533
+   }
+  },
+  {
+   "robot": "ur10e",
+   "seed": 0,
+   "half_mm": 30.0,
+   "cond": "depth_hard",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.019944295619690952,
+     "carry": 0.032390198497916536,
+     "retreat": 0.009415256449418425
+    },
+    "path_rmse_mean_m": 0.020583250189008636,
+    "approach_angle_deg": 2.729506615430461,
+    "lift_height_err_m": 0.0020465794761747036,
+    "speed_profile_corr": 0.17355806031486862
+   },
+   "estimate_error": {
+    "xy_mm": 9.140536029237222,
+    "z_mm": 2.5447790204968133,
+    "yaw_deg": 0.9429857479330448,
+    "goal_xy_mm": 12.084234345599778
+   }
+  },
+  {
+   "robot": "ur10e",
+   "seed": 1,
+   "half_mm": 30.0,
+   "cond": "depth_hard",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.013038253847389604,
+     "carry": 0.018022292636106607,
+     "retreat": 0.012090213427692242
+    },
+    "path_rmse_mean_m": 0.014383586637062818,
+    "approach_angle_deg": 2.740143036975751,
+    "lift_height_err_m": 0.0017029417685933412,
+    "speed_profile_corr": -0.05381504570270869
+   },
+   "estimate_error": {
+    "xy_mm": 11.841914382029001,
+    "z_mm": 1.2917669706591084,
+    "yaw_deg": 0.5176152262667237,
+    "goal_xy_mm": 11.945976770578465
+   }
+  },
+  {
+   "robot": "ur10e",
+   "seed": 2,
+   "half_mm": 30.0,
+   "cond": "depth_hard",
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.014374841456324495,
+     "carry": 0.025706131109698882,
+     "retreat": 0.010687498253510808
+    },
+    "path_rmse_mean_m": 0.016922823606511393,
+    "approach_angle_deg": 2.7253949816657688,
+    "lift_height_err_m": 0.0015652703437125104,
+    "speed_profile_corr": 0.06545582306107958
+   },
+   "estimate_error": {
+    "xy_mm": 13.58871816036031,
+    "z_mm": 1.6464411773618806,
+    "yaw_deg": 0.8540361379830751,
+    "goal_xy_mm": 12.742058369151756
+   }
+  },
+  {
+   "robot": "ur10e",
+   "seed": 3,
+   "half_mm": 30.0,
+   "cond": "depth_hard",
+   "success": false,
+   "reasons": [
+    "not_released_and_settled_at_goal"
+   ],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.013912924115959291,
+     "carry": 0.026907337563210173,
+     "retreat": 0.011325703948037452
+    },
+    "path_rmse_mean_m": 0.017381988542402308,
+    "approach_angle_deg": 2.7194333277603144,
+    "lift_height_err_m": 0.0020235257552990993,
+    "speed_profile_corr": 0.0770126630628039
+   },
+   "estimate_error": {
+    "xy_mm": 13.7036998895258,
+    "z_mm": 3.739669506255431,
+    "yaw_deg": 0.17954831462569334,
+    "goal_xy_mm": 12.408009588656961
+   }
+  },
+  {
+   "robot": "ur10e",
+   "seed": 4,
+   "half_mm": 30.0,
+   "cond": "depth_hard",
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.016402677862078316,
+     "carry": 0.025914613514654253,
+     "retreat": 0.010866178099745286
+    },
+    "path_rmse_mean_m": 0.017727823158825953,
+    "approach_angle_deg": 2.726033773543685,
+    "lift_height_err_m": 0.0018051069788402874,
+    "speed_profile_corr": 0.026533334813800782
+   },
+   "estimate_error": {
+    "xy_mm": 9.195180221424211,
+    "z_mm": 2.0967159509202653,
+    "yaw_deg": 0.16348610473610647,
+    "goal_xy_mm": 9.918774462709843
+   }
+  },
+  {
+   "robot": "ur10e",
+   "seed": 5,
+   "half_mm": 30.0,
+   "cond": "depth_hard",
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.025253443214894818,
+     "carry": 0.028110423961374528,
+     "retreat": 0.009962416201056003
+    },
+    "path_rmse_mean_m": 0.021108761125775116,
+    "approach_angle_deg": 2.730440700196588,
+    "lift_height_err_m": 0.0016002479339255749,
+    "speed_profile_corr": -0.01945768919880098
+   },
+   "estimate_error": {
+    "xy_mm": 15.910339771368974,
+    "z_mm": 0.2713408885621805,
+    "yaw_deg": 0.149841726080506,
+    "goal_xy_mm": 15.610163472286263
+   }
+  },
+  {
+   "robot": "ur10e",
+   "seed": 6,
+   "half_mm": 30.0,
+   "cond": "depth_hard",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.016773521873810312,
+     "carry": 0.026035298917965025,
+     "retreat": 0.0131484800831195
+    },
+    "path_rmse_mean_m": 0.018652433624964947,
+    "approach_angle_deg": 2.728355338020458,
+    "lift_height_err_m": 0.0020335395291737057,
+    "speed_profile_corr": 0.05185552237744967
+   },
+   "estimate_error": {
+    "xy_mm": 5.346006254188353,
+    "z_mm": 0.027537482563819854,
+    "yaw_deg": 2.3878089383752945,
+    "goal_xy_mm": 5.492381291154827
+   }
+  },
+  {
+   "robot": "ur10e",
+   "seed": 7,
+   "half_mm": 30.0,
+   "cond": "depth_hard",
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.022293199607276694,
+     "carry": 0.024446146495516966,
+     "retreat": 0.009603213090982925
+    },
+    "path_rmse_mean_m": 0.018780853064592196,
+    "approach_angle_deg": 2.739125682382042,
+    "lift_height_err_m": 0.0018509731420753295,
+    "speed_profile_corr": -0.016056873768751128
+   },
+   "estimate_error": {
+    "xy_mm": 14.57321565631212,
+    "z_mm": 0.5147714620930763,
+    "yaw_deg": 2.4724165319470557,
+    "goal_xy_mm": 13.054154960893833
+   }
+  },
+  {
+   "robot": "ur10e",
+   "seed": 8,
+   "half_mm": 30.0,
+   "cond": "depth_hard",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.01604130466876411,
+     "carry": 0.016273824383370085,
+     "retreat": 0.00943194087942145
+    },
+    "path_rmse_mean_m": 0.013915689977185217,
+    "approach_angle_deg": 2.7381828927586898,
+    "lift_height_err_m": 0.002341275024351608,
+    "speed_profile_corr": -0.03948603004895182
+   },
+   "estimate_error": {
+    "xy_mm": 7.931404852920341,
+    "z_mm": 3.597561499300048,
+    "yaw_deg": 2.086076214723492,
+    "goal_xy_mm": 9.350947071152156
+   }
+  },
+  {
+   "robot": "ur10e",
+   "seed": 9,
+   "half_mm": 30.0,
+   "cond": "depth_hard",
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.022081889918981728,
+     "carry": 0.02853587457657609,
+     "retreat": 0.009678294654378366
+    },
+    "path_rmse_mean_m": 0.020098686383312064,
+    "approach_angle_deg": 2.71347569090034,
+    "lift_height_err_m": 0.0016632149457498357,
+    "speed_profile_corr": 0.023282160617864565
+   },
+   "estimate_error": {
+    "xy_mm": 10.601265386159984,
+    "z_mm": 4.14951005452895,
+    "yaw_deg": 1.0639441226543076,
+    "goal_xy_mm": 9.594953690220484
+   }
+  },
+  {
+   "robot": "ur10e",
+   "seed": 0,
+   "half_mm": 35.0,
+   "cond": "depth_hard",
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.01979883886789289,
+     "carry": 0.02735462278560916,
+     "retreat": 0.008586366821127919
+    },
+    "path_rmse_mean_m": 0.01857994282487666,
+    "approach_angle_deg": 2.7296372242143145,
+    "lift_height_err_m": 0.002319406298474408,
+    "speed_profile_corr": 0.1495663351089751
+   },
+   "estimate_error": {
+    "xy_mm": 8.931904828049577,
+    "z_mm": 2.51554161026802,
+    "yaw_deg": 0.057014252066969334,
+    "goal_xy_mm": 12.084227953521514
+   }
+  },
+  {
+   "robot": "ur10e",
+   "seed": 1,
+   "half_mm": 35.0,
+   "cond": "depth_hard",
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.012819470571804324,
+     "carry": 0.017506689448830794,
+     "retreat": 0.01211313917942007
+    },
+    "path_rmse_mean_m": 0.014146433066685062,
+    "approach_angle_deg": 2.735548309231803,
+    "lift_height_err_m": 0.0021712519721106827,
+    "speed_profile_corr": -0.050965876160086375
+   },
+   "estimate_error": {
+    "xy_mm": 11.277160212959133,
+    "z_mm": 1.1625759790406671,
+    "yaw_deg": 0.48238477373326494,
+    "goal_xy_mm": 11.945976878386078
+   }
+  },
+  {
+   "robot": "ur10e",
+   "seed": 2,
+   "half_mm": 35.0,
+   "cond": "depth_hard",
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.014556885368046243,
+     "carry": 0.029298776165466965,
+     "retreat": 0.011719140674349843
+    },
+    "path_rmse_mean_m": 0.018524934069287683,
+    "approach_angle_deg": 2.6774799913500997,
+    "lift_height_err_m": 0.002264138004589744,
+    "speed_profile_corr": 0.05754695949693571
+   },
+   "estimate_error": {
+    "xy_mm": 13.543474330067511,
+    "z_mm": 1.5304284305616838,
+    "yaw_deg": 0.14596386201691355,
+    "goal_xy_mm": 12.742077507646503
+   }
+  },
+  {
+   "robot": "ur10e",
+   "seed": 3,
+   "half_mm": 35.0,
+   "cond": "depth_hard",
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.014047678339362477,
+     "carry": 0.026362660233023957,
+     "retreat": 0.011293551381166176
+    },
+    "path_rmse_mean_m": 0.017234629984517535,
+    "approach_angle_deg": 2.6460857242243296,
+    "lift_height_err_m": 0.004754694606952464,
+    "speed_profile_corr": 0.07724713858852814
+   },
+   "estimate_error": {
+    "xy_mm": 13.616098003455773,
+    "z_mm": 3.6420832901315134,
+    "yaw_deg": 0.17954831462569334,
+    "goal_xy_mm": 12.407980468213212
+   }
+  },
+  {
+   "robot": "ur10e",
+   "seed": 4,
+   "half_mm": 35.0,
+   "cond": "depth_hard",
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.016122098213574756,
+     "carry": 0.026143650462416183,
+     "retreat": 0.010855336275042359
+    },
+    "path_rmse_mean_m": 0.017707028317011098,
+    "approach_angle_deg": 2.7236959252937236,
+    "lift_height_err_m": 0.0026271175883115783,
+    "speed_profile_corr": 0.024716030989412052
+   },
+   "estimate_error": {
+    "xy_mm": 8.905680730197568,
+    "z_mm": 2.1196787088160822,
+    "yaw_deg": 0.16348610473610647,
+    "goal_xy_mm": 9.918786415228228
+   }
+  },
+  {
+   "robot": "ur10e",
+   "seed": 5,
+   "half_mm": 35.0,
+   "cond": "depth_hard",
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.025396165970796115,
+     "carry": 0.02888120651947976,
+     "retreat": 0.009971129382076683
+    },
+    "path_rmse_mean_m": 0.021416167290784188,
+    "approach_angle_deg": 2.7332388697673706,
+    "lift_height_err_m": 0.001860284714610555,
+    "speed_profile_corr": -0.026754295225219493
+   },
+   "estimate_error": {
+    "xy_mm": 16.086555541530778,
+    "z_mm": 0.27572525139482607,
+    "yaw_deg": 0.149841726080506,
+    "goal_xy_mm": 15.610180581346484
+   }
+  },
+  {
+   "robot": "ur10e",
+   "seed": 6,
+   "half_mm": 35.0,
+   "cond": "depth_hard",
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.01685979889448685,
+     "carry": 0.025886104643051074,
+     "retreat": 0.013217253864534094
+    },
+    "path_rmse_mean_m": 0.018654385800690673,
+    "approach_angle_deg": 2.7197795801062337,
+    "lift_height_err_m": 0.002349357290009263,
+    "speed_profile_corr": 0.057307985205691504
+   },
+   "estimate_error": {
+    "xy_mm": 5.3332417345559575,
+    "z_mm": 0.07486168461335457,
+    "yaw_deg": 2.3878089383752945,
+    "goal_xy_mm": 5.49236040491691
+   }
+  },
+  {
+   "robot": "ur10e",
+   "seed": 7,
+   "half_mm": 35.0,
+   "cond": "depth_hard",
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.022791506321240208,
+     "carry": 0.02566485184545704,
+     "retreat": 0.009287787652473591
+    },
+    "path_rmse_mean_m": 0.01924804860639028,
+    "approach_angle_deg": 2.747078505705474,
+    "lift_height_err_m": 0.0020329992516329998,
+    "speed_profile_corr": -0.02027416751023883
+   },
+   "estimate_error": {
+    "xy_mm": 15.169223322669147,
+    "z_mm": 0.4551420650741045,
+    "yaw_deg": 1.4724165319470541,
+    "goal_xy_mm": 13.054161455863925
+   }
+  },
+  {
+   "robot": "ur10e",
+   "seed": 8,
+   "half_mm": 35.0,
+   "cond": "depth_hard",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.015986522173598465,
+     "carry": 0.016367956544502238,
+     "retreat": 0.009513190362521485
+    },
+    "path_rmse_mean_m": 0.01395588969354073,
+    "approach_angle_deg": 2.738314775092689,
+    "lift_height_err_m": 0.0027378668514677074,
+    "speed_profile_corr": -0.04109608158631315
+   },
+   "estimate_error": {
+    "xy_mm": 8.173581145496202,
+    "z_mm": 3.5748139316293046,
+    "yaw_deg": 1.0860762147234908,
+    "goal_xy_mm": 9.35080699703158
+   }
+  },
+  {
+   "robot": "ur10e",
+   "seed": 9,
+   "half_mm": 35.0,
+   "cond": "depth_hard",
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.02221847186146709,
+     "carry": 0.028671147362061018,
+     "retreat": 0.009688154363387751
+    },
+    "path_rmse_mean_m": 0.020192591195638623,
+    "approach_angle_deg": 2.708173801224542,
+    "lift_height_err_m": 0.0020591258257502687,
+    "speed_profile_corr": 0.023409003746830578
+   },
+   "estimate_error": {
+    "xy_mm": 10.577599345686808,
+    "z_mm": 4.2039369316742015,
+    "yaw_deg": 0.9360558773456698,
+    "goal_xy_mm": 9.594931157492043
+   }
+  },
+  {
+   "robot": "kairos",
+   "seed": 0,
+   "half_mm": 25.0,
+   "cond": "truth",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.013712694866991547,
+     "carry": 0.022451381625962163,
+     "retreat": 0.009079895111132736
+    },
+    "path_rmse_mean_m": 0.015081323868028814,
+    "approach_angle_deg": 2.7324418623094466,
+    "lift_height_err_m": 0.0023602800361444687,
+    "speed_profile_corr": 0.4860324999853894
+   }
+  },
+  {
+   "robot": "kairos",
+   "seed": 1,
+   "half_mm": 25.0,
+   "cond": "truth",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.01369700202044764,
+     "carry": 0.020229285786236537,
+     "retreat": 0.009079895285225011
+    },
+    "path_rmse_mean_m": 0.01433539436396973,
+    "approach_angle_deg": 2.734918238925059,
+    "lift_height_err_m": 0.002247863124885785,
+    "speed_profile_corr": 0.447675987934715
+   }
+  },
+  {
+   "robot": "kairos",
+   "seed": 2,
+   "half_mm": 25.0,
+   "cond": "truth",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.013705445660343842,
+     "carry": 0.022356936691046384,
+     "retreat": 0.009079895242809942
+    },
+    "path_rmse_mean_m": 0.01504742586473339,
+    "approach_angle_deg": 2.7311078991095115,
+    "lift_height_err_m": 0.0022905222408774184,
+    "speed_profile_corr": 0.4851279600464292
+   }
+  },
+  {
+   "robot": "kairos",
+   "seed": 3,
+   "half_mm": 25.0,
+   "cond": "truth",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.013703647238294977,
+     "carry": 0.022725817958247914,
+     "retreat": 0.009079895398703528
+    },
+    "path_rmse_mean_m": 0.015169786865082137,
+    "approach_angle_deg": 2.7300502660408448,
+    "lift_height_err_m": 0.0022240138062681603,
+    "speed_profile_corr": 0.49040427933855485
+   }
+  },
+  {
+   "robot": "kairos",
+   "seed": 4,
+   "half_mm": 25.0,
+   "cond": "truth",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.013713421513497569,
+     "carry": 0.02173560082308076,
+     "retreat": 0.009079895075200305
+    },
+    "path_rmse_mean_m": 0.01484297247059288,
+    "approach_angle_deg": 2.7343105529531764,
+    "lift_height_err_m": 0.0023111037836309745,
+    "speed_profile_corr": 0.4730479010416032
+   }
+  },
+  {
+   "robot": "kairos",
+   "seed": 5,
+   "half_mm": 25.0,
+   "cond": "truth",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.013705100179086606,
+     "carry": 0.020722993453868587,
+     "retreat": 0.009079895216641425
+    },
+    "path_rmse_mean_m": 0.01450266294986554,
+    "approach_angle_deg": 2.735160867209531,
+    "lift_height_err_m": 0.0023330158845197846,
+    "speed_profile_corr": 0.45628649192904114
+   }
+  },
+  {
+   "robot": "kairos",
+   "seed": 6,
+   "half_mm": 25.0,
+   "cond": "truth",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.01370943092688119,
+     "carry": 0.022261460789915692,
+     "retreat": 0.00907989534800562
+    },
+    "path_rmse_mean_m": 0.015016929021600836,
+    "approach_angle_deg": 2.7323878792589715,
+    "lift_height_err_m": 0.0022805608459563753,
+    "speed_profile_corr": 0.4841964213841112
+   }
+  },
+  {
+   "robot": "kairos",
+   "seed": 7,
+   "half_mm": 25.0,
+   "cond": "truth",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.013700089075346231,
+     "carry": 0.020351909572777886,
+     "retreat": 0.009079895284034578
+    },
+    "path_rmse_mean_m": 0.014377297977386232,
+    "approach_angle_deg": 2.7350343263583246,
+    "lift_height_err_m": 0.0021274558896792473,
+    "speed_profile_corr": 0.4506988113563224
+   }
+  },
+  {
+   "robot": "kairos",
+   "seed": 8,
+   "half_mm": 25.0,
+   "cond": "truth",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.013692965642417562,
+     "carry": 0.020173724731144375,
+     "retreat": 0.009079895348022162
+    },
+    "path_rmse_mean_m": 0.014315528573861367,
+    "approach_angle_deg": 2.7344494966361497,
+    "lift_height_err_m": 0.002187333863500368,
+    "speed_profile_corr": 0.4459913070590133
+   }
+  },
+  {
+   "robot": "kairos",
+   "seed": 9,
+   "half_mm": 25.0,
+   "cond": "truth",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.013716579648837064,
+     "carry": 0.02252866808870645,
+     "retreat": 0.009079895088462965
+    },
+    "path_rmse_mean_m": 0.01510838094200216,
+    "approach_angle_deg": 2.733238805887652,
+    "lift_height_err_m": 0.0023302835870772642,
+    "speed_profile_corr": 0.4865907751008635
+   }
+  },
+  {
+   "robot": "kairos",
+   "seed": 0,
+   "half_mm": 30.0,
+   "cond": "truth",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.013711412498609053,
+     "carry": 0.022467405599474983,
+     "retreat": 0.009078965294638421
+    },
+    "path_rmse_mean_m": 0.015085927797574152,
+    "approach_angle_deg": 2.7326021931109383,
+    "lift_height_err_m": 0.002588164867994902,
+    "speed_profile_corr": 0.5009678806613258
+   }
+  },
+  {
+   "robot": "kairos",
+   "seed": 1,
+   "half_mm": 30.0,
+   "cond": "truth",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.013695683424677082,
+     "carry": 0.020228398064648528,
+     "retreat": 0.009078965075955507
+    },
+    "path_rmse_mean_m": 0.014334348855093706,
+    "approach_angle_deg": 2.735060287308251,
+    "lift_height_err_m": 0.0024640270712344425,
+    "speed_profile_corr": 0.46292104012291885
+   }
+  },
+  {
+   "robot": "kairos",
+   "seed": 2,
+   "half_mm": 30.0,
+   "cond": "truth",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.013704150513326675,
+     "carry": 0.022380173964502446,
+     "retreat": 0.009078965233011212
+    },
+    "path_rmse_mean_m": 0.015054429903613447,
+    "approach_angle_deg": 2.7313289549394826,
+    "lift_height_err_m": 0.002531505217520935,
+    "speed_profile_corr": 0.49983341481469046
+   }
+  },
+  {
+   "robot": "kairos",
+   "seed": 3,
+   "half_mm": 30.0,
+   "cond": "truth",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.01370235953136556,
+     "carry": 0.022550375954506156,
+     "retreat": 0.009078965348573245
+    },
+    "path_rmse_mean_m": 0.015110566944814987,
+    "approach_angle_deg": 2.730309911955518,
+    "lift_height_err_m": 0.002582737954754971,
+    "speed_profile_corr": 0.504518591140215
+   }
+  },
+  {
+   "robot": "kairos",
+   "seed": 4,
+   "half_mm": 30.0,
+   "cond": "truth",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.013712097188617225,
+     "carry": 0.021717888057766904,
+     "retreat": 0.009078964995900341
+    },
+    "path_rmse_mean_m": 0.014836316747428158,
+    "approach_angle_deg": 2.7344229687114363,
+    "lift_height_err_m": 0.0027098394113147517,
+    "speed_profile_corr": 0.48877423041917845
+   }
+  },
+  {
+   "robot": "kairos",
+   "seed": 5,
+   "half_mm": 30.0,
+   "cond": "truth",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.013703761677551773,
+     "carry": 0.02078009940702231,
+     "retreat": 0.009078965140360759
+    },
+    "path_rmse_mean_m": 0.014520942074978282,
+    "approach_angle_deg": 2.735274467622805,
+    "lift_height_err_m": 0.0025548918544699706,
+    "speed_profile_corr": 0.4723125073353099
+   }
+  },
+  {
+   "robot": "kairos",
+   "seed": 6,
+   "half_mm": 30.0,
+   "cond": "truth",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.013708133874946207,
+     "carry": 0.022154189306309215,
+     "retreat": 0.009078966950277724
+    },
+    "path_rmse_mean_m": 0.014980430043844382,
+    "approach_angle_deg": 2.7325597259334304,
+    "lift_height_err_m": 0.0026727876390786054,
+    "speed_profile_corr": 0.4977800542015876
+   }
+  },
+  {
+   "robot": "kairos",
+   "seed": 7,
+   "half_mm": 30.0,
+   "cond": "truth",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.013698756351908217,
+     "carry": 0.020356421364157773,
+     "retreat": 0.009078965275074506
+    },
+    "path_rmse_mean_m": 0.014378047663713499,
+    "approach_angle_deg": 2.735164473335674,
+    "lift_height_err_m": 0.002356764589219018,
+    "speed_profile_corr": 0.465964394190863
+   }
+  },
+  {
+   "robot": "kairos",
+   "seed": 8,
+   "half_mm": 30.0,
+   "cond": "truth",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.01369163835382468,
+     "carry": 0.020156086205665613,
+     "retreat": 0.009078965588710068
+    },
+    "path_rmse_mean_m": 0.014308896716066789,
+    "approach_angle_deg": 2.7346169351435785,
+    "lift_height_err_m": 0.0025184066447891396,
+    "speed_profile_corr": 0.46244994956369506
+   }
+  },
+  {
+   "robot": "kairos",
+   "seed": 9,
+   "half_mm": 30.0,
+   "cond": "truth",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.013715279844459232,
+     "carry": 0.022441127873341973,
+     "retreat": 0.009078965189440734
+    },
+    "path_rmse_mean_m": 0.015078457635747314,
+    "approach_angle_deg": 2.7333683665555775,
+    "lift_height_err_m": 0.0027054116136940587,
+    "speed_profile_corr": 0.5000060742306006
+   }
+  },
+  {
+   "robot": "kairos",
+   "seed": 0,
+   "half_mm": 35.0,
+   "cond": "truth",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.013710143665018153,
+     "carry": 0.022529355839543838,
+     "retreat": 0.009078040567076884
+    },
+    "path_rmse_mean_m": 0.015105846690546293,
+    "approach_angle_deg": 2.73276149626839,
+    "lift_height_err_m": 0.0028933374422806246,
+    "speed_profile_corr": 0.5218247734512665
+   }
+  },
+  {
+   "robot": "kairos",
+   "seed": 1,
+   "half_mm": 35.0,
+   "cond": "truth",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.013694385152679555,
+     "carry": 0.020302983542615567,
+     "retreat": 0.009078040880908462
+    },
+    "path_rmse_mean_m": 0.014358469858734527,
+    "approach_angle_deg": 2.735201561000648,
+    "lift_height_err_m": 0.002727006053036246,
+    "speed_profile_corr": 0.4861764969583576
+   }
+  },
+  {
+   "robot": "kairos",
+   "seed": 2,
+   "half_mm": 35.0,
+   "cond": "truth",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.01370289386117708,
+     "carry": 0.022396851249833927,
+     "retreat": 0.009078040502579486
+    },
+    "path_rmse_mean_m": 0.015059261871196833,
+    "approach_angle_deg": 2.7315476602952713,
+    "lift_height_err_m": 0.0027928086692748377,
+    "speed_profile_corr": 0.5199620134443133
+   }
+  },
+  {
+   "robot": "kairos",
+   "seed": 3,
+   "half_mm": 35.0,
+   "cond": "truth",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.013701103622972001,
+     "carry": 0.022555298609047054,
+     "retreat": 0.009078042224204282
+    },
+    "path_rmse_mean_m": 0.01511148148540778,
+    "approach_angle_deg": 2.7305666602444725,
+    "lift_height_err_m": 0.0029174800920570843,
+    "speed_profile_corr": 0.5249172255182373
+   }
+  },
+  {
+   "robot": "kairos",
+   "seed": 4,
+   "half_mm": 35.0,
+   "cond": "truth",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.013710817156089954,
+     "carry": 0.021759339200230123,
+     "retreat": 0.009078040346007473
+    },
+    "path_rmse_mean_m": 0.01484939890077585,
+    "approach_angle_deg": 2.734535333709902,
+    "lift_height_err_m": 0.003068826533031893,
+    "speed_profile_corr": 0.5102311160650508
+   }
+  },
+  {
+   "robot": "kairos",
+   "seed": 5,
+   "half_mm": 35.0,
+   "cond": "truth",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.013702468349723837,
+     "carry": 0.020816886677477525,
+     "retreat": 0.009078040006208916
+    },
+    "path_rmse_mean_m": 0.01453246501113676,
+    "approach_angle_deg": 2.7353876770731946,
+    "lift_height_err_m": 0.0028488570102242206,
+    "speed_profile_corr": 0.4945470595252181
+   }
+  },
+  {
+   "robot": "kairos",
+   "seed": 6,
+   "half_mm": 35.0,
+   "cond": "truth",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.01370685953124891,
+     "carry": 0.02221713949569204,
+     "retreat": 0.009078046672861582
+    },
+    "path_rmse_mean_m": 0.015000681899934176,
+    "approach_angle_deg": 2.7327302934557394,
+    "lift_height_err_m": 0.003029463180781816,
+    "speed_profile_corr": 0.520117149522501
+   }
+  },
+  {
+   "robot": "kairos",
+   "seed": 7,
+   "half_mm": 35.0,
+   "cond": "truth",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.013697462423169262,
+     "carry": 0.020392451348000846,
+     "retreat": 0.009078040452502314
+    },
+    "path_rmse_mean_m": 0.014389318074557475,
+    "approach_angle_deg": 2.7352940247536854,
+    "lift_height_err_m": 0.002650567017929595,
+    "speed_profile_corr": 0.48841245940549494
+   }
+  },
+  {
+   "robot": "kairos",
+   "seed": 8,
+   "half_mm": 35.0,
+   "cond": "truth",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.013690342900673558,
+     "carry": 0.020111573303280214,
+     "retreat": 0.00907804186763366
+    },
+    "path_rmse_mean_m": 0.014293319357195812,
+    "approach_angle_deg": 2.7347830418868564,
+    "lift_height_err_m": 0.002862711077347868,
+    "speed_profile_corr": 0.4839709199847949
+   }
+  },
+  {
+   "robot": "kairos",
+   "seed": 9,
+   "half_mm": 35.0,
+   "cond": "truth",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.013714009934616935,
+     "carry": 0.022491943406246315,
+     "retreat": 0.009078040401222962
+    },
+    "path_rmse_mean_m": 0.015094664580695404,
+    "approach_angle_deg": 2.733497387722206,
+    "lift_height_err_m": 0.0029903976548293076,
+    "speed_profile_corr": 0.520911173103564
+   }
+  },
+  {
+   "robot": "kairos",
+   "seed": 0,
+   "half_mm": 25.0,
+   "cond": "depth",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.013996510271144192,
+     "carry": 0.02224486947358068,
+     "retreat": 0.008854013911174867
+    },
+    "path_rmse_mean_m": 0.015031797885299911,
+    "approach_angle_deg": 2.7324673364507297,
+    "lift_height_err_m": 0.0023328068708474148,
+    "speed_profile_corr": 0.4860272252034958
+   },
+   "estimate_error": {
+    "xy_mm": 0.15412585808005336,
+    "z_mm": 0.5008367587575717,
+    "yaw_deg": 0.9429857479330448,
+    "goal_xy_mm": 0.607680774002933
+   }
+  },
+  {
+   "robot": "kairos",
+   "seed": 1,
+   "half_mm": 25.0,
+   "cond": "depth",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.014059092359492993,
+     "carry": 0.02001133752240988,
+     "retreat": 0.008826213696095903
+    },
+    "path_rmse_mean_m": 0.014298881192666257,
+    "approach_angle_deg": 2.7349425532045646,
+    "lift_height_err_m": 0.002272738100755123,
+    "speed_profile_corr": 0.44807548189700314
+   },
+   "estimate_error": {
+    "xy_mm": 0.13793455515097985,
+    "z_mm": 0.5953913361986078,
+    "yaw_deg": 1.4823847737332536,
+    "goal_xy_mm": 0.5881476106344086
+   }
+  },
+  {
+   "robot": "kairos",
+   "seed": 2,
+   "half_mm": 25.0,
+   "cond": "depth",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.014027352711009744,
+     "carry": 0.02210426379496737,
+     "retreat": 0.008810131908707578
+    },
+    "path_rmse_mean_m": 0.014980582804894898,
+    "approach_angle_deg": 2.73116157978896,
+    "lift_height_err_m": 0.002290984470649432,
+    "speed_profile_corr": 0.48416521803653234
+   },
+   "estimate_error": {
+    "xy_mm": 0.2935395727409722,
+    "z_mm": 0.6275942889868401,
+    "yaw_deg": 1.1459638620169277,
+    "goal_xy_mm": 0.5949708479266235
+   }
+  },
+  {
+   "robot": "kairos",
+   "seed": 3,
+   "half_mm": 25.0,
+   "cond": "depth",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.014032748019577797,
+     "carry": 0.02251248908770495,
+     "retreat": 0.008808705798051186
+    },
+    "path_rmse_mean_m": 0.015117980968444645,
+    "approach_angle_deg": 2.7301165295207053,
+    "lift_height_err_m": 0.002212380876124853,
+    "speed_profile_corr": 0.4891268749467143
+   },
+   "estimate_error": {
+    "xy_mm": 0.3383321917848689,
+    "z_mm": 0.589232659917234,
+    "yaw_deg": 0.820451685374308,
+    "goal_xy_mm": 0.5711053997976556
+   }
+  },
+  {
+   "robot": "kairos",
+   "seed": 4,
+   "half_mm": 25.0,
+   "cond": "depth",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.014021698752456598,
+     "carry": 0.021526032334381117,
+     "retreat": 0.008776226441594117
+    },
+    "path_rmse_mean_m": 0.014774652509477279,
+    "approach_angle_deg": 2.734348734550104,
+    "lift_height_err_m": 0.0022535571392702236,
+    "speed_profile_corr": 0.47409137280394886
+   },
+   "estimate_error": {
+    "xy_mm": 0.32586343701267934,
+    "z_mm": 0.6321618549973845,
+    "yaw_deg": 0.8365138952638822,
+    "goal_xy_mm": 0.6138040865136916
+   }
+  },
+  {
+   "robot": "kairos",
+   "seed": 5,
+   "half_mm": 25.0,
+   "cond": "depth",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.014098991601621407,
+     "carry": 0.020464618279830444,
+     "retreat": 0.008725310077420964
+    },
+    "path_rmse_mean_m": 0.014429639986290939,
+    "approach_angle_deg": 2.7351928932867446,
+    "lift_height_err_m": 0.0022313551953810074,
+    "speed_profile_corr": 0.4565744352431696
+   },
+   "estimate_error": {
+    "xy_mm": 0.23354688587433317,
+    "z_mm": 0.7015587290711035,
+    "yaw_deg": 0.8501582739195082,
+    "goal_xy_mm": 0.6078146758947518
+   }
+  },
+  {
+   "robot": "kairos",
+   "seed": 6,
+   "half_mm": 25.0,
+   "cond": "depth",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.014032007473351885,
+     "carry": 0.02199639068364509,
+     "retreat": 0.008825518448507241
+    },
+    "path_rmse_mean_m": 0.014951305535168073,
+    "approach_angle_deg": 2.7324432051323746,
+    "lift_height_err_m": 0.002315537199322343,
+    "speed_profile_corr": 0.4838197869444058
+   },
+   "estimate_error": {
+    "xy_mm": 0.4058402024308502,
+    "z_mm": 0.5862413857064819,
+    "yaw_deg": 1.612191061624711,
+    "goal_xy_mm": 0.582479553349797
+   }
+  },
+  {
+   "robot": "kairos",
+   "seed": 7,
+   "half_mm": 25.0,
+   "cond": "depth",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.01407340967066008,
+     "carry": 0.020134578539118077,
+     "retreat": 0.008814613063442292
+    },
+    "path_rmse_mean_m": 0.014340867091073482,
+    "approach_angle_deg": 2.7350601641608083,
+    "lift_height_err_m": 0.0021127794912766673,
+    "speed_profile_corr": 0.4508588303131328
+   },
+   "estimate_error": {
+    "xy_mm": 0.11636367812831482,
+    "z_mm": 0.59340949763962,
+    "yaw_deg": 0.5275834680529486,
+    "goal_xy_mm": 0.5939677294030541
+   }
+  },
+  {
+   "robot": "kairos",
+   "seed": 8,
+   "half_mm": 25.0,
+   "cond": "depth",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.014098796524027351,
+     "carry": 0.019913468393625573,
+     "retreat": 0.008865424435730717
+    },
+    "path_rmse_mean_m": 0.014292563117794548,
+    "approach_angle_deg": 2.7345005871659,
+    "lift_height_err_m": 0.0023079454349590467,
+    "speed_profile_corr": 0.4456964733308735
+   },
+   "estimate_error": {
+    "xy_mm": 0.3612330153207744,
+    "z_mm": 0.6374591392155106,
+    "yaw_deg": 1.0860762147234908,
+    "goal_xy_mm": 0.5987876877331837
+   }
+  },
+  {
+   "robot": "kairos",
+   "seed": 9,
+   "half_mm": 25.0,
+   "cond": "depth",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.01402637733610786,
+     "carry": 0.022329744859795636,
+     "retreat": 0.00879936517677984
+    },
+    "path_rmse_mean_m": 0.015051829124227778,
+    "approach_angle_deg": 2.7332742913606407,
+    "lift_height_err_m": 0.002299158695660636,
+    "speed_profile_corr": 0.48688988248440274
+   },
+   "estimate_error": {
+    "xy_mm": 0.2606319380636294,
+    "z_mm": 0.5701228862549611,
+    "yaw_deg": 0.9360558773456698,
+    "goal_xy_mm": 0.6192023631842997
+   }
+  },
+  {
+   "robot": "kairos",
+   "seed": 0,
+   "half_mm": 30.0,
+   "cond": "depth",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.013933777445310904,
+     "carry": 0.022203075905765864,
+     "retreat": 0.008834937248883143
+    },
+    "path_rmse_mean_m": 0.014990596866653305,
+    "approach_angle_deg": 2.732639477761129,
+    "lift_height_err_m": 0.0025874531062290984,
+    "speed_profile_corr": 0.5012658192350253
+   },
+   "estimate_error": {
+    "xy_mm": 0.36617233010988565,
+    "z_mm": 0.5380998004061478,
+    "yaw_deg": 1.9429857479330335,
+    "goal_xy_mm": 0.6076829264420394
+   }
+  },
+  {
+   "robot": "kairos",
+   "seed": 1,
+   "half_mm": 30.0,
+   "cond": "depth",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.014077587364652555,
+     "carry": 0.019995545785890568,
+     "retreat": 0.008820600253894324
+    },
+    "path_rmse_mean_m": 0.014297911134812482,
+    "approach_angle_deg": 2.735092607982344,
+    "lift_height_err_m": 0.0025169946282120326,
+    "speed_profile_corr": 0.46338132763824247
+   },
+   "estimate_error": {
+    "xy_mm": 0.17816129200372013,
+    "z_mm": 0.6050346977899517,
+    "yaw_deg": 1.5176152262667124,
+    "goal_xy_mm": 0.5881508174955361
+   }
+  },
+  {
+   "robot": "kairos",
+   "seed": 2,
+   "half_mm": 30.0,
+   "cond": "depth",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.014025345375850694,
+     "carry": 0.02215195636141459,
+     "retreat": 0.008834275318772643
+    },
+    "path_rmse_mean_m": 0.01500385901867931,
+    "approach_angle_deg": 2.731368352785332,
+    "lift_height_err_m": 0.0025339196120602314,
+    "speed_profile_corr": 0.4995165955882597
+   },
+   "estimate_error": {
+    "xy_mm": 0.1922663811380122,
+    "z_mm": 0.5758523422896635,
+    "yaw_deg": 0.14596386201691355,
+    "goal_xy_mm": 0.5949681856483794
+   }
+  },
+  {
+   "robot": "kairos",
+   "seed": 3,
+   "half_mm": 30.0,
+   "cond": "depth",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.0140373390431686,
+     "carry": 0.022367192093936745,
+     "retreat": 0.008799222593006849
+    },
+    "path_rmse_mean_m": 0.015067917910037398,
+    "approach_angle_deg": 2.730374683583352,
+    "lift_height_err_m": 0.0025578229318864443,
+    "speed_profile_corr": 0.5040830655945007
+   },
+   "estimate_error": {
+    "xy_mm": 0.32791773864862483,
+    "z_mm": 0.6069049548543294,
+    "yaw_deg": 1.8204516853743031,
+    "goal_xy_mm": 0.5711110270741863
+   }
+  },
+  {
+   "robot": "kairos",
+   "seed": 4,
+   "half_mm": 30.0,
+   "cond": "depth",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.014071963512333942,
+     "carry": 0.02148194087437964,
+     "retreat": 0.008797504783120042
+    },
+    "path_rmse_mean_m": 0.014783803056611209,
+    "approach_angle_deg": 2.734451360439715,
+    "lift_height_err_m": 0.0026463518630986116,
+    "speed_profile_corr": 0.48888934811416346
+   },
+   "estimate_error": {
+    "xy_mm": 0.2176707925137029,
+    "z_mm": 0.585672712174478,
+    "yaw_deg": 0.8365138952638822,
+    "goal_xy_mm": 0.6138007311617485
+   }
+  },
+  {
+   "robot": "kairos",
+   "seed": 5,
+   "half_mm": 30.0,
+   "cond": "depth",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.014127817821233254,
+     "carry": 0.020527671518658145,
+     "retreat": 0.008735536868011477
+    },
+    "path_rmse_mean_m": 0.014463675402634291,
+    "approach_angle_deg": 2.735299525057944,
+    "lift_height_err_m": 0.0024595467960171757,
+    "speed_profile_corr": 0.4726702546085901
+   },
+   "estimate_error": {
+    "xy_mm": 0.12524325820942037,
+    "z_mm": 0.6774591645604746,
+    "yaw_deg": 0.149841726080506,
+    "goal_xy_mm": 0.6078224831450286
+   }
+  },
+  {
+   "robot": "kairos",
+   "seed": 6,
+   "half_mm": 30.0,
+   "cond": "depth",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.013967049935259233,
+     "carry": 0.021964284406428992,
+     "retreat": 0.008830750749325177
+    },
+    "path_rmse_mean_m": 0.014920695030337801,
+    "approach_angle_deg": 2.732606256948638,
+    "lift_height_err_m": 0.0026832847444060726,
+    "speed_profile_corr": 0.4967419906337425
+   },
+   "estimate_error": {
+    "xy_mm": 0.34442524649596157,
+    "z_mm": 0.5735507301846167,
+    "yaw_deg": 1.612191061624711,
+    "goal_xy_mm": 0.5824812686820041
+   }
+  },
+  {
+   "robot": "kairos",
+   "seed": 7,
+   "half_mm": 30.0,
+   "cond": "depth",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.014173050301594567,
+     "carry": 0.020180877486493484,
+     "retreat": 0.008805533166569996
+    },
+    "path_rmse_mean_m": 0.014386486984886017,
+    "approach_angle_deg": 2.7351717740476795,
+    "lift_height_err_m": 0.002382278384032377,
+    "speed_profile_corr": 0.46578782677866726
+   },
+   "estimate_error": {
+    "xy_mm": 0.10466074664628626,
+    "z_mm": 0.610287674729662,
+    "yaw_deg": 1.4724165319470541,
+    "goal_xy_mm": 0.5939700376371196
+   }
+  },
+  {
+   "robot": "kairos",
+   "seed": 8,
+   "half_mm": 30.0,
+   "cond": "depth",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.014047610242143975,
+     "carry": 0.019893875117614698,
+     "retreat": 0.008895755541436224
+    },
+    "path_rmse_mean_m": 0.014279080300398298,
+    "approach_angle_deg": 2.734653628963007,
+    "lift_height_err_m": 0.0026555016684832178,
+    "speed_profile_corr": 0.4627786649754518
+   },
+   "estimate_error": {
+    "xy_mm": 0.18835715856368773,
+    "z_mm": 0.5743005494341196,
+    "yaw_deg": 0.9139237852765056,
+    "goal_xy_mm": 0.5987847915216915
+   }
+  },
+  {
+   "robot": "kairos",
+   "seed": 9,
+   "half_mm": 30.0,
+   "cond": "depth",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.013930661076211371,
+     "carry": 0.022168377779963857,
+     "retreat": 0.00881263805529967
+    },
+    "path_rmse_mean_m": 0.014970558970491633,
+    "approach_angle_deg": 2.7334086541969156,
+    "lift_height_err_m": 0.0026290433142742986,
+    "speed_profile_corr": 0.5000587904172339
+   },
+   "estimate_error": {
+    "xy_mm": 0.38492261135875366,
+    "z_mm": 0.540692911472438,
+    "yaw_deg": 1.936055877345684,
+    "goal_xy_mm": 0.6191973556455774
+   }
+  },
+  {
+   "robot": "kairos",
+   "seed": 0,
+   "half_mm": 35.0,
+   "cond": "depth",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.01401320601177024,
+     "carry": 0.02228830094087477,
+     "retreat": 0.008836226069631678
+    },
+    "path_rmse_mean_m": 0.015045911007425562,
+    "approach_angle_deg": 2.7327981792229044,
+    "lift_height_err_m": 0.0028492387161623556,
+    "speed_profile_corr": 0.5220075883536038
+   },
+   "estimate_error": {
+    "xy_mm": 0.24142001152723402,
+    "z_mm": 0.5336650317330562,
+    "yaw_deg": 2.0570142520669723,
+    "goal_xy_mm": 0.6076817942648879
+   }
+  },
+  {
+   "robot": "kairos",
+   "seed": 1,
+   "half_mm": 35.0,
+   "cond": "depth",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.014069162860338267,
+     "carry": 0.020072544156539585,
+     "retreat": 0.008807779858942492
+    },
+    "path_rmse_mean_m": 0.014316495625273448,
+    "approach_angle_deg": 2.735236052737577,
+    "lift_height_err_m": 0.0027528521398476336,
+    "speed_profile_corr": 0.4859658331958218
+   },
+   "estimate_error": {
+    "xy_mm": 0.1891031104179492,
+    "z_mm": 0.6296217118720443,
+    "yaw_deg": 0.5176152262667237,
+    "goal_xy_mm": 0.5881491600989006
+   }
+  },
+  {
+   "robot": "kairos",
+   "seed": 2,
+   "half_mm": 35.0,
+   "cond": "depth",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.013986276072843307,
+     "carry": 0.022185382268251314,
+     "retreat": 0.00882998871113373
+    },
+    "path_rmse_mean_m": 0.01500054901740945,
+    "approach_angle_deg": 2.7315891217886534,
+    "lift_height_err_m": 0.002790921049076467,
+    "speed_profile_corr": 0.5197316804317709
+   },
+   "estimate_error": {
+    "xy_mm": 0.29764011575271404,
+    "z_mm": 0.5829188730720053,
+    "yaw_deg": 0.14596386201691355,
+    "goal_xy_mm": 0.594967136950594
+   }
+  },
+  {
+   "robot": "kairos",
+   "seed": 3,
+   "half_mm": 35.0,
+   "cond": "depth",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.014027844890098616,
+     "carry": 0.022299697846599083,
+     "retreat": 0.008800105635340536
+    },
+    "path_rmse_mean_m": 0.01504254945734608,
+    "approach_angle_deg": 2.730631637329463,
+    "lift_height_err_m": 0.0028808383720109465,
+    "speed_profile_corr": 0.5267416971795154
+   },
+   "estimate_error": {
+    "xy_mm": 0.34559751157376795,
+    "z_mm": 0.6034425493910909,
+    "yaw_deg": 1.1795483146256946,
+    "goal_xy_mm": 0.5711069517140192
+   }
+  },
+  {
+   "robot": "kairos",
+   "seed": 4,
+   "half_mm": 35.0,
+   "cond": "depth",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.014006093203271498,
+     "carry": 0.02149978230562248,
+     "retreat": 0.00879745201073204
+    },
+    "path_rmse_mean_m": 0.014767775839875338,
+    "approach_angle_deg": 2.7345687866984876,
+    "lift_height_err_m": 0.002998566388382251,
+    "speed_profile_corr": 0.5105424989755425
+   },
+   "estimate_error": {
+    "xy_mm": 0.27845969908959284,
+    "z_mm": 0.5836795604827818,
+    "yaw_deg": 0.16348610473610647,
+    "goal_xy_mm": 0.6138106789932126
+   }
+  },
+  {
+   "robot": "kairos",
+   "seed": 5,
+   "half_mm": 35.0,
+   "cond": "depth",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.014062865051015278,
+     "carry": 0.020530000714562225,
+     "retreat": 0.008738903830115535
+    },
+    "path_rmse_mean_m": 0.014443923198564348,
+    "approach_angle_deg": 2.7354240102377543,
+    "lift_height_err_m": 0.0027548220615633556,
+    "speed_profile_corr": 0.4948538587190344
+   },
+   "estimate_error": {
+    "xy_mm": 0.2713294456641441,
+    "z_mm": 0.6686159280758566,
+    "yaw_deg": 0.149841726080506,
+    "goal_xy_mm": 0.607811317685069
+   }
+  },
+  {
+   "robot": "kairos",
+   "seed": 6,
+   "half_mm": 35.0,
+   "cond": "depth",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.01400051618630385,
+     "carry": 0.021952482782629183,
+     "retreat": 0.008833109084230278
+    },
+    "path_rmse_mean_m": 0.01492870268438777,
+    "approach_angle_deg": 2.7327798986485146,
+    "lift_height_err_m": 0.003028640628770868,
+    "speed_profile_corr": 0.5197761824019592
+   },
+   "estimate_error": {
+    "xy_mm": 0.356036938047997,
+    "z_mm": 0.567182968346909,
+    "yaw_deg": 1.612191061624711,
+    "goal_xy_mm": 0.5824683160138506
+   }
+  },
+  {
+   "robot": "kairos",
+   "seed": 7,
+   "half_mm": 35.0,
+   "cond": "depth",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.014090726293807627,
+     "carry": 0.02019766148260021,
+     "retreat": 0.008812931696816104
+    },
+    "path_rmse_mean_m": 0.014367106491074649,
+    "approach_angle_deg": 2.7353123959805683,
+    "lift_height_err_m": 0.0026454703550097824,
+    "speed_profile_corr": 0.4878962788406555
+   },
+   "estimate_error": {
+    "xy_mm": 0.056818503385210474,
+    "z_mm": 0.5933145039535292,
+    "yaw_deg": 1.52758346805295,
+    "goal_xy_mm": 0.5939618910188296
+   }
+  },
+  {
+   "robot": "kairos",
+   "seed": 8,
+   "half_mm": 35.0,
+   "cond": "depth",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.014059316584263612,
+     "carry": 0.01983964390151939,
+     "retreat": 0.008878081304527432
+    },
+    "path_rmse_mean_m": 0.01425901393010348,
+    "approach_angle_deg": 2.734825855505639,
+    "lift_height_err_m": 0.0029592429092943073,
+    "speed_profile_corr": 0.4847235074666439
+   },
+   "estimate_error": {
+    "xy_mm": 0.2581811513904551,
+    "z_mm": 0.608387662098482,
+    "yaw_deg": 1.0860762147234908,
+    "goal_xy_mm": 0.5987832664779912
+   }
+  },
+  {
+   "robot": "kairos",
+   "seed": 9,
+   "half_mm": 35.0,
+   "cond": "depth",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.013981112988074303,
+     "carry": 0.02223911332939465,
+     "retreat": 0.008799231902866243
+    },
+    "path_rmse_mean_m": 0.015006486073445064,
+    "approach_angle_deg": 2.7335385899041866,
+    "lift_height_err_m": 0.0029219616138289883,
+    "speed_profile_corr": 0.5213248904976294
+   },
+   "estimate_error": {
+    "xy_mm": 0.35067421615054284,
+    "z_mm": 0.5668930139047859,
+    "yaw_deg": 0.06394412265431892,
+    "goal_xy_mm": 0.6191960676399093
+   }
+  },
+  {
+   "robot": "kairos",
+   "seed": 0,
+   "half_mm": 25.0,
+   "cond": "depth_hard",
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.019659415147399044,
+     "carry": 0.027990415074793662,
+     "retreat": 0.014557265333842112
+    },
+    "path_rmse_mean_m": 0.020735698518678274,
+    "approach_angle_deg": 2.730918012846324,
+    "lift_height_err_m": 0.003323689423863657,
+    "speed_profile_corr": 0.10405864706062196
+   },
+   "estimate_error": {
+    "xy_mm": 8.753983586620086,
+    "z_mm": 2.530026349635818,
+    "yaw_deg": 1.9429857479330335,
+    "goal_xy_mm": 12.084241644413725
+   }
+  },
+  {
+   "robot": "kairos",
+   "seed": 1,
+   "half_mm": 25.0,
+   "cond": "depth_hard",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.013000336647821012,
+     "carry": 0.018207101223957085,
+     "retreat": 0.01579365018484825
+    },
+    "path_rmse_mean_m": 0.015667029352208785,
+    "approach_angle_deg": 2.741158838777941,
+    "lift_height_err_m": 0.0019275643587281788,
+    "speed_profile_corr": -0.08570437481731505
+   },
+   "estimate_error": {
+    "xy_mm": 11.808996027755107,
+    "z_mm": 1.245794483955849,
+    "yaw_deg": 0.5176152262667237,
+    "goal_xy_mm": 11.945977482062187
+   }
+  },
+  {
+   "robot": "kairos",
+   "seed": 2,
+   "half_mm": 25.0,
+   "cond": "depth_hard",
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.014267345436412246,
+     "carry": 0.025048034427426168,
+     "retreat": 0.010515726906795054
+    },
+    "path_rmse_mean_m": 0.016610368923544488,
+    "approach_angle_deg": 2.7277271350068872,
+    "lift_height_err_m": 0.0020883936534467074,
+    "speed_profile_corr": 0.010271419900852823
+   },
+   "estimate_error": {
+    "xy_mm": 13.36224433695142,
+    "z_mm": 1.6476608392541372,
+    "yaw_deg": 2.8540361379830523,
+    "goal_xy_mm": 12.742053128909534
+   }
+  },
+  {
+   "robot": "kairos",
+   "seed": 3,
+   "half_mm": 25.0,
+   "cond": "depth_hard",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.014037000107369703,
+     "carry": 0.051105356865456156,
+     "retreat": 0.013837381185721156
+    },
+    "path_rmse_mean_m": 0.02632657938618234,
+    "approach_angle_deg": 2.72315028942835,
+    "lift_height_err_m": 0.0022469458601141468,
+    "speed_profile_corr": -0.00599360351894167
+   },
+   "estimate_error": {
+    "xy_mm": 13.841332946528533,
+    "z_mm": 3.91429404051883,
+    "yaw_deg": 0.17954831462569334,
+    "goal_xy_mm": 12.408028633525273
+   }
+  },
+  {
+   "robot": "kairos",
+   "seed": 4,
+   "half_mm": 25.0,
+   "cond": "depth_hard",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.015742743244163016,
+     "carry": 0.025811346055752186,
+     "retreat": 0.0200306588777373
+    },
+    "path_rmse_mean_m": 0.020528249392550834,
+    "approach_angle_deg": 2.7358927755834768,
+    "lift_height_err_m": 0.0024464281036910562,
+    "speed_profile_corr": -0.030661240186375924
+   },
+   "estimate_error": {
+    "xy_mm": 8.501694389239287,
+    "z_mm": 2.3456997174532424,
+    "yaw_deg": 2.836513895263885,
+    "goal_xy_mm": 9.918790847674796
+   }
+  },
+  {
+   "robot": "kairos",
+   "seed": 5,
+   "half_mm": 25.0,
+   "cond": "depth_hard",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.025252977071100538,
+     "carry": 0.028112823694755436,
+     "retreat": 0.0233684793623771
+    },
+    "path_rmse_mean_m": 0.025578093376077693,
+    "approach_angle_deg": 2.738348787133107,
+    "lift_height_err_m": 0.0018331013143826902,
+    "speed_profile_corr": 0.049370212730007065
+   },
+   "estimate_error": {
+    "xy_mm": 16.047615840878738,
+    "z_mm": 0.09228164185019067,
+    "yaw_deg": 1.8501582739194968,
+    "goal_xy_mm": 15.610150181012564
+   }
+  },
+  {
+   "robot": "kairos",
+   "seed": 6,
+   "half_mm": 25.0,
+   "cond": "depth_hard",
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.016900029518595882,
+     "carry": 0.026208254317679387,
+     "retreat": 0.011421699376551228
+    },
+    "path_rmse_mean_m": 0.018176661070942166,
+    "approach_angle_deg": 2.731032029518654,
+    "lift_height_err_m": 0.002316224306758208,
+    "speed_profile_corr": 0.4316491242462273
+   },
+   "estimate_error": {
+    "xy_mm": 5.551920368653977,
+    "z_mm": 0.03405934320461698,
+    "yaw_deg": 1.3878089383752805,
+    "goal_xy_mm": 5.4923660521950985
+   }
+  },
+  {
+   "robot": "kairos",
+   "seed": 7,
+   "half_mm": 25.0,
+   "cond": "depth_hard",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.02215929182752696,
+     "carry": 0.023985907711989742,
+     "retreat": 0.016019178696131262
+    },
+    "path_rmse_mean_m": 0.020721459411882654,
+    "approach_angle_deg": 2.739714447193268,
+    "lift_height_err_m": 0.0019957852426698286,
+    "speed_profile_corr": -0.029315962640082554
+   },
+   "estimate_error": {
+    "xy_mm": 14.553974545099129,
+    "z_mm": 0.5253347645058013,
+    "yaw_deg": 2.4724165319470557,
+    "goal_xy_mm": 13.054146131896394
+   }
+  },
+  {
+   "robot": "kairos",
+   "seed": 8,
+   "half_mm": 25.0,
+   "cond": "depth_hard",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.01594244242604886,
+     "carry": 0.016509133819850936,
+     "retreat": 0.024010010074968682
+    },
+    "path_rmse_mean_m": 0.018820528773622825,
+    "approach_angle_deg": 2.739584294451458,
+    "lift_height_err_m": 0.0038846517654159973,
+    "speed_profile_corr": -0.09613866327777719
+   },
+   "estimate_error": {
+    "xy_mm": 7.986698920429069,
+    "z_mm": 3.419501789647412,
+    "yaw_deg": 0.9139237852765056,
+    "goal_xy_mm": 9.350944736258503
+   }
+  },
+  {
+   "robot": "kairos",
+   "seed": 9,
+   "half_mm": 25.0,
+   "cond": "depth_hard",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.022001820671104975,
+     "carry": 0.02875575959047156,
+     "retreat": 0.0188375760017938
+    },
+    "path_rmse_mean_m": 0.023198385421123444,
+    "approach_angle_deg": 2.7330611700134715,
+    "lift_height_err_m": 0.0025915328648881963,
+    "speed_profile_corr": 0.01039555058738065
+   },
+   "estimate_error": {
+    "xy_mm": 10.453044318078186,
+    "z_mm": 4.055585363440403,
+    "yaw_deg": 1.936055877345684,
+    "goal_xy_mm": 9.594931315920533
+   }
+  },
+  {
+   "robot": "kairos",
+   "seed": 0,
+   "half_mm": 30.0,
+   "cond": "depth_hard",
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.019930672292288103,
+     "carry": 0.027013044752033994,
+     "retreat": 0.01498133141231658
+    },
+    "path_rmse_mean_m": 0.02064168281887956,
+    "approach_angle_deg": 2.731039634497907,
+    "lift_height_err_m": 0.003634287947404141,
+    "speed_profile_corr": 0.1134581775860529
+   },
+   "estimate_error": {
+    "xy_mm": 9.140536029237222,
+    "z_mm": 2.5447790204968133,
+    "yaw_deg": 0.9429857479330448,
+    "goal_xy_mm": 12.084234345599778
+   }
+  },
+  {
+   "robot": "kairos",
+   "seed": 1,
+   "half_mm": 30.0,
+   "cond": "depth_hard",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.013032767436856964,
+     "carry": 0.018376712880502976,
+     "retreat": 0.014790167536556988
+    },
+    "path_rmse_mean_m": 0.015399882617972309,
+    "approach_angle_deg": 2.7411889043007047,
+    "lift_height_err_m": 0.0021488751148900365,
+    "speed_profile_corr": -0.08227999744970241
+   },
+   "estimate_error": {
+    "xy_mm": 11.841914382029001,
+    "z_mm": 1.2917669706591084,
+    "yaw_deg": 0.5176152262667237,
+    "goal_xy_mm": 11.945976770578465
+   }
+  },
+  {
+   "robot": "kairos",
+   "seed": 2,
+   "half_mm": 30.0,
+   "cond": "depth_hard",
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.014373970640231694,
+     "carry": 0.0248654659988856,
+     "retreat": 0.010271154167797947
+    },
+    "path_rmse_mean_m": 0.016503530268971747,
+    "approach_angle_deg": 2.7280778582456966,
+    "lift_height_err_m": 0.0021765946664925595,
+    "speed_profile_corr": 0.01334569458641936
+   },
+   "estimate_error": {
+    "xy_mm": 13.58871816036031,
+    "z_mm": 1.6464411773618806,
+    "yaw_deg": 0.8540361379830751,
+    "goal_xy_mm": 12.742058369151756
+   }
+  },
+  {
+   "robot": "kairos",
+   "seed": 3,
+   "half_mm": 30.0,
+   "cond": "depth_hard",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.013916816660844425,
+     "carry": 0.048130851360209365,
+     "retreat": 0.014419267488791212
+    },
+    "path_rmse_mean_m": 0.025488978503281665,
+    "approach_angle_deg": 2.7236612824808044,
+    "lift_height_err_m": 0.0025112315570455235,
+    "speed_profile_corr": 0.002544927718861699
+   },
+   "estimate_error": {
+    "xy_mm": 13.7036998895258,
+    "z_mm": 3.739669506255431,
+    "yaw_deg": 0.17954831462569334,
+    "goal_xy_mm": 12.408009588656961
+   }
+  },
+  {
+   "robot": "kairos",
+   "seed": 4,
+   "half_mm": 30.0,
+   "cond": "depth_hard",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.01638876149779766,
+     "carry": 0.025955529153995058,
+     "retreat": 0.021049227760512844
+    },
+    "path_rmse_mean_m": 0.021131172804101855,
+    "approach_angle_deg": 2.735909063460409,
+    "lift_height_err_m": 0.0027896689299267696,
+    "speed_profile_corr": -0.03354548156453696
+   },
+   "estimate_error": {
+    "xy_mm": 9.195180221424211,
+    "z_mm": 2.0967159509202653,
+    "yaw_deg": 0.16348610473610647,
+    "goal_xy_mm": 9.918774462709843
+   }
+  },
+  {
+   "robot": "kairos",
+   "seed": 5,
+   "half_mm": 30.0,
+   "cond": "depth_hard",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.025232482068452057,
+     "carry": 0.028155485527808072,
+     "retreat": 0.021070461995816414
+    },
+    "path_rmse_mean_m": 0.02481947653069218,
+    "approach_angle_deg": 2.738375837533991,
+    "lift_height_err_m": 0.0021923113349902323,
+    "speed_profile_corr": 0.09638916452984471
+   },
+   "estimate_error": {
+    "xy_mm": 15.910339771368974,
+    "z_mm": 0.2713408885621805,
+    "yaw_deg": 0.149841726080506,
+    "goal_xy_mm": 15.610163472286263
+   }
+  },
+  {
+   "robot": "kairos",
+   "seed": 6,
+   "half_mm": 30.0,
+   "cond": "depth_hard",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.016757165568163805,
+     "carry": 0.026169934935685327,
+     "retreat": 0.013210267368776122
+    },
+    "path_rmse_mean_m": 0.018712455957541754,
+    "approach_angle_deg": 2.731217354127804,
+    "lift_height_err_m": 0.002870456728664289,
+    "speed_profile_corr": 0.3104573391493539
+   },
+   "estimate_error": {
+    "xy_mm": 5.346006254188353,
+    "z_mm": 0.027537482563819854,
+    "yaw_deg": 2.3878089383752945,
+    "goal_xy_mm": 5.492381291154827
+   }
+  },
+  {
+   "robot": "kairos",
+   "seed": 7,
+   "half_mm": 30.0,
+   "cond": "depth_hard",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.02226569164253968,
+     "carry": 0.024059990329275197,
+     "retreat": 0.01765408783908281
+    },
+    "path_rmse_mean_m": 0.02132658993696589,
+    "approach_angle_deg": 2.7397180453897816,
+    "lift_height_err_m": 0.002329381738209735,
+    "speed_profile_corr": -0.03457104424397709
+   },
+   "estimate_error": {
+    "xy_mm": 14.57321565631212,
+    "z_mm": 0.5147714620930763,
+    "yaw_deg": 2.4724165319470557,
+    "goal_xy_mm": 13.054154960893833
+   }
+  },
+  {
+   "robot": "kairos",
+   "seed": 8,
+   "half_mm": 30.0,
+   "cond": "depth_hard",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.01602929007260279,
+     "carry": 0.016514786369625403,
+     "retreat": 0.011063815441334104
+    },
+    "path_rmse_mean_m": 0.014535963961187432,
+    "approach_angle_deg": 2.7397139120230425,
+    "lift_height_err_m": 0.004260916508770418,
+    "speed_profile_corr": -0.05116976745627245
+   },
+   "estimate_error": {
+    "xy_mm": 7.931404852920341,
+    "z_mm": 3.597561499300048,
+    "yaw_deg": 2.086076214723492,
+    "goal_xy_mm": 9.350947071152156
+   }
+  },
+  {
+   "robot": "kairos",
+   "seed": 9,
+   "half_mm": 30.0,
+   "cond": "depth_hard",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.022060435665115653,
+     "carry": 0.02865911039242688,
+     "retreat": 0.015908012017313903
+    },
+    "path_rmse_mean_m": 0.022209186024952143,
+    "approach_angle_deg": 2.733144654510201,
+    "lift_height_err_m": 0.0029805413681989745,
+    "speed_profile_corr": 0.02782289511780612
+   },
+   "estimate_error": {
+    "xy_mm": 10.601265386159984,
+    "z_mm": 4.14951005452895,
+    "yaw_deg": 1.0639441226543076,
+    "goal_xy_mm": 9.594953690220484
+   }
+  },
+  {
+   "robot": "kairos",
+   "seed": 0,
+   "half_mm": 35.0,
+   "cond": "depth_hard",
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.01978542998445552,
+     "carry": 0.027504491127243305,
+     "retreat": 0.014451301671362443
+    },
+    "path_rmse_mean_m": 0.02058040759435376,
+    "approach_angle_deg": 2.7312031782680934,
+    "lift_height_err_m": 0.00384481800867989,
+    "speed_profile_corr": 0.1263131677483138
+   },
+   "estimate_error": {
+    "xy_mm": 8.931904828049577,
+    "z_mm": 2.51554161026802,
+    "yaw_deg": 0.057014252066969334,
+    "goal_xy_mm": 12.084227953521514
+   }
+  },
+  {
+   "robot": "kairos",
+   "seed": 1,
+   "half_mm": 35.0,
+   "cond": "depth_hard",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.01281068771481585,
+     "carry": 0.018008613077392387,
+     "retreat": 0.014105070503964208
+    },
+    "path_rmse_mean_m": 0.014974790432057482,
+    "approach_angle_deg": 2.7411754275566897,
+    "lift_height_err_m": 0.00254263357729817,
+    "speed_profile_corr": -0.07929656943419551
+   },
+   "estimate_error": {
+    "xy_mm": 11.277160212959133,
+    "z_mm": 1.1625759790406671,
+    "yaw_deg": 0.48238477373326494,
+    "goal_xy_mm": 11.945976878386078
+   }
+  },
+  {
+   "robot": "kairos",
+   "seed": 2,
+   "half_mm": 35.0,
+   "cond": "depth_hard",
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.014553532122332865,
+     "carry": 0.024557025858153655,
+     "retreat": 0.009912670849681513
+    },
+    "path_rmse_mean_m": 0.01634107627672268,
+    "approach_angle_deg": 2.7284231145816276,
+    "lift_height_err_m": 0.0022463554650604955,
+    "speed_profile_corr": 0.02588229453190353
+   },
+   "estimate_error": {
+    "xy_mm": 13.543474330067511,
+    "z_mm": 1.5304284305616838,
+    "yaw_deg": 0.14596386201691355,
+    "goal_xy_mm": 12.742077507646503
+   }
+  },
+  {
+   "robot": "kairos",
+   "seed": 3,
+   "half_mm": 35.0,
+   "cond": "depth_hard",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.014839229226508141,
+     "carry": 0.037333500177617336,
+     "retreat": 0.017614971046795855
+    },
+    "path_rmse_mean_m": 0.02326256681697378,
+    "approach_angle_deg": 10.397672679058642,
+    "lift_height_err_m": 0.01868203574302671,
+    "speed_profile_corr": -0.02653442345255453
+   },
+   "estimate_error": {
+    "xy_mm": 13.616098003455773,
+    "z_mm": 3.6420832901315134,
+    "yaw_deg": 0.17954831462569334,
+    "goal_xy_mm": 12.407980468213212
+   }
+  },
+  {
+   "robot": "kairos",
+   "seed": 4,
+   "half_mm": 35.0,
+   "cond": "depth_hard",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.016126466407001012,
+     "carry": 0.025820010288982717,
+     "retreat": 0.025497397667653673
+    },
+    "path_rmse_mean_m": 0.0224812914545458,
+    "approach_angle_deg": 2.735503848785642,
+    "lift_height_err_m": 0.003175019325483308,
+    "speed_profile_corr": -0.04935668411829037
+   },
+   "estimate_error": {
+    "xy_mm": 8.905680730197568,
+    "z_mm": 2.1196787088160822,
+    "yaw_deg": 0.16348610473610647,
+    "goal_xy_mm": 9.918786415228228
+   }
+  },
+  {
+   "robot": "kairos",
+   "seed": 5,
+   "half_mm": 35.0,
+   "cond": "depth_hard",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.025366716041619893,
+     "carry": 0.028224293975417276,
+     "retreat": 0.022496507147098763
+    },
+    "path_rmse_mean_m": 0.025362505721378645,
+    "approach_angle_deg": 2.738405775436567,
+    "lift_height_err_m": 0.0025563129018742192,
+    "speed_profile_corr": 0.07686708208968274
+   },
+   "estimate_error": {
+    "xy_mm": 16.086555541530778,
+    "z_mm": 0.27572525139482607,
+    "yaw_deg": 0.149841726080506,
+    "goal_xy_mm": 15.610180581346484
+   }
+  },
+  {
+   "robot": "kairos",
+   "seed": 6,
+   "half_mm": 35.0,
+   "cond": "depth_hard",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.016837273406608764,
+     "carry": 0.025961227945892205,
+     "retreat": 0.010744324185217239
+    },
+    "path_rmse_mean_m": 0.017847608512572735,
+    "approach_angle_deg": 2.7313582153116407,
+    "lift_height_err_m": 0.0031750092377656747,
+    "speed_profile_corr": 0.4157278316809429
+   },
+   "estimate_error": {
+    "xy_mm": 5.3332417345559575,
+    "z_mm": 0.07486168461335457,
+    "yaw_deg": 2.3878089383752945,
+    "goal_xy_mm": 5.49236040491691
+   }
+  },
+  {
+   "robot": "kairos",
+   "seed": 7,
+   "half_mm": 35.0,
+   "cond": "depth_hard",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.0227525684238964,
+     "carry": 0.024416370166447432,
+     "retreat": 0.02124592516321344
+    },
+    "path_rmse_mean_m": 0.02280495458451909,
+    "approach_angle_deg": 2.739728383812728,
+    "lift_height_err_m": 0.0027050584152162604,
+    "speed_profile_corr": -0.05345432319693763
+   },
+   "estimate_error": {
+    "xy_mm": 15.169223322669147,
+    "z_mm": 0.4551420650741045,
+    "yaw_deg": 1.4724165319470541,
+    "goal_xy_mm": 13.054161455863925
+   }
+  },
+  {
+   "robot": "kairos",
+   "seed": 8,
+   "half_mm": 35.0,
+   "cond": "depth_hard",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.015974927899500918,
+     "carry": 0.016861318520979364,
+     "retreat": 0.011807799274642697
+    },
+    "path_rmse_mean_m": 0.014881348565040994,
+    "approach_angle_deg": 2.7398649580882837,
+    "lift_height_err_m": 0.004626740069238716,
+    "speed_profile_corr": -0.05946305249963452
+   },
+   "estimate_error": {
+    "xy_mm": 8.173581145496202,
+    "z_mm": 3.5748139316293046,
+    "yaw_deg": 1.0860762147234908,
+    "goal_xy_mm": 9.35080699703158
+   }
+  },
+  {
+   "robot": "kairos",
+   "seed": 9,
+   "half_mm": 35.0,
+   "cond": "depth_hard",
+   "success": true,
+   "reasons": [],
+   "style": {
+    "path_rmse_m": {
+     "reach": 0.022188664948524946,
+     "carry": 0.0289839720781637,
+     "retreat": 0.01943939388788597
+    },
+    "path_rmse_mean_m": 0.02353734363819154,
+    "approach_angle_deg": 2.7331814804623624,
+    "lift_height_err_m": 0.0033476644613000817,
+    "speed_profile_corr": 0.014350409511886507
+   },
+   "estimate_error": {
+    "xy_mm": 10.577599345686808,
+    "z_mm": 4.2039369316742015,
+    "yaw_deg": 0.9360558773456698,
+    "goal_xy_mm": 9.594931157492043
+   }
+  }
+ ]
+}

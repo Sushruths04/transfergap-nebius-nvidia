@@ -1,0 +1,32 @@
+{
+ "ur5e": {
+  "verdict": "style infeasible for this robot",
+  "reasons": [
+   "collides: carry 0.7 cm, retreat 1.9 cm (carried_block, g_left_follower, g_left_pad, g_right_follower, g_right_pad)"
+  ],
+  "worst": {
+   "max_ik_err_m": 0.00019941934443022295,
+   "max_penetration_m": 0.018555879224906414
+  }
+ },
+ "ur10e": {
+  "verdict": "style infeasible for this robot",
+  "reasons": [
+   "collides: carry 0.7 cm, retreat 1.9 cm (carried_block, g_left_follower, g_left_pad, g_right_follower, g_right_pad)"
+  ],
+  "worst": {
+   "max_ik_err_m": 0.00019687134513710644,
+   "max_penetration_m": 0.01853721644036705
+  }
+ },
+ "kairos": {
+  "verdict": "style infeasible for this robot",
+  "reasons": [
+   "collides: carry 0.7 cm, retreat 2.8 cm (g_left_pad, g_right_pad)"
+  ],
+  "worst": {
+   "max_ik_err_m": 0.0001997537951054221,
+   "max_penetration_m": 0.027516268858181057
+  }
+ }
+}

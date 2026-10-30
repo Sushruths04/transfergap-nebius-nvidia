@@ -1,0 +1,35 @@
+{
+ "model": "nvidia/nemotron-3-super-120b-a12b",
+ "menu": [
+  "look_again",
+  "touch_probe_calibration",
+  "speed_cap_3",
+  "safe_path"
+ ],
+ "rule_choice": "speed_cap_3",
+ "valid": true,
+ "agent_choice": "speed_cap_3",
+ "rationale": "Timing adjustments yield the highest estimated success gain (+10\u202fpp) and improve speed profile correlation while minimally affecting style, addressing the prevalent lift/release failures.",
+ "response_id": "chatcmpl-9a6bfbcff091701a",
+ "latency_s": 3.168124183001055,
+ "usage": {
+  "completion_tokens": 273,
+  "prompt_tokens": 812,
+  "total_tokens": 1085,
+  "completion_tokens_details": {
+   "accepted_prediction_tokens": null,
+   "audio_tokens": null,
+   "reasoning_tokens": 218,
+   "rejected_prediction_tokens": null
+  },
+  "prompt_tokens_details": {
+   "audio_tokens": null,
+   "cached_tokens": 0,
+   "created_cache_tokens": 0,
+   "multimodal_tokens": null
+  },
+  "prompt_cache_hit_tokens": 0,
+  "prompt_cache_miss_tokens": 812
+ },
+ "agrees_with_rule": true
+}

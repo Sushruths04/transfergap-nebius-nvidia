@@ -1,0 +1,288 @@
+{
+ "ckpt": "/ws/transfergap/groot_ft_3arm/checkpoint-5000",
+ "robot": "ur10e",
+ "exec": "ensemble",
+ "block_half": 0.03,
+ "n_distractors": 5,
+ "mixed": false,
+ "n": 30,
+ "success": 2,
+ "ci95": [
+  0.018,
+  0.213
+ ],
+ "per_seed": [
+  {
+   "seed": 6000,
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ],
+   "seconds": 22.3
+  },
+  {
+   "seed": 6001,
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ],
+   "seconds": 22.5
+  },
+  {
+   "seed": 6002,
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ],
+   "seconds": 22.4
+  },
+  {
+   "seed": 6003,
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ],
+   "seconds": 22.5
+  },
+  {
+   "seed": 6004,
+   "success": true,
+   "reasons": [],
+   "seconds": 22.5
+  },
+  {
+   "seed": 6005,
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal",
+    "forbidden_collision"
+   ],
+   "seconds": 22.5
+  },
+  {
+   "seed": 6006,
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ],
+   "seconds": 22.5
+  },
+  {
+   "seed": 6007,
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal",
+    "forbidden_collision"
+   ],
+   "seconds": 22.6
+  },
+  {
+   "seed": 6008,
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ],
+   "seconds": 22.4
+  },
+  {
+   "seed": 6009,
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal",
+    "forbidden_collision"
+   ],
+   "seconds": 22.5
+  },
+  {
+   "seed": 6010,
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ],
+   "seconds": 22.4
+  },
+  {
+   "seed": 6011,
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal",
+    "forbidden_collision"
+   ],
+   "seconds": 22.5
+  },
+  {
+   "seed": 6012,
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ],
+   "seconds": 22.5
+  },
+  {
+   "seed": 6013,
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ],
+   "seconds": 22.5
+  },
+  {
+   "seed": 6014,
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ],
+   "seconds": 22.5
+  },
+  {
+   "seed": 6015,
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ],
+   "seconds": 22.4
+  },
+  {
+   "seed": 6016,
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ],
+   "seconds": 22.5
+  },
+  {
+   "seed": 6017,
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ],
+   "seconds": 22.4
+  },
+  {
+   "seed": 6018,
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ],
+   "seconds": 22.4
+  },
+  {
+   "seed": 6019,
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal",
+    "forbidden_collision"
+   ],
+   "seconds": 22.5
+  },
+  {
+   "seed": 6020,
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal",
+    "forbidden_collision"
+   ],
+   "seconds": 22.4
+  },
+  {
+   "seed": 6021,
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal",
+    "forbidden_collision"
+   ],
+   "seconds": 22.5
+  },
+  {
+   "seed": 6022,
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ],
+   "seconds": 22.4
+  },
+  {
+   "seed": 6023,
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ],
+   "seconds": 22.5
+  },
+  {
+   "seed": 6024,
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal",
+    "forbidden_collision"
+   ],
+   "seconds": 22.5
+  },
+  {
+   "seed": 6025,
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ],
+   "seconds": 22.5
+  },
+  {
+   "seed": 6026,
+   "success": true,
+   "reasons": [],
+   "seconds": 22.5
+  },
+  {
+   "seed": 6027,
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ],
+   "seconds": 22.4
+  },
+  {
+   "seed": 6028,
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ],
+   "seconds": 22.6
+  },
+  {
+   "seed": 6029,
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ],
+   "seconds": 21.7
+  }
+ ]
+}

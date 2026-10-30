@@ -1,0 +1,20 @@
+{
+ "demo": {
+  "kind": "file",
+  "path": "runs/demos/pexels_7205253_woman_box_v2.npz",
+  "sha256": "5f8bdc019f684e950cd2aa9fb4d956cc85e909149f8700ed0abd3d86bd81edc8",
+  "tag": "demo5f8bdc01"
+ },
+ "fixes": [
+  "look_again",
+  "touch_probe_calibration",
+  "safe_path_v2"
+ ],
+ "seed": 1001,
+ "success": {
+  "ur5e|none": false,
+  "ur5e|look_again+touch_probe_calibration+safe_path_v2": true,
+  "ur10e|none": false,
+  "ur10e|look_again+touch_probe_calibration+safe_path_v2": false
+ }
+}

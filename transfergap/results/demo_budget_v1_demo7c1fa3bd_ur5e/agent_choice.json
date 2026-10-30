@@ -1,0 +1,35 @@
+{
+ "model": "nvidia/nemotron-3-super-120b-a12b",
+ "menu": [
+  "look_again",
+  "touch_probe_calibration",
+  "speed_cap_3",
+  "safe_path"
+ ],
+ "rule_choice": "look_again",
+ "valid": true,
+ "agent_choice": "look_again",
+ "rationale": "Perception errors dominate failures (no_lift and not_released_and_settled_at_goal). Re\u2011perceiving the object after approach yields the largest success boost (+26.7 pp) while minimally affecting style (small RMSE reduction and speed\u2011profile gain).",
+ "response_id": "chatcmpl-8264aeccae183900",
+ "latency_s": 3.5682899769999494,
+ "usage": {
+  "completion_tokens": 363,
+  "prompt_tokens": 771,
+  "total_tokens": 1134,
+  "completion_tokens_details": {
+   "accepted_prediction_tokens": null,
+   "audio_tokens": null,
+   "reasoning_tokens": 285,
+   "rejected_prediction_tokens": null
+  },
+  "prompt_tokens_details": {
+   "audio_tokens": null,
+   "cached_tokens": 0,
+   "created_cache_tokens": 0,
+   "multimodal_tokens": null
+  },
+  "prompt_cache_hit_tokens": 0,
+  "prompt_cache_miss_tokens": 771
+ },
+ "agrees_with_rule": true
+}

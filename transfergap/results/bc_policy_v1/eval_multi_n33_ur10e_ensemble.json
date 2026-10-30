@@ -1,0 +1,352 @@
+{
+ "exec": "ensemble",
+ "ckpt": "/ws/transfergap/bc_v1/models_multi_n33/policy_vision.pt",
+ "robot": "ur10e",
+ "seeds": [
+  6000,
+  6059
+ ],
+ "n": 60,
+ "policy_success": 50,
+ "policy_ci95": [
+  0.72,
+  0.907
+ ],
+ "scripted_success": null,
+ "failure_reasons": {
+  "no_lift": 10,
+  "not_released_and_settled_at_goal": 10
+ },
+ "per_seed": [
+  {
+   "seed": 6000,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 6001,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 6002,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 6003,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 6004,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 6005,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 6006,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 6007,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 6008,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 6009,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 6010,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 6011,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 6012,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 6013,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 6014,
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ]
+  },
+  {
+   "seed": 6015,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 6016,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 6017,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 6018,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 6019,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 6020,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 6021,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 6022,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 6023,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 6024,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 6025,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 6026,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 6027,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 6028,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 6029,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 6030,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 6031,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 6032,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 6033,
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ]
+  },
+  {
+   "seed": 6034,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 6035,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 6036,
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ]
+  },
+  {
+   "seed": 6037,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 6038,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 6039,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 6040,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 6041,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 6042,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 6043,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 6044,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 6045,
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ]
+  },
+  {
+   "seed": 6046,
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ]
+  },
+  {
+   "seed": 6047,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 6048,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 6049,
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ]
+  },
+  {
+   "seed": 6050,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 6051,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 6052,
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ]
+  },
+  {
+   "seed": 6053,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 6054,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 6055,
+   "success": true,
+   "reasons": []
+  },
+  {
+   "seed": 6056,
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ]
+  },
+  {
+   "seed": 6057,
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ]
+  },
+  {
+   "seed": 6058,
+   "success": false,
+   "reasons": [
+    "no_lift",
+    "not_released_and_settled_at_goal"
+   ]
+  },
+  {
+   "seed": 6059,
+   "success": true,
+   "reasons": []
+  }
+ ]
+}

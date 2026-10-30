@@ -1,0 +1,15 @@
+WARNING Tue Oct  6 12:34:05 2026: Attach conflict when attaching 'ur10e', policy is 'warning'
+integrator: parent has 0 (default), child has 3, keeping parent value
+
+WARNING Tue Oct  6 12:34:15 2026: Attach conflict when attaching 'ur10e', policy is 'warning'
+integrator: parent has 0 (default), child has 3, keeping parent value
+
+WARNING Tue Oct  6 12:34:15 2026: Attach conflict when attaching 'ur10e', policy is 'warning'
+integrator: parent has 0 (default), child has 3, keeping parent value
+
+WARNING Tue Oct  6 12:34:15 2026: Attach conflict when attaching 'ur10e', policy is 'warning'
+integrator: parent has 0 (default), child has 3, keeping parent value
+
+WARNING Tue Oct  6 12:34:15 2026: Attach conflict when attaching 'ur10e', policy is 'warning'
+integrator: parent has 0 (default), child has 3, keeping parent value
+

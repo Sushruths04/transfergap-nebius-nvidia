@@ -1,0 +1,26 @@
+{
+ "protocol": "cosmos_critic_ft_v1",
+ "frozen_before_training": true,
+ "question": "Does LoRA fine-tuning NVIDIA Cosmos-Reason2-2B on labelled simulator rollout clips turn it into a reliable pick-and-place success critic, including on an unseen person's demo? (Earlier zero-shot Cosmos critics: v1 always 'success', v2 62/116 vs 76/116 majority baseline.)",
+ "data": "transfergap/sim/critic_data.py -> runs/critic_data (gitignored clips); labels.jsonl sha256 f696ba31ef394116ef7509c868fa3e9cf73a9512203287464eeda2f40761d5f6",
+ "splits": {
+  "train": "640 clips: 4 demos (person 1 notebook/markers/notepad, person 2 box) x 2 arms x {raw, fix stack} x seeds 2000-2039 (309 success)",
+  "val": "160 clips, seeds 2040-2049 (76 success); used only to keep the better epoch",
+  "test": "220 clips: seeds 2050-2059 of the same demos (160) + the author's unseen demo, seeds 2000-2014 (60); 123 success"
+ },
+ "labels": "simulator task success (metrics.score_episode); the model only sees pixels",
+ "model": "nvidia/Cosmos-Reason2-2B (Qwen3-VL), bf16",
+ "method": "LoRA r=16 alpha=32 dropout=0.05 on language-model attention+MLP projections; vision frozen; AdamW lr 1e-4; batch 1 x accum 8; 2 epochs; loss on answer tokens only",
+ "scoring": "clip at 4 fps (<=32 frames, 320x240) + fixed question; label = answer ('success'/'failure') with the higher log-likelihood; identical for zero-shot and fine-tuned",
+ "metrics": [
+  "accuracy",
+  "balanced accuracy",
+  "true positive / negative rate",
+  "on the unseen user demo separately"
+ ],
+ "baselines": [
+  "zero-shot Cosmos-Reason2-2B (same scoring)",
+  "majority class of test (123/220 = 55.9%)"
+ ],
+ "runner": "python transfergap/demo/tools/cosmos_critic_ft.py --data ~/critic_data --out ~/critic_ft_v1 (Cosmos venv on the VM)"
+}

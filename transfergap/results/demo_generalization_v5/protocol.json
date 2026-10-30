@@ -1,0 +1,15 @@
+{
+ "protocol": "demo_generalization_v5",
+ "frozen_before_trials": true,
+ "dev_selection": "dev_selection_safe_path.jsonl (dev seeds 0-19): safe_path_v2 >= safe_path on every demo/arm and fixes person 2 (UR10e 0/20 -> 19/20 vs v1) -> safe_path_v2 selected",
+ "questions": {
+   "A_per_person": "each person's diagnosed stack + safe_path_v2 (person 1: speed_cap_3, look_again, touch_probe_calibration, speed_cap_2; person 2: look_again, touch_probe_calibration)",
+   "B_single_stack": "ONE stack for everyone: speed_cap_3, look_again, touch_probe_calibration, speed_cap_2, safe_path_v2"
+ },
+ "demos": {"person_1": ["pexels_8135753_notebook", "pexels_8135753_markers", "pexels_8135753_orange_marker", "pexels_8135753_notepad"], "person_2": ["pexels_7205253_woman_box_v2"]},
+ "robots": ["ur5e", "ur10e"],
+ "seeds": [1000, 1059],
+ "conditions": ["raw", "stack"],
+ "note": "for person 1 the A and B stacks are identical, so B only adds the person-2 run",
+ "report_all": true
+}

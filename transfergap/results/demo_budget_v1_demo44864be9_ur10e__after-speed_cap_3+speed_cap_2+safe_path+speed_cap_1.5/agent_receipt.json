@@ -1,0 +1,34 @@
+{
+ "schema_version": 1,
+ "kind": "hosted_inference",
+ "role": "nemotron",
+ "requested_model": "nvidia/nemotron-3-super-120b-a12b",
+ "endpoint_host": "api.tokenfactory.nebius.com",
+ "created_at": "2026-10-09T15:37:35.506299+00:00",
+ "request_sha256": "5c6518c2e37eebffeb16239b6bdac2460ff84f9bc6537e5360482d9b242fb6d2",
+ "status": "succeeded",
+ "response_id": "chatcmpl-ad46760c325f842c",
+ "returned_model": "nvidia/nemotron-3-super-120b-a12b",
+ "usage": {
+  "completion_tokens": 348,
+  "prompt_tokens": 783,
+  "total_tokens": 1131,
+  "completion_tokens_details": {
+   "accepted_prediction_tokens": null,
+   "audio_tokens": null,
+   "reasoning_tokens": 286,
+   "rejected_prediction_tokens": null
+  },
+  "prompt_tokens_details": {
+   "audio_tokens": null,
+   "cached_tokens": 0,
+   "created_cache_tokens": 0,
+   "multimodal_tokens": null
+  },
+  "prompt_cache_hit_tokens": 0,
+  "prompt_cache_miss_tokens": 783
+ },
+ "finish_reason": "stop",
+ "content": "\n\n{\n  \"correction\": \"look_again\",\n  \"rationale\": \"Perception-based look_again yields a positive success recovery (+3.3 pp) and slightly improves style (speed profile correlation +0.009), whereas calibration harms both success and style.\"\n}",
+ "latency_s": 3.395247307998943
+}

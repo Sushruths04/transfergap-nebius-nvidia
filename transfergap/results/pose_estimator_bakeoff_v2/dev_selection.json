@@ -1,0 +1,82 @@
+{
+ "pexels_8135753_notebook|ur5e": {
+  "dev": {
+   "gemx": "20/20",
+   "fast_sam_3d_body": "19/20",
+   "fast_sam_3d_body_smooth": "3/20"
+  },
+  "selected": "gemx"
+ },
+ "pexels_8135753_notebook|ur10e": {
+  "dev": {
+   "gemx": "20/20",
+   "fast_sam_3d_body": "20/20",
+   "fast_sam_3d_body_smooth": "7/20"
+  },
+  "selected": "gemx"
+ },
+ "pexels_8135753_markers|ur5e": {
+  "dev": {
+   "gemx": "17/20",
+   "fast_sam_3d_body": "20/20",
+   "fast_sam_3d_body_smooth": "17/20"
+  },
+  "selected": "fast_sam_3d_body"
+ },
+ "pexels_8135753_markers|ur10e": {
+  "dev": {
+   "gemx": "10/20",
+   "fast_sam_3d_body": "19/20",
+   "fast_sam_3d_body_smooth": "20/20"
+  },
+  "selected": "fast_sam_3d_body_smooth"
+ },
+ "pexels_8135753_orange_marker|ur5e": {
+  "dev": {
+   "gemx": "17/20",
+   "fast_sam_3d_body": "5/20",
+   "fast_sam_3d_body_smooth": "14/20"
+  },
+  "selected": "gemx"
+ },
+ "pexels_8135753_orange_marker|ur10e": {
+  "dev": {
+   "gemx": "19/20",
+   "fast_sam_3d_body": "3/20",
+   "fast_sam_3d_body_smooth": "17/20"
+  },
+  "selected": "gemx"
+ },
+ "pexels_8135753_notepad|ur5e": {
+  "dev": {
+   "gemx": "20/20",
+   "fast_sam_3d_body": "20/20",
+   "fast_sam_3d_body_smooth": "20/20"
+  },
+  "selected": "gemx"
+ },
+ "pexels_8135753_notepad|ur10e": {
+  "dev": {
+   "gemx": "19/20",
+   "fast_sam_3d_body": "20/20",
+   "fast_sam_3d_body_smooth": "20/20"
+  },
+  "selected": "fast_sam_3d_body"
+ },
+ "pexels_7205253_woman_box|ur5e": {
+  "dev": {
+   "gemx": "20/20",
+   "fast_sam_3d_body": "0/20",
+   "fast_sam_3d_body_smooth": "0/20"
+  },
+  "selected": "gemx"
+ },
+ "pexels_7205253_woman_box|ur10e": {
+  "dev": {
+   "gemx": "19/20",
+   "fast_sam_3d_body": "20/20",
+   "fast_sam_3d_body_smooth": "0/20"
+  },
+  "selected": "fast_sam_3d_body"
+ }
+}
